@@ -123,16 +123,20 @@ function startTimeText(b) {
   return "starts in " + (h > 0 ? h + "h " : "") + m + "m";
 }
 
-function liveHeartbeatAgeS(b) {
-  if (b.heartbeat_ts) {
-    return (Date.now() - new Date(b.heartbeat_ts).getTime()) / 1000;
-  }
+function heartbeatAgeAtGeneration(b) {
+  /* Deliberately NOT measured against the browser's clock: GitHub Pages
+     itself can take 1 to 3 minutes to publish a push, so by the time the
+     page loads, generated_at is already a few minutes old in browser
+     time even on a perfectly healthy book. b.heartbeat_age_s is the
+     publisher's own server-side measurement (heartbeat ts vs its own
+     generated_at, same run, same clock), so it is not affected by
+     Pages' publish delay or by browser/server clock skew. */
   return b.heartbeat_age_s;
 }
 
 function hbDotClass(b) {
   if (b.heartbeat_ok === false) return "bad";
-  var age = liveHeartbeatAgeS(b);
+  var age = heartbeatAgeAtGeneration(b);
   if (age === null || age === undefined) return "warn";
   if (age > 600) return "bad";
   if (age > 120) return "warn";
@@ -225,14 +229,19 @@ function refresh() {
 
 /* -- stale / header -- */
 
+var STALE_GENERATED_AT_SECONDS = 8 * 60; // GitHub Pages can take 1 to 3 minutes to publish a push,
+                                          // so generated_at is routinely a few minutes old in the
+                                          // browser even when everything is healthy.
+var STALE_HEARTBEAT_SECONDS = 2 * 60;
+
 function computeStale() {
   if (!state.feed) return true;
   var genAgeS = (Date.now() - new Date(state.feed.generated_at).getTime()) / 1000;
-  if (genAgeS > 180) return true;
+  if (genAgeS > STALE_GENERATED_AT_SECONDS) return true;
   var books = state.feed.books || [];
   for (var i = 0; i < books.length; i++) {
-    var age = liveHeartbeatAgeS(books[i]);
-    if (age !== null && age !== undefined && age > 120) return true;
+    var age = heartbeatAgeAtGeneration(books[i]);
+    if (age !== null && age !== undefined && age > STALE_HEARTBEAT_SECONDS) return true;
   }
   return false;
 }
@@ -419,6 +428,17 @@ function renderSportCards() {
     h3.textContent = sport;
     card.appendChild(h3);
 
+    /* Append the card to the document BEFORE building anything with a
+       canvas in it. Chart.js measures its canvas's container via
+       getBoundingClientRect/ResizeObserver at construction time; a card
+       still detached from the document has zero layout size, so a chart
+       created before this line renders as a blank box (this was exactly
+       the bug: NFL and F1 cards were blank because renderSportChart used
+       to run before container.appendChild(card)). The purse chart never
+       had this problem because its canvas is already static markup in
+       index.html, present in the document from page load. */
+    container.appendChild(card);
+
     if (!results.length) {
       var p = document.createElement("p");
       p.className = "no-results";
@@ -473,8 +493,6 @@ function renderSportCards() {
     });
     details.appendChild(ul);
     card.appendChild(details);
-
-    container.appendChild(card);
   });
 }
 
@@ -496,11 +514,11 @@ function buildOutcomeTable(b) {
   table.appendChild(thead);
 
   var outcomes = b.outcomes || [];
-  var nonzero = outcomes.filter(function (o) { return (o.held || 0) > 0; });
-  var zero = outcomes.filter(function (o) { return !((o.held || 0) > 0); });
+  var visible = outcomes.filter(function (o) { return (o.held || 0) > 0 || (o.resting || 0) > 0; });
+  var zero = outcomes.filter(function (o) { return !((o.held || 0) > 0) && !((o.resting || 0) > 0); });
 
   var tbody = document.createElement("tbody");
-  nonzero.forEach(function (o) { tbody.appendChild(outcomeRow(o, false)); });
+  visible.forEach(function (o) { tbody.appendChild(outcomeRow(o, false)); });
   table.appendChild(tbody);
 
   if (zero.length) {
