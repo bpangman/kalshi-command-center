@@ -2,10 +2,15 @@
 
 /* Kalshi Command Center - vanilla JS, no build step.
    Fetches data/feed.json, data/results.json, data/snapshots.json every
-   60 seconds and re-renders in place. Plain hyphens only, no em/en
-   dashes, anywhere in this file including comments and strings. */
+   60 seconds and re-renders in place. Single-page app with hash routing
+   (#home, #nfl, #nascar, #f1, #golf) so back/forward and bookmarks work.
+   Plain hyphens only, no em/en dashes, anywhere in this file including
+   comments and strings. */
 
 var SPORTS = ["NFL", "NASCAR", "F1", "Golf"];
+var ROUTES = ["home", "nfl", "nascar", "f1", "golf"];
+var ROUTE_TO_SPORT = {};
+SPORTS.forEach(function (s) { ROUTE_TO_SPORT[s.toLowerCase()] = s; });
 
 var STRATEGY_BULLETS = {
   NFL: [
@@ -55,6 +60,7 @@ var state = {
   results: [],
   snapshots: [],
   charts: {},
+  tooltipTimers: {},
 };
 
 /* -- formatting helpers -- */
@@ -150,6 +156,15 @@ function hbDotClass(b) {
   return "ok";
 }
 
+function shortEventLabel(key) {
+  /* "SNF-W1-SEP20" -> "SNF-W1", "TNF-W3" -> "TNF-W3" (no date suffix to
+     strip), "F1-BAKU" -> "F1-BAKU". Used for the on-chart point labels
+     (short by necessity - team abbreviations aren't part of the data
+     model, only the fleet's own event key and title are). */
+  if (!key) return "";
+  return String(key).replace(/-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\d{1,2}.*$/i, "");
+}
+
 /* -- small DOM builders -- */
 
 function td(text) {
@@ -234,6 +249,47 @@ function refresh() {
   });
 }
 
+/* -- routing -- */
+
+function currentRoute() {
+  var h = (location.hash || "").replace("#", "").toLowerCase();
+  return ROUTES.indexOf(h) >= 0 ? h : "home";
+}
+
+function applyRoute(route) {
+  ROUTES.forEach(function (r) {
+    var page = document.getElementById("page-" + r);
+    if (page) page.hidden = (r !== route);
+    var tabEl = document.querySelector('.tab[data-route="' + r + '"]');
+    if (tabEl) {
+      if (r === route) {
+        tabEl.classList.add("active");
+        tabEl.setAttribute("aria-current", "page");
+      } else {
+        tabEl.classList.remove("active");
+        tabEl.removeAttribute("aria-current");
+      }
+    }
+  });
+}
+
+function renderForRoute(route) {
+  if (!state.feed) return;
+  if (route === "home") {
+    renderHomeTiles();
+    renderPurseChart();
+    renderLiveBooks(document.getElementById("live-books-list"), null);
+  } else {
+    renderSportPage(ROUTE_TO_SPORT[route]);
+  }
+}
+
+window.addEventListener("hashchange", function () {
+  var route = currentRoute();
+  applyRoute(route);
+  renderForRoute(route);
+});
+
 /* -- stale / header -- */
 
 var STALE_GENERATED_AT_SECONDS = 8 * 60; // GitHub Pages can take 1 to 3 minutes to publish a push,
@@ -265,7 +321,7 @@ function updateHeaderTimestamps() {
   badge.hidden = !computeStale();
 }
 
-function renderHeader() {
+function renderHomeTiles() {
   var f = state.feed;
   var tiles = document.getElementById("stat-tiles");
   tiles.innerHTML = "";
@@ -293,8 +349,98 @@ function renderHeader() {
   if (allocNote) {
     allocNote.hidden = !f.allocation_target;
   }
+}
 
-  updateHeaderTimestamps();
+/* -- chart tooltip dismissal (touch devices stick the tooltip open with
+   no built-in mouseout, since a tap has no hover-away event) -- */
+
+function isTouchDevice() {
+  return ("ontouchstart" in window) || (navigator.maxTouchPoints > 0) || (window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+}
+
+function clearChartTooltip(chart) {
+  if (!chart) return;
+  try {
+    chart.setActiveElements([]);
+    if (chart.tooltip) chart.tooltip.setActiveElements([], { x: 0, y: 0 });
+    chart.update();
+  } catch (e) {
+    /* chart may be mid-destroy between renders; nothing to clear then */
+  }
+}
+
+function clearAllChartTooltips() {
+  Object.keys(state.charts).forEach(function (id) {
+    clearChartTooltip(state.charts[id]);
+  });
+}
+
+function armTooltipAutoHide(canvasId) {
+  if (!isTouchDevice()) return;
+  if (state.tooltipTimers[canvasId]) clearTimeout(state.tooltipTimers[canvasId]);
+  state.tooltipTimers[canvasId] = setTimeout(function () {
+    clearChartTooltip(state.charts[canvasId]);
+  }, 4000);
+}
+
+function attachTooltipDismissal(canvasId, canvas) {
+  if (canvas._tooltipDismissalAttached) return;
+  var handler = function (evt) {
+    var chart = state.charts[canvasId];
+    if (!chart) return;
+    var points = chart.getElementsAtEventForMode(evt, "nearest", { intersect: true }, false);
+    if (!points || !points.length) {
+      /* touchend/pointerup landed outside any point - dismiss right away */
+      clearChartTooltip(chart);
+    } else {
+      armTooltipAutoHide(canvasId);
+    }
+  };
+  canvas.addEventListener("touchend", handler, { passive: true });
+  canvas.addEventListener("pointerup", handler);
+  canvas._tooltipDismissalAttached = true;
+}
+
+function initGlobalTooltipDismissal() {
+  var handler = function (evt) {
+    if (evt.target && evt.target.tagName === "CANVAS") return; // that canvas handles its own dismissal
+    clearAllChartTooltips();
+  };
+  document.addEventListener("touchend", handler, { passive: true });
+  document.addEventListener("pointerup", handler);
+}
+
+/* -- point labels drawn directly on the chart (so the tooltip is never
+   needed just to identify a point); staggered above/below alternately -- */
+
+var pointLabelsPlugin = {
+  id: "pointLabels",
+  afterDatasetsDraw: function (chart, args, opts) {
+    if (!opts || !opts.enabled || typeof opts.labelForIndex !== "function") return;
+    var meta = chart.getDatasetMeta(0);
+    if (!meta || !meta.data || !meta.data.length) return;
+    var ds = chart.data.datasets[0];
+    var ctx = chart.ctx;
+    ctx.save();
+    ctx.font = "10px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.textBaseline = "middle";
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#c9d1d9";
+    meta.data.forEach(function (element, i) {
+      var raw = ds.data[i];
+      var label = opts.labelForIndex(raw, i);
+      if (!label) return;
+      var pos = element.tooltipPosition ? element.tooltipPosition() : { x: element.x, y: element.y };
+      var above = (i % 2 === 0);
+      var x = Math.min(Math.max(pos.x, chart.chartArea.left + 2), chart.chartArea.right - 2);
+      var y = above ? Math.max(pos.y - 10, chart.chartArea.top + 8) : Math.min(pos.y + 12, chart.chartArea.bottom - 4);
+      ctx.fillText(label, x, y);
+    });
+    ctx.restore();
+  },
+};
+if (typeof Chart !== "undefined") {
+  Chart.register(pointLabelsPlugin);
 }
 
 /* -- charts -- */
@@ -303,6 +449,10 @@ function destroyChart(id) {
   if (state.charts[id]) {
     state.charts[id].destroy();
     delete state.charts[id];
+  }
+  if (state.tooltipTimers[id]) {
+    clearTimeout(state.tooltipTimers[id]);
+    delete state.tooltipTimers[id];
   }
 }
 
@@ -318,10 +468,14 @@ function chartOptions(tooltipLabelFn, xMin, xMax) {
     responsive: true,
     maintainAspectRatio: false,
     animation: false,
+    layout: { padding: { top: 14, bottom: 14 } },
     interaction: { mode: "nearest", intersect: false },
     plugins: {
       legend: { display: false },
       tooltip: {
+        position: "nearest",
+        caretSize: 4,
+        boxPadding: 4,
         callbacks: {
           title: function (items) {
             return items.length ? new Date(items[0].parsed.x).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "";
@@ -340,13 +494,31 @@ function chartOptions(tooltipLabelFn, xMin, xMax) {
   };
 }
 
+function createLineChart(canvasId, datasets, tooltipLabelFn, xMin, xMax, labelForIndex) {
+  if (typeof Chart === "undefined") return null;
+  var canvas = document.getElementById(canvasId);
+  if (!canvas) return null;
+  destroyChart(canvasId);
+  var opts = chartOptions(tooltipLabelFn, xMin, xMax);
+  opts.plugins.pointLabels = { enabled: !!labelForIndex, labelForIndex: labelForIndex };
+  var chart = new Chart(canvas, { type: "line", data: { datasets: datasets }, options: opts });
+  state.charts[canvasId] = chart;
+  attachTooltipDismissal(canvasId, canvas);
+  return chart;
+}
+
+function eventPointLabel(raw) {
+  if (!raw || raw.synthetic || raw.key === undefined || raw.key === null) return null;
+  return shortEventLabel(raw.key) + " " + fmtMoney(raw.realized);
+}
+
 function buildPurseSeries() {
   var results = state.results.filter(function (r) { return r.settled_time; });
   results = results.slice().sort(function (a, b) { return new Date(a.settled_time) - new Date(b.settled_time); });
   var cum = 0;
   var solidPoints = results.map(function (r) {
     cum += (r.realized_pnl || 0);
-    return { x: new Date(r.settled_time).getTime(), y: round2(cum), title: r.title, realized: r.realized_pnl };
+    return { x: new Date(r.settled_time).getTime(), y: round2(cum), title: r.title, realized: r.realized_pnl, key: r.key };
   });
   var dashedPoints = [];
   if (state.snapshots && state.snapshots.length) {
@@ -363,10 +535,7 @@ function buildPurseSeries() {
 }
 
 function renderPurseChart() {
-  if (typeof Chart === "undefined") return;
-  var canvas = document.getElementById("purse-chart");
   var series = buildPurseSeries();
-  destroyChart("purse-chart");
   var datasets = [{
     label: "Realized profit",
     data: series.solidPoints,
@@ -389,24 +558,16 @@ function renderPurseChart() {
       tension: 0.1,
     });
   }
-  state.charts["purse-chart"] = new Chart(canvas, {
-    type: "line",
-    data: { datasets: datasets },
-    options: chartOptions(function (ctx) {
-      var raw = ctx.raw || {};
-      if (raw.title) {
-        return [raw.title + ": " + fmtMoney(raw.realized), "Running total: " + fmtMoney(ctx.parsed.y)];
-      }
-      return ["Total: " + fmtMoney(ctx.parsed.y)];
-    }),
-  });
+  createLineChart("purse-chart", datasets, function (ctx) {
+    var raw = ctx.raw || {};
+    if (raw.title) {
+      return [raw.title + ": " + fmtMoney(raw.realized), "Running total: " + fmtMoney(ctx.parsed.y)];
+    }
+    return ["Total: " + fmtMoney(ctx.parsed.y)];
+  }, undefined, undefined, eventPointLabel);
 }
 
 function renderSportChart(canvasId, points, highlightIdx, xMin, xMax) {
-  if (typeof Chart === "undefined") return;
-  var canvas = document.getElementById(canvasId);
-  if (!canvas) return;
-  destroyChart(canvasId);
   var pointColors = points.map(function (p, i) {
     if (p.synthetic) return "rgba(0,0,0,0)";
     return i === highlightIdx ? "#d29922" : ((p.realized || 0) >= 0 ? "#3fb950" : "#f85149");
@@ -415,130 +576,165 @@ function renderSportChart(canvasId, points, highlightIdx, xMin, xMax) {
     if (p.synthetic) return 0;
     return i === highlightIdx ? 6 : 3;
   });
-  state.charts[canvasId] = new Chart(canvas, {
-    type: "line",
-    data: {
-      datasets: [{
-        data: points,
-        stepped: "before",
-        borderColor: "#58a6ff",
-        backgroundColor: "rgba(88,166,255,0.08)",
-        pointBackgroundColor: pointColors,
-        pointRadius: pointRadii,
-        fill: true,
-        tension: 0,
-      }],
-    },
-    options: chartOptions(function (ctx) {
-      var raw = ctx.raw || {};
-      if (raw.synthetic) return ["Before the first settled event"];
-      return [(raw.title || "") + ": " + fmtMoney(raw.realized), "Running total: " + fmtMoney(ctx.parsed.y)];
-    }, xMin, xMax),
-  });
+  var datasets = [{
+    data: points,
+    stepped: "before",
+    borderColor: "#58a6ff",
+    backgroundColor: "rgba(88,166,255,0.08)",
+    pointBackgroundColor: pointColors,
+    pointRadius: pointRadii,
+    fill: true,
+    tension: 0,
+  }];
+  createLineChart(canvasId, datasets, function (ctx) {
+    var raw = ctx.raw || {};
+    if (raw.synthetic) return ["Before the first settled event"];
+    return [(raw.title || "") + ": " + fmtMoney(raw.realized), "Running total: " + fmtMoney(ctx.parsed.y)];
+  }, xMin, xMax, eventPointLabel);
 }
 
-/* -- sport cards -- */
+/* -- sport page (chart, stats, strategy, its live books, its settled events) -- */
 
-function renderSportCards() {
-  var container = document.getElementById("sport-cards");
-  container.innerHTML = "";
-
+function computeSportWindow() {
   /* One shared time window for all four sport charts, so they line up:
      earliest settled_time across every sport, minus a day, to today plus
      a day. Without an explicit min/max, a chart with a single data point
      lets Chart.js's linear scale invent its own arbitrary padding around
      that one x value (this was the bug: F1's one point showed an axis
-     running Nov 14 to Mar 17 with nothing to anchor it). */
+     running Nov 14 to Mar 17). */
   var allSettledMs = state.results
     .map(function (r) { return r.settled_time ? new Date(r.settled_time).getTime() : null; })
     .filter(function (t) { return t !== null && !Number.isNaN(t); });
   var DAY_MS = 24 * 60 * 60 * 1000;
-  var sportWindowStart = allSettledMs.length ? (Math.min.apply(null, allSettledMs) - DAY_MS) : (Date.now() - DAY_MS);
-  var sportWindowEnd = Date.now() + DAY_MS;
+  var start = allSettledMs.length ? (Math.min.apply(null, allSettledMs) - DAY_MS) : (Date.now() - DAY_MS);
+  var end = Date.now() + DAY_MS;
+  return { start: start, end: end };
+}
 
-  SPORTS.forEach(function (sport) {
-    var results = state.results.filter(function (r) { return r.sport === sport; });
-    var card = document.createElement("div");
-    card.className = "sport-card";
-    var h3 = document.createElement("h3");
-    h3.textContent = sport;
-    card.appendChild(h3);
+function renderSportPage(sport) {
+  var container = document.getElementById("sport-page-" + sport);
+  if (!container) return;
+  container.innerHTML = "";
 
-    /* Append the card to the document BEFORE building anything with a
-       canvas in it. Chart.js measures its canvas's container via
-       getBoundingClientRect/ResizeObserver at construction time; a card
-       still detached from the document has zero layout size, so a chart
-       created before this line renders as a blank box (this was exactly
-       the bug: NFL and F1 cards were blank because renderSportChart used
-       to run before container.appendChild(card)). The purse chart never
-       had this problem because its canvas is already static markup in
-       index.html, present in the document from page load. */
-    container.appendChild(card);
+  var h2 = document.createElement("h2");
+  h2.textContent = sport;
+  container.appendChild(h2);
 
-    if (!results.length) {
-      var p = document.createElement("p");
-      p.className = "no-results";
-      p.textContent = "No settled events yet.";
-      card.appendChild(p);
-    } else {
-      var sorted = results.slice().sort(function (a, b) { return new Date(a.settled_time || 0) - new Date(b.settled_time || 0); });
-      var cum = 0;
-      var points = sorted.map(function (r) {
-        cum += (r.realized_pnl || 0);
-        return { x: r.settled_time ? new Date(r.settled_time).getTime() : Date.now(), y: round2(cum), title: r.title, realized: r.realized_pnl };
-      });
-      var maxIdx = 0;
-      points.forEach(function (pt, i) {
-        if ((pt.realized || -Infinity) > (points[maxIdx].realized || -Infinity)) maxIdx = i;
-      });
+  var results = state.results.filter(function (r) { return r.sport === sport; });
 
-      /* A sport with exactly one settled event has nothing to draw a
-         line between - anchor it with a synthetic $0 point at the shared
-         window's start so the step line still draws from $0 up (or down)
-         to the real point, instead of a single floating dot. */
-      if (points.length === 1) {
-        points.unshift({ x: sportWindowStart, y: 0, title: null, realized: null, synthetic: true });
-        maxIdx += 1;
-      }
+  if (!results.length) {
+    var p = document.createElement("p");
+    p.className = "no-results";
+    p.textContent = "No settled events yet.";
+    container.appendChild(p);
+  } else {
+    var win = computeSportWindow();
+    var sorted = results.slice().sort(function (a, b) { return new Date(a.settled_time || 0) - new Date(b.settled_time || 0); });
+    var cum = 0;
+    var points = sorted.map(function (r) {
+      cum += (r.realized_pnl || 0);
+      return { x: r.settled_time ? new Date(r.settled_time).getTime() : Date.now(), y: round2(cum), title: r.title, realized: r.realized_pnl, key: r.key };
+    });
+    var maxIdx = 0;
+    points.forEach(function (pt, i) {
+      if ((pt.realized || -Infinity) > (points[maxIdx].realized || -Infinity)) maxIdx = i;
+    });
 
-      var chartBox = document.createElement("div");
-      chartBox.className = "chart-box";
-      var canvas = document.createElement("canvas");
-      var canvasId = "chart-sport-" + sport.replace(/[^A-Za-z0-9]/g, "");
-      canvas.id = canvasId;
-      canvas.setAttribute("role", "img");
-      canvas.setAttribute("aria-label", sport + " cumulative realized profit, one point per settled event");
-      chartBox.appendChild(canvas);
-      card.appendChild(chartBox);
-
-      var total = sorted.reduce(function (s, r) { return s + (r.realized_pnl || 0); }, 0);
-      var best = Math.max.apply(null, sorted.map(function (r) { return r.realized_pnl || 0; }));
-      var worst = Math.min.apply(null, sorted.map(function (r) { return r.realized_pnl || 0; }));
-      var statRow = document.createElement("div");
-      statRow.className = "stat-row";
-      statRow.appendChild(statEl("Events", String(sorted.length)));
-      statRow.appendChild(statMoneyEl("Total", total));
-      statRow.appendChild(statMoneyEl("Best", best));
-      statRow.appendChild(statMoneyEl("Worst", worst));
-      card.appendChild(statRow);
-
-      renderSportChart(canvasId, points, maxIdx, sportWindowStart, sportWindowEnd);
+    /* A sport with exactly one settled event has nothing to draw a line
+       between - anchor it with a synthetic $0 point at the shared
+       window's start so the step line still draws from $0 up (or down)
+       to the real point, instead of a single floating dot. */
+    if (points.length === 1) {
+      points.unshift({ x: win.start, y: 0, title: null, realized: null, synthetic: true });
+      maxIdx += 1;
     }
 
-    var details = document.createElement("details");
-    details.className = "strategy";
-    var summary = document.createElement("summary");
-    summary.textContent = "How the " + sport + " strategy works";
-    details.appendChild(summary);
-    var ul = document.createElement("ul");
-    (STRATEGY_BULLETS[sport] || []).forEach(function (bullet) {
-      var li = document.createElement("li");
-      li.textContent = bullet;
-      ul.appendChild(li);
-    });
-    details.appendChild(ul);
-    card.appendChild(details);
+    var chartBox = document.createElement("div");
+    chartBox.className = "chart-box";
+    var canvas = document.createElement("canvas");
+    var canvasId = "chart-sport-" + sport.replace(/[^A-Za-z0-9]/g, "");
+    canvas.id = canvasId;
+    canvas.setAttribute("role", "img");
+    canvas.setAttribute("aria-label", sport + " cumulative realized profit, one point per settled event");
+    chartBox.appendChild(canvas);
+
+    var chartWrap = document.createElement("div");
+    chartWrap.className = "section-block";
+    chartWrap.appendChild(chartBox);
+    var caption = document.createElement("p");
+    caption.className = "chart-caption";
+    caption.textContent = "Tap a point for details; tap elsewhere to dismiss.";
+    chartWrap.appendChild(caption);
+
+    var total = sorted.reduce(function (s, r) { return s + (r.realized_pnl || 0); }, 0);
+    var best = Math.max.apply(null, sorted.map(function (r) { return r.realized_pnl || 0; }));
+    var worst = Math.min.apply(null, sorted.map(function (r) { return r.realized_pnl || 0; }));
+    var statRow = document.createElement("div");
+    statRow.className = "stat-row";
+    statRow.appendChild(statEl("Events", String(sorted.length)));
+    statRow.appendChild(statMoneyEl("Total", total));
+    statRow.appendChild(statMoneyEl("Best", best));
+    statRow.appendChild(statMoneyEl("Worst", worst));
+    chartWrap.appendChild(statRow);
+
+    /* Append to the document BEFORE creating the chart - a canvas still
+       detached from the document has zero layout size, which is exactly
+       why the NFL and F1 charts once rendered as blank boxes. */
+    container.appendChild(chartWrap);
+    renderSportChart(canvasId, points, maxIdx, win.start, win.end);
+  }
+
+  var details = document.createElement("details");
+  details.className = "strategy";
+  var summary = document.createElement("summary");
+  summary.textContent = "How the " + sport + " strategy works";
+  details.appendChild(summary);
+  var ul = document.createElement("ul");
+  (STRATEGY_BULLETS[sport] || []).forEach(function (bullet) {
+    var li = document.createElement("li");
+    li.textContent = bullet;
+    ul.appendChild(li);
   });
+  details.appendChild(ul);
+  var detailsWrap = document.createElement("div");
+  detailsWrap.className = "section-block";
+  detailsWrap.appendChild(details);
+  container.appendChild(detailsWrap);
+
+  var liveWrap = document.createElement("div");
+  liveWrap.className = "section-block";
+  var liveHeading = document.createElement("h2");
+  liveHeading.textContent = "Live books";
+  liveWrap.appendChild(liveHeading);
+  var liveList = document.createElement("div");
+  liveWrap.appendChild(liveList);
+  container.appendChild(liveWrap);
+  renderLiveBooks(liveList, sport);
+
+  var settledWrap = document.createElement("div");
+  settledWrap.className = "section-block";
+  var settledHeading = document.createElement("h2");
+  settledHeading.textContent = "Settled events";
+  settledWrap.appendChild(settledHeading);
+  var tableWrap = document.createElement("div");
+  tableWrap.className = "table-scroll";
+  var table = document.createElement("table");
+  var thead = document.createElement("thead");
+  var headRow = document.createElement("tr");
+  ["Date", "Event", "Result", "Contracts sold", "Premium"].forEach(function (h) {
+    var th = document.createElement("th");
+    th.setAttribute("scope", "col");
+    th.textContent = h;
+    headRow.appendChild(th);
+  });
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+  var tbody = document.createElement("tbody");
+  table.appendChild(tbody);
+  tableWrap.appendChild(table);
+  settledWrap.appendChild(tableWrap);
+  container.appendChild(settledWrap);
+  renderSettledTable(tbody, sport);
 }
 
 /* -- live books -- */
@@ -697,30 +893,29 @@ function buildBookCard(b) {
   return card;
 }
 
-function renderLiveBooks() {
-  var container = document.getElementById("live-books-list");
+function renderLiveBooks(container, sportFilter) {
   container.innerHTML = "";
-  var books = (state.feed && state.feed.books) || [];
+  var books = ((state.feed && state.feed.books) || []).filter(function (b) { return !sportFilter || b.sport === sportFilter; });
   if (!books.length) {
     var p = document.createElement("p");
     p.className = "state-msg";
-    p.textContent = "No books are live right now.";
+    p.textContent = sportFilter ? ("No " + sportFilter + " book is live right now.") : "No books are live right now.";
     container.appendChild(p);
     return;
   }
   books.forEach(function (b) { container.appendChild(buildBookCard(b)); });
 }
 
-/* -- settled table -- */
+/* -- settled table (per sport page) -- */
 
-function renderSettledTable() {
-  var tbody = document.getElementById("settled-tbody");
+function renderSettledTable(tbody, sport) {
   tbody.innerHTML = "";
-  var rows = state.results.slice().sort(function (a, b) { return new Date(b.settled_time || 0) - new Date(a.settled_time || 0); });
+  var rows = state.results.filter(function (r) { return r.sport === sport; })
+    .sort(function (a, b) { return new Date(b.settled_time || 0) - new Date(a.settled_time || 0); });
   if (!rows.length) {
     var tr = document.createElement("tr");
     var cell = document.createElement("td");
-    cell.colSpan = 6;
+    cell.colSpan = 5;
     cell.className = "state-msg";
     cell.textContent = "No settled events yet.";
     tr.appendChild(cell);
@@ -731,7 +926,6 @@ function renderSettledTable() {
     var tr2 = document.createElement("tr");
     tr2.appendChild(td(r.settled_time ? new Date(r.settled_time).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "-"));
     tr2.appendChild(td(r.title || r.event_ticker));
-    tr2.appendChild(td(r.sport || "-"));
     var resultTd = document.createElement("td");
     resultTd.appendChild(moneySpan(r.realized_pnl));
     tr2.appendChild(resultTd);
@@ -753,14 +947,13 @@ function renderError(err) {
 /* -- top-level render -- */
 
 function renderAll() {
-  renderHeader();
-  renderPurseChart();
-  renderSportCards();
-  renderLiveBooks();
-  renderSettledTable();
+  updateHeaderTimestamps();
+  renderForRoute(currentRoute());
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  applyRoute(currentRoute());
+  initGlobalTooltipDismissal();
   refresh();
   setInterval(refresh, 60000);
   setInterval(function () {

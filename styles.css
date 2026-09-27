@@ -43,6 +43,10 @@ a {
 /* -- header -- */
 
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
   padding-top: calc(20px + env(safe-area-inset-top, 0px));
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -60,7 +64,43 @@ a {
   gap: 10px;
   color: var(--muted);
   font-size: 0.85rem;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: 0 0 auto;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tab.active {
+  background: rgba(88, 166, 255, 0.15);
+  border-color: rgba(88, 166, 255, 0.5);
+  color: var(--accent);
+}
+
+.section-block {
+  margin-bottom: 32px;
 }
 
 .badge {

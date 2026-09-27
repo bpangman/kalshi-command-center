@@ -14,43 +14,39 @@
         <span id="updated-ago">Loading...</span>
         <span id="stale-badge" class="badge stale" hidden>Stale</span>
       </div>
-      <div class="stat-tiles" id="stat-tiles" aria-label="Headline numbers"></div>
-      <p id="allocation-note" class="chart-caption" hidden>Freed money moves every minute to the book starting soonest.</p>
+      <nav class="tabs" aria-label="Sections">
+        <a href="#home" class="tab" data-route="home">Home</a>
+        <a href="#nfl" class="tab" data-route="nfl">NFL</a>
+        <a href="#nascar" class="tab" data-route="nascar">NASCAR</a>
+        <a href="#f1" class="tab" data-route="f1">F1</a>
+        <a href="#golf" class="tab" data-route="golf">Golf</a>
+      </nav>
     </header>
 
-    <section id="purse-section">
-      <h2>Purse over time</h2>
-      <div class="chart-box">
-        <canvas id="purse-chart" role="img" aria-label="Cumulative realized profit since go-live, one point per settled event"></canvas>
-      </div>
-      <p class="chart-caption">Solid line: profit actually banked (settled events only). Dashed line, when shown: banked profit plus the current value of open books if they ended right now.</p>
-    </section>
+    <main>
+      <section id="page-home" class="page">
+        <div class="stat-tiles" id="stat-tiles" aria-label="Headline numbers"></div>
+        <p id="allocation-note" class="chart-caption" hidden>Freed money moves every minute to the book starting soonest.</p>
 
-    <section id="sport-cards" aria-label="Results and strategy by sport"></section>
+        <div class="section-block">
+          <h2>Purse over time</h2>
+          <div class="chart-box">
+            <canvas id="purse-chart" role="img" aria-label="Cumulative realized profit since go-live, one point per settled event"></canvas>
+          </div>
+          <p class="chart-caption">Solid line: profit actually banked (settled events only). Dashed line, when shown: banked profit plus the current value of open books if they ended right now. Tap a point for details; tap elsewhere to dismiss.</p>
+        </div>
 
-    <section id="live-books">
-      <h2>Live books</h2>
-      <div id="live-books-list"></div>
-    </section>
+        <div class="section-block">
+          <h2>Live books</h2>
+          <div id="live-books-list"></div>
+        </div>
+      </section>
 
-    <section id="settled-events">
-      <h2>Settled events</h2>
-      <div id="settled-table-wrap" class="table-scroll">
-        <table id="settled-table">
-          <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Event</th>
-              <th scope="col">Sport</th>
-              <th scope="col">Result</th>
-              <th scope="col">Contracts sold</th>
-              <th scope="col">Premium</th>
-            </tr>
-          </thead>
-          <tbody id="settled-tbody"></tbody>
-        </table>
-      </div>
-    </section>
+      <section id="page-nfl" class="page" hidden><div class="sport-page" id="sport-page-NFL"></div></section>
+      <section id="page-nascar" class="page" hidden><div class="sport-page" id="sport-page-NASCAR"></div></section>
+      <section id="page-f1" class="page" hidden><div class="sport-page" id="sport-page-F1"></div></section>
+      <section id="page-golf" class="page" hidden><div class="sport-page" id="sport-page-Golf"></div></section>
+    </main>
 
     <footer>
       <p>Data updates every minute while books are live. See the <a href="README.md">README</a> for how this page works and how to read the numbers.</p>
