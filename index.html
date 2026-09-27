@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kalshi Command Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <h1>Kalshi Command Center</h1>
+      <div class="updated-row">
+        <span id="updated-ago">Loading...</span>
+        <span id="stale-badge" class="badge stale" hidden>Stale</span>
+      </div>
+      <div class="stat-tiles" id="stat-tiles" aria-label="Headline numbers"></div>
+    </header>
+
+    <section id="purse-section">
+      <h2>Purse over time</h2>
+      <div class="chart-box">
+        <canvas id="purse-chart" role="img" aria-label="Cumulative realized profit since go-live, one point per settled event"></canvas>
+      </div>
+      <p class="chart-caption">Solid line: profit actually banked (settled events only). Dashed line, when shown: banked profit plus the current value of open books if they ended right now.</p>
+    </section>
+
+    <section id="sport-cards" aria-label="Results and strategy by sport"></section>
+
+    <section id="live-books">
+      <h2>Live books</h2>
+      <div id="live-books-list"></div>
+    </section>
+
+    <section id="settled-events">
+      <h2>Settled events</h2>
+      <div id="settled-table-wrap" class="table-scroll">
+        <table id="settled-table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Event</th>
+              <th scope="col">Sport</th>
+              <th scope="col">Result</th>
+              <th scope="col">Contracts sold</th>
+              <th scope="col">Premium</th>
+            </tr>
+          </thead>
+          <tbody id="settled-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>Data updates every minute while books are live. See the <a href="README.md">README</a> for how this page works and how to read the numbers.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
