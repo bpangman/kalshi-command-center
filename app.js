@@ -121,6 +121,30 @@ function timeAgoText(iso) {
   return d + "d ago";
 }
 
+function centralTimeLabel(iso) {
+  /* "12:41am" for a fill from today (Central time), "Sun 12:41am" for
+     any other day - using Intl's own America/Chicago timezone data so
+     CDT/CST daylight-saving transitions are handled automatically,
+     never a hardcoded UTC offset. */
+  if (!iso) return "unknown time";
+  var d = new Date(iso);
+  var fmt = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+    weekday: "short",
+  });
+  var parts = {};
+  fmt.formatToParts(d).forEach(function (p) { parts[p.type] = p.value; });
+  var timeStr = (parts.hour || "") + ":" + (parts.minute || "") + String(parts.dayPeriod || "").toLowerCase();
+  var dateFmt = { timeZone: "America/Chicago", year: "numeric", month: "numeric", day: "numeric" };
+  var fillDateStr = new Intl.DateTimeFormat("en-US", dateFmt).format(d);
+  var nowDateStr = new Intl.DateTimeFormat("en-US", dateFmt).format(new Date());
+  if (fillDateStr === nowDateStr) return timeStr;
+  return (parts.weekday || "") + " " + timeStr;
+}
+
 function startTimeText(b) {
   if (b.in_play) {
     if (!b.start_time) return "in play";
@@ -798,6 +822,52 @@ function outcomeRow(o, dim) {
   return tr;
 }
 
+function buildFillsTable(fills) {
+  var wrap = document.createElement("div");
+  wrap.className = "table-scroll";
+  var table = document.createElement("table");
+  var thead = document.createElement("thead");
+  var headRow = document.createElement("tr");
+  ["Time", "Outcome", "Side", "Count", "Price"].forEach(function (h) {
+    var th = document.createElement("th");
+    th.setAttribute("scope", "col");
+    th.textContent = h;
+    headRow.appendChild(th);
+  });
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+
+  var tbody = document.createElement("tbody");
+  if (!fills.length) {
+    var tr0 = document.createElement("tr");
+    var cell = document.createElement("td");
+    cell.colSpan = 5;
+    cell.className = "state-msg";
+    cell.textContent = "No fills recorded yet.";
+    tr0.appendChild(cell);
+    tbody.appendChild(tr0);
+  } else {
+    // Newest first - already the order the publisher sends them in.
+    fills.forEach(function (f) {
+      var tr = document.createElement("tr");
+      tr.appendChild(td(centralTimeLabel(f.ts) + " (" + timeAgoText(f.ts) + ")"));
+      tr.appendChild(td(f.label));
+      var sideTd = document.createElement("td");
+      var sideSpan = document.createElement("span");
+      sideSpan.className = f.side === "sell" ? "side-sell" : "side-buyback";
+      sideSpan.textContent = f.side === "sell" ? "sold" : "bought back";
+      sideTd.appendChild(sideSpan);
+      tr.appendChild(sideTd);
+      tr.appendChild(td(fmtNum(f.count)));
+      tr.appendChild(td(fmtCents(f.price)));
+      tbody.appendChild(tr);
+    });
+  }
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  return wrap;
+}
+
 function buildFillsSection(b) {
   var details = document.createElement("details");
   details.className = "fills-toggle";
@@ -805,25 +875,7 @@ function buildFillsSection(b) {
   var summary = document.createElement("summary");
   summary.textContent = "Recent fills (" + fills.length + ")";
   details.appendChild(summary);
-  var ul = document.createElement("ul");
-  ul.className = "fills-list";
-  if (!fills.length) {
-    var li0 = document.createElement("li");
-    li0.textContent = "No fills recorded yet.";
-    ul.appendChild(li0);
-  }
-  fills.forEach(function (f) {
-    var li = document.createElement("li");
-    var left = document.createElement("span");
-    left.textContent = f.label + " - " + fmtNum(f.count) + " @ " + fmtCents(f.price);
-    var right = document.createElement("span");
-    right.className = f.side === "sell" ? "side-sell" : "side-buyback";
-    right.textContent = f.side === "sell" ? "sold" : "bought back";
-    li.appendChild(left);
-    li.appendChild(right);
-    ul.appendChild(li);
-  });
-  details.appendChild(ul);
+  details.appendChild(buildFillsTable(fills));
   return details;
 }
 
