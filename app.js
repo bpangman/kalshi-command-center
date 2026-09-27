@@ -82,6 +82,17 @@ function fmtPlainDollars(n) {
   return "$" + Math.round(Math.abs(Number(n))).toLocaleString("en-US");
 }
 
+function fmtCollectedDollars(n) {
+  /* Like fmtPlainDollars (no leading +, "$509" not "+$509" - these read as
+     a running collection total, not a gain/loss), but keeps a minus sign
+     in the rare case a figure goes negative, since that is still
+     meaningful here (unlike a budget allocation, which is never negative). */
+  if (n === null || n === undefined || Number.isNaN(Number(n))) return "-";
+  n = Number(n);
+  var sign = n < 0 ? "-" : "";
+  return sign + "$" + Math.round(Math.abs(n)).toLocaleString("en-US");
+}
+
 function moneyClass(n) {
   if (n === null || n === undefined || Number.isNaN(Number(n))) return "zero";
   n = Number(n);
@@ -745,7 +756,7 @@ function renderSportPage(sport) {
   var table = document.createElement("table");
   var thead = document.createElement("thead");
   var headRow = document.createElement("tr");
-  ["Date", "Event", "Result", "Contracts sold", "Premium"].forEach(function (h) {
+  ["Date", "Event", "Result", "Contracts sold", "Premium", "Collected"].forEach(function (h) {
     var th = document.createElement("th");
     th.setAttribute("scope", "col");
     th.textContent = h;
@@ -879,6 +890,43 @@ function buildFillsSection(b) {
   return details;
 }
 
+function buildCollectedBlock(b) {
+  /* "Principal collected" (Blake, 2026-09-27): premium, fees, net, the
+     margin banked over fair, and cumulative sold/bought-back counts.
+     Folds in what used to be the footer's separate Premium/Fees stats,
+     so those are no longer duplicated down in the footer row. */
+  var wrap = document.createElement("div");
+  wrap.className = "collected-block";
+
+  var main = document.createElement("div");
+  main.className = "collected-main " + moneyClass(b.net_collected_dollars);
+  main.textContent = "Collected " + fmtCollectedDollars(b.premium_collected_dollars) + " premium, "
+    + fmtCollectedDollars(b.fees_dollars) + " fees, " + fmtCollectedDollars(b.net_collected_dollars) + " net";
+  wrap.appendChild(main);
+
+  var margin = document.createElement("div");
+  margin.className = "collected-margin";
+  if (b.banked_margin_dollars !== null && b.banked_margin_dollars !== undefined) {
+    margin.appendChild(document.createTextNode("Margin over fair: "));
+    var span = document.createElement("span");
+    span.className = moneyClass(b.banked_margin_dollars);
+    span.textContent = fmtCollectedDollars(b.banked_margin_dollars);
+    margin.appendChild(span);
+    margin.appendChild(document.createTextNode(" banked"));
+  } else {
+    margin.textContent = "Margin over fair: pending";
+    margin.classList.add("pending");
+  }
+  wrap.appendChild(margin);
+
+  var contracts = document.createElement("div");
+  contracts.className = "collected-contracts";
+  contracts.textContent = fmtNum(b.contracts_sold_total) + " sold, " + fmtNum(b.contracts_bought_back_total) + " bought back";
+  wrap.appendChild(contracts);
+
+  return wrap;
+}
+
 function buildBookCard(b) {
   var card = document.createElement("div");
   card.className = "book-card";
@@ -903,6 +951,8 @@ function buildBookCard(b) {
   head.appendChild(phase);
   card.appendChild(head);
 
+  card.appendChild(buildCollectedBlock(b));
+
   var meta = document.createElement("div");
   meta.className = "book-meta";
   var startSpan = document.createElement("span");
@@ -926,8 +976,6 @@ function buildBookCard(b) {
 
   var footRow = document.createElement("div");
   footRow.className = "stat-row";
-  footRow.appendChild(statMoneyEl("Premium", b.premium_collected));
-  footRow.appendChild(statMoneyEl("Fees", b.fees ? -Math.abs(b.fees) : 0));
   var webStat = document.createElement("span");
   webStat.className = "stat";
   webStat.appendChild(document.createTextNode("Worst / EV / Best: "));
@@ -967,7 +1015,7 @@ function renderSettledTable(tbody, sport) {
   if (!rows.length) {
     var tr = document.createElement("tr");
     var cell = document.createElement("td");
-    cell.colSpan = 5;
+    cell.colSpan = 6;
     cell.className = "state-msg";
     cell.textContent = "No settled events yet.";
     tr.appendChild(cell);
@@ -983,6 +1031,13 @@ function renderSettledTable(tbody, sport) {
     tr2.appendChild(resultTd);
     tr2.appendChild(td(r.contracts_sold !== null && r.contracts_sold !== undefined ? fmtNum(r.contracts_sold) : "-"));
     tr2.appendChild(td(r.premium !== null && r.premium !== undefined ? fmtMoney(r.premium) : "-"));
+    var collectedTd = document.createElement("td");
+    if (r.premium !== null && r.premium !== undefined && r.fees !== null && r.fees !== undefined) {
+      collectedTd.appendChild(moneySpan(r.premium - r.fees));
+    } else {
+      collectedTd.textContent = "-";
+    }
+    tr2.appendChild(collectedTd);
     tbody.appendChild(tr2);
   });
 }
