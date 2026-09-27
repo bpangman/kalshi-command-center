@@ -69,6 +69,13 @@ function fmtMoney(n, decimals) {
   return sign + "$" + numStr;
 }
 
+function fmtPlainDollars(n) {
+  /* Allocations are a budget, not a profit or loss, so no +/- sign - just
+     "$1,563", matching how Blake reads a cash allocation. */
+  if (n === null || n === undefined || Number.isNaN(Number(n))) return "-";
+  return "$" + Math.round(Math.abs(Number(n))).toLocaleString("en-US");
+}
+
 function moneyClass(n) {
   if (n === null || n === undefined || Number.isNaN(Number(n))) return "zero";
   n = Number(n);
@@ -282,6 +289,11 @@ function renderHeader() {
   var sub = books.length ? ("EV " + fmtMoney(evSum) + " across " + books.length + " book" + (books.length === 1 ? "" : "s")) : "";
   tiles.appendChild(tile("Open books right now", rangeNode, sub));
 
+  var allocNote = document.getElementById("allocation-note");
+  if (allocNote) {
+    allocNote.hidden = !f.allocation_target;
+  }
+
   updateHeaderTimestamps();
 }
 
@@ -294,7 +306,14 @@ function destroyChart(id) {
   }
 }
 
-function chartOptions(tooltipLabelFn) {
+function chartOptions(tooltipLabelFn, xMin, xMax) {
+  var xScale = {
+    type: "linear",
+    ticks: { color: "#8b949e", callback: function (v) { return new Date(v).toLocaleDateString("en-US", { month: "short", day: "numeric" }); } },
+    grid: { color: "#30363d" },
+  };
+  if (xMin !== undefined && xMin !== null) xScale.min = xMin;
+  if (xMax !== undefined && xMax !== null) xScale.max = xMax;
   return {
     responsive: true,
     maintainAspectRatio: false,
@@ -312,11 +331,7 @@ function chartOptions(tooltipLabelFn) {
       },
     },
     scales: {
-      x: {
-        type: "linear",
-        ticks: { color: "#8b949e", callback: function (v) { return new Date(v).toLocaleDateString("en-US", { month: "short", day: "numeric" }); } },
-        grid: { color: "#30363d" },
-      },
+      x: xScale,
       y: {
         ticks: { color: "#8b949e", callback: function (v) { return "$" + Number(v).toLocaleString("en-US"); } },
         grid: { color: "#30363d" },
@@ -387,13 +402,19 @@ function renderPurseChart() {
   });
 }
 
-function renderSportChart(canvasId, points, highlightIdx) {
+function renderSportChart(canvasId, points, highlightIdx, xMin, xMax) {
   if (typeof Chart === "undefined") return;
   var canvas = document.getElementById(canvasId);
   if (!canvas) return;
   destroyChart(canvasId);
-  var pointColors = points.map(function (p, i) { return i === highlightIdx ? "#d29922" : ((p.realized || 0) >= 0 ? "#3fb950" : "#f85149"); });
-  var pointRadii = points.map(function (p, i) { return i === highlightIdx ? 6 : 3; });
+  var pointColors = points.map(function (p, i) {
+    if (p.synthetic) return "rgba(0,0,0,0)";
+    return i === highlightIdx ? "#d29922" : ((p.realized || 0) >= 0 ? "#3fb950" : "#f85149");
+  });
+  var pointRadii = points.map(function (p, i) {
+    if (p.synthetic) return 0;
+    return i === highlightIdx ? 6 : 3;
+  });
   state.charts[canvasId] = new Chart(canvas, {
     type: "line",
     data: {
@@ -410,8 +431,9 @@ function renderSportChart(canvasId, points, highlightIdx) {
     },
     options: chartOptions(function (ctx) {
       var raw = ctx.raw || {};
+      if (raw.synthetic) return ["Before the first settled event"];
       return [(raw.title || "") + ": " + fmtMoney(raw.realized), "Running total: " + fmtMoney(ctx.parsed.y)];
-    }),
+    }, xMin, xMax),
   });
 }
 
@@ -420,6 +442,20 @@ function renderSportChart(canvasId, points, highlightIdx) {
 function renderSportCards() {
   var container = document.getElementById("sport-cards");
   container.innerHTML = "";
+
+  /* One shared time window for all four sport charts, so they line up:
+     earliest settled_time across every sport, minus a day, to today plus
+     a day. Without an explicit min/max, a chart with a single data point
+     lets Chart.js's linear scale invent its own arbitrary padding around
+     that one x value (this was the bug: F1's one point showed an axis
+     running Nov 14 to Mar 17 with nothing to anchor it). */
+  var allSettledMs = state.results
+    .map(function (r) { return r.settled_time ? new Date(r.settled_time).getTime() : null; })
+    .filter(function (t) { return t !== null && !Number.isNaN(t); });
+  var DAY_MS = 24 * 60 * 60 * 1000;
+  var sportWindowStart = allSettledMs.length ? (Math.min.apply(null, allSettledMs) - DAY_MS) : (Date.now() - DAY_MS);
+  var sportWindowEnd = Date.now() + DAY_MS;
+
   SPORTS.forEach(function (sport) {
     var results = state.results.filter(function (r) { return r.sport === sport; });
     var card = document.createElement("div");
@@ -456,6 +492,15 @@ function renderSportCards() {
         if ((pt.realized || -Infinity) > (points[maxIdx].realized || -Infinity)) maxIdx = i;
       });
 
+      /* A sport with exactly one settled event has nothing to draw a
+         line between - anchor it with a synthetic $0 point at the shared
+         window's start so the step line still draws from $0 up (or down)
+         to the real point, instead of a single floating dot. */
+      if (points.length === 1) {
+        points.unshift({ x: sportWindowStart, y: 0, title: null, realized: null, synthetic: true });
+        maxIdx += 1;
+      }
+
       var chartBox = document.createElement("div");
       chartBox.className = "chart-box";
       var canvas = document.createElement("canvas");
@@ -477,7 +522,7 @@ function renderSportCards() {
       statRow.appendChild(statMoneyEl("Worst", worst));
       card.appendChild(statRow);
 
-      renderSportChart(canvasId, points, maxIdx);
+      renderSportChart(canvasId, points, maxIdx, sportWindowStart, sportWindowEnd);
     }
 
     var details = document.createElement("details");
@@ -616,7 +661,16 @@ function buildBookCard(b) {
   startSpan.textContent = startTimeText(b);
   meta.appendChild(startSpan);
   var allocSpan = document.createElement("span");
-  allocSpan.textContent = "Allocation: " + (b.allocation_dollars !== null && b.allocation_dollars !== undefined ? fmtMoney(b.allocation_dollars) : "-");
+  if (b.allocation_dollars !== null && b.allocation_dollars !== undefined) {
+    var allocText = "Allocation " + fmtPlainDollars(b.allocation_dollars);
+    var target = state.feed && state.feed.allocation_target;
+    if (target) {
+      allocText += (target === b.key) ? " (receiving freed cash)" : " (reserved need)";
+    }
+    allocSpan.textContent = allocText;
+  } else {
+    allocSpan.textContent = "Allocation: -";
+  }
   meta.appendChild(allocSpan);
   card.appendChild(meta);
 
