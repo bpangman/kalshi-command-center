@@ -69,9 +69,30 @@ pushes right away if a new event just settled.
   exact outcome happened right now, with no more trading, this is what we
   would make or lose, counting only the contracts we already hold (not the
   ones still resting, unfilled, in the order book).
-- **Worst / EV / Best** on a book is the range of outcomes across every
-  possibility still on the board (worst case, an average weighted by how
-  likely each outcome looks, and best case).
+- **If it ended now / Best** on a book is the range of outcomes across
+  every possibility still on the board: the worst case if nothing else
+  ever fills, and the best case.
+- **Break glass** is not a prediction - it is what Blake could actually
+  lock in this minute by trading against the real order book right now
+  (buying back the worst outcome, selling more of the best one). The
+  page only ever shows this number; it never places a trade itself.
+- **Market-implied outcome (trend 15m)** is a probability-weighted view
+  of the book using the best live odds available (the bot's own blended
+  view when the game is in play, otherwise the market's own prices),
+  plus how that number has moved in the last 15 minutes. We dropped the
+  old "EV" figure because it was misleading - it either assumed every
+  resting order fills, or was just an average of every position,
+  neither of which is a real number Blake could act on.
+- **Collected** is the running principal each book has taken in: premium
+  from sales, minus fees, equals net - plus "margin over fair" (banked
+  edge above what the bot judged fair at the time) once the bot reports
+  one.
+- Each recorded fill shows **Fair** (the best estimate of fair value at
+  that moment - the bot's own blended odds when fresh, else the market's
+  own mid price, else the last trade) and **Margin** (how much better
+  than fair that fill did, in cents, green for better than fair and red
+  for worse). A fill's margin is captured once and never changes later,
+  even if a later, better fair-value read comes in.
 - A red **Stale** badge in the header means the page has not heard from the
   publisher in over 3 minutes, or one of the live books has not checked in
   with its own heartbeat in over 2 minutes. It does not mean the bot placed

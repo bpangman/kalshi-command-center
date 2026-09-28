@@ -368,7 +368,6 @@ function renderHomeTiles() {
   var books = f.books || [];
   var worstSum = sumBy(books, "worst_now");
   var bestSum = sumBy(books, "best_now");
-  var evSum = sumBy(books, "ev_now");
   var rangeNode = document.createElement("span");
   if (books.length) {
     rangeNode.appendChild(moneySpan(worstSum));
@@ -377,7 +376,13 @@ function renderHomeTiles() {
   } else {
     rangeNode.textContent = "no live books";
   }
-  var sub = books.length ? ("EV " + fmtMoney(evSum) + " across " + books.length + " book" + (books.length === 1 ? "" : "s")) : "";
+  var sub = "";
+  if (books.length) {
+    var implied = sumBy(books, "market_implied_outcome_now");
+    var trend = sumBy(books, "market_implied_trend_15m");
+    var hasTrend = books.some(function (b) { return b.market_implied_trend_15m !== null && b.market_implied_trend_15m !== undefined; });
+    sub = "Market-implied " + fmtMoney(implied) + (hasTrend ? " (15m " + fmtMoney(trend) + ")" : "") + " across " + books.length + " book" + (books.length === 1 ? "" : "s");
+  }
   tiles.appendChild(tile("Open books right now", rangeNode, sub));
 
   var allocNote = document.getElementById("allocation-note");
@@ -563,7 +568,7 @@ function buildPurseSeries() {
       results.forEach(function (r) {
         if (new Date(r.settled_time).getTime() <= t) realizedToDate += (r.realized_pnl || 0);
       });
-      dashedPoints.push({ x: t, y: round2(realizedToDate + (snap.open_ev || 0)) });
+      dashedPoints.push({ x: t, y: round2(realizedToDate + (snap.open_market_implied || 0)) });
     });
   }
   return { solidPoints: solidPoints, dashedPoints: dashedPoints };
@@ -576,21 +581,22 @@ function renderPurseChart() {
     data: series.solidPoints,
     borderColor: "#3fb950",
     backgroundColor: "rgba(63,185,80,0.08)",
-    stepped: "before",
+    cubicInterpolationMode: "monotone",
+    tension: 0.4,
     pointRadius: 3,
     pointBackgroundColor: "#3fb950",
     fill: true,
-    tension: 0,
   }];
   if (series.dashedPoints.length) {
     datasets.push({
-      label: "Realized + open EV",
+      label: "Realized + market-implied",
       data: series.dashedPoints,
       borderColor: "#8b949e",
       borderDash: [6, 4],
       pointRadius: 0,
       fill: false,
-      tension: 0.1,
+      cubicInterpolationMode: "monotone",
+      tension: 0.4,
     });
   }
   createLineChart("purse-chart", datasets, function (ctx) {
@@ -613,13 +619,13 @@ function renderSportChart(canvasId, points, highlightIdx, xMin, xMax) {
   });
   var datasets = [{
     data: points,
-    stepped: "before",
+    cubicInterpolationMode: "monotone",
+    tension: 0.4,
     borderColor: "#58a6ff",
     backgroundColor: "rgba(88,166,255,0.08)",
     pointBackgroundColor: pointColors,
     pointRadius: pointRadii,
     fill: true,
-    tension: 0,
   }];
   createLineChart(canvasId, datasets, function (ctx) {
     var raw = ctx.raw || {};
@@ -833,13 +839,26 @@ function outcomeRow(o, dim) {
   return tr;
 }
 
+function fmtMarginCents(cents, fairDollars) {
+  if (cents === null || cents === undefined || Number.isNaN(Number(cents))) return "-";
+  cents = Number(cents);
+  var sign = cents >= 0 ? "+" : "-";
+  var text = sign + Math.abs(cents).toFixed(1) + "c";
+  if (fairDollars !== null && fairDollars !== undefined && Number(fairDollars) > 0) {
+    var pct = (cents / 100) / Number(fairDollars) * 100;
+    var pctSign = pct >= 0 ? "+" : "-";
+    text += " (" + pctSign + Math.abs(pct).toFixed(0) + "%)";
+  }
+  return text;
+}
+
 function buildFillsTable(fills) {
   var wrap = document.createElement("div");
   wrap.className = "table-scroll";
   var table = document.createElement("table");
   var thead = document.createElement("thead");
   var headRow = document.createElement("tr");
-  ["Time", "Outcome", "Side", "Count", "Price"].forEach(function (h) {
+  ["Time", "Outcome", "Side", "Count", "Price", "Fair", "Margin"].forEach(function (h) {
     var th = document.createElement("th");
     th.setAttribute("scope", "col");
     th.textContent = h;
@@ -852,7 +871,7 @@ function buildFillsTable(fills) {
   if (!fills.length) {
     var tr0 = document.createElement("tr");
     var cell = document.createElement("td");
-    cell.colSpan = 5;
+    cell.colSpan = 7;
     cell.className = "state-msg";
     cell.textContent = "No fills recorded yet.";
     tr0.appendChild(cell);
@@ -871,12 +890,39 @@ function buildFillsTable(fills) {
       tr.appendChild(sideTd);
       tr.appendChild(td(fmtNum(f.count)));
       tr.appendChild(td(fmtCents(f.price)));
+      tr.appendChild(td(f.fair !== null && f.fair !== undefined ? fmtCents(f.fair) : "-"));
+      var marginTd = document.createElement("td");
+      var marginSpan = document.createElement("span");
+      marginSpan.className = moneyClass(f.margin_cents);
+      marginSpan.textContent = fmtMarginCents(f.margin_cents, f.fair);
+      marginTd.appendChild(marginSpan);
+      tr.appendChild(marginTd);
       tbody.appendChild(tr);
     });
   }
   table.appendChild(tbody);
   wrap.appendChild(table);
   return wrap;
+}
+
+function buildFillsSummaryLine(summary) {
+  var p = document.createElement("p");
+  p.className = "fills-summary-line";
+  if (!summary || !summary.n) {
+    p.textContent = "No recorded fills with a margin yet.";
+    return p;
+  }
+  p.appendChild(document.createTextNode("last " + summary.n + " fill" + (summary.n === 1 ? "" : "s") + ": avg margin "));
+  var avgSpan = document.createElement("span");
+  avgSpan.className = moneyClass(summary.avg_margin_cents);
+  avgSpan.textContent = (summary.avg_margin_cents >= 0 ? "+" : "") + Number(summary.avg_margin_cents).toFixed(1) + "c";
+  p.appendChild(avgSpan);
+  p.appendChild(document.createTextNode(", total "));
+  var totalSpan = document.createElement("span");
+  totalSpan.className = moneyClass(summary.total_margin_dollars);
+  totalSpan.textContent = fmtMoney(summary.total_margin_dollars, 2);
+  p.appendChild(totalSpan);
+  return p;
 }
 
 function buildFillsSection(b) {
@@ -887,6 +933,7 @@ function buildFillsSection(b) {
   summary.textContent = "Recent fills (" + fills.length + ")";
   details.appendChild(summary);
   details.appendChild(buildFillsTable(fills));
+  details.appendChild(buildFillsSummaryLine(b.fills_summary));
   return details;
 }
 
@@ -980,6 +1027,50 @@ function buildActivityBlock(b) {
   return wrap;
 }
 
+function buildOutlookBlock(b) {
+  /* Replaces the old "Worst / EV / Best" footer EV figure (Blake, 2026-
+     09-27: "EV is misleading - it either assumes everything fills or is
+     like the average of all positions"). Two numbers instead: the best
+     floor tradeable against the real order book RIGHT NOW (informational
+     only, the publisher never trades), and a probability-weighted
+     outcome using the bot's own live view (or market mids), with its
+     15-minute trend. */
+  var wrap = document.createElement("div");
+  wrap.className = "outlook-block";
+
+  var bgLine = document.createElement("div");
+  bgLine.className = "outlook-line";
+  var bg = b.break_glass;
+  if (bg && bg.locked_floor !== null && bg.locked_floor !== undefined) {
+    bgLine.appendChild(document.createTextNode("Break glass: lock "));
+    bgLine.appendChild(moneySpan(bg.locked_floor));
+    bgLine.appendChild(document.createTextNode(" now, costs " + fmtPlainDollars(bg.cost)));
+  } else {
+    bgLine.textContent = "Break glass: not available this update";
+    bgLine.classList.add("pending");
+  }
+  wrap.appendChild(bgLine);
+
+  var miLine = document.createElement("div");
+  miLine.className = "outlook-line";
+  if (b.market_implied_outcome_now !== null && b.market_implied_outcome_now !== undefined) {
+    miLine.appendChild(document.createTextNode("Market-implied outcome (trend 15m): "));
+    miLine.appendChild(moneySpan(b.market_implied_outcome_now));
+    if (b.market_implied_trend_15m !== null && b.market_implied_trend_15m !== undefined) {
+      var trendSpan = document.createElement("span");
+      trendSpan.className = moneyClass(b.market_implied_trend_15m);
+      trendSpan.textContent = " (" + fmtMoney(b.market_implied_trend_15m) + ")";
+      miLine.appendChild(trendSpan);
+    }
+  } else {
+    miLine.textContent = "Market-implied outcome (trend 15m): pending";
+    miLine.classList.add("pending");
+  }
+  wrap.appendChild(miLine);
+
+  return wrap;
+}
+
 function buildBookCard(b) {
   var card = document.createElement("div");
   card.className = "book-card";
@@ -1035,15 +1126,15 @@ function buildBookCard(b) {
   footRow.className = "stat-row";
   var webStat = document.createElement("span");
   webStat.className = "stat";
-  webStat.appendChild(document.createTextNode("Worst / EV / Best: "));
+  webStat.appendChild(document.createTextNode("If it ended now / Best: "));
   webStat.appendChild(moneySpan(b.worst_now));
-  webStat.appendChild(document.createTextNode(" / "));
-  webStat.appendChild(moneySpan(b.ev_now));
   webStat.appendChild(document.createTextNode(" / "));
   webStat.appendChild(moneySpan(b.best_now));
   footRow.appendChild(webStat);
   footRow.appendChild(statEl("Contracts held", fmtNum(b.contracts_held_total)));
   card.appendChild(footRow);
+
+  card.appendChild(buildOutlookBlock(b));
 
   card.appendChild(buildFillsSection(b));
 
