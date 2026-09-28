@@ -24,7 +24,14 @@ https://bpangman.github.io/kalshi-command-center/
    allocated to it, a full table of every outcome (how many contracts we are
    holding, how many more are resting in the order book, the current price,
    and what we would make or lose if that exact outcome happened right
-   now), and the most recent fills.
+   now), and the most recent fills. 2026-09-28: a green banner ("Floor
+   mode: guaranteed +$96") appears once the bot has locked in a guaranteed
+   minimum and switched to only-raise-it mode; right below that, a small
+   line shows how much the bot has posted/filled in the last 10-30
+   minutes, with an amber "Inactive" note (and which of its own safety
+   causes/remedies is at play) if the bot's own activity watchdog has
+   flagged itself as stuck. Both are a straight read of the bot's own
+   heartbeat.json, never re-derived here.
 5. **Settled events** - every finished event, newest first, with the date,
    the result, how many contracts were sold, and how much premium was
    collected.

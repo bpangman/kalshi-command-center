@@ -927,6 +927,59 @@ function buildCollectedBlock(b) {
   return wrap;
 }
 
+/* 2026-09-28 (Blake, activity watchdog + floor mode, finishing the
+   deferred command-center pieces): b.activity/b.floor_mode are a
+   straight passthrough of the bot's own heartbeat.json blocks (house21/
+   activity.py's watchdog; house21/ingame.py's floor-mode functions) --
+   this reads them, never re-derives them. Either can be missing
+   (null/undefined) on a heartbeat from before this build, or one that
+   has not looped yet -- rendered as no block at all, never a false
+   "all clear." */
+function buildActivityBlock(b) {
+  var wrap = document.createElement("div");
+  wrap.className = "activity-block";
+
+  var fm = b.floor_mode;
+  if (fm && fm.active) {
+    var floorLine = document.createElement("div");
+    floorLine.className = "floor-mode-banner";
+    var floorText = "Floor mode: guaranteed ";
+    if (fm.floor_now !== null && fm.floor_now !== undefined) {
+      floorLine.appendChild(document.createTextNode(floorText));
+      floorLine.appendChild(moneySpan(fm.floor_now));
+    } else {
+      floorLine.textContent = floorText + "-";
+    }
+    wrap.appendChild(floorLine);
+  }
+
+  var a = b.activity;
+  if (!a) {
+    return wrap.childNodes.length ? wrap : null;
+  }
+
+  var statsLine = document.createElement("div");
+  statsLine.className = "activity-stats";
+  var posted = (a.posts_last_10m !== null && a.posts_last_10m !== undefined) ? fmtNum(a.posts_last_10m) : "-";
+  var filled = (a.fills_last_30m !== null && a.fills_last_30m !== undefined) ? fmtNum(a.fills_last_30m) : "-";
+  var traded = (a.market_volume_last_30m !== null && a.market_volume_last_30m !== undefined) ? fmtNum(a.market_volume_last_30m) : "-";
+  statsLine.textContent = "Last 10 min: " + posted + " posted. Last 30 min: " + filled + " filled, " + traded + " traded on the market.";
+  wrap.appendChild(statsLine);
+
+  if (a.inactive) {
+    var causeLine = document.createElement("div");
+    causeLine.className = "activity-cause";
+    var causeText = "Inactive -- cause: " + (a.cause || "unknown");
+    if (a.remedy && a.remedy.action) {
+      causeText += " (remedy: " + a.remedy.action + ")";
+    }
+    causeLine.textContent = causeText;
+    wrap.appendChild(causeLine);
+  }
+
+  return wrap;
+}
+
 function buildBookCard(b) {
   var card = document.createElement("div");
   card.className = "book-card";
@@ -952,6 +1005,10 @@ function buildBookCard(b) {
   card.appendChild(head);
 
   card.appendChild(buildCollectedBlock(b));
+  var activityBlock = buildActivityBlock(b);
+  if (activityBlock) {
+    card.appendChild(activityBlock);
+  }
 
   var meta = document.createElement("div");
   meta.className = "book-meta";
