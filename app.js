@@ -59,6 +59,7 @@ var state = {
   feed: null,
   results: [],
   snapshots: [],
+  calendar: [],
   charts: {},
   tooltipTimers: {},
 };
@@ -154,6 +155,32 @@ function centralTimeLabel(iso) {
   var nowDateStr = new Intl.DateTimeFormat("en-US", dateFmt).format(new Date());
   if (fillDateStr === nowDateStr) return timeStr;
   return (parts.weekday || "") + " " + timeStr;
+}
+
+function centralDateParts(iso) {
+  var d = new Date(iso);
+  var parts = {};
+  new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" })
+    .formatToParts(d).forEach(function (p) { parts[p.type] = p.value; });
+  return parts;
+}
+
+function centralDateKey(iso) {
+  var p = centralDateParts(iso);
+  return (p.year || "9999") + "-" + (p.month || "99") + "-" + (p.day || "99");
+}
+
+function centralDayLabel(iso) {
+  var d = new Date(iso);
+  return new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", month: "short", day: "numeric" }).format(d);
+}
+
+function centralTimeOnly(iso) {
+  var d = new Date(iso);
+  var parts = {};
+  new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", hour: "numeric", minute: "2-digit", hour12: true })
+    .formatToParts(d).forEach(function (p) { parts[p.type] = p.value; });
+  return (parts.hour || "") + ":" + (parts.minute || "") + String(parts.dayPeriod || "").toLowerCase();
 }
 
 function startTimeText(b) {
@@ -274,10 +301,12 @@ function refresh() {
     fetchJSON("data/feed.json"),
     fetchJSON("data/results.json").catch(function () { return []; }),
     fetchJSON("data/snapshots.json").catch(function () { return []; }),
+    fetchJSON("data/calendar.json").catch(function () { return { rows: [] }; }),
   ]).then(function (parts) {
     state.feed = parts[0];
     state.results = Array.isArray(parts[1]) ? parts[1] : [];
     state.snapshots = Array.isArray(parts[2]) ? parts[2] : [];
+    state.calendar = Array.isArray(parts[3] && parts[3].rows) ? parts[3].rows : [];
     renderAll();
   }).catch(function (err) {
     renderError(err);
@@ -313,6 +342,7 @@ function renderForRoute(route) {
   if (route === "home") {
     renderHomeTiles();
     renderPurseChart();
+    renderCalendar(document.getElementById("calendar-list"));
     renderLiveBooks(document.getElementById("live-books-list"), null);
   } else {
     renderSportPage(ROUTE_TO_SPORT[route]);
@@ -1071,12 +1101,42 @@ function buildOutlookBlock(b) {
   return wrap;
 }
 
-function buildBookCard(b) {
+/* -- collapsible card state (localStorage, wrapped in try/catch since a
+   private-browsing tab or a blocked-storage context can throw just from
+   touching localStorage at all) -- */
+
+function getCardCollapsedPref(key) {
+  try {
+    var v = localStorage.getItem("kcc_collapsed_" + key);
+    if (v === "1") return true;
+    if (v === "0") return false;
+  } catch (e) {
+    /* localStorage unavailable - no stored preference, fall through */
+  }
+  return null;
+}
+
+function setCardCollapsedPref(key, collapsed) {
+  try {
+    localStorage.setItem("kcc_collapsed_" + key, collapsed ? "1" : "0");
+  } catch (e) {
+    /* localStorage unavailable - nothing to persist, the page still works */
+  }
+}
+
+function buildBookCard(b, opts) {
+  opts = opts || {};
+  var stored = getCardCollapsedPref(b.key);
+  var collapsed = stored !== null ? stored : !!opts.defaultCollapsed;
+
   var card = document.createElement("div");
   card.className = "book-card";
 
   var head = document.createElement("div");
   head.className = "book-head";
+  head.setAttribute("role", "button");
+  head.setAttribute("tabindex", "0");
+  head.setAttribute("aria-label", "Toggle " + b.title + " details");
   var dot = document.createElement("span");
   dot.className = "hb-dot " + hbDotClass(b);
   dot.setAttribute("aria-label", "heartbeat health: " + hbDotClass(b));
@@ -1093,12 +1153,33 @@ function buildBookCard(b) {
   head.appendChild(title);
   head.appendChild(sportTag);
   head.appendChild(phase);
+
+  var quick = document.createElement("span");
+  quick.className = "book-head-quick";
+  var floorSpan = document.createElement("span");
+  floorSpan.className = "book-head-floor " + moneyClass(b.worst_now);
+  floorSpan.textContent = fmtMoney(b.worst_now);
+  var premSpan = document.createElement("span");
+  premSpan.className = "book-head-premium";
+  premSpan.textContent = fmtPlainDollars(b.premium_collected_dollars) + " prem";
+  quick.appendChild(floorSpan);
+  quick.appendChild(premSpan);
+  head.appendChild(quick);
+
+  var chevron = document.createElement("span");
+  chevron.className = "chevron";
+  chevron.setAttribute("aria-hidden", "true");
+  head.appendChild(chevron);
+
   card.appendChild(head);
 
-  card.appendChild(buildCollectedBlock(b));
+  var body = document.createElement("div");
+  body.className = "book-body";
+
+  body.appendChild(buildCollectedBlock(b));
   var activityBlock = buildActivityBlock(b);
   if (activityBlock) {
-    card.appendChild(activityBlock);
+    body.appendChild(activityBlock);
   }
 
   var meta = document.createElement("div");
@@ -1118,9 +1199,9 @@ function buildBookCard(b) {
     allocSpan.textContent = "Allocation: -";
   }
   meta.appendChild(allocSpan);
-  card.appendChild(meta);
+  body.appendChild(meta);
 
-  card.appendChild(buildOutcomeTable(b));
+  body.appendChild(buildOutcomeTable(b));
 
   var footRow = document.createElement("div");
   footRow.className = "stat-row";
@@ -1132,14 +1213,156 @@ function buildBookCard(b) {
   webStat.appendChild(moneySpan(b.best_now));
   footRow.appendChild(webStat);
   footRow.appendChild(statEl("Contracts held", fmtNum(b.contracts_held_total)));
-  card.appendChild(footRow);
+  body.appendChild(footRow);
 
-  card.appendChild(buildOutlookBlock(b));
+  body.appendChild(buildOutlookBlock(b));
 
-  card.appendChild(buildFillsSection(b));
+  body.appendChild(buildFillsSection(b));
+
+  card.appendChild(body);
+
+  function applyState(nowCollapsed) {
+    body.hidden = nowCollapsed;
+    head.setAttribute("aria-expanded", String(!nowCollapsed));
+    card.classList.toggle("collapsed", nowCollapsed);
+  }
+  applyState(collapsed);
+
+  function toggle() {
+    collapsed = !collapsed;
+    applyState(collapsed);
+    setCardCollapsedPref(b.key, collapsed);
+  }
+  head.addEventListener("click", toggle);
+  head.addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter" || evt.key === " ") {
+      evt.preventDefault();
+      toggle();
+    }
+  });
+
+  card.setCollapsed = function (val) {
+    if (val === collapsed) return;
+    collapsed = val;
+    applyState(collapsed);
+    setCardCollapsedPref(b.key, collapsed);
+  };
 
   return card;
 }
+
+/* -- calendar -- */
+
+function buildCalendarRow(r) {
+  var row = document.createElement("div");
+  row.className = "calendar-row" + (r.kind === "live_book" ? " live" : " candidate");
+
+  var dot = document.createElement("span");
+  dot.className = "calendar-dot" + (r.kind === "live_book" ? " live" : "");
+  row.appendChild(dot);
+
+  var iso = r.start_iso || r.ends_by_iso;
+  var timeText = "date TBD";
+  if (iso) {
+    timeText = r.start_iso ? centralTimeOnly(iso) : ("by " + centralTimeOnly(iso));
+  }
+
+  var text = document.createElement("span");
+  text.className = "calendar-text";
+  var label = timeText + " - " + (r.sport || "-") + " - " + r.title;
+  if (r.kind === "live_book") {
+    label += " - LIVE BOOK";
+  } else if (r.kind === "manual" && r.note) {
+    label += " - " + r.note;
+  }
+  text.textContent = label;
+  row.appendChild(text);
+
+  return row;
+}
+
+function renderCalendar(container) {
+  container.innerHTML = "";
+  var rows = state.calendar || [];
+  if (!rows.length) {
+    var p = document.createElement("p");
+    p.className = "state-msg";
+    p.textContent = "Nothing on the calendar right now.";
+    container.appendChild(p);
+    return;
+  }
+
+  // Group by Central-time calendar day, in the order the publisher
+  // already sorted rows (chronological, live books always kept
+  // regardless of date math) - live books sort first within a day they
+  // share with a candidate/manual row.
+  var groups = [];
+  var groupByKey = {};
+  rows.forEach(function (r) {
+    var iso = r.start_iso || r.ends_by_iso;
+    var key = iso ? centralDateKey(iso) : "9999-99-99";
+    var label = iso ? centralDayLabel(iso) : "Date TBD";
+    if (!groupByKey[key]) {
+      groupByKey[key] = { key: key, label: label, rows: [] };
+      groups.push(groupByKey[key]);
+    }
+    groupByKey[key].rows.push(r);
+  });
+  groups.forEach(function (g) {
+    g.rows.sort(function (a, b) {
+      var aLive = a.kind === "live_book" ? 0 : 1;
+      var bLive = b.kind === "live_book" ? 0 : 1;
+      if (aLive !== bLive) return aLive - bLive;
+      return 0;
+    });
+  });
+
+  var visibleGroups = [];
+  var hiddenGroups = [];
+  var count = 0;
+  groups.forEach(function (g) {
+    if (count < 8) {
+      visibleGroups.push(g);
+      count += g.rows.length;
+    } else {
+      hiddenGroups.push(g);
+    }
+  });
+
+  function appendGroups(target, groupList) {
+    groupList.forEach(function (g) {
+      var header = document.createElement("div");
+      header.className = "calendar-day-header";
+      header.textContent = g.label;
+      target.appendChild(header);
+      g.rows.forEach(function (r) { target.appendChild(buildCalendarRow(r)); });
+    });
+  }
+
+  appendGroups(container, visibleGroups);
+
+  if (hiddenGroups.length) {
+    var hiddenWrap = document.createElement("div");
+    hiddenWrap.hidden = true;
+    appendGroups(hiddenWrap, hiddenGroups);
+    container.appendChild(hiddenWrap);
+
+    var hiddenCount = hiddenGroups.reduce(function (s, g) { return s + g.rows.length; }, 0);
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "show-more-btn";
+    btn.textContent = "Show " + hiddenCount + " more";
+    var expanded = false;
+    btn.addEventListener("click", function () {
+      expanded = !expanded;
+      hiddenWrap.hidden = !expanded;
+      btn.textContent = expanded ? "Show fewer" : ("Show " + hiddenCount + " more");
+    });
+    container.appendChild(btn);
+  }
+}
+
+/* -- live books -- */
 
 function renderLiveBooks(container, sportFilter) {
   container.innerHTML = "";
@@ -1151,7 +1374,38 @@ function renderLiveBooks(container, sportFilter) {
     container.appendChild(p);
     return;
   }
-  books.forEach(function (b) { container.appendChild(buildBookCard(b)); });
+
+  // Default (first visit, no stored preference yet): expanded for a
+  // single live book, collapsed once there are two or more. Whatever the
+  // person chose after that always wins (buildBookCard reads its own
+  // stored preference per card).
+  var defaultCollapsed = books.length >= 2;
+
+  var controls = document.createElement("div");
+  controls.className = "collapse-controls";
+  var collapseAllBtn = document.createElement("button");
+  collapseAllBtn.type = "button";
+  collapseAllBtn.className = "link-btn";
+  collapseAllBtn.textContent = "Collapse all";
+  var sep = document.createTextNode(" / ");
+  var expandAllBtn = document.createElement("button");
+  expandAllBtn.type = "button";
+  expandAllBtn.className = "link-btn";
+  expandAllBtn.textContent = "Expand all";
+  controls.appendChild(collapseAllBtn);
+  controls.appendChild(sep);
+  controls.appendChild(expandAllBtn);
+  container.appendChild(controls);
+
+  var cards = books.map(function (b) { return buildBookCard(b, { defaultCollapsed: defaultCollapsed }); });
+  cards.forEach(function (c) { container.appendChild(c); });
+
+  collapseAllBtn.addEventListener("click", function () {
+    cards.forEach(function (c) { c.setCollapsed(true); });
+  });
+  expandAllBtn.addEventListener("click", function () {
+    cards.forEach(function (c) { c.setCollapsed(false); });
+  });
 }
 
 /* -- settled table (per sport page) -- */
