@@ -360,18 +360,26 @@ window.addEventListener("hashchange", function () {
 var STALE_GENERATED_AT_SECONDS = 8 * 60; // GitHub Pages can take 1 to 3 minutes to publish a push,
                                           // so generated_at is routinely a few minutes old in the
                                           // browser even when everything is healthy.
-var STALE_HEARTBEAT_SECONDS = 2 * 60;
 
 function computeStale() {
+  /* 2026-09-29, Blake: the global red badge is about the FEED'S OWN
+     freshness only now - a golf book's loop legitimately takes 75 to
+     150 seconds with a 150-market field, which used to trip this on a
+     perfectly healthy run. Per-book staleness (its own loop-aware
+     threshold, from the publisher) shows as an amber note on that
+     book's own card instead - see heartbeatStaleNote(). */
   if (!state.feed) return true;
   var genAgeS = (Date.now() - new Date(state.feed.generated_at).getTime()) / 1000;
-  if (genAgeS > STALE_GENERATED_AT_SECONDS) return true;
-  var books = state.feed.books || [];
-  for (var i = 0; i < books.length; i++) {
-    var age = heartbeatAgeAtGeneration(books[i]);
-    if (age !== null && age !== undefined && age > STALE_HEARTBEAT_SECONDS) return true;
-  }
-  return false;
+  return genAgeS > STALE_GENERATED_AT_SECONDS;
+}
+
+function heartbeatStaleNote(b) {
+  var age = heartbeatAgeAtGeneration(b);
+  var threshold = b.heartbeat_stale_threshold_s;
+  if (age === null || age === undefined || threshold === null || threshold === undefined) return null;
+  if (age <= threshold) return null;
+  var mins = Math.max(1, Math.round(age / 60));
+  return "heartbeat " + mins + "m old";
 }
 
 function updateHeaderTimestamps() {
@@ -1199,6 +1207,13 @@ function buildBookCard(b, opts) {
     allocSpan.textContent = "Allocation: -";
   }
   meta.appendChild(allocSpan);
+  var staleNote = heartbeatStaleNote(b);
+  if (staleNote) {
+    var staleSpan = document.createElement("span");
+    staleSpan.className = "heartbeat-stale-note";
+    staleSpan.textContent = staleNote;
+    meta.appendChild(staleSpan);
+  }
   body.appendChild(meta);
 
   body.appendChild(buildOutcomeTable(b));
