@@ -844,7 +844,20 @@ function buildOutcomeTable(b) {
   thead.appendChild(headRow);
   table.appendChild(thead);
 
-  var outcomes = b.outcomes || [];
+  // Rows are ordered most-likely-to-win first (Blake, 10/1/26): a quiet
+  // reorder only, no extra column. Uses the feed's win_pct when present,
+  // else the older implied_prob; rows with neither keep their feed order.
+  var outcomes = (b.outcomes || []).map(function (o, i) { return { o: o, i: i }; });
+  function likelihood(o) {
+    if (typeof o.win_pct === "number") return o.win_pct;
+    if (typeof o.implied_prob === "number") return o.implied_prob * 100;
+    return -1;
+  }
+  outcomes.sort(function (a, c) {
+    var d = likelihood(c.o) - likelihood(a.o);
+    return d !== 0 ? d : a.i - c.i;
+  });
+  outcomes = outcomes.map(function (x) { return x.o; });
   var visible = outcomes.filter(function (o) { return (o.held || 0) > 0 || (o.resting || 0) > 0; });
   var zero = outcomes.filter(function (o) { return !((o.held || 0) > 0) && !((o.resting || 0) > 0); });
 
