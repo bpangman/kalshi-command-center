@@ -64,15 +64,6 @@ var state = {
   tooltipTimers: {},
 };
 
-/* 2026-10-01, Win % column (Blake): one sort choice remembered per book
-   card across the 60s refresh cycle (renderAll rebuilds every card's DOM
-   from scratch each time, so this cannot live on the DOM itself) -- NOT
-   persisted to localStorage, a fresh page load always starts from each
-   book's own default (Win % descending while in play, today's order
-   otherwise). Shape: { [bookKey]: { key: "win_pct", dir: "asc"|"desc" } }
-   or no entry at all for "use the book's own default this render". */
-var outcomeSortPrefs = {};
-
 /* -- formatting helpers -- */
 
 function fmtMoney(n, decimals) {
@@ -130,29 +121,6 @@ function fmtCents(p, deciCent) {
 function fmtNum(n) {
   if (n === null || n === undefined || Number.isNaN(Number(n))) return "-";
   return Math.round(Number(n)).toLocaleString("en-US");
-}
-
-/* 2026-10-01, Win % column (Blake): one decimal, "-" for an old feed
-   file or a brand-new outcome row with nothing to show yet. */
-function fmtWinPct(n) {
-  if (n === null || n === undefined || Number.isNaN(Number(n))) return "-";
-  return Number(n).toFixed(1) + "%";
-}
-
-var WIN_SRC_LABEL = {
-  bot: "Our own in-play read, blended with the market",
-  mid: "Kalshi mid price (bid + ask, halved)",
-  last: "Kalshi's last traded price",
-};
-
-var WIN_SRC_ABBREV = { bot: "b", mid: "m", last: "l" };
-
-function winSrcTitle(src) {
-  return WIN_SRC_LABEL[src] || "Source unknown";
-}
-
-function winSrcAbbrev(src) {
-  return WIN_SRC_ABBREV[src] || "";
 }
 
 function round2(x) {
@@ -867,137 +835,54 @@ function buildOutcomeTable(b) {
   var table = document.createElement("table");
   var thead = document.createElement("thead");
   var headRow = document.createElement("tr");
-
-  // 2026-10-01, Win % column (Blake): sortable by click, remembered per
-  // book across the 60s refresh (outcomeSortPrefs). Default when no
-  // click has happened yet this page load: Win % descending while the
-  // book is in play (leaders float to the top), today's existing order
-  // (held descending, set by discover order below) pre-event.
-  var pref = outcomeSortPrefs[b.key];
-  var sortKey = pref ? pref.key : (b.in_play ? "win_pct" : null);
-  var sortDir = pref ? pref.dir : "desc";
-
-  var winTh = null;
-  ["Outcome", "Held", "Resting", "Price", "Win %", "If this wins"].forEach(function (h) {
+  ["Outcome", "Held", "Resting", "Price", "If this wins"].forEach(function (h) {
     var th = document.createElement("th");
     th.setAttribute("scope", "col");
-    if (h === "Win %") {
-      winTh = th;
-      th.className = "sortable-th" + (sortKey === "win_pct" ? (" sorted-" + sortDir) : "");
-      th.setAttribute("role", "button");
-      th.setAttribute("tabindex", "0");
-      th.setAttribute("aria-label", "Sort by Win percent");
-      th.title = "Click to sort by Win %";
-      var label = document.createElement("span");
-      label.textContent = "Win %";
-      th.appendChild(label);
-      var arrow = document.createElement("span");
-      arrow.className = "sort-arrow";
-      arrow.setAttribute("aria-hidden", "true");
-      arrow.textContent = sortKey === "win_pct" ? (sortDir === "desc" ? " ▼" : " ▲") : "";
-      th.appendChild(arrow);
-    } else {
-      th.textContent = h;
-    }
+    th.textContent = h;
     headRow.appendChild(th);
   });
   thead.appendChild(headRow);
   table.appendChild(thead);
 
   var outcomes = b.outcomes || [];
-  var visibleAll = outcomes.filter(function (o) { return (o.held || 0) > 0 || (o.resting || 0) > 0; });
-  var zeroAll = outcomes.filter(function (o) { return !((o.held || 0) > 0) && !((o.resting || 0) > 0); });
+  var visible = outcomes.filter(function (o) { return (o.held || 0) > 0 || (o.resting || 0) > 0; });
+  var zero = outcomes.filter(function (o) { return !((o.held || 0) > 0) && !((o.resting || 0) > 0); });
 
-  function sortByWinPct(list) {
-    if (sortKey !== "win_pct") return list;
-    var copy = list.slice();
-    copy.sort(function (a, c) {
-      var av = (a.win_pct === null || a.win_pct === undefined || Number.isNaN(Number(a.win_pct))) ? -Infinity : Number(a.win_pct);
-      var cv = (c.win_pct === null || c.win_pct === undefined || Number.isNaN(Number(c.win_pct))) ? -Infinity : Number(c.win_pct);
-      return sortDir === "desc" ? (cv - av) : (av - cv);
-    });
-    return copy;
-  }
-
-  var deciCent = !!b.is_deci_cent;
   var tbody = document.createElement("tbody");
-  sortByWinPct(visibleAll).forEach(function (o) { tbody.appendChild(outcomeRow(o, false, deciCent)); });
+  var deciCent = !!b.is_deci_cent;
+  visible.forEach(function (o) { tbody.appendChild(outcomeRow(o, false, deciCent)); });
   table.appendChild(tbody);
 
-  if (zeroAll.length) {
+  if (zero.length) {
     var extraBody = document.createElement("tbody");
     extraBody.hidden = true;
-    sortByWinPct(zeroAll).forEach(function (o) { extraBody.appendChild(outcomeRow(o, true, deciCent)); });
+    zero.forEach(function (o) { extraBody.appendChild(outcomeRow(o, true, deciCent)); });
     table.appendChild(extraBody);
     wrap.appendChild(table);
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "show-more-btn";
-    btn.textContent = "Show " + zeroAll.length + " more";
+    btn.textContent = "Show " + zero.length + " more";
     var expanded = false;
     btn.addEventListener("click", function () {
       expanded = !expanded;
       extraBody.hidden = !expanded;
-      btn.textContent = expanded ? "Show fewer" : ("Show " + zeroAll.length + " more");
+      btn.textContent = expanded ? "Show fewer" : ("Show " + zero.length + " more");
     });
     wrap.appendChild(btn);
   } else {
     wrap.appendChild(table);
   }
-
-  if (winTh) {
-    var onSortClick = function () {
-      var curPref = outcomeSortPrefs[b.key];
-      var curDir = curPref ? curPref.dir : "desc";
-      var nextDir = curPref && curPref.key === "win_pct" ? (curDir === "desc" ? "asc" : "desc") : "desc";
-      outcomeSortPrefs[b.key] = { key: "win_pct", dir: nextDir };
-      var fresh = buildOutcomeTable(b);
-      wrap.replaceWith(fresh);
-    };
-    winTh.addEventListener("click", onSortClick);
-    winTh.addEventListener("keydown", function (evt) {
-      if (evt.key === "Enter" || evt.key === " ") {
-        evt.preventDefault();
-        onSortClick();
-      }
-    });
-  }
-
   return wrap;
 }
 
 function outcomeRow(o, dim, deciCent) {
   var tr = document.createElement("tr");
   if (dim) tr.className = "zero-row";
-  var labelTd = document.createElement("td");
-  labelTd.className = "outcome-label";
-  labelTd.textContent = o.label;
-  labelTd.title = o.label;
-  tr.appendChild(labelTd);
+  tr.appendChild(td(o.label));
   tr.appendChild(td(fmtNum(o.held)));
   tr.appendChild(td(fmtNum(o.resting)));
   tr.appendChild(td(o.market_yes_price !== null && o.market_yes_price !== undefined ? fmtCents(o.market_yes_price, deciCent) : "-"));
-
-  // 2026-10-01, Win % column (Blake): tolerant of an old feed.json with
-  // no win_pct/win_src at all -- just shows "-", never breaks.
-  var winPctTd = document.createElement("td");
-  winPctTd.className = "win-pct-cell";
-  if (o.win_pct === null || o.win_pct === undefined || Number.isNaN(Number(o.win_pct))) {
-    winPctTd.textContent = "-";
-  } else {
-    var pctSpan = document.createElement("span");
-    pctSpan.textContent = fmtWinPct(o.win_pct);
-    winPctTd.appendChild(pctSpan);
-    if (o.win_src) {
-      var srcSpan = document.createElement("span");
-      srcSpan.className = "win-src";
-      srcSpan.textContent = winSrcAbbrev(o.win_src);
-      srcSpan.title = winSrcTitle(o.win_src);
-      winPctTd.appendChild(srcSpan);
-    }
-  }
-  tr.appendChild(winPctTd);
-
   var winTd = document.createElement("td");
   winTd.appendChild(moneySpan(o.outcome_now));
   tr.appendChild(winTd);
@@ -1259,22 +1144,6 @@ function setCardCollapsedPref(key, collapsed) {
   }
 }
 
-function buildLeadersLine(b) {
-  var leaders = b.leaders || [];
-  if (!leaders.length) return null;
-  var div = document.createElement("div");
-  div.className = "leaders-line";
-  var strong = document.createElement("span");
-  strong.className = "leaders-label";
-  strong.textContent = "Leaders: ";
-  div.appendChild(strong);
-  var text = leaders.map(function (l) {
-    return l.label + " " + fmtWinPct(l.win_pct);
-  }).join(", ");
-  div.appendChild(document.createTextNode(text));
-  return div;
-}
-
 function buildBookCard(b, opts) {
   opts = opts || {};
   var stored = getCardCollapsedPref(b.key);
@@ -1323,14 +1192,6 @@ function buildBookCard(b, opts) {
   head.appendChild(chevron);
 
   card.appendChild(head);
-
-  // 2026-10-01, Win % column (Blake, "Leaders: Larson 23.4%, Byron
-  // 18.0%, Bell 12.1%"): the top 3 outcomes by Win %, right in the card
-  // header so it is visible even while the card is collapsed. Omitted
-  // entirely when the feed has nothing yet (old feed file, or a book
-  // with no market read at all this cycle).
-  var leadersLine = buildLeadersLine(b);
-  if (leadersLine) card.appendChild(leadersLine);
 
   var body = document.createElement("div");
   body.className = "book-body";
