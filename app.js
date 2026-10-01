@@ -102,8 +102,19 @@ function moneyClass(n) {
   return "zero";
 }
 
-function fmtCents(p) {
+function fmtCents(p, deciCent) {
+  // 2026-09-30 deci-cent build (Fix 1e): golf's own tapered_deci_cent
+  // markets (KXPGATOUR/KXDPWORLDTOUR) quote real prices down to tenths
+  // of a cent (0.2c-1.7c on a thin field) -- whole-cent rounding here
+  // collapsed every one of those down to "0c", making a real, correctly
+  // quoted sub-cent price look like a bug on the site. deciCent (the
+  // book's own is_deci_cent flag from the feed) switches to one decimal
+  // place; omitted/false (every NFL/NASCAR call site) is byte-for-byte
+  // the original whole-cent display -- margins already show one decimal
+  // (fmtMarginCents), this just matches that for the plain price/fair
+  // columns on a deci-cent book.
   if (p === null || p === undefined || Number.isNaN(Number(p))) return "-";
+  if (deciCent) return (Math.round(Number(p) * 1000) / 10).toFixed(1) + "c";
   return Math.round(Number(p) * 100) + "c";
 }
 
@@ -838,13 +849,14 @@ function buildOutcomeTable(b) {
   var zero = outcomes.filter(function (o) { return !((o.held || 0) > 0) && !((o.resting || 0) > 0); });
 
   var tbody = document.createElement("tbody");
-  visible.forEach(function (o) { tbody.appendChild(outcomeRow(o, false)); });
+  var deciCent = !!b.is_deci_cent;
+  visible.forEach(function (o) { tbody.appendChild(outcomeRow(o, false, deciCent)); });
   table.appendChild(tbody);
 
   if (zero.length) {
     var extraBody = document.createElement("tbody");
     extraBody.hidden = true;
-    zero.forEach(function (o) { extraBody.appendChild(outcomeRow(o, true)); });
+    zero.forEach(function (o) { extraBody.appendChild(outcomeRow(o, true, deciCent)); });
     table.appendChild(extraBody);
     wrap.appendChild(table);
     var btn = document.createElement("button");
@@ -864,13 +876,13 @@ function buildOutcomeTable(b) {
   return wrap;
 }
 
-function outcomeRow(o, dim) {
+function outcomeRow(o, dim, deciCent) {
   var tr = document.createElement("tr");
   if (dim) tr.className = "zero-row";
   tr.appendChild(td(o.label));
   tr.appendChild(td(fmtNum(o.held)));
   tr.appendChild(td(fmtNum(o.resting)));
-  tr.appendChild(td(o.market_yes_price !== null && o.market_yes_price !== undefined ? fmtCents(o.market_yes_price) : "-"));
+  tr.appendChild(td(o.market_yes_price !== null && o.market_yes_price !== undefined ? fmtCents(o.market_yes_price, deciCent) : "-"));
   var winTd = document.createElement("td");
   winTd.appendChild(moneySpan(o.outcome_now));
   tr.appendChild(winTd);
@@ -890,7 +902,7 @@ function fmtMarginCents(cents, fairDollars) {
   return text;
 }
 
-function buildFillsTable(fills) {
+function buildFillsTable(fills, deciCent) {
   var wrap = document.createElement("div");
   wrap.className = "table-scroll";
   var table = document.createElement("table");
@@ -927,8 +939,8 @@ function buildFillsTable(fills) {
       sideTd.appendChild(sideSpan);
       tr.appendChild(sideTd);
       tr.appendChild(td(fmtNum(f.count)));
-      tr.appendChild(td(fmtCents(f.price)));
-      tr.appendChild(td(f.fair !== null && f.fair !== undefined ? fmtCents(f.fair) : "-"));
+      tr.appendChild(td(fmtCents(f.price, deciCent)));
+      tr.appendChild(td(f.fair !== null && f.fair !== undefined ? fmtCents(f.fair, deciCent) : "-"));
       var marginTd = document.createElement("td");
       var marginSpan = document.createElement("span");
       marginSpan.className = moneyClass(f.margin_cents);
@@ -970,7 +982,7 @@ function buildFillsSection(b) {
   var summary = document.createElement("summary");
   summary.textContent = "Recent fills (" + fills.length + ")";
   details.appendChild(summary);
-  details.appendChild(buildFillsTable(fills));
+  details.appendChild(buildFillsTable(fills, !!b.is_deci_cent));
   details.appendChild(buildFillsSummaryLine(b.fills_summary));
   return details;
 }
