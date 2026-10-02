@@ -268,49 +268,203 @@ h2 {
   margin: 8px 0;
 }
 
-.calendar-day-header {
+/* -- calendar: 7-day week row (Blake 2026-10-02) --------------------------
+   Replaced the old flat chronological list with a real one-week calendar:
+   seven day columns starting today, LIVE chips (solid, sport-colored, a
+   running book - floor shown) visually distinct from WATCHLIST chips
+   (dashed, muted, "not trading" - listed on Kalshi in a series this house
+   trades, but no book running yet). A multi-day event (a golf tournament)
+   spans its days as one bar instead of repeating per day. See app.js's
+   renderCalendar for how the two (desktop grid vs phone list, same data)
+   are built. */
+
+:root {
+  --sport-nfl: var(--accent);
+  --sport-nascar: var(--amber);
+  --sport-f1: #bc8cff;
+  --sport-golf: var(--green);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.cal-day-head {
   font-weight: 700;
   font-size: 0.78rem;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  margin: 14px 0 4px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
 }
 
-.calendar-day-header:first-child {
-  margin-top: 0;
+.cal-day-head.today {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
-.calendar-row {
+.cal-day-cell {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 5px 0;
-  border-bottom: 1px solid var(--panel-2);
-  font-size: 0.85rem;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 48px;
+  padding: 4px 2px;
+  border-radius: 8px;
 }
 
-.calendar-row.candidate {
+.cal-day-cell.today {
+  background: rgba(88, 166, 255, 0.06);
+}
+
+.cal-day-empty {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 2px 0 0;
+}
+
+.cal-span-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  background: color-mix(in srgb, var(--chip-color, var(--muted)) 18%, var(--panel));
+  border: 1px solid var(--chip-color, var(--border));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.cal-chip {
+  border-radius: 8px;
+  padding: 4px 7px;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.cal-chip.live {
+  background: color-mix(in srgb, var(--chip-color, var(--muted)) 14%, var(--panel));
+  border: 1px solid var(--chip-color, var(--border));
+}
+
+.cal-chip.watchlist {
+  background: transparent;
+  border: 1px dashed var(--border);
   color: var(--muted);
 }
 
-.calendar-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin-top: 5px;
+.cal-chip-time {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.68rem;
+}
+
+.cal-chip.live .cal-chip-time {
+  color: var(--chip-color, var(--text));
+}
+
+.cal-chip-title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cal-chip-floor {
+  display: block;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.cal-chip-watch-label {
+  display: block;
+  font-style: italic;
+  font-size: 0.66rem;
+  color: var(--muted);
+}
+
+.cal-chip-settled {
+  border-radius: 8px;
+  padding: 4px 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+}
+
+/* Phones get a vertical list grouped by day instead of the 7-column grid -
+   same chip markup, built once in renderCalendar and shown/hidden here so
+   there is only one source of truth. */
+.cal-list {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .cal-grid { display: none; }
+  .cal-list { display: block; }
+}
+
+.cal-list-day {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--panel-2);
+}
+
+.cal-list-day:first-child {
+  padding-top: 0;
+}
+
+.cal-list-day.today .cal-list-day-head {
+  color: var(--accent);
+}
+
+.cal-list-day-head {
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 6px;
+}
+
+.cal-list-day .cal-chip,
+.cal-list-day .cal-span-bar,
+.cal-list-day .cal-chip-settled {
+  margin-bottom: 6px;
+}
+
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  margin: 10px 0 0;
+}
+
+.cal-legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
   flex-shrink: 0;
+}
+
+.cal-legend-swatch.live {
+  background: rgba(88, 166, 255, 0.25);
+  border: 1px solid var(--accent);
+}
+
+.cal-legend-swatch.watchlist {
   background: transparent;
-  border: 1px solid var(--muted);
-}
-
-.calendar-dot.live {
-  background: var(--green);
-  border-color: var(--green);
-}
-
-.calendar-text {
-  flex: 1;
+  border: 1px dashed var(--muted);
 }
 
 details.strategy {
@@ -589,7 +743,23 @@ tfoot td {
 /* -- live book tiles (Blake 2026-10-02: a laptop-fitting tile grid
    instead of stacked collapsible cards, used by both the sport pages and
    Home - Home mixes every sport's live books in one grid, tagged per
-   tile via .sport-tag) -- */
+   tile via .sport-tag.
+
+   2026-10-02 revision (Blake): content integrity wins over forcing a
+   fixed height. Tiles are sized to their own content (auto height), never
+   clipped and never shrunk below a readable floor - the old
+   `height: calc((100vh - var(--tiles-chrome))/2)` formula measured the
+   grid's offsetTop to guess "everything above it", which works on a sport
+   page (h2 right above the grid) but is wrong on Home, where the grid sits
+   far down the page below the stat tiles / chart / calendar - that pushed
+   --tiles-chrome to a huge number, collapsing the formula toward its
+   240px min-height floor and squeezing all 7 outcome rows into a tiny
+   scrollable sliver. Tiles now simply grow to fit their content; a modest
+   font-size scale-down between 1100 and 1500px width (see
+   .book-tile-outcome-row below) is what keeps 2 rows x 4 columns of full
+   NFL tiles fitting a 1440x900 laptop with no scrolling - a shorter
+   viewport (1280x800 and below) is allowed to scroll a little instead of
+   clipping anything. --tiles-chrome/remeasureTilesChrome are gone. -- */
 
 .book-tile-grid-wrap {
   margin-bottom: 24px;
@@ -599,6 +769,7 @@ tfoot td {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  align-items: start;
 }
 
 @media (min-width: 700px) {
@@ -611,15 +782,6 @@ tfoot td {
   .book-tile-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .book-tile {
-    /* --tiles-chrome is set in JS to the measured height (in px) of
-       everything above the grid - topbar plus the sport h2 plus one row
-       gap - so two stacked rows of tiles plus that chrome fill the
-       viewport with no scrolling, on a typical laptop. 170px is only a
-       fallback for the brief instant before JS measures it. */
-    height: calc((100vh - var(--tiles-chrome, 170px)) / 2);
-    min-height: 240px;
-  }
 }
 
 .book-tile {
@@ -631,8 +793,9 @@ tfoot td {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  overflow: hidden;
+  overflow: visible;
   text-align: left;
+  height: auto;
   min-height: 0;
 }
 
@@ -661,6 +824,42 @@ tfoot td {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* Minimize control (Blake 2026-10-02): a small chevron in the tile header
+   that collapses the tile to just its header (title/phase/floor/premium -
+   row1 + row2), remembered per book via getTileMinimizedPref/
+   setTileMinimizedPref (same localStorage pattern as the sport-page
+   book-card's getCardCollapsedPref, under its own key so minimizing a
+   tile never collapses that book's full-card modal). Sits inside row1,
+   stops click propagation so it never opens the tile's modal. */
+.book-tile-min-btn {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.book-tile-min-btn:hover,
+.book-tile-min-btn:focus-visible {
+  color: var(--text);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.book-tile.minimized .book-tile-outcome-strip,
+.book-tile.minimized .book-tile-row4 {
+  display: none;
 }
 
 .book-tile-row2 {
@@ -697,10 +896,26 @@ tfoot td {
 .book-tile-outcome-strip {
   flex: 1 1 auto;
   min-height: 0;
-  overflow: auto;
+  /* Content integrity wins (Blake 2026-10-02): never scrolls or clips its
+     own rows - a tile grows to fit all 7 instead. See the .book-tile
+     comment above for the full story on why the old fixed-height formula
+     made this strip scroll internally and look "tiny". */
+  overflow: visible;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
+}
+
+/* Modest, readable-floor font scale-down only in the laptop band where
+   4 columns x 2 rows of full NFL tiles need to fit 1440x900 with no
+   scrolling (Blake 2026-10-02). clamp()'s own floor keeps every outcome
+   row >= 12px at every width in this band; below 1100px the grid is only
+   1-2 columns wide so there is no pressure and the row stays at the base
+   13px above; at/above ~1444px it settles back at 13px. */
+@media (min-width: 1100px) and (max-width: 1500px) {
+  .book-tile-outcome-strip {
+    font-size: clamp(12px, 0.9vw, 13px);
+  }
 }
 
 .book-tile-outcome-row {

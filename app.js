@@ -414,7 +414,6 @@ function renderForRoute(route) {
     // own sport tag (buildBookTile's opts.showSport).
     var homeLiveBooks = (state.feed && state.feed.books) || [];
     renderLiveBookTileGrid(document.getElementById("live-books-list"), homeLiveBooks, { showSport: true });
-    remeasureTilesChrome();
   } else {
     renderSportPage(ROUTE_TO_SPORT[route]);
   }
@@ -779,7 +778,6 @@ function renderSportPage(sport) {
   container.appendChild(tileGridWrap);
   var liveBooks = ((state.feed && state.feed.books) || []).filter(function (b) { return b.sport === sport; });
   renderLiveBookTileGrid(tileGridWrap, liveBooks);
-  remeasureTilesChrome();
 
   var results = state.results.filter(function (r) { return r.sport === sport; });
 
@@ -1208,6 +1206,31 @@ function setCardCollapsedPref(key, collapsed) {
   }
 }
 
+/* Tile minimize state (Blake 2026-10-02) - deliberately its own
+   localStorage key (kcc_tile_min_, not kcc_collapsed_) so minimizing a
+   tile never also collapses that same book's full-card modal, which
+   reads getCardCollapsedPref(b.key) independently. Same try/catch
+   pattern as the pair above. Default: expanded (shows the full tile). */
+
+function getTileMinimizedPref(key) {
+  try {
+    var v = localStorage.getItem("kcc_tile_min_" + key);
+    if (v === "1") return true;
+    if (v === "0") return false;
+  } catch (e) {
+    /* localStorage unavailable - no stored preference, fall through */
+  }
+  return null;
+}
+
+function setTileMinimizedPref(key, minimized) {
+  try {
+    localStorage.setItem("kcc_tile_min_" + key, minimized ? "1" : "0");
+  } catch (e) {
+    /* localStorage unavailable - nothing to persist, the page still works */
+  }
+}
+
 function buildBookCard(b, opts) {
   opts = opts || {};
   var stored = getCardCollapsedPref(b.key);
@@ -1438,6 +1461,9 @@ function buildTileOutcomeRow(o, deciCent) {
 
 function buildBookTile(b, opts) {
   opts = opts || {};
+  var stored = getTileMinimizedPref(b.key);
+  var minimized = stored !== null ? stored : false; // default expanded
+
   var tile = document.createElement("div");
   tile.className = "book-tile" + (b.in_play ? " in-play" : "");
   tile.setAttribute("role", "button");
@@ -1467,6 +1493,15 @@ function buildBookTile(b, opts) {
   phase.className = "phase-badge " + (b.in_play ? "in-play" : "pre-game");
   phase.textContent = b.phase;
   row1.appendChild(phase);
+
+  // Minimize control (Blake 2026-10-02): collapses the tile to just this
+  // header row + row2 (title/phase/floor/premium). A real <button> so
+  // Enter/Space activate it natively; its own click handler stops
+  // propagation so it never also opens the tile's full-card modal.
+  var minBtn = document.createElement("button");
+  minBtn.type = "button";
+  minBtn.className = "book-tile-min-btn";
+  row1.appendChild(minBtn);
   tile.appendChild(row1);
 
   var row2 = document.createElement("div");
@@ -1509,9 +1544,25 @@ function buildBookTile(b, opts) {
   }
   tile.appendChild(row4);
 
+  function applyMinimized(val) {
+    tile.classList.toggle("minimized", val);
+    minBtn.textContent = val ? "+" : "−"; // "+" to expand, minus sign to minimize
+    minBtn.setAttribute("aria-label", (val ? "Expand " : "Minimize ") + b.title);
+    minBtn.setAttribute("aria-expanded", String(!val));
+  }
+  applyMinimized(minimized);
+
+  minBtn.addEventListener("click", function (evt) {
+    evt.stopPropagation(); // never also opens the tile's modal
+    minimized = !minimized;
+    applyMinimized(minimized);
+    setTileMinimizedPref(b.key, minimized);
+  });
+
   function activate() { openTileModal(b); }
   tile.addEventListener("click", activate);
   tile.addEventListener("keydown", function (evt) {
+    if (evt.target !== tile) return; // let minBtn (and any other nested control) handle its own keys
     if (evt.key === "Enter" || evt.key === " ") {
       evt.preventDefault();
       activate();
@@ -1538,142 +1589,283 @@ function renderLiveBookTileGrid(container, books, opts) {
   container.appendChild(grid);
 }
 
-function remeasureTilesChrome() {
-  /* Sets --tiles-chrome to the real measured height (topbar + sport h2 +
-     one row gap + a small safety margin) above the currently visible
-     tile grid, so two stacked rows of tiles fit the rest of the viewport
-     with no scrolling on a typical laptop (see the CSS at >= 1100px).
-     Uses offsetTop (the element's position in normal document flow, from
-     body) rather than getBoundingClientRect - that keeps the number
-     correct regardless of the page's current scroll position, since the
-     sticky topbar's own offsetHeight already counts toward it the same
-     way whether or not the page happens to be scrolled right now.
-     Home has its own tile grid too (2026-10-02) but further down the
-     page below the money tiles/chart/calendar, so the no-scroll fit
-     rarely applies there - the min-height floor in CSS takes over and
-     the page scrolls past the grid to the sections below, which is
-     fine on Home. No-op when no page's grid is visible at all. */
-  var grid = document.querySelector(".page:not([hidden]) .book-tile-grid");
-  if (!grid) return;
-  var chrome = Math.max(0, Math.round(grid.offsetTop)) + 12 /* row gap */ + 8 /* safety */;
-  document.documentElement.style.setProperty("--tiles-chrome", chrome + "px");
+/* remeasureTilesChrome/--tiles-chrome removed 2026-10-02 (Blake): the
+   formula measured the grid's offsetTop to guess the viewport height
+   available for two rows of tiles, which was wrong on Home (grid sits far
+   down the page) and squeezed tiles down to their 240px floor, clipping
+   the outcome strip to a tiny scrollable sliver. Tiles are auto-height
+   now (see styles.css's .book-tile) - content is never clipped, and a
+   short viewport scrolls a little instead. */
+
+/* -- calendar: 7-day week row (Blake 2026-10-02) --------------------------
+   Redesigned from a flat chronological list to a real one-week calendar:
+   seven day columns starting TODAY (Central time) through today+6, each
+   with a day header, today highlighted. Two visual chip classes: LIVE (a
+   running book - solid, sport-colored, floor shown) and WATCHLIST (no
+   book yet - dashed, muted, "watchlist - not trading" label; this is an
+   event Kalshi has listed in a series the house trades that Blake may
+   choose to enter, not a mistake). A multi-day event (a golf tournament)
+   spans its days as one bar across the cells instead of repeating per
+   day. Settled events from today get a small "settled +$x" chip. Builds
+   both the desktop grid and a phone vertical list from the same data in
+   one pass (styles.css shows only one, by width) so there is a single
+   source of truth. */
+
+var SPORT_COLOR_VAR = { NFL: "--sport-nfl", NASCAR: "--sport-nascar", F1: "--sport-f1", Golf: "--sport-golf" };
+
+function sportColorVar(sport) {
+  return "var(" + (SPORT_COLOR_VAR[sport] || "--muted") + ")";
 }
 
-var tilesChromeResizeTimer = null;
-window.addEventListener("resize", function () {
-  if (tilesChromeResizeTimer) clearTimeout(tilesChromeResizeTimer);
-  tilesChromeResizeTimer = setTimeout(remeasureTilesChrome, 120);
-});
+function centralTodayYMD() {
+  var p = centralDateParts(new Date().toISOString());
+  return { y: parseInt(p.year, 10), m: parseInt(p.month, 10), d: parseInt(p.day, 10) };
+}
 
-/* -- calendar -- */
-
-function buildCalendarRow(r) {
-  var row = document.createElement("div");
-  row.className = "calendar-row" + (r.kind === "live_book" ? " live" : " candidate");
-
-  var dot = document.createElement("span");
-  dot.className = "calendar-dot" + (r.kind === "live_book" ? " live" : "");
-  row.appendChild(dot);
-
-  var iso = r.start_iso || r.ends_by_iso;
-  var timeText = "date TBD";
-  if (iso) {
-    timeText = r.start_iso ? centralTimeOnly(iso) : ("by " + centralTimeOnly(iso));
+function buildWeekDays() {
+  /* Seven consecutive calendar dates starting today (Central time), as
+     plain UTC-midnight anchors - not real instants, just a clean way to
+     walk whole calendar days with no DST edge cases. Every row's own real
+     timestamp is still converted with centralDateKey/centralTimeOnly
+     (true America/Chicago conversion) when matching it to one of these
+     days or formatting its time. */
+  var t = centralTodayYMD();
+  var anchor = Date.UTC(t.y, t.m - 1, t.d);
+  var days = [];
+  for (var i = 0; i < 7; i++) {
+    var dt = new Date(anchor + i * 86400000);
+    var parts = {};
+    new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short", month: "numeric", day: "numeric" })
+      .formatToParts(dt).forEach(function (p) { parts[p.type] = p.value; });
+    days.push({
+      key: dt.toISOString().slice(0, 10),
+      label: parts.weekday + " " + parts.month + "/" + parts.day,
+      isToday: i === 0,
+    });
   }
+  return days;
+}
 
-  var text = document.createElement("span");
-  text.className = "calendar-text";
-  var label = timeText + " - " + (r.sport || "-") + " - " + r.title;
+function dayIndexForKey(days, key) {
+  for (var i = 0; i < days.length; i++) {
+    if (days[i].key === key) return i;
+  }
+  return -1;
+}
+
+function calendarChipTimeText(r) {
   if (r.kind === "live_book") {
-    label += " - LIVE BOOK";
-  } else if (r.kind === "manual" && r.note) {
-    label += " - " + r.note;
+    return r.start_iso ? centralTimeOnly(r.start_iso) : "in play";
   }
-  text.textContent = label;
-  row.appendChild(text);
+  if (r.ends_by_approx) return "time TBD";
+  if (r.ends_by_iso) return "by " + centralTimeOnly(r.ends_by_iso);
+  if (r.start_iso) return centralTimeOnly(r.start_iso);
+  return "date TBD";
+}
 
-  return row;
+function buildCalendarChip(r, booksByKey, opts) {
+  opts = opts || {};
+  var isLive = r.kind === "live_book";
+  var chip = document.createElement("div");
+  chip.className = "cal-chip " + (isLive ? "live" : "watchlist");
+  if (isLive) chip.style.setProperty("--chip-color", sportColorVar(r.sport));
+
+  var timeEl = document.createElement("span");
+  timeEl.className = "cal-chip-time";
+  var timeText = calendarChipTimeText(r);
+  if (opts.multiDayEndIso) timeText += " - thru " + centralDayLabel(opts.multiDayEndIso);
+  timeEl.textContent = timeText;
+  chip.appendChild(timeEl);
+
+  var titleEl = document.createElement("span");
+  titleEl.className = "cal-chip-title";
+  titleEl.textContent = (r.sport ? r.sport + " - " : "") + shortTeamNicknames(r.title);
+  chip.appendChild(titleEl);
+
+  if (isLive) {
+    var book = booksByKey[r.key];
+    var floorEl = document.createElement("span");
+    floorEl.className = "cal-chip-floor " + (book ? moneyClass(book.worst_now) : "zero");
+    floorEl.textContent = (book ? fmtMoney(book.worst_now) : "-") + " floor";
+    chip.appendChild(floorEl);
+  } else {
+    var watchEl = document.createElement("span");
+    watchEl.className = "cal-chip-watch-label";
+    watchEl.textContent = "watchlist - not trading";
+    chip.appendChild(watchEl);
+  }
+
+  return chip;
+}
+
+function buildSettledChip(total, count) {
+  var chip = document.createElement("div");
+  chip.className = "cal-chip-settled " + moneyClass(total);
+  chip.textContent = "settled " + fmtMoney(total) + (count > 1 ? " (" + count + ")" : "");
+  return chip;
+}
+
+function buildSpanBar(r, booksByKey, startIdx, endIdx) {
+  var bar = document.createElement("div");
+  bar.className = "cal-span-bar";
+  bar.style.setProperty("--chip-color", sportColorVar(r.sport));
+  bar.style.gridColumn = (startIdx + 1) + " / " + (endIdx + 2);
+  var book = booksByKey[r.key];
+  var floorText = book ? (" - " + fmtMoney(book.worst_now) + " floor") : "";
+  bar.textContent = (r.sport || "") + " - " + shortTeamNicknames(r.title) + floorText;
+  return bar;
 }
 
 function renderCalendar(container) {
   container.innerHTML = "";
   var rows = state.calendar || [];
-  if (!rows.length) {
-    var p = document.createElement("p");
-    p.className = "state-msg";
-    p.textContent = "Nothing on the calendar right now.";
-    container.appendChild(p);
-    return;
-  }
+  var days = buildWeekDays();
+  var booksByKey = {};
+  ((state.feed && state.feed.books) || []).forEach(function (b) { booksByKey[b.key] = b; });
 
-  // Group by Central-time calendar day, in the order the publisher
-  // already sorted rows (chronological, live books always kept
-  // regardless of date math) - live books sort first within a day they
-  // share with a candidate/manual row.
-  var groups = [];
-  var groupByKey = {};
+  var winStartEpoch = Date.parse(days[0].key + "T00:00:00Z");
+  var winEndEpoch = Date.parse(days[6].key + "T00:00:00Z") + 86400000;
+
+  var spanBars = []; // { r, startIdx, endIdx }
+  var singleRowsByDay = days.map(function () { return []; });
+
   rows.forEach(function (r) {
-    var iso = r.start_iso || r.ends_by_iso;
-    var key = iso ? centralDateKey(iso) : "9999-99-99";
-    var label = iso ? centralDayLabel(iso) : "Date TBD";
-    if (!groupByKey[key]) {
-      groupByKey[key] = { key: key, label: label, rows: [] };
-      groups.push(groupByKey[key]);
+    var isLive = r.kind === "live_book";
+    var isMultiDay = isLive && r.start_iso && r.ends_by_iso && centralDateKey(r.start_iso) !== centralDateKey(r.ends_by_iso);
+
+    if (isMultiDay) {
+      // An approximate ends_by_iso (publish.py's exp_times_look_approximate
+      // - Kalshi's own generic per-event estimate, not real per-market
+      // schedule data) has twice now been confirmed to land EARLY relative
+      // to the event's real final day (both the Alfred Dunhill Links and
+      // this exact live Bank of Utah Championship book: Kalshi's shared
+      // estimate converts, in Central time, to the calendar day BEFORE the
+      // tournament's actual last day). Extending the visual span bar by
+      // one day in that case means a live multi-day book doesn't appear to
+      // vanish from the calendar a day before it is actually done.
+      var endIso = r.ends_by_iso;
+      if (r.ends_by_approx) endIso = new Date(Date.parse(r.ends_by_iso) + 86400000).toISOString();
+      var sIdx = dayIndexForKey(days, centralDateKey(r.start_iso));
+      var eIdx = dayIndexForKey(days, centralDateKey(endIso));
+      if (sIdx === -1 && eIdx === -1) {
+        // Neither endpoint falls inside this week - only keep it if the
+        // whole visible week sits inside the event's span (e.g. a
+        // tournament that started last week and finishes next week).
+        var sEpoch = Date.parse(r.start_iso);
+        var eEpoch = Date.parse(endIso);
+        if (!(sEpoch <= winStartEpoch && eEpoch >= winEndEpoch)) return;
+        sIdx = 0;
+        eIdx = 6;
+      } else {
+        if (sIdx === -1) sIdx = 0; // started before this week - bar starts at the left edge
+        if (eIdx === -1) eIdx = 6; // ends after this week - bar runs to the right edge
+      }
+      spanBars.push({ r: r, startIdx: sIdx, endIdx: eIdx, endIso: endIso });
+      return;
     }
-    groupByKey[key].rows.push(r);
+
+    var iso = r.start_iso || r.ends_by_iso;
+    var idx = iso ? dayIndexForKey(days, centralDateKey(iso)) : -1;
+    if (idx === -1) return; // outside this 7-day window, or no date at all - not part of the week row
+    singleRowsByDay[idx].push(r);
   });
-  groups.forEach(function (g) {
-    g.rows.sort(function (a, b) {
+
+  singleRowsByDay.forEach(function (dayRows) {
+    dayRows.sort(function (a, b) {
       var aLive = a.kind === "live_book" ? 0 : 1;
       var bLive = b.kind === "live_book" ? 0 : 1;
-      if (aLive !== bLive) return aLive - bLive;
-      return 0;
+      return aLive - bLive;
     });
   });
 
-  var visibleGroups = [];
-  var hiddenGroups = [];
-  var count = 0;
-  groups.forEach(function (g) {
-    if (count < 8) {
-      visibleGroups.push(g);
-      count += g.rows.length;
+  var todayKey = days[0].key;
+  var settledToday = (state.results || []).filter(function (r) { return r.settled_time && centralDateKey(r.settled_time) === todayKey; });
+  var settledTotal = settledToday.reduce(function (s, r) { return s + (r.realized_pnl || 0); }, 0);
+
+  // -- desktop 7-column grid --
+  var grid = document.createElement("div");
+  grid.className = "cal-grid";
+
+  days.forEach(function (day, i) {
+    var head = document.createElement("div");
+    head.className = "cal-day-head" + (day.isToday ? " today" : "");
+    head.style.gridColumn = String(i + 1);
+    head.style.gridRow = "1";
+    head.textContent = day.label + (day.isToday ? " - today" : "");
+    grid.appendChild(head);
+  });
+
+  spanBars.forEach(function (sb, barIdx) {
+    var bar = buildSpanBar(sb.r, booksByKey, sb.startIdx, sb.endIdx);
+    bar.style.gridRow = String(2 + barIdx);
+    grid.appendChild(bar);
+  });
+
+  var cellsRow = String(2 + spanBars.length);
+  days.forEach(function (day, i) {
+    var cell = document.createElement("div");
+    cell.className = "cal-day-cell" + (day.isToday ? " today" : "");
+    cell.style.gridColumn = String(i + 1);
+    cell.style.gridRow = cellsRow;
+    var dayRows = singleRowsByDay[i];
+    var hasSettled = i === 0 && settledToday.length > 0;
+    if (!dayRows.length && !hasSettled) {
+      var empty = document.createElement("p");
+      empty.className = "cal-day-empty";
+      empty.textContent = "-";
+      cell.appendChild(empty);
     } else {
-      hiddenGroups.push(g);
+      dayRows.forEach(function (r) { cell.appendChild(buildCalendarChip(r, booksByKey)); });
+      if (hasSettled) cell.appendChild(buildSettledChip(settledTotal, settledToday.length));
     }
+    grid.appendChild(cell);
   });
 
-  function appendGroups(target, groupList) {
-    groupList.forEach(function (g) {
-      var header = document.createElement("div");
-      header.className = "calendar-day-header";
-      header.textContent = g.label;
-      target.appendChild(header);
-      g.rows.forEach(function (r) { target.appendChild(buildCalendarRow(r)); });
-    });
-  }
+  container.appendChild(grid);
 
-  appendGroups(container, visibleGroups);
+  // -- phone vertical list (same data, grouped by day) --
+  var list = document.createElement("div");
+  list.className = "cal-list";
+  days.forEach(function (day, i) {
+    var section = document.createElement("div");
+    section.className = "cal-list-day" + (day.isToday ? " today" : "");
+    var head = document.createElement("div");
+    head.className = "cal-list-day-head";
+    head.textContent = day.label + (day.isToday ? " - today" : "");
+    section.appendChild(head);
 
-  if (hiddenGroups.length) {
-    var hiddenWrap = document.createElement("div");
-    hiddenWrap.hidden = true;
-    appendGroups(hiddenWrap, hiddenGroups);
-    container.appendChild(hiddenWrap);
+    var spanHere = spanBars.filter(function (sb) { return i >= sb.startIdx && i <= sb.endIdx; });
+    var dayRows = singleRowsByDay[i];
+    var hasSettled = i === 0 && settledToday.length > 0;
 
-    var hiddenCount = hiddenGroups.reduce(function (s, g) { return s + g.rows.length; }, 0);
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "show-more-btn";
-    btn.textContent = "Show " + hiddenCount + " more";
-    var expanded = false;
-    btn.addEventListener("click", function () {
-      expanded = !expanded;
-      hiddenWrap.hidden = !expanded;
-      btn.textContent = expanded ? "Show fewer" : ("Show " + hiddenCount + " more");
-    });
-    container.appendChild(btn);
-  }
+    if (!spanHere.length && !dayRows.length && !hasSettled) {
+      var empty = document.createElement("p");
+      empty.className = "cal-day-empty";
+      empty.textContent = "Nothing scheduled";
+      section.appendChild(empty);
+    } else {
+      spanHere.forEach(function (sb) {
+        section.appendChild(buildCalendarChip(sb.r, booksByKey, { multiDayEndIso: sb.endIso }));
+      });
+      dayRows.forEach(function (r) { section.appendChild(buildCalendarChip(r, booksByKey)); });
+      if (hasSettled) section.appendChild(buildSettledChip(settledTotal, settledToday.length));
+    }
+    list.appendChild(section);
+  });
+  container.appendChild(list);
+
+  // -- legend --
+  var legend = document.createElement("p");
+  legend.className = "cal-legend";
+  var liveSwatch = document.createElement("span");
+  liveSwatch.className = "cal-legend-swatch live";
+  var watchSwatch = document.createElement("span");
+  watchSwatch.className = "cal-legend-swatch watchlist";
+  legend.appendChild(liveSwatch);
+  legend.appendChild(document.createTextNode(" Live book, floor shown"));
+  legend.appendChild(watchSwatch);
+  legend.appendChild(document.createTextNode(" Watchlist - listed on Kalshi in a series we trade, no book running yet"));
+  container.appendChild(legend);
 }
 
 /* -- settled table (per sport page) -- */
