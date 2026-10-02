@@ -396,19 +396,25 @@ function applyRoute(route) {
       }
     }
   });
-  // Sport pages (NFL/NASCAR/F1/Golf) get a wider wrapper so the live-book
-  // tile grid has room for 4 across; Home keeps the original 1000px.
+  // Every page (Home included, 2026-10-02) gets the wider wrapper so a
+  // live-book tile grid has room for 4 across.
   var wrapEl = document.querySelector(".wrap");
-  if (wrapEl) wrapEl.classList.toggle("wrap-wide", route !== "home");
+  if (wrapEl) wrapEl.classList.add("wrap-wide");
 }
 
 function renderForRoute(route) {
   if (!state.feed) return;
   if (route === "home") {
+    closeTileModal(); // re-render (60s refresh) closes any open tile modal rather than risk showing stale book data
     renderHomeTiles();
     renderPurseChart();
     renderCalendar(document.getElementById("calendar-list"));
-    renderLiveBooks(document.getElementById("live-books-list"), null);
+    // Every live book, every sport, in the same tile grid as the sport
+    // pages (Blake, 2026-10-02) - sports mix here so each tile keeps its
+    // own sport tag (buildBookTile's opts.showSport).
+    var homeLiveBooks = (state.feed && state.feed.books) || [];
+    renderLiveBookTileGrid(document.getElementById("live-books-list"), homeLiveBooks, { showSport: true });
+    remeasureTilesChrome();
   } else {
     renderSportPage(ROUTE_TO_SPORT[route]);
   }
@@ -1395,8 +1401,8 @@ function openTileModal(b) {
   closeBtn.focus();
 }
 
-/* -- live book tile grid (sport pages only; Home keeps the stacked
-   collapsible cards from buildBookCard/renderLiveBooks above, untouched) -- */
+/* -- live book tile grid (used by sport pages and, since 2026-10-02, by
+   Home too - every live book across every sport in one grid there) -- */
 
 function buildTileOutcomeRow(o, deciCent) {
   var row = document.createElement("div");
@@ -1430,7 +1436,8 @@ function buildTileOutcomeRow(o, deciCent) {
   return row;
 }
 
-function buildBookTile(b) {
+function buildBookTile(b, opts) {
+  opts = opts || {};
   var tile = document.createElement("div");
   tile.className = "book-tile" + (b.in_play ? " in-play" : "");
   tile.setAttribute("role", "button");
@@ -1447,6 +1454,15 @@ function buildBookTile(b) {
   titleSpan.className = "book-tile-title";
   titleSpan.textContent = shortTeamNicknames(b.title);
   row1.appendChild(titleSpan);
+  if (opts.showSport) {
+    // Home mixes every sport's live books in one grid (Blake, 2026-10-02),
+    // so each tile needs its own sport tag - sport pages skip this since
+    // the h2 above the grid already names the sport.
+    var sportTag = document.createElement("span");
+    sportTag.className = "sport-tag";
+    sportTag.textContent = b.sport;
+    row1.appendChild(sportTag);
+  }
   var phase = document.createElement("span");
   phase.className = "phase-badge " + (b.in_play ? "in-play" : "pre-game");
   phase.textContent = b.phase;
@@ -1505,7 +1521,7 @@ function buildBookTile(b) {
   return tile;
 }
 
-function renderLiveBookTileGrid(container, books) {
+function renderLiveBookTileGrid(container, books, opts) {
   container.innerHTML = "";
   if (!books.length) {
     var p = document.createElement("p");
@@ -1517,7 +1533,7 @@ function renderLiveBookTileGrid(container, books) {
   var grid = document.createElement("div");
   grid.className = "book-tile-grid";
   books.forEach(function (b) {
-    grid.appendChild(buildBookTile(b));
+    grid.appendChild(buildBookTile(b, opts));
   });
   container.appendChild(grid);
 }
@@ -1532,7 +1548,11 @@ function remeasureTilesChrome() {
      correct regardless of the page's current scroll position, since the
      sticky topbar's own offsetHeight already counts toward it the same
      way whether or not the page happens to be scrolled right now.
-     No-op when no sport page's grid is visible (e.g. on Home). */
+     Home has its own tile grid too (2026-10-02) but further down the
+     page below the money tiles/chart/calendar, so the no-scroll fit
+     rarely applies there - the min-height floor in CSS takes over and
+     the page scrolls past the grid to the sections below, which is
+     fine on Home. No-op when no page's grid is visible at all. */
   var grid = document.querySelector(".page:not([hidden]) .book-tile-grid");
   if (!grid) return;
   var chrome = Math.max(0, Math.round(grid.offsetTop)) + 12 /* row gap */ + 8 /* safety */;
@@ -1654,52 +1674,6 @@ function renderCalendar(container) {
     });
     container.appendChild(btn);
   }
-}
-
-/* -- live books -- */
-
-function renderLiveBooks(container, sportFilter) {
-  container.innerHTML = "";
-  var books = ((state.feed && state.feed.books) || []).filter(function (b) { return !sportFilter || b.sport === sportFilter; });
-  if (!books.length) {
-    var p = document.createElement("p");
-    p.className = "state-msg";
-    p.textContent = sportFilter ? ("No " + sportFilter + " book is live right now.") : "No books are live right now.";
-    container.appendChild(p);
-    return;
-  }
-
-  // Default (first visit, no stored preference yet): expanded for a
-  // single live book, collapsed once there are two or more. Whatever the
-  // person chose after that always wins (buildBookCard reads its own
-  // stored preference per card).
-  var defaultCollapsed = books.length >= 2;
-
-  var controls = document.createElement("div");
-  controls.className = "collapse-controls";
-  var collapseAllBtn = document.createElement("button");
-  collapseAllBtn.type = "button";
-  collapseAllBtn.className = "link-btn";
-  collapseAllBtn.textContent = "Collapse all";
-  var sep = document.createTextNode(" / ");
-  var expandAllBtn = document.createElement("button");
-  expandAllBtn.type = "button";
-  expandAllBtn.className = "link-btn";
-  expandAllBtn.textContent = "Expand all";
-  controls.appendChild(collapseAllBtn);
-  controls.appendChild(sep);
-  controls.appendChild(expandAllBtn);
-  container.appendChild(controls);
-
-  var cards = books.map(function (b) { return buildBookCard(b, { defaultCollapsed: defaultCollapsed }); });
-  cards.forEach(function (c) { container.appendChild(c); });
-
-  collapseAllBtn.addEventListener("click", function () {
-    cards.forEach(function (c) { c.setCollapsed(true); });
-  });
-  expandAllBtn.addEventListener("click", function () {
-    cards.forEach(function (c) { c.setCollapsed(false); });
-  });
 }
 
 /* -- settled table (per sport page) -- */

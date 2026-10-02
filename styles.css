@@ -40,10 +40,9 @@ a {
   padding: 0 16px 32px;
 }
 
-/* A sport page (NFL/NASCAR/F1/Golf) gets a wider wrapper so a 4-across
-   tile row of live books has room to lay out - toggled by JS on the
-   .wrap element when the active route is not home. Home stays at the
-   original 1000px, unchanged. */
+/* Every page (Home included, 2026-10-02) gets a wider wrapper so a
+   4-across tile row of live books has room to lay out - added by JS on
+   the .wrap element on every route. */
 .wrap.wrap-wide {
   max-width: 1400px;
 }
@@ -391,21 +390,6 @@ details.strategy li {
   transform: rotate(-90deg);
 }
 
-.collapse-controls {
-  margin-bottom: 10px;
-  font-size: 0.8rem;
-}
-
-.link-btn {
-  background: none;
-  border: none;
-  color: var(--accent);
-  padding: 0;
-  font-size: 0.8rem;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 .book-head .title {
   font-size: 1.05rem;
   font-weight: 700;
@@ -602,9 +586,10 @@ tfoot td {
 .side-sell { color: var(--green); }
 .side-buyback { color: var(--red); }
 
-/* -- live book tiles (sport pages only, Blake 2026-10-02: a laptop-fitting
-   4x2 grid instead of stacked collapsible cards; Home keeps the stacked
-   cards above untouched) -- */
+/* -- live book tiles (Blake 2026-10-02: a laptop-fitting tile grid
+   instead of stacked collapsible cards, used by both the sport pages and
+   Home - Home mixes every sport's live books in one grid, tagged per
+   tile via .sport-tag) -- */
 
 .book-tile-grid-wrap {
   margin-bottom: 24px;
