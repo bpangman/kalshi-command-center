@@ -40,6 +40,14 @@ a {
   padding: 0 16px 32px;
 }
 
+/* A sport page (NFL/NASCAR/F1/Golf) gets a wider wrapper so a 4-across
+   tile row of live books has room to lay out - toggled by JS on the
+   .wrap element when the active route is not home. Home stays at the
+   original 1000px, unchanged. */
+.wrap.wrap-wide {
+  max-width: 1400px;
+}
+
 /* -- header -- */
 
 .topbar {
@@ -593,6 +601,220 @@ tfoot td {
 
 .side-sell { color: var(--green); }
 .side-buyback { color: var(--red); }
+
+/* -- live book tiles (sport pages only, Blake 2026-10-02: a laptop-fitting
+   4x2 grid instead of stacked collapsible cards; Home keeps the stacked
+   cards above untouched) -- */
+
+.book-tile-grid-wrap {
+  margin-bottom: 24px;
+}
+
+.book-tile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 700px) {
+  .book-tile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .book-tile-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .book-tile {
+    /* --tiles-chrome is set in JS to the measured height (in px) of
+       everything above the grid - topbar plus the sport h2 plus one row
+       gap - so two stacked rows of tiles plus that chrome fill the
+       viewport with no scrolling, on a typical laptop. 170px is only a
+       fallback for the brief instant before JS measures it. */
+    height: calc((100vh - var(--tiles-chrome, 170px)) / 2);
+    min-height: 240px;
+  }
+}
+
+.book-tile {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+  text-align: left;
+  min-height: 0;
+}
+
+.book-tile:hover,
+.book-tile:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.book-tile.in-play {
+  border-color: rgba(63, 185, 80, 0.5);
+  box-shadow: 0 0 0 1px rgba(63, 185, 80, 0.15) inset;
+}
+
+.book-tile-row1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.book-tile-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-tile-row2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.book-tile-floor {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.book-tile-floor-label {
+  color: var(--muted);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.book-tile-row2-small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.book-tile-outcome-strip {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.book-tile-outcome-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) 0.6fr 0.6fr 0.9fr 0.6fr;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.book-tile-outcome-row .ol {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-tile-outcome-row .or,
+.book-tile-outcome-row .oh,
+.book-tile-outcome-row .oo,
+.book-tile-outcome-row .op {
+  text-align: right;
+}
+
+.book-tile-row4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.book-tile-row4 .floor-mode-tag {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(63, 185, 80, 0.4);
+  border-radius: 999px;
+  padding: 0 6px;
+  font-weight: 700;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* -- tile modal (reuses the full book-card markup) -- */
+
+.tile-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 4, 9, 0.72);
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 16px calc(5vh + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+}
+
+.tile-modal-dialog {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 640px;
+  width: 100%;
+  padding: 16px;
+  margin: auto;
+}
+
+.tile-modal-dialog .book-card {
+  margin-bottom: 0;
+}
+
+.tile-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.tile-modal-close:hover,
+.tile-modal-close:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
 
 /* -- settled table -- */
 

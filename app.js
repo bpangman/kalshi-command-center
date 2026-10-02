@@ -238,6 +238,55 @@ function shortEventLabel(key) {
   return String(key).replace(/-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)\d{1,2}.*$/i, "");
 }
 
+function shortTeamNicknames(title) {
+  /* "New England Patriots at Buffalo Bills" -> "Patriots at Bills" - the
+     last word of each team name, split on " at " (Blake, 2026-10-02, for
+     the sport-page tile grid's compact title). Anything that is not a
+     clean two-team " at " title (golf/NASCAR/F1 event names, or an odd
+     NFL title) falls back to the full title unchanged. */
+  if (!title) return "";
+  var parts = String(title).split(" at ");
+  if (parts.length !== 2) return title;
+  function nickname(full) {
+    var words = full.trim().split(/\s+/);
+    return words.length ? words[words.length - 1] : "";
+  }
+  var a = nickname(parts[0]);
+  var b = nickname(parts[1]);
+  if (!a || !b) return title;
+  return a + " at " + b;
+}
+
+function shortOutcomeLabel(label) {
+  /* "New York Giants wins by 7-14" -> "Giants 7-14" for the tile grid's
+     compact outcome strip; a label that does not match the "<team> wins
+     by <range>" shape (e.g. "Tie") is already short and passes through. */
+  if (!label) return "";
+  var m = /^(.*?)\s+wins by\s+(.+)$/i.exec(String(label));
+  if (!m) return label;
+  var words = m[1].trim().split(/\s+/);
+  var nickname = words.length ? words[words.length - 1] : m[1];
+  var range = m[2].replace(/\s+points?$/i, "").trim();
+  return nickname + " " + range;
+}
+
+function likelihoodSortedOutcomes(b) {
+  /* Most-likely-to-win first (Blake, 10/1/26) - shared by the full
+     outcome table (buildOutcomeTable) and the tile grid's compact strip
+     (buildBookTile), so both pages rank outcomes the same way. */
+  var outcomes = (b.outcomes || []).map(function (o, i) { return { o: o, i: i }; });
+  function likelihood(o) {
+    if (typeof o.win_pct === "number") return o.win_pct;
+    if (typeof o.implied_prob === "number") return o.implied_prob * 100;
+    return -1;
+  }
+  outcomes.sort(function (a, c) {
+    var d = likelihood(c.o) - likelihood(a.o);
+    return d !== 0 ? d : a.i - c.i;
+  });
+  return outcomes.map(function (x) { return x.o; });
+}
+
 /* -- small DOM builders -- */
 
 function td(text) {
@@ -332,6 +381,7 @@ function currentRoute() {
 }
 
 function applyRoute(route) {
+  closeTileModal(); // switching tabs while a tile modal is open would otherwise leave it floating over the wrong page
   ROUTES.forEach(function (r) {
     var page = document.getElementById("page-" + r);
     if (page) page.hidden = (r !== route);
@@ -346,6 +396,10 @@ function applyRoute(route) {
       }
     }
   });
+  // Sport pages (NFL/NASCAR/F1/Golf) get a wider wrapper so the live-book
+  // tile grid has room for 4 across; Home keeps the original 1000px.
+  var wrapEl = document.querySelector(".wrap");
+  if (wrapEl) wrapEl.classList.toggle("wrap-wide", route !== "home");
 }
 
 function renderForRoute(route) {
@@ -704,11 +758,22 @@ function computeSportWindow() {
 function renderSportPage(sport) {
   var container = document.getElementById("sport-page-" + sport);
   if (!container) return;
+  closeTileModal(); // re-render (60s refresh or a tab switch) closes any open tile modal rather than risk showing stale book data
   container.innerHTML = "";
 
   var h2 = document.createElement("h2");
   h2.textContent = sport;
   container.appendChild(h2);
+
+  // Live books as a tile grid, directly under the h2, above the chart and
+  // settled table below (which may scroll) - Blake, 2026-10-02: laptop
+  // no-scroll for the current 8 NFL games, 4 tiles per row x 2 rows.
+  var tileGridWrap = document.createElement("div");
+  tileGridWrap.className = "section-block book-tile-grid-wrap";
+  container.appendChild(tileGridWrap);
+  var liveBooks = ((state.feed && state.feed.books) || []).filter(function (b) { return b.sport === sport; });
+  renderLiveBookTileGrid(tileGridWrap, liveBooks);
+  remeasureTilesChrome();
 
   var results = state.results.filter(function (r) { return r.sport === sport; });
 
@@ -791,16 +856,6 @@ function renderSportPage(sport) {
   detailsWrap.appendChild(details);
   container.appendChild(detailsWrap);
 
-  var liveWrap = document.createElement("div");
-  liveWrap.className = "section-block";
-  var liveHeading = document.createElement("h2");
-  liveHeading.textContent = "Live books";
-  liveWrap.appendChild(liveHeading);
-  var liveList = document.createElement("div");
-  liveWrap.appendChild(liveList);
-  container.appendChild(liveWrap);
-  renderLiveBooks(liveList, sport);
-
   var settledWrap = document.createElement("div");
   settledWrap.className = "section-block";
   var settledHeading = document.createElement("h2");
@@ -847,17 +902,7 @@ function buildOutcomeTable(b) {
   // Rows are ordered most-likely-to-win first (Blake, 10/1/26): a quiet
   // reorder only, no extra column. Uses the feed's win_pct when present,
   // else the older implied_prob; rows with neither keep their feed order.
-  var outcomes = (b.outcomes || []).map(function (o, i) { return { o: o, i: i }; });
-  function likelihood(o) {
-    if (typeof o.win_pct === "number") return o.win_pct;
-    if (typeof o.implied_prob === "number") return o.implied_prob * 100;
-    return -1;
-  }
-  outcomes.sort(function (a, c) {
-    var d = likelihood(c.o) - likelihood(a.o);
-    return d !== 0 ? d : a.i - c.i;
-  });
-  outcomes = outcomes.map(function (x) { return x.o; });
+  var outcomes = likelihoodSortedOutcomes(b);
   var visible = outcomes.filter(function (o) { return (o.held || 0) > 0 || (o.resting || 0) > 0; });
   var zero = outcomes.filter(function (o) { return !((o.held || 0) > 0) && !((o.resting || 0) > 0); });
 
@@ -1290,6 +1335,215 @@ function buildBookCard(b, opts) {
 
   return card;
 }
+
+/* -- tile modal (sport pages: tapping a tile opens the full card above,
+   reusing buildBookCard so nothing from the detailed view is lost) -- */
+
+var tileModal = { open: false, overlay: null, prevFocusEl: null };
+
+function onTileModalKeydown(evt) {
+  if (evt.key === "Escape" || evt.key === "Esc") closeTileModal();
+}
+
+function closeTileModal() {
+  if (!tileModal.open) return;
+  if (tileModal.overlay && tileModal.overlay.parentNode) {
+    tileModal.overlay.parentNode.removeChild(tileModal.overlay);
+  }
+  tileModal.overlay = null;
+  tileModal.open = false;
+  document.body.classList.remove("modal-open");
+  document.removeEventListener("keydown", onTileModalKeydown);
+  if (tileModal.prevFocusEl && typeof tileModal.prevFocusEl.focus === "function") {
+    try { tileModal.prevFocusEl.focus(); } catch (e) { /* element may be gone after a re-render */ }
+  }
+  tileModal.prevFocusEl = null;
+}
+
+function openTileModal(b) {
+  closeTileModal();
+  tileModal.prevFocusEl = document.activeElement;
+
+  var overlay = document.createElement("div");
+  overlay.className = "tile-modal-overlay";
+  overlay.addEventListener("click", function (evt) {
+    if (evt.target === overlay) closeTileModal();
+  });
+
+  var dialog = document.createElement("div");
+  dialog.className = "tile-modal-dialog";
+  dialog.setAttribute("role", "dialog");
+  dialog.setAttribute("aria-modal", "true");
+  dialog.setAttribute("aria-label", b.title + " details");
+
+  var closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "tile-modal-close";
+  closeBtn.setAttribute("aria-label", "Close");
+  closeBtn.textContent = "Close";
+  closeBtn.addEventListener("click", closeTileModal);
+  dialog.appendChild(closeBtn);
+
+  dialog.appendChild(buildBookCard(b, { defaultCollapsed: false }));
+  overlay.appendChild(dialog);
+  document.body.appendChild(overlay);
+
+  tileModal.overlay = overlay;
+  tileModal.open = true;
+  document.body.classList.add("modal-open");
+  document.addEventListener("keydown", onTileModalKeydown);
+  closeBtn.focus();
+}
+
+/* -- live book tile grid (sport pages only; Home keeps the stacked
+   collapsible cards from buildBookCard/renderLiveBooks above, untouched) -- */
+
+function buildTileOutcomeRow(o, deciCent) {
+  var row = document.createElement("div");
+  row.className = "book-tile-outcome-row";
+
+  var label = document.createElement("span");
+  label.className = "ol";
+  label.textContent = shortOutcomeLabel(o.label);
+  row.appendChild(label);
+
+  var held = document.createElement("span");
+  held.className = "oh";
+  held.textContent = fmtNum(o.held);
+  row.appendChild(held);
+
+  var resting = document.createElement("span");
+  resting.className = "or";
+  resting.textContent = fmtNum(o.resting);
+  row.appendChild(resting);
+
+  var outcomeNow = document.createElement("span");
+  outcomeNow.className = "oo " + moneyClass(o.outcome_now);
+  outcomeNow.textContent = fmtMoney(o.outcome_now);
+  row.appendChild(outcomeNow);
+
+  var price = document.createElement("span");
+  price.className = "op";
+  price.textContent = (o.market_yes_price !== null && o.market_yes_price !== undefined) ? fmtCents(o.market_yes_price, deciCent) : "-";
+  row.appendChild(price);
+
+  return row;
+}
+
+function buildBookTile(b) {
+  var tile = document.createElement("div");
+  tile.className = "book-tile" + (b.in_play ? " in-play" : "");
+  tile.setAttribute("role", "button");
+  tile.setAttribute("tabindex", "0");
+  tile.setAttribute("aria-label", "Open details for " + b.title);
+
+  var row1 = document.createElement("div");
+  row1.className = "book-tile-row1";
+  var dot = document.createElement("span");
+  dot.className = "hb-dot " + hbDotClass(b);
+  dot.setAttribute("aria-label", "heartbeat health: " + hbDotClass(b));
+  row1.appendChild(dot);
+  var titleSpan = document.createElement("span");
+  titleSpan.className = "book-tile-title";
+  titleSpan.textContent = shortTeamNicknames(b.title);
+  row1.appendChild(titleSpan);
+  var phase = document.createElement("span");
+  phase.className = "phase-badge " + (b.in_play ? "in-play" : "pre-game");
+  phase.textContent = b.phase;
+  row1.appendChild(phase);
+  tile.appendChild(row1);
+
+  var row2 = document.createElement("div");
+  row2.className = "book-tile-row2";
+  var floorSpan = document.createElement("span");
+  floorSpan.className = "book-tile-floor " + moneyClass(b.worst_now);
+  floorSpan.appendChild(document.createTextNode(fmtMoney(b.worst_now)));
+  var floorLabel = document.createElement("span");
+  floorLabel.className = "book-tile-floor-label";
+  floorLabel.textContent = "floor";
+  floorSpan.appendChild(floorLabel);
+  row2.appendChild(floorSpan);
+  var smallSpan = document.createElement("span");
+  smallSpan.className = "book-tile-row2-small";
+  smallSpan.textContent = fmtPlainDollars(b.premium_collected_dollars) + " prem / " + fmtMoney(b.best_now) + " best";
+  row2.appendChild(smallSpan);
+  tile.appendChild(row2);
+
+  var strip = document.createElement("div");
+  strip.className = "book-tile-outcome-strip";
+  var deciCent = !!b.is_deci_cent;
+  likelihoodSortedOutcomes(b).slice(0, 7).forEach(function (o) {
+    strip.appendChild(buildTileOutcomeRow(o, deciCent));
+  });
+  tile.appendChild(strip);
+
+  var row4 = document.createElement("div");
+  row4.className = "book-tile-row4";
+  var fillSpan = document.createElement("span");
+  fillSpan.textContent = b.last_fill_ts ? ("fill " + timeAgoText(b.last_fill_ts)) : "no fills";
+  row4.appendChild(fillSpan);
+  var restingSpan = document.createElement("span");
+  restingSpan.textContent = "resting " + fmtNum(b.contracts_resting_total);
+  row4.appendChild(restingSpan);
+  if (b.floor_mode && b.floor_mode.active) {
+    var floorTag = document.createElement("span");
+    floorTag.className = "floor-mode-tag";
+    floorTag.textContent = "floor mode";
+    row4.appendChild(floorTag);
+  }
+  tile.appendChild(row4);
+
+  function activate() { openTileModal(b); }
+  tile.addEventListener("click", activate);
+  tile.addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter" || evt.key === " ") {
+      evt.preventDefault();
+      activate();
+    }
+  });
+
+  return tile;
+}
+
+function renderLiveBookTileGrid(container, books) {
+  container.innerHTML = "";
+  if (!books.length) {
+    var p = document.createElement("p");
+    p.className = "state-msg";
+    p.textContent = "No book is live right now.";
+    container.appendChild(p);
+    return;
+  }
+  var grid = document.createElement("div");
+  grid.className = "book-tile-grid";
+  books.forEach(function (b) {
+    grid.appendChild(buildBookTile(b));
+  });
+  container.appendChild(grid);
+}
+
+function remeasureTilesChrome() {
+  /* Sets --tiles-chrome to the real measured height (topbar + sport h2 +
+     one row gap + a small safety margin) above the currently visible
+     tile grid, so two stacked rows of tiles fit the rest of the viewport
+     with no scrolling on a typical laptop (see the CSS at >= 1100px).
+     Uses offsetTop (the element's position in normal document flow, from
+     body) rather than getBoundingClientRect - that keeps the number
+     correct regardless of the page's current scroll position, since the
+     sticky topbar's own offsetHeight already counts toward it the same
+     way whether or not the page happens to be scrolled right now.
+     No-op when no sport page's grid is visible (e.g. on Home). */
+  var grid = document.querySelector(".page:not([hidden]) .book-tile-grid");
+  if (!grid) return;
+  var chrome = Math.max(0, Math.round(grid.offsetTop)) + 12 /* row gap */ + 8 /* safety */;
+  document.documentElement.style.setProperty("--tiles-chrome", chrome + "px");
+}
+
+var tilesChromeResizeTimer = null;
+window.addEventListener("resize", function () {
+  if (tilesChromeResizeTimer) clearTimeout(tilesChromeResizeTimer);
+  tilesChromeResizeTimer = setTimeout(remeasureTilesChrome, 120);
+});
 
 /* -- calendar -- */
 
