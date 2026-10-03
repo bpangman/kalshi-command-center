@@ -1,14 +1,14 @@
 "use strict";
 
 /* Kalshi Command Center - vanilla JS, no build step.
-   Fetches data/feed.json, data/results.json, data/snapshots.json every
-   60 seconds and re-renders in place. Single-page app with hash routing
-   (#home, #nfl, #nascar, #f1, #golf) so back/forward and bookmarks work.
-   Plain hyphens only, no em/en dashes, anywhere in this file including
-   comments and strings. */
+   Fetches data/feed.json, data/results.json, data/snapshots.json,
+   data/calendar.json every 60 seconds and re-renders in place.
+   Single-page app with hash routing (#home, #nfl, #nascar, #f1, #golf,
+   #calendar) so back/forward and bookmarks work. Plain hyphens only, no
+   em/en dashes, anywhere in this file including comments and strings. */
 
 var SPORTS = ["NFL", "NASCAR", "F1", "Golf"];
-var ROUTES = ["home", "nfl", "nascar", "f1", "golf"];
+var ROUTES = ["home", "nfl", "nascar", "f1", "golf", "calendar"];
 var ROUTE_TO_SPORT = {};
 SPORTS.forEach(function (s) { ROUTE_TO_SPORT[s.toLowerCase()] = s; });
 
@@ -382,6 +382,7 @@ function currentRoute() {
 
 function applyRoute(route) {
   closeTileModal(); // switching tabs while a tile modal is open would otherwise leave it floating over the wrong page
+  closeCalPopover(); // same, for the calendar tab's own popover
   ROUTES.forEach(function (r) {
     var page = document.getElementById("page-" + r);
     if (page) page.hidden = (r !== route);
@@ -408,12 +409,13 @@ function renderForRoute(route) {
     closeTileModal(); // re-render (60s refresh) closes any open tile modal rather than risk showing stale book data
     renderHomeTiles();
     renderPurseChart();
-    renderCalendar(document.getElementById("calendar-list"));
     // Every live book, every sport, in the same tile grid as the sport
     // pages (Blake, 2026-10-02) - sports mix here so each tile keeps its
     // own sport tag (buildBookTile's opts.showSport).
     var homeLiveBooks = (state.feed && state.feed.books) || [];
     renderLiveBookTileGrid(document.getElementById("live-books-list"), homeLiveBooks, { showSport: true });
+  } else if (route === "calendar") {
+    renderCalendarPage();
   } else {
     renderSportPage(ROUTE_TO_SPORT[route]);
   }
@@ -1597,24 +1599,39 @@ function renderLiveBookTileGrid(container, books, opts) {
    now (see styles.css's .book-tile) - content is never clipped, and a
    short viewport scrolls a little instead. */
 
-/* -- calendar: 7-day week row (Blake 2026-10-02) --------------------------
-   Redesigned from a flat chronological list to a real one-week calendar:
-   seven day columns starting TODAY (Central time) through today+6, each
-   with a day header, today highlighted. Two visual chip classes: LIVE (a
-   running book - solid, sport-colored, floor shown) and WATCHLIST (no
-   book yet - dashed, muted, "watchlist - not trading" label; this is an
-   event Kalshi has listed in a series the house trades that Blake may
-   choose to enter, not a mistake). A multi-day event (a golf tournament)
-   spans its days as one bar across the cells instead of repeating per
-   day. Settled events from today get a small "settled +$x" chip. Builds
-   both the desktop grid and a phone vertical list from the same data in
-   one pass (styles.css shows only one, by width) so there is a single
-   source of truth. */
+/* -- Calendar tab: full month sheet (Blake 2026-10-02) --------------------
+   Replaces the old 7-day week row with its own tab (#calendar): a real
+   month sheet, 7 columns Sun-Sat, rows = the weeks of the shown month
+   (Central time), leading/trailing days from adjacent months greyed,
+   today highlighted, prev/next month arrows. Four chip states: LIVE
+   (solid, sport-colored, floor shown), SETTLED (muted solid, +/-$
+   result, from state.results, any day in the shown month), WATCHLIST
+   (dashed outline - listed on Kalshi, no book running yet), and a
+   not-yet-listed event (same dashed look, ".not-listed" modifier) paired
+   with a small "listing?" marker on its expected-listing day and a
+   dotted connector line between the two (drawn as an SVG overlay after
+   layout, since the two can land in different week rows). A multi-day
+   event (golf) spans its days as one bar across a week row. Builds the
+   desktop grid, the phone day list, and the connector overlay from one
+   classification pass (classifyCalendarRows) so there is a single source
+   of truth; clicking any chip/marker/bar opens the same detail popover. */
 
 var SPORT_COLOR_VAR = { NFL: "--sport-nfl", NASCAR: "--sport-nascar", F1: "--sport-f1", Golf: "--sport-golf" };
+var SPORT_TO_ROUTE = {};
+Object.keys(ROUTE_TO_SPORT).forEach(function (route) { SPORT_TO_ROUTE[ROUTE_TO_SPORT[route]] = route; });
+
+// Current month being viewed (1-indexed); null until the first render,
+// which defaults it to the current Central month. Deliberately NOT part
+// of `state` - it must survive state.calendar being replaced wholesale
+// on every 60s refresh, and reset only on a real page load.
+var calendarView = { year: null, month: null };
 
 function sportColorVar(sport) {
   return "var(" + (SPORT_COLOR_VAR[sport] || "--muted") + ")";
+}
+
+function pad2(n) {
+  return n < 10 ? "0" + n : String(n);
 }
 
 function centralTodayYMD() {
@@ -1622,35 +1639,40 @@ function centralTodayYMD() {
   return { y: parseInt(p.year, 10), m: parseInt(p.month, 10), d: parseInt(p.day, 10) };
 }
 
-function buildWeekDays() {
-  /* Seven consecutive calendar dates starting today (Central time), as
-     plain UTC-midnight anchors - not real instants, just a clean way to
-     walk whole calendar days with no DST edge cases. Every row's own real
-     timestamp is still converted with centralDateKey/centralTimeOnly
-     (true America/Chicago conversion) when matching it to one of these
-     days or formatting its time. */
-  var t = centralTodayYMD();
-  var anchor = Date.UTC(t.y, t.m - 1, t.d);
-  var days = [];
-  for (var i = 0; i < 7; i++) {
-    var dt = new Date(anchor + i * 86400000);
-    var parts = {};
-    new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short", month: "numeric", day: "numeric" })
-      .formatToParts(dt).forEach(function (p) { parts[p.type] = p.value; });
-    days.push({
-      key: dt.toISOString().slice(0, 10),
-      label: parts.weekday + " " + parts.month + "/" + parts.day,
-      isToday: i === 0,
-    });
-  }
-  return days;
+function ymdKey(y, m, d) {
+  return y + "-" + pad2(m) + "-" + pad2(d);
 }
 
-function dayIndexForKey(days, key) {
-  for (var i = 0; i < days.length; i++) {
-    if (days[i].key === key) return i;
+function daysInMonth(y, m) {
+  return new Date(Date.UTC(y, m, 0)).getUTCDate(); // day 0 of month m = last day of month m-1 (1-indexed m)
+}
+
+function buildMonthGrid(year, month) {
+  /* Weeks of `month` (1-indexed) in `year`, Sunday-first, as plain
+     UTC-midnight anchors - not real instants, just a clean way to walk
+     whole calendar days with no DST edge cases (same trick the old
+     week-row view used). Every cell also carries its own weekIdx/dayIdx
+     so span bars and the phone list can find "this day's row/column"
+     without a separate lookup. */
+  var todayYMD = centralTodayYMD();
+  var todayKey = ymdKey(todayYMD.y, todayYMD.m, todayYMD.d);
+  var firstOfMonth = Date.UTC(year, month - 1, 1);
+  var firstWeekday = new Date(firstOfMonth).getUTCDay(); // 0 = Sun
+  var totalDaysThisMonth = daysInMonth(year, month);
+  var gridStart = firstOfMonth - firstWeekday * 86400000;
+  var weekCount = Math.ceil((firstWeekday + totalDaysThisMonth) / 7);
+  var weeks = [];
+  for (var w = 0; w < weekCount; w++) {
+    var week = [];
+    for (var d = 0; d < 7; d++) {
+      var dt = new Date(gridStart + (w * 7 + d) * 86400000);
+      var y = dt.getUTCFullYear(), m = dt.getUTCMonth() + 1, dd = dt.getUTCDate();
+      var key = ymdKey(y, m, dd);
+      week.push({ year: y, month: m, day: dd, key: key, inMonth: m === month && y === year, isToday: key === todayKey, weekIdx: w, dayIdx: d });
+    }
+    weeks.push(week);
   }
-  return -1;
+  return weeks;
 }
 
 function calendarChipTimeText(r) {
@@ -1663,209 +1685,555 @@ function calendarChipTimeText(r) {
   return "date TBD";
 }
 
-function buildCalendarChip(r, booksByKey, opts) {
-  opts = opts || {};
-  var isLive = r.kind === "live_book";
+function classifyCalendarRows(weeks) {
+  /* Buckets state.calendar (and state.results for settled chips) by
+     calendar day for the currently visible month-grid. Returns:
+       dayBuckets[dayKey] = { chips: [{kind, row, connId}], markers: [{row, connId}], settled: [row, ...] }
+       spanBars = [{ r, weekIdx, startIdx, endIdx, endIso }]
+     kind is "live", "watchlist" (listed - true/undefined, backward
+     compatible with a calendar.json written before this field existed),
+     or "schedule" (listed === false - not yet on Kalshi). A "schedule"
+     row with a usable expected_listing_iso that also falls inside this
+     grid gets a shared connId linking its marker entry to its chip entry
+     - renderCalendarPage resolves those into DOM element pairs for the
+     dotted connector overlay once everything is on the page. */
+  var allDayKeys = {};
+  weeks.forEach(function (week) {
+    week.forEach(function (day) { allDayKeys[day.key] = true; });
+  });
+
+  var dayBuckets = {};
+  function bucket(key) {
+    if (!dayBuckets[key]) dayBuckets[key] = { chips: [], markers: [], settled: [] };
+    return dayBuckets[key];
+  }
+
+  var spanBars = [];
+  var connIdSeq = 0;
+
+  (state.calendar || []).forEach(function (r) {
+    var isMultiDay = !!(r.start_iso && r.ends_by_iso && centralDateKey(r.start_iso) !== centralDateKey(r.ends_by_iso));
+
+    if (isMultiDay) {
+      // An approximate ends_by_iso (publish.py's exp_times_look_approximate
+      // - Kalshi's own generic per-event estimate) has been confirmed to
+      // land a day EARLY relative to the event's real final day; extending
+      // the span by one day keeps a live multi-day book from appearing to
+      // vanish a day before it is actually done.
+      var endIso = r.ends_by_iso;
+      if (r.ends_by_approx) endIso = new Date(Date.parse(r.ends_by_iso) + 86400000).toISOString();
+      var startDayEpoch = Date.parse(centralDateKey(r.start_iso) + "T00:00:00Z");
+      var endDayEpoch = Date.parse(centralDateKey(endIso) + "T00:00:00Z");
+      weeks.forEach(function (week, wi) {
+        var startIdx = -1, endIdx = -1;
+        week.forEach(function (day, di) {
+          var dayEpoch = Date.parse(day.key + "T00:00:00Z");
+          if (dayEpoch >= startDayEpoch && dayEpoch <= endDayEpoch) {
+            if (startIdx === -1) startIdx = di;
+            endIdx = di;
+          }
+        });
+        if (startIdx !== -1) spanBars.push({ r: r, weekIdx: wi, startIdx: startIdx, endIdx: endIdx, endIso: endIso });
+      });
+      return;
+    }
+
+    var dayIso = r.start_iso || r.ends_by_iso;
+    var dayKey = dayIso ? centralDateKey(dayIso) : null;
+    var kind = r.kind === "live_book" ? "live" : (r.listed === false ? "schedule" : "watchlist");
+
+    var connId = null;
+    if (kind === "schedule" && r.expected_listing_iso && dayKey) {
+      var markerKey = centralDateKey(r.expected_listing_iso);
+      if (allDayKeys[markerKey] && allDayKeys[dayKey]) {
+        connId = "c" + (connIdSeq++);
+        bucket(markerKey).markers.push({ row: r, connId: connId });
+      }
+    }
+
+    if (dayKey && allDayKeys[dayKey]) {
+      bucket(dayKey).chips.push({ kind: kind, row: r, connId: connId });
+    }
+  });
+
+  var kindOrder = { live: 0, watchlist: 1, schedule: 2 };
+  Object.keys(dayBuckets).forEach(function (key) {
+    dayBuckets[key].chips.sort(function (a, b) { return (kindOrder[a.kind] || 9) - (kindOrder[b.kind] || 9); });
+  });
+
+  (state.results || []).forEach(function (r) {
+    if (!r.settled_time) return;
+    var key = centralDateKey(r.settled_time);
+    if (allDayKeys[key]) bucket(key).settled.push(r);
+  });
+
+  return { dayBuckets: dayBuckets, spanBars: spanBars };
+}
+
+function buildMonthChip(kind, row, booksByKey) {
+  var isLive = kind === "live";
+  var notListed = kind === "schedule";
   var chip = document.createElement("div");
-  chip.className = "cal-chip " + (isLive ? "live" : "watchlist");
-  if (isLive) chip.style.setProperty("--chip-color", sportColorVar(r.sport));
+  chip.className = "cal-chip " + (isLive ? "live" : "watchlist") + (notListed ? " not-listed" : "");
+  chip.setAttribute("role", "button");
+  chip.setAttribute("tabindex", "0");
+  chip.setAttribute("aria-label", (row.sport ? row.sport + " " : "") + row.title + " details");
+  if (isLive) chip.style.setProperty("--chip-color", sportColorVar(row.sport));
 
   var timeEl = document.createElement("span");
   timeEl.className = "cal-chip-time";
-  var timeText = calendarChipTimeText(r);
-  if (opts.multiDayEndIso) timeText += " - thru " + centralDayLabel(opts.multiDayEndIso);
-  timeEl.textContent = timeText;
+  timeEl.textContent = calendarChipTimeText(row);
   chip.appendChild(timeEl);
 
   var titleEl = document.createElement("span");
   titleEl.className = "cal-chip-title";
-  titleEl.textContent = (r.sport ? r.sport + " - " : "") + shortTeamNicknames(r.title);
+  titleEl.textContent = (row.sport ? row.sport + " - " : "") + shortTeamNicknames(row.title);
   chip.appendChild(titleEl);
 
   if (isLive) {
-    var book = booksByKey[r.key];
+    var book = booksByKey[row.key];
     var floorEl = document.createElement("span");
     floorEl.className = "cal-chip-floor " + (book ? moneyClass(book.worst_now) : "zero");
     floorEl.textContent = (book ? fmtMoney(book.worst_now) : "-") + " floor";
     chip.appendChild(floorEl);
   } else {
-    var watchEl = document.createElement("span");
-    watchEl.className = "cal-chip-watch-label";
-    watchEl.textContent = "watchlist - not trading";
-    chip.appendChild(watchEl);
+    var subEl = document.createElement("span");
+    subEl.className = "cal-chip-watch-label";
+    if (notListed) {
+      // Shown inline (not just in the popover/connector) so the phone
+      // list - which has no SVG connector - still carries this info.
+      subEl.textContent = row.expected_listing_iso
+        ? ("Kalshi listing expected " + centralDayLabel(row.expected_listing_iso))
+        : "not yet listed on Kalshi";
+    } else {
+      subEl.textContent = "✓ listed - not trading yet";
+    }
+    chip.appendChild(subEl);
   }
 
+  function activate() { openCalPopover(row, booksByKey); }
+  chip.addEventListener("click", activate);
+  chip.addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
+  });
+
   return chip;
 }
 
-function buildSettledChip(total, count) {
-  var chip = document.createElement("div");
-  chip.className = "cal-chip-settled " + moneyClass(total);
-  chip.textContent = "settled " + fmtMoney(total) + (count > 1 ? " (" + count + ")" : "");
-  return chip;
+function buildMonthListingMarker(row, booksByKey) {
+  var marker = document.createElement("div");
+  marker.className = "cal-listing-marker";
+  marker.setAttribute("role", "button");
+  marker.setAttribute("tabindex", "0");
+  marker.textContent = "listing?";
+  var titleText = "Listing expected " + (row.expected_listing_iso ? centralDayLabel(row.expected_listing_iso) : "soon");
+  if (row.listing_rule) titleText += " (" + row.listing_rule + ")";
+  marker.title = titleText;
+  function activate() { openCalPopover(row, booksByKey); }
+  marker.addEventListener("click", activate);
+  marker.addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
+  });
+  return marker;
 }
 
-function buildSpanBar(r, booksByKey, startIdx, endIdx) {
+function buildMonthSpanBar(row, booksByKey, startIdx, endIdx) {
   var bar = document.createElement("div");
   bar.className = "cal-span-bar";
-  bar.style.setProperty("--chip-color", sportColorVar(r.sport));
+  bar.setAttribute("role", "button");
+  bar.setAttribute("tabindex", "0");
+  bar.setAttribute("aria-label", row.title + " details");
+  bar.style.setProperty("--chip-color", sportColorVar(row.sport));
   bar.style.gridColumn = (startIdx + 1) + " / " + (endIdx + 2);
-  var book = booksByKey[r.key];
+  var book = booksByKey[row.key];
   var floorText = book ? (" - " + fmtMoney(book.worst_now) + " floor") : "";
-  bar.textContent = (r.sport || "") + " - " + shortTeamNicknames(r.title) + floorText;
+  bar.textContent = (row.sport || "") + " - " + shortTeamNicknames(row.title) + floorText;
+  function activate() { openCalPopover(row, booksByKey); }
+  bar.addEventListener("click", activate);
+  bar.addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
+  });
   return bar;
 }
 
-function renderCalendar(container) {
-  container.innerHTML = "";
-  var rows = state.calendar || [];
-  var days = buildWeekDays();
+function buildMonthSettledChip(dayResults) {
+  var total = dayResults.reduce(function (s, r) { return s + (r.realized_pnl || 0); }, 0);
+  var chip = document.createElement("div");
+  chip.className = "cal-chip-settled " + moneyClass(total);
+  chip.textContent = "settled " + fmtMoney(total) + (dayResults.length > 1 ? " (" + dayResults.length + ")" : "");
+  chip.setAttribute("role", "button");
+  chip.setAttribute("tabindex", "0");
+  chip.setAttribute("aria-label", "Settled results details");
+  function activate() { openCalSettledPopover(dayResults); }
+  chip.addEventListener("click", activate);
+  chip.addEventListener("keydown", function (evt) {
+    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
+  });
+  return chip;
+}
+
+/* -- calendar detail popover (same overlay/backdrop pattern as
+   openTileModal/closeTileModal, a separate state object since a tile
+   modal and a calendar popover never need to coexist but should not
+   fight over the same open/close bookkeeping) -- */
+
+var calPopover = { open: false, overlay: null, prevFocusEl: null };
+
+function onCalPopoverKeydown(evt) {
+  if (evt.key === "Escape" || evt.key === "Esc") closeCalPopover();
+}
+
+function closeCalPopover() {
+  if (!calPopover.open) return;
+  if (calPopover.overlay && calPopover.overlay.parentNode) {
+    calPopover.overlay.parentNode.removeChild(calPopover.overlay);
+  }
+  calPopover.overlay = null;
+  calPopover.open = false;
+  document.body.classList.remove("modal-open");
+  document.removeEventListener("keydown", onCalPopoverKeydown);
+  if (calPopover.prevFocusEl && typeof calPopover.prevFocusEl.focus === "function") {
+    try { calPopover.prevFocusEl.focus(); } catch (e) { /* element may be gone after a re-render */ }
+  }
+  calPopover.prevFocusEl = null;
+}
+
+function openCalPopoverShell(bodyEl, ariaLabel) {
+  closeCalPopover();
+  calPopover.prevFocusEl = document.activeElement;
+
+  var overlay = document.createElement("div");
+  overlay.className = "tile-modal-overlay cal-popover-overlay";
+  overlay.addEventListener("click", function (evt) {
+    if (evt.target === overlay) closeCalPopover();
+  });
+
+  var dialog = document.createElement("div");
+  dialog.className = "tile-modal-dialog cal-popover-dialog";
+  dialog.setAttribute("role", "dialog");
+  dialog.setAttribute("aria-modal", "true");
+  dialog.setAttribute("aria-label", ariaLabel);
+
+  var closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "tile-modal-close";
+  closeBtn.setAttribute("aria-label", "Close");
+  closeBtn.textContent = "Close";
+  closeBtn.addEventListener("click", closeCalPopover);
+  dialog.appendChild(closeBtn);
+
+  dialog.appendChild(bodyEl);
+  overlay.appendChild(dialog);
+  document.body.appendChild(overlay);
+
+  calPopover.overlay = overlay;
+  calPopover.open = true;
+  document.body.classList.add("modal-open");
+  document.addEventListener("keydown", onCalPopoverKeydown);
+  closeBtn.focus();
+}
+
+function calRowSourceLabel(row) {
+  if (row.kind === "live_book") return "Live book - trading now";
+  if (row.kind === "candidate") return "Listed on Kalshi - no book running yet";
+  if (row.kind === "schedule") return row.source === "espn" ? "From the ESPN NFL schedule" : "From the schedule";
+  if (row.kind === "manual") return "From Blake's calendar list";
+  return "";
+}
+
+function buildCalPopoverBody(row, booksByKey) {
+  var wrap = document.createElement("div");
+  wrap.className = "cal-popover-body";
+
+  var h3 = document.createElement("h3");
+  h3.className = "cal-popover-title";
+  h3.textContent = (row.sport ? row.sport + " - " : "") + row.title;
+  wrap.appendChild(h3);
+
+  function line(text) {
+    var p = document.createElement("p");
+    p.className = "cal-popover-line";
+    p.textContent = text;
+    wrap.appendChild(p);
+  }
+
+  if (row.start_iso) {
+    line("Starts " + centralDayLabel(row.start_iso) + " " + centralTimeOnly(row.start_iso) + " CT");
+  } else if (row.ends_by_iso) {
+    line((row.ends_by_approx ? "Ends by about " : "Ends by ") + centralDayLabel(row.ends_by_iso) +
+      (row.ends_by_approx ? "" : (" " + centralTimeOnly(row.ends_by_iso) + " CT")));
+  } else {
+    line("Date to be determined");
+  }
+
+  var sourceLabel = calRowSourceLabel(row);
+  if (sourceLabel) line(sourceLabel);
+
+  if (row.listed === false) {
+    line(row.expected_listing_iso
+      ? ("Listing expected " + centralDayLabel(row.expected_listing_iso) + " (" + (row.listing_rule || "estimate") + ")")
+      : "Listing day not yet estimated");
+  } else {
+    if (row.event_ticker) line("Kalshi ticker: " + row.event_ticker);
+    line("Listed on Kalshi");
+  }
+
+  if (row.kind === "live_book") {
+    var book = booksByKey[row.key];
+    if (book) line("Floor right now: " + fmtMoney(book.worst_now));
+    var route = SPORT_TO_ROUTE[row.sport];
+    if (route) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "cal-popover-jump-btn";
+      btn.textContent = "View in " + row.sport + " →";
+      btn.addEventListener("click", function () {
+        closeCalPopover();
+        location.hash = "#" + route;
+      });
+      wrap.appendChild(btn);
+    }
+  }
+
+  if (row.note) line("Note: " + row.note);
+
+  return wrap;
+}
+
+function buildCalSettledPopoverBody(dayResults) {
+  var wrap = document.createElement("div");
+  wrap.className = "cal-popover-body";
+
+  var h3 = document.createElement("h3");
+  h3.className = "cal-popover-title";
+  h3.textContent = "Settled " + centralDayLabel(dayResults[0].settled_time);
+  wrap.appendChild(h3);
+
+  dayResults.forEach(function (r) {
+    var p = document.createElement("p");
+    p.className = "cal-popover-line";
+    p.appendChild(document.createTextNode((r.title || r.event_ticker || "Event") + ": "));
+    p.appendChild(moneySpan(r.realized_pnl));
+    wrap.appendChild(p);
+  });
+
+  return wrap;
+}
+
+function openCalPopover(row, booksByKey) {
+  openCalPopoverShell(buildCalPopoverBody(row, booksByKey), row.title + " details");
+}
+
+function openCalSettledPopover(dayResults) {
+  openCalPopoverShell(buildCalSettledPopoverBody(dayResults), "Settled results");
+}
+
+/* -- connector overlay: one SVG per render, dotted line from each
+   "listing?" marker to its own event chip, even when the two land in
+   different week rows (desktop grid only - window width gated by the
+   same 700px breakpoint styles.css uses to switch to the phone list) -- */
+
+function drawCalConnectors(gridWrapEl, connectorPairs) {
+  var old = gridWrapEl.querySelector(".cal-connector-overlay");
+  if (old && old.parentNode) old.parentNode.removeChild(old);
+  if (!connectorPairs.length) return;
+
+  var wrapRect = gridWrapEl.getBoundingClientRect();
+  if (!wrapRect.width || !wrapRect.height) return;
+
+  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "cal-connector-overlay");
+  svg.setAttribute("width", String(wrapRect.width));
+  svg.setAttribute("height", String(wrapRect.height));
+  svg.setAttribute("viewBox", "0 0 " + wrapRect.width + " " + wrapRect.height);
+
+  connectorPairs.forEach(function (pair) {
+    var mRect = pair.markerEl.getBoundingClientRect();
+    var eRect = pair.eventEl.getBoundingClientRect();
+    var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", String(mRect.left + mRect.width / 2 - wrapRect.left));
+    line.setAttribute("y1", String(mRect.top + mRect.height / 2 - wrapRect.top));
+    line.setAttribute("x2", String(eRect.left + eRect.width / 2 - wrapRect.left));
+    line.setAttribute("y2", String(eRect.top + eRect.height / 2 - wrapRect.top));
+    line.setAttribute("class", "cal-connector-line");
+    svg.appendChild(line);
+  });
+
+  gridWrapEl.appendChild(svg);
+}
+
+function renderCalendarMonthList(listEl, weeks, classified, booksByKey) {
+  listEl.innerHTML = "";
+  weeks.forEach(function (week) {
+    week.forEach(function (day) {
+      if (!day.inMonth) return;
+      var section = document.createElement("div");
+      section.className = "cal-list-day" + (day.isToday ? " today" : "");
+      var head = document.createElement("div");
+      head.className = "cal-list-day-head";
+      head.textContent = centralDayLabel(day.key + "T12:00:00Z") + (day.isToday ? " - today" : "");
+      section.appendChild(head);
+
+      var spanHere = classified.spanBars.filter(function (sb) {
+        return sb.weekIdx === day.weekIdx && day.dayIdx >= sb.startIdx && day.dayIdx <= sb.endIdx;
+      });
+      var bucket = classified.dayBuckets[day.key];
+      var hasAnything = spanHere.length || (bucket && (bucket.chips.length || bucket.settled.length));
+
+      if (!hasAnything) {
+        var empty = document.createElement("p");
+        empty.className = "cal-day-empty";
+        empty.textContent = "Nothing scheduled";
+        section.appendChild(empty);
+      } else {
+        spanHere.forEach(function (sb) {
+          section.appendChild(buildMonthSpanBar(sb.r, booksByKey, 0, 0));
+        });
+        if (bucket) {
+          bucket.markers.forEach(function (item) { section.appendChild(buildMonthListingMarker(item.row, booksByKey)); });
+          bucket.chips.forEach(function (item) { section.appendChild(buildMonthChip(item.kind, item.row, booksByKey)); });
+          if (bucket.settled.length) section.appendChild(buildMonthSettledChip(bucket.settled));
+        }
+      }
+      listEl.appendChild(section);
+    });
+  });
+}
+
+function renderCalendarPage() {
+  closeCalPopover(); // periodic refresh (or a month nav) rebuilds the grid - never leave a popover pointing at stale data
+  var gridWrap = document.getElementById("cal-month-grid-wrap");
+  var grid = document.getElementById("cal-month-grid");
+  var listEl = document.getElementById("cal-month-list");
+  var legendEl = document.getElementById("cal-month-legend");
+  var labelEl = document.getElementById("cal-month-label");
+  if (!grid || !state.feed) return;
+
+  if (calendarView.year === null) {
+    var t = centralTodayYMD();
+    calendarView.year = t.y;
+    calendarView.month = t.m;
+  }
+
+  var weeks = buildMonthGrid(calendarView.year, calendarView.month);
+  var classified = classifyCalendarRows(weeks);
   var booksByKey = {};
   ((state.feed && state.feed.books) || []).forEach(function (b) { booksByKey[b.key] = b; });
 
-  var winStartEpoch = Date.parse(days[0].key + "T00:00:00Z");
-  var winEndEpoch = Date.parse(days[6].key + "T00:00:00Z") + 86400000;
+  labelEl.textContent = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" })
+    .format(new Date(Date.UTC(calendarView.year, calendarView.month - 1, 1)));
 
-  var spanBars = []; // { r, startIdx, endIdx }
-  var singleRowsByDay = days.map(function () { return []; });
-
-  rows.forEach(function (r) {
-    var isLive = r.kind === "live_book";
-    var isMultiDay = isLive && r.start_iso && r.ends_by_iso && centralDateKey(r.start_iso) !== centralDateKey(r.ends_by_iso);
-
-    if (isMultiDay) {
-      // An approximate ends_by_iso (publish.py's exp_times_look_approximate
-      // - Kalshi's own generic per-event estimate, not real per-market
-      // schedule data) has twice now been confirmed to land EARLY relative
-      // to the event's real final day (both the Alfred Dunhill Links and
-      // this exact live Bank of Utah Championship book: Kalshi's shared
-      // estimate converts, in Central time, to the calendar day BEFORE the
-      // tournament's actual last day). Extending the visual span bar by
-      // one day in that case means a live multi-day book doesn't appear to
-      // vanish from the calendar a day before it is actually done.
-      var endIso = r.ends_by_iso;
-      if (r.ends_by_approx) endIso = new Date(Date.parse(r.ends_by_iso) + 86400000).toISOString();
-      var sIdx = dayIndexForKey(days, centralDateKey(r.start_iso));
-      var eIdx = dayIndexForKey(days, centralDateKey(endIso));
-      if (sIdx === -1 && eIdx === -1) {
-        // Neither endpoint falls inside this week - only keep it if the
-        // whole visible week sits inside the event's span (e.g. a
-        // tournament that started last week and finishes next week).
-        var sEpoch = Date.parse(r.start_iso);
-        var eEpoch = Date.parse(endIso);
-        if (!(sEpoch <= winStartEpoch && eEpoch >= winEndEpoch)) return;
-        sIdx = 0;
-        eIdx = 6;
-      } else {
-        if (sIdx === -1) sIdx = 0; // started before this week - bar starts at the left edge
-        if (eIdx === -1) eIdx = 6; // ends after this week - bar runs to the right edge
-      }
-      spanBars.push({ r: r, startIdx: sIdx, endIdx: eIdx, endIso: endIso });
-      return;
-    }
-
-    var iso = r.start_iso || r.ends_by_iso;
-    var idx = iso ? dayIndexForKey(days, centralDateKey(iso)) : -1;
-    if (idx === -1) return; // outside this 7-day window, or no date at all - not part of the week row
-    singleRowsByDay[idx].push(r);
-  });
-
-  singleRowsByDay.forEach(function (dayRows) {
-    dayRows.sort(function (a, b) {
-      var aLive = a.kind === "live_book" ? 0 : 1;
-      var bLive = b.kind === "live_book" ? 0 : 1;
-      return aLive - bLive;
-    });
-  });
-
-  var todayKey = days[0].key;
-  var settledToday = (state.results || []).filter(function (r) { return r.settled_time && centralDateKey(r.settled_time) === todayKey; });
-  var settledTotal = settledToday.reduce(function (s, r) { return s + (r.realized_pnl || 0); }, 0);
-
-  // -- desktop 7-column grid --
-  var grid = document.createElement("div");
-  grid.className = "cal-grid";
-
-  days.forEach(function (day, i) {
+  // -- desktop month grid --
+  grid.innerHTML = "";
+  ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach(function (lbl, i) {
     var head = document.createElement("div");
-    head.className = "cal-day-head" + (day.isToday ? " today" : "");
+    head.className = "cal-month-dow";
     head.style.gridColumn = String(i + 1);
-    head.style.gridRow = "1";
-    head.textContent = day.label + (day.isToday ? " - today" : "");
+    head.textContent = lbl;
     grid.appendChild(head);
   });
 
-  spanBars.forEach(function (sb, barIdx) {
-    var bar = buildSpanBar(sb.r, booksByKey, sb.startIdx, sb.endIdx);
-    bar.style.gridRow = String(2 + barIdx);
-    grid.appendChild(bar);
+  var elementsByConnId = {};
+  var rowCursor = 2;
+  weeks.forEach(function (week, wi) {
+    var barsThisWeek = classified.spanBars.filter(function (sb) { return sb.weekIdx === wi; });
+    barsThisWeek.forEach(function (sb, bi) {
+      var bar = buildMonthSpanBar(sb.r, booksByKey, sb.startIdx, sb.endIdx);
+      bar.style.gridRow = String(rowCursor + bi);
+      grid.appendChild(bar);
+    });
+    var cellsRow = rowCursor + barsThisWeek.length;
+
+    week.forEach(function (day, di) {
+      var cell = document.createElement("div");
+      cell.className = "cal-month-cell" + (day.isToday ? " today" : "") + (day.inMonth ? "" : " outside");
+      cell.style.gridColumn = String(di + 1);
+      cell.style.gridRow = String(cellsRow);
+
+      var num = document.createElement("div");
+      num.className = "cal-month-cell-num";
+      num.textContent = String(day.day);
+      cell.appendChild(num);
+
+      var bucket = classified.dayBuckets[day.key];
+      if (bucket) {
+        bucket.markers.forEach(function (item) {
+          var markerEl = buildMonthListingMarker(item.row, booksByKey);
+          cell.appendChild(markerEl);
+          if (item.connId) {
+            elementsByConnId[item.connId] = elementsByConnId[item.connId] || {};
+            elementsByConnId[item.connId].markerEl = markerEl;
+          }
+        });
+        bucket.chips.forEach(function (item) {
+          var chipEl = buildMonthChip(item.kind, item.row, booksByKey);
+          cell.appendChild(chipEl);
+          if (item.connId) {
+            elementsByConnId[item.connId] = elementsByConnId[item.connId] || {};
+            elementsByConnId[item.connId].eventEl = chipEl;
+          }
+        });
+        if (bucket.settled.length) cell.appendChild(buildMonthSettledChip(bucket.settled));
+      }
+      grid.appendChild(cell);
+    });
+    rowCursor = cellsRow + 1;
   });
 
-  var cellsRow = String(2 + spanBars.length);
-  days.forEach(function (day, i) {
-    var cell = document.createElement("div");
-    cell.className = "cal-day-cell" + (day.isToday ? " today" : "");
-    cell.style.gridColumn = String(i + 1);
-    cell.style.gridRow = cellsRow;
-    var dayRows = singleRowsByDay[i];
-    var hasSettled = i === 0 && settledToday.length > 0;
-    if (!dayRows.length && !hasSettled) {
-      var empty = document.createElement("p");
-      empty.className = "cal-day-empty";
-      empty.textContent = "-";
-      cell.appendChild(empty);
-    } else {
-      dayRows.forEach(function (r) { cell.appendChild(buildCalendarChip(r, booksByKey)); });
-      if (hasSettled) cell.appendChild(buildSettledChip(settledTotal, settledToday.length));
-    }
-    grid.appendChild(cell);
-  });
+  if (window.matchMedia("(min-width: 701px)").matches) {
+    var connectorPairs = Object.keys(elementsByConnId)
+      .map(function (id) { return elementsByConnId[id]; })
+      .filter(function (pair) { return pair.markerEl && pair.eventEl; });
+    drawCalConnectors(gridWrap, connectorPairs);
+  }
 
-  container.appendChild(grid);
-
-  // -- phone vertical list (same data, grouped by day) --
-  var list = document.createElement("div");
-  list.className = "cal-list";
-  days.forEach(function (day, i) {
-    var section = document.createElement("div");
-    section.className = "cal-list-day" + (day.isToday ? " today" : "");
-    var head = document.createElement("div");
-    head.className = "cal-list-day-head";
-    head.textContent = day.label + (day.isToday ? " - today" : "");
-    section.appendChild(head);
-
-    var spanHere = spanBars.filter(function (sb) { return i >= sb.startIdx && i <= sb.endIdx; });
-    var dayRows = singleRowsByDay[i];
-    var hasSettled = i === 0 && settledToday.length > 0;
-
-    if (!spanHere.length && !dayRows.length && !hasSettled) {
-      var empty = document.createElement("p");
-      empty.className = "cal-day-empty";
-      empty.textContent = "Nothing scheduled";
-      section.appendChild(empty);
-    } else {
-      spanHere.forEach(function (sb) {
-        section.appendChild(buildCalendarChip(sb.r, booksByKey, { multiDayEndIso: sb.endIso }));
-      });
-      dayRows.forEach(function (r) { section.appendChild(buildCalendarChip(r, booksByKey)); });
-      if (hasSettled) section.appendChild(buildSettledChip(settledTotal, settledToday.length));
-    }
-    list.appendChild(section);
-  });
-  container.appendChild(list);
+  // -- phone list --
+  renderCalendarMonthList(listEl, weeks, classified, booksByKey);
 
   // -- legend --
-  var legend = document.createElement("p");
-  legend.className = "cal-legend";
-  var liveSwatch = document.createElement("span");
-  liveSwatch.className = "cal-legend-swatch live";
-  var watchSwatch = document.createElement("span");
-  watchSwatch.className = "cal-legend-swatch watchlist";
-  legend.appendChild(liveSwatch);
-  legend.appendChild(document.createTextNode(" Live book, floor shown"));
-  legend.appendChild(watchSwatch);
-  legend.appendChild(document.createTextNode(" Watchlist - listed on Kalshi in a series we trade, no book running yet"));
-  container.appendChild(legend);
+  legendEl.innerHTML = "";
+  function legendItem(cls, text) {
+    var sw = document.createElement("span");
+    sw.className = "cal-legend-swatch " + cls;
+    legendEl.appendChild(sw);
+    legendEl.appendChild(document.createTextNode(" " + text));
+  }
+  legendItem("live", "Live book, floor shown");
+  legendItem("watchlist", "Watchlist - listed on Kalshi, no book running yet");
+  legendItem("settled", "Settled - result from that day");
+  var note = document.createElement("span");
+  note.className = "cal-legend-note";
+  note.textContent = "A dotted \"listing?\" marker + line points from our best guess at an event's Kalshi listing day to the event itself, for anything not listed yet.";
+  legendEl.appendChild(note);
+}
+
+function shiftCalendarMonth(delta) {
+  if (calendarView.year === null) {
+    var t = centralTodayYMD();
+    calendarView.year = t.y;
+    calendarView.month = t.m;
+  }
+  var m = calendarView.month + delta;
+  var y = calendarView.year;
+  while (m < 1) { m += 12; y -= 1; }
+  while (m > 12) { m -= 12; y += 1; }
+  calendarView.year = y;
+  calendarView.month = m;
+  renderCalendarPage();
+}
+
+var calendarResizeTimer = null;
+
+function initCalendarNav() {
+  var prevBtn = document.getElementById("cal-prev-month");
+  var nextBtn = document.getElementById("cal-next-month");
+  if (prevBtn) prevBtn.addEventListener("click", function () { shiftCalendarMonth(-1); });
+  if (nextBtn) nextBtn.addEventListener("click", function () { shiftCalendarMonth(1); });
+  window.addEventListener("resize", function () {
+    if (currentRoute() !== "calendar") return;
+    if (calendarResizeTimer) clearTimeout(calendarResizeTimer);
+    calendarResizeTimer = setTimeout(renderCalendarPage, 150);
+  });
 }
 
 /* -- settled table (per sport page) -- */
@@ -1923,6 +2291,7 @@ function renderAll() {
 document.addEventListener("DOMContentLoaded", function () {
   applyRoute(currentRoute());
   initGlobalTooltipDismissal();
+  initCalendarNav();
   refresh();
   setInterval(refresh, 60000);
   setInterval(function () {

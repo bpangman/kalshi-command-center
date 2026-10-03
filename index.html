@@ -20,6 +20,7 @@
         <a href="#nascar" class="tab" data-route="nascar">NASCAR</a>
         <a href="#f1" class="tab" data-route="f1">F1</a>
         <a href="#golf" class="tab" data-route="golf">Golf</a>
+        <a href="#calendar" class="tab" data-route="calendar">Calendar</a>
       </nav>
     </header>
 
@@ -37,11 +38,6 @@
         </div>
 
         <div class="section-block">
-          <h2>Calendar</h2>
-          <div id="calendar-list"></div>
-        </div>
-
-        <div class="section-block">
           <h2>Live books</h2>
           <div id="live-books-list" class="book-tile-grid-wrap"></div>
         </div>
@@ -51,6 +47,19 @@
       <section id="page-nascar" class="page" hidden><div class="sport-page" id="sport-page-NASCAR"></div></section>
       <section id="page-f1" class="page" hidden><div class="sport-page" id="sport-page-F1"></div></section>
       <section id="page-golf" class="page" hidden><div class="sport-page" id="sport-page-Golf"></div></section>
+
+      <section id="page-calendar" class="page" hidden>
+        <div class="cal-month-header">
+          <button type="button" id="cal-prev-month" class="cal-month-nav-btn" aria-label="Previous month">&#8249;</button>
+          <h2 id="cal-month-label" class="cal-month-label"></h2>
+          <button type="button" id="cal-next-month" class="cal-month-nav-btn" aria-label="Next month">&#8250;</button>
+        </div>
+        <div id="cal-month-grid-wrap" class="cal-month-grid-wrap">
+          <div id="cal-month-grid" class="cal-month-grid"></div>
+        </div>
+        <div id="cal-month-list" class="cal-month-list"></div>
+        <p id="cal-month-legend" class="cal-legend"></p>
+      </section>
     </main>
 
     <footer>

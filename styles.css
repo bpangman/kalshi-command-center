@@ -268,15 +268,20 @@ h2 {
   margin: 8px 0;
 }
 
-/* -- calendar: 7-day week row (Blake 2026-10-02) --------------------------
-   Replaced the old flat chronological list with a real one-week calendar:
-   seven day columns starting today, LIVE chips (solid, sport-colored, a
-   running book - floor shown) visually distinct from WATCHLIST chips
-   (dashed, muted, "not trading" - listed on Kalshi in a series this house
-   trades, but no book running yet). A multi-day event (a golf tournament)
-   spans its days as one bar instead of repeating per day. See app.js's
-   renderCalendar for how the two (desktop grid vs phone list, same data)
-   are built. */
+/* -- Calendar tab: full month sheet (Blake 2026-10-02) --------------------
+   Replaced the old 7-day week row with its own tab: a real month sheet,
+   Sun-Sat columns, rows = the weeks of the shown month (Central time),
+   leading/trailing days from adjacent months greyed, today highlighted,
+   prev/next month arrows. Chips: LIVE (solid, sport-colored, floor
+   shown), SETTLED (muted solid, +/-$ result), WATCHLIST (dashed outline
+   - listed on Kalshi, no book running yet; a ".not-listed" modifier is
+   the same dashed look for an event Kalshi has not listed yet, paired
+   with a small "listing?" marker on its expected listing day and a
+   dotted SVG connector between the two, drawn by app.js's
+   drawCalConnectors). A multi-day event (a golf tournament) spans its
+   days as one bar across a week row. See app.js's renderCalendarPage for
+   how the desktop grid, the phone day list, and the connector overlay
+   are all built from the same classified data in one pass. */
 
 :root {
   --sport-nfl: var(--accent);
@@ -285,13 +290,51 @@ h2 {
   --sport-golf: var(--green);
 }
 
-.cal-grid {
+.cal-month-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cal-month-label {
+  margin: 0;
+  font-size: 1.1rem;
+  min-width: 11ch;
+  text-align: center;
+}
+
+.cal-month-nav-btn {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cal-month-nav-btn:hover,
+.cal-month-nav-btn:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.cal-month-grid-wrap {
+  position: relative;
+}
+
+.cal-month-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 6px;
 }
 
-.cal-day-head {
+.cal-month-dow {
   font-weight: 700;
   font-size: 0.78rem;
   color: var(--muted);
@@ -299,24 +342,36 @@ h2 {
   letter-spacing: 0.03em;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--border);
+  grid-row: 1;
 }
 
-.cal-day-head.today {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-.cal-day-cell {
+.cal-month-cell {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  min-height: 48px;
-  padding: 4px 2px;
+  gap: 4px;
+  min-height: 72px;
+  padding: 4px;
   border-radius: 8px;
+  border: 1px solid transparent;
 }
 
-.cal-day-cell.today {
+.cal-month-cell.today {
   background: rgba(88, 166, 255, 0.06);
+  border-color: var(--accent);
+}
+
+.cal-month-cell.outside {
+  opacity: 0.38;
+}
+
+.cal-month-cell-num {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.cal-month-cell.today .cal-month-cell-num {
+  color: var(--accent);
 }
 
 .cal-day-empty {
@@ -339,6 +394,7 @@ h2 {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-bottom: 2px;
+  cursor: pointer;
 }
 
 .cal-chip {
@@ -346,6 +402,17 @@ h2 {
   padding: 4px 7px;
   font-size: 0.72rem;
   line-height: 1.35;
+  cursor: pointer;
+}
+
+.cal-chip:hover,
+.cal-chip:focus-visible,
+.cal-span-bar:hover,
+.cal-span-bar:focus-visible,
+.cal-chip-settled:hover,
+.cal-chip-settled:focus-visible {
+  outline: none;
+  border-color: var(--accent);
 }
 
 .cal-chip.live {
@@ -357,6 +424,10 @@ h2 {
   background: transparent;
   border: 1px dashed var(--border);
   color: var(--muted);
+}
+
+.cal-chip.watchlist.not-listed {
+  border-color: color-mix(in srgb, var(--muted) 60%, transparent);
 }
 
 .cal-chip-time {
@@ -397,18 +468,59 @@ h2 {
   font-weight: 700;
   background: var(--panel-2);
   border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+/* "listing?" marker: the day Kalshi is expected to open a market for an
+   event it has not listed yet - see the dotted connector overlay below. */
+.cal-listing-marker {
+  display: inline-block;
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-size: 0.62rem;
+  font-style: italic;
+  color: var(--muted);
+  border: 1px dotted var(--muted);
+  cursor: pointer;
+}
+
+.cal-listing-marker:hover,
+.cal-listing-marker:focus-visible {
+  color: var(--text);
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* SVG overlay drawing the dotted line from a .cal-listing-marker to its
+   event's own chip - positioned absolutely over .cal-month-grid-wrap
+   (desktop only; the phone list shows the same information as plain text
+   inside the chip instead, see buildMonthChip). */
+.cal-connector-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cal-connector-line {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+  fill: none;
 }
 
 /* Phones get a vertical list grouped by day instead of the 7-column grid -
-   same chip markup, built once in renderCalendar and shown/hidden here so
-   there is only one source of truth. */
-.cal-list {
+   same chip markup, built once in renderCalendarPage and shown/hidden
+   here so there is only one source of truth. */
+.cal-month-list {
   display: none;
 }
 
 @media (max-width: 700px) {
-  .cal-grid { display: none; }
-  .cal-list { display: block; }
+  .cal-month-grid-wrap { display: none; }
+  .cal-month-list { display: block; }
 }
 
 .cal-list-day {
@@ -435,7 +547,8 @@ h2 {
 
 .cal-list-day .cal-chip,
 .cal-list-day .cal-span-bar,
-.cal-list-day .cal-chip-settled {
+.cal-list-day .cal-chip-settled,
+.cal-list-day .cal-listing-marker {
   margin-bottom: 6px;
 }
 
@@ -446,7 +559,7 @@ h2 {
   gap: 6px;
   color: var(--muted);
   font-size: 0.74rem;
-  margin: 10px 0 0;
+  margin: 14px 0 0;
 }
 
 .cal-legend-swatch {
@@ -465,6 +578,51 @@ h2 {
 .cal-legend-swatch.watchlist {
   background: transparent;
   border: 1px dashed var(--muted);
+}
+
+.cal-legend-swatch.settled {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+}
+
+.cal-legend-note {
+  flex-basis: 100%;
+  margin-top: 2px;
+}
+
+/* -- calendar detail popover (reuses the tile-modal overlay/backdrop, a
+   smaller dialog) -- */
+
+.cal-popover-dialog {
+  max-width: 380px;
+}
+
+.cal-popover-title {
+  margin: 0 28px 10px 0;
+  font-size: 1.02rem;
+}
+
+.cal-popover-line {
+  margin: 0 0 8px;
+  font-size: 0.86rem;
+  color: var(--text);
+}
+
+.cal-popover-jump-btn {
+  margin-top: 6px;
+  background: var(--panel-2);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.cal-popover-jump-btn:hover,
+.cal-popover-jump-btn:focus-visible {
+  background: color-mix(in srgb, var(--accent) 16%, var(--panel-2));
+  outline: none;
 }
 
 details.strategy {
