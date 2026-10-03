@@ -280,7 +280,17 @@ function likelihoodSortedOutcomes(b) {
     if (typeof o.implied_prob === "number") return o.implied_prob * 100;
     return -1;
   }
+  // 2026-10-03 fix (Blake): a settled-"no" outcome is dead - Kalshi has
+  // a final "no" result for it - so it always sorts after every live
+  // outcome, even on a stale read where its win_pct/implied_prob has
+  // not caught up to 0 yet. Live outcomes keep their normal order
+  // among themselves.
+  function deadLast(o) {
+    return o.settled === "no" ? 1 : 0;
+  }
   outcomes.sort(function (a, c) {
+    var deadDiff = deadLast(a.o) - deadLast(c.o);
+    if (deadDiff !== 0) return deadDiff;
     var d = likelihood(c.o) - likelihood(a.o);
     return d !== 0 ? d : a.i - c.i;
   });
@@ -1525,7 +1535,11 @@ function buildBookTile(b, opts) {
   var strip = document.createElement("div");
   strip.className = "book-tile-outcome-strip";
   var deciCent = !!b.is_deci_cent;
-  likelihoodSortedOutcomes(b).slice(0, 7).forEach(function (o) {
+  // 2026-10-03 fix (Blake): a settled-"no" outcome (missed-cut golfer,
+  // eliminated driver, etc) never belongs in the homepage tile strip's
+  // top 7 - skip it before taking the slice, not after, so a live
+  // outcome never gets pushed out to make room for a dead one.
+  likelihoodSortedOutcomes(b).filter(function (o) { return o.settled !== "no"; }).slice(0, 7).forEach(function (o) {
     strip.appendChild(buildTileOutcomeRow(o, deciCent));
   });
   tile.appendChild(strip);
