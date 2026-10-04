@@ -270,6 +270,61 @@ function shortOutcomeLabel(label) {
   return nickname + " " + range;
 }
 
+function formatGameClock(book) {
+  /* Blake 2026-10-04: what to print on an in-play tile's badge instead of
+     "In play" - how much of the event is left, in that sport's own units.
+     Reads book.game_clock (built by the publisher from the bot's own
+     event state). Returns a short string, or null when there is nothing
+     trustworthy to show (caller then keeps the plain phase text). */
+  var gc = book && book.game_clock;
+  if (!gc || typeof gc !== "object") return null;
+  if (gc.stale) return null; // the bot's feed has stalled - a frozen clock would mislead
+  if (gc.final) return "Final";
+  var period = (typeof gc.period === "number") ? gc.period : null;
+  if (period !== null && period >= 1 && gc.clock) {
+    if (period >= 5) return "OT " + gc.clock;
+    if (period === 2 && gc.clock === "0:00") return "Halftime";
+    return "Q" + period + " " + gc.clock;
+  }
+  var lapsRem = (typeof gc.laps_remaining === "number") ? gc.laps_remaining : null;
+  var lapsTot = (typeof gc.laps_total === "number") ? gc.laps_total : null;
+  if (lapsRem !== null && lapsTot !== null && lapsTot > 0) {
+    var done = Math.max(0, Math.min(lapsTot, lapsTot - lapsRem));
+    return "Lap " + done + " of " + lapsTot;
+  }
+  if (lapsRem !== null) return lapsRem + " laps to go";
+  var pct = null;
+  if (typeof gc.round === "number") {
+    if (typeof gc.tournament_progress === "number") pct = gc.tournament_progress;
+    return "Rd " + gc.round + (pct !== null ? ", " + Math.round(pct * 100) + "% done" : "");
+  }
+  if (typeof gc.progress === "number") pct = gc.progress;
+  else if (typeof gc.tournament_progress === "number") pct = gc.tournament_progress;
+  if (pct === null) return null;
+  if (pct <= 0) return "Just started";
+  return Math.round(pct * 100) + "% done";
+}
+
+function phaseBadgeText(b) {
+  /* In play with a usable clock: the clock. Everything else (pre-game,
+     no event data): exactly the old text. */
+  if (b && b.in_play) {
+    var t = null;
+    try { t = formatGameClock(b); } catch (e) { t = null; }
+    if (t) return t;
+  }
+  return b ? b.phase : "";
+}
+
+function gameScoreText(b) {
+  /* "NE 29 - BUF 26" (away first), or "" when the score is not known. */
+  var gc = b && b.in_play && b.game_clock;
+  if (!gc || gc.stale) return "";
+  if (typeof gc.home_score !== "number" || typeof gc.away_score !== "number") return "";
+  if (!gc.home_code || !gc.away_code) return "";
+  return gc.away_code + " " + gc.away_score + " - " + gc.home_code + " " + gc.home_score;
+}
+
 function likelihoodSortedOutcomes(b) {
   /* Most-likely-to-win first (Blake, 10/1/26) - shared by the full
      outcome table (buildOutcomeTable) and the tile grid's compact strip
@@ -377,6 +432,7 @@ function refresh() {
     state.results = Array.isArray(parts[1]) ? parts[1] : [];
     state.snapshots = Array.isArray(parts[2]) ? parts[2] : [];
     state.calendar = Array.isArray(parts[3] && parts[3].rows) ? parts[3].rows : [];
+    updateFillsFromFeed();
     renderAll();
   }).catch(function (err) {
     renderError(err);
@@ -1267,7 +1323,7 @@ function buildBookCard(b, opts) {
   sportTag.textContent = b.sport;
   var phase = document.createElement("span");
   phase.className = "phase-badge " + (b.in_play ? "in-play" : "pre-game");
-  phase.textContent = b.phase;
+  phase.textContent = phaseBadgeText(b);
   head.appendChild(dot);
   head.appendChild(title);
   head.appendChild(sportTag);
@@ -1503,7 +1559,7 @@ function buildBookTile(b, opts) {
   }
   var phase = document.createElement("span");
   phase.className = "phase-badge " + (b.in_play ? "in-play" : "pre-game");
-  phase.textContent = b.phase;
+  phase.textContent = phaseBadgeText(b);
   row1.appendChild(phase);
 
   // Minimize control (Blake 2026-10-02): collapses the tile to just this
@@ -1515,6 +1571,14 @@ function buildBookTile(b, opts) {
   minBtn.className = "book-tile-min-btn";
   row1.appendChild(minBtn);
   tile.appendChild(row1);
+
+  var scoreText = gameScoreText(b);
+  if (scoreText) {
+    var scoreLine = document.createElement("div");
+    scoreLine.className = "book-tile-score";
+    scoreLine.textContent = scoreText;
+    tile.appendChild(scoreLine);
+  }
 
   var row2 = document.createElement("div");
   row2.className = "book-tile-row2";
@@ -2295,6 +2359,215 @@ function renderError(err) {
   badge.hidden = false;
 }
 
+/* -- live fills drawer (Blake 2026-10-04) -- */
+
+var FILLS_STORE_KEY = "kcc_fills_v1";
+var FILLS_OPEN_KEY = "kcc_fills_open";
+var FILLS_MAX_ROWS = 300;
+var fillsState = { rows: [], keys: {}, open: false, unread: 0, loaded: false, newKeys: {} };
+
+function fillRowKey(bookKey, f) {
+  return [bookKey, f.ts, f.label, f.count, f.price].join("|");
+}
+
+function fillTs(row) {
+  var t = Date.parse(row.ts);
+  return isNaN(t) ? 0 : t;
+}
+
+function loadFillsFromStorage() {
+  fillsState.loaded = true;
+  try {
+    var raw = localStorage.getItem(FILLS_STORE_KEY);
+    if (!raw) return;
+    var arr = JSON.parse(raw);
+    if (!Array.isArray(arr)) return;
+    arr.forEach(function (r) {
+      if (r && r.k && !fillsState.keys[r.k]) {
+        fillsState.keys[r.k] = true;
+        fillsState.rows.push(r);
+      }
+    });
+  } catch (e) {
+    /* storage blocked or corrupt - start with an empty list */
+  }
+}
+
+function mergeFills(feed) {
+  /* Folds every book's recent_fills into one list, newest first, deduped,
+     capped. Returns how many rows were new this pass. */
+  if (!fillsState.loaded) loadFillsFromStorage();
+  var firstEver = fillsState.rows.length === 0;
+  var added = 0;
+  var newKeys = {};
+  var books = (feed && Array.isArray(feed.books)) ? feed.books : [];
+  books.forEach(function (b) {
+    if (!b || !Array.isArray(b.recent_fills)) return;
+    b.recent_fills.forEach(function (f) {
+      if (!f || !f.ts) return;
+      var k = fillRowKey(b.key, f);
+      if (fillsState.keys[k]) return;
+      fillsState.keys[k] = true;
+      fillsState.rows.push({
+        k: k, bk: b.key, title: b.title || "", sport: b.sport || "",
+        ts: f.ts, label: f.label || "", side: f.side || "sell",
+        count: f.count, price: f.price, fair: f.fair, margin_cents: f.margin_cents
+      });
+      newKeys[k] = true;
+      added++;
+    });
+  });
+  if (added > 0) {
+    fillsState.rows.sort(function (a, b) { return fillTs(b) - fillTs(a); });
+    if (fillsState.rows.length > FILLS_MAX_ROWS) {
+      fillsState.rows.slice(FILLS_MAX_ROWS).forEach(function (r) { delete fillsState.keys[r.k]; });
+      fillsState.rows.length = FILLS_MAX_ROWS;
+    }
+    try {
+      localStorage.setItem(FILLS_STORE_KEY, JSON.stringify(fillsState.rows));
+    } catch (e) { /* nothing to persist to */ }
+  }
+  // The very first load just seeds the list; it is not "new" activity.
+  fillsState.newKeys = firstEver ? {} : newKeys;
+  if (!firstEver && !fillsState.open) fillsState.unread += added;
+  return added;
+}
+
+function fmtFillPrice(p) {
+  var n = Number(p);
+  if (p === null || p === undefined || isNaN(n)) return "-";
+  var s = n.toFixed(3);
+  if (s.charAt(s.length - 1) === "0") s = n.toFixed(2);
+  return s;
+}
+
+function fmtFillCount(c) {
+  var n = Number(c);
+  if (c === null || c === undefined || isNaN(n)) return "-";
+  return (Math.abs(n - Math.round(n)) < 1e-9) ? String(Math.round(n)) : n.toFixed(1);
+}
+
+function fillTimeCT(iso) {
+  var d = new Date(iso);
+  if (isNaN(d.getTime())) return "--:--:--";
+  var parts = {};
+  new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true })
+    .formatToParts(d).forEach(function (p) { parts[p.type] = p.value; });
+  return (parts.hour || "") + ":" + (parts.minute || "") + ":" + (parts.second || "");
+}
+
+function fillBookName(r) {
+  var t = r.title ? shortTeamNicknames(r.title) : "";
+  return t || r.sport || r.bk || "";
+}
+
+function buildFillRow(r) {
+  var row = document.createElement("div");
+  var buyback = r.side === "buyback";
+  row.className = "fill-row" + (buyback ? " buyback" : "") + (fillsState.newKeys[r.k] ? " fill-new" : "");
+
+  var top = document.createElement("div");
+  top.className = "fill-row-top";
+  var time = document.createElement("span");
+  time.className = "fill-time";
+  time.textContent = fillTimeCT(r.ts);
+  var book = document.createElement("span");
+  book.className = "fill-book";
+  book.textContent = fillBookName(r);
+  top.appendChild(time);
+  top.appendChild(book);
+  var m = Number(r.margin_cents);
+  if (r.margin_cents !== null && r.margin_cents !== undefined && !isNaN(m)) {
+    var margin = document.createElement("span");
+    margin.className = "fill-margin " + (m > 0 ? "pos" : (m < 0 ? "neg" : "zero"));
+    margin.textContent = (m > 0 ? "+" : "") + (Math.round(m * 10) / 10) + "c vs fair";
+    top.appendChild(margin);
+  }
+  row.appendChild(top);
+
+  var main = document.createElement("div");
+  main.className = "fill-row-main";
+  var label = document.createElement("span");
+  label.className = "fill-label";
+  label.textContent = shortOutcomeLabel(r.label);
+  var what = document.createElement("span");
+  what.className = "fill-what";
+  what.textContent = (buyback ? "bought back " : "sold ") + fmtFillCount(r.count) + " @ " + fmtFillPrice(r.price);
+  main.appendChild(label);
+  main.appendChild(what);
+  row.appendChild(main);
+  return row;
+}
+
+function updateFillsBubble() {
+  var bubble = document.getElementById("fills-unread");
+  if (!bubble) return;
+  var n = fillsState.unread;
+  bubble.hidden = !(n > 0 && !fillsState.open);
+  bubble.textContent = n > 99 ? "99+" : String(n);
+}
+
+function renderFillsDrawer() {
+  var list = document.getElementById("fills-list");
+  if (!list) return;
+  list.textContent = "";
+  if (!fillsState.rows.length) {
+    var empty = document.createElement("p");
+    empty.className = "fills-empty";
+    empty.textContent = "No fills yet. New ones show up here as they come in.";
+    list.appendChild(empty);
+  } else {
+    var frag = document.createDocumentFragment();
+    fillsState.rows.forEach(function (r) { frag.appendChild(buildFillRow(r)); });
+    list.appendChild(frag);
+  }
+  updateFillsBubble();
+}
+
+function setFillsOpen(open) {
+  fillsState.open = !!open;
+  document.body.classList.toggle("fills-open", fillsState.open);
+  var drawer = document.getElementById("fills-drawer");
+  var btn = document.getElementById("fills-toggle");
+  if (drawer) drawer.setAttribute("aria-hidden", fillsState.open ? "false" : "true");
+  if (btn) btn.setAttribute("aria-expanded", fillsState.open ? "true" : "false");
+  if (fillsState.open) {
+    fillsState.unread = 0;
+    fillsState.newKeys = {};
+  }
+  updateFillsBubble();
+  try {
+    localStorage.setItem(FILLS_OPEN_KEY, fillsState.open ? "1" : "0");
+  } catch (e) { /* not persisted */ }
+}
+
+function initFillsDrawer() {
+  var btn = document.getElementById("fills-toggle");
+  var closeBtn = document.getElementById("fills-close");
+  var backdrop = document.getElementById("fills-backdrop");
+  if (!btn || !document.getElementById("fills-drawer")) return;
+  btn.addEventListener("click", function () { setFillsOpen(!fillsState.open); });
+  if (closeBtn) closeBtn.addEventListener("click", function () { setFillsOpen(false); });
+  if (backdrop) backdrop.addEventListener("click", function () { setFillsOpen(false); });
+  document.addEventListener("keydown", function (evt) {
+    if ((evt.key === "Escape" || evt.key === "Esc") && fillsState.open && !tileModal.open) setFillsOpen(false);
+  });
+  var wasOpen = false;
+  try { wasOpen = localStorage.getItem(FILLS_OPEN_KEY) === "1"; } catch (e) { wasOpen = false; }
+  if (!fillsState.loaded) loadFillsFromStorage();
+  setFillsOpen(wasOpen);
+  renderFillsDrawer();
+}
+
+function updateFillsFromFeed() {
+  try {
+    mergeFills(state.feed);
+    renderFillsDrawer();
+  } catch (e) {
+    /* the drawer is a nicety - never let it break the main refresh */
+  }
+}
+
 /* -- top-level render -- */
 
 function renderAll() {
@@ -2306,6 +2579,7 @@ document.addEventListener("DOMContentLoaded", function () {
   applyRoute(currentRoute());
   initGlobalTooltipDismissal();
   initCalendarNav();
+  initFillsDrawer();
   refresh();
   setInterval(refresh, 60000);
   setInterval(function () {

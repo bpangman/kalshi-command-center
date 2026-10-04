@@ -1209,3 +1209,229 @@ footer {
 img {
   max-width: 100%;
 }
+
+/* -- game clock score line (Blake 2026-10-04) -- */
+
+.phase-badge {
+  white-space: nowrap;
+}
+
+.book-tile-score {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  margin-top: -2px;
+}
+
+/* -- live fills drawer (Blake 2026-10-04) -- */
+
+.fills-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.fills-toggle:hover,
+.fills-toggle:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+body.fills-open .fills-toggle {
+  display: none;
+}
+
+.fills-unread {
+  display: inline-block;
+  min-width: 20px;
+  margin-left: 8px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.fills-backdrop {
+  display: none;
+}
+
+.fills-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 340px;
+  max-width: 100vw;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-left: 1px solid var(--border);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform 0.2s ease, visibility 0s linear 0.2s;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+body.fills-open .fills-drawer {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.2s ease, visibility 0s;
+}
+
+.fills-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+
+.fills-head h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.fills-sub {
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin-right: auto;
+}
+
+.fills-close {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.fills-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.fills-empty {
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 12px 14px;
+}
+
+.fill-row {
+  padding: 6px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.fill-row-top,
+.fill-row-main {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.fill-time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  flex: 0 0 auto;
+}
+
+.fill-book {
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: auto;
+  min-width: 0;
+}
+
+.fill-margin {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72rem;
+}
+
+.fill-label {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: auto;
+  min-width: 0;
+}
+
+.fill-what {
+  color: var(--green);
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.fill-row.buyback .fill-what {
+  color: var(--amber);
+}
+
+.fill-row.fill-new {
+  animation: fill-flash 2.5s ease-out;
+}
+
+@keyframes fill-flash {
+  from { background: rgba(88, 166, 255, 0.35); }
+  to { background: transparent; }
+}
+
+@media (min-width: 1100px) {
+  /* Wide screens: the drawer takes a column on the right and the page
+     shrinks to make room instead of sitting underneath it. */
+  body.fills-open {
+    padding-right: 340px;
+  }
+  body.fills-open .book-tile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1800px) {
+  body.fills-open .book-tile-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1099px) {
+  /* Narrow screens and phones: full-height overlay with a dimmed backdrop. */
+  .fills-drawer {
+    width: min(380px, 100vw);
+  }
+  body.fills-open .fills-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 45;
+    background: rgba(1, 4, 9, 0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fills-drawer { transition: none; }
+  .fill-row.fill-new { animation: none; }
+}

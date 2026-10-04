@@ -67,6 +67,19 @@
     </footer>
   </div>
 
+  <button type="button" id="fills-toggle" class="fills-toggle" aria-expanded="false" aria-controls="fills-drawer">
+    Live fills<span id="fills-unread" class="fills-unread" hidden>0</span>
+  </button>
+  <div id="fills-backdrop" class="fills-backdrop"></div>
+  <aside id="fills-drawer" class="fills-drawer" aria-label="Live fills" aria-hidden="true">
+    <div class="fills-head">
+      <h2>Live fills</h2>
+      <span class="fills-sub">newest first, every live book</span>
+      <button type="button" id="fills-close" class="fills-close" aria-label="Close live fills">Close</button>
+    </div>
+    <div id="fills-list" class="fills-list"></div>
+  </aside>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <script src="app.js"></script>
 </body>
