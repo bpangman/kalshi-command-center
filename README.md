@@ -41,7 +41,10 @@ https://bpangman.github.io/kalshi-command-center/
    disappears and the exact realized number takes its place in Settled events.
 6. **Settled events** - every finished event, newest first, with the date,
    the result, how many contracts were sold, and how much premium was
-   collected.
+   collected. Click (or tap) any settled event here, or in the calendar's
+   settled popover, to open "Where each side ended up" - a row per side
+   showing sold, bought back, held at close, premium, and what the book
+   would have made if that side had won instead.
 7. **Calendar tab** - its own tab, a full month sheet (see "The Calendar
    tab" section below).
 

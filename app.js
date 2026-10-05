@@ -62,6 +62,7 @@ var state = {
   calendar: [],
   charts: {},
   tooltipTimers: {},
+  eventArchives: {}, // key -> fetched data/events/<key>.json, or "error" on a failed fetch
 };
 
 /* -- formatting helpers -- */
@@ -449,6 +450,7 @@ function currentRoute() {
 function applyRoute(route) {
   closeTileModal(); // switching tabs while a tile modal is open would otherwise leave it floating over the wrong page
   closeCalPopover(); // same, for the calendar tab's own popover
+  closeSettledModal(); // same, for the settled-event side-by-side modal
   ROUTES.forEach(function (r) {
     var page = document.getElementById("page-" + r);
     if (page) page.hidden = (r !== route);
@@ -473,6 +475,7 @@ function renderForRoute(route) {
   if (!state.feed) return;
   if (route === "home") {
     closeTileModal(); // re-render (60s refresh) closes any open tile modal rather than risk showing stale book data
+    closeSettledModal();
     renderHomeTiles();
     renderPurseChart();
     // Every live book, every sport, in the same tile grid as the sport
@@ -850,6 +853,7 @@ function renderSportPage(sport) {
   var container = document.getElementById("sport-page-" + sport);
   if (!container) return;
   closeTileModal(); // re-render (60s refresh or a tab switch) closes any open tile modal rather than risk showing stale book data
+  closeSettledModal();
   container.innerHTML = "";
 
   var h2 = document.createElement("h2");
@@ -1514,6 +1518,260 @@ function openTileModal(b) {
   closeBtn.focus();
 }
 
+/* -- settled event modal (Blake, 2026-10-05: click any settled event, on
+   any page, to see where each side's contracts ended up). Same shell
+   pattern as the tile modal above (overlay/backdrop, Close button,
+   Escape, focus restore, body.modal-open) but its own instance since the
+   content is fetched (data/events/<key>.json) instead of built from
+   already-loaded feed data. -- */
+
+var settledModal = { open: false, overlay: null, prevFocusEl: null };
+
+function onSettledModalKeydown(evt) {
+  if (evt.key === "Escape" || evt.key === "Esc") closeSettledModal();
+}
+
+function closeSettledModal() {
+  if (!settledModal.open) return;
+  if (settledModal.overlay && settledModal.overlay.parentNode) {
+    settledModal.overlay.parentNode.removeChild(settledModal.overlay);
+  }
+  settledModal.overlay = null;
+  settledModal.open = false;
+  document.body.classList.remove("modal-open");
+  document.removeEventListener("keydown", onSettledModalKeydown);
+  if (settledModal.prevFocusEl && typeof settledModal.prevFocusEl.focus === "function") {
+    try { settledModal.prevFocusEl.focus(); } catch (e) { /* element may be gone after a re-render */ }
+  }
+  settledModal.prevFocusEl = null;
+}
+
+function fetchEventArchive(key) {
+  if (state.eventArchives[key] && state.eventArchives[key] !== "error") {
+    return Promise.resolve(state.eventArchives[key]);
+  }
+  return fetchJSON("data/events/" + encodeURIComponent(key) + ".json").then(function (archive) {
+    state.eventArchives[key] = archive;
+    return archive;
+  }).catch(function (err) {
+    state.eventArchives[key] = "error";
+    throw err;
+  });
+}
+
+function buildSettledModalHeader(r) {
+  var wrap = document.createElement("div");
+
+  var h2 = document.createElement("h2");
+  h2.className = "settled-modal-title";
+  h2.textContent = r.title || r.event_ticker || "Settled event";
+  wrap.appendChild(h2);
+
+  var sub = document.createElement("p");
+  sub.className = "settled-modal-sub";
+  var subText = "Settled " + (r.settled_time ? new Date(r.settled_time).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "date unknown");
+  if (r.winner_label) subText += " - winner: " + r.winner_label;
+  sub.textContent = subText;
+  wrap.appendChild(sub);
+
+  var big = document.createElement("div");
+  big.className = "settled-modal-result";
+  big.appendChild(moneySpan(r.realized_pnl));
+  wrap.appendChild(big);
+
+  var statRow = document.createElement("div");
+  statRow.className = "stat-row";
+  statRow.appendChild(statMoneyEl("Premium", r.premium));
+  statRow.appendChild(statMoneyEl("Fees", r.fees));
+  statRow.appendChild(statEl("Contracts sold", r.contracts_sold !== null && r.contracts_sold !== undefined ? fmtNum(r.contracts_sold) : "-"));
+  statRow.appendChild(statEl("Bought back", r.contracts_bought_back !== null && r.contracts_bought_back !== undefined ? fmtNum(r.contracts_bought_back) : "-"));
+  wrap.appendChild(statRow);
+
+  return wrap;
+}
+
+function settledRowHeld(row) {
+  if (typeof row.held === "number") return row.held;
+  return (row.sell_count || 0) - (row.buy_count || 0);
+}
+
+function settledRowNetPremium(row) {
+  if (typeof row.net_premium === "number") return row.net_premium;
+  return (row.sell_cost || 0) - (row.buy_cost || 0);
+}
+
+function settledRowIsWinner(row, hasSchema2, winnerLabel) {
+  if (hasSchema2) return row.result === "yes";
+  return !!winnerLabel && row.label === winnerLabel;
+}
+
+function buildSettledSideRow(row, hasSchema2, winnerLabel) {
+  var isWinner = settledRowIsWinner(row, hasSchema2, winnerLabel);
+  var tr = document.createElement("tr");
+  if (isWinner) tr.className = "settled-side-winner";
+  tr.appendChild(td(row.label || row.ticker || ""));
+  if (hasSchema2) {
+    tr.appendChild(td(isWinner ? "WON" : "lost"));
+  }
+  tr.appendChild(td(fmtNum(row.sell_count || 0)));
+  tr.appendChild(td(fmtNum(row.buy_count || 0)));
+  tr.appendChild(td(fmtNum(settledRowHeld(row))));
+  var avgTd = document.createElement("td");
+  avgTd.textContent = (row.avg_sale_price !== null && row.avg_sale_price !== undefined) ? fmtCents(row.avg_sale_price) : "-";
+  tr.appendChild(avgTd);
+  var premTd = document.createElement("td");
+  premTd.appendChild(moneySpan(settledRowNetPremium(row)));
+  tr.appendChild(premTd);
+  if (hasSchema2) {
+    var ifWonTd = document.createElement("td");
+    if (row.book_pnl_if_won !== null && row.book_pnl_if_won !== undefined) ifWonTd.appendChild(moneySpan(row.book_pnl_if_won));
+    else ifWonTd.textContent = "-";
+    tr.appendChild(ifWonTd);
+  }
+  return tr;
+}
+
+function buildSettledSideTable(archive, r) {
+  var hasSchema2 = !!archive && (archive.archive_schema || 0) >= 2;
+  var allRows = (archive && archive.final_table) || [];
+  var sorted = allRows.slice().sort(function (a, b) { return settledRowHeld(b) - settledRowHeld(a); });
+  var shown = sorted.filter(function (row) { return (row.sell_count || 0) > 0.005 || (row.buy_count || 0) > 0.005; });
+  var hidden = sorted.filter(function (row) { return !((row.sell_count || 0) > 0.005 || (row.buy_count || 0) > 0.005); });
+
+  var wrap = document.createElement("div");
+  wrap.className = "section-block";
+
+  var heading = document.createElement("h3");
+  heading.className = "settled-modal-table-heading";
+  heading.textContent = "Where each side ended up";
+  wrap.appendChild(heading);
+
+  if (!hasSchema2) {
+    var note = document.createElement("p");
+    note.className = "settled-modal-note";
+    note.textContent = "Full side-by-side details fill in after the next data refresh.";
+    wrap.appendChild(note);
+  }
+
+  var tableWrap = document.createElement("div");
+  tableWrap.className = "table-scroll";
+  var table = document.createElement("table");
+  var thead = document.createElement("thead");
+  var headRow = document.createElement("tr");
+  var headers = ["Side"];
+  if (hasSchema2) headers.push("Result");
+  headers.push("Sold", "Bought back", "Held at close", "Avg sale", "Premium");
+  if (hasSchema2) headers.push("If this side had won");
+  headers.forEach(function (h) {
+    var th = document.createElement("th");
+    th.setAttribute("scope", "col");
+    th.textContent = h;
+    headRow.appendChild(th);
+  });
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+  var tbody = document.createElement("tbody");
+  if (!shown.length && !hidden.length) {
+    var emptyRow = document.createElement("tr");
+    var emptyCell = document.createElement("td");
+    emptyCell.colSpan = headers.length;
+    emptyCell.className = "state-msg";
+    emptyCell.textContent = "No side details recorded for this event.";
+    emptyRow.appendChild(emptyCell);
+    tbody.appendChild(emptyRow);
+  } else {
+    shown.forEach(function (row) { tbody.appendChild(buildSettledSideRow(row, hasSchema2, r.winner_label)); });
+  }
+  table.appendChild(tbody);
+  tableWrap.appendChild(table);
+  wrap.appendChild(tableWrap);
+
+  if (hidden.length) {
+    var hiddenWrap = document.createElement("div");
+    hiddenWrap.className = "table-scroll";
+    hiddenWrap.hidden = true;
+    var hiddenTable = document.createElement("table");
+    var hiddenBody = document.createElement("tbody");
+    hidden.forEach(function (row) { hiddenBody.appendChild(buildSettledSideRow(row, hasSchema2, r.winner_label)); });
+    hiddenTable.appendChild(hiddenBody);
+    hiddenWrap.appendChild(hiddenTable);
+    wrap.appendChild(hiddenWrap);
+
+    var toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "show-more-btn";
+    var moreText = hidden.length + " more side" + (hidden.length === 1 ? "" : "s") + " with nothing sold";
+    toggle.textContent = moreText;
+    toggle.addEventListener("click", function () {
+      hiddenWrap.hidden = !hiddenWrap.hidden;
+      toggle.textContent = hiddenWrap.hidden ? moreText : "Hide those " + hidden.length + " side" + (hidden.length === 1 ? "" : "s");
+    });
+    wrap.appendChild(toggle);
+  }
+
+  return wrap;
+}
+
+function renderSettledModalBody(bodyEl, r) {
+  bodyEl.innerHTML = "";
+  bodyEl.appendChild(buildSettledModalHeader(r));
+  var loading = document.createElement("p");
+  loading.className = "state-msg";
+  loading.textContent = "Loading side details...";
+  bodyEl.appendChild(loading);
+
+  fetchEventArchive(r.key).then(function (archive) {
+    if (!settledModal.open || settledModal.currentKey !== r.key) return; // closed or replaced while fetching
+    loading.remove();
+    bodyEl.appendChild(buildSettledSideTable(archive, r));
+  }).catch(function () {
+    if (!settledModal.open || settledModal.currentKey !== r.key) return;
+    loading.className = "state-msg error";
+    loading.textContent = "Side details are not available for this event.";
+  });
+}
+
+function openSettledModal(r) {
+  closeSettledModal();
+  closeTileModal();
+  settledModal.prevFocusEl = document.activeElement;
+  settledModal.currentKey = r.key;
+
+  var overlay = document.createElement("div");
+  overlay.className = "tile-modal-overlay";
+  overlay.addEventListener("click", function (evt) {
+    if (evt.target === overlay) closeSettledModal();
+  });
+
+  var dialog = document.createElement("div");
+  dialog.className = "tile-modal-dialog settled-modal-dialog";
+  dialog.setAttribute("role", "dialog");
+  dialog.setAttribute("aria-modal", "true");
+  dialog.setAttribute("aria-label", (r.title || r.event_ticker || "Settled event") + " side-by-side details");
+
+  var closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "tile-modal-close";
+  closeBtn.setAttribute("aria-label", "Close");
+  closeBtn.textContent = "Close";
+  closeBtn.addEventListener("click", closeSettledModal);
+  dialog.appendChild(closeBtn);
+
+  var body = document.createElement("div");
+  body.className = "settled-modal-body";
+  dialog.appendChild(body);
+  renderSettledModalBody(body, r);
+
+  overlay.appendChild(dialog);
+  document.body.appendChild(overlay);
+
+  settledModal.overlay = overlay;
+  settledModal.open = true;
+  document.body.classList.add("modal-open");
+  document.addEventListener("keydown", onSettledModalKeydown);
+  closeBtn.focus();
+}
+
 /* -- live book tile grid (used by sport pages and, since 2026-10-02, by
    Home too - every live book across every sport in one grid there) -- */
 
@@ -1977,11 +2235,16 @@ function buildCalSettledPopoverBody(dayResults) {
   wrap.appendChild(h3);
 
   dayResults.forEach(function (r) {
-    var p = document.createElement("p");
-    p.className = "cal-popover-line";
-    p.appendChild(document.createTextNode((r.title || r.event_ticker || "Event") + ": "));
-    p.appendChild(moneySpan(r.realized_pnl));
-    wrap.appendChild(p);
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "cal-popover-line cal-popover-settled-btn";
+    btn.appendChild(document.createTextNode((r.title || r.event_ticker || "Event") + ": "));
+    btn.appendChild(moneySpan(r.realized_pnl));
+    btn.addEventListener("click", function () {
+      closeCalPopover();
+      openSettledModal(r);
+    });
+    wrap.appendChild(btn);
   });
 
   return wrap;
@@ -2031,6 +2294,7 @@ function renderCalendarMonthList(listEl, weeks, classified, booksByKey) {
 
 function renderCalendarPage() {
   closeCalPopover(); // periodic refresh (or a month nav) rebuilds the grid - never leave a popover pointing at stale data
+  closeSettledModal();
   var grid = document.getElementById("cal-month-grid");
   var listEl = document.getElementById("cal-month-list");
   var legendEl = document.getElementById("cal-month-legend");
@@ -2222,8 +2486,19 @@ function renderSettledTable(tbody, sport) {
   }
   rows.forEach(function (r) {
     var tr2 = document.createElement("tr");
+    tr2.className = "settled-row";
+    tr2.setAttribute("role", "button");
+    tr2.setAttribute("tabindex", "0");
+    tr2.setAttribute("aria-label", "View side-by-side details for " + (r.title || r.event_ticker || "this event"));
     tr2.appendChild(td(r.settled_time ? new Date(r.settled_time).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "-"));
-    tr2.appendChild(td(r.title || r.event_ticker));
+    var eventTd = document.createElement("td");
+    eventTd.appendChild(document.createTextNode(r.title || r.event_ticker));
+    var chevron = document.createElement("span");
+    chevron.className = "settled-row-chevron";
+    chevron.setAttribute("aria-hidden", "true");
+    chevron.textContent = "›";
+    eventTd.appendChild(chevron);
+    tr2.appendChild(eventTd);
     var resultTd = document.createElement("td");
     resultTd.appendChild(moneySpan(r.realized_pnl));
     tr2.appendChild(resultTd);
@@ -2236,6 +2511,13 @@ function renderSettledTable(tbody, sport) {
       collectedTd.textContent = "-";
     }
     tr2.appendChild(collectedTd);
+    tr2.addEventListener("click", function () { openSettledModal(r); });
+    tr2.addEventListener("keydown", function (evt) {
+      if (evt.key === "Enter" || evt.key === " " || evt.key === "Spacebar") {
+        evt.preventDefault();
+        openSettledModal(r);
+      }
+    });
     tbody.appendChild(tr2);
   });
 }
