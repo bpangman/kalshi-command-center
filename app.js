@@ -2201,6 +2201,17 @@ function buildCalPopoverBody(row, booksByKey) {
       p.appendChild(document.createTextNode("Result: "));
       p.appendChild(moneySpan(res.realized_pnl));
       wrap.appendChild(p);
+      /* 2026-10-05 (Blake): the same per-side breakdown the sport pages
+         open from their settled tables, reachable from the calendar too. */
+      var sidesBtn = document.createElement("button");
+      sidesBtn.type = "button";
+      sidesBtn.className = "cal-popover-jump-btn";
+      sidesBtn.textContent = "Where each side ended up";
+      sidesBtn.addEventListener("click", function () {
+        closeCalPopover();
+        openSettledModal(res);
+      });
+      wrap.appendChild(sidesBtn);
     }
   }
 
