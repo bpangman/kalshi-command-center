@@ -380,135 +380,36 @@ h2 {
   margin: 2px 0 0;
 }
 
-.cal-span-bar {
-  display: flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 3px 10px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text);
-  background: color-mix(in srgb, var(--chip-color, var(--muted)) 18%, var(--panel));
-  border: 1px solid var(--chip-color, var(--border));
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-bottom: 2px;
-  cursor: pointer;
-}
-
 .cal-chip {
-  border-radius: 8px;
-  padding: 4px 7px;
+  display: block;
+  border-radius: 6px;
+  padding: 3px 7px;
+  margin-bottom: 4px;
   font-size: 0.72rem;
   line-height: 1.35;
   cursor: pointer;
-}
-
-.cal-chip:hover,
-.cal-chip:focus-visible,
-.cal-span-bar:hover,
-.cal-span-bar:focus-visible,
-.cal-chip-settled:hover,
-.cal-chip-settled:focus-visible {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.cal-chip.live {
-  background: color-mix(in srgb, var(--chip-color, var(--muted)) 14%, var(--panel));
-  border: 1px solid var(--chip-color, var(--border));
-}
-
-.cal-chip.watchlist {
-  background: transparent;
-  border: 1px dashed var(--border);
-  color: var(--muted);
-}
-
-.cal-chip.watchlist.not-listed {
-  border-color: color-mix(in srgb, var(--muted) 60%, transparent);
-}
-
-.cal-chip-time {
-  display: block;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  font-size: 0.68rem;
-}
-
-.cal-chip.live .cal-chip-time {
-  color: var(--chip-color, var(--text));
-}
-
-.cal-chip-title {
-  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.cal-chip-floor {
-  display: block;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-
-.cal-chip-watch-label {
-  display: block;
-  font-style: italic;
-  font-size: 0.66rem;
-  color: var(--muted);
-}
-
-.cal-chip-settled {
-  border-radius: 8px;
-  padding: 4px 7px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  background: var(--panel-2);
-  border: 1px solid var(--border);
-  cursor: pointer;
-}
-
-/* "listing?" marker: the day Kalshi is expected to open a market for an
-   event it has not listed yet - see the dotted connector overlay below. */
-.cal-listing-marker {
-  display: inline-block;
-  align-self: flex-start;
-  border-radius: 999px;
-  padding: 1px 6px;
-  font-size: 0.62rem;
-  font-style: italic;
-  color: var(--muted);
-  border: 1px dotted var(--muted);
-  cursor: pointer;
-}
-
-.cal-listing-marker:hover,
-.cal-listing-marker:focus-visible {
   color: var(--text);
+  border: 1px solid transparent;
+}
+
+/* Two colors only: amber = first posted on Kalshi, blue = the event day. */
+.cal-chip.posted {
+  background: color-mix(in srgb, var(--amber) 22%, var(--panel));
+  border-color: var(--amber);
+}
+
+.cal-chip.event {
+  background: color-mix(in srgb, var(--accent) 22%, var(--panel));
   border-color: var(--accent);
-  outline: none;
 }
 
-/* SVG overlay drawing the dotted line from a .cal-listing-marker to its
-   event's own chip - positioned absolutely over .cal-month-grid-wrap
-   (desktop only; the phone list shows the same information as plain text
-   inside the chip instead, see buildMonthChip). */
-.cal-connector-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.cal-connector-line {
-  stroke: var(--muted);
-  stroke-width: 1.5;
-  stroke-dasharray: 3 3;
-  fill: none;
+.cal-chip:hover,
+.cal-chip:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
 }
 
 /* Phones get a vertical list grouped by day instead of the 7-column grid -
@@ -545,13 +446,6 @@ h2 {
   margin: 0 0 6px;
 }
 
-.cal-list-day .cal-chip,
-.cal-list-day .cal-span-bar,
-.cal-list-day .cal-chip-settled,
-.cal-list-day .cal-listing-marker {
-  margin-bottom: 6px;
-}
-
 .cal-legend {
   display: flex;
   flex-wrap: wrap;
@@ -570,24 +464,18 @@ h2 {
   flex-shrink: 0;
 }
 
-.cal-legend-swatch.live {
-  background: rgba(88, 166, 255, 0.25);
+.cal-legend-swatch.posted {
+  background: color-mix(in srgb, var(--amber) 22%, var(--panel));
+  border: 1px solid var(--amber);
+}
+
+.cal-legend-swatch.event {
+  background: color-mix(in srgb, var(--accent) 22%, var(--panel));
   border: 1px solid var(--accent);
 }
 
-.cal-legend-swatch.watchlist {
-  background: transparent;
-  border: 1px dashed var(--muted);
-}
-
-.cal-legend-swatch.settled {
-  background: var(--panel-2);
-  border: 1px solid var(--border);
-}
-
-.cal-legend-note {
-  flex-basis: 100%;
-  margin-top: 2px;
+.cal-legend-label {
+  margin-right: 12px;
 }
 
 /* -- calendar detail popover (reuses the tile-modal overlay/backdrop, a
@@ -1434,4 +1322,49 @@ body.fills-open .fills-drawer {
 @media (prefers-reduced-motion: reduce) {
   .fills-drawer { transition: none; }
   .fill-row.fill-new { animation: none; }
+}
+
+.cal-month-cell .cal-chip {
+  margin-bottom: 0;
+}
+
+/* -- finished books waiting for Kalshi to settle -- */
+.awaiting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.awaiting-card {
+  background: var(--panel);
+  border: 1px solid var(--amber);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.awaiting-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.awaiting-badge {
+  background: color-mix(in srgb, var(--amber) 22%, var(--panel));
+  color: var(--amber);
+  border: 1px solid var(--amber);
+}
+
+.awaiting-big {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 8px 0 2px;
+}
+
+.awaiting-sub {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+tr.awaiting-row td {
+  font-style: italic;
 }

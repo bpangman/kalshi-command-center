@@ -480,6 +480,7 @@ function renderForRoute(route) {
     // own sport tag (buildBookTile's opts.showSport).
     var homeLiveBooks = (state.feed && state.feed.books) || [];
     renderLiveBookTileGrid(document.getElementById("live-books-list"), homeLiveBooks, { showSport: true });
+    renderAwaitingBlock(document.getElementById("awaiting-block"), awaitingBooks());
   } else if (route === "calendar") {
     renderCalendarPage();
   } else {
@@ -728,13 +729,35 @@ function eventPointLabel(raw) {
   return shortEventLabel(raw.key) + " " + fmtMoney(raw.realized);
 }
 
+function purseDotRadius(count) {
+  /* Four steps: one settled event that day, two, three, four or more. */
+  if (count >= 4) return 11;
+  if (count === 3) return 9;
+  if (count === 2) return 7;
+  return 4;
+}
+
 function buildPurseSeries() {
+  /* One point per Central-time day that had at least one settled event; the
+     line is the running total after that day. */
   var results = state.results.filter(function (r) { return r.settled_time; });
   results = results.slice().sort(function (a, b) { return new Date(a.settled_time) - new Date(b.settled_time); });
+  var days = [];
+  var byKey = {};
+  results.forEach(function (r) {
+    var key = centralDateKey(r.settled_time);
+    if (!byKey[key]) {
+      var p = key.split("-");
+      byKey[key] = { key: key, x: Date.UTC(+p[0], +p[1] - 1, +p[2], 18, 0, 0), total: 0, count: 0 };
+      days.push(byKey[key]);
+    }
+    byKey[key].total += (r.realized_pnl || 0);
+    byKey[key].count += 1;
+  });
   var cum = 0;
-  var solidPoints = results.map(function (r) {
-    cum += (r.realized_pnl || 0);
-    return { x: new Date(r.settled_time).getTime(), y: round2(cum), title: r.title, realized: r.realized_pnl, key: r.key };
+  var solidPoints = days.map(function (d) {
+    cum += d.total;
+    return { x: d.x, y: round2(cum), dayTotal: round2(d.total), count: d.count };
   });
   var dashedPoints = [];
   if (state.snapshots && state.snapshots.length) {
@@ -759,29 +782,24 @@ function renderPurseChart() {
     backgroundColor: "rgba(63,185,80,0.08)",
     cubicInterpolationMode: "monotone",
     tension: 0.4,
-    pointRadius: 3,
-    pointBackgroundColor: "#3fb950",
+    pointRadius: series.solidPoints.map(function (p) { return purseDotRadius(p.count); }),
+    pointHoverRadius: series.solidPoints.map(function (p) { return purseDotRadius(p.count) + 2; }),
+    pointHitRadius: 16,
+    pointBackgroundColor: series.solidPoints.map(function (p) { return p.dayTotal >= 0 ? "#3fb950" : "#f85149"; }),
+    pointBorderColor: "#0d1117",
+    pointBorderWidth: 2,
     fill: true,
   }];
-  if (series.dashedPoints.length) {
-    datasets.push({
-      label: "Realized + market-implied",
-      data: series.dashedPoints,
-      borderColor: "#8b949e",
-      borderDash: [6, 4],
-      pointRadius: 0,
-      fill: false,
-      cubicInterpolationMode: "monotone",
-      tension: 0.4,
-    });
-  }
-  createLineChart("purse-chart", datasets, function (ctx) {
+  var chart = createLineChart("purse-chart", datasets, function (ctx) {
+    /* Hover shows only that day's dollars, no event names. */
     var raw = ctx.raw || {};
-    if (raw.title) {
-      return [raw.title + ": " + fmtMoney(raw.realized), "Running total: " + fmtMoney(ctx.parsed.y)];
-    }
-    return ["Total: " + fmtMoney(ctx.parsed.y)];
-  }, undefined, undefined, eventPointLabel);
+    return fmtMoney(raw.dayTotal);
+  });
+  if (chart) {
+    chart.options.interaction = { mode: "nearest", intersect: true };
+    chart.options.plugins.tooltip.filter = function (item) { return item.datasetIndex === 0; };
+    chart.update();
+  }
 }
 
 function renderSportChart(canvasId, points, highlightIdx, xMin, xMax) {
@@ -846,6 +864,10 @@ function renderSportPage(sport) {
   container.appendChild(tileGridWrap);
   var liveBooks = ((state.feed && state.feed.books) || []).filter(function (b) { return b.sport === sport; });
   renderLiveBookTileGrid(tileGridWrap, liveBooks);
+  var awaitWrap = document.createElement("div");
+  awaitWrap.className = "section-block";
+  container.appendChild(awaitWrap);
+  renderAwaitingBlock(awaitWrap, awaitingBooks(sport));
 
   var results = state.results.filter(function (r) { return r.sport === sport; });
 
@@ -1753,196 +1775,65 @@ function buildMonthGrid(year, month) {
   return weeks;
 }
 
-function calendarChipTimeText(r) {
-  if (r.kind === "live_book") {
-    return r.start_iso ? centralTimeOnly(r.start_iso) : "in play";
-  }
-  if (r.ends_by_approx) return "time TBD";
-  if (r.ends_by_iso) return "by " + centralTimeOnly(r.ends_by_iso);
-  if (r.start_iso) return centralTimeOnly(r.start_iso);
-  return "date TBD";
+function calShortName(row) {
+  /* The short, plain name a calendar chip shows (nothing else goes on a
+     chip): NFL "Patriots at Bills", NASCAR "Vegas", golf "Bank of Utah",
+     F1 "Azerbaijan GP". */
+  var t = String(row.title || row.key || "");
+  if (row.sport === "NFL") return shortTeamNicknames(t);
+  if (row.sport === "NASCAR") return t.replace(/^NASCAR\s+/i, "").replace(/\s+winner$/i, "");
+  if (row.sport === "F1") return t.replace(/\s+Grand Prix.*$/i, " GP").replace(/\s+winner$/i, "");
+  t = t.replace(/\s+presented by.*$/i, "").replace(/\s+winner$/i, "");
+  t = t.replace(/\s+(Championship|Classic|Invitational|Open)$/i, "");
+  return t;
 }
 
 function classifyCalendarRows(weeks) {
-  /* Buckets state.calendar (and state.results for settled chips) by
-     calendar day for the currently visible month-grid. Returns:
-       dayBuckets[dayKey] = { chips: [{kind, row, connId}], markers: [{row, connId}], settled: [row, ...] }
-       spanBars = [{ r, weekIdx, startIdx, endIdx, endIso }]
-     kind is "live", "watchlist" (listed - true/undefined, backward
-     compatible with a calendar.json written before this field existed),
-     or "schedule" (listed === false - not yet on Kalshi). A "schedule"
-     row with a usable expected_listing_iso that also falls inside this
-     grid gets a shared connId linking its marker entry to its chip entry
-     - renderCalendarPage resolves those into DOM element pairs for the
-     dotted connector overlay once everything is on the page. */
+  /* Buckets state.calendar by calendar day for the visible month. Every
+     event has up to two chips: "posted" on the Central-time day it was
+     first posted on Kalshi (row.posted_iso) and "event" on the day it takes
+     place (row.event_iso, else the start / ends-by time). Returns
+     dayBuckets[dayKey] = [{type, row}, ...]. */
   var allDayKeys = {};
   weeks.forEach(function (week) {
     week.forEach(function (day) { allDayKeys[day.key] = true; });
   });
-
   var dayBuckets = {};
-  function bucket(key) {
-    if (!dayBuckets[key]) dayBuckets[key] = { chips: [], markers: [], settled: [] };
-    return dayBuckets[key];
+  function add(iso, type, row) {
+    if (!iso) return;
+    var key = centralDateKey(iso);
+    if (!allDayKeys[key]) return;
+    if (!dayBuckets[key]) dayBuckets[key] = [];
+    dayBuckets[key].push({ type: type, row: row });
   }
-
-  var spanBars = [];
-  var connIdSeq = 0;
-
+  var todayKey = (function () { var t = centralTodayYMD(); return ymdKey(t.y, t.m, t.d); })();
+  var ours = { live_book: 1, awaiting: 1, settled: 1 };
   (state.calendar || []).forEach(function (r) {
-    var isMultiDay = !!(r.start_iso && r.ends_by_iso && centralDateKey(r.start_iso) !== centralDateKey(r.ends_by_iso));
-
-    if (isMultiDay) {
-      // An approximate ends_by_iso (publish.py's exp_times_look_approximate
-      // - Kalshi's own generic per-event estimate) has been confirmed to
-      // land a day EARLY relative to the event's real final day; extending
-      // the span by one day keeps a live multi-day book from appearing to
-      // vanish a day before it is actually done.
-      var endIso = r.ends_by_iso;
-      if (r.ends_by_approx) endIso = new Date(Date.parse(r.ends_by_iso) + 86400000).toISOString();
-      var startDayEpoch = Date.parse(centralDateKey(r.start_iso) + "T00:00:00Z");
-      var endDayEpoch = Date.parse(centralDateKey(endIso) + "T00:00:00Z");
-      weeks.forEach(function (week, wi) {
-        var startIdx = -1, endIdx = -1;
-        week.forEach(function (day, di) {
-          var dayEpoch = Date.parse(day.key + "T00:00:00Z");
-          if (dayEpoch >= startDayEpoch && dayEpoch <= endDayEpoch) {
-            if (startIdx === -1) startIdx = di;
-            endIdx = di;
-          }
-        });
-        if (startIdx !== -1) spanBars.push({ r: r, weekIdx: wi, startIdx: startIdx, endIdx: endIdx, endIso: endIso });
-      });
-      return;
-    }
-
-    var dayIso = r.start_iso || r.ends_by_iso;
-    var dayKey = dayIso ? centralDateKey(dayIso) : null;
-    var kind = r.kind === "live_book" ? "live" : (r.listed === false ? "schedule" : "watchlist");
-
-    var connId = null;
-    if (kind === "schedule" && r.expected_listing_iso && dayKey) {
-      var markerKey = centralDateKey(r.expected_listing_iso);
-      if (allDayKeys[markerKey] && allDayKeys[dayKey]) {
-        connId = "c" + (connIdSeq++);
-        bucket(markerKey).markers.push({ row: r, connId: connId });
-      }
-    }
-
-    if (dayKey && allDayKeys[dayKey]) {
-      bucket(dayKey).chips.push({ kind: kind, row: r, connId: connId });
-    }
+    // Games we never traded drop off once their day has passed.
+    var evIso0 = r.event_iso || r.start_iso || r.ends_by_iso;
+    if (!ours[r.kind] && evIso0 && centralDateKey(evIso0) < todayKey) return;
+    add(r.posted_iso, "posted", r);
+    add(r.event_iso || r.start_iso || r.ends_by_iso, "event", r);
   });
-
-  var kindOrder = { live: 0, watchlist: 1, schedule: 2 };
-  Object.keys(dayBuckets).forEach(function (key) {
-    dayBuckets[key].chips.sort(function (a, b) { return (kindOrder[a.kind] || 9) - (kindOrder[b.kind] || 9); });
+  Object.keys(dayBuckets).forEach(function (k) {
+    dayBuckets[k].sort(function (a, b) {
+      if (a.type !== b.type) return a.type === "event" ? -1 : 1;
+      return calShortName(a.row).localeCompare(calShortName(b.row));
+    });
   });
-
-  (state.results || []).forEach(function (r) {
-    if (!r.settled_time) return;
-    var key = centralDateKey(r.settled_time);
-    if (allDayKeys[key]) bucket(key).settled.push(r);
-  });
-
-  return { dayBuckets: dayBuckets, spanBars: spanBars };
+  return { dayBuckets: dayBuckets };
 }
 
-function buildMonthChip(kind, row, booksByKey) {
-  var isLive = kind === "live";
-  var notListed = kind === "schedule";
+function buildMonthChip(type, row, booksByKey) {
   var chip = document.createElement("div");
-  chip.className = "cal-chip " + (isLive ? "live" : "watchlist") + (notListed ? " not-listed" : "");
+  chip.className = "cal-chip " + type;
   chip.setAttribute("role", "button");
   chip.setAttribute("tabindex", "0");
-  chip.setAttribute("aria-label", (row.sport ? row.sport + " " : "") + row.title + " details");
-  if (isLive) chip.style.setProperty("--chip-color", sportColorVar(row.sport));
-
-  var timeEl = document.createElement("span");
-  timeEl.className = "cal-chip-time";
-  timeEl.textContent = calendarChipTimeText(row);
-  chip.appendChild(timeEl);
-
-  var titleEl = document.createElement("span");
-  titleEl.className = "cal-chip-title";
-  titleEl.textContent = (row.sport ? row.sport + " - " : "") + shortTeamNicknames(row.title);
-  chip.appendChild(titleEl);
-
-  if (isLive) {
-    var book = booksByKey[row.key];
-    var floorEl = document.createElement("span");
-    floorEl.className = "cal-chip-floor " + (book ? moneyClass(book.worst_now) : "zero");
-    floorEl.textContent = (book ? fmtMoney(book.worst_now) : "-") + " floor";
-    chip.appendChild(floorEl);
-  } else {
-    var subEl = document.createElement("span");
-    subEl.className = "cal-chip-watch-label";
-    if (notListed) {
-      // Shown inline (not just in the popover/connector) so the phone
-      // list - which has no SVG connector - still carries this info.
-      subEl.textContent = row.expected_listing_iso
-        ? ("Kalshi listing expected " + centralDayLabel(row.expected_listing_iso))
-        : "not yet listed on Kalshi";
-    } else {
-      subEl.textContent = "✓ listed - not trading yet";
-    }
-    chip.appendChild(subEl);
-  }
-
+  var name = calShortName(row);
+  chip.textContent = name;
+  chip.title = name;
+  chip.setAttribute("aria-label", name + (type === "posted" ? ", first posted on Kalshi" : ", event day"));
   function activate() { openCalPopover(row, booksByKey); }
-  chip.addEventListener("click", activate);
-  chip.addEventListener("keydown", function (evt) {
-    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
-  });
-
-  return chip;
-}
-
-function buildMonthListingMarker(row, booksByKey) {
-  var marker = document.createElement("div");
-  marker.className = "cal-listing-marker";
-  marker.setAttribute("role", "button");
-  marker.setAttribute("tabindex", "0");
-  marker.textContent = "listing?";
-  var titleText = "Listing expected " + (row.expected_listing_iso ? centralDayLabel(row.expected_listing_iso) : "soon");
-  if (row.listing_rule) titleText += " (" + row.listing_rule + ")";
-  marker.title = titleText;
-  function activate() { openCalPopover(row, booksByKey); }
-  marker.addEventListener("click", activate);
-  marker.addEventListener("keydown", function (evt) {
-    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
-  });
-  return marker;
-}
-
-function buildMonthSpanBar(row, booksByKey, startIdx, endIdx) {
-  var bar = document.createElement("div");
-  bar.className = "cal-span-bar";
-  bar.setAttribute("role", "button");
-  bar.setAttribute("tabindex", "0");
-  bar.setAttribute("aria-label", row.title + " details");
-  bar.style.setProperty("--chip-color", sportColorVar(row.sport));
-  bar.style.gridColumn = (startIdx + 1) + " / " + (endIdx + 2);
-  var book = booksByKey[row.key];
-  var floorText = book ? (" - " + fmtMoney(book.worst_now) + " floor") : "";
-  bar.textContent = (row.sport || "") + " - " + shortTeamNicknames(row.title) + floorText;
-  function activate() { openCalPopover(row, booksByKey); }
-  bar.addEventListener("click", activate);
-  bar.addEventListener("keydown", function (evt) {
-    if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
-  });
-  return bar;
-}
-
-function buildMonthSettledChip(dayResults) {
-  var total = dayResults.reduce(function (s, r) { return s + (r.realized_pnl || 0); }, 0);
-  var chip = document.createElement("div");
-  chip.className = "cal-chip-settled " + moneyClass(total);
-  chip.textContent = "settled " + fmtMoney(total) + (dayResults.length > 1 ? " (" + dayResults.length + ")" : "");
-  chip.setAttribute("role", "button");
-  chip.setAttribute("tabindex", "0");
-  chip.setAttribute("aria-label", "Settled results details");
-  function activate() { openCalSettledPopover(dayResults); }
   chip.addEventListener("click", activate);
   chip.addEventListener("keydown", function (evt) {
     if (evt.key === "Enter" || evt.key === " ") { evt.preventDefault(); activate(); }
@@ -2013,6 +1904,8 @@ function openCalPopoverShell(bodyEl, ariaLabel) {
 
 function calRowSourceLabel(row) {
   if (row.kind === "live_book") return "Live book - trading now";
+  if (row.kind === "awaiting") return "Finished - waiting for Kalshi to settle";
+  if (row.kind === "settled") return "Settled";
   if (row.kind === "candidate") return "Listed on Kalshi - no book running yet";
   if (row.kind === "schedule") return row.source === "espn" ? "From the ESPN NFL schedule" : "From the schedule";
   if (row.kind === "manual") return "From Blake's calendar list";
@@ -2035,25 +1928,22 @@ function buildCalPopoverBody(row, booksByKey) {
     wrap.appendChild(p);
   }
 
-  if (row.start_iso) {
-    line("Starts " + centralDayLabel(row.start_iso) + " " + centralTimeOnly(row.start_iso) + " CT");
-  } else if (row.ends_by_iso) {
-    line((row.ends_by_approx ? "Ends by about " : "Ends by ") + centralDayLabel(row.ends_by_iso) +
-      (row.ends_by_approx ? "" : (" " + centralTimeOnly(row.ends_by_iso) + " CT")));
-  } else {
-    line("Date to be determined");
-  }
-
   var sourceLabel = calRowSourceLabel(row);
   if (sourceLabel) line(sourceLabel);
+  if (row.posted_iso) line("First posted on Kalshi " + centralDayLabel(row.posted_iso));
+  var evIso = row.event_iso || row.start_iso || row.ends_by_iso;
+  if (evIso) line("Event day " + centralDayLabel(evIso));
+  else line("Date to be determined");
 
-  if (row.listed === false) {
-    line(row.expected_listing_iso
-      ? ("Listing expected " + centralDayLabel(row.expected_listing_iso) + " (" + (row.listing_rule || "estimate") + ")")
-      : "Listing day not yet estimated");
-  } else {
-    if (row.event_ticker) line("Kalshi ticker: " + row.event_ticker);
-    line("Listed on Kalshi");
+  if (row.kind === "settled") {
+    var res = (state.results || []).filter(function (r) { return r.key === row.key; })[0];
+    if (res) {
+      var p = document.createElement("p");
+      p.className = "cal-popover-line";
+      p.appendChild(document.createTextNode("Result: "));
+      p.appendChild(moneySpan(res.realized_pnl));
+      wrap.appendChild(p);
+    }
   }
 
   if (row.kind === "live_book") {
@@ -2074,7 +1964,6 @@ function buildCalPopoverBody(row, booksByKey) {
   }
 
   if (row.note) line("Note: " + row.note);
-
   return wrap;
 }
 
@@ -2106,81 +1995,42 @@ function openCalSettledPopover(dayResults) {
   openCalPopoverShell(buildCalSettledPopoverBody(dayResults), "Settled results");
 }
 
-/* -- connector overlay: one SVG per render, dotted line from each
-   "listing?" marker to its own event chip, even when the two land in
-   different week rows (desktop grid only - window width gated by the
-   same 700px breakpoint styles.css uses to switch to the phone list) -- */
-
-function drawCalConnectors(gridWrapEl, connectorPairs) {
-  var old = gridWrapEl.querySelector(".cal-connector-overlay");
-  if (old && old.parentNode) old.parentNode.removeChild(old);
-  if (!connectorPairs.length) return;
-
-  var wrapRect = gridWrapEl.getBoundingClientRect();
-  if (!wrapRect.width || !wrapRect.height) return;
-
-  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("class", "cal-connector-overlay");
-  svg.setAttribute("width", String(wrapRect.width));
-  svg.setAttribute("height", String(wrapRect.height));
-  svg.setAttribute("viewBox", "0 0 " + wrapRect.width + " " + wrapRect.height);
-
-  connectorPairs.forEach(function (pair) {
-    var mRect = pair.markerEl.getBoundingClientRect();
-    var eRect = pair.eventEl.getBoundingClientRect();
-    var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    line.setAttribute("x1", String(mRect.left + mRect.width / 2 - wrapRect.left));
-    line.setAttribute("y1", String(mRect.top + mRect.height / 2 - wrapRect.top));
-    line.setAttribute("x2", String(eRect.left + eRect.width / 2 - wrapRect.left));
-    line.setAttribute("y2", String(eRect.top + eRect.height / 2 - wrapRect.top));
-    line.setAttribute("class", "cal-connector-line");
-    svg.appendChild(line);
-  });
-
-  gridWrapEl.appendChild(svg);
-}
-
 function renderCalendarMonthList(listEl, weeks, classified, booksByKey) {
   listEl.innerHTML = "";
+  var any = false;
   weeks.forEach(function (week) {
     week.forEach(function (day) {
       if (!day.inMonth) return;
+      var items = classified.dayBuckets[day.key];
+      if ((!items || !items.length) && !day.isToday) return; // phones skip empty days
+      any = true;
       var section = document.createElement("div");
       section.className = "cal-list-day" + (day.isToday ? " today" : "");
       var head = document.createElement("div");
       head.className = "cal-list-day-head";
       head.textContent = centralDayLabel(day.key + "T12:00:00Z") + (day.isToday ? " - today" : "");
       section.appendChild(head);
-
-      var spanHere = classified.spanBars.filter(function (sb) {
-        return sb.weekIdx === day.weekIdx && day.dayIdx >= sb.startIdx && day.dayIdx <= sb.endIdx;
-      });
-      var bucket = classified.dayBuckets[day.key];
-      var hasAnything = spanHere.length || (bucket && (bucket.chips.length || bucket.settled.length));
-
-      if (!hasAnything) {
+      if (!items || !items.length) {
         var empty = document.createElement("p");
         empty.className = "cal-day-empty";
-        empty.textContent = "Nothing scheduled";
+        empty.textContent = "Nothing today";
         section.appendChild(empty);
       } else {
-        spanHere.forEach(function (sb) {
-          section.appendChild(buildMonthSpanBar(sb.r, booksByKey, 0, 0));
-        });
-        if (bucket) {
-          bucket.markers.forEach(function (item) { section.appendChild(buildMonthListingMarker(item.row, booksByKey)); });
-          bucket.chips.forEach(function (item) { section.appendChild(buildMonthChip(item.kind, item.row, booksByKey)); });
-          if (bucket.settled.length) section.appendChild(buildMonthSettledChip(bucket.settled));
-        }
+        items.forEach(function (item) { section.appendChild(buildMonthChip(item.type, item.row, booksByKey)); });
       }
       listEl.appendChild(section);
     });
   });
+  if (!any) {
+    var none = document.createElement("p");
+    none.className = "cal-day-empty";
+    none.textContent = "Nothing this month";
+    listEl.appendChild(none);
+  }
 }
 
 function renderCalendarPage() {
   closeCalPopover(); // periodic refresh (or a month nav) rebuilds the grid - never leave a popover pointing at stale data
-  var gridWrap = document.getElementById("cal-month-grid-wrap");
   var grid = document.getElementById("cal-month-grid");
   var listEl = document.getElementById("cal-month-list");
   var legendEl = document.getElementById("cal-month-legend");
@@ -2201,7 +2051,6 @@ function renderCalendarPage() {
   labelEl.textContent = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" })
     .format(new Date(Date.UTC(calendarView.year, calendarView.month - 1, 1)));
 
-  // -- desktop month grid --
   grid.innerHTML = "";
   ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].forEach(function (lbl, i) {
     var head = document.createElement("div");
@@ -2211,78 +2060,37 @@ function renderCalendarPage() {
     grid.appendChild(head);
   });
 
-  var elementsByConnId = {};
-  var rowCursor = 2;
   weeks.forEach(function (week, wi) {
-    var barsThisWeek = classified.spanBars.filter(function (sb) { return sb.weekIdx === wi; });
-    barsThisWeek.forEach(function (sb, bi) {
-      var bar = buildMonthSpanBar(sb.r, booksByKey, sb.startIdx, sb.endIdx);
-      bar.style.gridRow = String(rowCursor + bi);
-      grid.appendChild(bar);
-    });
-    var cellsRow = rowCursor + barsThisWeek.length;
-
     week.forEach(function (day, di) {
       var cell = document.createElement("div");
       cell.className = "cal-month-cell" + (day.isToday ? " today" : "") + (day.inMonth ? "" : " outside");
       cell.style.gridColumn = String(di + 1);
-      cell.style.gridRow = String(cellsRow);
-
+      cell.style.gridRow = String(wi + 2);
       var num = document.createElement("div");
       num.className = "cal-month-cell-num";
       num.textContent = String(day.day);
       cell.appendChild(num);
-
-      var bucket = classified.dayBuckets[day.key];
-      if (bucket) {
-        bucket.markers.forEach(function (item) {
-          var markerEl = buildMonthListingMarker(item.row, booksByKey);
-          cell.appendChild(markerEl);
-          if (item.connId) {
-            elementsByConnId[item.connId] = elementsByConnId[item.connId] || {};
-            elementsByConnId[item.connId].markerEl = markerEl;
-          }
-        });
-        bucket.chips.forEach(function (item) {
-          var chipEl = buildMonthChip(item.kind, item.row, booksByKey);
-          cell.appendChild(chipEl);
-          if (item.connId) {
-            elementsByConnId[item.connId] = elementsByConnId[item.connId] || {};
-            elementsByConnId[item.connId].eventEl = chipEl;
-          }
-        });
-        if (bucket.settled.length) cell.appendChild(buildMonthSettledChip(bucket.settled));
-      }
+      (classified.dayBuckets[day.key] || []).forEach(function (item) {
+        cell.appendChild(buildMonthChip(item.type, item.row, booksByKey));
+      });
       grid.appendChild(cell);
     });
-    rowCursor = cellsRow + 1;
   });
 
-  if (window.matchMedia("(min-width: 701px)").matches) {
-    var connectorPairs = Object.keys(elementsByConnId)
-      .map(function (id) { return elementsByConnId[id]; })
-      .filter(function (pair) { return pair.markerEl && pair.eventEl; });
-    drawCalConnectors(gridWrap, connectorPairs);
-  }
-
-  // -- phone list --
   renderCalendarMonthList(listEl, weeks, classified, booksByKey);
 
-  // -- legend --
   legendEl.innerHTML = "";
   function legendItem(cls, text) {
     var sw = document.createElement("span");
     sw.className = "cal-legend-swatch " + cls;
     legendEl.appendChild(sw);
-    legendEl.appendChild(document.createTextNode(" " + text));
+    var label = document.createElement("span");
+    label.className = "cal-legend-label";
+    label.textContent = text;
+    legendEl.appendChild(label);
   }
-  legendItem("live", "Live book, floor shown");
-  legendItem("watchlist", "Watchlist - listed on Kalshi, no book running yet");
-  legendItem("settled", "Settled - result from that day");
-  var note = document.createElement("span");
-  note.className = "cal-legend-note";
-  note.textContent = "A dotted \"listing?\" marker + line points from our best guess at an event's Kalshi listing day to the event itself, for anything not listed yet.";
-  legendEl.appendChild(note);
+  legendItem("posted", "First posted on Kalshi");
+  legendItem("event", "Event day");
 }
 
 function shiftCalendarMonth(delta) {
@@ -2314,13 +2122,95 @@ function initCalendarNav() {
   });
 }
 
+/* -- finished books waiting for Kalshi to settle (feed.awaiting) -- */
+
+function awaitingBooks(sport) {
+  var list = (state.feed && state.feed.awaiting) || [];
+  return sport ? list.filter(function (b) { return b.sport === sport; }) : list;
+}
+
+function awaitingHeadline(b) {
+  var info = b.awaiting_info || {};
+  if (b.liveness === "stalled") return "Bot has not checked in - last result below is from its last good read";
+  if (info.likely_winner && info.result_if_likely_wins !== null && info.result_if_likely_wins !== undefined) {
+    return "Likely " + info.likely_winner + " (" + Math.round(info.likely_win_pct || 0) + "%)";
+  }
+  return "Waiting for Kalshi to pay out";
+}
+
+function renderAwaitingBlock(container, books) {
+  container.innerHTML = "";
+  container.hidden = !books.length;
+  if (!books.length) return;
+  var h2 = document.createElement("h2");
+  h2.textContent = "Finished, waiting for Kalshi to settle";
+  container.appendChild(h2);
+  var grid = document.createElement("div");
+  grid.className = "awaiting-grid";
+  books.forEach(function (b) {
+    var info = b.awaiting_info || {};
+    var card = document.createElement("div");
+    card.className = "awaiting-card";
+    var title = document.createElement("div");
+    title.className = "awaiting-title";
+    title.textContent = (b.sport && String(b.title).indexOf(b.sport) !== 0 ? b.sport + " - " : "") + b.title;
+    card.appendChild(title);
+    var badge = document.createElement("span");
+    badge.className = "badge awaiting-badge";
+    badge.textContent = b.liveness === "stalled" ? "Not checking in" : "Awaiting settlement";
+    card.appendChild(badge);
+    var big = document.createElement("div");
+    big.className = "awaiting-big";
+    var shown = (info.result_if_likely_wins !== null && info.result_if_likely_wins !== undefined) ? info.result_if_likely_wins : b.worst_now;
+    big.appendChild(moneySpan(shown));
+    card.appendChild(big);
+    var sub = document.createElement("div");
+    sub.className = "awaiting-sub";
+    sub.textContent = awaitingHeadline(b);
+    card.appendChild(sub);
+    var floor = document.createElement("div");
+    floor.className = "awaiting-sub";
+    floor.appendChild(document.createTextNode("Worst case "));
+    floor.appendChild(moneySpan(b.worst_now));
+    floor.appendChild(document.createTextNode(" - best case "));
+    floor.appendChild(moneySpan(b.best_now));
+    card.appendChild(floor);
+    var note = document.createElement("div");
+    note.className = "awaiting-sub";
+    note.textContent = "This is what our held positions are worth now. The exact result replaces it once Kalshi settles.";
+    card.appendChild(note);
+    grid.appendChild(card);
+  });
+  container.appendChild(grid);
+}
+
 /* -- settled table (per sport page) -- */
 
 function renderSettledTable(tbody, sport) {
   tbody.innerHTML = "";
+  awaitingBooks(sport).forEach(function (b) {
+    var info = b.awaiting_info || {};
+    var tr0 = document.createElement("tr");
+    tr0.className = "awaiting-row";
+    tr0.appendChild(td("Awaiting settlement"));
+    tr0.appendChild(td(b.title));
+    var r0 = document.createElement("td");
+    var shown = (info.result_if_likely_wins !== null && info.result_if_likely_wins !== undefined) ? info.result_if_likely_wins : b.worst_now;
+    r0.appendChild(moneySpan(shown));
+    r0.appendChild(document.createTextNode(" (" + awaitingHeadline(b).toLowerCase() + ")"));
+    tr0.appendChild(r0);
+    tr0.appendChild(td(b.contracts_sold_total !== null && b.contracts_sold_total !== undefined ? fmtNum(b.contracts_sold_total) : "-"));
+    tr0.appendChild(td(b.premium_collected_dollars !== null && b.premium_collected_dollars !== undefined ? fmtMoney(b.premium_collected_dollars) : "-"));
+    var c0 = document.createElement("td");
+    if (b.net_collected_dollars !== null && b.net_collected_dollars !== undefined) c0.appendChild(moneySpan(b.net_collected_dollars));
+    else c0.textContent = "-";
+    tr0.appendChild(c0);
+    tbody.appendChild(tr0);
+  });
   var rows = state.results.filter(function (r) { return r.sport === sport; })
     .sort(function (a, b) { return new Date(b.settled_time || 0) - new Date(a.settled_time || 0); });
   if (!rows.length) {
+    if (awaitingBooks(sport).length) return;
     var tr = document.createElement("tr");
     var cell = document.createElement("td");
     cell.colSpan = 6;

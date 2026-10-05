@@ -10,11 +10,12 @@ https://bpangman.github.io/kalshi-command-center/
    collateral in open books, total profit banked since go-live (9/15), and
    the worst-to-best range (plus expected value) across every book that is
    open right now.
-2. **Purse over time** - a running total of banked profit, one step up or
-   down for each settled event. The dashed line, when there is enough
-   history, adds back the current value of whatever is still open, so you
-   can see the difference between "money in the bank" and "money on the
-   table."
+2. **Purse over time** - the running total of banked profit. The line has
+   one dot for every day (Central time) that had at least one settled event.
+   A bigger dot means more events settled that day (4 sizes: 1, 2, 3, 4 or
+   more). Green dot = that day made money, red dot = it lost money. Tap or
+   hover a dot to see only that day's dollars, like `+$42` or `-$9`. No event
+   names are drawn on the chart; the Settled events lists have those.
 3. **One card per sport** (NFL, NASCAR, F1, Golf) - that sport's own running
    total, a quick stat line (events, total, best, worst), and a "How the
    strategy works" dropdown written in plain English.
@@ -32,13 +33,68 @@ https://bpangman.github.io/kalshi-command-center/
    causes/remedies is at play) if the bot's own activity watchdog has
    flagged itself as stuck. Both are a straight read of the bot's own
    heartbeat.json, never re-derived here.
-5. **Settled events** - every finished event, newest first, with the date,
+5. **Finished, waiting for Kalshi to settle** - a book whose event is over (or
+   whose bot was stopped) but whose markets Kalshi has not paid out yet. It is
+   not a live book any more. The card shows what our held positions are worth
+   now (the likely winner and what we make if it wins, plus worst and best
+   case) and says "Awaiting settlement". When Kalshi settles, the card
+   disappears and the exact realized number takes its place in Settled events.
+6. **Settled events** - every finished event, newest first, with the date,
    the result, how many contracts were sold, and how much premium was
    collected.
-6. **Calendar tab** - its own tab, a full month sheet (see "The Calendar
+7. **Calendar tab** - its own tab, a full month sheet (see "The Calendar
    tab" section below).
 
+## When is a book "live"?
+
+One rule decides it everywhere (`book_liveness` in `tools/feed/publish.py`).
+A book is **live** only if all of these are true: its bot checked in
+recently, Kalshi has not settled its markets, no DONE marker exists, and the
+bot's own live feed does not say the event is over. Otherwise:
+
+- **Awaiting settlement** - finished (DONE marker, or the event is over) but
+  Kalshi has not finalized the markets yet. Shown in its own section.
+- **Not checking in** - the bot went quiet while the event was unfinished.
+  Shown in the same section so a crashed bot is never hidden.
+- **Settled** - Kalshi finalized every market. The result moves to Settled
+  events. The result is only written once Kalshi has written all of our
+  settlement rows and named the winner (a golf book was once booked early
+  from half-written rows, see the 2026-10-04 note in publish.py).
+
 ## How the data gets here
+
+Since 2026-10-04 a small always-on program on Blake's Mac mini, the **feed
+daemon** (`tools/feed/daemon.py`, launchd job `com.kalshi.feed-daemon`), does
+this job. It listens to Kalshi over one websocket for the live books' prices,
+order books, our orders, fills and positions, keeps them in memory, and
+publishes from that plus the bots' own heartbeat files. It only asks Kalshi's
+normal API for the account balance and open positions (every 5 minutes), each
+unsettled event's details (every 5 minutes, and instantly when Kalshi pushes a
+change), a double-check of positions and resting orders (every 10 minutes),
+and settlements once an event is finalized. That is roughly 150 requests an
+hour, against about 1,500 an hour for the old once-a-minute job. If the
+websocket goes quiet for over a minute the daemon falls back to the normal API
+for those reads until it is back. The daemon finds new books by itself (any
+folder in `tools/fleet/state/` with a heartbeat, plus slate files and loaded
+book jobs), so a new event needs no code change. It logs to
+`tools/fleet/state/feed/daemon.log`, including the exact request count every
+hour.
+
+### Switching back to the old once-a-minute job
+
+The old job (`com.kalshi.feed`) is turned off but its file is kept at
+`tools/feed/launchd/com.kalshi.feed.plist`. To switch back:
+
+```
+launchctl bootout gui/$(id -u)/com.kalshi.feed-daemon
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.kalshi.feed.plist
+```
+
+(the `com.kalshi.feed.plist` copy in `~/Library/LaunchAgents` is the same
+file). Both programs take the same lock before publishing, so they can never
+overwrite each other even if both are on for a minute.
+
+### What the old job did (still the same data)
 
 A small Python program (`tools/feed/publish.py` in the main `kalshi` repo on
 Blake's Mac mini) runs once a minute. It reads Blake's own account (balance,
@@ -102,73 +158,25 @@ pushes right away if a new event just settled.
 
 ## The Calendar tab
 
-A month sheet (Sun-Sat, the weeks of the shown month in Central time, today
-highlighted, prev/next arrows). Every event shows as a chip:
+A month sheet (Sun-Sat, Central time, today highlighted, prev/next arrows).
+Every event of ours gets up to two small chips showing only its short name:
 
-- **LIVE** - solid, sport-colored, floor shown. A book that is actually
-  trading.
-- **SETTLED** - muted solid, +/-$ result. From `data/results.json`, any day
-  in the shown month, not just today.
-- **WATCHLIST** - dashed outline. Already listed on Kalshi (the publisher's
-  own `/events` read, or Blake's manual list), no book running yet.
-- A dashed chip can also be **not yet listed on Kalshi** (`listed: false` in
-  `data/calendar.json`) - same dashed look, plus a small dotted "listing?"
-  marker on the day the publisher expects Kalshi to open that market, with a
-  dotted line connecting the two (drawn after the page lays out, since the
-  marker and the event can land in different weeks). Once Kalshi actually
-  lists it, the next publish flips it to a normal WATCHLIST chip with no
-  marker or line.
+- **Amber chip** - the day the event was **first posted on Kalshi** (the
+  earliest order the book ever posted; if that is unknown, the day its slate
+  was armed).
+- **Blue chip** - the day the event **takes place** (kickoff, green flag, or
+  for golf the final-round day).
 
-A multi-day event (a golf tournament, Thu-Sun) spans its days as one bar
-instead of repeating per day.
+A small legend under the sheet repeats the two colors. Tap a chip for more
+detail (full title, both dates, and the result once it has settled). On a
+phone the sheet becomes a list of days, skipping days with nothing on them.
+Games we never traded drop off after their day passes; upcoming scheduled
+games (from the ESPN schedule or Blake's list) show as blue event-day chips
+with no amber chip, since nothing has been posted yet.
 
-### Where the "listing expected" day comes from
-
-`tools/feed/publish.py` (`expected_listing_info`, `LISTING_LEAD_DAYS`)
-estimates it per sport from observed Kalshi behavior, never from an API
-Kalshi exposes:
-
-| Sport | Lead time | Observed |
-|---|---|---|
-| NFL Winning Margin | ~3 days before kickoff | Sunday 10/4 games listed Thu 10/1 ~12:53pm CT; TNF 10/1 was listed by Tue 9/29 |
-| NASCAR race winner | ~7 days before the green flag | |
-| PGA/DP World/LPGA Tour winner | ~7 days before the first round | |
-| F1 race winner | ~7-10 days before the race | |
-
-Each `data/calendar.json` row carries `listed` (true/false), and when
-`listed` is false, `expected_listing_iso` and `listing_rule` (the plain-
-English sentence above, shown in the popover).
-
-### Where the not-yet-listed events themselves come from
-
-Two sources feed the publisher's own candidate-event read (Kalshi's own
-`/events`, already-listed events only):
-
-- **NFL, automatic**: `tools/feed/publish.py` pulls ESPN's public scoreboard
-  (`https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=YYYYMMDD`,
-  one call per day) for the next 30 days, cached 6 hours. No setup needed.
-- **NASCAR, PGA/DP World/LPGA, F1**: `~/.config/kalshi/CALENDAR.json` on
-  Blake's Mac mini - a plain JSON list, one object per race/tournament:
-
-  ```json
-  [
-    {
-      "title": "Charlotte Motor Speedway Winner",
-      "sport": "NASCAR",
-      "start_iso": "2026-10-11T19:30:00Z",
-      "note": "optional free text"
-    }
-  ]
-  ```
-
-  `title` and `sport` (`NFL`/`NASCAR`/`F1`/`Golf`) are required; `start_iso`
-  (UTC, the race/first-round start) is what the listing-day estimate and the
-  calendar's date math are both built from - an entry without it still
-  shows up as a watchlist row with "date TBD" but never gets a listing-day
-  marker. `note` is optional. An entry whose title already matches a live
-  book or a Kalshi-listed candidate is skipped (already covered). This file
-  is also still the general-purpose "manual calendar" it always was - any
-  free-form reminder, not just these three sports, can go in it.
+The calendar reads `data/calendar.json`; each row carries `posted_iso` and
+`event_iso`. Settled events carry their `first_posted_time` in
+`data/results.json`.
 
 ## Adding a new sport or a new book
 

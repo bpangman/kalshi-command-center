@@ -32,15 +32,17 @@
         <div class="section-block">
           <h2>Purse over time</h2>
           <div class="chart-box">
-            <canvas id="purse-chart" role="img" aria-label="Cumulative realized profit since go-live, one point per settled event"></canvas>
+            <canvas id="purse-chart" role="img" aria-label="Cumulative realized profit since go-live, one dot per day that had a settled event"></canvas>
           </div>
-          <p class="chart-caption">Solid line: profit actually banked (settled events only). Dashed line, when shown: banked profit plus a probability-weighted view of open books right now. Tap a point for details; tap elsewhere to dismiss.</p>
+          <p class="chart-caption">Solid line: profit actually banked (settled events only). One dot per day that had a settled event; a bigger dot means more events settled that day. Tap a dot for that day's dollars.</p>
         </div>
 
         <div class="section-block">
           <h2>Live books</h2>
           <div id="live-books-list" class="book-tile-grid-wrap"></div>
         </div>
+
+        <div class="section-block" id="awaiting-block" hidden></div>
       </section>
 
       <section id="page-nfl" class="page" hidden><div class="sport-page" id="sport-page-NFL"></div></section>
