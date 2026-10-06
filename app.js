@@ -1133,7 +1133,7 @@ function buildFillsSummaryLine(summary) {
 
 function buildFillsSection(b) {
   var details = document.createElement("details");
-  details.className = "fills-toggle";
+  details.className = "fills-details";
   var fills = b.recent_fills || [];
   var summary = document.createElement("summary");
   summary.textContent = "Recent fills (" + fills.length + ")";
@@ -2546,8 +2546,10 @@ function renderError(err) {
 
 var FILLS_STORE_KEY = "kcc_fills_v1";
 var FILLS_OPEN_KEY = "kcc_fills_open";
+var FILLS_SPORT_KEY = "kcc_fills_sport";
 var FILLS_MAX_ROWS = 300;
-var fillsState = { rows: [], keys: {}, open: false, unread: 0, loaded: false, newKeys: {} };
+var FILLS_SPORT_ORDER = ["NFL", "NASCAR", "F1", "Golf"];
+var fillsState = { rows: [], keys: {}, open: false, unread: 0, loaded: false, newKeys: {}, sport: "all" };
 
 function fillRowKey(bookKey, f) {
   return [bookKey, f.ts, f.label, f.count, f.price].join("|");
@@ -2682,6 +2684,61 @@ function buildFillRow(r) {
   return row;
 }
 
+function fillsSportList() {
+  var seen = {};
+  fillsState.rows.forEach(function (r) {
+    var s = r.sport;
+    if (s) seen[s] = true;
+  });
+  var ordered = [];
+  FILLS_SPORT_ORDER.forEach(function (s) {
+    if (seen[s]) {
+      ordered.push(s);
+      delete seen[s];
+    }
+  });
+  var rest = Object.keys(seen).sort();
+  return ordered.concat(rest);
+}
+
+function fillMatchesSport(r) {
+  if (fillsState.sport === "all") return true;
+  return String(r.sport || "").toLowerCase() === String(fillsState.sport).toLowerCase();
+}
+
+function renderFillsFilter() {
+  var el = document.getElementById("fills-filter");
+  if (!el) return;
+  el.textContent = "";
+  if (!fillsState.rows.length) {
+    el.hidden = true;
+    return;
+  }
+  el.hidden = false;
+  var sports = fillsSportList();
+  if (fillsState.sport !== "all" && sports.indexOf(fillsState.sport) === -1) {
+    sports.push(fillsState.sport);
+  }
+  var options = ["all"].concat(sports);
+  options.forEach(function (value) {
+    var chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "fills-chip";
+    chip.textContent = value === "all" ? "All" : value;
+    var active = fillsState.sport === value;
+    if (active) chip.classList.add("active");
+    chip.setAttribute("aria-pressed", active ? "true" : "false");
+    chip.addEventListener("click", function () {
+      fillsState.sport = value;
+      try {
+        localStorage.setItem(FILLS_SPORT_KEY, value);
+      } catch (e) { /* not persisted */ }
+      renderFillsDrawer();
+    });
+    el.appendChild(chip);
+  });
+}
+
 function updateFillsBubble() {
   var bubble = document.getElementById("fills-unread");
   if (!bubble) return;
@@ -2691,6 +2748,7 @@ function updateFillsBubble() {
 }
 
 function renderFillsDrawer() {
+  renderFillsFilter();
   var list = document.getElementById("fills-list");
   if (!list) return;
   list.textContent = "";
@@ -2700,9 +2758,17 @@ function renderFillsDrawer() {
     empty.textContent = "No fills yet. New ones show up here as they come in.";
     list.appendChild(empty);
   } else {
-    var frag = document.createDocumentFragment();
-    fillsState.rows.forEach(function (r) { frag.appendChild(buildFillRow(r)); });
-    list.appendChild(frag);
+    var filtered = fillsState.rows.filter(fillMatchesSport);
+    if (!filtered.length) {
+      var noneForSport = document.createElement("p");
+      noneForSport.className = "fills-empty";
+      noneForSport.textContent = "No " + fillsState.sport + " fills yet.";
+      list.appendChild(noneForSport);
+    } else {
+      var frag = document.createDocumentFragment();
+      filtered.forEach(function (r) { frag.appendChild(buildFillRow(r)); });
+      list.appendChild(frag);
+    }
   }
   updateFillsBubble();
 }
@@ -2738,6 +2804,7 @@ function initFillsDrawer() {
   var wasOpen = false;
   try { wasOpen = localStorage.getItem(FILLS_OPEN_KEY) === "1"; } catch (e) { wasOpen = false; }
   if (!fillsState.loaded) loadFillsFromStorage();
+  try { var s = localStorage.getItem(FILLS_SPORT_KEY); if (s) fillsState.sport = s; } catch (e) {}
   setFillsOpen(wasOpen);
   renderFillsDrawer();
 }

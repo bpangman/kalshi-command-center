@@ -769,11 +769,17 @@ tfoot td {
   cursor: pointer;
 }
 
-.fills-toggle {
+.fills-details {
   margin-top: 10px;
 }
 
-.fills-toggle .table-scroll {
+.fills-details > summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.fills-details .table-scroll {
   margin-top: 8px;
 }
 
@@ -1306,6 +1312,39 @@ body.fills-open .fills-drawer {
   font: inherit;
   font-size: 0.8rem;
   cursor: pointer;
+}
+
+.fills-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+
+.fills-chip {
+  background: var(--panel-2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.fills-chip:hover,
+.fills-chip:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.fills-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
 }
 
 .fills-list {
