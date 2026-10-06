@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T03:29:20.347209Z",
+  "generated_at": "2026-10-06T03:34:45.842891Z",
   "cash_free": 2694.21,
   "locked_collateral": 409.67,
   "books": [
@@ -17,11 +17,11 @@
       "ends_by_time": "2026-10-12T01:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-10-06T03:28:48Z",
+      "heartbeat_ts": "2026-10-06T03:34:31Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 20.7,
+      "heartbeat_age_s": 4.8,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 142.8,
+      "anchor_age_s": 201.9,
       "allocation_dollars": 0.0,
       "allocation_note": "allocator (equal_slices): 0 live book(s) (+1 pending), slice $0.00 each = $3145.21 total - safety $25.00 | fixed: W6-ATLNO=6933.80 (requested c_max $3120.21, granted $3120.21)",
       "starting_bankroll": 1972.21,
@@ -41,8 +41,8 @@
       "market_implied_outcome_now": 50.08,
       "market_implied_trend_15m": 0.0,
       "break_glass": {
-        "locked_floor": -316.76,
-        "cost": 269.72
+        "locked_floor": -65.31,
+        "cost": 397.5
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -665,9 +665,9 @@
       },
       "activity": {
         "is_live": false,
-        "market_volume_last_30m": 5866.4400000000005,
+        "market_volume_last_30m": 0.0,
         "posts_last_10m": 0,
-        "fills_last_30m": 370.0,
+        "fills_last_30m": 0.0,
         "resting_contracts": 13126.0,
         "inactive": false,
         "cause": null,
@@ -693,11 +693,11 @@
       "ends_by_time": "2026-10-11T02:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-10-06T03:28:52Z",
+      "heartbeat_ts": "2026-10-06T03:34:25Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 16.7,
+      "heartbeat_age_s": 10.8,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 50.6,
+      "anchor_age_s": 36.1,
       "allocation_dollars": null,
       "allocation_note": null,
       "starting_bankroll": 2115.84,
@@ -710,15 +710,15 @@
       "contracts_sold_total": 1731.93,
       "contracts_bought_back_total": 0.0,
       "contracts_held_total": 1731.93,
-      "contracts_resting_total": 5066.21,
+      "contracts_resting_total": 5028.21,
       "worst_now": -134.22,
       "best_now": 98.78,
-      "worst_all_resting": 8.58,
+      "worst_all_resting": 43.1,
       "market_implied_outcome_now": -39.86,
-      "market_implied_trend_15m": -0.42,
+      "market_implied_trend_15m": -0.75,
       "break_glass": {
-        "locked_floor": -313.46,
-        "cost": 267.24
+        "locked_floor": -108.96,
+        "cost": 186.36
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -726,7 +726,7 @@
           "ticker": "KXNASCARRACE-BLUCN26-AUHI",
           "label": "Austin Hill",
           "held": 233.0,
-          "resting": 17.0,
+          "resting": 16.0,
           "avg_sale_price": 0.0266,
           "market_yes_price": 0.04,
           "implied_prob": 0.0351,
@@ -791,7 +791,7 @@
           "ticker": "KXNASCARRACE-BLUCN26-BRJO",
           "label": "Brandon Jones",
           "held": 183.0,
-          "resting": 106.0,
+          "resting": 69.0,
           "avg_sale_price": 0.0257,
           "market_yes_price": 0.04,
           "implied_prob": 0.0351,
@@ -1328,10 +1328,10 @@
       },
       "activity": {
         "is_live": false,
-        "market_volume_last_30m": 349.59,
-        "posts_last_10m": 66,
-        "fills_last_30m": 86.09,
-        "resting_contracts": 4970.21,
+        "market_volume_last_30m": 117.09,
+        "posts_last_10m": 60,
+        "fills_last_30m": 10.09,
+        "resting_contracts": 4988.21,
         "inactive": false,
         "cause": null,
         "remedy": null
@@ -1341,24 +1341,32 @@
         "floor_now": null
       },
       "game_clock": null
-    },
+    }
+  ],
+  "awaiting": [
     {
       "key": "W6-ATLNO",
       "sport": "NFL",
       "event_ticker": "KXNFLWINMARGIN-26OCT05ATLNO",
       "title": "Atlanta Falcons at New Orleans Saints",
-      "phase": "In play",
-      "liveness": "live",
-      "liveness_reason": "trading",
-      "awaiting_info": null,
+      "phase": "Awaiting settlement",
+      "liveness": "awaiting_settlement",
+      "liveness_reason": "Kalshi finalized the markets; settlement rows are still being written",
+      "awaiting_info": {
+        "likely_winner": "Atlanta Falcons wins by 15+",
+        "likely_win_pct": 100.0,
+        "result_if_likely_wins": -97.5,
+        "floor": -144.97,
+        "best": 480.35
+      },
       "first_posted_time": "2026-10-05T01:52:36.658376Z",
-      "start_time": "2026-10-06T00:17:13.545759Z",
+      "start_time": "2026-10-06T00:23:14.545759Z",
       "ends_by_time": "2026-10-06T03:15:00Z",
       "ends_by_time_approx": true,
-      "in_play": true,
-      "heartbeat_ts": "2026-10-06T03:28:07Z",
+      "in_play": false,
+      "heartbeat_ts": "2026-10-06T03:34:08Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 61.7,
+      "heartbeat_age_s": 27.8,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 8819.9,
       "allocation_dollars": 6008.86,
@@ -1377,12 +1385,9 @@
       "worst_now": -144.97,
       "best_now": 480.35,
       "worst_all_resting": null,
-      "market_implied_outcome_now": -97.5,
-      "market_implied_trend_15m": 4.7,
-      "break_glass": {
-        "locked_floor": -146.97,
-        "cost": 49.47
-      },
+      "market_implied_outcome_now": -6.17,
+      "market_implied_trend_15m": 91.33,
+      "break_glass": null,
       "is_deci_cent": false,
       "outcomes": [
         {
@@ -1391,12 +1396,12 @@
           "held": 1643.05,
           "resting": 0.0,
           "avg_sale_price": 0.1737,
-          "market_yes_price": 0.14,
-          "implied_prob": 0.1167,
+          "market_yes_price": 0.0,
+          "implied_prob": 0.0,
           "outcome_now": -144.97,
-          "win_pct": 12.5,
-          "win_src": "bot",
-          "settled": null
+          "win_pct": 0.0,
+          "win_src": "settled",
+          "settled": "no"
         },
         {
           "ticker": "KXNFLWINMARGIN-26OCT05ATLNO-ATL1TO6",
@@ -1404,12 +1409,12 @@
           "held": 1610.0,
           "resting": 0.0,
           "avg_sale_price": 0.21,
-          "market_yes_price": 0.03,
-          "implied_prob": 0.025,
+          "market_yes_price": 0.0,
+          "implied_prob": 0.0,
           "outcome_now": -111.92,
-          "win_pct": 1.5,
-          "win_src": "bot",
-          "settled": null
+          "win_pct": 0.0,
+          "win_src": "settled",
+          "settled": "no"
         },
         {
           "ticker": "KXNFLWINMARGIN-26OCT05ATLNO-ATL15PLUS",
@@ -1418,11 +1423,11 @@
           "resting": 0.0,
           "avg_sale_price": 0.1222,
           "market_yes_price": 1.0,
-          "implied_prob": 0.8333,
+          "implied_prob": 0.1667,
           "outcome_now": -97.5,
-          "win_pct": 99.2,
-          "win_src": "bot",
-          "settled": null
+          "win_pct": 100.0,
+          "win_src": "settled",
+          "settled": "yes"
         },
         {
           "ticker": "KXNFLWINMARGIN-26OCT05ATLNO-NO1TO6",
@@ -1430,12 +1435,12 @@
           "held": 1595.49,
           "resting": 0.0,
           "avg_sale_price": 0.2089,
-          "market_yes_price": 0.01,
-          "implied_prob": 0.0083,
+          "market_yes_price": 0.0,
+          "implied_prob": 0.0,
           "outcome_now": -97.41,
           "win_pct": 0.0,
-          "win_src": "bot",
-          "settled": null
+          "win_src": "settled",
+          "settled": "no"
         },
         {
           "ticker": "KXNFLWINMARGIN-26OCT05ATLNO-NO7TO14",
@@ -1443,12 +1448,12 @@
           "held": 1563.65,
           "resting": 0.0,
           "avg_sale_price": 0.1697,
-          "market_yes_price": 0.01,
-          "implied_prob": 0.0083,
+          "market_yes_price": 0.0,
+          "implied_prob": 0.0,
           "outcome_now": -65.57,
           "win_pct": 0.0,
-          "win_src": "bot",
-          "settled": null
+          "win_src": "settled",
+          "settled": "no"
         },
         {
           "ticker": "KXNFLWINMARGIN-26OCT05ATLNO-NO15PLUS",
@@ -1456,26 +1461,18 @@
           "held": 1017.73,
           "resting": 0.0,
           "avg_sale_price": 0.1126,
-          "market_yes_price": 0.01,
-          "implied_prob": 0.0083,
+          "market_yes_price": 0.0,
+          "implied_prob": 0.0,
           "outcome_now": 480.35,
-          "win_pct": 0.5,
-          "win_src": "bot",
-          "settled": null
+          "win_pct": 0.0,
+          "win_src": "settled",
+          "settled": "no"
         }
       ],
       "leaders": [
         {
           "label": "Atlanta Falcons wins by 15+",
-          "win_pct": 99.2
-        },
-        {
-          "label": "Atlanta Falcons wins by 7-14",
-          "win_pct": 12.5
-        },
-        {
-          "label": "Atlanta Falcons wins by 1-6",
-          "win_pct": 1.5
+          "win_pct": 100.0
         }
       ],
       "last_fill_ts": "2026-10-06T03:16:21.288905Z",
@@ -1579,156 +1576,6 @@
           "fair": 0.0966,
           "fair_source": "event_state",
           "margin_cents": 11.34
-        },
-        {
-          "ts": "2026-10-06T02:09:15.826999Z",
-          "label": "Atlanta Falcons wins by 1-6",
-          "side": "buyback",
-          "count": 5.0,
-          "price": 0.21,
-          "fair": 0.0966,
-          "fair_source": "event_state",
-          "margin_cents": -11.34
-        },
-        {
-          "ts": "2026-10-06T01:50:50.404224Z",
-          "label": "Atlanta Falcons wins by 15+",
-          "side": "sell",
-          "count": 7.55,
-          "price": 0.4,
-          "fair": 0.4488,
-          "fair_source": "event_state",
-          "margin_cents": -4.88
-        },
-        {
-          "ts": "2026-10-06T01:48:12.422353Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 26.0,
-          "price": 0.36,
-          "fair": 0.4003,
-          "fair_source": "event_state",
-          "margin_cents": -4.03
-        },
-        {
-          "ts": "2026-10-06T01:48:10.99254Z",
-          "label": "Atlanta Falcons wins by 15+",
-          "side": "sell",
-          "count": 2.39,
-          "price": 0.4,
-          "fair": 0.4474,
-          "fair_source": "event_state",
-          "margin_cents": -4.74
-        },
-        {
-          "ts": "2026-10-06T01:47:43.90502Z",
-          "label": "Atlanta Falcons wins by 15+",
-          "side": "sell",
-          "count": 14.0,
-          "price": 0.4,
-          "fair": 0.4474,
-          "fair_source": "event_state",
-          "margin_cents": -4.74
-        },
-        {
-          "ts": "2026-10-06T01:43:28.35725Z",
-          "label": "New Orleans Saints wins by 1-6",
-          "side": "sell",
-          "count": 107.97,
-          "price": 0.1,
-          "fair": 0.09,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 1.0
-        },
-        {
-          "ts": "2026-10-06T01:40:38.269424Z",
-          "label": "New Orleans Saints wins by 1-6",
-          "side": "sell",
-          "count": 18.03,
-          "price": 0.1,
-          "fair": 0.07,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 3.0
-        },
-        {
-          "ts": "2026-10-06T01:39:10.657278Z",
-          "label": "Atlanta Falcons wins by 1-6",
-          "side": "sell",
-          "count": 103.0,
-          "price": 0.17,
-          "fair": 0.18,
-          "fair_source": "kalshi_mid",
-          "margin_cents": -1.0
-        },
-        {
-          "ts": "2026-10-06T01:29:33.144306Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 29.0,
-          "price": 0.3,
-          "fair": 0.28,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
-        },
-        {
-          "ts": "2026-10-06T01:28:31.952907Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 11.0,
-          "price": 0.3,
-          "fair": 0.28,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
-        },
-        {
-          "ts": "2026-10-06T01:24:25.318965Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 18.82,
-          "price": 0.3,
-          "fair": 0.28,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
-        },
-        {
-          "ts": "2026-10-06T01:24:21.650508Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 11.18,
-          "price": 0.3,
-          "fair": 0.28,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
-        },
-        {
-          "ts": "2026-10-06T01:21:32.41595Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 19.56,
-          "price": 0.27,
-          "fair": 0.25,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
-        },
-        {
-          "ts": "2026-10-06T01:21:28.610953Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 36.72,
-          "price": 0.27,
-          "fair": 0.25,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
-        },
-        {
-          "ts": "2026-10-06T01:21:00.264702Z",
-          "label": "Atlanta Falcons wins by 7-14",
-          "side": "sell",
-          "count": 3.72,
-          "price": 0.27,
-          "fair": 0.25,
-          "fair_source": "kalshi_mid",
-          "margin_cents": 2.0
         }
       ],
       "fills_summary": {
@@ -1750,27 +1597,9 @@
         "active": true,
         "floor_now": -144.96720000000005
       },
-      "game_clock": {
-        "period": 4,
-        "clock": "1:18",
-        "time_remaining_s": 78.0,
-        "laps_remaining": null,
-        "laps_total": null,
-        "round": null,
-        "holes_left": null,
-        "tournament_progress": null,
-        "progress": 0.9783333333333333,
-        "home_score": 17,
-        "away_score": 45,
-        "home_code": "NO",
-        "away_code": "ATL",
-        "possession_code": "NO",
-        "final": false,
-        "stale": false
-      }
+      "game_clock": null
     }
   ],
-  "awaiting": [],
   "results_summary": {
     "total_realized": 1070.29,
     "by_sport": {
