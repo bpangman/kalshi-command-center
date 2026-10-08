@@ -28,6 +28,9 @@ body {
   font-size: 15px;
   line-height: 1.45;
   padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* Safety net: nothing may widen the page past the phone screen. Set on
+     body only (not html) so the sticky header keeps working. */
+  overflow-x: hidden;
 }
 
 a {
@@ -827,7 +830,11 @@ tfoot td {
 
 .book-tile-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  /* minmax(0, ...) not plain 1fr: with an auto minimum the single phone
+     column grows to the tile's intrinsic width, which the outcome rows'
+     fr tracks inflate to ~480px, and the whole page scrolled sideways
+     (Blake 2026-10-08). */
+  grid-template-columns: minmax(0, 1fr);
   gap: 12px;
   align-items: start;
 }
@@ -857,6 +864,7 @@ tfoot td {
   text-align: left;
   height: auto;
   min-height: 0;
+  min-width: 0;
 }
 
 .book-tile:hover,

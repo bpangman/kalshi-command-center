@@ -1959,6 +1959,11 @@ function buildBookTile(b, opts) {
   return tile;
 }
 
+function bookStartMs(b) {
+  var t = b && b.start_time ? new Date(b.start_time).getTime() : NaN;
+  return isNaN(t) ? Infinity : t;
+}
+
 function renderLiveBookTileGrid(container, books, opts) {
   container.innerHTML = "";
   if (!books.length) {
@@ -1970,7 +1975,11 @@ function renderLiveBookTileGrid(container, books, opts) {
   }
   var grid = document.createElement("div");
   grid.className = "book-tile-grid";
-  books.forEach(function (b) {
+  // Soonest event first (Blake 2026-10-08); books with no start time go last.
+  var ordered = books.slice().sort(function (a, c) {
+    return (bookStartMs(a) - bookStartMs(c)) || String(a.title || "").localeCompare(String(c.title || ""));
+  });
+  ordered.forEach(function (b) {
     grid.appendChild(buildBookTile(b, opts));
   });
   container.appendChild(grid);
