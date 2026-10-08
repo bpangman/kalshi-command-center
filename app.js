@@ -7,8 +7,8 @@
    #calendar) so back/forward and bookmarks work. Plain hyphens only, no
    em/en dashes, anywhere in this file including comments and strings. */
 
-var SPORTS = ["NFL", "NASCAR", "F1", "Golf"];
-var ROUTES = ["home", "nfl", "nascar", "f1", "golf", "calendar"];
+var SPORTS = ["NFL", "NASCAR", "F1", "Golf", "UFC"];
+var ROUTES = ["home", "nfl", "nascar", "f1", "golf", "ufc", "calendar"];
 var ROUTE_TO_SPORT = {};
 SPORTS.forEach(function (s) { ROUTE_TO_SPORT[s.toLowerCase()] = s; });
 
@@ -52,6 +52,13 @@ var STRATEGY_BULLETS = {
     "Buybacks are a last resort, in-play only, when a leader is badly over-leveraged and pulling away.",
     "In the final round we only repair toward breakeven if the likely outcomes would otherwise lose money; a winning book is left alone.",
     "Presidents Cup Overall Points Leader is live through the final round.",
+  ],
+  UFC: [
+    "Every fight becomes seven small markets: how it ends. Each fighter can win by KO/TKO, by submission, or by decision, plus one Draw/No Contest market shared by both.",
+    "We sell NO on every one of those seven outcomes, priced off Kalshi's own fight-winner odds times each fighter's own history of how they usually win (or lose), blended with what the crowd is already paying.",
+    "Only one outcome can actually happen, so Kalshi only holds our money against the single worst outcome, not all seven added together.",
+    "We only trade before the walkout - once the fight starts, every resting order is pulled. There is no in-fight trading in this build.",
+    "Each fight is capped at a small fixed dollar loss no matter which way it goes, set before a single order ever posts.",
   ],
 };
 
@@ -1341,9 +1348,18 @@ function buildBookCard(b, opts) {
   var dot = document.createElement("span");
   dot.className = "hb-dot " + hbDotClass(b);
   dot.setAttribute("aria-label", "heartbeat health: " + hbDotClass(b));
+  var titleWrap = document.createElement("span");
+  titleWrap.className = "book-head-title-wrap";
   var title = document.createElement("span");
   title.className = "title";
   title.textContent = b.title;
+  titleWrap.appendChild(title);
+  if (b.subtitle) {
+    var cardSubtitle = document.createElement("span");
+    cardSubtitle.className = "book-tile-subtitle";
+    cardSubtitle.textContent = b.subtitle;
+    titleWrap.appendChild(cardSubtitle);
+  }
   var sportTag = document.createElement("span");
   sportTag.className = "sport-tag";
   sportTag.textContent = b.sport;
@@ -1351,7 +1367,7 @@ function buildBookCard(b, opts) {
   phase.className = "phase-badge " + (b.in_play ? "in-play" : "pre-game");
   phase.textContent = phaseBadgeText(b);
   head.appendChild(dot);
-  head.appendChild(title);
+  head.appendChild(titleWrap);
   head.appendChild(sportTag);
   head.appendChild(phase);
 
@@ -1824,10 +1840,21 @@ function buildBookTile(b, opts) {
   dot.className = "hb-dot " + hbDotClass(b);
   dot.setAttribute("aria-label", "heartbeat health: " + hbDotClass(b));
   row1.appendChild(dot);
+  var titleWrap = document.createElement("span");
+  titleWrap.className = "book-tile-title-wrap";
   var titleSpan = document.createElement("span");
   titleSpan.className = "book-tile-title";
   titleSpan.textContent = shortTeamNicknames(b.title);
-  row1.appendChild(titleSpan);
+  titleWrap.appendChild(titleSpan);
+  if (b.subtitle) {
+    // Short secondary label (UFC: "Method of victory") - only the sports
+    // whose data has one show it; everyone else's tile is unchanged.
+    var subtitleSpan = document.createElement("span");
+    subtitleSpan.className = "book-tile-subtitle";
+    subtitleSpan.textContent = b.subtitle;
+    titleWrap.appendChild(subtitleSpan);
+  }
+  row1.appendChild(titleWrap);
   if (opts.showSport) {
     // Home mixes every sport's live books in one grid (Blake, 2026-10-02),
     // so each tile needs its own sport tag - sport pages skip this since
@@ -1974,7 +2001,7 @@ function renderLiveBookTileGrid(container, books, opts) {
    classification pass (classifyCalendarRows) so there is a single source
    of truth; clicking any chip/marker/bar opens the same detail popover. */
 
-var SPORT_COLOR_VAR = { NFL: "--sport-nfl", NASCAR: "--sport-nascar", F1: "--sport-f1", Golf: "--sport-golf" };
+var SPORT_COLOR_VAR = { NFL: "--sport-nfl", NASCAR: "--sport-nascar", F1: "--sport-f1", Golf: "--sport-golf", UFC: "--sport-ufc" };
 var SPORT_TO_ROUTE = {};
 Object.keys(ROUTE_TO_SPORT).forEach(function (route) { SPORT_TO_ROUTE[ROUTE_TO_SPORT[route]] = route; });
 
@@ -2548,7 +2575,7 @@ var FILLS_STORE_KEY = "kcc_fills_v1";
 var FILLS_OPEN_KEY = "kcc_fills_open";
 var FILLS_SPORT_KEY = "kcc_fills_sport";
 var FILLS_MAX_ROWS = 300;
-var FILLS_SPORT_ORDER = ["NFL", "NASCAR", "F1", "Golf"];
+var FILLS_SPORT_ORDER = ["NFL", "NASCAR", "F1", "Golf", "UFC"];
 var fillsState = { rows: [], keys: {}, open: false, unread: 0, loaded: false, newKeys: {}, sport: "all" };
 
 function fillRowKey(bookKey, f) {
