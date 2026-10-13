@@ -734,8 +734,34 @@ function createLineChart(canvasId, datasets, tooltipLabelFn, xMin, xMax, labelFo
   return chart;
 }
 
+function nflSlotLabel(startIso) {
+  /* Blake 2026-10-12: NFL chart dots carry only the primetime slot.
+     Kickoff in Central time: Thursday = TNF, Monday = MNF, Sunday at or
+     after 6pm = SNF. Every other game (noon/late Sunday, London) is a
+     plain dot with no label. */
+  if (!startIso) return null;
+  var d = new Date(startIso);
+  if (isNaN(d.getTime())) return null;
+  var parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", hour12: false }).formatToParts(d);
+  var wd = "", hr = 0;
+  parts.forEach(function (p) {
+    if (p.type === "weekday") wd = p.value;
+    if (p.type === "hour") hr = parseInt(p.value, 10) % 24;
+  });
+  if (wd === "Thu") return "TNF";
+  if (wd === "Mon") return "MNF";
+  if (wd === "Sun" && hr >= 18) return "SNF";
+  return null;
+}
+
 function eventPointLabel(raw) {
   if (!raw || raw.synthetic || raw.key === undefined || raw.key === null) return null;
+  if (raw.sport === "NFL") {
+    var slot = nflSlotLabel(raw.start_time);
+    if (slot) return slot;
+    var m = /^(MNF|TNF|SNF)\b/.exec(String(raw.key));  /* early books keyed by slot, no start time */
+    return m ? m[1] : null;
+  }
   return shortEventLabel(raw.key) + " " + fmtMoney(raw.realized);
 }
 
@@ -893,7 +919,7 @@ function renderSportPage(sport) {
     var cum = 0;
     var points = sorted.map(function (r) {
       cum += (r.realized_pnl || 0);
-      return { x: r.settled_time ? new Date(r.settled_time).getTime() : Date.now(), y: round2(cum), title: r.title, realized: r.realized_pnl, key: r.key };
+      return { x: r.settled_time ? new Date(r.settled_time).getTime() : Date.now(), y: round2(cum), title: r.title, realized: r.realized_pnl, key: r.key, sport: r.sport, start_time: r.start_time };
     });
     var maxIdx = 0;
     points.forEach(function (pt, i) {
