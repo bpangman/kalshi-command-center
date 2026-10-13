@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T03:12:45.931370Z",
+  "generated_at": "2026-10-13T03:14:56.467916Z",
   "cash_free": 3753.2,
   "locked_collateral": -24.34,
   "books": [
@@ -14,15 +14,15 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-10-12T02:47:42.433037Z",
-      "start_time": "2026-10-13T00:14:59.791653Z",
+      "start_time": "2026-10-13T00:15:00.429972Z",
       "ends_by_time": "2026-10-13T03:15:00Z",
       "ends_by_time_approx": true,
       "in_play": true,
-      "heartbeat_ts": "2026-10-13T03:12:32Z",
+      "heartbeat_ts": "2026-10-13T03:14:39Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 9.2,
+      "heartbeat_age_s": 12.7,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 3045.8,
+      "anchor_age_s": 3172.2,
       "allocation_dollars": 2500.0,
       "allocation_note": "allocator: W7-BUFLAR fixed at 2500.00 (ALLOC_FIXED.json), granted c_max $1125.00",
       "starting_bankroll": 3732.72,
@@ -39,11 +39,11 @@
       "worst_now": 23.81,
       "best_now": 295.93,
       "worst_all_resting": 24.42,
-      "market_implied_outcome_now": 29.83,
-      "market_implied_trend_15m": 7.32,
+      "market_implied_outcome_now": 29.86,
+      "market_implied_trend_15m": 1.04,
       "break_glass": {
-        "locked_floor": -10.58,
-        "cost": 181.37
+        "locked_floor": -17.77,
+        "cost": 186.92
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -56,7 +56,7 @@
           "market_yes_price": 0.18,
           "implied_prob": 0.1622,
           "outcome_now": 23.81,
-          "win_pct": 18.0,
+          "win_pct": 30.9,
           "win_src": "bot",
           "settled": null
         },
@@ -69,7 +69,7 @@
           "market_yes_price": 0.03,
           "implied_prob": 0.027,
           "outcome_now": 24.51,
-          "win_pct": 1.5,
+          "win_pct": 2.5,
           "win_src": "bot",
           "settled": null
         },
@@ -82,7 +82,7 @@
           "market_yes_price": 0.33,
           "implied_prob": 0.2973,
           "outcome_now": 24.8,
-          "win_pct": 17.0,
+          "win_pct": 15.5,
           "win_src": "bot",
           "settled": null
         },
@@ -95,7 +95,7 @@
           "market_yes_price": 0.06,
           "implied_prob": 0.0541,
           "outcome_now": 24.93,
-          "win_pct": 2.8,
+          "win_pct": 2.7,
           "win_src": "bot",
           "settled": null
         },
@@ -108,7 +108,7 @@
           "market_yes_price": 0.48,
           "implied_prob": 0.4324,
           "outcome_now": 35.01,
-          "win_pct": 40.8,
+          "win_pct": 29.0,
           "win_src": "bot",
           "settled": null
         },
@@ -128,16 +128,16 @@
       ],
       "leaders": [
         {
-          "label": "Buffalo Bills wins by 1-6",
-          "win_pct": 40.8
+          "label": "Buffalo Bills wins by 7-14",
+          "win_pct": 30.9
         },
         {
-          "label": "Buffalo Bills wins by 7-14",
-          "win_pct": 18.0
+          "label": "Buffalo Bills wins by 1-6",
+          "win_pct": 29.0
         },
         {
           "label": "Los Angeles Rams wins by 1-6",
-          "win_pct": 17.0
+          "win_pct": 15.5
         }
       ],
       "last_fill_ts": "2026-10-13T03:03:33.185955Z",
@@ -400,13 +400,16 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 20523.440000000006,
-        "posts_last_10m": 2,
+        "market_volume_last_30m": 21692.760000000002,
+        "posts_last_10m": 0,
         "fills_last_30m": 54.0,
         "resting_contracts": 321.5,
-        "inactive": false,
-        "cause": null,
-        "remedy": null
+        "inactive": true,
+        "cause": "room_zero",
+        "remedy": {
+          "action": "raise_slack",
+          "ingame_balance_slack_dollars": 106.25
+        }
       },
       "floor_mode": {
         "active": true,
@@ -414,14 +417,14 @@
       },
       "game_clock": {
         "period": 4,
-        "clock": "2:00",
-        "time_remaining_s": 120.0,
+        "clock": "1:44",
+        "time_remaining_s": 104.0,
         "laps_remaining": null,
         "laps_total": null,
         "round": null,
         "holes_left": null,
         "tournament_progress": null,
-        "progress": 0.9666666666666667,
+        "progress": 0.9711111111111111,
         "home_score": 27,
         "away_score": 27,
         "home_code": "LAR",
