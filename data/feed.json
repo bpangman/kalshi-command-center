@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T01:47:51.101418Z",
+  "generated_at": "2026-10-13T01:50:01.500263Z",
   "cash_free": 3672.54,
   "locked_collateral": 56.32,
   "books": [
@@ -14,15 +14,15 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-10-12T02:47:42.433037Z",
-      "start_time": "2026-10-13T00:15:02.262789Z",
+      "start_time": "2026-10-13T00:14:59.466834Z",
       "ends_by_time": "2026-10-13T03:15:00Z",
       "ends_by_time_approx": true,
       "in_play": true,
-      "heartbeat_ts": "2026-10-13T01:47:46Z",
+      "heartbeat_ts": "2026-10-13T01:49:49Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 0.6,
+      "heartbeat_age_s": 8.0,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 23.4,
+      "anchor_age_s": 21.9,
       "allocation_dollars": 2500.0,
       "allocation_note": "allocator: W7-BUFLAR fixed at 2500.00 (ALLOC_FIXED.json), granted c_max $1125.00",
       "starting_bankroll": 3732.72,
@@ -40,10 +40,10 @@
       "best_now": 859.28,
       "worst_all_resting": 25.88,
       "market_implied_outcome_now": -27.81,
-      "market_implied_trend_15m": 5.3,
+      "market_implied_trend_15m": 5.58,
       "break_glass": {
-        "locked_floor": -147.76,
-        "cost": 247.66
+        "locked_floor": -196.42,
+        "cost": 352.0
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -53,10 +53,10 @@
           "held": 2064.1,
           "resting": 0.0,
           "avg_sale_price": 0.0963,
-          "market_yes_price": 0.11,
-          "implied_prob": 0.0965,
+          "market_yes_price": 0.09,
+          "implied_prob": 0.0776,
           "outcome_now": -56.86,
-          "win_pct": 13.5,
+          "win_pct": 11.5,
           "win_src": "bot",
           "settled": null
         },
@@ -66,10 +66,10 @@
           "held": 2063.76,
           "resting": 0.0,
           "avg_sale_price": 0.2472,
-          "market_yes_price": 0.3,
-          "implied_prob": 0.2632,
+          "market_yes_price": 0.34,
+          "implied_prob": 0.2931,
           "outcome_now": -56.52,
-          "win_pct": 21.4,
+          "win_pct": 23.9,
           "win_src": "bot",
           "settled": null
         },
@@ -80,7 +80,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.2052,
           "market_yes_price": 0.14,
-          "implied_prob": 0.1228,
+          "implied_prob": 0.1207,
           "outcome_now": -55.44,
           "win_pct": 10.0,
           "win_src": "bot",
@@ -92,10 +92,10 @@
           "held": 2044.25,
           "resting": 0.0,
           "avg_sale_price": 0.1346,
-          "market_yes_price": 0.2,
-          "implied_prob": 0.1754,
+          "market_yes_price": 0.26,
+          "implied_prob": 0.2241,
           "outcome_now": -37.01,
-          "win_pct": 24.2,
+          "win_pct": 24.5,
           "win_src": "bot",
           "settled": null
         },
@@ -105,10 +105,10 @@
           "held": 2043.84,
           "resting": 0.0,
           "avg_sale_price": 0.2031,
-          "market_yes_price": 0.34,
-          "implied_prob": 0.2982,
+          "market_yes_price": 0.29,
+          "implied_prob": 0.25,
           "outcome_now": -36.6,
-          "win_pct": 26.3,
+          "win_pct": 26.5,
           "win_src": "bot",
           "settled": null
         },
@@ -118,8 +118,8 @@
           "held": 1147.96,
           "resting": 821.23,
           "avg_sale_price": 0.1613,
-          "market_yes_price": 0.05,
-          "implied_prob": 0.0439,
+          "market_yes_price": 0.04,
+          "implied_prob": 0.0345,
           "outcome_now": 859.28,
           "win_pct": 3.0,
           "win_src": "bot",
@@ -129,15 +129,15 @@
       "leaders": [
         {
           "label": "Buffalo Bills wins by 1-6",
-          "win_pct": 26.3
+          "win_pct": 26.5
         },
         {
           "label": "Buffalo Bills wins by 7-14",
-          "win_pct": 24.2
+          "win_pct": 24.5
         },
         {
           "label": "Los Angeles Rams wins by 1-6",
-          "win_pct": 21.4
+          "win_pct": 23.9
         }
       ],
       "last_fill_ts": "2026-10-13T01:37:40.21034Z",
@@ -400,21 +400,24 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 16149.289999999999,
-        "posts_last_10m": 1,
-        "fills_last_30m": 73.2,
+        "market_volume_last_30m": 16230.299999999997,
+        "posts_last_10m": 0,
+        "fills_last_30m": 57.1,
         "resting_contracts": 821.23,
-        "inactive": false,
-        "cause": null,
-        "remedy": null
+        "inactive": true,
+        "cause": "room_zero",
+        "remedy": {
+          "action": "raise_slack",
+          "ingame_balance_slack_dollars": 106.25
+        }
       },
       "floor_mode": {
         "active": false,
         "floor_now": null
       },
       "game_clock": {
-        "period": 2,
-        "clock": "0:00",
+        "period": 3,
+        "clock": "15:00",
         "time_remaining_s": 1800.0,
         "laps_remaining": null,
         "laps_total": null,
