@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T02:52:45.391910Z",
+  "generated_at": "2026-10-15T02:55:20.155148Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,7 +16,7 @@
           "Sold 10,294 contracts so far; 43,276 more resting on the book. Premium collected $1,156.",
           "Worst line is -$1,244. The glide target right now is -$800, so it is $444 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 5m ago). Covers 37 of 37 drivers.",
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 37 drivers.",
           "New posts are on hold: free cash is $142 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T02:52:03Z"
+    "ts": "2026-10-15T02:55:04Z"
   },
   "posts": [
     {
@@ -241,6 +241,16 @@
       "text": "The bot restarted. It re-reads its orders from Kalshi and adopts what is already resting instead of posting again.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792032904796-1285c9",
+      "ts": "2026-10-15T02:55:04Z",
+      "book": "PHX-CUP",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet: nothing filled or changed in 15 min. 43,276 resting across 6 sides. Next scheduled step: Checkpoint T-2880 in 1d 16h. The bot checks every 30s.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -297,6 +307,24 @@
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
+    },
+    {
+      "id": "1792032851287-d035c5",
+      "ts": "2026-10-15T02:54:11Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 6 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792032851288-91a0b3",
+      "ts": "2026-10-15T02:54:11Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): worst -1243.95 vs floor -825.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
