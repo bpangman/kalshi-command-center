@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T20:18:37.958249Z",
+  "generated_at": "2026-10-15T20:21:19.557936Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,120, final target -$200.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$200 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Denny Hamlin",
@@ -39,12 +39,12 @@
         "exposure": -570.76,
         "exposure_text": "-$571",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T20:18:48Z",
+        "when": "if no fill by 3:34pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T20:34:26Z",
         "stuck": false,
         "also": "Also: glide starts Sun 8:00am CT",
         "last_fill": "2026-10-13T22:59:43Z",
-        "lag_note": "Steps to 9c at the next check."
+        "lag_note": "Steps to 9c if no fill by 3:34pm CT."
       },
       {
         "side": "Ryan Blaney",
@@ -101,7 +101,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 10,924, 58,315 resting. Worst line -$1,120 (limit now -$800)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 10,924, 58,315 resting. Worst line -$1,120 (limit now -$800). Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -207,7 +207,7 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-15T20:17:49Z"
+    "ts": "2026-10-15T20:20:50Z"
   },
   "posts": [
     {
@@ -2125,6 +2125,26 @@
         "contracts": 2148.0,
         "rows": 4
       }
+    },
+    {
+      "id": "1792095529891-9fec50",
+      "ts": "2026-10-15T20:18:49Z",
+      "book": "PHX-CUP",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 58,315 resting. Next: Risk glide starts, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792095590359-0d7397",
+      "ts": "2026-10-15T20:19:50Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,120, final target -$200. Next: Risk glide starts, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -2842,6 +2862,24 @@
     {
       "id": "1792093820034-19ea0b",
       "ts": "2026-10-15T19:50:20Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): worst -1119.71 vs floor -825.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792095672389-c2f4e2",
+      "ts": "2026-10-15T20:21:12Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 12 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-RYBL low 2166c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-AUCI low 1500c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-CHBR low 2148c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792095672390-18de4f",
+      "ts": "2026-10-15T20:21:12Z",
       "book": "PHX-CUP",
       "kind": "audit",
       "source": "auditor",
