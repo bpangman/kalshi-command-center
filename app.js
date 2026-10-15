@@ -1975,7 +1975,13 @@ function buildBookTile(b, opts) {
     setTileMinimizedPref(b.key, minimized);
   });
 
-  function activate() { openTileModal(b); }
+  // opts.onActivate (LIVE tab, 2026-10-15): lets a caller swap the default
+  // "open the full-card modal" click for its own behavior (an inline fills
+  // drop-down) without a second copy of this tile builder.
+  function activate() {
+    if (typeof opts.onActivate === "function") opts.onActivate(b, tile);
+    else openTileModal(b);
+  }
   tile.addEventListener("click", activate);
   tile.addEventListener("keydown", function (evt) {
     if (evt.target !== tile) return; // let minBtn (and any other nested control) handle its own keys

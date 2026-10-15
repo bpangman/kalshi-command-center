@@ -1540,12 +1540,10 @@ tr.awaiting-row td {
   font-style: italic;
 }
 
-/* -- LIVE tab (2026-10-14): one block per book, see live.js -- */
+/* -- LIVE tab (2026-10-14, reworked 2026-10-15): a grid of the Home book tiles, each with its feed box right under it, see live.js -- */
 
 #page-live {
-  max-width: 980px;
-  margin: 0 auto;
-  padding-bottom: 80px; /* room so the floating Live fills button never covers the chat box */
+  padding-bottom: 24px;
 }
 
 .lv-empty-state {
@@ -1602,21 +1600,30 @@ tr.awaiting-row td {
   cursor: pointer;
 }
 
-.lv-block {
-  margin-bottom: 40px;
+.lv-unit {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   scroll-margin-top: 150px;
 }
 
+/* Title bar used only when a unit has no Home tile (the fleet notes, or a
+   book whose numbers have not arrived yet). Sized like a tile by live.js. */
 .lv-head {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  align-content: flex-start;
   gap: 8px 10px;
-  margin-bottom: 10px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
 }
 
 .lv-title {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   margin: 0;
   min-width: 0;
   overflow-wrap: anywhere;
@@ -1624,7 +1631,7 @@ tr.awaiting-row td {
 
 .lv-sub {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
 }
 
 .lv-livepill {
@@ -1644,8 +1651,58 @@ tr.awaiting-row td {
   border-color: rgba(63, 185, 80, 0.4);
 }
 
-.lv-card-slot .book-card {
-  margin-bottom: 14px;
+/* The Home tile, reused as-is. Its minimize button is hidden here (the feed
+   box underneath is sized to the full tile) and a tile minimized on Home
+   still shows in full. */
+.lv-tile-slot .book-tile {
+  height: auto;
+}
+
+.lv-tile-slot .book-tile-min-btn {
+  display: none;
+}
+
+.lv-tile-slot .book-tile.minimized .book-tile-outcome-strip {
+  display: block;
+}
+
+.lv-tile-slot .book-tile.minimized .book-tile-row4 {
+  display: flex;
+}
+
+.lv-tile-slot .book-tile.lv-tile-open {
+  border-color: var(--accent);
+}
+
+/* Fills drop-down under a clicked tile */
+.lv-fills {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  max-height: 260px;
+  overflow: auto;
+  font-size: 0.8rem;
+}
+
+.lv-fills-head {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.lv-fills .table-scroll {
+  margin-top: 6px;
+}
+
+.lv-fills table {
+  font-size: 0.72rem;
+}
+
+.lv-fills th,
+.lv-fills td {
+  padding: 4px 6px;
+  white-space: nowrap;
 }
 
 /* buttons */
@@ -1712,11 +1769,7 @@ tr.awaiting-row td {
 
 .lv-plan {
   background: var(--panel);
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--accent);
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 18px;
+  padding: 10px 12px;
 }
 
 .lv-plan-top {
@@ -1738,7 +1791,7 @@ tr.awaiting-row td {
 }
 
 .lv-plan-headline {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   margin: 6px 0 10px;
   overflow-wrap: anywhere;
 }
@@ -1787,9 +1840,9 @@ tr.awaiting-row td {
 
 .lv-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  gap: 10px;
-  margin-top: 12px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .lv-sec {
@@ -1832,7 +1885,7 @@ tr.awaiting-row td {
 
 .lv-step {
   display: grid;
-  grid-template-columns: minmax(0, 190px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 4px 12px;
   padding: 7px 0;
   border-top: 1px solid var(--border);
@@ -1845,7 +1898,10 @@ tr.awaiting-row td {
 
 .lv-step-when {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  align-items: baseline;
 }
 
 .lv-step-abs {
@@ -1916,27 +1972,69 @@ tr.awaiting-row td {
 
 /* feed */
 
-.lv-feedhead {
+/* The feed box: same width as the tile above it; live.js sets its height
+   to the tile's height. Header bar on top, scrolling feed in the middle,
+   one-line chat row pinned at the bottom. Plan text and audit alerts open
+   as panels over the feed area. */
+
+.lv-box {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 8px;
+  flex-direction: column;
+  height: 300px;
+  min-height: 0;
+  min-width: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.lv-feedhead h3 {
-  margin: 0;
-  font-size: 1rem;
+.lv-bar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lv-bar-title {
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lv-btn-tiny {
+  padding: 2px 10px;
+  font-size: 0.74rem;
+}
+
+.lv-btn-ghost.is-on {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lv-box-body {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.lv-plan,
+.lv-drawer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--panel);
 }
 
 .lv-drawer {
-  max-height: 320px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-  padding: 8px 12px;
-  background: var(--panel);
-  border: 1px solid rgba(248, 81, 73, 0.4);
-  border-radius: 10px;
+  padding: 4px 12px;
 }
 
 .lv-audit {
@@ -1961,17 +2059,15 @@ tr.awaiting-row td {
 }
 
 .lv-feedwrap {
-  position: relative;
+  position: absolute;
+  inset: 0;
 }
 
 .lv-feed {
-  height: 420px;
+  height: 100%;
   overflow-y: auto;
   overscroll-behavior: contain;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 12px;
+  padding: 8px 10px;
 }
 
 .lv-empty {
@@ -2196,20 +2292,36 @@ tr.awaiting-row td {
 /* chat box */
 
 .lv-chat {
-  margin-top: 10px;
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px;
+  border-top: 1px solid var(--border);
+}
+
+.lv-chat-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .lv-chat-input {
   display: block;
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 34px;
   font: inherit;
   font-size: 16px; /* 16px keeps iPhones from zooming in on focus */
+  line-height: 20px;
   color: var(--text);
-  background: var(--panel);
+  background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 8px 10px;
-  resize: vertical;
+  border-radius: 8px;
+  padding: 6px 10px;
+  resize: none;
+  overflow: hidden;
 }
 
 .lv-chat-input:focus-visible,
@@ -2218,31 +2330,20 @@ tr.awaiting-row td {
   outline-offset: 1px;
 }
 
-.lv-chat-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  margin-top: 8px;
-}
-
-.lv-chat-tip {
-  color: var(--muted);
-  font-size: 0.75rem;
-  min-width: 0;
-  flex: 1 1 160px;
-}
-
 .lv-pass {
+  /* floats over the bottom of the feed so asking for the passcode never squeezes the feed to nothing */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: 8px 10px;
-  margin-top: 10px;
-  padding: 10px 12px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  gap: 6px 10px;
+  padding: 8px;
+  background: var(--panel-2);
+  border-top: 1px solid var(--border);
 }
 
 .lv-pass label {
@@ -2277,7 +2378,6 @@ tr.awaiting-row td {
 }
 
 @media (max-width: 600px) {
-  .lv-feed { height: 340px; padding: 8px 10px; }
   .lv-item { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .lv-time { padding-top: 0; }
   .lv-step { grid-template-columns: minmax(0, 1fr); }
@@ -2288,6 +2388,11 @@ tr.awaiting-row td {
   .lv-sides td:first-child { white-space: normal; min-width: 70px; }
   .lv-dot { margin-right: 4px; }
 }
+
+/* Feed rows sit in a narrow box, so the time stacks above the text */
+.lv-box .lv-item { grid-template-columns: minmax(0, 1fr); gap: 0; font-size: 0.85rem; }
+.lv-box .lv-time { padding-top: 0; }
+.lv-box .lv-bubble { max-width: 94%; }
 
 /* LIVE tab: hide the floating Live fills button so it never covers a chat box */
 body.on-live .fills-toggle {

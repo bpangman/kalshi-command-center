@@ -1,13 +1,15 @@
 "use strict";
 
 /* LIVE tab (Blake, 2026-10-14) - vanilla JS, no build step. Loaded after
-   app.js and uses its globals (state, fetchJSON, buildBookCard,
-   timeAgoText). For every book in data/live/index.json it shows the
-   book's numbers card (from data/feed.json), a pinned "What happens next"
-   plan card, a scrollable running feed, an audit-alerts drawer behind a
-   button, and a chat box that talks to the operator through ntfy.sh (see
-   tools/live/README-LIVE.md section 4 in the main repo for the wire
-   contract). Plain hyphens only, no em/en dashes, anywhere in this file. */
+   app.js and uses its globals (state, fetchJSON, buildBookTile,
+   buildFillsTable, timeAgoText). Reworked 2026-10-15 (Blake): the page is
+   a grid of the same small book tiles as Home; under each tile sits that
+   book's live feed in a box with the same width and height as the tile.
+   Clicking a tile opens a fills drop-down under it. Inside the box: a
+   slim header (Plan toggle, Audits button), the scrolling feed, and a
+   one-line chat row pinned at the bottom that talks to the operator
+   through ntfy.sh (see tools/live/README-LIVE.md section 4 in the main
+   repo for the wire contract - unchanged). Plain hyphens only, no em/en dashes, anywhere in this file. */
 
 (function () {
   var POLL_MS = 30000;
@@ -18,6 +20,7 @@
   var LS_DECIDED = "kcc_live_decided";
   var LS_SEEN = "kcc_live_audit_seen_";
   var NO_ANSWER_HINT_MS = 45000;
+  var MIN_BOX_H = 250; // px - smallest feed box (and tile) height, so header + feed + chat row always fit
   var NTFY = "https://ntfy.sh/";
   var TERMINAL = { answer: 1, proposal: 1, done: 1, error: 1, cancelled: 1 };
   var STATUS_LABEL = { received: "Received", working: "Working", answer: "Answer", proposal: "Proposal", done: "Done", error: "Error", cancelled: "Cancelled" };
@@ -289,15 +292,12 @@
     return isNaN(t) ? Infinity : t;
   }
 
-  function orderedBooks(list) {
-    return list.slice().sort(function (a, c) {
-      var al = a.live ? 0 : 1, cl = c.live ? 0 : 1;
-      if (al !== cl) return al - cl;
-      if (a.live) {
-        return (startMs(a) - startMs(c)) || String(a.title || a.key).localeCompare(String(c.title || c.key));
-      }
-      /* recently finished books: freshest activity first */
-      return String(c.last_post_ts || "").localeCompare(String(a.last_post_ts || "")) || String(a.key).localeCompare(String(c.key));
+  function shownBooks(list) {
+    /* Same rule as Home: soonest event first, no start time goes last. Only
+       books that are live (or that Home would show a tile for) appear. */
+    return list.filter(function (e) { return e.live || feedBookFor(e.key); }).sort(function (a, c) {
+      var ta = feedBookFor(a.key) || a, tc = feedBookFor(c.key) || c;
+      return (startMs(ta) - startMs(tc)) || String(a.title || a.key).localeCompare(String(c.title || c.key));
     });
   }
 
@@ -554,11 +554,8 @@
     B.planSig = sig;
     var box = B.planEl;
     box.innerHTML = "";
-    if (!plan) {
-      box.hidden = true;
-      return;
-    }
-    box.hidden = false;
+    B.planHas = !!plan;
+    if (!plan) return;
     var top = el("div", "lv-plan-top");
     top.appendChild(el("span", "lv-plan-label", "What happens next"));
     var age = el("span", "lv-age lv-plan-age", agoText(plan.ts));
@@ -655,7 +652,7 @@
 
   function renderAuditButton(B) {
     var n = auditCount(B.key);
-    B.auditBtn.firstChild.textContent = "Audit alerts (" + n + ")";
+    B.auditBtn.firstChild.textContent = "Audits (" + n + ")";
     B.auditDot.hidden = !hasUnseenAudit(B.key) || B.drawerOpen;
     B.auditBtn.setAttribute("aria-expanded", String(!!B.drawerOpen));
   }
@@ -691,11 +688,31 @@
     B.drawerOpen = open;
     B.drawerEl.hidden = !open;
     if (open) {
+      B.planOpen = false; /* plan and audits share the same spot inside the box */
       renderDrawer(B);
       markAuditsSeen(B.key);
       removeBanner(B.key);
     }
+    syncPlanPanel(B);
     renderAuditButton(B);
+  }
+
+  function syncPlanPanel(B) {
+    if (!B.planHas) B.planOpen = false;
+    B.planBtn.hidden = !B.planHas;
+    B.planEl.hidden = !B.planOpen;
+    B.planBtn.setAttribute("aria-expanded", String(!!B.planOpen));
+    B.planBtn.classList.toggle("is-on", !!B.planOpen);
+  }
+
+  function setPlan(B, open) {
+    B.planOpen = open && B.planHas;
+    if (B.planOpen && B.drawerOpen) {
+      B.drawerOpen = false;
+      B.drawerEl.hidden = true;
+      renderAuditButton(B);
+    }
+    syncPlanPanel(B);
   }
 
   /* -- chat -- */
@@ -827,23 +844,22 @@
 
   function buildChat(B) {
     var chat = el("div", "lv-chat");
+    var line = el("div", "lv-chat-line");
     var ta = el("textarea", "lv-chat-input");
-    ta.rows = 2;
+    ta.rows = 1;
     ta.maxLength = 1000;
-    ta.placeholder = "Ask the operator about this book...";
+    ta.placeholder = "Ask the operator...";
+    ta.title = "Enter sends. Changes always wait for your Confirm.";
     ta.setAttribute("aria-label", "Message for " + B.key);
-    chat.appendChild(ta);
-    var row = el("div", "lv-chat-row");
-    var send = el("button", "lv-btn", "Send");
+    line.appendChild(ta);
+    var send = el("button", "lv-btn lv-btn-small", "Send");
     send.type = "button";
-    row.appendChild(send);
-    row.appendChild(el("span", "lv-chat-tip", "Ctrl+Enter sends. Changes always wait for your Confirm."));
+    line.appendChild(send);
     var lock = el("button", "lv-link lv-lock", "Lock");
     lock.type = "button";
     lock.hidden = !L.keys;
     lock.addEventListener("click", lockChat);
-    row.appendChild(lock);
-    chat.appendChild(row);
+    line.appendChild(lock);
 
     var form = el("form", "lv-pass");
     form.hidden = true;
@@ -864,6 +880,7 @@
       savePass(B);
     });
     chat.appendChild(form);
+    chat.appendChild(line);
 
     function doSend() {
       var text = ta.value.trim();
@@ -875,7 +892,7 @@
     }
     send.addEventListener("click", doSend);
     ta.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
+      if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
         e.preventDefault();
         doSend();
       }
@@ -888,14 +905,19 @@
     return chat;
   }
 
-  /* -- blocks -- */
+  /* -- blocks (one unit per book: tile, fills drop-down, feed box) -- */
 
   function buildBlock(key) {
-    var B = { key: key, cache: {}, inited: false, drawerOpen: false, planSig: null, drawerSig: null, cardGen: null, cardKey: null, newestKey: null };
-    var root = el("section", "lv-block");
+    var B = {
+      key: key, cache: {}, inited: false, drawerOpen: false, planOpen: false, planHas: false, fillsOpen: false,
+      planSig: null, drawerSig: null, tileGen: null, tileKey: null, tileNode: null, fillsSig: null, newestKey: null,
+    };
+    var root = el("section", "lv-unit");
     root.id = "lv-" + key;
     B.el = root;
 
+    /* tile slot: the Home tile when the book has one, else a plain title bar */
+    B.tileSlot = el("div", "lv-tile-slot");
     var head = el("div", "lv-head");
     B.titleEl = el("h2", "lv-title");
     B.sportEl = el("span", "sport-tag");
@@ -905,33 +927,38 @@
     head.appendChild(B.sportEl);
     head.appendChild(B.pillEl2);
     head.appendChild(B.subEl);
-    root.appendChild(head);
     B.headEl = head;
+    B.tileSlot.appendChild(head);
+    root.appendChild(B.tileSlot);
 
-    B.cardSlot = el("div", "lv-card-slot");
-    root.appendChild(B.cardSlot);
+    /* fills drop-down (closed until the tile is clicked) */
+    B.fillsEl = el("div", "lv-fills");
+    B.fillsEl.hidden = true;
+    root.appendChild(B.fillsEl);
 
-    B.planEl = el("div", "lv-plan");
-    B.planEl.hidden = true;
-    root.appendChild(B.planEl);
-
-    var fh = el("div", "lv-feedhead");
-    fh.appendChild(el("h3", null, key === FLEET ? "Fleet feed" : "Live feed"));
-    var ab = el("button", "lv-btn lv-btn-ghost lv-audit-btn");
+    /* feed box: same width as the tile, height set by layoutUnits() */
+    var box = el("div", "lv-box");
+    B.boxEl = box;
+    var bar = el("div", "lv-bar");
+    bar.appendChild(el("span", "lv-bar-title", key === FLEET ? "Fleet feed" : "Live feed"));
+    B.planBtn = el("button", "lv-btn lv-btn-ghost lv-btn-tiny", "Plan");
+    B.planBtn.type = "button";
+    B.planBtn.hidden = true;
+    B.planBtn.setAttribute("aria-expanded", "false");
+    B.planBtn.addEventListener("click", function () { setPlan(B, !B.planOpen); });
+    bar.appendChild(B.planBtn);
+    var ab = el("button", "lv-btn lv-btn-ghost lv-btn-tiny lv-audit-btn");
     ab.type = "button";
-    ab.appendChild(document.createTextNode("Audit alerts (0)"));
+    ab.appendChild(document.createTextNode("Audits (0)"));
     B.auditDot = el("span", "lv-reddot");
     B.auditDot.hidden = true;
     ab.appendChild(B.auditDot);
     ab.addEventListener("click", function () { setDrawer(B, !B.drawerOpen); });
     B.auditBtn = ab;
-    fh.appendChild(ab);
-    root.appendChild(fh);
+    bar.appendChild(ab);
+    box.appendChild(bar);
 
-    B.drawerEl = el("div", "lv-drawer");
-    B.drawerEl.hidden = true;
-    root.appendChild(B.drawerEl);
-
+    var body = el("div", "lv-box-body");
     var fw = el("div", "lv-feedwrap");
     B.feedEl = el("div", "lv-feed");
     B.feedEl.setAttribute("role", "log");
@@ -949,9 +976,18 @@
     B.feedEl.addEventListener("scroll", function () {
       if (B.feedEl.scrollHeight - B.feedEl.scrollTop - B.feedEl.clientHeight < 48) B.pillEl.hidden = true;
     });
-    root.appendChild(fw);
+    body.appendChild(fw);
+    /* plan text and audit alerts open as panels over the feed, inside the box */
+    B.planEl = el("div", "lv-plan");
+    B.planEl.hidden = true;
+    body.appendChild(B.planEl);
+    B.drawerEl = el("div", "lv-drawer");
+    B.drawerEl.hidden = true;
+    body.appendChild(B.drawerEl);
+    box.appendChild(body);
 
-    if (key !== FLEET) root.appendChild(buildChat(B));
+    if (key !== FLEET) box.appendChild(buildChat(B));
+    root.appendChild(box);
     return B;
   }
 
@@ -961,9 +997,40 @@
     return null;
   }
 
+  function tileLike(B) {
+    return B.tileNode || B.headEl;
+  }
+
+  function toggleFills(B) {
+    B.fillsOpen = !B.fillsOpen;
+    renderFills(B, true);
+  }
+
+  function renderFills(B, force) {
+    var fb = feedBookFor(B.key);
+    var open = !!(B.fillsOpen && fb);
+    if (B.tileNode) {
+      B.tileNode.setAttribute("aria-expanded", String(open));
+      B.tileNode.classList.toggle("lv-tile-open", open);
+    }
+    B.fillsEl.hidden = !open;
+    if (!open) return;
+    var gen = state.feed ? state.feed.generated_at : "";
+    var sig = fb.key + "|" + gen;
+    if (!force && sig === B.fillsSig && B.fillsEl.firstChild) return;
+    B.fillsSig = sig;
+    var prevTop = B.fillsEl.scrollTop;
+    B.fillsEl.innerHTML = "";
+    var fills = fb.recent_fills || [];
+    B.fillsEl.appendChild(el("div", "lv-fills-head", "Recent fills (" + fills.length + ")"));
+    B.fillsEl.appendChild(buildFillsTable(fills, !!fb.is_deci_cent));
+    B.fillsEl.appendChild(buildFillsSummaryLine(fb.fills_summary));
+    B.fillsEl.scrollTop = prevTop;
+  }
+
   function updateBlock(B, entry, isFleet) {
     var fb = isFleet ? null : feedBookFor(B.key);
-    /* header */
+    /* plain title bar (used by the fleet unit, or a book with no tile data yet) */
     B.titleEl.textContent = isFleet ? "Whole fleet" : (entry.title || (fb && fb.title) || B.key);
     B.sportEl.textContent = isFleet ? "" : (entry.sport || (fb && fb.sport) || "");
     B.sportEl.hidden = !B.sportEl.textContent;
@@ -977,29 +1044,29 @@
       var sm = parseMs(entry.start_time);
       B.subEl.textContent = isNaN(sm) ? "" : ((sm > Date.now() ? "Starts " : "Started ") + ctStamp(sm) + " CT");
     }
-    /* numbers card */
-    if (!isFleet) {
+    /* the same small tile Home shows (rebuilt only when feed.json changed) */
+    if (!isFleet && fb) {
       var gen = state.feed ? state.feed.generated_at : null;
-      if (fb) {
-        if (B.cardGen !== gen || B.cardKey !== fb.key || !B.cardNode) {
-          var card = buildBookCard(fb, { defaultCollapsed: (fb.outcomes || []).length > 12 });
-          B.cardSlot.innerHTML = "";
-          B.cardSlot.appendChild(card);
-          B.cardNode = card;
-          B.cardGen = gen;
-          B.cardKey = fb.key;
-        }
-      } else if (B.cardNode) {
-        B.cardSlot.innerHTML = "";
-        B.cardNode = null;
-        B.cardGen = null;
-        B.cardKey = null;
+      if (B.tileGen !== gen || B.tileKey !== fb.key || !B.tileNode) {
+        var tile = buildBookTile(fb, { showSport: true, onActivate: function () { toggleFills(B); } });
+        tile.setAttribute("aria-label", "Show or hide fills for " + (fb.title || B.key));
+        if (B.tileNode && B.tileNode.parentNode) B.tileNode.parentNode.removeChild(B.tileNode);
+        B.tileSlot.appendChild(tile);
+        B.tileNode = tile;
+        B.tileGen = gen;
+        B.tileKey = fb.key;
       }
+    } else if (B.tileNode) {
+      if (B.tileNode.parentNode) B.tileNode.parentNode.removeChild(B.tileNode);
+      B.tileNode = null;
+      B.tileGen = null;
+      B.tileKey = null;
     }
-    /* the numbers card already carries the title; keep the plain header only when there is no card */
-    B.headEl.hidden = !isFleet && !!B.cardNode;
+    B.headEl.hidden = !!B.tileNode;
+    renderFills(B, false);
     var f = L.files[B.key];
     renderPlan(B, isFleet ? null : (f && f.plan) || null);
+    syncPlanPanel(B);
     renderAuditButton(B);
     if (B.drawerOpen) {
       renderDrawer(B);
@@ -1009,9 +1076,33 @@
     renderBookFeed(B);
   }
 
+  function layoutUnits() {
+    /* Every tile gets the height of the tallest one, and every feed box is
+       then given exactly its tile's height (and, being in the same column,
+       its width) - so tiles and feeds line up across the grid. */
+    var grid = L.root && L.root.querySelector(".lv-blocks");
+    if (!grid || grid.offsetParent === null) return; // LIVE tab not showing: measured on the next render
+    var list = Object.keys(L.blocks).map(function (k) { return L.blocks[k]; });
+    list.forEach(function (B) { tileLike(B).style.minHeight = ""; });
+    var h = MIN_BOX_H;
+    list.forEach(function (B) { h = Math.max(h, tileLike(B).offsetHeight); });
+    list.forEach(function (B) {
+      tileLike(B).style.minHeight = h + "px";
+      var want = h + "px";
+      if (B.boxEl.style.height === want) return;
+      var feed = B.feedEl;
+      var atBottom = !B.inited || (feed.scrollHeight - feed.scrollTop - feed.clientHeight < 48);
+      B.boxEl.style.height = want;
+      if (atBottom && feed.clientHeight > 0) {
+        feed.scrollTop = feed.scrollHeight;
+        B.inited = true;
+      }
+    });
+  }
+
   function renderLive() {
     if (!L.root || !L.active || !L.index) return;
-    var entries = orderedBooks(Array.isArray(L.index.books) ? L.index.books : []);
+    var entries = shownBooks(Array.isArray(L.index.books) ? L.index.books : []);
     var fleet = L.index.fleet;
     var fleetShown = !!(fleet && ((fleet.post_count || 0) > 0 || (fleet.audit_count || 0) > 0));
     var list = entries.map(function (e) { return { key: e.key, entry: e, fleet: false }; });
@@ -1043,6 +1134,7 @@
         delete L.blocks[k];
       }
     });
+    layoutUnits();
     tick();
   }
 
@@ -1063,7 +1155,7 @@
   /* -- lifecycle -- */
 
   function setActive(on) {
-    /* the floating Live fills button would cover the chat boxes; the feeds here show fills anyway */
+    /* the floating Live fills button would cover the chat rows; tiles here open their own fills */
     try { document.body.classList.toggle("on-live", !!on); } catch (e) { /* ignore */ }
     if (on === L.active) return;
     L.active = on;
@@ -1093,7 +1185,7 @@
     var intro = el("p", "lv-empty-state", "No live books right now.");
     intro.hidden = true;
     L.root.appendChild(intro);
-    L.root.appendChild(el("div", "lv-blocks"));
+    L.root.appendChild(el("div", "book-tile-grid lv-blocks"));
     L.pending = lsGetJSON(LS_PENDING, []);
     if (!Array.isArray(L.pending)) L.pending = [];
     L.pending = L.pending.filter(function (c) { return c && c.id && Date.now() - c.ts < 24 * 3600 * 1000; });
@@ -1108,6 +1200,12 @@
         refreshChatChrome();
       }).catch(function () { /* unusable passcode: stay locked */ });
     }
+    var lastW = window.innerWidth;
+    window.addEventListener("resize", function () {
+      if (!L.active || window.innerWidth === lastW) return;
+      lastW = window.innerWidth;
+      requestAnimationFrame(layoutUnits); // tile text wraps differently at a new width
+    });
     document.addEventListener("visibilitychange", function () {
       if (!document.hidden && L.active) poll();
     });
