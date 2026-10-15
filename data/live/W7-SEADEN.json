@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T22:11:18.017614Z",
+  "generated_at": "2026-10-15T22:14:01.782667Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -37,13 +37,13 @@
         "resting": "75 @ 23c",
         "exposure": -35.39,
         "exposure_text": "-$35",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-15T23:30:00Z",
+        "move": "Step price down 1c (23c to 22c)",
+        "when": "if no fill by 5:18pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-15T22:18:23Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-15T09:11:26Z",
-        "lag_note": "Price 23c is at its floor."
+        "lag_note": "Steps to 22c if no fill by 5:18pm CT."
       },
       {
         "side": "DEN by 15+",
@@ -73,7 +73,7 @@
       },
       {
         "side": "SEA by 15+",
-        "resting": "150 @ 17c",
+        "resting": "150 @ 16c",
         "exposure": 410.34,
         "exposure_text": "+$410",
         "move": "Paid balancing (trickle)",
@@ -82,7 +82,7 @@
         "stuck": false,
         "also": "Also: price step",
         "last_fill": "2026-10-15T19:30:51Z",
-        "lag_note": "Price 17c is at its floor."
+        "lag_note": "Price 16c matches the crowd."
       }
     ],
     "sections": [
@@ -96,7 +96,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DEN by 1-6, DEN by 7-14, DEN by 15+, SEA by 15+.",
-          "SEA by 15+: 612 behind. Price 17c is at its floor.",
+          "SEA by 15+: 612 behind. Price 16c matches the crowd.",
           "DEN by 7-14: 574 behind. Price 13c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -190,11 +190,11 @@
         "resting": 150.0,
         "target": 750.0,
         "status": "lagging",
-        "price": 0.17
+        "price": 0.16
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T22:10:40Z"
+    "ts": "2026-10-15T22:13:42Z"
   },
   "posts": [
     {
@@ -3376,6 +3376,41 @@
         "from": 0.1,
         "to": 0.09
       }
+    },
+    {
+      "id": "1792102361659-062eb4",
+      "ts": "2026-10-15T22:12:37Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SEA by 15+: no fill for 162 min, added 150 at 16c (was 17c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SEA by 15+",
+        "from": 0.17,
+        "to": 0.16
+      }
+    },
+    {
+      "id": "1792102361660-7660ed",
+      "ts": "2026-10-15T22:10:30Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 0: DEN by 7-14 x0 at 13c. Worst line -$202.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 0.0,
+        "fills": [
+          {
+            "side": "DEN by 7-14",
+            "price": 0.13,
+            "qty": 0.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4115,6 +4150,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+93 on DEN 7-14 @ 0.13 (maker)\nworst outcome now -110\nheld 1196/752/587/1283/1362/750\nIf the game ends... you make\nDEN 1-6: -67 (-0.8% of bankroll)\nDEN 7-14: +376 (+4.6% of bankroll)\nDEN 15+: +542 (+6.6% of bankroll)\nSEA 1-6: -154 (-1.9% of bankroll)\nSEA 7-14: -234 (-2.9% of bankroll)\nSEA 15+: +379 (+4.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792102313869-3639ef",
+      "ts": "2026-10-15T22:11:53Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+0 on DEN 7-14 @ 0.13 (maker)\nworst outcome now -106\nheld 1196/789/887/1283/1362/750\nIf the game ends... you make\nDEN 1-6: -35 (-0.4% of bankroll)\nDEN 7-14: +372 (+4.5% of bankroll)\nDEN 15+: +274 (+3.3% of bankroll)\nSEA 1-6: -122 (-1.5% of bankroll)\nSEA 7-14: -202 (-2.5% of bankroll)\nSEA 15+: +410 (+5.0% of bankroll)",
       "severity": "warn"
     }
   ]
