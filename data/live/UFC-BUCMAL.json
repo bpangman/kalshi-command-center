@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-15T21:54:39.801625Z",
+  "generated_at": "2026-10-15T21:57:21.100722Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -75,12 +75,12 @@
         "exposure": 4.24,
         "exposure_text": "+$4",
         "move": "Step price down 1c (20c to 19c)",
-        "when": "next bot check, if the crowd trades under 20c",
-        "at": null,
+        "when": "if no fill by 5:11pm CT and the crowd trades under 20c",
+        "at": "2026-10-15T22:11:26Z",
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:55pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 19c if the crowd trades lower."
+        "lag_note": "Steps to 19c if no fill by 5:11pm CT."
       },
       {
         "side": "Malott by Submission",
@@ -213,7 +213,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-15T21:54:12Z"
+    "ts": "2026-10-15T21:57:14Z"
   },
   "posts": [
     {
@@ -1097,6 +1097,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nBUCKOTKODQ: +4\nBUCSUB: +4\nBUCDEC: -26\nMALKOTKODQ: +4\nMALSUB: +4\nMALDEC: +4\nDRAW: +4\nCollected $4 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 900\nBUCSUB: 0 / 30\nBUCDEC: 30 / 870\nMALKOTKODQ: 0 / 900\nMALSUB: 0 / 900\nMALDEC: 0 / 900\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.010 | Worst now -26 | Cash free $1500\nAnchor age 265s | Last fill 10718s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792101434466-7e88e9",
+      "ts": "2026-10-15T21:56:57Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Malott by KO/TKO: added 37 at 19c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
     }
   ],
   "audits": [
