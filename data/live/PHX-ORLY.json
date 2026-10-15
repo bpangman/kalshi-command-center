@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T02:27:40.657555Z",
+  "generated_at": "2026-10-15T02:29:52.770154Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$949 (final target -$100 at T-60). 8,142 sold, 22,689 resting.",
     "confidence": "low",
     "confidence_note": "New posts are on hold: free cash $138 is under the $400 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
-    "checks_every_s": 92,
+    "checks_every_s": 81,
     "sections": [
       {
         "title": "Right now",
@@ -16,21 +16,21 @@
           "Sold 8,142 contracts so far; 22,689 more resting on the book. Premium collected $751.",
           "Worst line is -$949. The glide target right now is -$400, so it is $549 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 2m. Slow reads and rate limits do this; timed steps can land a little late.",
-          "The bot's live websocket feed is down (stale for 18h 28m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
-          "New posts are on hold: free cash is $138 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
+          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late.",
+          "The bot's live websocket feed is down (stale for 18h 31m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
+          "New posts are on hold: free cash is $138 (read 1m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
-          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
-          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
+          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
+          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
+          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
           "Carson Kvapil: sold 308, 1,392 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.6c. It can step down 1c at a time, to no lower than about 8.6c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the backstop has stopped it adding; the bot's live feed is down, so its view of resting orders may be stale.",
-          "The bot checks every 2m; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "The bot checks every 1m; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
       },
@@ -92,7 +92,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T02:26:52Z",
+        "at": "2026-10-15T02:28:53Z",
         "label": "Possible price step on Carson Kvapil",
         "detail": "If no fill by then it may drop 1c from 14c toward 8.6c."
       }
@@ -148,7 +148,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T02:26:52Z"
+    "ts": "2026-10-15T02:28:53Z"
   },
   "posts": [
     {
@@ -220,6 +220,16 @@
       "text": "Quiet: nothing filled or changed in 15 min. 22,689 resting across 6 sides. Next scheduled step: Checkpoint T-2880 in 21h 7m. The bot checks every 2m.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792031292839-a51b6b",
+      "ts": "2026-10-15T02:27:59Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (11 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [

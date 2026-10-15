@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T02:27:40.657555Z",
+  "generated_at": "2026-10-15T02:29:52.770154Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$945 (final target -$100 at T-60). 4,443 sold, 20,831 resting.",
     "confidence": "low",
     "confidence_note": "New posts are on hold: free cash $138 is under the $400 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
-    "checks_every_s": 70,
+    "checks_every_s": 74,
     "sections": [
       {
         "title": "Right now",
@@ -16,20 +16,20 @@
           "Sold 4,443 contracts so far; 20,831 more resting on the book. Premium collected $519.",
           "Worst line is -$945. The glide target right now is -$400, so it is $545 short; the final target is -$100 by T-60.",
           "Backstop is ON for Chandler Smith: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 35 of 36 drivers.",
+          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 35 of 36 drivers.",
           "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late.",
-          "The bot's live websocket feed is down (stale for 18h 57m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
-          "New posts are on hold: free cash is $138 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
+          "The bot's live websocket feed is down (stale for 19h), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
+          "New posts are on hold: free cash is $138 (read 1m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Christian Eckes: sold 0, 1,464 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
-          "Ty Majeski: sold 0, 1,464 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
-          "Kaden Honeycutt: sold 281, 1,183 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
-          "Layne Riggs: sold 678, 786 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
-          "Brent Crews: sold 706, 758 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 19m ago and the bot re-posted them.",
+          "Christian Eckes: sold 0, 1,464 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
+          "Ty Majeski: sold 0, 1,464 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
+          "Kaden Honeycutt: sold 281, 1,183 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
+          "Layne Riggs: sold 678, 786 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
+          "Brent Crews: sold 706, 758 behind the leader. Nothing is resting on it: new posts are on hold: free cash $138 is under the $400 floor; the bot's live feed is down, so its view of resting orders may be stale; its rows vanished with no fill 21m ago and the bot re-posted them.",
           "The bot checks every 1m; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
@@ -40,7 +40,7 @@
           "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $400 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
           "No wave has posted yet; the launch ladders are still the only orders.",
-          "Latest wave note (20m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
+          "Latest wave note (22m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
           "Waves stop at T-60."
         ]
       },
@@ -143,7 +143,7 @@
       }
     ],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T02:26:52Z"
+    "ts": "2026-10-15T02:28:53Z"
   },
   "posts": [
     {
