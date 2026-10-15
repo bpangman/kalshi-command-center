@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T03:34:58.234376Z",
+  "generated_at": "2026-10-15T03:37:36.648439Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,244 (final target -$200 at T-60). 10,294 sold, 58,945 resting.",
-    "confidence": "low",
-    "confidence_note": "New posts are on hold: free cash $190 is under the $400 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
-    "checks_every_s": 30,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
+    "checks_every_s": 51,
     "sections": [
       {
         "title": "Right now",
@@ -16,8 +16,8 @@
           "Sold 10,294 contracts so far; 58,945 more resting on the book. Premium collected $1,156.",
           "Worst line is -$1,244. The glide target right now is -$800, so it is $444 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 37 drivers.",
-          "New posts are on hold: free cash is $190 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 37 drivers.",
+          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 51s. Slow reads and rate limits do this; timed steps can land a little late."
         ]
       },
       {
@@ -27,7 +27,7 @@
           "Christopher Bell: sold 900, 1,500 behind the leader. Cheapest row 19c; the crowd has been buying at 19c; fair 15.6c. Already at its floor (about 19c); it will not go lower unless the crowd price or fair drops.",
           "Ryan Blaney: sold 1,204, 1,196 behind the leader. Cheapest row 20c; the crowd has been buying at 20c; fair 20.2c. Already at its floor (about 20c); it will not go lower unless the crowd price or fair drops.",
           "Chase Briscoe: sold 1,851, 549 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 7c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
-          "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "The bot checks every 51s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
       },
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T03:34:19Z"
+    "ts": "2026-10-15T03:37:21Z"
   },
   "posts": [
     {
@@ -340,6 +340,40 @@
       "text": "Nudged a Chase Briscoe order up from 9c to 10c because the live bid moved up (keeps it a maker order, no loss of queue beyond that row).",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792035300050-518dab",
+      "ts": "2026-10-15T03:33:01Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 15,669 (launch ladder): Kyle Larson x2,400 at 10c, Tyler Reddick x2,125 at 5c, Austin Cindric x1,500 at 4c, Christopher Bell x1,395 at 20c, Chase Briscoe x1,127 at 11c, +12 more rows.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 15669.0,
+        "rows": 17
+      }
+    },
+    {
+      "id": "1792035320221-3f05c0",
+      "ts": "2026-10-15T03:35:20Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,244 (final target -$200 at T-60). 10,294 sold, 58,945 resting. Next: Checkpoint T-2880 in 1d 15h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792035441217-72a2ea",
+      "ts": "2026-10-15T03:37:21Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,244 (final target -$200 at T-60). 10,294 sold, 58,945 resting. Next: Checkpoint T-2880 in 1d 15h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
