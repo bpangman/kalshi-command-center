@@ -1,19 +1,19 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-15T23:27:50.087803Z",
+  "generated_at": "2026-10-15T23:29:32.107854Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$189.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 45,
+    "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$174.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Jourdain by KO/TKO",
         "resting": "134 @ 30c",
-        "exposure": -188.54,
-        "exposure_text": "-$189",
+        "exposure": -174.42,
+        "exposure_text": "-$174",
         "move": "Step price down 1c (30c to 29c)",
         "when": "next bot check, if 500+ crowd contracts traded in the last hour",
         "at": null,
@@ -23,22 +23,21 @@
       },
       {
         "side": "Jourdain by Submission",
-        "resting": "277 @ 11c",
-        "exposure": -44.96,
-        "exposure_text": "-$45",
+        "resting": "149 @ 11c",
+        "exposure": -159.2,
+        "exposure_text": "-$159",
         "move": "Step price down 1c (11c to 10c)",
-        "when": "if no fill by 6:39pm CT and the crowd trades under 11c",
-        "at": "2026-10-15T23:39:09Z",
+        "when": "if no fill by 7:28pm CT and 500+ crowd contracts trade",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
-        "last_fill": "2026-10-15T23:19:09Z",
-        "lag_note": "Steps to 10c if no fill by 6:39pm CT."
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:35pm CT",
+        "last_fill": "2026-10-15T23:28:48Z"
       },
       {
         "side": "Jourdain by Decision",
         "resting": "413 @ 27c",
-        "exposure": 90.73,
-        "exposure_text": "+$91",
+        "exposure": 104.85,
+        "exposure_text": "+$105",
         "move": "Step price down 1c (27c to 26c)",
         "when": "next bot check, if the crowd trades under 27c",
         "at": null,
@@ -50,8 +49,8 @@
       {
         "side": "Cuamba by Decision",
         "resting": "420 @ 23c",
-        "exposure": 97.77,
-        "exposure_text": "+$98",
+        "exposure": 111.89,
+        "exposure_text": "+$112",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check, if the crowd trades under 23c",
         "at": null,
@@ -63,8 +62,8 @@
       {
         "side": "Cuamba by KO/TKO",
         "resting": "420 @ 14c",
-        "exposure": 97.77,
-        "exposure_text": "+$98",
+        "exposure": 111.89,
+        "exposure_text": "+$112",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check, if the crowd trades under 14c",
         "at": null,
@@ -76,8 +75,8 @@
       {
         "side": "Cuamba by Submission",
         "resting": "525 @ 6c",
-        "exposure": 97.77,
-        "exposure_text": "+$98",
+        "exposure": 111.89,
+        "exposure_text": "+$112",
         "move": "Hold price at 6c",
         "when": "already at fair plus margin (6c)",
         "at": null,
@@ -88,8 +87,8 @@
       {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": 97.77,
-        "exposure_text": "+$98",
+        "exposure": 111.89,
+        "exposure_text": "+$112",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
         "at": null,
@@ -101,13 +100,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 436, 2,219 resting. Worst line -$189 (target -$100)."
+          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 564, 2,091 resting. Worst line -$174 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Cuamba by Decision, Cuamba by KO/TKO, Jourdain by Decision, Jourdain by Submission.",
+          "Lagging (150+ behind the leader): Cuamba by Decision, Cuamba by KO/TKO, Jourdain by Decision.",
           "Cuamba by Decision: 286 behind. Steps to 22c if the crowd trades lower.",
           "Cuamba by KO/TKO: 286 behind. Steps to 13c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
@@ -118,7 +117,7 @@
         "lines": [
           "Full ladder posts Sat 9:00am CT: 1,575 more contracts across 6 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$189).",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$174).",
           "Batches used: none (max 3 per bucket)."
         ]
       },
@@ -198,10 +197,10 @@
       },
       {
         "label": "Jourdain by Submission",
-        "held": 142.7,
-        "resting": 277.3,
+        "held": 271.1,
+        "resting": 148.9,
         "target": 700.0,
-        "status": "lagging",
+        "status": "even",
         "price": 0.11
       },
       {
@@ -214,7 +213,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-15T23:27:15Z"
+    "ts": "2026-10-15T23:29:16Z"
   },
   "posts": [
     {
@@ -2427,6 +2426,16 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$189. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792106956761-23cc8e",
+      "ts": "2026-10-15T23:29:16Z",
+      "book": "UFC-JOUCUA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$174. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
     }
