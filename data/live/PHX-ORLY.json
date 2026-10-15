@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T03:03:21.014122Z",
+  "generated_at": "2026-10-15T03:05:57.980075Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,16 +16,16 @@
           "Sold 8,236 contracts so far; 22,596 more resting on the book. Premium collected $756.",
           "Worst line is -$944. The glide target right now is -$400, so it is $544 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "New posts are on hold: free cash is $142 (read 3m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "New posts are on hold: free cash is $142 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 56m ago and the bot re-posted them.",
-          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 56m ago and the bot re-posted them.",
-          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 56m ago and the bot re-posted them.",
+          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 58m ago and the bot re-posted them.",
+          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 58m ago and the bot re-posted them.",
+          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 58m ago and the bot re-posted them.",
           "Carson Kvapil: sold 308, 1,392 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.7c. It can step down 1c at a time, to no lower than about 8.7c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; the backstop has stopped it adding.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
@@ -90,7 +90,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T03:03:08Z",
+        "at": "2026-10-15T03:05:08Z",
         "label": "Possible price step on Carson Kvapil",
         "detail": "If no fill by then it may drop 1c from 14c toward 8.7c."
       }
@@ -146,7 +146,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T03:03:08Z"
+    "ts": "2026-10-15T03:05:08Z"
   },
   "posts": [
     {
@@ -278,6 +278,16 @@
       "text": "The bot logged a sharp price move on 1 driver: driver JOWI.",
       "severity": "info",
       "title": "Price shock"
+    },
+    {
+      "id": "1792033468520-2a2b28",
+      "ts": "2026-10-15T03:04:24Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (12 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [
@@ -388,6 +398,24 @@
       "source": "bot",
       "text": "Anomaly: RISK-BREACH - worst-all-resting -462.75 past allowed limit -400.00",
       "severity": "warn"
+    },
+    {
+      "id": "1792033452216-0c8a45",
+      "ts": "2026-10-15T03:04:12Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 455c, KXNASCARRACE-TIMP26-BRJO low 90c, KXNASCARRACE-TIMP26-ANAL low 750c, KXNASCARRACE-TIMP26-SAMA low 1078c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 233c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CAKV low 1691c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792033452217-94eb5a",
+      "ts": "2026-10-15T03:04:12Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -944.38 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
