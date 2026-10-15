@@ -20,6 +20,7 @@
   var LS_DECIDED = "kcc_live_decided";
   var LS_SEEN = "kcc_live_audit_seen_";
   var NO_ANSWER_HINT_MS = 45000;
+  var BOX_GROW = 1.3; // the feed box is this much taller than its tile, so more of the feed and plan text shows at once
   var MIN_BOX_H = 250; // px - smallest feed box (and tile) height, so header + feed + chat row always fit
   var NTFY = "https://ntfy.sh/";
   var TERMINAL = { answer: 1, proposal: 1, done: 1, error: 1, cancelled: 1 };
@@ -548,6 +549,37 @@
 
   /* -- plan card -- */
 
+  /* Three plan sections get their own header buttons (Lag, Waves, Clamp).
+     Matched by title, case-insensitive and tolerant of small wording changes. */
+  var SEC_DEFS = [
+    { k: "lag", label: "Lag", re: /\blag/i },
+    { k: "waves", label: "Waves", re: /\bwave/i },
+    { k: "clamp", label: "Clamp", re: /tighten|clamp/i },
+  ];
+
+  function splitSections(sections) {
+    var found = {};
+    var rest = [];
+    (Array.isArray(sections) ? sections : []).forEach(function (s) {
+      var title = String((s && s.title) || "");
+      for (var i = 0; i < SEC_DEFS.length; i++) {
+        var d = SEC_DEFS[i];
+        if (!found[d.k] && d.re.test(title)) { found[d.k] = s; return; }
+      }
+      rest.push(s);
+    });
+    return { found: found, rest: rest };
+  }
+
+  function sectionCard(s) {
+    var sec = el("div", "lv-sec");
+    sec.appendChild(el("h4", null, s.title || ""));
+    var ul = el("ul");
+    (s.lines || []).forEach(function (ln) { ul.appendChild(el("li", null, ln)); });
+    sec.appendChild(ul);
+    return sec;
+  }
+
   function renderPlan(B, plan) {
     var sig = plan ? JSON.stringify(plan) : "";
     if (sig === B.planSig) return;
@@ -555,6 +587,17 @@
     var box = B.planEl;
     box.innerHTML = "";
     B.planHas = !!plan;
+    var split = splitSections(plan && plan.sections);
+    SEC_DEFS.forEach(function (d) {
+      var pe = B.secEls[d.k];
+      pe.innerHTML = "";
+      B.secHas[d.k] = !!split.found[d.k];
+      if (split.found[d.k]) {
+        var g = el("div", "lv-sections lv-sections-solo");
+        g.appendChild(sectionCard(split.found[d.k]));
+        pe.appendChild(g);
+      }
+    });
     if (!plan) return;
     var top = el("div", "lv-plan-top");
     top.appendChild(el("span", "lv-plan-label", "What happens next"));
@@ -574,16 +617,9 @@
     box.appendChild(chips);
     if (plan.confidence_note) box.appendChild(el("p", "lv-conf-note", plan.confidence_note));
 
-    if (Array.isArray(plan.sections) && plan.sections.length) {
+    if (split.rest.length) {
       var grid = el("div", "lv-sections");
-      plan.sections.forEach(function (s) {
-        var sec = el("div", "lv-sec");
-        sec.appendChild(el("h4", null, s.title || ""));
-        var ul = el("ul");
-        (s.lines || []).forEach(function (ln) { ul.appendChild(el("li", null, ln)); });
-        sec.appendChild(ul);
-        grid.appendChild(sec);
-      });
+      split.rest.forEach(function (s) { grid.appendChild(sectionCard(s)); });
       box.appendChild(grid);
     }
 
@@ -688,7 +724,8 @@
     B.drawerOpen = open;
     B.drawerEl.hidden = !open;
     if (open) {
-      B.planOpen = false; /* plan and audits share the same spot inside the box */
+      B.planOpen = false; /* plan, Lag, Waves, Clamp and audits share the same spot inside the box */
+      B.secOpen = null;
       renderDrawer(B);
       markAuditsSeen(B.key);
       removeBanner(B.key);
@@ -699,6 +736,14 @@
 
   function syncPlanPanel(B) {
     if (!B.planHas) B.planOpen = false;
+    SEC_DEFS.forEach(function (d) {
+      if (!B.secHas[d.k] && B.secOpen === d.k) B.secOpen = null;
+      var on = B.secOpen === d.k;
+      B.secBtns[d.k].hidden = !B.secHas[d.k];
+      B.secEls[d.k].hidden = !on;
+      B.secBtns[d.k].setAttribute("aria-expanded", String(on));
+      B.secBtns[d.k].classList.toggle("is-on", on);
+    });
     B.planBtn.hidden = !B.planHas;
     B.planEl.hidden = !B.planOpen;
     B.planBtn.setAttribute("aria-expanded", String(!!B.planOpen));
@@ -707,10 +752,24 @@
 
   function setPlan(B, open) {
     B.planOpen = open && B.planHas;
+    if (B.planOpen) B.secOpen = null;
     if (B.planOpen && B.drawerOpen) {
       B.drawerOpen = false;
       B.drawerEl.hidden = true;
       renderAuditButton(B);
+    }
+    syncPlanPanel(B);
+  }
+
+  function setSec(B, k, open) {
+    B.secOpen = open && B.secHas[k] ? k : null;
+    if (B.secOpen) {
+      B.planOpen = false;
+      if (B.drawerOpen) {
+        B.drawerOpen = false;
+        B.drawerEl.hidden = true;
+        renderAuditButton(B);
+      }
     }
     syncPlanPanel(B);
   }
@@ -909,7 +968,7 @@
 
   function buildBlock(key) {
     var B = {
-      key: key, cache: {}, inited: false, drawerOpen: false, planOpen: false, planHas: false, fillsOpen: false,
+      key: key, cache: {}, inited: false, drawerOpen: false, planOpen: false, planHas: false, secOpen: null, secHas: {}, secEls: {}, secBtns: {}, fillsOpen: false,
       planSig: null, drawerSig: null, tileGen: null, tileKey: null, tileNode: null, fillsSig: null, newestKey: null,
     };
     var root = el("section", "lv-unit");
@@ -947,6 +1006,15 @@
     B.planBtn.setAttribute("aria-expanded", "false");
     B.planBtn.addEventListener("click", function () { setPlan(B, !B.planOpen); });
     bar.appendChild(B.planBtn);
+    SEC_DEFS.forEach(function (d) {
+      var sb = el("button", "lv-btn lv-btn-ghost lv-btn-tiny", d.label);
+      sb.type = "button";
+      sb.hidden = true;
+      sb.setAttribute("aria-expanded", "false");
+      sb.addEventListener("click", function () { setSec(B, d.k, B.secOpen !== d.k); });
+      B.secBtns[d.k] = sb;
+      bar.appendChild(sb);
+    });
     var ab = el("button", "lv-btn lv-btn-ghost lv-btn-tiny lv-audit-btn");
     ab.type = "button";
     ab.appendChild(document.createTextNode("Audits (0)"));
@@ -981,6 +1049,12 @@
     B.planEl = el("div", "lv-plan");
     B.planEl.hidden = true;
     body.appendChild(B.planEl);
+    SEC_DEFS.forEach(function (d) {
+      var pe = el("div", "lv-plan");
+      pe.hidden = true;
+      B.secEls[d.k] = pe;
+      body.appendChild(pe);
+    });
     B.drawerEl = el("div", "lv-drawer");
     B.drawerEl.hidden = true;
     body.appendChild(B.drawerEl);
@@ -1086,9 +1160,10 @@
     list.forEach(function (B) { tileLike(B).style.minHeight = ""; });
     var h = MIN_BOX_H;
     list.forEach(function (B) { h = Math.max(h, tileLike(B).offsetHeight); });
+    var boxH = Math.round(h * BOX_GROW);
     list.forEach(function (B) {
       tileLike(B).style.minHeight = h + "px";
-      var want = h + "px";
+      var want = boxH + "px";
       if (B.boxEl.style.height === want) return;
       var feed = B.feedEl;
       var atBottom = !B.inited || (feed.scrollHeight - feed.scrollTop - feed.clientHeight < 48);

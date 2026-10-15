@@ -1845,6 +1845,10 @@ tr.awaiting-row td {
   margin-top: 10px;
 }
 
+.lv-sections-solo {
+  margin-top: 0;
+}
+
 .lv-sec {
   background: var(--panel-2);
   border: 1px solid var(--border);
@@ -1987,11 +1991,13 @@ tr.awaiting-row td {
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 .lv-bar {
   flex: 0 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 6px;
   padding: 5px 8px;
@@ -2010,6 +2016,15 @@ tr.awaiting-row td {
 .lv-btn-tiny {
   padding: 2px 10px;
   font-size: 0.74rem;
+}
+
+/* Narrow boxes (phones, small tiles): drop the "Live feed" label so the five
+   buttons fit on one row and the feed keeps its height. */
+@container (max-width: 420px) {
+  .lv-bar { gap: 3px; padding: 5px 6px; }
+  .lv-bar-title { display: none; }
+  .lv-bar .lv-btn-tiny { padding: 2px 6px; font-size: 0.7rem; }
+  .lv-bar .lv-btn-tiny:first-of-type { margin-left: auto; }
 }
 
 .lv-btn-ghost.is-on {
