@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T19:02:05.828756Z",
+  "generated_at": "2026-10-15T19:04:48.582548Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -76,13 +76,13 @@
         "resting": "1,700 @ 9-10c",
         "exposure": 355.28,
         "exposure_text": "+$355",
-        "move": "Hold price at 9c",
-        "when": "needs 50+ crowd trades under 9c (now 8)",
-        "at": null,
+        "move": "Step price down 1c (9c to 8c)",
+        "when": "if no fill by 2:20pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T19:20:55Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Crowd is quiet here (8 traded)."
+        "lag_note": "Steps to 8c if no fill by 2:20pm CT."
       },
       {
         "side": "Kaden Honeycutt",
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Kaden Honeycutt: 1,181 behind. Price 16c matches the crowd.",
-          "Ty Majeski: 1,164 behind. Crowd is quiet here (8 traded).",
+          "Ty Majeski: 1,164 behind. Steps to 8c if no fill by 2:20pm CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T19:01:15Z"
+    "ts": "2026-10-15T19:04:16Z"
   },
   "posts": [
     {
@@ -2429,6 +2429,26 @@
         "side": "Christian Eckes",
         "from": 0.11,
         "to": 0.1
+      }
+    },
+    {
+      "id": "1792090976156-bdf218",
+      "ts": "2026-10-15T19:00:55Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 300: Ty Majeski x300 at 8c. Worst line -$809.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 300.0,
+        "fills": [
+          {
+            "side": "Ty Majeski",
+            "price": 0.08,
+            "qty": 300.0
+          }
+        ]
       }
     }
   ],
