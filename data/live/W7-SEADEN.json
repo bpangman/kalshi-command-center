@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T23:44:36.236457Z",
+  "generated_at": "2026-10-15T23:46:17.303841Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 7:15pm CT. Worst line -$104, goal -$150.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$104.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -14,7 +14,7 @@
         "resting": "none",
         "exposure": -103.72,
         "exposure_text": "-$104",
-        "move": "Next wave 450 contracts",
+        "move": "Next wave 297 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
         "stuck": true,
@@ -25,7 +25,7 @@
         "resting": "150 @ 29-34c",
         "exposure": -23.9,
         "exposure_text": "-$24",
-        "move": "Next wave 450 contracts",
+        "move": "Next wave 297 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
         "stuck": false,
@@ -37,7 +37,7 @@
         "resting": "450 @ 22-24c",
         "exposure": -11.95,
         "exposure_text": "-$12",
-        "move": "Next wave 450 contracts",
+        "move": "Next wave 297 contracts",
         "when": "when resting drops under 225 (now 450) and worst loss is -$150 or better",
         "at": null,
         "stuck": false,
@@ -75,27 +75,27 @@
         "resting": "375 @ 17-19c",
         "exposure": 281.78,
         "exposure_text": "+$282",
-        "move": "Hold price at 17c",
-        "when": "next cent is under the crowd price (16.2c)",
-        "at": null,
+        "move": "Step price down 1c (17c to 16c)",
+        "when": "if no fill by 6:49pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-15T23:49:32Z",
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
         "last_fill": "2026-10-15T22:44:43Z",
-        "lag_note": "Price 17c is at its floor."
+        "lag_note": "Steps to 16c if no fill by 6:49pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 7:15pm CT. Sold 6,968, 1,398 resting. Worst line -$104 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 6,968, 1,398 resting. Worst line -$104 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DEN by 7-14, DEN by 15+, SEA by 15+.",
-          "SEA by 15+: 386 behind. Price 17c is at its floor.",
+          "SEA by 15+: 386 behind. Steps to 16c if no fill by 6:49pm CT.",
           "DEN by 15+: 336 behind. Steps to 8c if no fill by 6:49pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -114,7 +114,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing is running: plan -$150, worst line -$104; spent $0 of $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -188,70 +187,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T23:44:23Z"
+    "ts": "2026-10-15T23:45:24Z"
   },
   "posts": [
-    {
-      "id": "1792028801872-5118d2",
-      "ts": "2026-10-15T01:46:41Z",
-      "book": "W7-SEADEN",
-      "kind": "chat_out",
-      "source": "chat",
-      "text": "Working on it. This can take a few minutes.",
-      "severity": "info",
-      "data": {
-        "reply_id": "cc49dc47-ad5a-45b3-80c1-92e92ffa7a46",
-        "in_reply_to": "32b2b451-6aa0-4a3f-a130-a68295371776",
-        "status": "working"
-      }
-    },
-    {
-      "id": "1792028814525-23856d",
-      "ts": "2026-10-15T01:46:54Z",
-      "book": "W7-SEADEN",
-      "kind": "chat_out",
-      "source": "chat",
-      "text": "SEA by 1-6 is first in line: it has nothing resting, but it has already sold 627 contracts against 155 on SEA by 7-14, the least-sold side. Before it gets more, that gap has to shrink to under 300, so the other sides need about 175 more fills. The next closest is SEA by 7-14, which only gets a batch once its 895 resting contracts drop below 225.",
-      "severity": "info",
-      "data": {
-        "reply_id": "18e752e8-9147-4501-8f7a-f15334da4eb7",
-        "in_reply_to": "32b2b451-6aa0-4a3f-a130-a68295371776",
-        "status": "answer"
-      }
-    },
-    {
-      "id": "1792029036323-712221",
-      "ts": "2026-10-15T01:50:36Z",
-      "book": "W7-SEADEN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 7:15 PM CT. 2,260 contracts sold, 2,919 resting. Worst line -$193 (goal -$150 by kickoff). Next: Trickle balancing starts in 18h 24m. Confidence: low.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
-    {
-      "id": "1792029137097-9083f0",
-      "ts": "2026-10-15T01:52:01Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Lagging SEA by 15+ not lowered: filling one more row in full would push the worst line to -$193, so the bot holds its price.",
-      "severity": "info",
-      "title": "Price hold"
-    },
-    {
-      "id": "1792029157291-789228",
-      "ts": "2026-10-15T01:50:35Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
     {
       "id": "1792029338619-2731ba",
       "ts": "2026-10-15T01:55:38Z",
@@ -3980,6 +3918,55 @@
       "text": "DEN by 7-14 price not lowered: the next cent is under the crowd price, so it stays at 14c.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792107924143-c1a7b9",
+      "ts": "2026-10-15T23:45:10Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line -$104 beats the -$150 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1792107924145-c4f086",
+      "ts": "2026-10-15T23:45:24Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792107924146-fda0f7",
+      "ts": "2026-10-15T23:45:24Z",
+      "book": "W7-SEADEN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line -$104. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792107944171-2a065e",
+      "ts": "2026-10-15T23:45:30Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$104. Lagging: DEN by 7-14, DEN by 15+, SEA by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792107951271-f3e372",
+      "ts": "2026-10-15T23:45:51Z",
+      "book": "W7-SEADEN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-SEADEN: 0 orders posted in 10 min while the market traded 10069 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4782,6 +4769,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+128 on DEN 7-14 @ 0.13 (maker)\n+59 on DEN 1-6 @ 0.21 (maker)\nworst outcome now -193\nheld 1254/1048/936/1283/1362/977\nIf the game ends... you make\nDEN 1-6: -7 (-0.1% of bankroll)\nDEN 7-14: +199 (+2.4% of bankroll)\nDEN 15+: +311 (+3.8% of bankroll)\nSEA 1-6: -36 (-0.4% of bankroll)\nSEA 7-14: -115 (-1.4% of bankroll)\nSEA 15+: +270 (+3.3% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792107883982-85ebb6",
+      "ts": "2026-10-15T23:44:43Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-SEADEN): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=10392. Check the command center.",
       "severity": "warn"
     }
   ]
