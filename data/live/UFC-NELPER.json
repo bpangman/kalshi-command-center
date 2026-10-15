@@ -1,13 +1,13 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-15T18:35:05.412678Z",
+  "generated_at": "2026-10-15T18:37:46.156796Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 74,
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Nelson by KO/TKO",
@@ -211,7 +211,7 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-15T18:35:03Z"
+    "ts": "2026-10-15T18:37:04Z"
   },
   "posts": [
     {
@@ -1939,6 +1939,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nNELKOTKODQ: -267\nNELSUB: +258\nNELDEC: +258\nPERKOTKODQ: -162\nPERSUB: -162\nPERDEC: +258\nDRAW: +258\nCollected $258 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNELKOTKODQ: 525 / 0\nNELSUB: 0 / 300\nNELDEC: 0 / 420\nPERKOTKODQ: 420 / 0\nPERSUB: 420 / 0\nPERDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.828 | Worst now -267 | Cash free $1500\nAnchor age 56s | Last fill 44247s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792089404066-9a6cfe",
+      "ts": "2026-10-15T18:36:25Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot error, one loop skipped (loop_once raised: The read operation timed out). It retries.",
+      "severity": "warn",
+      "title": "Bot error"
     }
   ],
   "audits": [
@@ -2048,6 +2058,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- UFC-NELPER - Cristian Perez by Submission has had no resting orders for at least 682 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792089391623-df5fc6",
+      "ts": "2026-10-15T18:36:31Z",
+      "book": "UFC-NELPER",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-NELPER - Cristian Perez by Submission has had no resting orders for at least 744 min (reason unknown: error trace in the bot log within the last 5 min).",
       "severity": "warn"
     }
   ]
