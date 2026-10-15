@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T18:59:23.125971Z",
+  "generated_at": "2026-10-15T19:02:05.828756Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$803, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Jesse Love",
@@ -39,12 +39,12 @@
         "exposure": -349.5,
         "exposure_text": "-$349",
         "move": "Step price down 1c (14c to 13c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T18:59:33Z",
+        "when": "if no fill by 2:14pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T19:14:45Z",
         "stuck": false,
         "also": "Also: glide starts Sat 12:30pm CT",
         "last_fill": "2026-10-15T17:36:56Z",
-        "lag_note": "Steps to 13c at the next check."
+        "lag_note": "Steps to 13c if no fill by 2:14pm CT."
       },
       {
         "side": "Corey Day",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 9,485, 28,967 resting. Worst line -$803 (limit now -$400)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 9,485, 28,967 resting. Worst line -$803 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -195,7 +195,7 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T18:59:14Z"
+    "ts": "2026-10-15T19:01:15Z"
   },
   "posts": [
     {
@@ -1896,6 +1896,36 @@
     {
       "id": "1792090754520-52267e",
       "ts": "2026-10-15T18:59:14Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$803, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792090835189-8b58ba",
+      "ts": "2026-10-15T18:58:24Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 94: Sam Mayer x94 at 5c. Worst line -$803.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 94.0,
+        "fills": [
+          {
+            "side": "Sam Mayer",
+            "price": 0.05,
+            "qty": 94.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792090875450-6501c0",
+      "ts": "2026-10-15T19:01:15Z",
       "book": "PHX-ORLY",
       "kind": "plan",
       "source": "narrator",
