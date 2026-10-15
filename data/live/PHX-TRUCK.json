@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T03:37:36.648439Z",
+  "generated_at": "2026-10-15T03:40:14.459716Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$945 (final target -$100 at T-60). 4,443 sold, 30,008 resting.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 53,
+    "confidence_note": "The steps are rules in the settings, but whether the worst line reaches -$100 by T-60 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "sections": [
       {
         "title": "Right now",
@@ -16,8 +16,8 @@
           "Sold 4,443 contracts so far; 30,008 more resting on the book. Premium collected $519.",
           "Worst line is -$945. The glide target right now is -$400, so it is $545 short; the final target is -$100 by T-60.",
           "Backstop is ON for Chandler Smith: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 35 of 36 drivers.",
-          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 53s. Slow reads and rate limits do this; timed steps can land a little late."
+          "Prices follow Bovada, refreshed every 5m (last 5m ago). Covers 35 of 36 drivers.",
+          "Bot is healthy: heartbeat 5s old, no errors."
         ]
       },
       {
@@ -26,9 +26,9 @@
           "Christian Eckes: sold 0, 1,464 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 9.8c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
           "Ty Majeski: sold 0, 1,464 behind the leader. Cheapest row 8c; the crowd has been buying at 8c; fair 7.9c. Already at its floor (about 8c); it will not go lower unless the crowd price or fair drops.",
           "Kaden Honeycutt: sold 281, 1,183 behind the leader. Cheapest row 14c; the crowd has been buying at 16c; fair 11.5c. Already at its floor (about 16c); it will not go lower unless the crowd price or fair drops.",
-          "Layne Riggs: sold 678, 786 behind the leader. Cheapest row 29c; the crowd has been buying at 25.4c; fair 28.1c. It can step down 1c at a time, to no lower than about 26.1c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Layne Riggs: sold 678, 786 behind the leader. Cheapest row 28c; the crowd has been buying at 25c; fair 28.1c. It can step down 1c at a time, to no lower than about 26.1c, after 20 min with no fill, at most one step per 15 min. Last step: 1m ago.",
           "Brent Crews: sold 706, 758 behind the leader. Cheapest row 7c; the crowd has been buying at n/a; fair 5.2c. It can step down 1c at a time, to no lower than about 3.2c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
-          "The bot checks every 53s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
       },
@@ -38,7 +38,7 @@
           "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $400 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
           "Tristan McKee: 2 waves so far, 1,240 contracts offered in all; the latest (490 at 3c) is 0% filled.",
-          "Latest wave note (1h 31m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
+          "Latest wave note (1h 33m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
           "Waves stop at T-60."
         ]
       },
@@ -90,14 +90,14 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T03:37:21Z",
+        "at": "2026-10-15T03:39:22Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 7c toward 3.2c."
       },
       {
-        "at": "2026-10-15T03:37:21Z",
+        "at": "2026-10-15T03:53:14Z",
         "label": "Possible price step on Layne Riggs",
-        "detail": "If no fill by then it may drop 1c from 29c toward 26.1c."
+        "detail": "If no fill by then it may drop 1c from 28c toward 26.1c."
       }
     ],
     "sides": [
@@ -139,7 +139,7 @@
         "resting": 1320.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.29
+        "price": 0.28
       },
       {
         "label": "Ty Majeski",
@@ -151,7 +151,7 @@
       }
     ],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T03:37:21Z"
+    "ts": "2026-10-15T03:39:22Z"
   },
   "posts": [
     {
@@ -427,6 +427,31 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$945 (final target -$100 at T-60). 4,443 sold, 30,008 resting. Next: Checkpoint T-1440 in 19h 53m. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792035501618-f079bc",
+      "ts": "2026-10-15T03:38:14Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on lagging Layne Riggs: 786 behind the leader and no fill for 509 min, so the bot added 300 at 28c, one cent under its old lowest 29c; the crowd has been buying at 25c (241 traded). Next step on this side no sooner than 15 min.",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Layne Riggs",
+        "from": 0.29,
+        "to": 0.28
+      }
+    },
+    {
+      "id": "1792035562047-aa1c91",
+      "ts": "2026-10-15T03:39:22Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$945 (final target -$100 at T-60). 4,443 sold, 30,008 resting. Next: Checkpoint T-1440 in 19h 51m. Confidence: medium.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
     }
