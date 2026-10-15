@@ -1,86 +1,150 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-15T16:47:23.005469Z",
+  "generated_at": "2026-10-15T17:06:07.805839Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 4,560 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+    "headline": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 74,
+    "moves": [
+      {
+        "side": "Buckley by Decision",
+        "resting": "900 @ 14c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Hold price at 14c",
+        "when": "already at fair plus margin (14c)",
+        "at": null,
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-15T14:48:03Z"
+      },
+      {
+        "side": "Buckley by KO/TKO",
+        "resting": "900 @ 33c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Step price down 1c (33c to 32c)",
+        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "at": null,
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-15T14:48:03Z"
+      },
+      {
+        "side": "Buckley by Submission",
+        "resting": "30 @ 3c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Holding",
+        "when": "no move planned until the full ladder posts at Sat 9:00am CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-15T14:48:03Z"
+      },
+      {
+        "side": "Draw / No Contest",
+        "resting": "30 @ 3c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Holding",
+        "when": "no move planned until the full ladder posts at Sat 9:00am CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-15T14:48:03Z"
+      },
+      {
+        "side": "Malott by Decision",
+        "resting": "900 @ 26c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Step price down 1c (26c to 25c)",
+        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "at": null,
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-15T14:48:03Z"
+      },
+      {
+        "side": "Malott by KO/TKO",
+        "resting": "900 @ 20c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Step price down 1c (20c to 19c)",
+        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "at": null,
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-15T14:48:03Z"
+      },
+      {
+        "side": "Malott by Submission",
+        "resting": "900 @ 13c",
+        "exposure": 0.0,
+        "exposure_text": "$0",
+        "move": "Hold price at 13c",
+        "when": "already at fair plus margin (13c)",
+        "at": null,
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-15T14:48:03Z"
+      }
+    ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:55 PM CT (in 2d 10h).",
-          "Moneyline right now: Buckley 46% to win, Malott 54%.",
-          "Sold 0 contracts so far; 4,560 more resting across 7 buckets. Premium $0.",
-          "Worst line $0 (-$26 if every resting order filled). Backstop -$500; trickle target -$150 by the fight.",
-          "Wave 1 holds back 3,000 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 1d 21h).",
-          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
+          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 0, 4,560 resting. Worst line $0 (target -$150). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No bucket is lagging right now (rule: more than 15% of the leader, up to 150 contracts, behind it, and fair above 5%).",
-          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
-          "A step is skipped if filling the new row in full would push the worst line lower."
+          "No bucket is lagging."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "Wave 1 is posted: one lowest rung per bucket. At Sat 10/17 9:00 AM CT (in 1d 21h) the bot releases the rest of every ladder: 3,000 more contracts across 5 buckets.",
-          "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
-          "Closest to triggering: Buckley by KO/TKO with 900 resting against a trigger of 225.",
-          "The worst-line gate is open ($0 is at or better than -$100).",
-          "Batches used so far: none."
+          "Full ladder posts Sat 9:00am CT: 3,000 more contracts across 5 buckets.",
+          "A bucket gets a new batch when its resting drops under 25% of its allotment.",
+          "Gate open: worst line $0 is better than -$100.",
+          "Batches used: none (max 3 per bucket)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Trickle balancing starts at T-120 (Sat 10/17 7:55 PM CT, in 2d 8h): the bot records the worst line then and walks it to -$150 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
-          "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
-          "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
-          "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
+          "Backstop off. It trips if a bucket's line falls under -$500.",
+          "Paid balancing starts Sat 7:55pm CT: worst line to -$150, up to $100.",
+          "Even-up Sat 9:25pm CT; last-resort take Sat 9:50pm CT; handoff to the fight Sat 9:52pm CT.",
+          "The fight start is an estimate and can move."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Yes, on its own: the full ladder at the release time, extra batches on thin buckets while the gate is open, price steps on lagging buckets, and the paid trickle from T-120.",
-          "No, it will not: reprice resting rows when the moneyline moves, or add anything once the worst line is under the gate. The start time can shift if earlier bouts run long.",
-          "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
+          "Mostly yes: the full ladder, extra batches, price steps and paid balancing run by rule. The start time can shift."
         ]
       }
     ],
     "next_steps": [
       {
         "at": "2026-10-17T14:00:00Z",
-        "label": "Full ladder release",
-        "detail": "The held-back rungs (3,000 contracts) post."
+        "label": "Full ladder posts",
+        "detail": "3,000 more contracts go out."
       },
       {
         "at": "2026-10-18T00:55:00Z",
-        "label": "Trickle balancing starts",
-        "detail": "T-120: walk the worst line to -$150."
+        "label": "Paid balancing starts",
+        "detail": "Worst line to -$150."
       },
       {
         "at": "2026-10-18T02:25:00Z",
         "label": "Even-up window",
-        "detail": "T-30: lagging buckets re-priced toward fair, queue kept."
-      },
-      {
-        "at": "2026-10-18T02:50:00Z",
-        "label": "Last-resort take window",
-        "detail": "T-5: the bot may sell to close the last gaps."
-      },
-      {
-        "at": "2026-10-18T02:52:00Z",
-        "label": "Cutover to the fight",
-        "detail": "About 3 minutes before the start the in-fight engine takes over."
+        "detail": "Lagging buckets repriced toward fair."
       }
     ],
     "sides": [
@@ -142,7 +206,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-15T16:46:44Z"
+    "ts": "2026-10-15T17:06:03Z"
   },
   "posts": [
     {
@@ -384,6 +448,55 @@
       "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 1d 21h. The bot checks every 1m.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792082985850-23dcc8",
+      "ts": "2026-10-15T16:49:45Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 4,560 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 1d 21h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792083026843-109eb3",
+      "ts": "2026-10-15T16:50:26Z",
+      "book": "UFC-BUCMAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBUCKOTKODQ: +0\nBUCSUB: +0\nBUCDEC: +0\nMALKOTKODQ: +0\nMALSUB: +0\nMALDEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 900\nBUCSUB: 0 / 30\nBUCDEC: 0 / 900\nMALKOTKODQ: 0 / 900\nMALSUB: 0 / 900\nMALDEC: 0 / 900\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $1500\nAnchor age 110s | Last fill none yet",
+      "severity": "info"
+    },
+    {
+      "id": "1792083046333-554671",
+      "ts": "2026-10-15T16:50:46Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 4,560 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 1d 21h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792083469422-59576b",
+      "ts": "2026-10-15T16:57:49Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 4,560 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 1d 21h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792083902604-91cfd0",
+      "ts": "2026-10-15T17:05:02Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line $0. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
