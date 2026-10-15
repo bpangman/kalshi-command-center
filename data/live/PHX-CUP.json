@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T08:41:13.175356Z",
+  "generated_at": "2026-10-15T08:43:51.699702Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,7 +16,7 @@
           "Sold 10,859 contracts so far; 56,232 more resting on the book. Premium collected $1,267.",
           "Worst line is -$1,133. The glide target right now is -$800, so it is $332 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 37 of 37 drivers.",
+          "Prices follow Kalshi, refreshed every 5m (last 0s ago). Covers 37 of 37 drivers.",
           "Kalshi trading is paused right now; the bot is waiting.",
           "New posts are on hold: free cash is $1,256 (read 2m ago) and this book keeps $1,300 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $1,300."
         ]
@@ -27,7 +27,7 @@
           "Kyle Larson: sold 0, 2,400 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 7.9c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
           "Christopher Bell: sold 900, 1,500 behind the leader. Cheapest row 19c; the crowd has been buying at n/a; fair 15.6c. It can step down 1c at a time, to no lower than about 13.6c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Ryan Blaney: sold 1,769, 631 behind the leader. Cheapest row 20c; the crowd has been buying at 20c; fair 20.2c. Already at its floor (about 20c); it will not go lower unless the crowd price or fair drops.",
-          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: new posts are on hold: free cash $1,256 is under the $1,300 floor; its rows vanished with no fill 2h 32m ago and the bot re-posted them.",
+          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: new posts are on hold: free cash $1,256 is under the $1,300 floor; its rows vanished with no fill 2h 35m ago and the bot re-posted them.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
@@ -89,7 +89,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T08:40:33Z",
+        "at": "2026-10-15T08:43:34Z",
         "label": "Possible price step on Christopher Bell",
         "detail": "If no fill by then it may drop 1c from 19c toward 13.6c."
       }
@@ -145,7 +145,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T08:40:33Z"
+    "ts": "2026-10-15T08:43:34Z"
   },
   "posts": [
     {
@@ -925,6 +925,26 @@
       "text": "Quiet: nothing filled or changed in 15 min. 56,232 resting across 6 sides. Next scheduled step: Checkpoint T-2880 in 1d 10h. The bot checks every 30s.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792053673587-b18a68",
+      "ts": "2026-10-15T08:41:13Z",
+      "book": "PHX-CUP",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet: nothing filled or changed in 15 min. 56,232 resting across 6 sides. Next scheduled step: Checkpoint T-2880 in 1d 10h. The bot checks every 30s.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792053794510-fdeca8",
+      "ts": "2026-10-15T08:43:03Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "The bot logged a sharp price move on 1 driver: driver COHE.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
@@ -1224,6 +1244,42 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1132.50 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792053729413-72a945",
+      "ts": "2026-10-15T08:42:09Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 11 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-RYBL low 2231c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-AUCI low 1500c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792053729414-8eca0b",
+      "ts": "2026-10-15T08:42:09Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): worst -1132.50 vs floor -825.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792053783725-58222a",
+      "ts": "2026-10-15T08:43:03Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1792053783726-10ec37",
+      "ts": "2026-10-15T08:43:03Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Corey Heim (+47%)",
+      "severity": "warn"
     }
   ]
 }
