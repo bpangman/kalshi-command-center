@@ -1,13 +1,13 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T22:41:52.167323Z",
+  "generated_at": "2026-10-15T22:44:01.115810Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$182, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 63,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "checks_every_s": 20,
     "moves": [
       {
         "side": "SEA by 7-14",
@@ -37,13 +37,13 @@
         "resting": "75 @ 22c",
         "exposure": -15.03,
         "exposure_text": "-$15",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-15T23:30:00Z",
+        "move": "Step price down 1c (22c to 21c)",
+        "when": "if no fill by 5:49pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-15T22:49:29Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-15T09:11:26Z",
-        "lag_note": "Price 22c is at its floor."
+        "lag_note": "Steps to 21c if no fill by 5:49pm CT."
       },
       {
         "side": "DEN by 15+",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 6,418, 1,498 resting. Worst line -$182 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
+          "Pregame build, kickoff 7:15pm CT. Sold 6,418, 1,498 resting. Worst line -$182 (goal -$150)."
         ]
       },
       {
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T22:40:54Z"
+    "ts": "2026-10-15T22:43:56Z"
   },
   "posts": [
     {
@@ -3651,6 +3651,16 @@
     {
       "id": "1792103994142-8475da",
       "ts": "2026-10-15T22:39:54Z",
+      "book": "W7-SEADEN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$182, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792104115145-c45cf9",
+      "ts": "2026-10-15T22:41:55Z",
       "book": "W7-SEADEN",
       "kind": "plan",
       "source": "narrator",
