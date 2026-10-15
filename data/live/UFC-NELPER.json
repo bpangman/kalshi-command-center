@@ -1,33 +1,33 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-15T06:11:21.863872Z",
+  "generated_at": "2026-10-15T06:13:59.782712Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 683 sold, 1,852 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$208.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 75,
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 1,242 sold, 1,293 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$283.",
+    "confidence": "high",
+    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
+    "checks_every_s": 45,
     "sections": [
       {
         "title": "Right now",
         "lines": [
           "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 8:45 PM CT (in 2d 19h).",
           "Moneyline right now: Nelson 24% to win, Perez 76%.",
-          "Sold 683 contracts so far; 1,852 more resting across 7 buckets. Premium $178.",
-          "Worst line -$208 (-$90 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
+          "Sold 1,242 contracts so far; 1,293 more resting across 7 buckets. Premium $242.",
+          "Worst line -$283 (-$84 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,395 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 7h).",
-          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
+          "Bot is healthy: heartbeat 44s old, no errors."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Nelson by KO/TKO: sold 0, 386 behind the leader. Cheapest row 10c, fair 9c. It can step down 1c at a time, to no lower than about 7c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 175 more contracts are held back for the full-ladder release.",
-          "Nelson by Decision: sold 0, 386 behind the leader. Cheapest row 12c, fair 11.2c. It can step down 1c at a time, to no lower than about 9.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "Perez by Decision: sold 0, 386 behind the leader. Cheapest row 32c, fair 29.9c. It can step down 1c at a time, to no lower than about 27.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "Perez by Submission: sold 297, 89 behind the leader. Cheapest row 13c, fair 11.6c. It can step down 1c at a time, to no lower than about 9.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "Nelson by Decision: sold 0, 525 behind the leader. Cheapest row 12c, fair 11.2c. It can step down 1c at a time, to no lower than about 9.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
+          "Perez by Decision: sold 0, 525 behind the leader. Cheapest row 32c, fair 29.9c. It can step down 1c at a time, to no lower than about 27.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
+          "Perez by Submission: sold 297, 228 behind the leader. Cheapest row 13c, fair 11.6c. It can step down 1c at a time, to no lower than about 9.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
+          "Perez by KO/TKO: sold 420, 105 behind the leader. Nothing is resting here. A catch-up batch posts for a lagging bucket with nothing resting, if cash and the worst-line gate allow. 280 more contracts are held back for the full-ladder release.",
+          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -36,9 +36,10 @@
         "lines": [
           "Wave 1 is posted: one lowest rung per bucket. At Sat 10/17 9:00 AM CT (in 2d 7h) the bot releases the rest of every ladder: 1,395 more contracts across 6 buckets.",
           "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
-          "Perez by KO/TKO is thin (34 resting) but is 386 contracts ahead of the least-sold bucket (limit 300), so it gets no batch until the others catch up.",
+          "Nelson by KO/TKO is thin (0 resting) but is 525 contracts ahead of the least-sold bucket (limit 300), so it gets no batch until the others catch up.",
+          "Perez by KO/TKO is thin (0 resting) but is 420 contracts ahead of the least-sold bucket (limit 300), so it gets no batch until the others catch up.",
           "Closest to triggering: Perez by Submission with 123 resting against a trigger of 105.",
-          "The worst-line gate is closed: batches wait until the worst line is -$100 or better (it is -$208).",
+          "The worst-line gate is closed: batches wait until the worst line is -$100 or better (it is -$283).",
           "Batches used so far: none."
         ]
       },
@@ -56,7 +57,7 @@
         "lines": [
           "Yes, on its own: the full ladder at the release time, extra batches on thin buckets while the gate is open, price steps on lagging buckets, and the paid trickle from T-120.",
           "No, it will not: reprice resting rows when the moneyline moves, or add anything once the worst line is under the gate. The start time can shift if earlier bouts run long.",
-          "Depends on the crowd: the worst line is -$208 against a -$100 target. The trickle covers up to $100; the rest depends on fills on the lagging buckets.",
+          "Depends on the crowd: the worst line is -$283 against a -$100 target. The trickle covers up to $100; the rest depends on fills on the lagging buckets.",
           "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
         ]
       }
@@ -88,14 +89,14 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T06:10:27Z",
+        "at": "2026-10-15T06:13:28Z",
         "label": "Possible price step on Nelson by Decision",
         "detail": "If no fill by then it may drop 1c from 12c toward 9.2c."
       },
       {
-        "at": "2026-10-15T06:10:27Z",
-        "label": "Possible price step on Nelson by KO/TKO",
-        "detail": "If no fill by then it may drop 1c from 10c toward 7c."
+        "at": "2026-10-15T06:13:28Z",
+        "label": "Possible price step on Perez by Decision",
+        "detail": "If no fill by then it may drop 1c from 32c toward 27.9c."
       }
     ],
     "sides": [
@@ -109,11 +110,11 @@
       },
       {
         "label": "Nelson by KO/TKO",
-        "held": 0.0,
-        "resting": 525.0,
+        "held": 525.0,
+        "resting": 0.0,
         "target": 700.0,
-        "status": "lagging",
-        "price": 0.1
+        "status": "heavy",
+        "price": null
       },
       {
         "label": "Nelson by Submission",
@@ -133,11 +134,11 @@
       },
       {
         "label": "Perez by KO/TKO",
-        "held": 385.9,
-        "resting": 33.9,
+        "held": 419.8,
+        "resting": 0.0,
         "target": 700.0,
-        "status": "heavy",
-        "price": 0.36
+        "status": "lagging",
+        "price": null
       },
       {
         "label": "Perez by Submission",
@@ -157,7 +158,7 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-15T06:10:27Z"
+    "ts": "2026-10-15T06:13:28Z"
   },
   "posts": [
     {
@@ -677,6 +678,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792044687639-5889cf",
+      "ts": "2026-10-15T06:11:27Z",
+      "book": "UFC-NELPER",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 683 sold, 1,852 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$208. Next: Full ladder release in 2d 7h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792044768297-499d9d",
+      "ts": "2026-10-15T06:12:46Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on Nelson by KO/TKO: its line -$283 is under -$250. The bot pulled 0 resting contracts and adds nothing more until the others catch up.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792044808615-7c80f9",
+      "ts": "2026-10-15T06:13:28Z",
+      "book": "UFC-NELPER",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 1,242 sold, 1,293 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$283. Next: Full ladder release in 2d 7h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": []
