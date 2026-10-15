@@ -1,10 +1,10 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-15T05:41:57.206733Z",
+  "generated_at": "2026-10-15T05:44:35.264555Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 946 sold, 2,473 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$333.",
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 1,279 sold, 2,140 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$290.",
     "confidence": "high",
     "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
     "checks_every_s": 45,
@@ -14,11 +14,10 @@
         "lines": [
           "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:20 PM CT (in 2d 20h).",
           "Moneyline right now: Blanchfield 76% to win, Jasudavicius 24%.",
-          "Sold 946 contracts so far; 2,473 more resting across 7 buckets. Premium $267.",
-          "Worst line -$333 (-$133 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
+          "Sold 1,279 contracts so far; 2,140 more resting across 7 buckets. Premium $310.",
+          "Worst line -$290 (-$128 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,850 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 8h).",
-          "Backstop is ON for Blanchfield by Decision: its line is under -$350, so nothing more is added there until the others catch up.",
-          "Bot is healthy: heartbeat 40s old, no errors."
+          "Bot is healthy: heartbeat 16s old, no errors."
         ]
       },
       {
@@ -26,8 +25,8 @@
         "lines": [
           "Blanchfield by KO/TKO: sold 0, 600 behind the leader. Cheapest row 31c, fair 28.2c. It can step down 1c at a time, to no lower than about 26.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
           "Jasudavicius by KO/TKO: sold 0, 600 behind the leader. Cheapest row 9c, fair 7.9c. It can step down 1c at a time, to no lower than about 5.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 250 more contracts are held back for the full-ladder release.",
-          "Blanchfield by Submission: sold 90, 510 behind the leader. Cheapest row 13c, fair 11.6c. It can step down 1c at a time, to no lower than about 9.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
           "Jasudavicius by Decision: sold 156, 444 behind the leader. Cheapest row 15c, fair 12.4c. It can step down 1c at a time, to no lower than about 10.4c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
+          "Blanchfield by Submission: sold 423, 177 behind the leader. Cheapest row 13c, fair 11.6c. It can step down 1c at a time, to no lower than about 9.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
           "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
@@ -39,7 +38,7 @@
           "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
           "Blanchfield by Decision is thin (0 resting) but is 600 contracts ahead of the least-sold bucket (limit 300), so it gets no batch until the others catch up.",
           "Closest to triggering: Jasudavicius by Submission with 140 resting against a trigger of 75.",
-          "The worst-line gate is closed: batches wait until the worst line is -$100 or better (it is -$333).",
+          "The worst-line gate is closed: batches wait until the worst line is -$100 or better (it is -$290).",
           "Batches used so far: 2."
         ]
       },
@@ -57,7 +56,7 @@
         "lines": [
           "Yes, on its own: the full ladder at the release time, extra batches on thin buckets while the gate is open, price steps on lagging buckets, and the paid trickle from T-120.",
           "No, it will not: reprice resting rows when the moneyline moves, or add anything once the worst line is under the gate. The start time can shift if earlier bouts run long.",
-          "Depends on the crowd: the worst line is -$333 against a -$100 target. The trickle covers up to $100; the rest depends on fills on the lagging buckets.",
+          "Depends on the crowd: the worst line is -$290 against a -$100 target. The trickle covers up to $100; the rest depends on fills on the lagging buckets.",
           "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
         ]
       }
@@ -89,12 +88,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T05:41:14Z",
+        "at": "2026-10-15T05:44:16Z",
         "label": "Possible price step on Blanchfield by KO/TKO",
         "detail": "If no fill by then it may drop 1c from 31c toward 26.2c."
       },
       {
-        "at": "2026-10-15T05:41:14Z",
+        "at": "2026-10-15T05:44:16Z",
         "label": "Possible price step on Blanchfield by Submission",
         "detail": "If no fill by then it may drop 1c from 13c toward 9.6c."
       }
@@ -118,8 +117,8 @@
       },
       {
         "label": "Blanchfield by Submission",
-        "held": 90.0,
-        "resting": 510.0,
+        "held": 423.3,
+        "resting": 176.7,
         "target": 1000.0,
         "status": "lagging",
         "price": 0.13
@@ -158,7 +157,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-15T05:41:14Z"
+    "ts": "2026-10-15T05:44:16Z"
   },
   "posts": [
     {
@@ -752,6 +751,26 @@
       "text": "Backstop released on Blanchfield by Decision: its line is back to -$290, so it can add again.",
       "severity": "info",
       "title": "Backstop"
+    },
+    {
+      "id": "1792043015993-622ddd",
+      "ts": "2026-10-15T05:41:29Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 333: Blanchfield by Submission x333 at 13c. Book now: 1,279 sold in all, worst line -$290.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 333.0,
+        "fills": [
+          {
+            "side": "Blanchfield by Submission",
+            "price": 0.13,
+            "qty": 333.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
