@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T20:21:19.557936Z",
+  "generated_at": "2026-10-15T20:24:01.449836Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": -51.12,
         "exposure_text": "-$51",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 3:23pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-15T20:23:10Z",
+        "when": "next bot check (no fill for 20+ min)",
+        "at": "2026-10-15T20:23:52Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "Steps to 6c if no fill by 3:23pm CT."
+        "lag_note": "Steps to 6c at the next check."
       },
       {
         "side": "Christian Eckes",
@@ -77,12 +77,12 @@
         "exposure": 355.28,
         "exposure_text": "+$355",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "if no fill by 3:22pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-15T20:22:39Z",
+        "when": "next bot check (no fill for 20+ min)",
+        "at": "2026-10-15T20:23:52Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Steps to 8c if no fill by 3:22pm CT."
+        "lag_note": "Steps to 8c at the next check."
       },
       {
         "side": "Kaden Honeycutt",
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Kaden Honeycutt: 1,181 behind. Crowd is quiet here (20 traded).",
-          "Ty Majeski: 1,164 behind. Steps to 8c if no fill by 3:22pm CT.",
+          "Ty Majeski: 1,164 behind. Steps to 8c at the next check.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T20:20:50Z"
+    "ts": "2026-10-15T20:23:52Z"
   },
   "posts": [
     {
@@ -2762,6 +2762,16 @@
         "contracts": 300.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792095711328-cdfaf4",
+      "ts": "2026-10-15T20:21:40Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Layne Riggs price not lowered: the next cent is under the crowd price, so it stays at 28c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
