@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T20:15:55.132802Z",
+  "generated_at": "2026-10-15T20:18:37.958249Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -27,7 +27,7 @@
         "exposure": -325.88,
         "exposure_text": "-$326",
         "move": "Hold price at 25c",
-        "when": "crowd pays 25c; steps down 1c only if it trades lower",
+        "when": "crowd pays 24.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": true,
         "also": "Also: glide starts Sat 12:30pm CT; even-up Sat 5:30pm CT",
@@ -36,16 +36,16 @@
       },
       {
         "side": "Carson Kvapil",
-        "resting": "752 @ 14-17c",
+        "resting": "752 @ 13-17c",
         "exposure": -325.07,
         "exposure_text": "-$325",
-        "move": "Step price down 1c (14c to 13c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T20:16:32Z",
-        "stuck": false,
-        "also": "Also: glide starts Sat 12:30pm CT",
+        "move": "Hold price at 13c",
+        "when": "crowd pays 13c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": true,
+        "also": "Also: glide starts Sat 12:30pm CT; even-up Sat 5:30pm CT",
         "last_fill": "2026-10-15T17:36:56Z",
-        "lag_note": "Steps to 13c at the next check."
+        "lag_note": "Price 13c matches the crowd."
       },
       {
         "side": "Corey Day",
@@ -79,11 +79,11 @@
         "exposure": 921.57,
         "exposure_text": "+$922",
         "move": "Hold price at 8c",
-        "when": "no crowd trade data yet",
+        "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Price 8c matches the crowd."
       }
     ],
     "sections": [
@@ -97,7 +97,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Justin Allgaier, Sheldon Creed.",
-          "Sheldon Creed: 1,700 behind. No crowd trade data yet.",
+          "Sheldon Creed: 1,700 behind. Price 8c matches the crowd.",
           "Brent Crews: 1,630 behind. Price 10c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -159,7 +159,7 @@
         "resting": 752.4,
         "target": 2000,
         "status": "lagging",
-        "price": 0.14
+        "price": 0.13
       },
       {
         "label": "Corey Day",
@@ -196,7 +196,7 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T20:15:48Z"
+    "ts": "2026-10-15T20:17:49Z"
   },
   "posts": [
     {
@@ -2090,6 +2090,21 @@
       "data": {
         "contracts": 752.0,
         "rows": 2
+      }
+    },
+    {
+      "id": "1792095429022-0b57a1",
+      "ts": "2026-10-15T20:16:57Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Carson Kvapil: no fill for 160 min, added 75 at 13c (was 14c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Carson Kvapil",
+        "from": 0.14,
+        "to": 0.13
       }
     }
   ],
