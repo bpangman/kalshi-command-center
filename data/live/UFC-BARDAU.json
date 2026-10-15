@@ -1,24 +1,24 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-15T05:09:27.803054Z",
+  "generated_at": "2026-10-15T05:12:06.593877Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 8:10 PM CT. 840 sold, 1,590 resting; 1,500 more post at Sat 10/17 9:00 AM CT. Worst line -$302.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 95,
+    "checks_every_s": 75,
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 8:10 PM CT (in 2d 20h).",
+          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 8:10 PM CT (in 2d 19h).",
           "Moneyline right now: Barriault 36% to win, Daukaus 64%.",
           "Sold 840 contracts so far; 1,590 more resting across 7 buckets. Premium $118.",
           "Worst line -$302 (-$2 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,500 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 8h).",
           "Backstop is ON for Barriault by KO/TKO, Daukaus by Submission: its line is under -$250, so nothing more is added there until the others catch up.",
-          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 2m. Slow reads and rate limits do this; timed steps can land a little late."
+          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
         ]
       },
       {
@@ -28,7 +28,7 @@
           "Barriault by Decision: sold 0, 420 behind the leader. Cheapest row 15c, fair 14.3c. It can step down 1c at a time, to no lower than about 12.3c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Daukaus by KO/TKO: sold 0, 420 behind the leader. Cheapest row 30c, fair 27.2c. It can step down 1c at a time, to no lower than about 25.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Daukaus by Decision: sold 0, 420 behind the leader. Cheapest row 28c, fair 25.6c. It can step down 1c at a time, to no lower than about 23.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "The bot checks every 2m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -47,7 +47,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Trickle balancing starts at T-120 (Sat 10/17 6:10 PM CT, in 2d 18h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
+          "Trickle balancing starts at T-120 (Sat 10/17 6:10 PM CT, in 2d 17h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
           "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
           "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
           "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
@@ -90,12 +90,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T05:09:01Z",
+        "at": "2026-10-15T05:12:02Z",
         "label": "Possible price step on Barriault by Decision",
         "detail": "If no fill by then it may drop 1c from 15c toward 12.3c."
       },
       {
-        "at": "2026-10-15T05:09:01Z",
+        "at": "2026-10-15T05:12:02Z",
         "label": "Possible price step on Barriault by Submission",
         "detail": "If no fill by then it may drop 1c from 7c toward 4c."
       }
@@ -159,7 +159,7 @@
       }
     ],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-15T05:09:01Z"
+    "ts": "2026-10-15T05:12:02Z"
   },
   "posts": [
     {
