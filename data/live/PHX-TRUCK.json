@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T21:19:06.510429Z",
+  "generated_at": "2026-10-15T21:21:48.821194Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 50,
+    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Chandler Smith",
@@ -64,12 +64,12 @@
         "exposure": 355.28,
         "exposure_text": "+$355",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T21:18:17Z",
+        "when": "if no fill by 4:33pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T21:33:24Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T09:59:46Z",
-        "lag_note": "Steps to 9c at the next check."
+        "lag_note": "Steps to 9c if no fill by 4:33pm CT."
       },
       {
         "side": "Ty Majeski",
@@ -102,7 +102,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 6:30pm CT. Sold 5,345, 29,105 resting. Worst line -$809 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
+          "Pre-race growth, green flag Fri 6:30pm CT. Sold 5,345, 29,105 resting. Worst line -$809 (limit now -$400)."
         ]
       },
       {
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T21:18:17Z"
+    "ts": "2026-10-15T21:21:18Z"
   },
   "posts": [
     {
@@ -2900,6 +2900,16 @@
       "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792099157583-8c077b",
+      "ts": "2026-10-15T21:19:17Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -3694,6 +3704,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): worst -808.72 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792099160140-3c4294",
+      "ts": "2026-10-15T21:19:20Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-CHEC low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1293c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
