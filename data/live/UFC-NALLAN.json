@@ -1,13 +1,13 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-15T20:56:47.088730Z",
+  "generated_at": "2026-10-15T20:59:27.948429Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$215.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 45,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Landwehr by KO/TKO",
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 1,115, 1,540 resting. Worst line -$215 (target -$100)."
+          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 1,115, 1,540 resting. Worst line -$215 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-15T20:56:07Z"
+    "ts": "2026-10-15T20:59:08Z"
   },
   "posts": [
     {
@@ -2013,6 +2013,16 @@
       "text": "Bot error, one loop skipped (loop_once raised: The read operation timed out). It retries.",
       "severity": "warn",
       "title": "Bot error"
+    },
+    {
+      "id": "1792097888033-018b9f",
+      "ts": "2026-10-15T20:58:08Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$215. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
@@ -2185,6 +2195,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+250 on LANSUB @ 0.08 (maker)\nworst outcome now -212\nheld 420/25/0/420/250/0/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792097932857-3f4ecc",
+      "ts": "2026-10-15T20:58:52Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-NALLAN - Mandel Nallo by KO/TKO/DQ has had no resting orders for at least 1172 min (reason unknown: error trace in the bot log within the last 5 min).",
       "severity": "warn"
     }
   ]
