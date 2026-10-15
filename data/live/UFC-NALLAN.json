@@ -1,19 +1,54 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-15T17:47:28.726388Z",
+  "generated_at": "2026-10-15T17:50:46.588010Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line unknown.",
-    "confidence": "low",
-    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 45,
+    "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$235.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 72,
     "moves": [
+      {
+        "side": "Landwehr by KO/TKO",
+        "resting": "none",
+        "exposure": -234.94,
+        "exposure_text": "-$235",
+        "move": "Full ladder posts (+280 @ 19-20c)",
+        "when": "Sat 9:00am CT",
+        "at": "2026-10-17T14:00:00Z",
+        "stuck": true,
+        "last_fill": "2026-10-15T03:32:24Z"
+      },
+      {
+        "side": "Nallo by KO/TKO",
+        "resting": "none",
+        "exposure": -234.81,
+        "exposure_text": "-$235",
+        "move": "Stops adding (backstop)",
+        "when": "holding until this side's loss is back above -$225 (now -$235)",
+        "at": null,
+        "stuck": true,
+        "last_fill": "2026-10-15T01:30:51Z"
+      },
+      {
+        "side": "Nallo by Submission",
+        "resting": "395 @ 13c",
+        "exposure": 160.08,
+        "exposure_text": "+$160",
+        "move": "Step price down 1c (13c to 12c)",
+        "when": "next bot check, if the crowd trades under 13c",
+        "at": null,
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:00pm CT",
+        "last_fill": "2026-10-15T01:01:22Z",
+        "lag_note": "Steps to 12c if the crowd trades lower."
+      },
       {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": null,
-        "exposure_text": "unknown",
+        "exposure": 185.06,
+        "exposure_text": "+$185",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
         "at": null,
@@ -23,85 +58,56 @@
       {
         "side": "Landwehr by Decision",
         "resting": "420 @ 6c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 7-8c)",
-        "when": "Sat 9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
+        "exposure": 185.06,
+        "exposure_text": "+$185",
+        "move": "Hold price at 6c",
+        "when": "already at fair plus margin (6c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts Sat 5:00pm CT; even-up Sat 6:30pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:00pm CT",
         "last_fill": "2026-10-15T01:00:26Z"
-      },
-      {
-        "side": "Landwehr by KO/TKO",
-        "resting": "none",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 19-20c)",
-        "when": "Sat 9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
-        "stuck": false,
-        "last_fill": "2026-10-15T03:32:24Z"
       },
       {
         "side": "Landwehr by Submission",
         "resting": "525 @ 8c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+175 @ 9c)",
-        "when": "Sat 9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
+        "exposure": 185.06,
+        "exposure_text": "+$185",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "next bot check, if the crowd trades under 8c",
+        "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts Sat 5:00pm CT; even-up Sat 6:30pm CT",
-        "last_fill": "2026-10-15T01:00:26Z"
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:00pm CT",
+        "last_fill": "2026-10-15T01:00:26Z",
+        "lag_note": "Steps to 7c if the crowd trades lower."
       },
       {
         "side": "Nallo by Decision",
         "resting": "420 @ 8c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 9-10c)",
-        "when": "Sat 9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts Sat 5:00pm CT; even-up Sat 6:30pm CT",
-        "last_fill": "2026-10-15T01:00:26Z"
-      },
-      {
-        "side": "Nallo by KO/TKO",
-        "resting": "none",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$225 (now unknown)",
+        "exposure": 185.06,
+        "exposure_text": "+$185",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "next bot check, if the crowd trades under 8c",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-10-15T01:30:51Z"
-      },
-      {
-        "side": "Nallo by Submission",
-        "resting": "395 @ 13c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 14-15c)",
-        "when": "Sat 9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts Sat 5:00pm CT; even-up Sat 6:30pm CT",
-        "last_fill": "2026-10-15T01:01:22Z"
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:00pm CT",
+        "last_fill": "2026-10-15T01:00:26Z",
+        "lag_note": "Steps to 7c if the crowd trades lower."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold ?, 1,790 resting. Worst line unknown (target -$100). Bot says it is not ok."
+          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 865, 1,790 resting. Worst line -$235 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No bucket is lagging."
+          "Lagging (150+ behind the leader): Landwehr by Submission, Nallo by Decision, Nallo by Submission.",
+          "Landwehr by Submission: 420 behind. Steps to 7c if the crowd trades lower.",
+          "Nallo by Decision: 420 behind. Steps to 7c if the crowd trades lower.",
+          "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -109,6 +115,7 @@
         "lines": [
           "Full ladder posts Sat 9:00am CT: 1,575 more contracts across 6 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$235).",
           "Batches used: none (max 3 per bucket)."
         ]
       },
@@ -167,7 +174,7 @@
         "held": 0.0,
         "resting": 525.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       },
       {
@@ -175,7 +182,7 @@
         "held": 0.0,
         "resting": 420.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       },
       {
@@ -191,7 +198,7 @@
         "held": 25.0,
         "resting": 395.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.13
       },
       {
@@ -204,7 +211,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-15T17:46:41Z"
+    "ts": "2026-10-15T17:50:43Z"
   },
   "posts": [
     {
@@ -1606,6 +1613,46 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line unknown. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792086462363-c8426f",
+      "ts": "2026-10-15T17:47:42Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$235. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792086522823-d1c5df",
+      "ts": "2026-10-15T17:48:42Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$235. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792086583147-78bc16",
+      "ts": "2026-10-15T17:49:43Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$235. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792086643640-60e9b8",
+      "ts": "2026-10-15T17:50:43Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$235. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
     }
