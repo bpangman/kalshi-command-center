@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T01:59:24.515267Z",
+  "generated_at": "2026-10-15T02:02:01.720264Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,9 +16,9 @@
           "Sold 8,142 contracts so far; 28,422 more resting on the book. Premium collected $751.",
           "Worst line is -$949. The glide target right now is -$400, so it is $549 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
           "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late.",
-          "The bot's live websocket feed is down (stale for 18h), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
+          "The bot's live websocket feed is down (stale for 18h 2m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
           "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
         ]
       },
@@ -92,12 +92,12 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T01:58:39Z",
+        "at": "2026-10-15T02:01:41Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 10c toward 5.2c."
       },
       {
-        "at": "2026-10-15T01:58:39Z",
+        "at": "2026-10-15T02:01:41Z",
         "label": "Possible price step on Carson Kvapil",
         "detail": "If no fill by then it may drop 1c from 14c toward 8.6c."
       }
@@ -153,7 +153,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T01:58:39Z"
+    "ts": "2026-10-15T02:01:41Z"
   },
   "posts": [
     {
@@ -187,5 +187,24 @@
       "title": "Rate limit"
     }
   ],
-  "audits": []
+  "audits": [
+    {
+      "id": "1792029652525-8bfe22",
+      "ts": "2026-10-15T02:00:52Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 12 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 455c, KXNASCARRACE-TIMP26-BRJO low 90c, KXNASCARRACE-TIMP26-ANAL low 750c, KXNASCARRACE-TIMP26-SAMA low 1172c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 233c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CAKV low 1691c, KXNASCARRACE-TIMP26-CODA low 1802c, KXNASCARRACE-TIMP26-BRCR low 1930c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792029652526-9d4087",
+      "ts": "2026-10-15T02:00:52Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -948.99 vs floor -425.00. Check the command center.",
+      "severity": "critical"
+    }
+  ]
 }
