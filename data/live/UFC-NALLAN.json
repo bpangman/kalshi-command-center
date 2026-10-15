@@ -1,13 +1,13 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-15T04:02:25.212923Z",
+  "generated_at": "2026-10-15T04:05:03.305226Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 7:00 PM CT. 865 sold, 1,790 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$235.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
+    "checks_every_s": 45,
     "sections": [
       {
         "title": "Right now",
@@ -18,7 +18,7 @@
           "Worst line -$235 (-$84 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,575 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 9h).",
           "Backstop is ON for Nallo by KO/TKO: its line is under -$250, so nothing more is added there until the others catch up.",
-          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
+          "Bot is healthy: heartbeat 0s old, no errors."
         ]
       },
       {
@@ -28,7 +28,7 @@
           "Landwehr by Submission: sold 0, 420 behind the leader. Cheapest row 8c, fair 6.9c. It can step down 1c at a time, to no lower than about 4.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 175 more contracts are held back for the full-ladder release.",
           "Landwehr by Decision: sold 0, 420 behind the leader. Cheapest row 12c, fair 11.4c. It can step down 1c at a time, to no lower than about 9.4c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Nallo by Submission: sold 25, 395 behind the leader. Cheapest row 18c, fair 16.6c. It can step down 1c at a time, to no lower than about 14.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -90,12 +90,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T04:01:31Z",
+        "at": "2026-10-15T04:04:33Z",
         "label": "Possible price step on Landwehr by Decision",
         "detail": "If no fill by then it may drop 1c from 12c toward 9.4c."
       },
       {
-        "at": "2026-10-15T04:01:31Z",
+        "at": "2026-10-15T04:04:33Z",
         "label": "Possible price step on Landwehr by Submission",
         "detail": "If no fill by then it may drop 1c from 8c toward 4.9c."
       }
@@ -159,7 +159,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-15T04:01:31Z"
+    "ts": "2026-10-15T04:04:33Z"
   },
   "posts": [
     {
@@ -361,6 +361,16 @@
       "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 10h. The bot checks every 1m.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792036952416-10d61c",
+      "ts": "2026-10-15T04:02:32Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 7:00 PM CT. 865 sold, 1,790 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$235. Next: Full ladder release in 2d 9h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
