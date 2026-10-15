@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T03:53:30.809603Z",
+  "generated_at": "2026-10-15T03:57:07.349165Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 8,583 contracts so far; 29,479 more resting on the book. Premium collected $804.",
           "Worst line is -$896. The glide target right now is -$400, so it is $496 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "Bot is healthy: heartbeat 47s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "Bot is healthy: heartbeat 10s old, no errors."
         ]
       },
       {
@@ -25,7 +25,7 @@
         "lines": [
           "Sheldon Creed: sold 0, 1,700 behind the leader. Cheapest row 8c; the crowd has been buying at 8c; fair 5.7c. Already at its floor (about 8c); it will not go lower unless the crowd price or fair drops.",
           "Brent Crews: sold 70, 1,630 behind the leader. Cheapest row 10c; the crowd has been buying at n/a; fair 7.3c. It can step down 1c at a time, to no lower than about 5.3c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
-          "Corey Day: sold 198, 1,502 behind the leader. Cheapest row 9c; the crowd has been buying at n/a; fair 6.5c. It can step down 1c at a time, to no lower than about 4.5c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Corey Day: sold 198, 1,502 behind the leader. Cheapest row 9c; the crowd has been buying at 9c; fair 6.5c. Already at its floor (about 9c); it will not go lower unless the crowd price or fair drops.",
           "Carson Kvapil: sold 656, 1,044 behind the leader. Cheapest row 14c; the crowd has been buying at 14c; fair 10.7c. Already at its floor (about 14c); it will not go lower unless the crowd price or fair drops.",
           "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: the backstop has stopped it adding.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
@@ -90,14 +90,9 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T03:53:28Z",
+        "at": "2026-10-15T03:56:29Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 10c toward 5.3c."
-      },
-      {
-        "at": "2026-10-15T03:53:28Z",
-        "label": "Possible price step on Corey Day",
-        "detail": "If no fill by then it may drop 1c from 9c toward 4.5c."
       }
     ],
     "sides": [
@@ -151,7 +146,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T03:53:28Z"
+    "ts": "2026-10-15T03:56:29Z"
   },
   "posts": [
     {
@@ -611,6 +606,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792036465025-874fa9",
+      "ts": "2026-10-15T03:54:25Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- PHX-ORLY - Jesse Love has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PHX-ORLY - Justin Allgaier has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
