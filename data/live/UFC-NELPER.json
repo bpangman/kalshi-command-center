@@ -1,6 +1,6 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-15T08:24:36.631751Z",
+  "generated_at": "2026-10-15T08:27:36.208357Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -15,7 +15,7 @@
           "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 8:45 PM CT (in 2d 17h).",
           "Moneyline right now: Nelson 24% to win, Perez 76%.",
           "Sold 1,365 contracts so far; 1,170 more resting across 7 buckets. Premium $258.",
-          "Worst line -$267 (-$82 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
+          "Worst line -$267 (-$84 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,395 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 5h).",
           "Backstop is ON for Nelson by KO/TKO: its line is under -$250, so nothing more is added there until the others catch up.",
           "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
@@ -24,8 +24,8 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "Nelson by Decision: sold 0, 525 behind the leader. Cheapest row 12c, fair 11.1c. It can step down 1c at a time, to no lower than about 9.1c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "Perez by Decision: sold 0, 525 behind the leader. Cheapest row 32c, fair 30c. It can step down 1c at a time, to no lower than about 28c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
+          "Nelson by Decision: sold 0, 525 behind the leader. Cheapest row 12c, fair 11.2c. It can step down 1c at a time, to no lower than about 9.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
+          "Perez by Decision: sold 0, 525 behind the leader. Cheapest row 32c, fair 29.4c. It can step down 1c at a time, to no lower than about 27.4c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Perez by KO/TKO: sold 420, 105 behind the leader. Nothing is resting here. A catch-up batch posts for a lagging bucket with nothing resting, if cash and the worst-line gate allow. 280 more contracts are held back for the full-ladder release.",
           "Perez by Submission: sold 420, 105 behind the leader. Nothing is resting here. A catch-up batch posts for a lagging bucket with nothing resting, if cash and the worst-line gate allow. 280 more contracts are held back for the full-ladder release.",
           "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
@@ -91,14 +91,14 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T08:24:26Z",
+        "at": "2026-10-15T08:27:27Z",
         "label": "Possible price step on Nelson by Decision",
-        "detail": "If no fill by then it may drop 1c from 12c toward 9.1c."
+        "detail": "If no fill by then it may drop 1c from 12c toward 9.2c."
       },
       {
-        "at": "2026-10-15T08:24:26Z",
+        "at": "2026-10-15T08:27:27Z",
         "label": "Possible price step on Perez by Decision",
-        "detail": "If no fill by then it may drop 1c from 32c toward 28c."
+        "detail": "If no fill by then it may drop 1c from 32c toward 27.4c."
       }
     ],
     "sides": [
@@ -160,7 +160,7 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-15T08:24:26Z"
+    "ts": "2026-10-15T08:27:27Z"
   },
   "posts": [
     {
@@ -855,6 +855,35 @@
       "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 5h. The bot checks every 1m.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792052706835-27c5e6",
+      "ts": "2026-10-15T08:24:59Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "The bot hit an error and skipped a loop (loop_once raised: The read operation timed out). It retries next loop; I will say if it keeps happening.",
+      "severity": "warn",
+      "title": "Bot error"
+    },
+    {
+      "id": "1792052786883-11f31d",
+      "ts": "2026-10-15T08:26:26Z",
+      "book": "UFC-NELPER",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nNELKOTKODQ: -267\nNELSUB: +258\nNELDEC: +258\nPERKOTKODQ: -162\nPERSUB: -162\nPERDEC: +258\nDRAW: +258\nCollected $258 premium ($0 fees) | Paper margin over fair $20 (not realized until settlement)\nheld / resting\nNELKOTKODQ: 525 / 0\nNELSUB: 0 / 300\nNELDEC: 0 / 420\nPERKOTKODQ: 420 / 0\nPERSUB: 420 / 0\nPERDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.045 | Worst now -267 | Cash free $0\nAnchor age 0s | Last fill 7816s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1792052787452-643ac3",
+      "ts": "2026-10-15T08:26:08Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "The bot restarted. It re-reads its orders from Kalshi and adopts what is already resting instead of posting again.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
