@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T05:31:26.551006Z",
+  "generated_at": "2026-10-15T05:34:05.093557Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,137 (final target -$200 at T-60). 10,835 sold, 58,404 resting.",
     "confidence": "medium",
-    "confidence_note": "The steps are rules in the settings, but whether the worst line reaches -$200 by T-60 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
+    "checks_every_s": 50,
     "sections": [
       {
         "title": "Right now",
@@ -16,8 +16,8 @@
           "Sold 10,835 contracts so far; 58,404 more resting on the book. Premium collected $1,263.",
           "Worst line is -$1,137. The glide target right now is -$800, so it is $337 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 37 drivers.",
-          "Bot is healthy: heartbeat 5s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 37 drivers.",
+          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 50s. Slow reads and rate limits do this; timed steps can land a little late."
         ]
       },
       {
@@ -27,7 +27,7 @@
           "Christopher Bell: sold 900, 1,500 behind the leader. Cheapest row 19c; the crowd has been buying at 19c; fair 15.6c. Already at its floor (about 19c); it will not go lower unless the crowd price or fair drops.",
           "Ryan Blaney: sold 1,745, 655 behind the leader. Cheapest row 20c; the crowd has been buying at 20c; fair 20.2c. Already at its floor (about 20c); it will not go lower unless the crowd price or fair drops.",
           "Chase Briscoe: sold 1,851, 549 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 7c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
-          "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "The bot checks every 50s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
       },
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T05:31:10Z"
+    "ts": "2026-10-15T05:33:11Z"
   },
   "posts": [
     {
@@ -622,6 +622,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nDenny Hamlin: -1137\nJoey Logano: -1137\nChase Briscoe: -588\nRyan Blaney: -482\nJosh Berry: -237\nChristopher Bell: +363\nWilliam Byron: +1224\nBrad Keselowski: +1263\nall others (29) >= +1263\nCollected $1282 premium ($19 fees) | Paper margin over fair $205 (not realized until settlement)\nCore posted book 1.06 | Worst now -1137 | Cash free $1192\nAnchor age 33s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792042331233-aebbcb",
+      "ts": "2026-10-15T05:32:11Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,137 (final target -$200 at T-60). 10,835 sold, 58,404 resting. Next: Checkpoint T-2880 in 1d 13h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
