@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T18:53:58.785152Z",
+  "generated_at": "2026-10-15T18:56:41.438020Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$807, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 52,
     "moves": [
       {
         "side": "Jesse Love",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 9,391, 29,061 resting. Worst line -$807 (limit now -$400)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 9,391, 29,061 resting. Worst line -$807 (limit now -$400). Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -195,7 +195,7 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T18:53:11Z"
+    "ts": "2026-10-15T18:56:13Z"
   },
   "posts": [
     {
@@ -1862,6 +1862,16 @@
         "from": 0.14,
         "to": 0.13
       }
+    },
+    {
+      "id": "1792090573042-81acc9",
+      "ts": "2026-10-15T18:56:13Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$807, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -2611,6 +2621,24 @@
       "source": "bot",
       "text": "+591 on Carson Kvapil @ 0.14 (maker)\nworst outcome now -807\nIf the race ends... you make\nJesse Love: -807\nJustin Allgaier: -355\nCarson Kvapil: -354\nBrandon Jones: +53\nAustin Hill: +143\nTaylor Gray: +143\nSammy Smith: +143\nWilliam Sawalich: +226\nall others (31) >= +329",
       "severity": "warn"
+    },
+    {
+      "id": "1792090554438-112724",
+      "ts": "2026-10-15T18:55:54Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 12 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-SHCR low 2000c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-SAMA low 1059c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1802c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792090554439-cf6f8c",
+      "ts": "2026-10-15T18:55:54Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -807.47 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
