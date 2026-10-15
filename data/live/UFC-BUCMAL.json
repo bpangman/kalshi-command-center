@@ -1,8 +1,115 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-15T14:46:44.559334Z",
-  "plan": null,
-  "posts": [],
+  "generated_at": "2026-10-15T14:49:22.724757Z",
+  "plan": {
+    "engine": "ufc",
+    "phase": "Wave 1 (lowest rung only)",
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 0 resting; 0 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+    "confidence": "high",
+    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
+    "checks_every_s": 45,
+    "sections": [
+      {
+        "title": "Right now",
+        "lines": [
+          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:55 PM CT (in 2d 12h).",
+          "Moneyline right now: Buckley 46% to win, Malott 54%.",
+          "Sold 0 contracts so far; 0 more resting across 0 buckets. Premium $0.",
+          "Worst line $0 ($0 if every resting order filled). Backstop -$500; trickle target -$150 by the fight.",
+          "Bot is healthy: heartbeat 4s old, no errors."
+        ]
+      },
+      {
+        "title": "Lagging sides",
+        "lines": [
+          "No bucket is lagging right now (rule: more than 15% of the leader, up to 150 contracts, behind it, and fair above 5%).",
+          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "A step is skipped if filling the new row in full would push the worst line lower."
+        ]
+      },
+      {
+        "title": "Next wave of contracts",
+        "lines": [
+          "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
+          "The worst-line gate is open ($0 is at or better than -$100).",
+          "Batches used so far: none."
+        ]
+      },
+      {
+        "title": "Tightening",
+        "lines": [
+          "Trickle balancing starts at T-120 (Sat 10/17 7:55 PM CT, in 2d 10h): the bot records the worst line then and walks it to -$150 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
+          "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
+          "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
+          "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
+        ]
+      },
+      {
+        "title": "Will it adapt on its own?",
+        "lines": [
+          "Yes, on its own: the full ladder at the release time, extra batches on thin buckets while the gate is open, price steps on lagging buckets, and the paid trickle from T-120.",
+          "No, it will not: reprice resting rows when the moneyline moves, or add anything once the worst line is under the gate. The start time can shift if earlier bouts run long.",
+          "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
+        ]
+      }
+    ],
+    "next_steps": [
+      {
+        "at": "2026-10-18T00:55:00Z",
+        "label": "Trickle balancing starts",
+        "detail": "T-120: walk the worst line to -$150."
+      },
+      {
+        "at": "2026-10-18T02:25:00Z",
+        "label": "Even-up window",
+        "detail": "T-30: lagging buckets re-priced toward fair, queue kept."
+      },
+      {
+        "at": "2026-10-18T02:50:00Z",
+        "label": "Last-resort take window",
+        "detail": "T-5: the bot may sell to close the last gaps."
+      },
+      {
+        "at": "2026-10-18T02:52:00Z",
+        "label": "Cutover to the fight",
+        "detail": "About 3 minutes before the start the in-fight engine takes over."
+      }
+    ],
+    "sides": [],
+    "book": "UFC-BUCMAL",
+    "ts": "2026-10-15T14:48:54Z"
+  },
+  "posts": [
+    {
+      "id": "1792075730952-abc146",
+      "ts": "2026-10-15T14:48:50Z",
+      "book": "UFC-BUCMAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBUCKOTKODQ: +0\nBUCSUB: +0\nBUCDEC: +0\nMALKOTKODQ: +0\nMALSUB: +0\nMALDEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 0\nBUCSUB: 0 / 0\nBUCDEC: 0 / 0\nMALKOTKODQ: 0 / 0\nMALSUB: 0 / 0\nMALDEC: 0 / 0\nDRAW: 0 / 0\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $0\nAnchor age 0s | Last fill none yet",
+      "severity": "info"
+    },
+    {
+      "id": "1792075734625-c4db2f",
+      "ts": "2026-10-15T14:48:54Z",
+      "book": "UFC-BUCMAL",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Narrator started watching this book. Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 0 resting; 0 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+      "severity": "info",
+      "title": "Narrator started"
+    },
+    {
+      "id": "1792075734625-9b26b5",
+      "ts": "2026-10-15T14:48:54Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 0 resting; 0 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Trickle balancing starts in 2d 10h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    }
+  ],
   "audits": [
     {
       "id": "1792075551979-24dd0e",
