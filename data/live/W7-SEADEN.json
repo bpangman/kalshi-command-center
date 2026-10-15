@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T01:56:47.011556Z",
+  "generated_at": "2026-10-15T01:59:24.515267Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -12,13 +12,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build. Kickoff Thu 7:15 PM CT (in 22h 18m).",
+          "Pregame build. Kickoff Thu 7:15 PM CT (in 22h 16m).",
           "Sold 2,260 contracts so far. 2,919 more are resting on the book, on 5 of 6 sides.",
           "By team: DEN 1,028, SEA 1,231.",
           "Not balanced yet: the worst line is -$193; the goal is -$150 or better by kickoff, so $43 to close.",
           "If every resting order filled, the worst line would be -$106.",
           "Backstop (-$600) is not triggered; the loss cap is -$300.",
-          "Backing off new posts for another 5m: Kalshi refused posts for lack of free cash.",
+          "Backing off new posts for another 3m: Kalshi refused posts for lack of free cash.",
           "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
         ]
       },
@@ -26,11 +26,11 @@
         "title": "Lagging sides",
         "lines": [
           "SEA by 7-14: sold 155, 472 behind the leader. Cheapest row is 21c, crowd has been buying at 20c, fair 18.9c. It can step down 1c at a time, to no lower than about 20c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: none since launch. Next possible step now, if nothing has filled. Sold 22 here in the last hour.",
-          "DEN by 15+: sold 200, 427 behind the leader. Cheapest row is 10c, fair 9.1c. It can step down 1c at a time, to no lower than about 6.1c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 7h 31m ago. Next possible step now, if nothing has filled.",
-          "DEN by 7-14: sold 307, 320 behind the leader. Cheapest row is 15c, fair 14.4c. It can step down 1c at a time, to no lower than about 11.4c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 6h 18m ago. Next possible step now, if nothing has filled. Sold 38 here in the last hour.",
-          "SEA by 15+: sold 450, 177 behind the leader. Cheapest row is 19c, crowd has been buying at 18c, fair 15.1c. It can step down 1c at a time, to no lower than about 18c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 5m ago. Next possible step in 10m, if nothing has filled. Last hold reason (5m ago): filling one more row in full would push the worst line to -$193, so the bot holds its price. Sold 424 here in the last hour.",
-          "DEN by 1-6: sold 522, 105 behind the leader. Cheapest row is 20c, crowd has been buying at 19c, fair 19.3c. It can step down 1c at a time, to no lower than about 19c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 5h 54m ago. Next possible step now, if nothing has filled. Sold 100 here in the last hour.",
-          "The bot looks at lagging sides every loop (1m) and takes a fresh market snapshot about every 10 min (last one 8s ago). Rows already resting are not repriced when the sportsbook line moves; only new rows use the fresh fair.",
+          "DEN by 15+: sold 200, 427 behind the leader. Cheapest row is 10c, fair 9.1c. It can step down 1c at a time, to no lower than about 6.1c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 7h 33m ago. Next possible step now, if nothing has filled.",
+          "DEN by 7-14: sold 307, 320 behind the leader. Cheapest row is 15c, fair 14.4c. It can step down 1c at a time, to no lower than about 11.4c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 6h 20m ago. Next possible step now, if nothing has filled. Sold 38 here in the last hour.",
+          "SEA by 15+: sold 450, 177 behind the leader. Cheapest row is 19c, crowd has been buying at 18c, fair 15.1c. It can step down 1c at a time, to no lower than about 18c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 7m ago. Next possible step in 8m, if nothing has filled. Last hold reason (7m ago): filling one more row in full would push the worst line to -$193, so the bot holds its price. Sold 424 here in the last hour.",
+          "DEN by 1-6: sold 522, 105 behind the leader. Cheapest row is 20c, crowd has been buying at 19c, fair 19.3c. It can step down 1c at a time, to no lower than about 19c (never under the crowd's clearing price or fair minus 3c), after 20 min with no fill, at most one step per 15 min. Last price step: 5h 56m ago. Next possible step now, if nothing has filled. Sold 100 here in the last hour.",
+          "The bot looks at lagging sides every loop (1m) and takes a fresh market snapshot about every 10 min (last one 1m ago). Rows already resting are not repriced when the sportsbook line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -49,7 +49,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Trickle balancing (paid) starts at T-240: Thu 3:15 PM CT (in 18h 18m). The bot notes the worst line then, and walks it in a straight line to -$150 by T-10 (Thu 7:05 PM CT).",
+          "Trickle balancing (paid) starts at T-240: Thu 3:15 PM CT (in 18h 16m). The bot notes the worst line then, and walks it in a straight line to -$150 by T-10 (Thu 7:05 PM CT).",
           "Rules: checks every 5 min, pays only when more than $25 behind the path, never on the most-held side, clips of up to 100 contracts, no more than $100 total paid per book. Spent so far: $0.",
           "From T-30 (Thu 6:45 PM CT): if the worst line is -$150 or better, paid balancing stops for good; new offers keep going until kickoff.",
           "Checkpoints (a market snapshot is logged each time): T-240, T-180, T-120, T-90, T-60, T-30.",
@@ -93,12 +93,12 @@
         "detail": "In-game engine takes over; resting orders stay."
       },
       {
-        "at": "2026-10-15T01:56:39Z",
+        "at": "2026-10-15T01:58:39Z",
         "label": "Possible price step on DEN by 1-6",
         "detail": "If no fill by then it may drop 1c from 20c toward 19c."
       },
       {
-        "at": "2026-10-15T01:56:39Z",
+        "at": "2026-10-15T01:58:39Z",
         "label": "Possible price step on DEN by 15+",
         "detail": "If no fill by then it may drop 1c from 10c toward 6.1c."
       }
@@ -154,7 +154,7 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T01:56:39Z"
+    "ts": "2026-10-15T01:58:39Z"
   },
   "posts": [
     {

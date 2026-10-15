@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T01:56:47.011556Z",
+  "generated_at": "2026-10-15T01:59:24.515267Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$945 (final target -$100 at T-60). 4,443 sold, 28,949 resting.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 95,
+    "checks_every_s": 96,
     "sections": [
       {
         "title": "Right now",
@@ -16,9 +16,9 @@
           "Sold 4,443 contracts so far; 28,949 more resting on the book. Premium collected $519.",
           "Worst line is -$945. The glide target right now is -$400, so it is $545 short; the final target is -$100 by T-60.",
           "Backstop is ON for Chandler Smith: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 35 of 36 drivers.",
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 35 of 36 drivers.",
           "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 2m. Slow reads and rate limits do this; timed steps can land a little late.",
-          "The bot's live websocket feed is down (stale for 18h 27m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
+          "The bot's live websocket feed is down (stale for 18h 28m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
           "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
         ]
       },
@@ -40,7 +40,7 @@
           "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $400 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
           "No wave has posted yet; the launch ladders are still the only orders.",
-          "Latest wave note (9m ago): Tristan McKee: wave 2 43 @ 0.03 not posted (free-cash floor post_min_free_cash_dollars); cut to the free cash $442.63 over the $400 floor",
+          "Latest wave note (11m ago): Tristan McKee: wave 2 43 @ 0.03 not posted (free-cash floor post_min_free_cash_dollars); cut to the free cash $442.63 over the $400 floor",
           "Waves stop at T-60."
         ]
       },
@@ -92,12 +92,12 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T01:56:39Z",
+        "at": "2026-10-15T01:58:39Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 7c toward 3.2c."
       },
       {
-        "at": "2026-10-15T01:56:39Z",
+        "at": "2026-10-15T01:58:39Z",
         "label": "Possible price step on Christian Eckes",
         "detail": "If no fill by then it may drop 1c from 11c toward 7.8c."
       }
@@ -153,7 +153,7 @@
       }
     ],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T01:56:39Z"
+    "ts": "2026-10-15T01:58:39Z"
   },
   "posts": [
     {
@@ -195,6 +195,16 @@
       "text": "A wave could not post in the growth phase: Tristan McKee: wave 2 43 @ 0.03 not posted (free-cash floor post_min_free_cash_dollars); cut to the free cash $442.63 over the $400 floor",
       "severity": "warn",
       "title": "Wave blocked"
+    },
+    {
+      "id": "1792029519944-86754e",
+      "ts": "2026-10-15T01:58:36Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (6 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": []
