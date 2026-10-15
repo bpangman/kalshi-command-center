@@ -1,6 +1,6 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-15T16:44:40.250148Z",
+  "generated_at": "2026-10-15T16:47:23.005469Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -12,13 +12,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 8:45 PM CT (in 2d 9h).",
+          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 8:45 PM CT (in 2d 8h).",
           "Moneyline right now: Nelson 24% to win, Perez 76%.",
           "Sold 1,365 contracts so far; 1,170 more resting across 7 buckets. Premium $258.",
           "Worst line -$267 (-$174 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,395 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 1d 21h).",
           "Backstop is ON for Nelson by KO/TKO: its line is under -$250, so nothing more is added there until the others catch up.",
-          "Bot is healthy: heartbeat 52s old, no errors."
+          "Bot is healthy: heartbeat 49s old, no errors."
         ]
       },
       {
@@ -48,7 +48,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Trickle balancing starts at T-120 (Sat 10/17 6:45 PM CT, in 2d 7h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
+          "Trickle balancing starts at T-120 (Sat 10/17 6:45 PM CT, in 2d 6h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
           "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
           "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
           "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
@@ -91,12 +91,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T16:44:03Z",
+        "at": "2026-10-15T16:47:04Z",
         "label": "Possible price step on Nelson by Decision",
         "detail": "If no fill by then it may drop 1c from 7c toward 4.2c."
       },
       {
-        "at": "2026-10-15T16:44:03Z",
+        "at": "2026-10-15T16:47:04Z",
         "label": "Possible price step on Perez by Decision",
         "detail": "If no fill by then it may drop 1c from 16c toward 12.1c."
       }
@@ -160,7 +160,7 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-15T16:44:03Z"
+    "ts": "2026-10-15T16:47:04Z"
   },
   "posts": [
     {
@@ -1670,6 +1670,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nNELKOTKODQ: -267\nNELSUB: +258\nNELDEC: +258\nPERKOTKODQ: -162\nPERSUB: -162\nPERDEC: +258\nDRAW: +258\nCollected $258 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNELKOTKODQ: 525 / 0\nNELSUB: 0 / 300\nNELDEC: 0 / 420\nPERKOTKODQ: 420 / 0\nPERSUB: 420 / 0\nPERDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.828 | Worst now -267 | Cash free $1500\nAnchor age 130s | Last fill 36958s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792082824616-b6023f",
+      "ts": "2026-10-15T16:47:04Z",
+      "book": "UFC-NELPER",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 1d 21h. The bot checks every 45s.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
