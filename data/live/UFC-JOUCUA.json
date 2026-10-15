@@ -1,12 +1,12 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-15T01:48:54.725779Z",
+  "generated_at": "2026-10-15T01:51:32.884758Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 0 sold, 2,100 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
-    "confidence": "high",
-    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
+    "confidence": "low",
+    "confidence_note": "The bot is backing off because Kalshi refused posts for lack of cash. Timed steps still run, but new contracts will not post until cash frees up.",
     "checks_every_s": 45,
     "sections": [
       {
@@ -17,6 +17,7 @@
           "Sold 0 contracts so far; 2,100 more resting across 6 buckets. Premium $0.",
           "Worst line $0 (-$33 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,575 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 12h).",
+          "Backing off new posts for another 4m: Kalshi refused posts for lack of free cash.",
           "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
         ]
       },
@@ -134,7 +135,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-15T01:48:35Z"
+    "ts": "2026-10-15T01:50:36Z"
   },
   "posts": [
     {
@@ -154,6 +155,26 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 0 sold, 2,100 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 2d 12h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792028935564-366d55",
+      "ts": "2026-10-15T01:48:37Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "The bot hit an error and skipped a loop (loop_once raised: Kalshi API error 401 on GET /portfolio/fills: {'error': {'code': 'header_timestamp_expired', 'message': 'header timestamp expired'}}). It retries next loop; I will say if it keeps happening.",
+      "severity": "warn",
+      "title": "Bot error"
+    },
+    {
+      "id": "1792028975832-244fe3",
+      "ts": "2026-10-15T01:49:35Z",
+      "book": "UFC-JOUCUA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 0 sold, 2,100 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 2d 12h. Confidence: low.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
     }

@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T01:48:54.725779Z",
+  "generated_at": "2026-10-15T01:51:32.884758Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,244 (final target -$200 at T-60). 10,294 sold, 43,276 resting.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 30,
+    "checks_every_s": 90,
     "sections": [
       {
         "title": "Right now",
@@ -16,8 +16,9 @@
           "Sold 10,294 contracts so far; 43,276 more resting on the book. Premium collected $1,156.",
           "Worst line is -$1,244. The glide target right now is -$800, so it is $444 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 37 drivers.",
-          "The bot's live websocket feed is down (stale for 13h 19m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
+          "Prices follow Bovada, refreshed every 5m (last 55s ago). Covers 37 of 37 drivers.",
+          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 2m. Slow reads and rate limits do this; timed steps can land a little late.",
+          "The bot's live websocket feed is down (stale for 13h 20m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
           "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
         ]
       },
@@ -28,7 +29,7 @@
           "Christopher Bell: sold 900, 1,500 behind the leader. Nothing is resting on it: the bot's live feed is down, so its view of resting orders may be stale.",
           "Ryan Blaney: sold 1,204, 1,196 behind the leader. Nothing is resting on it: the bot's live feed is down, so its view of resting orders may be stale.",
           "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: the bot's live feed is down, so its view of resting orders may be stale.",
-          "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "The bot checks every 2m; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
       },
@@ -140,7 +141,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T01:48:35Z"
+    "ts": "2026-10-15T01:50:36Z"
   },
   "posts": [
     {
@@ -164,5 +165,24 @@
       "title": "Plan updated: Pre-race growth"
     }
   ],
-  "audits": []
+  "audits": [
+    {
+      "id": "1792029061554-45a8e9",
+      "ts": "2026-10-15T01:51:01Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 6 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792029061554-d96133",
+      "ts": "2026-10-15T01:51:01Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): worst -1243.95 vs floor -825.00. Check the command center.",
+      "severity": "critical"
+    }
+  ]
 }
