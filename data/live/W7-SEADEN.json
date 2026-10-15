@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T21:29:54.460532Z",
+  "generated_at": "2026-10-15T21:32:36.253750Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -69,20 +69,20 @@
         "stuck": false,
         "also": "Also: price step",
         "last_fill": "2026-10-15T21:05:37Z",
-        "lag_note": "Price 13c matches the crowd."
+        "lag_note": "Price 13c is at its floor."
       },
       {
         "side": "DEN by 15+",
-        "resting": "649 @ 10-19c",
+        "resting": "649 @ 9-14c",
         "exposure": 881.14,
         "exposure_text": "+$881",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 5:45pm CT, up to $100 in all",
-        "at": "2026-10-15T22:45:00Z",
+        "move": "Step price down 1c (9c to 8c)",
+        "when": "if no fill by 4:46pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T21:46:39Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 5:45pm CT",
         "last_fill": "2026-10-14T15:28:20Z",
-        "lag_note": "Crowd is quiet here (5 traded)."
+        "lag_note": "Steps to 8c if no fill by 4:46pm CT."
       }
     ],
     "sections": [
@@ -96,8 +96,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DEN by 1-6, DEN by 7-14, DEN by 15+, SEA by 15+.",
-          "DEN by 15+: 1,163 behind. Crowd is quiet here (5 traded).",
-          "DEN by 7-14: 703 behind. Price 13c matches the crowd.",
+          "DEN by 15+: 1,163 behind. Steps to 8c if no fill by 4:46pm CT.",
+          "DEN by 7-14: 703 behind. Price 13c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -166,7 +166,7 @@
         "resting": 574.3,
         "target": 500.0,
         "status": "lagging",
-        "price": 0.1
+        "price": 0.09
       },
       {
         "label": "SEA by 1-6",
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T21:29:21Z"
+    "ts": "2026-10-15T21:32:23Z"
   },
   "posts": [
     {
@@ -3066,6 +3066,21 @@
         "side": "DEN by 1-6",
         "from": 0.25,
         "to": 0.24
+      }
+    },
+    {
+      "id": "1792099902965-d35a3c",
+      "ts": "2026-10-15T21:31:41Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on DEN by 15+: no fill for 1803 min, added 300 at 9c (was 10c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "DEN by 15+",
+        "from": 0.1,
+        "to": 0.09
       }
     }
   ],

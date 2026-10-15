@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T21:29:54.460532Z",
+  "generated_at": "2026-10-15T21:32:36.253750Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Chandler Smith",
@@ -63,13 +63,13 @@
         "resting": "1,700 @ 10-12c",
         "exposure": 355.28,
         "exposure_text": "+$355",
-        "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 4:33pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-15T21:33:24Z",
+        "move": "Hold price at 10c",
+        "when": "no crowd trade data yet",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T09:59:46Z",
-        "lag_note": "Steps to 9c if no fill by 4:33pm CT."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Ty Majeski",
@@ -102,7 +102,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 6:30pm CT. Sold 5,345, 29,105 resting. Worst line -$809 (limit now -$400)."
+          "Pre-race growth, green flag Fri 6:30pm CT. Sold 5,345, 29,105 resting. Worst line -$809 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T21:29:21Z"
+    "ts": "2026-10-15T21:32:23Z"
   },
   "posts": [
     {
@@ -2919,6 +2919,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nChandler Smith: -809\nLayne Riggs: -323\nTristan McKee: -95\nBrent Crews: -51\nLanden Lewis: +261\nTy Majeski: +355\nChristian Eckes: +355\nKaden Honeycutt: +372\nall others (28) >= +506\nCollected $665 premium ($10 fees) | Paper margin over fair $73 (not realized until settlement)\nCore posted book 1.20 | Worst now -809 | Cash free $1349\nAnchor age 202s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792099882787-9d61ff",
+      "ts": "2026-10-15T21:31:22Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
