@@ -1,18 +1,18 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-15T06:19:16.761598Z",
+  "generated_at": "2026-10-15T06:21:52.093734Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 1,279 sold, 2,140 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$290.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 75,
+    "checks_every_s": 76,
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:20 PM CT (in 2d 20h).",
+          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:20 PM CT (in 2d 19h).",
           "Moneyline right now: Blanchfield 76% to win, Jasudavicius 24%.",
           "Sold 1,279 contracts so far; 2,140 more resting across 7 buckets. Premium $310.",
           "Worst line -$290 (-$128 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
@@ -45,7 +45,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Trickle balancing starts at T-120 (Sat 10/17 7:20 PM CT, in 2d 18h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
+          "Trickle balancing starts at T-120 (Sat 10/17 7:20 PM CT, in 2d 17h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
           "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
           "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
           "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
@@ -88,12 +88,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T06:18:30Z",
+        "at": "2026-10-15T06:21:31Z",
         "label": "Possible price step on Blanchfield by KO/TKO",
         "detail": "If no fill by then it may drop 1c from 31c toward 26.2c."
       },
       {
-        "at": "2026-10-15T06:18:30Z",
+        "at": "2026-10-15T06:21:31Z",
         "label": "Possible price step on Blanchfield by Submission",
         "detail": "If no fill by then it may drop 1c from 13c toward 9.6c."
       }
@@ -157,7 +157,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-15T06:18:30Z"
+    "ts": "2026-10-15T06:21:31Z"
   },
   "posts": [
     {
@@ -801,6 +801,16 @@
       "text": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 1,279 sold, 2,140 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$290. Next: Full ladder release in 2d 7h. Confidence: medium.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792045291957-e43368",
+      "ts": "2026-10-15T06:21:31Z",
+      "book": "UFC-BLAJAS",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 7h. The bot checks every 1m.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
