@@ -1,13 +1,13 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-15T02:02:01.720264Z",
+  "generated_at": "2026-10-15T02:04:39.144388Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 0 sold, 690 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
     "confidence": "low",
     "confidence_note": "The bot is backing off because Kalshi refused posts for lack of cash. Timed steps still run, but new contracts will not post until cash frees up.",
-    "checks_every_s": 74,
+    "checks_every_s": 45,
     "sections": [
       {
         "title": "Right now",
@@ -17,8 +17,7 @@
           "Sold 0 contracts so far; 690 more resting across 6 buckets. Premium $0.",
           "Worst line $0 (-$425 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,850 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 11h).",
-          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late.",
-          "Backing off new posts for another 3m: Kalshi refused posts for lack of free cash.",
+          "Backing off new posts for another 1m: Kalshi refused posts for lack of free cash.",
           "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
         ]
       },
@@ -26,7 +25,7 @@
         "title": "Lagging sides",
         "lines": [
           "No bucket is lagging right now (rule: more than 15% of the leader, up to 150 contracts, behind it, and fair above 5%).",
-          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -136,7 +135,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-15T02:01:41Z"
+    "ts": "2026-10-15T02:03:42Z"
   },
   "posts": [
     {
