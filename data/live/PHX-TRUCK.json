@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T19:35:30.597354Z",
+  "generated_at": "2026-10-15T19:38:12.855203Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -77,12 +77,12 @@
         "exposure": 355.28,
         "exposure_text": "+$355",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T19:36:15Z",
+        "when": "if no fill by 2:51pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T19:51:29Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Steps to 8c at the next check."
+        "lag_note": "Steps to 8c if no fill by 2:51pm CT."
       },
       {
         "side": "Kaden Honeycutt",
@@ -90,7 +90,7 @@
         "exposure": 372.29,
         "exposure_text": "+$372",
         "move": "Hold price at 16c",
-        "when": "crowd pays 15.9c; steps down 1c only if it trades lower",
+        "when": "crowd pays 15.8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Kaden Honeycutt: 1,181 behind. Price 16c matches the crowd.",
-          "Ty Majeski: 1,164 behind. Steps to 8c at the next check.",
+          "Ty Majeski: 1,164 behind. Steps to 8c if no fill by 2:51pm CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T19:35:30Z"
+    "ts": "2026-10-15T19:37:31Z"
   },
   "posts": [
     {
@@ -3283,6 +3283,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): 12 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792093048079-4df0cc",
+      "ts": "2026-10-15T19:37:28Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -808.72 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
