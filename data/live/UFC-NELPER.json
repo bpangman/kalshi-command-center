@@ -1,6 +1,6 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-15T06:13:59.782712Z",
+  "generated_at": "2026-10-15T06:16:38.584215Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -17,7 +17,8 @@
           "Sold 1,242 contracts so far; 1,293 more resting across 7 buckets. Premium $242.",
           "Worst line -$283 (-$84 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,395 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 7h).",
-          "Bot is healthy: heartbeat 44s old, no errors."
+          "Backstop is ON for Nelson by KO/TKO: its line is under -$250, so nothing more is added there until the others catch up.",
+          "Bot is healthy: heartbeat 20s old, no errors."
         ]
       },
       {
@@ -89,12 +90,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T06:13:28Z",
+        "at": "2026-10-15T06:16:29Z",
         "label": "Possible price step on Nelson by Decision",
         "detail": "If no fill by then it may drop 1c from 12c toward 9.2c."
       },
       {
-        "at": "2026-10-15T06:13:28Z",
+        "at": "2026-10-15T06:16:29Z",
         "label": "Possible price step on Perez by Decision",
         "detail": "If no fill by then it may drop 1c from 32c toward 27.9c."
       }
@@ -158,7 +159,7 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-15T06:13:28Z"
+    "ts": "2026-10-15T06:16:29Z"
   },
   "posts": [
     {
@@ -708,6 +709,31 @@
       "text": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 1,242 sold, 1,293 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$283. Next: Full ladder release in 2d 7h. Confidence: high.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792044889083-8cfaf9",
+      "ts": "2026-10-15T06:12:44Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 559: Nelson by KO/TKO x525 at 10c, Perez by KO/TKO x34 at 36c. Book now: 1,242 sold in all, worst line -$283.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 559.0,
+        "fills": [
+          {
+            "side": "Nelson by KO/TKO",
+            "price": 0.1,
+            "qty": 525.0
+          },
+          {
+            "side": "Perez by KO/TKO",
+            "price": 0.36,
+            "qty": 34.0
+          }
+        ]
+      }
     }
   ],
   "audits": []

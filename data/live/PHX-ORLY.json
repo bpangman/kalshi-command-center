@@ -1,12 +1,12 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T06:13:59.782712Z",
+  "generated_at": "2026-10-15T06:16:38.584215Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$892 (final target -$100 at T-60). 8,673 sold, 29,779 resting.",
-    "confidence": "medium",
-    "confidence_note": "The steps are rules in the settings, but whether the worst line reaches -$100 by T-60 depends on the crowd and on cash.",
+    "confidence": "low",
+    "confidence_note": "New posts are on hold: free cash $1,298 is under the $1,300 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
     "checks_every_s": 30,
     "sections": [
       {
@@ -16,8 +16,8 @@
           "Sold 8,673 contracts so far; 29,779 more resting on the book. Premium collected $808.",
           "Worst line is -$892. The glide target right now is -$400, so it is $492 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "Bot is healthy: heartbeat 50s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 5m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "New posts are on hold: free cash is $1,298 (read 3m ago) and this book keeps $1,300 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $1,300."
         ]
       },
       {
@@ -27,7 +27,7 @@
           "Brent Crews: sold 70, 1,630 behind the leader. Cheapest row 10c; the crowd has been buying at n/a; fair 7.3c. It can step down 1c at a time, to no lower than about 5.3c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Corey Day: sold 198, 1,502 behind the leader. Cheapest row 9c; the crowd has been buying at 9c; fair 6.5c. Already at its floor (about 9c); it will not go lower unless the crowd price or fair drops.",
           "Carson Kvapil: sold 656, 1,044 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.7c. It can step down 1c at a time, to no lower than about 8.7c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
-          "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: the backstop has stopped it adding.",
+          "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: new posts are on hold: free cash $1,298 is under the $1,300 floor; the backstop has stopped it adding.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
@@ -90,12 +90,12 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T06:13:28Z",
+        "at": "2026-10-15T06:16:29Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 10c toward 5.3c."
       },
       {
-        "at": "2026-10-15T06:13:28Z",
+        "at": "2026-10-15T06:16:29Z",
         "label": "Possible price step on Carson Kvapil",
         "detail": "If no fill by then it may drop 1c from 14c toward 8.7c."
       }
@@ -151,7 +151,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T06:13:28Z"
+    "ts": "2026-10-15T06:16:29Z"
   },
   "posts": [
     {
@@ -706,6 +706,16 @@
       "text": "Quiet: nothing filled or changed in 15 min. 29,779 resting across 6 sides. Next scheduled step: Checkpoint T-2880 in 17h 24m. The bot checks every 30s.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792044868908-0262f9",
+      "ts": "2026-10-15T06:14:28Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$892 (final target -$100 at T-60). 8,673 sold, 29,779 resting. Next: Checkpoint T-2880 in 17h 16m. Confidence: low.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -982,6 +992,24 @@
     {
       "id": "1792042832978-39aed1",
       "ts": "2026-10-15T05:40:32Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -892.04 vs floor -425.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792044850038-1e3c77",
+      "ts": "2026-10-15T06:14:10Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 13 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 455c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-SHCR low 2000c, KXNASCARRACE-TIMP26-ANAL low 750c, KXNASCARRACE-TIMP26-SAMA low 1078c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 233c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CAKV low 1344c, KXNASCARRACE-TIMP26-CODA low 1802c, KXNASCARRACE-TIMP26-JAFI low 687c, KXNASCARRACE-TIMP26-NISA low 750c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792044850039-297fe3",
+      "ts": "2026-10-15T06:14:10Z",
       "book": "PHX-ORLY",
       "kind": "audit",
       "source": "auditor",
