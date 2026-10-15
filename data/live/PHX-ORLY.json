@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T03:13:13.890729Z",
+  "generated_at": "2026-10-15T03:16:39.736203Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,17 +16,17 @@
           "Sold 8,583 contracts so far; 22,248 more resting on the book. Premium collected $804.",
           "Worst line is -$896. The glide target right now is -$400, so it is $496 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
           "New posts are on hold: free cash is $142 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 1h 6m ago and the bot re-posted them.",
-          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 1h 6m ago and the bot re-posted them.",
-          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 1h 6m ago and the bot re-posted them.",
-          "Carson Kvapil: sold 656, 1,044 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.7c. It can step down 1c at a time, to no lower than about 8.7c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 1h 9m ago and the bot re-posted them.",
+          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 1h 9m ago and the bot re-posted them.",
+          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 1h 9m ago and the bot re-posted them.",
+          "Carson Kvapil: sold 656, 1,044 behind the leader. Cheapest row 14c; the crowd has been buying at 14c; fair 10.7c. Already at its floor (about 14c); it will not go lower unless the crowd price or fair drops.",
           "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; the backstop has stopped it adding.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
@@ -88,11 +88,6 @@
         "at": "2026-10-17T23:30:00Z",
         "label": "Green flag",
         "detail": "Resting orders stay; the in-race engine takes over."
-      },
-      {
-        "at": "2026-10-15T03:13:11Z",
-        "label": "Possible price step on Carson Kvapil",
-        "detail": "If no fill by then it may drop 1c from 14c toward 8.7c."
       }
     ],
     "sides": [
@@ -146,7 +141,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T03:13:11Z"
+    "ts": "2026-10-15T03:16:12Z"
   },
   "posts": [
     {
@@ -288,6 +283,26 @@
       "text": "Kalshi rate-limited the bot (12 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1792034112766-908177",
+      "ts": "2026-10-15T03:13:03Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 347: Carson Kvapil x347 at 14c. Book now: 8,583 sold in all, worst line -$896.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 347.0,
+        "fills": [
+          {
+            "side": "Carson Kvapil",
+            "price": 0.14,
+            "qty": 347.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
