@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T08:19:19.143002Z",
+  "generated_at": "2026-10-15T08:21:57.025778Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,7 +16,7 @@
           "Sold 10,859 contracts so far; 56,232 more resting on the book. Premium collected $1,267.",
           "Worst line is -$1,133. The glide target right now is -$800, so it is $332 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 37 drivers.",
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 37 drivers.",
           "Kalshi trading is paused right now; the bot is waiting.",
           "New posts are on hold: free cash is $1,256 (read 2m ago) and this book keeps $1,300 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $1,300."
         ]
@@ -27,7 +27,7 @@
           "Kyle Larson: sold 0, 2,400 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 7.9c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
           "Christopher Bell: sold 900, 1,500 behind the leader. Cheapest row 19c; the crowd has been buying at n/a; fair 15.6c. It can step down 1c at a time, to no lower than about 13.6c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Ryan Blaney: sold 1,769, 631 behind the leader. Cheapest row 20c; the crowd has been buying at 20c; fair 20.2c. Already at its floor (about 20c); it will not go lower unless the crowd price or fair drops.",
-          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: new posts are on hold: free cash $1,256 is under the $1,300 floor; its rows vanished with no fill 2h 10m ago and the bot re-posted them.",
+          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: new posts are on hold: free cash $1,256 is under the $1,300 floor; its rows vanished with no fill 2h 13m ago and the bot re-posted them.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
@@ -89,7 +89,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T08:18:24Z",
+        "at": "2026-10-15T08:21:25Z",
         "label": "Possible price step on Christopher Bell",
         "detail": "If no fill by then it may drop 1c from 19c toward 13.6c."
       }
@@ -145,7 +145,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T08:18:24Z"
+    "ts": "2026-10-15T08:21:25Z"
   },
   "posts": [
     {
@@ -906,6 +906,15 @@
       "text": "Kalshi rate-limited the bot (7 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1792052476504-d83314",
+      "ts": "2026-10-15T08:21:16Z",
+      "book": "PHX-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nDenny Hamlin: -1133\nJoey Logano: -1133\nChase Briscoe: -584\nRyan Blaney: -501\nJosh Berry: -233\nChristopher Bell: +367\nWilliam Byron: +1229\nBrad Keselowski: +1267\nall others (29) >= +1267\nCollected $1287 premium ($19 fees) | Paper margin over fair $198 (not realized until settlement)\nCore posted book 0.95 | Worst now -1133 | Cash free $756\nAnchor age 92s (source: bovada)\nKalshi trading paused (exchange-wide, trading_active=false) for 81 min; idling, no new posts/cancels.",
+      "severity": "info"
     }
   ],
   "audits": [
