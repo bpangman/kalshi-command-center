@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T10:05:36.138064Z",
+  "generated_at": "2026-10-15T10:08:14.137711Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$895 (final target -$100 at T-60). 4,817 sold, 29,633 resting.",
     "confidence": "low",
     "confidence_note": "New posts are on hold: free cash $1,289 is under the $1,300 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
-    "checks_every_s": 30,
+    "checks_every_s": 50,
     "sections": [
       {
         "title": "Right now",
@@ -16,19 +16,20 @@
           "Sold 4,817 contracts so far; 29,633 more resting on the book. Premium collected $569.",
           "Worst line is -$895. The glide target right now is -$400, so it is $495 short; the final target is -$100 by T-60.",
           "Backstop is ON for Chandler Smith: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 35 of 36 drivers.",
-          "New posts are on hold: free cash is $1,289 (read 2m ago) and this book keeps $1,300 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $1,300."
+          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 35 of 36 drivers.",
+          "The bot is running slow: it is set to check every 30s but its heartbeat only moves about every 50s. Slow reads and rate limits do this; timed steps can land a little late.",
+          "New posts are on hold: free cash is $1,289 (read 3m ago) and this book keeps $1,300 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $1,300."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Ty Majeski: sold 0, 1,464 behind the leader. Cheapest row 8c; the crowd has been buying at 8c; fair 7.9c. Already at its floor (about 8c); it will not go lower unless the crowd price or fair drops.",
-          "Kaden Honeycutt: sold 283, 1,181 behind the leader. Cheapest row 16c; the crowd has been buying at n/a; fair 11.5c. It can step down 1c at a time, to no lower than about 9.5c, after 20 min with no fill, at most one step per 15 min. Last step: 3h 16m ago.",
-          "Christian Eckes: sold 300, 1,164 behind the leader. Cheapest row 11c; the crowd has been buying at 10.5c; fair 9.8c. It can step down 1c at a time, to no lower than about 10.5c, after 20 min with no fill, at most one step per 15 min. Last step: 6h 31m ago.",
+          "Kaden Honeycutt: sold 283, 1,181 behind the leader. Cheapest row 16c; the crowd has been buying at n/a; fair 11.5c. It can step down 1c at a time, to no lower than about 9.5c, after 20 min with no fill, at most one step per 15 min. Last step: 3h 19m ago.",
+          "Christian Eckes: sold 300, 1,164 behind the leader. Cheapest row 11c; the crowd has been buying at 10.5c; fair 9.8c. It can step down 1c at a time, to no lower than about 10.5c, after 20 min with no fill, at most one step per 15 min. Last step: 6h 34m ago.",
           "Brent Crews: sold 706, 758 behind the leader. Cheapest row 7c; the crowd has been buying at n/a; fair 5.2c. It can step down 1c at a time, to no lower than about 3.2c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
-          "Layne Riggs: sold 751, 713 behind the leader. Cheapest row 28c; the crowd has been buying at n/a; fair 28.1c. It can step down 1c at a time, to no lower than about 26.1c, after 20 min with no fill, at most one step per 15 min. Last step: 4h 53m ago. Last hold reason (3h 21m ago): the next cent down (28c to 27c) would go below the bot's price floor (the highest of the crowd's clearing price 26.7c, the crowd's best ask, and fair minus a small allowance), so it holds at 28c.",
-          "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "Layne Riggs: sold 751, 713 behind the leader. Cheapest row 28c; the crowd has been buying at n/a; fair 28.1c. It can step down 1c at a time, to no lower than about 26.1c, after 20 min with no fill, at most one step per 15 min. Last step: 4h 56m ago. Last hold reason (3h 24m ago): the next cent down (28c to 27c) would go below the bot's price floor (the highest of the crowd's clearing price 26.7c, the crowd's best ask, and fair minus a small allowance), so it holds at 28c.",
+          "The bot checks every 50s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
       },
@@ -38,7 +39,7 @@
           "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $1,300 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
           "Tristan McKee: 2 waves so far, 1,240 contracts offered in all; the latest (490 at 3c) is 0% filled.",
-          "Latest wave note (7h 59m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
+          "Latest wave note (8h 2m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
           "Waves stop at T-60."
         ]
       },
@@ -90,12 +91,12 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T10:05:10Z",
+        "at": "2026-10-15T10:08:11Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 7c toward 3.2c."
       },
       {
-        "at": "2026-10-15T10:05:10Z",
+        "at": "2026-10-15T10:08:11Z",
         "label": "Possible price step on Christian Eckes",
         "detail": "If no fill by then it may drop 1c from 11c toward 10.5c."
       }
@@ -151,7 +152,7 @@
       }
     ],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T10:05:10Z"
+    "ts": "2026-10-15T10:08:11Z"
   },
   "posts": [
     {
