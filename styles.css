@@ -1926,6 +1926,120 @@ tr.awaiting-row td {
   color: var(--muted);
 }
 
+/* Next move per side (top of the Plan panel) */
+
+.lv-moves {
+  margin: 8px 0 12px;
+}
+
+.lv-moves h4 {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lv-moves-scroll {
+  overflow-x: auto;
+}
+
+.lv-moves-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.lv-moves-tbl th {
+  padding: 4px 8px;
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.lv-moves-tbl td {
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+
+.lv-moves-tbl .num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.lv-mv-side {
+  font-weight: 600;
+  min-width: 84px;
+}
+
+.lv-mv-rest {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.lv-mv-neg { color: var(--red); font-weight: 600; }
+.lv-mv-pos { color: var(--green); }
+
+.lv-mv-stuck {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(210, 153, 34, 0.55);
+  background: rgba(210, 153, 34, 0.14);
+  color: var(--amber);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
+.lv-mv-also {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.lv-mv-note {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+/* Narrow boxes (phones, small tiles): each side becomes a small stacked card */
+@container (max-width: 560px) {
+  .lv-moves-tbl thead { display: none; }
+  .lv-moves-tbl,
+  .lv-moves-tbl tbody { display: block; }
+  .lv-moves-tbl tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1px 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.3;
+  }
+  .lv-moves-tbl td { display: block; padding: 0; border: 0; min-width: 0; }
+  .lv-moves-tbl td.lv-mv-side { grid-column: 1; grid-row: 1; min-width: 0; }
+  .lv-moves-tbl td.lv-mv-exp { grid-column: 2; grid-row: 1; }
+  .lv-moves-tbl td.lv-mv-rest,
+  .lv-moves-tbl td.lv-mv-move,
+  .lv-moves-tbl td.lv-mv-when { grid-column: 1 / -1; white-space: normal; }
+  .lv-moves-tbl td.lv-mv-rest { color: var(--muted); font-size: 0.76rem; }
+  .lv-moves-tbl td.lv-mv-rest::before { content: "Resting "; }
+  .lv-moves-tbl td.lv-mv-move { font-weight: 600; }
+}
+
 .lv-sides-scroll {
   margin-top: 14px;
   overflow-x: auto;

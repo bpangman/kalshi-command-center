@@ -83,6 +83,39 @@
     return isNaN(t) ? NaN : t;
   }
 
+  /* Actual Central clock times, never T-minus. "3:15pm CT" when the time is on
+     the same Central day as now, "Sat 9:00am CT" otherwise. */
+  var CT_CLOCK = null;
+  var CT_DAY = null;
+  try {
+    CT_CLOCK = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "2-digit", hour12: true });
+    CT_DAY = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" });
+  } catch (e) { CT_CLOCK = null; CT_DAY = null; }
+
+  function ctClock(ms, refMs) {
+    if (!isFinite(ms) || !CT_CLOCK || !CT_DAY) return "";
+    var p = {};
+    CT_CLOCK.formatToParts(new Date(ms)).forEach(function (x) { p[x.type] = x.value; });
+    var clock = p.hour + ":" + p.minute + String(p.dayPeriod || "").toLowerCase() + " CT";
+    var sameDay = isFinite(refMs) && CT_DAY.format(new Date(ms)) === CT_DAY.format(new Date(refMs));
+    return sameDay ? clock : p.weekday + " " + clock;
+  }
+
+  /* Any "T-240" that still reaches the page (older posts, auditor text) is
+     shown as the clock time that many minutes before the event start. */
+  function clockify(text, startMs) {
+    if (typeof text !== "string" || text.indexOf("T-") < 0) return text;
+    return text.replace(/\bT-(\d+)(?:\.\d+)?\b/g, function (m, n) {
+      if (!isFinite(startMs) || !CT_CLOCK) return n + " min before the start";
+      return ctClock(startMs - Number(n) * 60000, Date.now());
+    });
+  }
+
+  function startMsFor(key) {
+    var e = entryFor(key);
+    return e && e.start_time ? parseMs(e.start_time) : NaN;
+  }
+
   function countdownText(iso) {
     var ms = parseMs(iso) - Date.now();
     if (isNaN(ms)) return "";
@@ -445,7 +478,7 @@
     if (it.severity === "critical") body.appendChild(el("span", "lv-tag lv-tag-critical", "Critical"));
     else if (it.severity === "warn") body.appendChild(el("span", "lv-tag lv-tag-warn", "Heads up"));
     if (it.title) body.appendChild(el("strong", "lv-item-title", it.title));
-    body.appendChild(document.createTextNode(it.text));
+    body.appendChild(document.createTextNode(clockify(it.text, startMsFor(B.key))));
     row.appendChild(body);
     return row;
   }
@@ -571,13 +604,65 @@
     return { found: found, rest: rest };
   }
 
-  function sectionCard(s) {
+  function sectionCard(s, startMs) {
     var sec = el("div", "lv-sec");
     sec.appendChild(el("h4", null, s.title || ""));
     var ul = el("ul");
-    (s.lines || []).forEach(function (ln) { ul.appendChild(el("li", null, ln)); });
+    (s.lines || []).forEach(function (ln) { ul.appendChild(el("li", null, clockify(ln, startMs))); });
     sec.appendChild(ul);
     return sec;
+  }
+
+  /* "Next move per side": one row per side, biggest exposure first. Built from
+     plan.moves (written by the narrator from the bot's own rules and numbers). */
+  function buildMoves(plan, startMs) {
+    var moves = plan && plan.moves;
+    if (!Array.isArray(moves) || !moves.length) return null;
+    var wrap = el("div", "lv-moves");
+    wrap.appendChild(el("h4", null, "Next move per side"));
+    var scroll = el("div", "lv-moves-scroll");
+    var tbl = el("table", "lv-moves-tbl");
+    var thead = el("thead");
+    var hr = el("tr");
+    [["Side", ""], ["Resting", "lv-mv-rest"], ["If it wins", "lv-mv-exp num"], ["Next move", "lv-mv-move"], ["When / trigger", "lv-mv-when"]].forEach(function (h) {
+      hr.appendChild(el("th", h[1], h[0]));
+    });
+    thead.appendChild(hr);
+    tbl.appendChild(thead);
+    var tb = el("tbody");
+    moves.forEach(function (mv) {
+      var tr = el("tr", mv.stuck ? "is-stuck" : "");
+      var c1 = el("td", "lv-mv-side");
+      c1.setAttribute("data-label", "Side");
+      c1.appendChild(el("span", "lv-mv-name", mv.side || ""));
+      if (mv.stuck) {
+        var tag = el("span", "lv-mv-stuck", "stuck");
+        tag.title = "No fill in a long time, big exposure, and no move planned in the next 2 hours.";
+        c1.appendChild(tag);
+      }
+      tr.appendChild(c1);
+      var c2 = el("td", "lv-mv-rest", mv.resting || "none");
+      c2.setAttribute("data-label", "Resting");
+      tr.appendChild(c2);
+      var ex = typeof mv.exposure === "number" ? mv.exposure : NaN;
+      var c3 = el("td", "lv-mv-exp num" + (isFinite(ex) ? (ex < -0.5 ? " lv-mv-neg" : (ex > 0.5 ? " lv-mv-pos" : "")) : ""), mv.exposure_text || "-");
+      c3.setAttribute("data-label", "If it wins");
+      tr.appendChild(c3);
+      var c4 = el("td", "lv-mv-move", clockify(mv.move || "", startMs));
+      c4.setAttribute("data-label", "Next");
+      tr.appendChild(c4);
+      var c5 = el("td", "lv-mv-when");
+      c5.setAttribute("data-label", "When");
+      c5.appendChild(document.createTextNode(clockify(mv.when || "", startMs)));
+      if (mv.also) c5.appendChild(el("span", "lv-mv-also", clockify(mv.also, startMs)));
+      tr.appendChild(c5);
+      tb.appendChild(tr);
+    });
+    tbl.appendChild(tb);
+    scroll.appendChild(tbl);
+    wrap.appendChild(scroll);
+    if (plan.moves_note) wrap.appendChild(el("p", "lv-mv-note", clockify(plan.moves_note, startMs)));
+    return wrap;
   }
 
   function renderPlan(B, plan) {
@@ -588,13 +673,14 @@
     box.innerHTML = "";
     B.planHas = !!plan;
     var split = splitSections(plan && plan.sections);
+    var startMs = startMsFor(B.key);
     SEC_DEFS.forEach(function (d) {
       var pe = B.secEls[d.k];
       pe.innerHTML = "";
       B.secHas[d.k] = !!split.found[d.k];
       if (split.found[d.k]) {
         var g = el("div", "lv-sections lv-sections-solo");
-        g.appendChild(sectionCard(split.found[d.k]));
+        g.appendChild(sectionCard(split.found[d.k], startMs));
         pe.appendChild(g);
       }
     });
@@ -605,7 +691,9 @@
     age.setAttribute("data-ago", plan.ts || "");
     top.appendChild(age);
     box.appendChild(top);
-    if (plan.headline) box.appendChild(el("h3", "lv-plan-headline", plan.headline));
+    var mvBlock = buildMoves(plan, startMs);
+    if (mvBlock) box.appendChild(mvBlock);
+    if (plan.headline) box.appendChild(el("h3", "lv-plan-headline", clockify(plan.headline, startMs)));
 
     var chips = el("div", "lv-plan-chips");
     if (plan.phase) chips.appendChild(el("span", "lv-chip lv-chip-phase", plan.phase));
@@ -615,11 +703,11 @@
     }
     chips.appendChild(el("span", "lv-plan-checks", "Bot checks every " + (plan.checks_every_s || 30) + " s"));
     box.appendChild(chips);
-    if (plan.confidence_note) box.appendChild(el("p", "lv-conf-note", plan.confidence_note));
+    if (plan.confidence_note) box.appendChild(el("p", "lv-conf-note", clockify(plan.confidence_note, startMs)));
 
     if (split.rest.length) {
       var grid = el("div", "lv-sections");
-      split.rest.forEach(function (s) { grid.appendChild(sectionCard(s)); });
+      split.rest.forEach(function (s) { grid.appendChild(sectionCard(s, startMs)); });
       box.appendChild(grid);
     }
 
@@ -637,8 +725,8 @@
         when.appendChild(cd);
         li.appendChild(when);
         var what = el("div", "lv-step-what");
-        what.appendChild(el("strong", null, st.label || ""));
-        if (st.detail) what.appendChild(el("span", "lv-step-detail", " - " + st.detail));
+        what.appendChild(el("strong", null, clockify(st.label || "", startMs)));
+        if (st.detail) what.appendChild(el("span", "lv-step-detail", " - " + clockify(st.detail, startMs)));
         li.appendChild(what);
         ul2.appendChild(li);
       });
