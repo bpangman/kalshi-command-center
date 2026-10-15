@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T04:58:55.336133Z",
+  "generated_at": "2026-10-15T05:01:32.754241Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -12,12 +12,12 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth. Green flag Sun 10/18 2:00 PM CT (in 3d 14h).",
+          "Pre-race growth. Green flag Sun 10/18 2:00 PM CT (in 3d 13h).",
           "Sold 10,835 contracts so far; 58,404 more resting on the book. Premium collected $1,263.",
           "Worst line is -$1,137. The glide target right now is -$800, so it is $337 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 5m ago). Covers 37 of 37 drivers.",
-          "Bot is healthy: heartbeat 1m old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 37 of 37 drivers.",
+          "Bot is healthy: heartbeat 24s old, no errors."
         ]
       },
       {
@@ -43,7 +43,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "The risk glide starts at T-360 (Sun 10/18 8:00 AM CT, in 3d 8h). Until then the limit on the worst line is the backstop (-$800). From then the limit slides in a straight line to -$200 at T-60 (Sun 10/18 1:00 PM CT).",
+          "The risk glide starts at T-360 (Sun 10/18 8:00 AM CT, in 3d 7h). Until then the limit on the worst line is the backstop (-$800). From then the limit slides in a straight line to -$200 at T-60 (Sun 10/18 1:00 PM CT).",
           "When the worst line is under the target the bot: blocks any post whose full fill would break the target, shrinks resting size over the room in place, buys back the worst line cheaply (only when each dollar spent lifts the line 2.0x or more, up to 3 per loop, budget 50% of banked premium), and starts selling to close gaps from T-90.",
           "Preview: if the worst line is still -$1,137 at T-360, the glide would have to bring it up by about $337 to reach the first target.",
           "Even-up (lagging drivers re-priced to fair) from T-60; the take window (sell to close gaps) from T-20 to the green flag.",
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T04:57:56Z"
+    "ts": "2026-10-15T05:00:57Z"
   },
   "posts": [
     {
@@ -707,6 +707,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1143.71 vs floor -825.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792040410938-5bc454",
+      "ts": "2026-10-15T05:00:10Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 12 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-RYBL low 2255c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-AUCI low 1500c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-CHBR low 2148c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792040410939-78723b",
+      "ts": "2026-10-15T05:00:10Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): worst -1137.17 vs floor -825.00. Check the command center.",
       "severity": "critical"
     }
   ]
