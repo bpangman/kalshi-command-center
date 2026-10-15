@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T19:32:49.143240Z",
+  "generated_at": "2026-10-15T19:35:30.597354Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 50,
+    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Chandler Smith",
@@ -27,12 +27,12 @@
         "exposure": -323.43,
         "exposure_text": "-$323",
         "move": "Step price down 1c (29c to 28c)",
-        "when": "if no fill by 2:35pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-15T19:35:25Z",
+        "when": "if no fill by 2:50pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T19:50:25Z",
         "stuck": false,
         "also": "Also: glide starts Fri 12:30pm CT",
         "last_fill": "2026-10-15T16:47:38Z",
-        "lag_note": "Steps to 28c if no fill by 2:35pm CT."
+        "lag_note": "Steps to 28c if no fill by 2:50pm CT."
       },
       {
         "side": "Tristan McKee",
@@ -77,12 +77,12 @@
         "exposure": 355.28,
         "exposure_text": "+$355",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "if no fill by 2:36pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-15T19:36:15Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Steps to 8c if no fill by 2:36pm CT."
+        "lag_note": "Steps to 8c at the next check."
       },
       {
         "side": "Kaden Honeycutt",
@@ -102,7 +102,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 6:30pm CT. Sold 5,345, 29,105 resting. Worst line -$809 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
+          "Pre-race growth, green flag Fri 6:30pm CT. Sold 5,345, 29,105 resting. Worst line -$809 (limit now -$400)."
         ]
       },
       {
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Kaden Honeycutt: 1,181 behind. Price 16c matches the crowd.",
-          "Ty Majeski: 1,164 behind. Steps to 8c if no fill by 2:36pm CT.",
+          "Ty Majeski: 1,164 behind. Steps to 8c at the next check.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T19:32:29Z"
+    "ts": "2026-10-15T19:35:30Z"
   },
   "posts": [
     {
@@ -2554,6 +2554,31 @@
       "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792092809780-6a6870",
+      "ts": "2026-10-15T19:33:29Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$809, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792092930590-8e5585",
+      "ts": "2026-10-15T19:35:26Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Layne Riggs: no fill for 168 min, added 75 at 28c (was 29c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Layne Riggs",
+        "from": 0.29,
+        "to": 0.28
+      }
     }
   ],
   "audits": [
