@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T02:47:30.706004Z",
+  "generated_at": "2026-10-15T02:50:07.932834Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,17 +16,17 @@
           "Sold 8,236 contracts so far; 22,596 more resting on the book. Premium collected $756.",
           "Worst line is -$944. The glide target right now is -$400, so it is $544 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "New posts are on hold: free cash is $142 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
+          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "New posts are on hold: free cash is $142 (read 3m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 39m ago and the bot re-posted them.",
-          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 39m ago and the bot re-posted them.",
-          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 39m ago and the bot re-posted them.",
-          "Carson Kvapil: sold 308, 1,392 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.6c. It can step down 1c at a time, to no lower than about 8.6c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Sheldon Creed: sold 0, 1,700 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 42m ago and the bot re-posted them.",
+          "Brent Crews: sold 70, 1,630 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 42m ago and the bot re-posted them.",
+          "Corey Day: sold 198, 1,502 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; its rows vanished with no fill 42m ago and the bot re-posted them.",
+          "Carson Kvapil: sold 308, 1,392 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.7c. It can step down 1c at a time, to no lower than about 8.7c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: new posts are on hold: free cash $142 is under the $400 floor; the backstop has stopped it adding.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
@@ -90,9 +90,9 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T02:47:01Z",
+        "at": "2026-10-15T02:50:02Z",
         "label": "Possible price step on Carson Kvapil",
-        "detail": "If no fill by then it may drop 1c from 14c toward 8.6c."
+        "detail": "If no fill by then it may drop 1c from 14c toward 8.7c."
       }
     ],
     "sides": [
@@ -146,7 +146,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T02:47:01Z"
+    "ts": "2026-10-15T02:50:02Z"
   },
   "posts": [
     {
@@ -341,6 +341,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792032477643-f0bad1",
+      "ts": "2026-10-15T02:47:57Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -462.75 past allowed limit -400.00",
       "severity": "warn"
     }
   ]
