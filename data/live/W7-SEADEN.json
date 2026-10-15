@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T22:36:06.853063Z",
+  "generated_at": "2026-10-15T22:39:09.118310Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$183, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$182, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "SEA by 7-14",
         "resting": "none",
-        "exposure": -183.4,
-        "exposure_text": "-$183",
+        "exposure": -181.8,
+        "exposure_text": "-$182",
         "move": "Next wave 450 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "SEA by 1-6",
         "resting": "150 @ 29-34c",
-        "exposure": -103.58,
-        "exposure_text": "-$104",
+        "exposure": -101.98,
+        "exposure_text": "-$102",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-15T23:30:00Z",
@@ -35,8 +35,8 @@
       {
         "side": "DEN by 1-6",
         "resting": "75 @ 22c",
-        "exposure": -16.63,
-        "exposure_text": "-$17",
+        "exposure": -15.03,
+        "exposure_text": "-$15",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-15T23:30:00Z",
@@ -48,34 +48,34 @@
       {
         "side": "DEN by 15+",
         "resting": "250 @ 10c",
-        "exposure": 243.4,
-        "exposure_text": "+$243",
+        "exposure": 245.0,
+        "exposure_text": "+$245",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 5:38pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-15T22:38:39Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-15T22:38:53Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-15T22:18:25Z",
-        "lag_note": "Steps to 9c if no fill by 5:38pm CT."
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "SEA by 15+",
-        "resting": "524 @ 16-19c",
-        "exposure": 351.17,
-        "exposure_text": "+$351",
+        "resting": "514 @ 16-19c",
+        "exposure": 342.77,
+        "exposure_text": "+$343",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-15T23:30:00Z",
         "stuck": false,
         "also": "Also: price step",
-        "last_fill": "2026-10-15T22:34:31Z",
+        "last_fill": "2026-10-15T22:37:11Z",
         "lag_note": "Price 16c matches the crowd."
       },
       {
         "side": "DEN by 7-14",
         "resting": "557 @ 13-15c",
-        "exposure": 376.01,
-        "exposure_text": "+$376",
+        "exposure": 377.61,
+        "exposure_text": "+$378",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-15T23:30:00Z",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 6,408, 1,431 resting. Worst line -$183 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 6,418, 1,498 resting. Worst line -$182 (goal -$150)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DEN by 1-6, DEN by 7-14, DEN by 15+, SEA by 15+.",
           "DEN by 7-14: 559 behind. Price 13c matches the crowd.",
-          "SEA by 15+: 535 behind. Price 16c matches the crowd.",
+          "SEA by 15+: 525 behind. Price 16c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$183 is better than -$200.",
+          "Gate open: worst line -$182 is better than -$200.",
           "Closest: SEA by 7-14, 0 resting vs trigger 225.",
           "Batches used: 2 (max 3 per side)."
         ]
@@ -186,15 +186,15 @@
       },
       {
         "label": "SEA by 15+",
-        "held": 827.9,
-        "resting": 447.1,
+        "held": 837.9,
+        "resting": 514.1,
         "target": 750.0,
         "status": "lagging",
         "price": 0.16
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T22:35:52Z"
+    "ts": "2026-10-15T22:38:53Z"
   },
   "posts": [
     {
@@ -3563,6 +3563,60 @@
       "text": "Fast fill on lagging SEA by 15+: 78 of 150 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792103852994-7da836",
+      "ts": "2026-10-15T22:35:16Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 78: SEA by 15+ x78 at 16c. Worst line -$182.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 78.0,
+        "fills": [
+          {
+            "side": "SEA by 15+",
+            "price": 0.16,
+            "qty": 78.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792103873157-ffe1cd",
+      "ts": "2026-10-15T22:35:37Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 77 (same-price reload): SEA by 15+ x77 at 16c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 77.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792103873160-101cbc",
+      "ts": "2026-10-15T22:37:53Z",
+      "book": "W7-SEADEN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$182, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792103933655-ba1443",
+      "ts": "2026-10-15T22:38:53Z",
+      "book": "W7-SEADEN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$182, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4311,6 +4365,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+0 on DEN 7-14 @ 0.13 (maker)\nworst outcome now -106\nheld 1196/789/887/1283/1362/750\nIf the game ends... you make\nDEN 1-6: -35 (-0.4% of bankroll)\nDEN 7-14: +372 (+4.5% of bankroll)\nDEN 15+: +274 (+3.3% of bankroll)\nSEA 1-6: -122 (-1.5% of bankroll)\nSEA 7-14: -202 (-2.5% of bankroll)\nSEA 15+: +410 (+5.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792103825252-60369d",
+      "ts": "2026-10-15T22:37:05Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+78 on SEA 15+ @ 0.16 (maker)\nworst outcome now -6\nheld 1196/803/936/1283/1362/828\nIf the game ends... you make\nDEN 1-6: -17 (-0.2% of bankroll)\nDEN 7-14: +376 (+4.6% of bankroll)\nDEN 15+: +243 (+3.0% of bankroll)\nSEA 1-6: -104 (-1.3% of bankroll)\nSEA 7-14: -183 (-2.2% of bankroll)\nSEA 15+: +351 (+4.3% of bankroll)",
       "severity": "warn"
     }
   ]
