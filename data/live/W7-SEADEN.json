@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T22:50:38.286450Z",
+  "generated_at": "2026-10-15T22:53:20.144861Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -34,16 +34,16 @@
       },
       {
         "side": "DEN by 1-6",
-        "resting": "75 @ 22c",
+        "resting": "75 @ 21c",
         "exposure": 10.05,
         "exposure_text": "+$10",
-        "move": "Step price down 1c (22c to 21c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-15T22:49:58Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:30pm CT, up to $100 in all",
+        "at": "2026-10-15T23:30:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-15T09:11:26Z",
-        "lag_note": "Steps to 21c at the next check."
+        "lag_note": "Price 21c matches the crowd."
       },
       {
         "side": "SEA by 15+",
@@ -64,12 +64,12 @@
         "exposure": 270.08,
         "exposure_text": "+$270",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-15T22:49:58Z",
+        "when": "if no fill by 5:59pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-15T22:59:41Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-15T22:18:25Z",
-        "lag_note": "Steps to 9c at the next check."
+        "lag_note": "Steps to 9c if no fill by 5:59pm CT."
       },
       {
         "side": "DEN by 7-14",
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DEN by 1-6, DEN by 7-14, DEN by 15+, SEA by 15+.",
           "DEN by 7-14: 538 behind. Price 13c matches the crowd.",
-          "DEN by 15+: 427 behind. Steps to 9c at the next check.",
+          "DEN by 15+: 427 behind. Steps to 9c if no fill by 5:59pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -150,7 +150,7 @@
         "resting": 75.0,
         "target": 900.0,
         "status": "lagging",
-        "price": 0.22
+        "price": 0.21
       },
       {
         "label": "DEN by 7-14",
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T22:49:58Z"
+    "ts": "2026-10-15T22:53:00Z"
   },
   "posts": [
     {
@@ -3754,6 +3754,21 @@
             "qty": 22.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792104639079-6d5465",
+      "ts": "2026-10-15T22:50:28Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on DEN by 1-6: no fill for 818 min, added 75 at 21c (was 22c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "DEN by 1-6",
+        "from": 0.22,
+        "to": 0.21
       }
     }
   ],
