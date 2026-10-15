@@ -1,30 +1,30 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-15T14:53:25.074522Z",
+  "generated_at": "2026-10-15T14:55:59.894041Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 810 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
-    "confidence": "high",
-    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
-    "checks_every_s": 45,
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 4,560 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
+    "checks_every_s": 76,
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:55 PM CT (in 2d 12h).",
+          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:55 PM CT (in 2d 11h).",
           "Moneyline right now: Buckley 46% to win, Malott 54%.",
-          "Sold 0 contracts so far; 810 more resting across 7 buckets. Premium $0.",
-          "Worst line $0 (-$4 if every resting order filled). Backstop -$500; trickle target -$150 by the fight.",
+          "Sold 0 contracts so far; 4,560 more resting across 7 buckets. Premium $0.",
+          "Worst line $0 (-$26 if every resting order filled). Backstop -$500; trickle target -$150 by the fight.",
           "Wave 1 holds back 3,000 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 1d 23h).",
-          "Bot is healthy: heartbeat 1m old, no errors."
+          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "No bucket is lagging right now (rule: more than 15% of the leader, up to 150 contracts, behind it, and fair above 5%).",
-          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -33,7 +33,7 @@
         "lines": [
           "Wave 1 is posted: one lowest rung per bucket. At Sat 10/17 9:00 AM CT (in 1d 23h) the bot releases the rest of every ladder: 3,000 more contracts across 5 buckets.",
           "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
-          "Closest to triggering: Buckley by KO/TKO with 150 resting against a trigger of 225.",
+          "Closest to triggering: Buckley by KO/TKO with 900 resting against a trigger of 225.",
           "The worst-line gate is open ($0 is at or better than -$100).",
           "Batches used so far: none."
         ]
@@ -41,7 +41,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Trickle balancing starts at T-120 (Sat 10/17 7:55 PM CT, in 2d 10h): the bot records the worst line then and walks it to -$150 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
+          "Trickle balancing starts at T-120 (Sat 10/17 7:55 PM CT, in 2d 9h): the bot records the worst line then and walks it to -$150 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
           "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
           "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
           "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
@@ -87,7 +87,7 @@
       {
         "label": "Buckley by Decision",
         "held": 0.0,
-        "resting": 150.0,
+        "resting": 900.0,
         "target": 1500.0,
         "status": "even",
         "price": 0.14
@@ -95,7 +95,7 @@
       {
         "label": "Buckley by KO/TKO",
         "held": 0.0,
-        "resting": 150.0,
+        "resting": 900.0,
         "target": 1500.0,
         "status": "even",
         "price": 0.33
@@ -111,7 +111,7 @@
       {
         "label": "Malott by Decision",
         "held": 0.0,
-        "resting": 150.0,
+        "resting": 900.0,
         "target": 1500.0,
         "status": "even",
         "price": 0.26
@@ -119,7 +119,7 @@
       {
         "label": "Malott by KO/TKO",
         "held": 0.0,
-        "resting": 150.0,
+        "resting": 900.0,
         "target": 1500.0,
         "status": "even",
         "price": 0.2
@@ -127,7 +127,7 @@
       {
         "label": "Malott by Submission",
         "held": 0.0,
-        "resting": 150.0,
+        "resting": 900.0,
         "target": 1500.0,
         "status": "even",
         "price": 0.13
@@ -142,7 +142,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-15T14:52:56Z"
+    "ts": "2026-10-15T14:55:57Z"
   },
   "posts": [
     {
@@ -197,6 +197,30 @@
         "contracts": 630.0,
         "rows": 6
       }
+    },
+    {
+      "id": "1792076036851-fb9a88",
+      "ts": "2026-10-15T14:53:02Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 3,000 (launch ladder): Buckley by KO/TKO x600 at 33c, Buckley by Decision x600 at 14c, Malott by KO/TKO x600 at 20c, Malott by Submission x600 at 13c, Malott by Decision x600 at 26c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 3000.0,
+        "rows": 5
+      }
+    },
+    {
+      "id": "1792076036855-b4fd9a",
+      "ts": "2026-10-15T14:53:56Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 1,810 resting; 3,000 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 1d 23h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
