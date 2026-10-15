@@ -1,13 +1,13 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-15T16:17:50.457791Z",
+  "generated_at": "2026-10-15T16:20:32.989007Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 336 sold, 2,319 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$200.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
+    "checks_every_s": 45,
     "sections": [
       {
         "title": "Right now",
@@ -17,7 +17,7 @@
           "Sold 336 contracts so far; 2,319 more resting across 7 buckets. Premium $87.",
           "Worst line -$200 (-$103 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,575 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 1d 21h).",
-          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
+          "Bot is healthy: heartbeat 3s old, no errors."
         ]
       },
       {
@@ -27,7 +27,7 @@
           "Cuamba by Decision: sold 0, 286 behind the leader. Cheapest row 23c, fair 20.8c. It can step down 1c at a time, to no lower than about 18.8c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Jourdain by Decision: sold 7, 279 behind the leader. Cheapest row 27c, fair 24.8c. It can step down 1c at a time, to no lower than about 22.8c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Jourdain by Submission: sold 43, 244 behind the leader. Cheapest row 11c, fair 8.1c. It can step down 1c at a time, to no lower than about 6.1c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -87,12 +87,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T16:16:51Z",
+        "at": "2026-10-15T16:19:52Z",
         "label": "Possible price step on Cuamba by Decision",
         "detail": "If no fill by then it may drop 1c from 23c toward 18.8c."
       },
       {
-        "at": "2026-10-15T16:16:51Z",
+        "at": "2026-10-15T16:19:52Z",
         "label": "Possible price step on Cuamba by KO/TKO",
         "detail": "If no fill by then it may drop 1c from 14c toward 10.5c."
       }
@@ -156,7 +156,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-15T16:16:51Z"
+    "ts": "2026-10-15T16:19:52Z"
   },
   "posts": [
     {
@@ -1598,6 +1598,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nJOUKOTKODQ: -200\nJOUSUB: +44\nJOUDEC: +80\nCUAKOTKODQ: +87\nCUASUB: +87\nCUADEC: +87\nDRAW: +87\nCollected $87 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nJOUKOTKODQ: 286 / 134\nJOUSUB: 43 / 377\nJOUDEC: 7 / 413\nCUAKOTKODQ: 0 / 420\nCUASUB: 0 / 525\nCUADEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.051 | Worst now -200 | Cash free $1500\nAnchor age 227s | Last fill 7276s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792081192763-19d0c7",
+      "ts": "2026-10-15T16:19:52Z",
+      "book": "UFC-JOUCUA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 336 sold, 2,319 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$200. Next: Full ladder release in 1d 21h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [

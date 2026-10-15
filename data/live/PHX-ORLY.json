@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T16:17:50.457791Z",
+  "generated_at": "2026-10-15T16:20:32.989007Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 8,800 contracts so far; 29,652 more resting on the book. Premium collected $811.",
           "Worst line is -$889. The glide target right now is -$400, so it is $489 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 39 drivers.",
-          "Bot is healthy: heartbeat 32s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 1m ago). Covers 37 of 39 drivers.",
+          "Bot is healthy: heartbeat 6s old, no errors."
         ]
       },
       {
@@ -25,7 +25,7 @@
         "lines": [
           "Sheldon Creed: sold 0, 1,700 behind the leader. Cheapest row 8c; the crowd has been buying at 8c; fair 7.1c. Already at its floor (about 8c); it will not go lower unless the crowd price or fair drops.",
           "Brent Crews: sold 70, 1,630 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 5.2c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
-          "Corey Day: sold 198, 1,502 behind the leader. Cheapest row 9c; the crowd has been buying at 9c; fair 7.1c. Already at its floor (about 9c); it will not go lower unless the crowd price or fair drops. Last hold reason (1h 2m ago): the next cent down (9c to 8c) would go below the bot's price floor (the highest of the crowd's clearing price 7.2c, the crowd's best ask, and fair minus a small allowance), so it holds at 9c.",
+          "Corey Day: sold 198, 1,502 behind the leader. Cheapest row 9c; the crowd has been buying at 9c; fair 7.1c. Already at its floor (about 9c); it will not go lower unless the crowd price or fair drops. Last hold reason (1h 5m ago): the next cent down (9c to 8c) would go below the bot's price floor (the highest of the crowd's clearing price 7.2c, the crowd's best ask, and fair minus a small allowance), so it holds at 9c.",
           "Carson Kvapil: sold 656, 1,044 behind the leader. Cheapest row 14c; the crowd has been buying at 13c; fair 11.7c. It can step down 1c at a time, to no lower than about 13c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: the backstop has stopped it adding.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
@@ -90,7 +90,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T16:16:51Z",
+        "at": "2026-10-15T16:19:52Z",
         "label": "Possible price step on Carson Kvapil",
         "detail": "If no fill by then it may drop 1c from 14c toward 13c."
       }
@@ -146,7 +146,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T16:16:51Z"
+    "ts": "2026-10-15T16:19:52Z"
   },
   "posts": [
     {
@@ -2266,6 +2266,24 @@
       "source": "bot",
       "text": "+19 on Sam Mayer @ 0.05 (maker)\n+15 on Anthony Alfredo @ 0.02 (maker)\n+47 on Rajah Caruth @ 0.02 (maker)\n+47 on Ryan Sieg @ 0.02 (maker)\nworst outcome now -889\nIf the race ends... you make\nJesse Love: -889\nJustin Allgaier: -436\nBrandon Jones: -29\nAustin Hill: +61\nTaylor Gray: +61\nSammy Smith: +61\nWilliam Sawalich: +144\nCarson Kvapil: +156\nall others (31) >= +247",
       "severity": "warn"
+    },
+    {
+      "id": "1792081211168-4bf8ee",
+      "ts": "2026-10-15T16:20:11Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 12 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-SHCR low 2000c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-SAMA low 1059c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1802c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792081211169-e8ff6a",
+      "ts": "2026-10-15T16:20:11Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -888.99 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
