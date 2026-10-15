@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T03:42:52.776576Z",
+  "generated_at": "2026-10-15T03:45:29.602172Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 10,294 contracts so far; 58,945 more resting on the book. Premium collected $1,156.",
           "Worst line is -$1,244. The glide target right now is -$800, so it is $444 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 37 drivers.",
-          "Bot is healthy: heartbeat 42s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 37 of 37 drivers.",
+          "Bot is healthy: heartbeat 29s old, no errors."
         ]
       },
       {
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T03:42:23Z"
+    "ts": "2026-10-15T03:45:24Z"
   },
   "posts": [
     {
@@ -404,6 +404,26 @@
       "text": "The bot restarted. It re-reads its orders from Kalshi and adopts what is already resting instead of posting again.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792035803548-48681b",
+      "ts": "2026-10-15T03:43:23Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,244 (final target -$200 at T-60). 10,294 sold, 58,945 resting. Next: Checkpoint T-2880 in 1d 15h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792035864026-5e40a3",
+      "ts": "2026-10-15T03:44:24Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,244 (final target -$200 at T-60). 10,294 sold, 58,945 resting. Next: Checkpoint T-2880 in 1d 15h. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -505,6 +525,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1243.95 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792035783238-422283",
+      "ts": "2026-10-15T03:43:03Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
