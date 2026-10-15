@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T19:10:30.250940Z",
+  "generated_at": "2026-10-15T19:13:51.142410Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -39,12 +39,12 @@
         "exposure": -349.5,
         "exposure_text": "-$349",
         "move": "Step price down 1c (14c to 13c)",
-        "when": "if no fill by 2:14pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-15T19:14:45Z",
         "stuck": false,
         "also": "Also: glide starts Sat 12:30pm CT",
         "last_fill": "2026-10-15T17:36:56Z",
-        "lag_note": "Steps to 13c if no fill by 2:14pm CT."
+        "lag_note": "Steps to 13c at the next check."
       },
       {
         "side": "Corey Day",
@@ -195,7 +195,7 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T19:10:19Z"
+    "ts": "2026-10-15T19:13:20Z"
   },
   "posts": [
     {
@@ -1942,6 +1942,16 @@
       "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$803, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792091459462-e2cbc8",
+      "ts": "2026-10-15T19:10:52Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [
