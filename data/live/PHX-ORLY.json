@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T04:05:03.305226Z",
+  "generated_at": "2026-10-15T04:07:42.338334Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 8,673 contracts so far; 29,779 more resting on the book. Premium collected $808.",
           "Worst line is -$892. The glide target right now is -$400, so it is $492 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 5m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "Bot is healthy: heartbeat 30s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 1m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "Bot is healthy: heartbeat 54s old, no errors."
         ]
       },
       {
@@ -90,7 +90,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T04:04:33Z",
+        "at": "2026-10-15T04:07:34Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 10c toward 5.3c."
       }
@@ -146,7 +146,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T04:04:33Z"
+    "ts": "2026-10-15T04:07:34Z"
   },
   "posts": [
     {
@@ -663,6 +663,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- PHX-ORLY - Jesse Love has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PHX-ORLY - Justin Allgaier has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1792037207105-4bc9e0",
+      "ts": "2026-10-15T04:06:47Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 14 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 455c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-SHCR low 2000c, KXNASCARRACE-TIMP26-ANAL low 750c, KXNASCARRACE-TIMP26-SAMA low 1078c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 233c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CAKV low 1344c, KXNASCARRACE-TIMP26-CODA low 1802c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c, KXNASCARRACE-TIMP26-NISA low 750c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792037207106-3bf3eb",
+      "ts": "2026-10-15T04:06:47Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -892.04 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
