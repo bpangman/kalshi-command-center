@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T21:10:44.551876Z",
+  "generated_at": "2026-10-15T21:13:37.573784Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": -51.12,
         "exposure_text": "-$51",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T21:10:45Z",
+        "when": "if no fill by 4:26pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T21:26:24Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "Steps to 6c at the next check."
+        "lag_note": "Steps to 6c if no fill by 4:26pm CT."
       },
       {
         "side": "Christian Eckes",
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T21:10:13Z"
+    "ts": "2026-10-15T21:13:14Z"
   },
   "posts": [
     {
@@ -2856,6 +2856,20 @@
         "from": 0.28,
         "to": 0.27
       }
+    },
+    {
+      "id": "1792098693882-bc80b8",
+      "ts": "2026-10-15T21:09:19Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 75 (price step): Layne Riggs x75 at 27c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 75.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -3641,6 +3655,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): 14 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-CHEC low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-LARI low 1019c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1293c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792098802173-3a0a22",
+      "ts": "2026-10-15T21:13:22Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -808.72 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
