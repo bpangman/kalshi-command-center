@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T14:58:33.113535Z",
+  "generated_at": "2026-10-15T15:04:18.458309Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -12,12 +12,12 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth. Green flag Sun 10/18 2:00 PM CT (in 3d 4h).",
+          "Pre-race growth. Green flag Sun 10/18 2:00 PM CT (in 3d 3h).",
           "Sold 10,924 contracts so far; 56,167 more resting on the book. Premium collected $1,280.",
           "Worst line is -$1,120. The glide target right now is -$800, so it is $320 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 37 drivers.",
-          "Bot is healthy: heartbeat 2s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 37 of 37 drivers.",
+          "Bot is healthy: heartbeat 12s old, no errors."
         ]
       },
       {
@@ -26,7 +26,7 @@
           "Kyle Larson: sold 0, 2,400 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 8.3c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
           "Christopher Bell: sold 900, 1,500 behind the leader. Cheapest row 19c; the crowd has been buying at 19c; fair 16.1c. Already at its floor (about 19c); it will not go lower unless the crowd price or fair drops.",
           "Ryan Blaney: sold 1,834, 566 behind the leader. Cheapest row 21c; the crowd has been buying at 20.8c; fair 18.2c. Already at its floor (about 20.8c); it will not go lower unless the crowd price or fair drops.",
-          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: its rows vanished with no fill 8h 50m ago and the bot re-posted them.",
+          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: its rows vanished with no fill 8h 55m ago and the bot re-posted them.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
@@ -43,7 +43,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "The risk glide starts at T-360 (Sun 10/18 8:00 AM CT, in 2d 22h). Until then the limit on the worst line is the backstop (-$800). From then the limit slides in a straight line to -$200 at T-60 (Sun 10/18 1:00 PM CT).",
+          "The risk glide starts at T-360 (Sun 10/18 8:00 AM CT, in 2d 21h). Until then the limit on the worst line is the backstop (-$800). From then the limit slides in a straight line to -$200 at T-60 (Sun 10/18 1:00 PM CT).",
           "When the worst line is under the target the bot: blocks any post whose full fill would break the target, shrinks resting size over the room in place, buys back the worst line cheaply (only when each dollar spent lifts the line 2.0x or more, up to 3 per loop, budget 50% of banked premium), and starts selling to close gaps from T-90.",
           "Preview: if the worst line is still -$1,120 at T-360, the glide would have to bring it up by about $320 to reach the first target.",
           "Even-up (lagging drivers re-priced to fair) from T-60; the take window (sell to close gaps) from T-20 to the green flag.",
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T14:58:18Z"
+    "ts": "2026-10-15T15:03:20Z"
   },
   "posts": [
     {
@@ -2115,6 +2115,24 @@
     {
       "id": "1792074576471-a6274e",
       "ts": "2026-10-15T14:29:36Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): worst -1119.71 vs floor -825.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792076457001-6d15a1",
+      "ts": "2026-10-15T15:00:57Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 10 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-AUCI low 1500c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792076457002-693c9a",
+      "ts": "2026-10-15T15:00:57Z",
       "book": "PHX-CUP",
       "kind": "audit",
       "source": "auditor",
