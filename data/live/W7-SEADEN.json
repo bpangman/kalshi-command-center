@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T23:49:58.867038Z",
+  "generated_at": "2026-10-15T23:51:44.409610Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -50,7 +50,7 @@
         "exposure": 210.42,
         "exposure_text": "+$210",
         "move": "Hold price at 14c",
-        "when": "next cent is under the crowd price (13.5c)",
+        "when": "next cent is under the crowd price (13.4c)",
         "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
@@ -63,25 +63,25 @@
         "exposure": 232.09,
         "exposure_text": "+$232",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-15T23:49:32Z",
+        "when": "if no fill by 6:59pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-15T23:59:57Z",
         "stuck": false,
         "also": "Also: next wave if resting drops under 125",
         "last_fill": "2026-10-15T23:27:15Z",
-        "lag_note": "Steps to 8c at the next check."
+        "lag_note": "Steps to 8c if no fill by 6:59pm CT."
       },
       {
         "side": "SEA by 15+",
-        "resting": "375 @ 17-19c",
+        "resting": "375 @ 16-17c",
         "exposure": 281.78,
         "exposure_text": "+$282",
-        "move": "Step price down 1c (17c to 16c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-15T23:49:32Z",
+        "move": "Hold price at 16c",
+        "when": "crowd pays 15.5c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
         "last_fill": "2026-10-15T22:44:43Z",
-        "lag_note": "Steps to 16c at the next check."
+        "lag_note": "Price 16c matches the crowd."
       }
     ],
     "sections": [
@@ -95,8 +95,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DEN by 7-14, DEN by 15+, SEA by 15+.",
-          "SEA by 15+: 386 behind. Steps to 16c at the next check.",
-          "DEN by 15+: 336 behind. Steps to 8c at the next check.",
+          "SEA by 15+: 386 behind. Price 16c matches the crowd.",
+          "DEN by 15+: 336 behind. Steps to 8c if no fill by 6:59pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -178,26 +178,13 @@
         "resting": 375.0,
         "target": 750.0,
         "status": "lagging",
-        "price": 0.17
+        "price": 0.16
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T23:49:26Z"
+    "ts": "2026-10-15T23:51:27Z"
   },
   "posts": [
-    {
-      "id": "1792029640895-0782a7",
-      "ts": "2026-10-15T01:56:33Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
     {
       "id": "1792029701414-1d6d3a",
       "ts": "2026-10-15T02:01:41Z",
@@ -3961,6 +3948,21 @@
       "source": "bot",
       "text": "If the game ends... you make\nDEN 1-6: -12 (-0.1% of bankroll)\nDEN 7-14: +210 (+2.6% of bankroll)\nDEN 15+: +232 (+2.8% of bankroll)\nSEA 1-6: -24 (-0.3% of bankroll)\nSEA 7-14: -104 (-1.3% of bankroll)\nSEA 15+: +282 (+3.4% of bankroll)\nCollected $1259 premium ($0 fees) | Paper margin over fair $90 (not realized until settlement)\nEvent: DEN 7-14: DEN 0-0, Q0 0:00; SEA 7-14: SEA 0-0, Q0 0:00\nheld / resting\nDEN 1-6: 1271 / 450\nDEN 7-14: 1048 / 264\nDEN 15+: 1027 / 159\nSEA 1-6: 1283 / 150\nSEA 7-14: 1362 / 0\nSEA 15+: 977 / 375\nPosted book 1.17 | Sold avg 1.055 | Worst now -195 | Cash free $2500\nAnchor age 0s | Last fill 1199s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792108206368-5ff9ea",
+      "ts": "2026-10-15T23:49:57Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SEA by 15+: no fill for 65 min, added 300 at 16c (was 17c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SEA by 15+",
+        "from": 0.17,
+        "to": 0.16
+      }
     }
   ],
   "audits": [
