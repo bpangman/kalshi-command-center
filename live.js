@@ -906,6 +906,7 @@
     head.appendChild(B.pillEl2);
     head.appendChild(B.subEl);
     root.appendChild(head);
+    B.headEl = head;
 
     B.cardSlot = el("div", "lv-card-slot");
     root.appendChild(B.cardSlot);
@@ -995,6 +996,8 @@
         B.cardKey = null;
       }
     }
+    /* the numbers card already carries the title; keep the plain header only when there is no card */
+    B.headEl.hidden = !isFleet && !!B.cardNode;
     var f = L.files[B.key];
     renderPlan(B, isFleet ? null : (f && f.plan) || null);
     renderAuditButton(B);
@@ -1060,6 +1063,8 @@
   /* -- lifecycle -- */
 
   function setActive(on) {
+    /* the floating Live fills button would cover the chat boxes; the feeds here show fills anyway */
+    try { document.body.classList.toggle("on-live", !!on); } catch (e) { /* ignore */ }
     if (on === L.active) return;
     L.active = on;
     if (on) {
