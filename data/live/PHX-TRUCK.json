@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T19:51:49.271364Z",
+  "generated_at": "2026-10-15T19:54:31.864243Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -50,13 +50,13 @@
         "resting": "1,293 @ 7-9c",
         "exposure": -51.12,
         "exposure_text": "-$51",
-        "move": "Hold price at 7c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "if no fill by 3:07pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T20:07:57Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Steps to 6c if no fill by 3:07pm CT."
       },
       {
         "side": "Christian Eckes",
@@ -77,12 +77,12 @@
         "exposure": 355.28,
         "exposure_text": "+$355",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T19:51:38Z",
+        "when": "if no fill by 3:06pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T20:06:56Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Steps to 8c at the next check."
+        "lag_note": "Steps to 8c if no fill by 3:06pm CT."
       },
       {
         "side": "Kaden Honeycutt",
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Kaden Honeycutt: 1,181 behind. Crowd is quiet here (20 traded).",
-          "Ty Majeski: 1,164 behind. Steps to 8c at the next check.",
+          "Ty Majeski: 1,164 behind. Steps to 8c if no fill by 3:06pm CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T19:51:38Z"
+    "ts": "2026-10-15T19:53:39Z"
   },
   "posts": [
     {
@@ -2629,6 +2629,36 @@
         "from": 0.29,
         "to": 0.28
       }
+    },
+    {
+      "id": "1792093998895-e81e56",
+      "ts": "2026-10-15T19:53:17Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Brent Crews price not lowered: the next cent is under the crowd price, so it stays at 7c.",
+      "severity": "info",
+      "title": "Price hold"
+    },
+    {
+      "id": "1792094059383-d2e089",
+      "ts": "2026-10-15T19:54:06Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 4 drivers: Giovanni Ruggiero, Christian Eckes, Layne Riggs.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1792094059384-86e530",
+      "ts": "2026-10-15T19:54:06Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Pricing note: interim: crowd anchor (sportsbook covers 0/36); fair = the crowd's best asks power de-vigged over the field; l",
+      "severity": "info",
+      "title": "Pricing source"
     }
   ],
   "audits": [
@@ -3350,6 +3380,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): 12 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792094046563-03f377",
+      "ts": "2026-10-15T19:54:06Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1792094046564-a619e6",
+      "ts": "2026-10-15T19:54:06Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 4 driver(s): Giovanni Ruggiero (+24%), Christian Eckes (+21%), Layne Riggs (+21%), Tristan McKee (+20%)",
       "severity": "warn"
     }
   ]
