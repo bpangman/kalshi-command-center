@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T03:40:14.459716Z",
+  "generated_at": "2026-10-15T03:42:52.776576Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 10,294 contracts so far; 58,945 more resting on the book. Premium collected $1,156.",
           "Worst line is -$1,244. The glide target right now is -$800, so it is $444 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 37 drivers.",
-          "Bot is healthy: heartbeat 6s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 37 drivers.",
+          "Bot is healthy: heartbeat 42s old, no errors."
         ]
       },
       {
@@ -34,7 +34,7 @@
       {
         "title": "Next wave of contracts",
         "lines": [
-          "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 2,000/1,500/1,500 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $400 floor.",
+          "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 2,000/1,500/1,500 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $1,300 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$2,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
           "Josh Berry: 2 waves so far, 2,440 contracts offered in all; the latest (940 at 3c) is 0% filled.",
           "Waves stop at T-60."
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T03:39:22Z"
+    "ts": "2026-10-15T03:42:23Z"
   },
   "posts": [
     {
@@ -394,6 +394,16 @@
       "text": "Kalshi rate-limited the bot (4 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1792035723057-b7294a",
+      "ts": "2026-10-15T03:41:43Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "The bot restarted. It re-reads its orders from Kalshi and adopts what is already resting instead of posting again.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
