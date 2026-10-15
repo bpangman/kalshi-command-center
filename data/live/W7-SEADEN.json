@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T23:41:15.898587Z",
+  "generated_at": "2026-10-15T23:42:56.471801Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame balancing",
@@ -50,12 +50,12 @@
         "exposure": 210.42,
         "exposure_text": "+$210",
         "move": "Hold price at 14c",
-        "when": "crowd pays 13.6c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (13.5c)",
         "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
         "last_fill": "2026-10-15T23:17:46Z",
-        "lag_note": "Price 14c matches the crowd."
+        "lag_note": "Price 14c is at its floor."
       },
       {
         "side": "DEN by 15+",
@@ -188,23 +188,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T23:40:21Z"
+    "ts": "2026-10-15T23:42:22Z"
   },
   "posts": [
-    {
-      "id": "1792028801652-ac06a4",
-      "ts": "2026-10-15T01:46:41Z",
-      "book": "W7-SEADEN",
-      "kind": "chat_out",
-      "source": "chat",
-      "text": "Got it. Looking into it now.",
-      "severity": "info",
-      "data": {
-        "reply_id": "0021dfb3-baf2-4e42-9710-117c41cc4c3b",
-        "in_reply_to": "32b2b451-6aa0-4a3f-a130-a68295371776",
-        "status": "received"
-      }
-    },
     {
       "id": "1792028801872-5118d2",
       "ts": "2026-10-15T01:46:41Z",
@@ -3984,6 +3970,16 @@
       "text": "Balancing before kickoff 7:15pm CT. Worst line -$104, goal -$150. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame balancing"
+    },
+    {
+      "id": "1792107702496-444949",
+      "ts": "2026-10-15T23:41:40Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "DEN by 7-14 price not lowered: the next cent is under the crowd price, so it stays at 14c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
