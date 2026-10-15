@@ -1,10 +1,10 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-15T15:36:27.004097Z",
+  "generated_at": "2026-10-15T15:39:09.525611Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 1,488 sold, 1,932 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$262.",
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 1,488 sold, 1,970 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$262.",
     "confidence": "high",
     "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
     "checks_every_s": 45,
@@ -14,18 +14,18 @@
         "lines": [
           "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:20 PM CT (in 2d 10h).",
           "Moneyline right now: Blanchfield 76% to win, Jasudavicius 24%.",
-          "Sold 1,488 contracts so far; 1,932 more resting across 7 buckets. Premium $338.",
-          "Worst line -$262 (-$125 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
+          "Sold 1,488 contracts so far; 1,970 more resting across 7 buckets. Premium $338.",
+          "Worst line -$262 (-$268 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,850 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 1d 22h).",
-          "Bot is healthy: heartbeat 47s old, no errors."
+          "Bot is healthy: heartbeat 41s old, no errors."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Blanchfield by KO/TKO: sold 0, 600 behind the leader. Cheapest row 31c, fair 28.2c. It can step down 1c at a time, to no lower than about 26.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
-          "Jasudavicius by KO/TKO: sold 0, 600 behind the leader. Cheapest row 9c, fair 7.9c. It can step down 1c at a time, to no lower than about 5.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 250 more contracts are held back for the full-ladder release.",
-          "Jasudavicius by Decision: sold 188, 412 behind the leader. Cheapest row 15c, fair 12.4c. It can step down 1c at a time, to no lower than about 10.4c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
+          "Blanchfield by KO/TKO: sold 0, 600 behind the leader. Cheapest row 9c, fair 7.9c. It can step down 1c at a time, to no lower than about 5.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
+          "Jasudavicius by Submission: sold 100, 500 behind the leader. Cheapest row 6c, fair 5.2c. It can step down 1c at a time, to no lower than about 3.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min.",
+          "Jasudavicius by Decision: sold 188, 412 behind the leader. Cheapest row 18c, fair 16.7c. It can step down 1c at a time, to no lower than about 14.7c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 400 more contracts are held back for the full-ladder release.",
           "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
@@ -37,7 +37,7 @@
           "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
           "Blanchfield by Submission is thin (0 resting) but is 600 contracts ahead of the least-sold bucket (limit 300), so it gets no batch until the others catch up.",
           "Blanchfield by Decision is thin (0 resting) but is 600 contracts ahead of the least-sold bucket (limit 300), so it gets no batch until the others catch up.",
-          "Closest to triggering: Jasudavicius by Submission with 140 resting against a trigger of 75.",
+          "Closest to triggering: Jasudavicius by Submission with 178 resting against a trigger of 75.",
           "The worst-line gate is closed: batches wait until the worst line is -$100 or better (it is -$262).",
           "Batches used so far: 2."
         ]
@@ -88,14 +88,14 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T15:35:32Z",
+        "at": "2026-10-15T15:38:33Z",
         "label": "Possible price step on Blanchfield by KO/TKO",
-        "detail": "If no fill by then it may drop 1c from 31c toward 26.2c."
+        "detail": "If no fill by then it may drop 1c from 9c toward 5.9c."
       },
       {
-        "at": "2026-10-15T15:35:32Z",
+        "at": "2026-10-15T15:38:33Z",
         "label": "Possible price step on Jasudavicius by Decision",
-        "detail": "If no fill by then it may drop 1c from 15c toward 10.4c."
+        "detail": "If no fill by then it may drop 1c from 18c toward 14.7c."
       }
     ],
     "sides": [
@@ -113,7 +113,7 @@
         "resting": 600.0,
         "target": 1000.0,
         "status": "lagging",
-        "price": 0.31
+        "price": 0.09
       },
       {
         "label": "Blanchfield by Submission",
@@ -129,23 +129,23 @@
         "resting": 411.5,
         "target": 1000.0,
         "status": "lagging",
-        "price": 0.15
+        "price": 0.18
       },
       {
         "label": "Jasudavicius by KO/TKO",
         "held": 0.0,
         "resting": 750.0,
         "target": 1000.0,
-        "status": "lagging",
+        "status": "even",
         "price": 0.09
       },
       {
         "label": "Jasudavicius by Submission",
         "held": 100.0,
-        "resting": 140.0,
+        "resting": 178.0,
         "target": 300.0,
-        "status": "even",
-        "price": 0.05
+        "status": "lagging",
+        "price": 0.06
       },
       {
         "label": "Draw / No Contest",
@@ -153,11 +153,11 @@
         "resting": 30.0,
         "target": 30.0,
         "status": "even",
-        "price": 0.47
+        "price": 0.03
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-15T15:35:32Z"
+    "ts": "2026-10-15T15:38:33Z"
   },
   "posts": [
     {
@@ -1571,6 +1571,40 @@
       "text": "The bot restarted. It re-reads its orders from Kalshi and adopts what is already resting instead of posting again.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792078633153-deff61",
+      "ts": "2026-10-15T15:37:00Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose for Jasudavicius by Submission: the bot moved its lowest rung up from 5c to 6c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792078653302-5d3751",
+      "ts": "2026-10-15T15:37:33Z",
+      "book": "UFC-BLAJAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 1,488 sold, 1,932 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$262. Next: Full ladder release in 1d 22h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792078733891-a30be4",
+      "ts": "2026-10-15T15:37:01Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,182 (launch ladder): Blanchfield by KO/TKO x600 at 9c, Jasudavicius by Decision x412 at 18c, Jasudavicius by Submission x140 at 6c, Draw / No Contest x30 at 3c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1182.0,
+        "rows": 4
+      }
     }
   ],
   "audits": [
