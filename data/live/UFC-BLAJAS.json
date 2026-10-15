@@ -1,13 +1,13 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-15T22:14:01.782667Z",
+  "generated_at": "2026-10-15T22:17:09.128140Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Blanchfield by Decision",
@@ -97,7 +97,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:20pm CT. Sold 1,488, 1,970 resting. Worst line -$262 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 9:20pm CT. Sold 1,488, 1,970 resting. Worst line -$262 (target -$100)."
         ]
       },
       {
@@ -210,7 +210,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-15T22:13:42Z"
+    "ts": "2026-10-15T22:16:43Z"
   },
   "posts": [
     {
@@ -2351,6 +2351,16 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792102603235-60d69a",
+      "ts": "2026-10-15T22:16:43Z",
+      "book": "UFC-BLAJAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
@@ -2640,6 +2650,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- UFC-BLAJAS - Erin Blanchfield by Decision has had no resting orders for at least 1111 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792102538475-4d7c5f",
+      "ts": "2026-10-15T22:15:38Z",
+      "book": "UFC-BLAJAS",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-BLAJAS - Erin Blanchfield by Submission has had no resting orders for at least 623 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
