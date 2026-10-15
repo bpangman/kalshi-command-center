@@ -1,0 +1,162 @@
+{
+  "key": "UFC-JOUCUA",
+  "generated_at": "2026-10-15T01:46:16.311779Z",
+  "plan": {
+    "engine": "ufc",
+    "phase": "Wave 1 (lowest rung only)",
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 0 sold, 2,100 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+    "confidence": "high",
+    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
+    "checks_every_s": 45,
+    "sections": [
+      {
+        "title": "Right now",
+        "lines": [
+          "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 7:35 PM CT (in 2d 22h).",
+          "Moneyline right now: Jourdain 62% to win, Cuamba 38%.",
+          "Sold 0 contracts so far; 2,100 more resting across 6 buckets. Premium $0.",
+          "Worst line $0 (-$33 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
+          "Wave 1 holds back 1,575 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 12h).",
+          "Free cash is $443 (read 15s ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
+        ]
+      },
+      {
+        "title": "Lagging sides",
+        "lines": [
+          "No bucket is lagging right now (rule: more than 15% of the leader, up to 150 contracts, behind it, and fair above 5%).",
+          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "A step is skipped if filling the new row in full would push the worst line lower."
+        ]
+      },
+      {
+        "title": "Next wave of contracts",
+        "lines": [
+          "Wave 1 is posted: one lowest rung per bucket. At Sat 10/17 9:00 AM CT (in 2d 12h) the bot releases the rest of every ladder: 1,575 more contracts across 6 buckets.",
+          "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
+          "Closest to triggering: Cuamba by Submission with 0 resting against a trigger of 131.",
+          "The worst-line gate is open ($0 is at or better than -$100).",
+          "Batches used so far: none."
+        ]
+      },
+      {
+        "title": "Tightening",
+        "lines": [
+          "Trickle balancing starts at T-120 (Sat 10/17 5:35 PM CT, in 2d 20h): the bot records the worst line then and walks it to -$100 by the fight, selling small clips (50 contracts) at the bid, checking every 5 min, paying only when more than $25 behind, at most $100 paid per book.",
+          "From T-30: queue-preserving even-up (a bucket 15% behind the leader gets its lowest rung moved toward fair without losing queue). From T-5: a last-resort take is allowed; it is the old one-shot balancer and spends at most half the banked margin.",
+          "Between T-120 and T-30 the evenness allowance tightens on a time schedule, because a fight can end in seconds.",
+          "The fight start is an estimate from the card position on ESPN; if earlier bouts run long it moves, and every T- time here moves with it."
+        ]
+      },
+      {
+        "title": "Will it adapt on its own?",
+        "lines": [
+          "Yes, on its own: the full ladder at the release time, extra batches on thin buckets while the gate is open, price steps on lagging buckets, and the paid trickle from T-120.",
+          "No, it will not: reprice resting rows when the moneyline moves, or add anything once the worst line is under the gate. The start time can shift if earlier bouts run long.",
+          "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
+        ]
+      }
+    ],
+    "next_steps": [
+      {
+        "at": "2026-10-17T14:00:00Z",
+        "label": "Full ladder release",
+        "detail": "The held-back rungs (1,575 contracts) post."
+      },
+      {
+        "at": "2026-10-17T22:35:00Z",
+        "label": "Trickle balancing starts",
+        "detail": "T-120: walk the worst line to -$100."
+      },
+      {
+        "at": "2026-10-18T00:05:00Z",
+        "label": "Even-up window",
+        "detail": "T-30: lagging buckets re-priced toward fair, queue kept."
+      },
+      {
+        "at": "2026-10-18T00:30:00Z",
+        "label": "Last-resort take window",
+        "detail": "T-5: the bot may sell to close the last gaps."
+      },
+      {
+        "at": "2026-10-18T00:32:00Z",
+        "label": "Cutover to the fight",
+        "detail": "About 3 minutes before the start the in-fight engine takes over."
+      }
+    ],
+    "sides": [
+      {
+        "label": "Cuamba by Decision",
+        "held": 0.0,
+        "resting": 420.0,
+        "target": 700.0,
+        "status": "even",
+        "price": 0.19
+      },
+      {
+        "label": "Cuamba by KO/TKO",
+        "held": 0.0,
+        "resting": 420.0,
+        "target": 700.0,
+        "status": "even",
+        "price": 0.15
+      },
+      {
+        "label": "Cuamba by Submission",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": 700.0,
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Jourdain by Decision",
+        "held": 0.0,
+        "resting": 420.0,
+        "target": 700.0,
+        "status": "even",
+        "price": 0.27
+      },
+      {
+        "label": "Jourdain by KO/TKO",
+        "held": 0.0,
+        "resting": 420.0,
+        "target": 700.0,
+        "status": "even",
+        "price": 0.28
+      },
+      {
+        "label": "Jourdain by Submission",
+        "held": 0.0,
+        "resting": 420.0,
+        "target": 700.0,
+        "status": "even",
+        "price": 0.11
+      }
+    ],
+    "book": "UFC-JOUCUA",
+    "ts": "2026-10-15T01:45:34Z"
+  },
+  "posts": [
+    {
+      "id": "1792028734332-281a74",
+      "ts": "2026-10-15T01:45:34Z",
+      "book": "UFC-JOUCUA",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Narrator started watching this book. Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 0 sold, 2,100 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+      "severity": "info",
+      "title": "Narrator started"
+    },
+    {
+      "id": "1792028734332-35fb3b",
+      "ts": "2026-10-15T01:45:34Z",
+      "book": "UFC-JOUCUA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 7:35 PM CT. 0 sold, 2,100 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 2d 12h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    }
+  ],
+  "audits": []
+}

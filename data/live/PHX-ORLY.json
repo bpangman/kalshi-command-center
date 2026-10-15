@@ -1,0 +1,180 @@
+{
+  "key": "PHX-ORLY",
+  "generated_at": "2026-10-15T01:46:16.311779Z",
+  "plan": {
+    "engine": "race",
+    "phase": "Pre-race growth",
+    "headline": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$949 (final target -$100 at T-60). 8,142 sold, 28,422 resting.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
+    "checks_every_s": 30,
+    "sections": [
+      {
+        "title": "Right now",
+        "lines": [
+          "Pre-race growth. Green flag Sat 10/17 6:30 PM CT (in 2d 21h).",
+          "Sold 8,142 contracts so far; 28,422 more resting on the book. Premium collected $751.",
+          "Worst line is -$949. The glide target right now is -$400, so it is $549 short; the final target is -$100 by T-60.",
+          "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
+          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "The bot's live websocket feed is down (stale for 17h 47m), so it reads orders and fills by slower polling. Its resting numbers can lag the real book.",
+          "Free cash is $443 (read 15s ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
+        ]
+      },
+      {
+        "title": "Lagging sides",
+        "lines": [
+          "Sheldon Creed: sold 0, 1,700 behind the leader. Cheapest row 9c; the crowd has been buying at n/a; fair 5.6c. It can step down 1c at a time, to no lower than about 3.6c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Brent Crews: sold 70, 1,630 behind the leader. Cheapest row 10c; the crowd has been buying at n/a; fair 7.2c. It can step down 1c at a time, to no lower than about 5.2c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Corey Day: sold 198, 1,502 behind the leader. Cheapest row 9c; the crowd has been buying at 8c; fair 6.4c. It can step down 1c at a time, to no lower than about 8c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Carson Kvapil: sold 308, 1,392 behind the leader. Cheapest row 14c; the crowd has been buying at n/a; fair 10.6c. It can step down 1c at a time, to no lower than about 8.6c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
+          "Justin Allgaier: sold 1,248, 452 behind the leader. Nothing is resting on it: the backstop has stopped it adding; the bot's live feed is down, so its view of resting orders may be stale.",
+          "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
+          "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
+        ]
+      },
+      {
+        "title": "Next wave of contracts",
+        "lines": [
+          "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $400 floor.",
+          "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
+          "Brandon Jones: 2 waves so far, 840 contracts offered in all; the latest (90 at 5c) is 0% filled.",
+          "Sammy Smith: 2 waves so far, 1,528 contracts offered in all; the latest (778 at 7c) is 0% filled.",
+          "Waves stop at T-60."
+        ]
+      },
+      {
+        "title": "Tightening",
+        "lines": [
+          "The risk glide starts at T-360 (Sat 10/17 12:30 PM CT, in 2d 15h). Until then the limit on the worst line is the backstop (-$400). From then the limit slides in a straight line to -$100 at T-60 (Sat 10/17 5:30 PM CT).",
+          "When the worst line is under the target the bot: blocks any post whose full fill would break the target, shrinks resting size over the room in place, buys back the worst line cheaply (only when each dollar spent lifts the line 2.0x or more, up to 3 per loop, budget 50% of banked premium), and starts selling to close gaps from T-90.",
+          "Preview: if the worst line is still -$949 at T-360, the glide would have to bring it up by about $549 to reach the first target.",
+          "Even-up (lagging drivers re-priced to fair) from T-60; the take window (sell to close gaps) from T-20 to the green flag.",
+          "Checkpoints: T-2880, T-1440, T-360, T-180, T-120, T-60, T-20 before the green flag.",
+          "At the green flag the bot keeps the resting orders and hands over to the in-race engine."
+        ]
+      },
+      {
+        "title": "Will it adapt on its own?",
+        "lines": [
+          "Yes, on its own: new waves for popular drivers, price steps on lagging contenders, the backstop that stops a heavy driver, and the glide that tightens the worst line toward -$100.",
+          "No, it will not: reprice a resting row when Bovada moves, or buy back a driver for any reason except the glide's cheap-lift rule. If Bovada's field drops below 80% coverage the bot just holds what it has.",
+          "The one thing that depends on the market: the worst line is -$949 against a -$100 final target. Premium from the rest of the field and fills on lagging drivers lift it; the glide's buybacks cover what is left, within their budget. It might not fully close.",
+          "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
+        ]
+      }
+    ],
+    "next_steps": [
+      {
+        "at": "2026-10-15T23:30:00Z",
+        "label": "Checkpoint T-2880",
+        "detail": "Market snapshot and posture logged."
+      },
+      {
+        "at": "2026-10-17T17:30:00Z",
+        "label": "Risk glide starts",
+        "detail": "T-360: the worst-line limit starts sliding from -$400 to -$100."
+      },
+      {
+        "at": "2026-10-17T22:00:00Z",
+        "label": "Glide selling opens",
+        "detail": "T-90: the bot may sell to close gaps if the line is short."
+      },
+      {
+        "at": "2026-10-17T22:30:00Z",
+        "label": "Glide target date",
+        "detail": "T-60: worst line should be -$100 or better; waves stop; even-up begins."
+      },
+      {
+        "at": "2026-10-17T23:30:00Z",
+        "label": "Green flag",
+        "detail": "Resting orders stay; the in-race engine takes over."
+      },
+      {
+        "at": "2026-10-15T01:45:34Z",
+        "label": "Possible price step on Brent Crews",
+        "detail": "If no fill by then it may drop 1c from 10c toward 5.2c."
+      },
+      {
+        "at": "2026-10-15T01:45:34Z",
+        "label": "Possible price step on Carson Kvapil",
+        "detail": "If no fill by then it may drop 1c from 14c toward 8.6c."
+      }
+    ],
+    "sides": [
+      {
+        "label": "Brent Crews",
+        "held": 70.1,
+        "resting": 1929.9,
+        "target": 2000,
+        "status": "lagging",
+        "price": 0.1
+      },
+      {
+        "label": "Carson Kvapil",
+        "held": 308.0,
+        "resting": 1691.0,
+        "target": 2000,
+        "status": "lagging",
+        "price": 0.14
+      },
+      {
+        "label": "Corey Day",
+        "held": 197.7,
+        "resting": 1802.3,
+        "target": 2000,
+        "status": "lagging",
+        "price": 0.09
+      },
+      {
+        "label": "Jesse Love",
+        "held": 1700.0,
+        "resting": 0.0,
+        "target": 2000,
+        "status": "heavy",
+        "price": null
+      },
+      {
+        "label": "Justin Allgaier",
+        "held": 1247.5,
+        "resting": 0.0,
+        "target": 2000,
+        "status": "lagging",
+        "price": null
+      },
+      {
+        "label": "Sheldon Creed",
+        "held": 0.0,
+        "resting": 2000.0,
+        "target": 2000,
+        "status": "lagging",
+        "price": 0.09
+      }
+    ],
+    "book": "PHX-ORLY",
+    "ts": "2026-10-15T01:45:34Z"
+  },
+  "posts": [
+    {
+      "id": "1792028734328-70757e",
+      "ts": "2026-10-15T01:45:34Z",
+      "book": "PHX-ORLY",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Narrator started watching this book. Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$949 (final target -$100 at T-60). 8,142 sold, 28,422 resting.",
+      "severity": "info",
+      "title": "Narrator started"
+    },
+    {
+      "id": "1792028734328-2d3d2f",
+      "ts": "2026-10-15T01:45:34Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$949 (final target -$100 at T-60). 8,142 sold, 28,422 resting. Next: Checkpoint T-2880 in 21h 44m. Confidence: medium.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    }
+  ],
+  "audits": []
+}
