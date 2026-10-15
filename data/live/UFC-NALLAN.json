@@ -1,6 +1,6 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-15T07:04:13.023977Z",
+  "generated_at": "2026-10-15T07:06:51.900411Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -18,7 +18,7 @@
           "Worst line -$235 (-$84 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,575 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 6h).",
           "Backstop is ON for Nallo by KO/TKO: its line is under -$250, so nothing more is added there until the others catch up.",
-          "Bot is healthy: heartbeat 52s old, no errors."
+          "Bot is healthy: heartbeat 31s old, no errors."
         ]
       },
       {
@@ -90,12 +90,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T07:03:50Z",
+        "at": "2026-10-15T07:05:51Z",
         "label": "Possible price step on Landwehr by Decision",
         "detail": "If no fill by then it may drop 1c from 12c toward 9.4c."
       },
       {
-        "at": "2026-10-15T07:03:50Z",
+        "at": "2026-10-15T07:05:51Z",
         "label": "Possible price step on Landwehr by Submission",
         "detail": "If no fill by then it may drop 1c from 8c toward 4.9c."
       }
@@ -159,7 +159,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-15T07:03:50Z"
+    "ts": "2026-10-15T07:05:51Z"
   },
   "posts": [
     {
@@ -601,6 +601,16 @@
       "text": "Wave 1 is posted for the fight at Sat 10/17 7:00 PM CT. 865 sold, 1,790 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$235. Next: Full ladder release in 2d 7h. Confidence: high.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792047871128-6f397d",
+      "ts": "2026-10-15T07:04:28Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "The bot hit an error and skipped a loop (loop_once raised: Kalshi API error 401 on GET /portfolio/fills: {'error': {'code': 'header_timestamp_expired', 'message': 'header timestamp expired'}}). It retries next loop; I will say if it keeps happening.",
+      "severity": "warn",
+      "title": "Bot error"
     }
   ],
   "audits": [
