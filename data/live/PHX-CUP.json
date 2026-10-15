@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-15T06:08:42.943066Z",
+  "generated_at": "2026-10-15T06:11:21.863872Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 10,835 contracts so far; 56,256 more resting on the book. Premium collected $1,263.",
           "Worst line is -$1,137. The glide target right now is -$800, so it is $337 short; the final target is -$200 by T-60.",
           "Backstop is ON for Denny Hamlin, Joey Logano: their lines are under -$800, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 4m ago). Covers 37 of 37 drivers.",
-          "Bot is healthy: heartbeat 1m old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 1m ago). Covers 37 of 37 drivers.",
+          "Bot is healthy: heartbeat 1s old, no errors."
         ]
       },
       {
@@ -26,7 +26,7 @@
           "Kyle Larson: sold 0, 2,400 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 7.9c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
           "Christopher Bell: sold 900, 1,500 behind the leader. Cheapest row 19c; the crowd has been buying at 19c; fair 15.6c. Already at its floor (about 19c); it will not go lower unless the crowd price or fair drops.",
           "Ryan Blaney: sold 1,745, 655 behind the leader. Cheapest row 20c; the crowd has been buying at 20c; fair 20.2c. Already at its floor (about 20c); it will not go lower unless the crowd price or fair drops.",
-          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it. Not sure why: the log shows no refusal I could see since I started watching. Possible causes are the free-cash hold (the bot keeps $1,300 of cash free), a 300 s back-off after an earlier refusal, or a wave waiting on its gate. I cannot see which.",
+          "Chase Briscoe: sold 1,851, 549 behind the leader. Nothing is resting on it: its rows vanished with no fill 2m ago and the bot re-posted them.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
         ]
@@ -139,7 +139,7 @@
       }
     ],
     "book": "PHX-CUP",
-    "ts": "2026-10-15T06:08:26Z"
+    "ts": "2026-10-15T06:10:27Z"
   },
   "posts": [
     {
@@ -702,6 +702,16 @@
       "text": "Pre-race growth for the green flag Sun 10/18 2:00 PM CT. Worst line -$1,137 (final target -$200 at T-60). 10,835 sold, 58,404 resting. Next: Checkpoint T-2880 in 1d 12h. Confidence: medium.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792044647425-ff2218",
+      "ts": "2026-10-15T06:08:31Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Re-laid 3 orders (1,663 contracts) that vanished with no fill (a Kalshi pause or exchange cancel): Chase Briscoe x1,127 at 11c, Chase Briscoe x214 at 12c, Chase Briscoe x322 at 13c.",
+      "severity": "info",
+      "title": "Re-lay"
     }
   ],
   "audits": [
