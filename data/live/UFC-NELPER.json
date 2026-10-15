@@ -1,13 +1,13 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-15T04:48:17.318157Z",
+  "generated_at": "2026-10-15T04:50:55.829223Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 484 sold, 2,051 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$146.",
-    "confidence": "high",
-    "confidence_note": "Every step below is a timer or rule in the bot's settings, and the bot is healthy. The fight start time is an estimate and can move.",
-    "checks_every_s": 45,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
+    "checks_every_s": 75,
     "sections": [
       {
         "title": "Right now",
@@ -17,7 +17,7 @@
           "Sold 484 contracts so far; 2,051 more resting across 7 buckets. Premium $125.",
           "Worst line -$146 (-$94 if every resting order filled). Backstop -$250; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,395 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 9h).",
-          "Bot is healthy: heartbeat 1m old, no errors."
+          "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late."
         ]
       },
       {
@@ -27,7 +27,7 @@
           "Nelson by Decision: sold 0, 271 behind the leader. Cheapest row 12c, fair 11.2c. It can step down 1c at a time, to no lower than about 9.2c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Perez by Decision: sold 0, 271 behind the leader. Cheapest row 32c, fair 29.9c. It can step down 1c at a time, to no lower than about 27.9c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
           "Perez by Submission: sold 213, 58 behind the leader. Cheapest row 13c, fair 11.6c. It can step down 1c at a time, to no lower than about 9.6c (fair minus 2c, or the crowd's clearing price if higher), after 20 min with no fill, at most one step per 15 min. 280 more contracts are held back for the full-ladder release.",
-          "The bot checks every 45s. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
+          "The bot checks every 1m. The moneyline is rechecked every 5m (every 1m in the last 3 hours). Rows already resting are not repriced when the line moves; only new rows use the fresh fair.",
           "A step is skipped if filling the new row in full would push the worst line lower."
         ]
       },
@@ -87,12 +87,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T04:47:52Z",
+        "at": "2026-10-15T04:50:53Z",
         "label": "Possible price step on Nelson by Decision",
         "detail": "If no fill by then it may drop 1c from 12c toward 9.2c."
       },
       {
-        "at": "2026-10-15T04:47:52Z",
+        "at": "2026-10-15T04:50:53Z",
         "label": "Possible price step on Nelson by KO/TKO",
         "detail": "If no fill by then it may drop 1c from 10c toward 7c."
       }
@@ -156,7 +156,7 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-15T04:47:52Z"
+    "ts": "2026-10-15T04:50:53Z"
   },
   "posts": [
     {
@@ -509,6 +509,16 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 484 sold, 2,051 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$146. Next: Full ladder release in 2d 9h. Confidence: high.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792039792916-3c1427",
+      "ts": "2026-10-15T04:49:52Z",
+      "book": "UFC-NELPER",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 484 sold, 2,051 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$146. Next: Full ladder release in 2d 9h. Confidence: medium.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
     }
