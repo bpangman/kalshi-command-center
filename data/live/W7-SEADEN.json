@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T20:51:22.179220Z",
+  "generated_at": "2026-10-15T20:54:03.745469Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -34,16 +34,16 @@
       },
       {
         "side": "DEN by 1-6",
-        "resting": "75 @ 27c",
+        "resting": "75 @ 26c",
         "exposure": -148.13,
         "exposure_text": "-$148",
-        "move": "Step price down 1c (27c to 26c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-15T20:51:09Z",
+        "move": "Step price down 1c (26c to 25c)",
+        "when": "if no fill by 4:06pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-15T21:06:47Z",
         "stuck": false,
         "also": "Also: paid balancing starts 5:45pm CT",
         "last_fill": "2026-10-15T09:11:26Z",
-        "lag_note": "Steps to 26c at the next check."
+        "lag_note": "Steps to 25c if no fill by 4:06pm CT."
       },
       {
         "side": "SEA by 15+",
@@ -150,7 +150,7 @@
         "resting": 75.0,
         "target": 900.0,
         "status": "lagging",
-        "price": 0.27
+        "price": 0.26
       },
       {
         "label": "DEN by 7-14",
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T20:51:04Z"
+    "ts": "2026-10-15T20:53:05Z"
   },
   "posts": [
     {
@@ -2834,6 +2834,41 @@
             "qty": 18.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792097485066-051ea1",
+      "ts": "2026-10-15T20:49:23Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 11: DEN by 7-14 x11 at 13c. Worst line -$315.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 11.0,
+        "fills": [
+          {
+            "side": "DEN by 7-14",
+            "price": 0.13,
+            "qty": 11.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792097525406-d4f266",
+      "ts": "2026-10-15T20:51:49Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on DEN by 1-6: no fill for 700 min, added 75 at 26c (was 27c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "DEN by 1-6",
+        "from": 0.27,
+        "to": 0.26
       }
     }
   ],
