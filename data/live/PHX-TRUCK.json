@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-15T04:18:11.873029Z",
+  "generated_at": "2026-10-15T04:20:49.930134Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -16,8 +16,8 @@
           "Sold 4,460 contracts so far; 29,991 more resting on the book. Premium collected $523.",
           "Worst line is -$941. The glide target right now is -$400, so it is $541 short; the final target is -$100 by T-60.",
           "Backstop is ON for Chandler Smith: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 5m ago). Covers 35 of 36 drivers.",
-          "Bot is healthy: heartbeat 7s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 3m ago). Covers 35 of 36 drivers.",
+          "Bot is healthy: heartbeat 5s old, no errors."
         ]
       },
       {
@@ -26,7 +26,7 @@
           "Christian Eckes: sold 0, 1,464 behind the leader. Cheapest row 10c; the crowd has been buying at 10c; fair 9.8c. Already at its floor (about 10c); it will not go lower unless the crowd price or fair drops.",
           "Ty Majeski: sold 0, 1,464 behind the leader. Cheapest row 8c; the crowd has been buying at 8c; fair 7.9c. Already at its floor (about 8c); it will not go lower unless the crowd price or fair drops.",
           "Kaden Honeycutt: sold 281, 1,183 behind the leader. Cheapest row 14c; the crowd has been buying at 16c; fair 11.5c. Already at its floor (about 16c); it will not go lower unless the crowd price or fair drops.",
-          "Layne Riggs: sold 695, 769 behind the leader. Cheapest row 28c; the crowd has been buying at 25.9c; fair 28.1c. It can step down 1c at a time, to no lower than about 26.1c, after 20 min with no fill, at most one step per 15 min. Last step: 39m ago. Last hold reason (25m ago): the next cent down (28c to 27c) would go below the bot's price floor (the highest of the crowd's clearing price 25.9c, the crowd's best ask, and fair minus a small allowance), so it holds at 28c.",
+          "Layne Riggs: sold 695, 769 behind the leader. Cheapest row 28c; the crowd has been buying at 25.9c; fair 28.1c. It can step down 1c at a time, to no lower than about 26.1c, after 20 min with no fill, at most one step per 15 min. Last step: 42m ago. Last hold reason (28m ago): the next cent down (28c to 27c) would go below the bot's price floor (the highest of the crowd's clearing price 25.9c, the crowd's best ask, and fair minus a small allowance), so it holds at 28c.",
           "Brent Crews: sold 706, 758 behind the leader. Cheapest row 7c; the crowd has been buying at n/a; fair 5.2c. It can step down 1c at a time, to no lower than about 3.2c, after 20 min with no fill, at most one step per 15 min. Last step: none seen.",
           "The bot checks every 30s; it logs a market snapshot every 10 min. Rows already resting are not repriced when the sportsbook moves; only new rows use the fresh price. A step is skipped if filling the new row in full would push a line under the backstop or the glide target.",
           "From T-360 (glide start) the price-step rule is on for lagging drivers so they can sell into the late rush of crowd orders."
@@ -38,7 +38,7 @@
           "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $1,300 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
           "Tristan McKee: 2 waves so far, 1,240 contracts offered in all; the latest (490 at 3c) is 0% filled.",
-          "Latest wave note (2h 11m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
+          "Latest wave note (2h 14m ago): Tristan McKee: wave 1 100% filled; 510 @ 0.03 fits the growth gate but the free cash $87.23 over the $400 floor funds only 0",
           "Waves stop at T-60."
         ]
       },
@@ -90,12 +90,12 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T04:17:38Z",
+        "at": "2026-10-15T04:20:40Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 7c toward 3.2c."
       },
       {
-        "at": "2026-10-15T04:17:38Z",
+        "at": "2026-10-15T04:20:40Z",
         "label": "Possible price step on Layne Riggs",
         "detail": "If no fill by then it may drop 1c from 28c toward 26.1c."
       }
@@ -151,7 +151,7 @@
       }
     ],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-15T04:17:38Z"
+    "ts": "2026-10-15T04:20:40Z"
   },
   "posts": [
     {
@@ -668,6 +668,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- PHX-TRUCK - Chandler Smith has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1792037940508-eaff7d",
+      "ts": "2026-10-15T04:19:00Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 2000c, KXNASCARRACE-ZERCB26-CHEC low 2000c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1719c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-LARI low 1303c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792037940509-c11bd4",
+      "ts": "2026-10-15T04:19:00Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -940.57 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
