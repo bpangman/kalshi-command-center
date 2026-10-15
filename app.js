@@ -8,7 +8,7 @@
    em/en dashes, anywhere in this file including comments and strings. */
 
 var SPORTS = ["NFL", "NASCAR", "F1", "Golf", "UFC"];
-var ROUTES = ["home", "nfl", "nascar", "f1", "golf", "ufc", "calendar"];
+var ROUTES = ["home", "live", "nfl", "nascar", "f1", "golf", "ufc", "calendar"];
 var ROUTE_TO_SPORT = {};
 SPORTS.forEach(function (s) { ROUTE_TO_SPORT[s.toLowerCase()] = s; });
 
@@ -472,6 +472,7 @@ function applyRoute(route) {
       }
     }
   });
+  if (window.LiveTab) window.LiveTab.setActive(route === "live"); // LIVE tab (live.js) polls only while it is open
   // Every page (Home included, 2026-10-02) gets the wider wrapper so a
   // live-book tile grid has room for 4 across.
   var wrapEl = document.querySelector(".wrap");
@@ -491,6 +492,8 @@ function renderForRoute(route) {
     var homeLiveBooks = (state.feed && state.feed.books) || [];
     renderLiveBookTileGrid(document.getElementById("live-books-list"), homeLiveBooks, { showSport: true });
     renderAwaitingBlock(document.getElementById("awaiting-block"), awaitingBooks());
+  } else if (route === "live") {
+    if (window.LiveTab) window.LiveTab.render(); // live.js owns this page's DOM and its own 30s polling
   } else if (route === "calendar") {
     renderCalendarPage();
   } else {

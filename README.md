@@ -159,6 +159,42 @@ pushes right away if a new event just settled.
   with its own heartbeat in over 2 minutes. It does not mean the bot placed
   a bad trade, just that this page's picture of it might be out of date.
 
+## The LIVE tab
+
+The second tab, right after Home. It is a look behind the curtain at every
+book that is live (plus any book that posted in the last 6 hours), so Blake
+does not need bot text messages. Live books come first, soonest start first.
+Each book gets one block:
+
+1. **Numbers card** - the same card the other tabs show (read from
+   `data/feed.json` by the book's key; header only if the feed has no entry).
+2. **What happens next** - the plan card the narrator writes: headline, phase,
+   a confidence pill (high / medium / low) with its note, how often the bot
+   checks, short lists, the coming steps with a Central time and a live
+   countdown, and a small table of each side (held, resting, target, status).
+3. **Live feed** - a scrollable box of timestamped posts, newest at the bottom.
+   It sticks to the bottom unless you scroll up; then a "New updates" pill
+   appears. Audit alerts are not in the feed.
+4. **Audit alerts (N)** - a button that opens that book's audit list. A red dot
+   means there are alerts newer than the last time you opened it (remembered
+   per book in this browser). A banner at the top says "New audit alert on
+   PHX-CUP" with a View button. Audits never open by themselves.
+5. **Chat box** - ask the operator about that book. The first send asks for the
+   passcode once (kept on this device; "Lock" forgets it). Replies show up in the
+   feed with a status chip. A proposal shows its summary, steps and risk with
+   Confirm and Cancel; nothing changes until you tap Confirm.
+6. **Whole fleet** - at the bottom, the same feed and audits for notes that are
+   not tied to one book (no chat).
+
+How it works: `live.js` (loaded after `app.js`) reads `data/live/index.json`
+and `data/live/<KEY>.json` every 30 seconds while the LIVE tab is open (it
+stops polling when another tab is open or the page is hidden). Chat is
+browser to ntfy.sh to the Mac mini and back with no server: topics and the
+HMAC signature come from the passcode with Web Crypto (contract in
+`tools/live/README-LIVE.md` of the main repo, section 4). Feed posts carry ids
+(`data.cmd_id`, `data.reply_id`) so a live reply and its later published copy
+never show twice.
+
 ## The Calendar tab
 
 A month sheet (Sun-Sat, Central time, today highlighted, prev/next arrows).
