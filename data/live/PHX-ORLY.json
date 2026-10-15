@@ -1,10 +1,10 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-15T03:57:07.349165Z",
+  "generated_at": "2026-10-15T03:59:44.916593Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
-    "headline": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$896 (final target -$100 at T-60). 8,583 sold, 29,479 resting.",
+    "headline": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$892 (final target -$100 at T-60). 8,673 sold, 29,389 resting.",
     "confidence": "medium",
     "confidence_note": "The steps are rules in the settings, but whether the worst line reaches -$100 by T-60 depends on the crowd and on cash.",
     "checks_every_s": 30,
@@ -13,11 +13,11 @@
         "title": "Right now",
         "lines": [
           "Pre-race growth. Green flag Sat 10/17 6:30 PM CT (in 2d 19h).",
-          "Sold 8,583 contracts so far; 29,479 more resting on the book. Premium collected $804.",
-          "Worst line is -$896. The glide target right now is -$400, so it is $496 short; the final target is -$100 by T-60.",
+          "Sold 8,673 contracts so far; 29,389 more resting on the book. Premium collected $808.",
+          "Worst line is -$892. The glide target right now is -$400, so it is $492 short; the final target is -$100 by T-60.",
           "Backstop is ON for Jesse Love, Justin Allgaier: their lines are under -$400, so they stop adding until the others catch up.",
-          "Prices follow Bovada, refreshed every 5m (last 2m ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
-          "Bot is healthy: heartbeat 10s old, no errors."
+          "Prices follow Bovada, refreshed every 5m (last 0s ago). Covers 37 of 39 drivers (below the 80% the bot needs, so it holds new posts).",
+          "Bot is healthy: heartbeat 26s old, no errors."
         ]
       },
       {
@@ -37,7 +37,7 @@
         "lines": [
           "Trigger: when a driver's current wave is 90% filled and a full fill would keep his line above the gate, the bot posts the next wave (sizes 1,000/750/750 for contenders/midfield/long shots per wave), priced one cent above the last fill. The book's worst line must also be above the backstop, and free cash above the $1,300 floor.",
           "Right now it is the growth phase (before T-360): the gate is loose (-$1,000) and the number of contracts is limited by what the crowd is likely to buy and by free cash.",
-          "Brandon Jones: 2 waves so far, 840 contracts offered in all; the latest (90 at 5c) is 0% filled.",
+          "Brandon Jones: 3 waves so far, 1,230 contracts offered in all; the latest (390 at 5c) is 23% filled.",
           "Sammy Smith: 2 waves so far, 1,528 contracts offered in all; the latest (778 at 7c) is 0% filled.",
           "Waves stop at T-60."
         ]
@@ -47,7 +47,7 @@
         "lines": [
           "The risk glide starts at T-360 (Sat 10/17 12:30 PM CT, in 2d 13h). Until then the limit on the worst line is the backstop (-$400). From then the limit slides in a straight line to -$100 at T-60 (Sat 10/17 5:30 PM CT).",
           "When the worst line is under the target the bot: blocks any post whose full fill would break the target, shrinks resting size over the room in place, buys back the worst line cheaply (only when each dollar spent lifts the line 2.0x or more, up to 3 per loop, budget 50% of banked premium), and starts selling to close gaps from T-90.",
-          "Preview: if the worst line is still -$896 at T-360, the glide would have to bring it up by about $496 to reach the first target.",
+          "Preview: if the worst line is still -$892 at T-360, the glide would have to bring it up by about $492 to reach the first target.",
           "Even-up (lagging drivers re-priced to fair) from T-60; the take window (sell to close gaps) from T-20 to the green flag.",
           "Checkpoints: T-2880, T-1440, T-360, T-180, T-120, T-60, T-20 before the green flag.",
           "At the green flag the bot keeps the resting orders and hands over to the in-race engine."
@@ -58,7 +58,7 @@
         "lines": [
           "Yes, on its own: new waves for popular drivers, price steps on lagging contenders, the backstop that stops a heavy driver, and the glide that tightens the worst line toward -$100.",
           "No, it will not: reprice a resting row when Bovada moves, or buy back a driver for any reason except the glide's cheap-lift rule. If Bovada's field drops below 80% coverage the bot just holds what it has.",
-          "The one thing that depends on the market: the worst line is -$896 against a -$100 final target. Premium from the rest of the field and fills on lagging drivers lift it; the glide's buybacks cover what is left, within their budget. It might not fully close.",
+          "The one thing that depends on the market: the worst line is -$892 against a -$100 final target. Premium from the rest of the field and fills on lagging drivers lift it; the glide's buybacks cover what is left, within their budget. It might not fully close.",
           "I only read the bot's settings, state and log. I cannot see its next decision, only the rules it follows."
         ]
       }
@@ -90,7 +90,7 @@
         "detail": "Resting orders stay; the in-race engine takes over."
       },
       {
-        "at": "2026-10-15T03:56:29Z",
+        "at": "2026-10-15T03:59:31Z",
         "label": "Possible price step on Brent Crews",
         "detail": "If no fill by then it may drop 1c from 10c toward 5.3c."
       }
@@ -146,7 +146,7 @@
       }
     ],
     "book": "PHX-ORLY",
-    "ts": "2026-10-15T03:56:29Z"
+    "ts": "2026-10-15T03:59:31Z"
   },
   "posts": [
     {
@@ -416,6 +416,19 @@
       "text": "Pricing note from the bot: interim: crowd anchor (sportsbook covers 37/39 (Timberland PRO 200)); fair = the crowd's best asks power de-vigged over the field; long shots full at the crowd ask, contenders and midfield one first wave (33 percent) at the crowd ",
       "severity": "info",
       "title": "Pricing source"
+    },
+    {
+      "id": "1792036750925-51e6a9",
+      "ts": "2026-10-15T03:59:05Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "New wave for Brandon Jones: wave 3 posted, 390 contracts at 5c. The previous wave was 100% filled and a full fill keeps its line inside the gate. This is a growth-phase wave (more size, gated by free cash and the growth gate).",
+      "severity": "info",
+      "title": "New wave",
+      "data": {
+        "side": "Brandon Jones"
+      }
     }
   ],
   "audits": [
