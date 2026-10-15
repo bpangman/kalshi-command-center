@@ -1,10 +1,10 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-15T03:32:20.953924Z",
+  "generated_at": "2026-10-15T03:34:58.234376Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 0 sold, 0 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
+    "headline": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 0 sold, 2,790 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
     "confidence": "low",
     "confidence_note": "New posts are on hold: free cash $190 is under the $400 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
     "checks_every_s": 45,
@@ -14,10 +14,10 @@
         "lines": [
           "Wave 1 (lowest rung only). Fight start estimate Sat 10/17 9:20 PM CT (in 2d 22h).",
           "Moneyline right now: Blanchfield 76% to win, Jasudavicius 24%.",
-          "Sold 0 contracts so far; 0 more resting across 6 buckets. Premium $0.",
-          "Worst line $0 ($0 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
+          "Sold 0 contracts so far; 2,790 more resting across 7 buckets. Premium $0.",
+          "Worst line $0 (-$366 if every resting order filled). Backstop -$350; trickle target -$100 by the fight.",
           "Wave 1 holds back 1,850 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 10h).",
-          "New posts are on hold: free cash is $190 (read 3m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
+          "New posts are on hold: free cash is $190 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
@@ -33,9 +33,9 @@
         "lines": [
           "Wave 1 is posted: one lowest rung per bucket. At Sat 10/17 9:00 AM CT (in 2d 10h) the bot releases the rest of every ladder: 1,850 more contracts across 5 buckets.",
           "Extra batches: a bucket whose resting falls under 25% of its allotment gets a batch of 50% of it (a third inside T-30), split 60/25/15 across three prices, up to 3 batches, 20 min apart, until T-3.",
-          "Closest to triggering: Blanchfield by KO/TKO with 0 resting against a trigger of 150.",
+          "Closest to triggering: Blanchfield by Decision with 0 resting against a trigger of 150.",
           "The worst-line gate is open ($0 is at or better than -$100).",
-          "Batches used so far: 1."
+          "Batches used so far: 2."
         ]
       },
       {
@@ -95,46 +95,54 @@
       {
         "label": "Blanchfield by KO/TKO",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 600.0,
         "target": 1000.0,
         "status": "even",
-        "price": null
+        "price": 0.31
       },
       {
         "label": "Blanchfield by Submission",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 600.0,
         "target": 1000.0,
         "status": "even",
-        "price": null
+        "price": 0.13
       },
       {
         "label": "Jasudavicius by Decision",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 600.0,
         "target": 1000.0,
         "status": "even",
-        "price": null
+        "price": 0.14
       },
       {
         "label": "Jasudavicius by KO/TKO",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 750.0,
         "target": 1000.0,
         "status": "even",
-        "price": null
+        "price": 0.09
       },
       {
         "label": "Jasudavicius by Submission",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 240.0,
         "target": 300.0,
+        "status": "even",
+        "price": 0.05
+      },
+      {
+        "label": "Draw / No Contest",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": 30.0,
         "status": "even",
         "price": null
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-15T03:32:19Z"
+    "ts": "2026-10-15T03:34:19Z"
   },
   "posts": [
     {
@@ -365,6 +373,30 @@
       "text": "The bot hit an error and skipped a loop (loop_once raised: The read operation timed out). It retries next loop; I will say if it keeps happening.",
       "severity": "warn",
       "title": "Bot error"
+    },
+    {
+      "id": "1792035159197-29722c",
+      "ts": "2026-10-15T03:32:30Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Extra batch on Jasudavicius by Submission: its resting had thinned out, so the bot posted batch 2 of 3: 150 contracts across 3 rungs.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792035279883-255158",
+      "ts": "2026-10-15T03:33:26Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 3,480 (launch ladder): Jasudavicius by KO/TKO x750 at 9c, Blanchfield by KO/TKO x600 at 31c, Blanchfield by Submission x600 at 13c, Jasudavicius by Decision x600 at 14c, Blanchfield by Decision x600 at 38c, +4 more rows.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 3480.0,
+        "rows": 9
+      }
     }
   ],
   "audits": []
