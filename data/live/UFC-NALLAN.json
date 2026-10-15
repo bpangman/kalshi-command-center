@@ -1,13 +1,13 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-15T02:07:17.311157Z",
+  "generated_at": "2026-10-15T02:09:55.773459Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 is posted for the fight at Sat 10/17 7:00 PM CT. 445 sold, 2,210 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$285.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something above needs a look before I would call the steps certain.",
-    "checks_every_s": 76,
+    "confidence": "low",
+    "confidence_note": "New posts are on hold: free cash $87 is under the $400 floor. Timed steps still run, but nothing new posts until cash frees up. Cash, not the bot, is the limit right now.",
+    "checks_every_s": 73,
     "sections": [
       {
         "title": "Right now",
@@ -19,7 +19,7 @@
           "Wave 1 holds back 1,575 contracts of the ladder (only the lowest rung is posted) until Sat 10/17 9:00 AM CT (in 2d 11h).",
           "Backstop is ON for Nallo by KO/TKO: its line is under -$250, so nothing more is added there until the others catch up.",
           "The bot is running slow: it is set to check every 45s but its heartbeat only moves about every 1m. Slow reads and rate limits do this; timed steps can land a little late.",
-          "Free cash is $443 (read 2m ago). Kalshi counts resting orders against buying power, so new posts can be refused at this level."
+          "New posts are on hold: free cash is $87 (read 2m ago) and this book keeps $400 free before it posts anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400."
         ]
       },
       {
@@ -91,12 +91,12 @@
         "detail": "About 3 minutes before the start the in-fight engine takes over."
       },
       {
-        "at": "2026-10-15T02:06:43Z",
+        "at": "2026-10-15T02:09:45Z",
         "label": "Possible price step on Landwehr by Decision",
         "detail": "If no fill by then it may drop 1c from 12c toward 9.4c."
       },
       {
-        "at": "2026-10-15T02:06:43Z",
+        "at": "2026-10-15T02:09:45Z",
         "label": "Possible price step on Landwehr by KO/TKO",
         "detail": "If no fill by then it may drop 1c from 12c toward 8.6c."
       }
@@ -160,7 +160,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-15T02:06:43Z"
+    "ts": "2026-10-15T02:09:45Z"
   },
   "posts": [
     {
@@ -222,6 +222,16 @@
       "text": "New posts are on hold: free cash is $87 and this book keeps $400 free before posting anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400.",
       "severity": "warn",
       "title": "Cash hold"
+    },
+    {
+      "id": "1792030064063-089c81",
+      "ts": "2026-10-15T02:07:44Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 is posted for the fight at Sat 10/17 7:00 PM CT. 445 sold, 2,210 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$285. Next: Full ladder release in 2d 11h. Confidence: low.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": []
