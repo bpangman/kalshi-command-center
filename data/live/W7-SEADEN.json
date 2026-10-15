@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-15T22:03:01.222334Z",
+  "generated_at": "2026-10-15T22:05:43.517257Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -17,7 +17,7 @@
         "move": "Next wave 450 contracts",
         "when": "waits until worst loss is -$200 or better (now -$202)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "last_fill": "2026-10-15T20:35:16Z"
       },
       {
@@ -47,16 +47,16 @@
       },
       {
         "side": "DEN by 15+",
-        "resting": "49 @ 10-11c",
+        "resting": "49 @ 9c",
         "exposure": 273.62,
         "exposure_text": "+$274",
-        "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 5:04pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-15T22:04:40Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:30pm CT, up to $100 in all",
+        "at": "2026-10-15T23:30:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-15T21:54:40Z",
-        "lag_note": "Steps to 9c if no fill by 5:04pm CT."
+        "lag_note": "Price 9c matches the crowd."
       },
       {
         "side": "DEN by 7-14",
@@ -163,10 +163,10 @@
       {
         "label": "DEN by 15+",
         "held": 886.7,
-        "resting": 49.3,
+        "resting": 49.0,
         "target": 500.0,
         "status": "lagging",
-        "price": 0.1
+        "price": 0.09
       },
       {
         "label": "SEA by 1-6",
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T22:02:36Z"
+    "ts": "2026-10-15T22:05:38Z"
   },
   "posts": [
     {
@@ -3360,6 +3360,21 @@
       "data": {
         "contracts": 36.0,
         "rows": 1
+      }
+    },
+    {
+      "id": "1792101897987-cc1811",
+      "ts": "2026-10-15T22:04:55Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on DEN by 15+: no fill for 10 min, added 49 at 9c (was 10c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "DEN by 15+",
+        "from": 0.1,
+        "to": 0.09
       }
     }
   ],
