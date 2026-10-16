@@ -1,6 +1,6 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-16T03:43:40.061672Z",
+  "generated_at": "2026-10-16T03:46:18.027875Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -46,15 +46,15 @@
       },
       {
         "side": "Jasudavicius by Submission",
-        "resting": "200 @ 6c",
+        "resting": "200 @ 5-6c",
         "exposure": 237.58,
         "exposure_text": "+$238",
-        "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check, if the crowd trades under 6c",
-        "at": null,
+        "move": "Step price down 1c (5c to 4c)",
+        "when": "if no fill by 10:58pm CT and the crowd trades under 5c",
+        "at": "2026-10-16T03:58:52Z",
         "stuck": false,
         "last_fill": "2026-10-15T04:24:08Z",
-        "lag_note": "Steps to 5c if the crowd trades lower."
+        "lag_note": "Steps to 4c if no fill by 10:58pm CT."
       },
       {
         "side": "Blanchfield by KO/TKO",
@@ -82,11 +82,11 @@
       },
       {
         "side": "Jasudavicius by KO/TKO",
-        "resting": "750 @ 9c",
+        "resting": "750 @ 8c",
         "exposure": 337.58,
         "exposure_text": "+$338",
-        "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "if no fill by 11:43pm CT and 500+ crowd contracts trade",
         "at": null,
         "stuck": false,
         "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:20pm CT",
@@ -105,7 +105,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Blanchfield by KO/TKO, Jasudavicius by Decision, Jasudavicius by Submission.",
           "Blanchfield by KO/TKO: 600 behind. Steps to 8c if the crowd trades lower.",
-          "Jasudavicius by Submission: 500 behind. Steps to 5c if the crowd trades lower.",
+          "Jasudavicius by Submission: 500 behind. Steps to 4c if no fill by 10:58pm CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -190,7 +190,7 @@
         "resting": 750.0,
         "target": 1000.0,
         "status": "even",
-        "price": 0.09
+        "price": 0.08
       },
       {
         "label": "Jasudavicius by Submission",
@@ -198,7 +198,7 @@
         "resting": 200.0,
         "target": 300.0,
         "status": "lagging",
-        "price": 0.06
+        "price": 0.05
       },
       {
         "label": "Draw / No Contest",
@@ -210,7 +210,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-16T03:43:12Z"
+    "ts": "2026-10-16T03:46:13Z"
   },
   "posts": [
     {
@@ -2890,6 +2890,46 @@
       "text": "Bot error, one loop skipped (loop_once raised: The read operation timed out). It retries.",
       "severity": "warn",
       "title": "Bot error"
+    },
+    {
+      "id": "1792122273062-4fa351",
+      "ts": "2026-10-16T03:44:23Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Idle step on Jasudavicius by KO/TKO: no fill for 1568 min, lowest row 9c to 8c.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792122273064-fb8167",
+      "ts": "2026-10-16T03:44:24Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Jasudavicius by Submission: added 60 at 5c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792122273065-798478",
+      "ts": "2026-10-16T03:44:24Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Jasudavicius by Submission: 500 behind, posted 150 at 4c.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792122353763-d357a2",
+      "ts": "2026-10-16T03:45:39Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Jasudavicius by Submission: lowest row 5c to 6c.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
