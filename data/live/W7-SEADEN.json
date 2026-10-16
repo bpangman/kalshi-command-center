@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T02:37:28.449171Z",
+  "generated_at": "2026-10-16T02:39:09.349717Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$37.",
+    "headline": "In game (Ingame). Worst line +$38.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,718, 1,155 resting. Worst line +$37. Game 77% done."
+          "In game (Ingame). Sold 10,724, 1,236 resting. Worst line +$38. Game 79% done."
         ]
       },
       {
@@ -61,8 +61,8 @@
       },
       {
         "label": "DEN by 15+",
-        "held": 1899.0,
-        "resting": 66.8,
+        "held": 1905.2,
+        "resting": 33.5,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "SEA by 1-6",
         "held": 1950.1,
-        "resting": 0.0,
+        "resting": 36.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1797.3,
-        "resting": 156.0,
+        "resting": 150.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1121.8,
-        "resting": 932.0,
+        "resting": 1016.2,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T02:36:40Z"
+    "ts": "2026-10-16T02:38:41Z"
   },
   "posts": [
-    {
-      "id": "1792049523266-40fb45",
-      "ts": "2026-10-15T07:32:03Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,931 resting across 6 sides. Next scheduled step: Trickle balancing starts in 12h 43m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792050430091-ad7127",
       "ts": "2026-10-15T07:47:10Z",
@@ -4580,18 +4570,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792118341809-1a2c1b",
+      "ts": "2026-10-16T02:36:52Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 6: DEN by 15+ x4 at 18c, DEN by 15+ x2 at 16c. Worst line +$38.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 6.0,
+        "fills": [
+          {
+            "side": "DEN by 15+",
+            "price": 0.18,
+            "qty": 4.0
+          },
+          {
+            "side": "DEN by 15+",
+            "price": 0.16,
+            "qty": 2.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792058616189-dd73a5",
-      "ts": "2026-10-15T10:03:36Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): held worst -605.59 (backstop -300) or lagging gap 996 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792059710791-039915",
       "ts": "2026-10-15T10:21:50Z",
@@ -5481,6 +5487,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792118311355-9d81af",
+      "ts": "2026-10-16T02:38:31Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+8 on SEA 1-6 @ 0.18 (maker)\n+1 on SEA 1-6 @ 0.20 (maker)\n+2 on DEN 15+ @ 0.16 (maker)\n+4 on DEN 15+ @ 0.18 (maker)\nworst outcome now +106\nheld 1962/1988/1905/1950/1797/1122\nIf the game ends... you make\nDEN 1-6: +63 (+0.8% of bankroll)\nDEN 7-14: +38 (+0.5% of bankroll)\nDEN 15+: +121 (+1.5% of bankroll)\nSEA 1-6: +76 (+0.9% of bankroll)\nSEA 7-14: +228 (+2.8% of bankroll)\nSEA 15+: +904 (+11.0% of bankroll)",
       "severity": "warn"
     }
   ]
