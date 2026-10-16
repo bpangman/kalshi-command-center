@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T14:48:58.825452Z",
+  "generated_at": "2026-10-16T14:52:09.292864Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -22,7 +22,7 @@
       },
       {
         "side": "Malott by KO/TKO",
-        "resting": "863 @ 20c",
+        "resting": "763 @ 20c",
         "exposure": 70.85,
         "exposure_text": "+$71",
         "move": "Step price down 1c (20c to 19c)",
@@ -46,7 +46,7 @@
       },
       {
         "side": "Buckley by KO/TKO",
-        "resting": "900 @ 31-33c",
+        "resting": "800 @ 31-33c",
         "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (31c to 30c)",
@@ -70,7 +70,7 @@
       },
       {
         "side": "Malott by Decision",
-        "resting": "900 @ 25-26c",
+        "resting": "800 @ 25-26c",
         "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (25c to 24c)",
@@ -83,23 +83,23 @@
       },
       {
         "side": "Malott by Submission",
-        "resting": "900 @ 13c",
+        "resting": "800 @ 13c",
         "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check, if the crowd trades under 13c",
-        "at": null,
+        "when": "if no fill by 10:03am CT and the crowd trades under 13c",
+        "at": "2026-10-16T15:03:25Z",
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:55pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 12c if the crowd trades lower."
+        "lag_note": "Steps to 12c if no fill by 10:03am CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 781, 3,608 resting. Worst line -$606 (target -$150)."
+          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 781, 3,208 resting. Worst line -$606 (target -$150)."
         ]
       },
       {
@@ -165,7 +165,7 @@
       {
         "label": "Buckley by KO/TKO",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 800.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.31
@@ -181,7 +181,7 @@
       {
         "label": "Malott by Decision",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 800.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.25
@@ -189,7 +189,7 @@
       {
         "label": "Malott by KO/TKO",
         "held": 37.0,
-        "resting": 863.0,
+        "resting": 763.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.2
@@ -197,7 +197,7 @@
       {
         "label": "Malott by Submission",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 800.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.13
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T14:47:59Z"
+    "ts": "2026-10-16T14:52:01Z"
   },
   "posts": [
     {
@@ -3203,6 +3203,30 @@
       "text": "Price step on Malott by Submission: added 425 at 12c, one cent lower.",
       "severity": "info",
       "title": "Price step"
+    },
+    {
+      "id": "1792162220689-5e578e",
+      "ts": "2026-10-16T14:50:11Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792162240860-0d22cc",
+      "ts": "2026-10-16T14:50:12Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,080 (launch ladder): Malott by Submission x475 at 13c, Malott by KO/TKO x50 at 20c, +4 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1080.0,
+        "rows": 6
+      }
     }
   ],
   "audits": [
