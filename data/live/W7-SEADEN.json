@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T03:26:20.355372Z",
+  "generated_at": "2026-10-16T03:28:44.389035Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$221.",
+    "headline": "In game (Ingame). Worst line +$229.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 11,857, 2,265 resting. Worst line +$221. Game 83% done. Floor mode ON: only raising the worst line."
+          "In game (Ingame). Sold 11,891, 2,102 resting. Worst line +$229. Game 85% done."
         ]
       },
       {
@@ -86,44 +86,24 @@
       {
         "label": "SEA by 15+",
         "held": 1121.8,
-        "resting": 1064.0,
+        "resting": 934.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "Tie",
-        "held": 906.7,
-        "resting": 1131.3,
+        "held": 940.0,
+        "resting": 1098.0,
         "target": null,
         "status": "even",
         "price": null
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T03:26:03Z"
+    "ts": "2026-10-16T03:28:04Z"
   },
   "posts": [
-    {
-      "id": "1792061007393-20ca8b",
-      "ts": "2026-10-15T10:43:27Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,920 resting across 6 sides. Next scheduled step: Trickle balancing starts in 9h 32m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792061914385-e53fe2",
-      "ts": "2026-10-15T10:58:34Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,920 resting across 6 sides. Next scheduled step: Trickle balancing starts in 9h 16m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792062474340-deb654",
       "ts": "2026-10-15T11:07:54Z",
@@ -4675,27 +4655,39 @@
       "text": "Bot note: OT TIE escalator: 325@0.20 dropped, nothing >= min clip fits the floor invariant",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792121264563-cf93ca",
+      "ts": "2026-10-16T03:27:22Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 184: Tie x184 at 22c. Worst line +$229.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 184.0,
+        "fills": [
+          {
+            "side": "Tie",
+            "price": 0.22,
+            "qty": 184.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792121304881-7108ec",
+      "ts": "2026-10-16T03:28:06Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: OT TIE escalator: 309@0.18 dropped, nothing >= min clip fits the floor invariant",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792069817408-3368ab",
-      "ts": "2026-10-15T13:10:17Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): held worst -605.59 (backstop -300) or lagging gap 996 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792070971889-62815d",
-      "ts": "2026-10-15T13:29:31Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): worst -605.59 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792071519472-44c86b",
       "ts": "2026-10-15T13:38:39Z",
@@ -5576,6 +5568,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+6 on SEA 1-6 @ 0.39 (maker)\n+713 on Tie @ 0.17 (maker)\n+44 on Tie @ 0.22 (maker)\nworst outcome now +201\nheld 1962/1988/1926/1964/1989/1122\nIf the game ends... you make\nDEN 1-6: +214 (+2.6% of bankroll)\nDEN 7-14: +189 (+2.3% of bankroll)\nDEN 15+: +251 (+3.1% of bankroll)\nSEA 1-6: +213 (+2.6% of bankroll)\nSEA 7-14: +188 (+2.3% of bankroll)\nSEA 15+: +1055 (+12.9% of bankroll)\nTie: +1420",
+      "severity": "warn"
+    },
+    {
+      "id": "1792121242949-a8b425",
+      "ts": "2026-10-16T03:27:22Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Floor mode: re-opened (turnover/onside possession flip + win-probability swing) -- margin-seeking resumes; high-water floor still holds",
+      "severity": "warn"
+    },
+    {
+      "id": "1792121290864-230121",
+      "ts": "2026-10-16T03:28:10Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W7-SEADEN - Denver by 1 to 6 has had no resting orders for at least 72 min (reason unknown: no reason logged).\nBack: W7-SEADEN - Denver by 7 to 14 is posting again.",
       "severity": "warn"
     }
   ]
