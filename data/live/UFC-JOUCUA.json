@@ -1,14 +1,25 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-16T05:50:38.873270Z",
+  "generated_at": "2026-10-16T05:53:25.216008Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$326.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 78,
+    "checks_every_s": 76,
     "moves": [
+      {
+        "side": "Cuamba by Submission",
+        "resting": "none",
+        "exposure": -325.57,
+        "exposure_text": "-$326",
+        "move": "Stops adding (backstop)",
+        "when": "holding until this side's loss is back above -$225 (now -$326)",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-16T05:49:21Z"
+      },
       {
         "side": "Jourdain by Submission",
         "resting": "none",
@@ -32,18 +43,6 @@
         "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:35pm CT",
         "last_fill": "2026-10-15T14:07:19Z",
         "lag_note": "Steps to 29c if the crowd trades lower."
-      },
-      {
-        "side": "Cuamba by Submission",
-        "resting": "41 @ 6c",
-        "exposure": 143.56,
-        "exposure_text": "+$144",
-        "move": "Hold price at 6c",
-        "when": "already at fair plus margin (6c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:35pm CT",
-        "last_fill": "2026-10-16T05:48:52Z"
       },
       {
         "side": "Jourdain by Decision",
@@ -100,15 +99,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 1,201, 1,454 resting. Worst line -$326 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 1,201, 1,413 resting. Worst line -$326 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Cuamba by Decision, Cuamba by KO/TKO, Jourdain by Decision, Jourdain by KO/TKO.",
-          "Cuamba by Decision: 420 behind. Steps to 22c if the crowd trades lower.",
-          "Cuamba by KO/TKO: 420 behind. Steps to 13c if the crowd trades lower.",
+          "Cuamba by Decision: 484 behind. Steps to 22c if the crowd trades lower.",
+          "Cuamba by KO/TKO: 484 behind. Steps to 13c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -124,7 +123,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: Jourdain by Submission stopped adding until worst line is above -$225.",
+          "Backstop ON: Jourdain by Submission, Cuamba by Submission stopped adding until worst line is above -$225.",
           "Paid balancing starts Sat 5:35pm CT: worst line to -$100, up to $100.",
           "Even-up Sat 7:05pm CT; last-resort take Sat 7:30pm CT; handoff to the fight Sat 7:32pm CT.",
           "The fight start is an estimate and can move."
@@ -173,11 +172,11 @@
       },
       {
         "label": "Cuamba by Submission",
-        "held": 14.7,
-        "resting": 41.2,
+        "held": 483.8,
+        "resting": 0.0,
         "target": 700.0,
-        "status": "even",
-        "price": 0.06
+        "status": "heavy",
+        "price": null
       },
       {
         "label": "Jourdain by Decision",
@@ -200,7 +199,7 @@
         "held": 420.0,
         "resting": 0.0,
         "target": 700.0,
-        "status": "heavy",
+        "status": "even",
         "price": null
       },
       {
@@ -213,7 +212,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-16T05:50:11Z"
+    "ts": "2026-10-16T05:53:12Z"
   },
   "posts": [
     {
@@ -3171,6 +3170,26 @@
       "text": "Backstop on Cuamba by Submission: line -$326 is under -$250. Rows pulled, no adding.",
       "severity": "warn",
       "title": "Backstop"
+    },
+    {
+      "id": "1792129932187-acf8e4",
+      "ts": "2026-10-16T05:50:08Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 469: Cuamba by Submission x469 at 6c. Worst line -$326.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 469.0,
+        "fills": [
+          {
+            "side": "Cuamba by Submission",
+            "price": 0.06,
+            "qty": 469.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
