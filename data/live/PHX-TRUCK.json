@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T13:41:26.248654Z",
+  "generated_at": "2026-10-16T13:44:12.760838Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -66,12 +66,12 @@
         "exposure": 251.68,
         "exposure_text": "+$252",
         "move": "Hold price at 11c",
-        "when": "crowd pays 10.5c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (10.3c)",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-16T00:47:58Z",
-        "lag_note": "Price 11c matches the crowd."
+        "lag_note": "Price 11c is at its floor."
       },
       {
         "side": "Ty Majeski",
@@ -99,7 +99,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Ty Majeski: 1,164 behind. No crowd trade data yet.",
-          "Christian Eckes: 864 behind. Price 11c matches the crowd.",
+          "Christian Eckes: 864 behind. Price 11c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -197,19 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T13:40:48Z"
+    "ts": "2026-10-16T13:43:50Z"
   },
   "posts": [
-    {
-      "id": "1792076600461-6e2492",
-      "ts": "2026-10-15T15:03:20Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30 PM CT. Worst line -$888 (final target -$100 at T-60). 4,842 sold, 29,608 resting. Next: Checkpoint T-1440 in 8h 27m. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792076660790-a62ee8",
       "ts": "2026-10-15T15:04:20Z",
@@ -3642,6 +3632,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nChandler Smith: -612\nKaden Honeycutt: -267\nLayne Riggs: -239\nBrent Crews: +98\nTristan McKee: +102\nChristian Eckes: +252\nBen Rhodes: +395\nLanden Lewis: +457\nall others (28) >= +514\nCollected $864 premium ($13 fees) | Paper margin over fair $101 (not realized until settlement)\nCore posted book 1.20 | Worst now -612 | Cash free $1491\nAnchor age 64s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792158088931-cf9fd8",
+      "ts": "2026-10-16T13:41:16Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Christian Eckes price not lowered: the next cent is under the crowd price, so it stays at 11c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
