@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-16T00:47:42.744186Z",
+  "generated_at": "2026-10-16T00:49:23.859963Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,120, final target -$200.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$200 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Denny Hamlin",
@@ -101,7 +101,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 10,924, 58,315 resting. Worst line -$1,120 (limit now -$800)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 10,924, 58,315 resting. Worst line -$1,120 (limit now -$800). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -207,7 +207,7 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-16T00:46:52Z"
+    "ts": "2026-10-16T00:48:52Z"
   },
   "posts": [
     {
@@ -2644,18 +2644,29 @@
       "text": "Quiet for 15 min. 58,315 resting. Next: Risk glide starts, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792111672736-56155e",
+      "ts": "2026-10-16T00:47:40Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792111732963-b23f98",
+      "ts": "2026-10-16T00:48:52Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,120, final target -$200. Next: Risk glide starts, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792029061554-45a8e9",
-      "ts": "2026-10-15T01:51:01Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): 6 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792029061554-d96133",
       "ts": "2026-10-15T01:51:01Z",
@@ -3546,6 +3557,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1119.71 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792111718771-3c6274",
+      "ts": "2026-10-16T00:48:38Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
