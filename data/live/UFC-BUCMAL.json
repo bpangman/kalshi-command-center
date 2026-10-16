@@ -1,13 +1,13 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T13:46:58.157989Z",
+  "generated_at": "2026-10-16T13:49:57.720940Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$606.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Buckley by Decision",
@@ -83,23 +83,23 @@
       },
       {
         "side": "Malott by Submission",
-        "resting": "900 @ 12-13c",
+        "resting": "900 @ 13c",
         "exposure": 107.54,
         "exposure_text": "+$108",
-        "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 8:59am CT and the crowd trades under 12c",
+        "move": "Step price down 1c (13c to 12c)",
+        "when": "if no fill by 8:59am CT and the crowd trades under 13c",
         "at": "2026-10-16T13:59:41Z",
         "stuck": false,
         "also": "Also: full ladder posts Sat 9:00am CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 11c if no fill by 8:59am CT."
+        "lag_note": "Steps to 12c if no fill by 8:59am CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 779, 3,610 resting. Worst line -$606 (target -$150). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 779, 3,610 resting. Worst line -$606 (target -$150)."
         ]
       },
       {
@@ -200,7 +200,7 @@
         "resting": 900.0,
         "target": 1500.0,
         "status": "lagging",
-        "price": 0.12
+        "price": 0.13
       },
       {
         "label": "Draw / No Contest",
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T13:46:31Z"
+    "ts": "2026-10-16T13:49:32Z"
   },
   "posts": [
     {
@@ -2978,6 +2978,30 @@
       "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792158431591-c9d65b",
+      "ts": "2026-10-16T13:46:07Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 900 (ufc principles fillfair): Malott by Submission x450 at 12c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 900.0,
+        "rows": 2
+      }
+    },
+    {
+      "id": "1792158512223-9e8abf",
+      "ts": "2026-10-16T13:48:32Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$606. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
