@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-16T15:07:27.384556Z",
+  "generated_at": "2026-10-16T15:10:33.463904Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,022, final target -$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Denny Hamlin",
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 12,005, 55,438 resting. Worst line -$1,022 (limit now -$800)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 12,005, 55,438 resting. Worst line -$1,022 (limit now -$800). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -206,24 +206,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-16T15:06:28Z"
+    "ts": "2026-10-16T15:10:29Z"
   },
   "posts": [
-    {
-      "id": "1792058267390-64f783",
-      "ts": "2026-10-15T09:57:37Z",
-      "book": "PHX-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on lagging Ryan Blaney: 566 behind the leader and no fill for 20 min, so the bot added 300 at 20c, one cent under its old lowest 21c; the crowd has been buying at 20c (413 traded). Next step on this side no sooner than 15 min.",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Ryan Blaney",
-        "from": 0.21,
-        "to": 0.2
-      }
-    },
     {
       "id": "1792059173628-bd9c53",
       "ts": "2026-10-15T10:12:53Z",
@@ -3312,18 +3297,19 @@
       "text": "Quiet for 15 min. 55,438 resting. Next: Risk glide starts, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792163429850-999121",
+      "ts": "2026-10-16T15:10:29Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,022, final target -$150. Next: Risk glide starts, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792076457001-6d15a1",
-      "ts": "2026-10-15T15:00:57Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): 10 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-AUCI low 1500c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792076457002-693c9a",
       "ts": "2026-10-15T15:00:57Z",
@@ -4214,6 +4200,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1022.06 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792163402224-add53a",
+      "ts": "2026-10-16T15:10:02Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+370 on Ryan Blaney @ 0.21 (maker)\n+3 on Josh Berry @ 0.03 (maker)\nworst outcome now -1022\nIf the race ends... you make\nDenny Hamlin: -1022\nJoey Logano: -1022\nJosh Berry: -833\nRyan Blaney: -826\nChase Briscoe: -473\nChristopher Bell: +478\nWilliam Byron: +1339\nBrad Keselowski: +1378\nall others (29) >= +1378",
+      "severity": "warn"
     }
   ]
 }
