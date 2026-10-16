@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T02:34:07.382056Z",
+  "generated_at": "2026-10-16T02:35:47.796660Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": 9.07,
         "exposure_text": "+$9",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 9:35pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-16T02:35:18Z",
+        "when": "next bot check (no fill for 20+ min)",
+        "at": "2026-10-16T02:35:40Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "Steps to 5c if no fill by 9:35pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Christian Eckes",
@@ -208,19 +208,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T02:33:39Z"
+    "ts": "2026-10-16T02:35:40Z"
   },
   "posts": [
-    {
-      "id": "1792030326144-b3e185",
-      "ts": "2026-10-15T02:11:54Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "The bot could not read Kalshi or its data (1 of 3 tries): The read operation timed out. It does nothing this loop and retries. After 3 in a row it goes offline-safe.",
-      "severity": "warn",
-      "title": "Read failure"
-    },
     {
       "id": "1792030366429-cd174e",
       "ts": "2026-10-15T02:12:46Z",
@@ -3620,27 +3610,23 @@
         "from": 0.14,
         "to": 0.13
       }
+    },
+    {
+      "id": "1792118099948-abeaca",
+      "ts": "2026-10-16T02:32:49Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 300 (price step): Kaden Honeycutt x300 at 13c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 300.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792036016902-0d98e7",
-      "ts": "2026-10-15T03:46:56Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -945.27 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792036160869-f29f79",
-      "ts": "2026-10-15T03:49:20Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- PHX-TRUCK - Chandler Smith has had no resting orders for at least 71 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792037940508-eaff7d",
       "ts": "2026-10-15T04:19:00Z",
@@ -4517,6 +4503,24 @@
     {
       "id": "1792116092180-0e5616",
       "ts": "2026-10-16T02:01:32Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -748.53 vs floor -425.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792118099225-5acac8",
+      "ts": "2026-10-16T02:34:59Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-CHEC low 1400c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 714c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO high 412c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1293c, KXNASCARRACE-ZERCB26-TRMC low 490c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792118099226-9c7bcb",
+      "ts": "2026-10-16T02:34:59Z",
       "book": "PHX-TRUCK",
       "kind": "audit",
       "source": "auditor",
