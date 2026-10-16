@@ -1,13 +1,13 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-16T07:28:51.995340Z",
+  "generated_at": "2026-10-16T07:31:38.348730Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$326.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 95,
+    "checks_every_s": 76,
     "moves": [
       {
         "side": "Cuamba by Submission",
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 1,201, 1,413 resting. Worst line -$326 (target -$100). Bot is slow (checks every 2m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 1,201, 1,413 resting. Worst line -$326 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -212,19 +212,9 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-16T07:27:55Z"
+    "ts": "2026-10-16T07:30:56Z"
   },
   "posts": [
-    {
-      "id": "1792028935564-366d55",
-      "ts": "2026-10-15T01:48:37Z",
-      "book": "UFC-JOUCUA",
-      "kind": "update",
-      "source": "narrator",
-      "text": "The bot hit an error and skipped a loop (loop_once raised: Kalshi API error 401 on GET /portfolio/fills: {'error': {'code': 'header_timestamp_expired', 'message': 'header timestamp expired'}}). It retries next loop; I will say if it keeps happening.",
-      "severity": "warn",
-      "title": "Bot error"
-    },
     {
       "id": "1792028975832-244fe3",
       "ts": "2026-10-15T01:49:35Z",
@@ -3338,6 +3328,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nJOUKOTKODQ: -128\nJOUSUB: -262\nJOUDEC: +148\nCUAKOTKODQ: +158\nCUASUB: -326\nCUADEC: +158\nDRAW: +158\nCollected $158 premium ($0 fees) | Paper margin over fair $18 (not realized until settlement)\nheld / resting\nJOUKOTKODQ: 286 / 134\nJOUSUB: 420 / 0\nJOUDEC: 11 / 409\nCUAKOTKODQ: 0 / 420\nCUASUB: 484 / 0\nCUADEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.064 | Worst now -326 | Cash free $1500\nAnchor age 131s | Last fill 5346s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792135796260-7b41a5",
+      "ts": "2026-10-16T07:29:56Z",
+      "book": "UFC-JOUCUA",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -3425,6 +3425,15 @@
     {
       "id": "1792134010633-7b5e27",
       "ts": "2026-10-16T07:00:10Z",
+      "book": "UFC-JOUCUA",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (UFC-JOUCUA): worst -325.57 vs floor -325.00 (real L_max 300.00). Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792135831769-6ba2ce",
+      "ts": "2026-10-16T07:30:31Z",
       "book": "UFC-JOUCUA",
       "kind": "audit",
       "source": "auditor",
