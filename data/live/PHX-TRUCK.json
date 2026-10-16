@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T04:40:23.582934Z",
+  "generated_at": "2026-10-16T04:43:09.605881Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -53,12 +53,12 @@
         "exposure": 144.62,
         "exposure_text": "+$145",
         "move": "Step price down 1c (14c to 13c)",
-        "when": "if no fill by 11:43pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-16T04:43:42Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-16T04:23:42Z",
-        "lag_note": "Steps to 13c if no fill by 11:43pm CT."
+        "lag_note": "Steps to 13c at the next check."
       },
       {
         "side": "Christian Eckes",
@@ -197,19 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T04:39:39Z"
+    "ts": "2026-10-16T04:42:40Z"
   },
   "posts": [
-    {
-      "id": "1792036771099-838a1e",
-      "ts": "2026-10-15T03:59:31Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 10/16 6:30 PM CT. Worst line -$945 (final target -$100 at T-60). 4,443 sold, 30,008 resting. Next: Checkpoint T-1440 in 19h 30m. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792036952404-4725b4",
       "ts": "2026-10-15T04:02:32Z",
@@ -3616,27 +3606,19 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nChandler Smith: -703\nLayne Riggs: -292\nBrent Crews: +8\nTristan McKee: +11\nKaden Honeycutt: +145\nChristian Eckes: +161\nLanden Lewis: +367\nConnor Mosack: +423\nall others (28) >= +461\nCollected $772 premium ($11 fees) | Paper margin over fair $82 (not realized until settlement)\nCore posted book 1.20 | Worst now -703 | Cash free $1854\nAnchor age 243s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792125700338-5505a8",
+      "ts": "2026-10-16T04:41:40Z",
+      "book": "PHX-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 27,976 resting. Next: Risk glide starts, Fri 12:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792041703758-3978e7",
-      "ts": "2026-10-15T05:21:43Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 14 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 2000c, KXNASCARRACE-ZERCB26-CHEC low 2000c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1719c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792041703759-9903f1",
-      "ts": "2026-10-15T05:21:43Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -940.57 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792043555171-4c6316",
       "ts": "2026-10-15T05:52:35Z",
@@ -4517,6 +4499,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): worst -707.36 vs floor -425.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792125653329-4d4b66",
+      "ts": "2026-10-16T04:40:53Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 714c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1383c, KXNASCARRACE-ZERCB26-COMO high 412c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1246c, KXNASCARRACE-ZERCB26-TRMC low 490c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792125653330-de3692",
+      "ts": "2026-10-16T04:40:53Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -702.71 vs floor -425.00. Check the command center.",
       "severity": "critical"
     }
   ]
