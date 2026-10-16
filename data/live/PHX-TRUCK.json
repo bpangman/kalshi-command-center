@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T18:28:34.882409Z",
+  "generated_at": "2026-10-16T18:31:20.027811Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -75,12 +75,12 @@
         "exposure": -227.15,
         "exposure_text": "-$227",
         "move": "Step price down 1c (17c to 16c)",
-        "when": "if no fill by 1:30pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-16T18:30:57Z",
         "stuck": false,
         "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-16T18:10:57Z",
-        "lag_note": "Steps to 16c if no fill by 1:30pm CT."
+        "lag_note": "Steps to 16c at the next check."
       },
       {
         "side": "Ty Majeski",
@@ -108,7 +108,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Ty Majeski.",
           "Ty Majeski: 1,700 behind. Steps to 7c if no fill by 1:38pm CT.",
-          "Chandler Smith: 214 behind. Steps to 16c if no fill by 1:30pm CT.",
+          "Chandler Smith: 214 behind. Steps to 16c at the next check.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -206,7 +206,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T18:27:55Z"
+    "ts": "2026-10-16T18:30:57Z"
   },
   "posts": [
     {
@@ -3973,15 +3973,6 @@
   ],
   "audits": [
     {
-      "id": "1792095056286-35d2ef",
-      "ts": "2026-10-15T20:10:56Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -808.72 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1792095195705-136b82",
       "ts": "2026-10-15T20:13:15Z",
       "book": "PHX-TRUCK",
@@ -4871,6 +4862,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=4581. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792175328387-427144",
+      "ts": "2026-10-16T18:28:48Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -441.14 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
