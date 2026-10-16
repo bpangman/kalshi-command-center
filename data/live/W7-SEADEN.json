@@ -1,240 +1,109 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T00:13:33.502533Z",
+  "generated_at": "2026-10-16T00:15:13.558780Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$221.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$194.",
     "confidence": "medium",
-    "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "DEN by 1-6",
-        "resting": "68 @ 24c",
-        "exposure": -220.51,
-        "exposure_text": "-$221",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-15T23:54:14Z"
-      },
-      {
-        "side": "SEA by 7-14",
-        "resting": "none",
-        "exposure": -108.28,
-        "exposure_text": "-$108",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-16T00:03:40Z"
-      },
-      {
-        "side": "SEA by 1-6",
-        "resting": "220 @ 26c",
-        "exposure": -0.46,
-        "exposure_text": "$0",
-        "move": "Hold price at 26c",
-        "when": "crowd pays 25.6c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-15T23:55:20Z",
-        "lag_note": "Price 26c matches the crowd."
-      },
-      {
-        "side": "DEN by 7-14",
-        "resting": "312 @ 14-15c",
-        "exposure": 383.86,
-        "exposure_text": "+$384",
-        "move": "Hold price at 14c",
-        "when": "crowd pays 13.6c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-15T23:17:46Z",
-        "lag_note": "Price 14c matches the crowd."
-      },
-      {
-        "side": "DEN by 15+",
-        "resting": "159 @ 8c",
-        "exposure": 405.53,
-        "exposure_text": "+$406",
-        "move": "Hold price at 8c",
-        "when": "crowd pays 8c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-15T23:27:15Z",
-        "lag_note": "Price 8c matches the crowd."
-      },
-      {
-        "side": "SEA by 15+",
-        "resting": "375 @ 16-17c",
-        "exposure": 455.22,
-        "exposure_text": "+$455",
-        "move": "Hold price at 16c",
-        "when": "next cent is under the crowd price (15.2c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-15T22:44:43Z",
-        "lag_note": "Price 16c is at its floor."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 7,678, 1,086 resting. Worst line -$221 (goal -$150)."
+          "In game (Ingame). Sold 7,866, 1,422 resting. Worst line -$194. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): DEN by 7-14, DEN by 15+, SEA by 1-6, SEA by 15+.",
-          "SEA by 15+: 676 behind. Price 16c is at its floor.",
-          "DEN by 15+: 626 behind. Price 8c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$150 (now -$221).",
-          "Closest: SEA by 7-14, 0 resting vs trigger 225.",
-          "Batches used: 3 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$221; spent $0 of $100.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-16T00:15:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "DEN by 1-6",
         "held": 1652.7,
-        "resting": 68.0,
-        "target": 900.0,
+        "resting": 0.0,
+        "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "DEN by 7-14",
-        "held": 1048.4,
-        "resting": 264.0,
-        "target": 750.0,
-        "status": "lagging",
-        "price": 0.14
+        "held": 1236.4,
+        "resting": 254.5,
+        "target": null,
+        "status": "even",
+        "price": null
       },
       {
         "label": "DEN by 15+",
         "held": 1026.7,
-        "resting": 159.0,
-        "target": 500.0,
-        "status": "lagging",
-        "price": 0.08
+        "resting": 313.0,
+        "target": null,
+        "status": "even",
+        "price": null
       },
       {
         "label": "SEA by 1-6",
         "held": 1432.7,
-        "resting": 220.0,
-        "target": 900.0,
-        "status": "lagging",
-        "price": 0.26
+        "resting": 129.5,
+        "target": null,
+        "status": "even",
+        "price": null
       },
       {
         "label": "SEA by 7-14",
         "held": 1540.5,
-        "resting": 0.0,
-        "target": 900.0,
+        "resting": 28.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SEA by 15+",
         "held": 977.0,
-        "resting": 375.0,
-        "target": 750.0,
-        "status": "lagging",
-        "price": 0.16
+        "resting": 697.0,
+        "target": null,
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T00:12:36Z"
+    "ts": "2026-10-16T00:14:37Z"
   },
   "posts": [
-    {
-      "id": "1792032139269-32ceca",
-      "ts": "2026-10-15T02:40:10Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 308 (re-posted after a pause or cancel): DEN by 1-6 x308 at 20c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 308.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1792032280187-8365ed",
-      "ts": "2026-10-15T02:40:10Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
-    {
-      "id": "1792032622691-526369",
-      "ts": "2026-10-15T02:45:23Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
-    {
-      "id": "1792032663042-cea4bd",
-      "ts": "2026-10-15T02:51:03Z",
-      "book": "W7-SEADEN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 7:15 PM CT. 2,327 contracts sold, 882 resting. Worst line -$179 (goal -$150 by kickoff). Next: Trickle balancing starts in 17h 24m. Confidence: high.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
     {
       "id": "1792032723522-7ba077",
       "ts": "2026-10-15T02:52:03Z",
@@ -3985,6 +3854,45 @@
       "kind": "text",
       "source": "bot",
       "text": "Inactivity on W7-SEADEN: 0 orders posted in 10 min while the market traded 15953 contracts. Cause: our prices were 1-3c above the crowd on most buckets. Remedy: joined the crowd on those buckets for 15 min.",
+      "severity": "info"
+    },
+    {
+      "id": "1792109617159-016219",
+      "ts": "2026-10-16T00:13:21Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26OCT15SEADEN-DEN1TO6: held floor -221, resting 68 -> cap 0, trimmed 68 highest",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792109617161-4596af",
+      "ts": "2026-10-16T00:13:37Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792109617162-c0973c",
+      "ts": "2026-10-16T00:13:37Z",
+      "book": "W7-SEADEN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$221.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1792109621838-3ec5d0",
+      "ts": "2026-10-16T00:13:41Z",
+      "book": "W7-SEADEN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: DEN now 45%",
       "severity": "info"
     }
   ],
