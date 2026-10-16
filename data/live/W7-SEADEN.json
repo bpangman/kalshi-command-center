@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T01:53:57.612844Z",
+  "generated_at": "2026-10-16T01:55:38.445991Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$2.",
+    "headline": "In game (Ingame). Worst line +$3.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,477, 1,470 resting. Worst line +$2. Game 51% done."
+          "In game (Ingame). Sold 10,482, 1,131 resting. Worst line +$3. Game 52% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DEN by 1-6",
         "held": 1919.4,
-        "resting": 48.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,15 +62,15 @@
       {
         "label": "DEN by 15+",
         "held": 1871.6,
-        "resting": 78.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SEA by 1-6",
-        "held": 1928.0,
-        "resting": 83.0,
+        "held": 1933.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1648.5,
-        "resting": 362.5,
+        "resting": 295.2,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1121.8,
-        "resting": 898.0,
+        "resting": 836.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,23 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T01:53:21Z"
+    "ts": "2026-10-16T01:55:22Z"
   },
   "posts": [
-    {
-      "id": "1792044567045-6f281c",
-      "ts": "2026-10-15T06:08:11Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 122 (re-posted after a pause or cancel): SEA by 15+ x100 at 20c, DEN by 1-6 x22 at 20c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 122.0,
-        "rows": 2
-      }
-    },
     {
       "id": "1792044889085-d28e33",
       "ts": "2026-10-15T06:14:47Z",
@@ -4466,18 +4452,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792115641900-f5f475",
+      "ts": "2026-10-16T01:52:59Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 66: SEA by 1-6 x59 at 18c, SEA by 1-6 x6 at 20c, DEN by 15+ x1 at 24c. Worst line +$2.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 66.0,
+        "fills": [
+          {
+            "side": "SEA by 1-6",
+            "price": 0.18,
+            "qty": 59.0
+          },
+          {
+            "side": "SEA by 1-6",
+            "price": 0.2,
+            "qty": 6.0
+          },
+          {
+            "side": "DEN by 15+",
+            "price": 0.24,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792051137399-e5de81",
-      "ts": "2026-10-15T07:58:57Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): held worst -596.90 (backstop -300) or lagging gap 985 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792052251870-365455",
       "ts": "2026-10-15T08:17:31Z",
@@ -5367,6 +5374,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792115716979-d98eed",
+      "ts": "2026-10-16T01:55:16Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: in-game ladder post on SEA 1-6 failed - The read operation timed out\nIf the game ends... you make\nDEN 1-6: +72 (+0.9% of bankroll)\nDEN 7-14: +3 (+0.0% of bankroll)\nDEN 15+: +120 (+1.5% of bankroll)\nSEA 1-6: +58 (+0.7% of bankroll)\nSEA 7-14: +343 (+4.2% of bankroll)\nSEA 15+: +869 (+10.6% of bankroll)",
       "severity": "warn"
     }
   ]
