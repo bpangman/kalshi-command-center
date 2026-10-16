@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T00:00:06.685504Z",
+  "generated_at": "2026-10-16T00:01:47.410513Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -61,16 +61,16 @@
       },
       {
         "side": "DEN by 15+",
-        "resting": "159 @ 9c",
+        "resting": "159 @ 8c",
         "exposure": 388.47,
         "exposure_text": "+$388",
-        "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-15T23:59:57Z",
+        "move": "Hold price at 8c",
+        "when": "crowd pays 8c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 125",
         "last_fill": "2026-10-15T23:27:15Z",
-        "lag_note": "Steps to 8c at the next check."
+        "lag_note": "Price 8c matches the crowd."
       },
       {
         "side": "SEA by 15+",
@@ -98,7 +98,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DEN by 7-14, DEN by 15+, SEA by 1-6, SEA by 7-14, SEA by 15+.",
           "SEA by 15+: 676 behind. Price 16c is at its floor.",
-          "DEN by 15+: 626 behind. Steps to 8c at the next check.",
+          "DEN by 15+: 626 behind. Price 8c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -156,7 +156,7 @@
         "resting": 159.0,
         "target": 500.0,
         "status": "lagging",
-        "price": 0.09
+        "price": 0.08
       },
       {
         "label": "SEA by 1-6",
@@ -184,32 +184,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-15T23:59:30Z"
+    "ts": "2026-10-16T00:01:31Z"
   },
   "posts": [
-    {
-      "id": "1792030789359-a96283",
-      "ts": "2026-10-15T02:19:49Z",
-      "book": "W7-SEADEN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 7:15 PM CT. 2,327 contracts sold, 574 resting. Worst line -$179 (goal -$150 by kickoff). Next: Trickle balancing starts in 17h 55m. Confidence: low.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
-    {
-      "id": "1792031010796-52b13e",
-      "ts": "2026-10-15T02:18:52Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
     {
       "id": "1792031333170-2b8977",
       "ts": "2026-10-15T02:24:09Z",
@@ -3975,6 +3952,41 @@
             "qty": 43.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792108811178-d33cc6",
+      "ts": "2026-10-15T23:58:04Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 69: SEA by 7-14 x69 at 26c. Worst line -$238.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 69.0,
+        "fills": [
+          {
+            "side": "SEA by 7-14",
+            "price": 0.26,
+            "qty": 69.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792108871475-e50808",
+      "ts": "2026-10-16T00:00:57Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on DEN by 15+: no fill for 34 min, added 159 at 8c (was 9c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "DEN by 15+",
+        "from": 0.09,
+        "to": 0.08
       }
     }
   ],
