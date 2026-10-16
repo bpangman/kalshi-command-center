@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T02:45:49.985073Z",
+  "generated_at": "2026-10-16T02:47:30.529778Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,748, 1,064 resting. Worst line +$43. Game 83% done."
+          "In game (Ingame). Sold 10,748, 1,089 resting. Worst line +$43. Game 84% done."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "label": "DEN by 15+",
         "held": 1926.2,
-        "resting": 3.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1797.3,
-        "resting": 110.0,
+        "resting": 138.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T02:45:44Z"
+    "ts": "2026-10-16T02:46:45Z"
   },
   "posts": [
-    {
-      "id": "1792051337141-0037d6",
-      "ts": "2026-10-15T08:02:17Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,931 resting across 6 sides. Next scheduled step: Trickle balancing starts in 12h 13m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792051592005-e53e2f",
       "ts": "2026-10-15T08:06:32Z",
@@ -4610,18 +4600,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792118845453-e6cf0b",
+      "ts": "2026-10-16T02:45:17Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 17: DEN by 15+ x17 at 19c. Worst line +$43.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 17.0,
+        "fills": [
+          {
+            "side": "DEN by 15+",
+            "price": 0.19,
+            "qty": 17.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792060440864-2b643e",
-      "ts": "2026-10-15T10:34:00Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): held worst -605.59 (backstop -300) or lagging gap 996 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792061595503-8501c4",
       "ts": "2026-10-15T10:53:15Z",
@@ -5511,6 +5512,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792118782792-286908",
+      "ts": "2026-10-16T02:46:22Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
