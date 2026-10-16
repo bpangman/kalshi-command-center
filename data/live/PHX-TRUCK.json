@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T18:06:02.726322Z",
+  "generated_at": "2026-10-16T18:09:08.905119Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -87,13 +87,13 @@
         "resting": "1,700 @ 8-10c",
         "exposure": 1231.24,
         "exposure_text": "+$1,231",
-        "move": "Hold price at 8c",
-        "when": "crowd pays 8c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "if no fill by 1:22pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T18:22:39Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Price 8c matches the crowd."
+        "lag_note": "Steps to 7c if no fill by 1:22pm CT."
       }
     ],
     "sections": [
@@ -107,7 +107,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Ty Majeski.",
-          "Ty Majeski: 1,700 behind. Price 8c matches the crowd.",
+          "Ty Majeski: 1,700 behind. Steps to 7c if no fill by 1:22pm CT.",
           "Chandler Smith: 311 behind. Steps to 15c if no fill by 1:12pm CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -206,24 +206,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T18:05:45Z"
+    "ts": "2026-10-16T18:08:46Z"
   },
   "posts": [
-    {
-      "id": "1792111793457-7dd6f9",
-      "ts": "2026-10-16T00:49:34Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Layne Riggs: no fill for 94 min, added 37 at 27c (was 28c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Layne Riggs",
-        "from": 0.28,
-        "to": 0.27
-      }
-    },
     {
       "id": "1792111833801-1f70c2",
       "ts": "2026-10-16T00:48:17Z",
@@ -3923,6 +3908,16 @@
       "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$469, final target $0. Next: Risk glide starts, 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792174066356-3f3af2",
+      "ts": "2026-10-16T18:07:40Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Ty Majeski price not lowered: the next cent is under the crowd price, so it stays at 8c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
