@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T06:38:55.240295Z",
+  "generated_at": "2026-10-16T06:41:40.674639Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$702, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Chandler Smith",
@@ -53,12 +53,12 @@
         "exposure": 142.01,
         "exposure_text": "+$142",
         "move": "Step price down 1c (14c to 13c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-16T06:39:32Z",
+        "when": "if no fill by 1:54am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T06:54:51Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-16T05:01:39Z",
-        "lag_note": "Steps to 13c at the next check."
+        "lag_note": "Steps to 13c if no fill by 1:54am CT."
       },
       {
         "side": "Christian Eckes",
@@ -91,7 +91,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 6,478, 27,973 resting. Worst line -$702 (limit now -$400)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 6,478, 27,973 resting. Worst line -$702 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -197,19 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T06:38:33Z"
+    "ts": "2026-10-16T06:41:34Z"
   },
   "posts": [
-    {
-      "id": "1792043438805-dedb42",
-      "ts": "2026-10-15T05:50:21Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (3 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1792043962983-ce0526",
       "ts": "2026-10-15T05:59:22Z",
@@ -3601,6 +3591,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nChandler Smith: -702\nLayne Riggs: -292\nBrent Crews: +8\nTristan McKee: +12\nKaden Honeycutt: +142\nChristian Eckes: +162\nLanden Lewis: +367\nConnor Mosack: +424\nall others (28) >= +462\nCollected $773 premium ($11 fees) | Paper margin over fair $82 (not realized until settlement)\nCore posted book 1.20 | Worst now -702 | Cash free $1828\nAnchor age 292s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792132894658-ad2851",
+      "ts": "2026-10-16T06:41:34Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$702, final target -$100. Next: Risk glide starts, 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
