@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T13:27:17.614082Z",
+  "generated_at": "2026-10-16T13:30:03.385386Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -87,12 +87,12 @@
         "exposure": 107.54,
         "exposure_text": "+$108",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 8:28am CT and the crowd trades under 13c",
-        "at": "2026-10-16T13:28:53Z",
+        "when": "next bot check, if the crowd trades under 13c",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:55pm CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 12c if no fill by 8:28am CT."
+        "lag_note": "Steps to 12c if the crowd trades lower."
       }
     ],
     "sections": [
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T13:26:22Z"
+    "ts": "2026-10-16T13:29:23Z"
   },
   "posts": [
     {
@@ -2924,6 +2924,16 @@
       "source": "coordinator",
       "text": "Kalshi decision needed: UFC Buckley vs Malott took 522 Buckley-by-decision at 14c (fair, crowd now 12-13c). Worst case -606, past the -500 backstop; bot stopped adding there. Other results fine (-42 if resting fills). Options: hold for fight-night balancing (recommended, $0) or buy back ~300 at 13c (~$39, worst to ~-345). Reply in Claude.",
       "severity": "critical"
+    },
+    {
+      "id": "1792157383852-e77f4a",
+      "ts": "2026-10-16T13:29:30Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Malott by Submission: added 450 at 12c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
     }
   ],
   "audits": [
