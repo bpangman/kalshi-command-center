@@ -1,13 +1,13 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-16T00:27:32.808449Z",
+  "generated_at": "2026-10-16T00:29:12.988543Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$174.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 74,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Jourdain by KO/TKO",
@@ -27,7 +27,7 @@
         "exposure": -159.2,
         "exposure_text": "-$159",
         "move": "Step price down 1c (11c to 10c)",
-        "when": "if no fill by 7:28pm CT and 500+ crowd contracts trade",
+        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
         "at": null,
         "stuck": false,
         "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:35pm CT",
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 564, 2,091 resting. Worst line -$174 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 564, 2,091 resting. Worst line -$174 (target -$100)."
         ]
       },
       {
@@ -213,7 +213,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-16T00:26:43Z"
+    "ts": "2026-10-16T00:28:44Z"
   },
   "posts": [
     {
@@ -2587,6 +2587,26 @@
       "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$174. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792110463980-85dc88",
+      "ts": "2026-10-16T00:27:43Z",
+      "book": "UFC-JOUCUA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$174. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792110484151-e54e3f",
+      "ts": "2026-10-16T00:28:03Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot error, one loop skipped (loop_once raised: The read operation timed out). It retries.",
+      "severity": "warn",
+      "title": "Bot error"
     }
   ],
   "audits": [
