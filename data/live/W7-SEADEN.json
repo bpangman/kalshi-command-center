@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T03:02:38.309376Z",
+  "generated_at": "2026-10-16T03:04:19.009393Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$45.",
+    "headline": "In game (Ingame). Worst line +$47.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,805, 1,002 resting. Worst line +$45. Game 91% done."
+          "In game (Ingame). Sold 10,835, 1,026 resting. Worst line +$47. Game 93% done."
         ]
       },
       {
@@ -77,8 +77,8 @@
       },
       {
         "label": "SEA by 7-14",
-        "held": 1853.5,
-        "resting": 0.0,
+        "held": 1883.8,
+        "resting": 23.7,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T03:01:52Z"
+    "ts": "2026-10-16T03:03:52Z"
   },
   "posts": [
-    {
-      "id": "1792054821873-0f831c",
-      "ts": "2026-10-15T09:00:08Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi trading is back after 1h 59m. The bot resumes posting this loop and re-posts anything the pause wiped.",
-      "severity": "info",
-      "title": "Kalshi pause over"
-    },
     {
       "id": "1792054842067-17a90d",
       "ts": "2026-10-15T09:00:42Z",
@@ -4630,18 +4620,18 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792119857639-6094f8",
+      "ts": "2026-10-16T03:04:17Z",
+      "book": "W7-SEADEN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is +47; from here only trades that raise it",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792063440531-21e87c",
-      "ts": "2026-10-15T11:24:00Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): worst -605.59 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792064170513-822e65",
       "ts": "2026-10-15T11:36:10Z",
@@ -5531,6 +5521,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W7-SEADEN - Denver by 15 or more is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792119772615-c27450",
+      "ts": "2026-10-16T03:02:52Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
