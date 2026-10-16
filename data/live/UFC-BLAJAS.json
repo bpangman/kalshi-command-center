@@ -1,6 +1,6 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-16T06:22:12.802995Z",
+  "generated_at": "2026-10-16T06:24:58.482614Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -50,11 +50,11 @@
         "exposure": 237.58,
         "exposure_text": "+$238",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check, if the crowd trades under 6c",
-        "at": null,
+        "when": "if no fill by 1:35am CT and the crowd trades under 6c",
+        "at": "2026-10-16T06:35:57Z",
         "stuck": false,
         "last_fill": "2026-10-15T04:24:08Z",
-        "lag_note": "Steps to 5c if the crowd trades lower."
+        "lag_note": "Steps to 5c if no fill by 1:35am CT."
       },
       {
         "side": "Blanchfield by KO/TKO",
@@ -105,7 +105,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Blanchfield by KO/TKO, Jasudavicius by Decision, Jasudavicius by Submission.",
           "Blanchfield by KO/TKO: 600 behind. Steps to 8c if the crowd trades lower.",
-          "Jasudavicius by Submission: 500 behind. Steps to 5c if the crowd trades lower.",
+          "Jasudavicius by Submission: 500 behind. Steps to 5c if no fill by 1:35am CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -210,49 +210,9 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-16T06:21:25Z"
+    "ts": "2026-10-16T06:24:26Z"
   },
   "posts": [
-    {
-      "id": "1792032723512-8d1236",
-      "ts": "2026-10-15T02:52:03Z",
-      "book": "UFC-BLAJAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 11h. The bot checks every 45s.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792033629585-c0528f",
-      "ts": "2026-10-15T03:07:09Z",
-      "book": "UFC-BLAJAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 10h. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792033669909-a8149e",
-      "ts": "2026-10-15T03:07:39Z",
-      "book": "UFC-BLAJAS",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New posts are on hold: free cash is $142 and this book keeps $400 free before posting anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $400.",
-      "severity": "warn",
-      "title": "Cash hold"
-    },
-    {
-      "id": "1792034575080-3e36e5",
-      "ts": "2026-10-15T03:22:55Z",
-      "book": "UFC-BLAJAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 10h. The bot checks every 45s.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792035038359-78ced3",
       "ts": "2026-10-15T03:30:23Z",
@@ -3318,6 +3278,50 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792131745630-6b3377",
+      "ts": "2026-10-16T06:22:08Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Jasudavicius by Submission: added 150 at 5c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792131745630-46d1dd",
+      "ts": "2026-10-16T06:22:09Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Jasudavicius by Submission: 500 behind, posted 150 at 4c.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792131785876-a35a1f",
+      "ts": "2026-10-16T06:23:04Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Jasudavicius by Submission: lowest row 5c to 6c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792131866466-70ee99",
+      "ts": "2026-10-16T06:22:09Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 300 (ufc principles fillfair): Jasudavicius by Submission x150 at 5c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 300.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
