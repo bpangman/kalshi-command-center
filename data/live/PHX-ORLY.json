@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T13:13:25.364365Z",
+  "generated_at": "2026-10-16T13:16:11.450226Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$693, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Jesse Love",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,743, 27,850 resting. Worst line -$693 (limit now -$400). Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,743, 27,850 resting. Worst line -$693 (limit now -$400)."
         ]
       },
       {
@@ -195,18 +195,9 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T13:12:35Z"
+    "ts": "2026-10-16T13:15:37Z"
   },
   "posts": [
-    {
-      "id": "1792052827209-662f10",
-      "ts": "2026-10-15T08:27:07Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJesse Love: -892\nJustin Allgaier: -439\nBrandon Jones: -32\nAustin Hill: +58\nTaylor Gray: +58\nSammy Smith: +58\nWilliam Sawalich: +141\nCarson Kvapil: +153\nall others (31) >= +291\nCollected $820 premium ($12 fees) | Paper margin over fair $58 (not realized until settlement)\nCore posted book 0.94 | Worst now -892 | Cash free $756\nAnchor age 277s (source: bovada)\nKalshi trading paused (exchange-wide, trading_active=false) for 51 min; idling, no new posts/cancels.",
-      "severity": "info"
-    },
     {
       "id": "1792053210619-ee2b34",
       "ts": "2026-10-15T08:33:30Z",
@@ -3370,18 +3361,19 @@
       "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$693, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792156416139-0de5ba",
+      "ts": "2026-10-16T13:13:36Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$693, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792071921052-bb4c06",
-      "ts": "2026-10-15T13:45:21Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1792071988807-a792b1",
       "ts": "2026-10-15T13:46:28Z",
@@ -4271,6 +4263,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): 11 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-JUAL low 602c, KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1356c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792156427422-6d2c37",
+      "ts": "2026-10-16T13:13:47Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+75 on Justin Allgaier @ 0.22 (maker)\n+75 on Justin Allgaier @ 0.23 (maker)\nworst outcome now -693\nIf the race ends... you make\nJesse Love: -693\nJustin Allgaier: -390\nCarson Kvapil: -380\nBrandon Jones: +167\nSam Mayer: +203\nAustin Hill: +257\nTaylor Gray: +257\nSammy Smith: +257\nall others (31) >= +340",
       "severity": "warn"
     }
   ]
