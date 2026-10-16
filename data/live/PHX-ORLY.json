@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T02:29:05.676006Z",
+  "generated_at": "2026-10-16T02:30:46.717293Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -35,16 +35,16 @@
       },
       {
         "side": "Justin Allgaier",
-        "resting": "752 @ 23-26c",
+        "resting": "752 @ 22-26c",
         "exposure": -304.62,
         "exposure_text": "-$305",
-        "move": "Step price down 1c (23c to 22c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-16T02:29:51Z",
-        "stuck": false,
-        "also": "Also: glide starts Sat 12:30pm CT",
+        "move": "Hold price at 22c",
+        "when": "crowd pays 22c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": true,
+        "also": "Also: glide starts Sat 12:30pm CT; even-up Sat 5:30pm CT",
         "last_fill": "2026-10-14T13:58:22Z",
-        "lag_note": "Steps to 22c at the next check."
+        "lag_note": "Price 22c matches the crowd."
       },
       {
         "side": "Corey Day",
@@ -182,7 +182,7 @@
         "resting": 752.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.23
+        "price": 0.22
       },
       {
         "label": "Sheldon Creed",
@@ -195,7 +195,7 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T02:28:36Z"
+    "ts": "2026-10-16T02:30:37Z"
   },
   "posts": [
     {
@@ -2895,6 +2895,21 @@
       "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$757, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792117797578-f4d4e7",
+      "ts": "2026-10-16T02:29:53Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Justin Allgaier: no fill for 2192 min, added 75 at 22c (was 23c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Justin Allgaier",
+        "from": 0.23,
+        "to": 0.22
+      }
     }
   ],
   "audits": [
