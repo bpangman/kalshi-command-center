@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T15:36:21.592911Z",
+  "generated_at": "2026-10-16T15:39:06.164032Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$410, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 50,
+    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Layne Riggs",
@@ -18,7 +18,7 @@
         "when": "holding until his loss is back above -$350 (now -$410)",
         "at": null,
         "stuck": false,
-        "also": "Also: glide starts 12:30pm CT",
+        "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-16T15:29:47Z"
       },
       {
@@ -29,8 +29,8 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$350 (now -$404)",
         "at": null,
-        "stuck": false,
-        "also": "Also: glide starts 12:30pm CT",
+        "stuck": true,
+        "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-14T14:38:21Z"
       },
       {
@@ -42,7 +42,7 @@
         "when": "if no fill by 10:44am CT (FILLFAIR: 20 min with no fill)",
         "at": "2026-10-16T15:44:23Z",
         "stuck": false,
-        "also": "Also: glide starts 12:30pm CT",
+        "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-16T15:24:23Z",
         "lag_note": "Steps to 14c if no fill by 10:44am CT."
       },
@@ -51,11 +51,11 @@
         "resting": "746 @ 11c",
         "exposure": -194.45,
         "exposure_text": "-$194",
-        "move": "Glide starts: cheap buybacks, trims rows",
-        "when": "12:30pm CT (limit slides to -$100 by 5:30pm CT)",
-        "at": "2026-10-16T17:30:00Z",
+        "move": "Hold price at 11c",
+        "when": "next cent is under the crowd price (10.3c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 5:30pm CT",
+        "also": "Also: glide starts 2:30pm CT; even-up 5:30pm CT",
         "last_fill": "2026-10-16T15:25:51Z",
         "lag_note": "Price 11c is at its floor."
       },
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 9,321, 24,691 resting. Worst line -$410 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 9,321, 24,691 resting. Worst line -$410 (limit now -$400)."
         ]
       },
       {
@@ -115,7 +115,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Chandler Smith, Layne Riggs: lines under -$400, no adding until above -$350.",
-          "Glide starts 12:30pm CT: limit slides from -$400 to -$100 by 5:30pm CT.",
+          "Glide starts 2:30pm CT: limit slides from -$400 to -$100 by 6:30pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 5:00pm CT.",
           "Even-up from 5:30pm CT, last-resort take from 6:10pm CT, green flag 6:30pm CT."
         ]
@@ -129,7 +129,7 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-16T17:30:00Z",
+        "at": "2026-10-16T19:30:00Z",
         "label": "Risk glide starts",
         "detail": "Limit slides from -$400 to -$100."
       },
@@ -140,8 +140,8 @@
       },
       {
         "at": "2026-10-16T22:30:00Z",
-        "label": "Glide target date",
-        "detail": "Worst line should be -$100 or better."
+        "label": "Even-up begins",
+        "detail": "Waves stop; lagging drivers repriced toward fair."
       }
     ],
     "sides": [
@@ -196,54 +196,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T15:35:41Z"
+    "ts": "2026-10-16T15:38:42Z"
   },
   "posts": [
-    {
-      "id": "1792089484737-eeb327",
-      "ts": "2026-10-15T18:38:04Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$832, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792089585452-350d19",
-      "ts": "2026-10-15T18:39:42Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Layne Riggs: no fill for 112 min, added 37 at 28c (was 29c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Layne Riggs",
-        "from": 0.29,
-        "to": 0.28
-      }
-    },
-    {
-      "id": "1792089605637-27aa6f",
-      "ts": "2026-10-15T18:40:05Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$832, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792089666060-4634a6",
-      "ts": "2026-10-15T18:41:06Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$832, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792089907932-3fe154",
       "ts": "2026-10-15T18:44:50Z",
@@ -3792,6 +3747,45 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$410, final target -$100. Next: Risk glide starts, 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792165001683-a5221f",
+      "ts": "2026-10-16T15:36:41Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$410, final target -$100. Next: Risk glide starts, 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792165040112-8a81b4",
+      "ts": "2026-10-16T15:37:20Z",
+      "book": "PHX-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nLayne Riggs: -410\nChandler Smith: -404\nKaden Honeycutt: -214\nChristian Eckes: -194\nTristan McKee: +58\nBrent Crews: +307\nBen Rhodes: +310\nLanden Lewis: +666\nall others (28) >= +722\nCollected $1075 premium ($16 fees) | Paper margin over fair $117 (not realized until settlement)\nCore posted book 0.91 | Worst now -410 | Cash free $1689\nAnchor age 63s (source: bovada)",
+      "severity": "info"
+    },
+    {
+      "id": "1792165062141-a196b8",
+      "ts": "2026-10-16T15:37:42Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$410, final target -$100. Next: Risk glide starts, 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792165122532-11d440",
+      "ts": "2026-10-16T15:38:42Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$410, final target -$100. Next: Risk glide starts, 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
     }
