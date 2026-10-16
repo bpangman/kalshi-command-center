@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T00:18:35.910043Z",
+  "generated_at": "2026-10-16T00:20:18.491927Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$164.",
+    "headline": "In game (Ingame). Worst line -$162.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,982, 1,192 resting. Worst line -$164. Game 0% done."
+          "In game (Ingame). Sold 7,992, 1,254 resting. Worst line -$162. Game 3% done."
         ]
       },
       {
@@ -53,8 +53,8 @@
       },
       {
         "label": "DEN by 7-14",
-        "held": 1242.7,
-        "resting": 178.5,
+        "held": 1252.7,
+        "resting": 243.5,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1540.5,
-        "resting": 4.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,22 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T00:17:38Z"
+    "ts": "2026-10-16T00:19:39Z"
   },
   "posts": [
-    {
-      "id": "1792033609417-626f81",
-      "ts": "2026-10-15T03:01:48Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
     {
       "id": "1792033629594-6ab533",
       "ts": "2026-10-15T03:07:09Z",
@@ -3922,6 +3909,31 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792109999841-3701c3",
+      "ts": "2026-10-16T00:19:43Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 174: DEN by 7-14 x130 at 17c, DEN by 7-14 x44 at 20c. Worst line -$133.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 174.0,
+        "fills": [
+          {
+            "side": "DEN by 7-14",
+            "price": 0.17,
+            "qty": 130.0
+          },
+          {
+            "side": "DEN by 7-14",
+            "price": 0.2,
+            "qty": 44.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4787,6 +4799,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W7-SEADEN - Seattle by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792109942841-3d6ab5",
+      "ts": "2026-10-16T00:19:02Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+188 on DEN 7-14 @ 0.14 (maker)\n+88 on SEA 1-6 @ 0.26 (maker)\n+19 on SEA 1-6 @ 0.30 (maker)\n+3 on SEA 1-6 @ 0.32 (maker)\n+6 on DEN 7-14 @ 0.15 (maker)\n+10 on DEN 7-14 @ 0.17 (maker)\nworst outcome now -5\nheld 1653/1253/1027/1543/1540/977\nIf the game ends... you make\nDEN 1-6: -162 (-2.0% of bankroll)\nDEN 7-14: +238 (+2.9% of bankroll)\nDEN 15+: +464 (+5.7% of bankroll)\nSEA 1-6: -52 (-0.6% of bankroll)\nSEA 7-14: -50 (-0.6% of bankroll)\nSEA 15+: +514 (+6.3% of bankroll)",
       "severity": "warn"
     }
   ]
