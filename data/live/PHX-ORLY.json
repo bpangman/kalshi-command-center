@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T18:11:54.460802Z",
+  "generated_at": "2026-10-16T18:14:40.189488Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -73,15 +73,15 @@
       },
       {
         "side": "Sheldon Creed",
-        "resting": "2,000 @ 8-10c",
+        "resting": "2,000 @ 7-10c",
         "exposure": 1029.46,
         "exposure_text": "+$1,029",
-        "move": "Hold price at 8c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "if no fill by 1:27pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T18:27:08Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Steps to 6c if no fill by 1:27pm CT."
       }
     ],
     "sections": [
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Justin Allgaier, Sheldon Creed.",
-          "Sheldon Creed: 1,700 behind. No crowd trade data yet.",
+          "Sheldon Creed: 1,700 behind. Steps to 6c if no fill by 1:27pm CT.",
           "Brent Crews: 1,630 behind. No crowd trade data yet.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -189,49 +189,14 @@
         "resting": 2000.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.08
+        "price": 0.07
       }
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T18:11:48Z"
+    "ts": "2026-10-16T18:13:49Z"
   },
   "posts": [
-    {
-      "id": "1792076036847-3893a0",
-      "ts": "2026-10-15T14:52:10Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 128: Rajah Caruth x47 at 2c, driver RYSI x47 at 2c, Sam Mayer x19 at 5c, driver ANAL x15 at 2c. Book now: 8,800 sold in all, worst line -$889.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 128.0,
-        "fills": [
-          {
-            "side": "Rajah Caruth",
-            "price": 0.02,
-            "qty": 47.0
-          },
-          {
-            "side": "driver RYSI",
-            "price": 0.02,
-            "qty": 47.0
-          },
-          {
-            "side": "Sam Mayer",
-            "price": 0.05,
-            "qty": 19.0
-          },
-          {
-            "side": "driver ANAL",
-            "price": 0.02,
-            "qty": 15.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792076177497-862257",
       "ts": "2026-10-15T14:56:17Z",
@@ -3406,18 +3371,24 @@
       "text": "Quiet for 15 min. 27,216 resting. Next: Risk glide starts, Sat 2:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792174368581-6f5ee9",
+      "ts": "2026-10-16T18:12:48Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Sheldon Creed: no fill for 4309 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Sheldon Creed",
+        "from": 0.08,
+        "to": 0.07
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792088735892-2698e1",
-      "ts": "2026-10-15T18:25:35Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -807.47 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792089445892-fff1eb",
       "ts": "2026-10-15T18:37:25Z",
@@ -4308,6 +4279,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1324c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792174439575-9d59a8",
+      "ts": "2026-10-16T18:13:59Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -670.54 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
