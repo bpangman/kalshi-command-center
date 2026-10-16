@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T14:01:00.196420Z",
+  "generated_at": "2026-10-16T14:03:49.028403Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -87,12 +87,12 @@
         "exposure": 107.54,
         "exposure_text": "+$108",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check, if the crowd trades under 13c",
-        "at": null,
+        "when": "if no fill by 9:15am CT and the crowd trades under 13c",
+        "at": "2026-10-16T14:15:54Z",
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:55pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 12c if the crowd trades lower."
+        "lag_note": "Steps to 12c if no fill by 9:15am CT."
       }
     ],
     "sections": [
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T14:00:37Z"
+    "ts": "2026-10-16T14:03:38Z"
   },
   "posts": [
     {
@@ -3012,6 +3012,49 @@
       "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$606. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792159277991-3b167e",
+      "ts": "2026-10-16T14:01:04Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Malott by Submission: added 450 at 12c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792159338400-e0f439",
+      "ts": "2026-10-16T14:01:59Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792159398812-65882b",
+      "ts": "2026-10-16T14:02:19Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 900 (ufc principles fillfair): Malott by Submission x450 at 12c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 900.0,
+        "rows": 2
+      }
+    },
+    {
+      "id": "1792159411827-d3648e",
+      "ts": "2026-10-16T14:03:31Z",
+      "book": "UFC-BUCMAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBUCKOTKODQ: +108\nBUCSUB: +78\nBUCDEC: -606\nMALKOTKODQ: +72\nMALSUB: +108\nMALDEC: +108\nDRAW: +108\nCollected $108 premium ($0 fees) | Paper margin over fair $8 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 900\nBUCSUB: 30 / 15\nBUCDEC: 714 / 0\nMALKOTKODQ: 35 / 865\nMALSUB: 0 / 900\nMALDEC: 0 / 900\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.029 | Worst now -606 | Cash free $1500\nAnchor age 206s | Last fill 5873s ago",
+      "severity": "info"
     }
   ],
   "audits": [
