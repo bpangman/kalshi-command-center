@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-16T21:59:12.980362Z",
+  "generated_at": "2026-10-16T22:01:58.169674Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Josh Berry",
@@ -113,7 +113,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 13,684, 56,633 resting. Worst line -$973 (limit now -$800). Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 13,684, 56,633 resting. Worst line -$973 (limit now -$800)."
         ]
       },
       {
@@ -122,7 +122,7 @@
           "Lagging (150+ behind the leader): Chase Briscoe, Christopher Bell, Kyle Larson, Ryan Blaney.",
           "Kyle Larson: 2,400 behind. Price 10c matches the crowd.",
           "Christopher Bell: 1,500 behind. Price 19c matches the crowd.",
-          "A price step needs 20 min with no fill and the crowd paying less."
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -219,29 +219,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-16T21:58:31Z"
+    "ts": "2026-10-16T22:01:32Z"
   },
   "posts": [
-    {
-      "id": "1792087428690-f3422b",
-      "ts": "2026-10-15T18:03:48Z",
-      "book": "PHX-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 56,167 resting. Next: Risk glide starts, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792088335936-74ab2b",
-      "ts": "2026-10-15T18:18:55Z",
-      "book": "PHX-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 56,167 resting. Next: Risk glide starts, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792088677856-f58466",
       "ts": "2026-10-15T18:24:37Z",
@@ -3308,18 +3288,29 @@
       "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792188052508-e31864",
+      "ts": "2026-10-16T22:00:48Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792188092850-d62c80",
+      "ts": "2026-10-16T22:01:32Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792103390441-234047",
-      "ts": "2026-10-15T22:29:50Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): worst -1119.71 vs floor -825.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792105381999-26a054",
       "ts": "2026-10-15T23:03:01Z",
@@ -4210,6 +4201,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -973.10 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792188048994-36d215",
+      "ts": "2026-10-16T22:00:48Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }

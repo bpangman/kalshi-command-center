@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T21:59:12.980362Z",
+  "generated_at": "2026-10-16T22:01:58.169674Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -48,16 +48,16 @@
       },
       {
         "side": "Corey Day",
-        "resting": "1,202 @ 8-10c",
+        "resting": "1,202 @ 7-10c",
         "exposure": 274.25,
         "exposure_text": "+$274",
-        "move": "Hold price at 8c",
-        "when": "crowd pays 8c; steps down 1c only if it trades lower",
+        "move": "Hold price at 7c",
+        "when": "crowd pays 7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T20:16:04Z",
-        "lag_note": "Price 8c matches the crowd."
+        "lag_note": "Price 7c matches the crowd."
       },
       {
         "side": "Sheldon Creed",
@@ -65,12 +65,12 @@
         "exposure": 771.92,
         "exposure_text": "+$772",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 5:11pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-16T22:11:21Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-16T22:01:32Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T21:04:40Z",
-        "lag_note": "Steps to 6c if no fill by 5:11pm CT."
+        "lag_note": "Steps to 6c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -98,8 +98,8 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Justin Allgaier, Sheldon Creed.",
           "Brent Crews: 1,630 behind. No crowd trade data yet.",
-          "Sheldon Creed: 1,400 behind. Steps to 6c if no fill by 5:11pm CT.",
-          "A price step needs 20 min with no fill and the crowd paying less."
+          "Sheldon Creed: 1,400 behind. Steps to 6c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -167,7 +167,7 @@
         "resting": 1202.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.08
+        "price": 0.07
       },
       {
         "label": "Jesse Love",
@@ -196,49 +196,9 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T21:58:31Z"
+    "ts": "2026-10-16T22:01:32Z"
   },
   "posts": [
-    {
-      "id": "1792093273206-c1b1a6",
-      "ts": "2026-10-15T19:40:58Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Fair value rose on Justin Allgaier: lowest row 23c to 26c.",
-      "severity": "info",
-      "title": "Reprice"
-    },
-    {
-      "id": "1792093293391-2804ee",
-      "ts": "2026-10-15T19:41:33Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$778, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792093394070-6ce2d4",
-      "ts": "2026-10-15T19:40:58Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 497: Sam Mayer x497 at 5c. Worst line -$778.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 497.0,
-        "fills": [
-          {
-            "side": "Sam Mayer",
-            "price": 0.05,
-            "qty": 497.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792093414231-f71b6a",
       "ts": "2026-10-15T19:41:30Z",
@@ -3454,18 +3414,48 @@
         "contracts": 37.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792187991995-44787b",
+      "ts": "2026-10-16T21:59:46Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Corey Day: no fill for 103 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Corey Day",
+        "from": 0.08,
+        "to": 0.07
+      }
+    },
+    {
+      "id": "1792188032333-eff893",
+      "ts": "2026-10-16T22:00:30Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792188113046-82e722",
+      "ts": "2026-10-16T21:59:46Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 300 (price step): Corey Day x300 at 7c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 300.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792104002757-c482d3",
-      "ts": "2026-10-15T22:40:02Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-SHCR low 2000c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-SAMA low 445c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792104002758-b8200c",
       "ts": "2026-10-15T22:40:02Z",
@@ -4356,6 +4346,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): worst -628.08 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792188069744-b846cf",
+      "ts": "2026-10-16T22:01:09Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
