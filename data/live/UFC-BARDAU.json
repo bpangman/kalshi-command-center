@@ -1,13 +1,13 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-16T05:17:05.999104Z",
+  "generated_at": "2026-10-16T05:19:51.718119Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$296.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Barriault by KO/TKO",
@@ -50,12 +50,12 @@
         "exposure": 117.7,
         "exposure_text": "+$118",
         "move": "Step price down 1c (25c to 24c)",
-        "when": "if no fill by 12:19am CT and the crowd trades under 25c",
-        "at": "2026-10-16T05:19:26Z",
+        "when": "next bot check, if the crowd trades under 25c",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 6:10pm CT",
         "last_fill": "2026-10-16T04:59:26Z",
-        "lag_note": "Steps to 24c if no fill by 12:19am CT."
+        "lag_note": "Steps to 24c if the crowd trades lower."
       },
       {
         "side": "Barriault by Submission",
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 8:10pm CT. Sold 880, 1,550 resting. Worst line -$296 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 8:10pm CT. Sold 880, 1,550 resting. Worst line -$296 (target -$100)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Barriault by Decision, Daukaus by Decision, Daukaus by KO/TKO.",
           "Daukaus by Decision: 420 behind. Steps to 18c if the crowd trades lower.",
-          "Daukaus by KO/TKO: 414 behind. Steps to 24c if no fill by 12:19am CT.",
+          "Daukaus by KO/TKO: 414 behind. Steps to 24c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -211,7 +211,7 @@
       }
     ],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-16T05:16:56Z"
+    "ts": "2026-10-16T05:18:57Z"
   },
   "posts": [
     {
@@ -2826,6 +2826,16 @@
     {
       "id": "1792127816352-19c791",
       "ts": "2026-10-16T05:16:56Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$296. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792127876809-2f2359",
+      "ts": "2026-10-16T05:17:56Z",
       "book": "UFC-BARDAU",
       "kind": "plan",
       "source": "narrator",

@@ -1,6 +1,6 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-16T05:17:05.999104Z",
+  "generated_at": "2026-10-16T05:19:51.718119Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -50,11 +50,11 @@
         "exposure": 237.58,
         "exposure_text": "+$238",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check, if the crowd trades under 6c",
-        "at": null,
+        "when": "if no fill by 12:32am CT and the crowd trades under 6c",
+        "at": "2026-10-16T05:32:27Z",
         "stuck": false,
         "last_fill": "2026-10-15T04:24:08Z",
-        "lag_note": "Steps to 5c if the crowd trades lower."
+        "lag_note": "Steps to 5c if no fill by 12:32am CT."
       },
       {
         "side": "Blanchfield by KO/TKO",
@@ -105,7 +105,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Blanchfield by KO/TKO, Jasudavicius by Decision, Jasudavicius by Submission.",
           "Blanchfield by KO/TKO: 600 behind. Steps to 8c if the crowd trades lower.",
-          "Jasudavicius by Submission: 500 behind. Steps to 5c if the crowd trades lower.",
+          "Jasudavicius by Submission: 500 behind. Steps to 5c if no fill by 12:32am CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -210,7 +210,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-16T05:16:56Z"
+    "ts": "2026-10-16T05:18:57Z"
   },
   "posts": [
     {
@@ -3282,6 +3282,26 @@
       "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792127917156-242bcd",
+      "ts": "2026-10-16T05:18:18Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Jasudavicius by Submission: added 150 at 5c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792127917158-59fa40",
+      "ts": "2026-10-16T05:18:19Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Jasudavicius by Submission: 500 behind, posted 150 at 4c.",
+      "severity": "info",
+      "title": "New wave"
     }
   ],
   "audits": [
