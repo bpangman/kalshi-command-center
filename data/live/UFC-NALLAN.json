@@ -1,13 +1,13 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-16T19:25:10.950208Z",
+  "generated_at": "2026-10-16T19:29:24.785906Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$249.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 45,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Landwehr by Submission",
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 1,954, 699 resting. Worst line -$249 (target -$100)."
+          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 1,954, 699 resting. Worst line -$249 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -211,19 +211,9 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-16T19:24:21Z"
+    "ts": "2026-10-16T19:29:24Z"
   },
   "posts": [
-    {
-      "id": "1792074062529-c127c1",
-      "ts": "2026-10-15T14:21:02Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 is posted for the fight at Sat 10/17 7:00 PM CT. 865 sold, 1,790 resting; 1,575 more post at Sat 10/17 9:00 AM CT. Worst line -$235. Next: Full ladder release in 1d 23h. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792074848605-e2ed80",
       "ts": "2026-10-15T14:34:08Z",
@@ -3277,6 +3267,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nNALKOTKODQ: -144\nNALSUB: +121\nNALDEC: -7\nLANKOTKODQ: -144\nLANSUB: -249\nLANDEC: +123\nDRAW: +276\nCollected $276 premium ($0 fees) | Paper margin over fair $15 (not realized until settlement)\nheld / resting\nNALKOTKODQ: 420 / 0\nNALSUB: 154 / 265\nNALDEC: 283 / 137\nLANKOTKODQ: 420 / 0\nLANSUB: 525 / 0\nLANDEC: 152 / 267\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.798 | Worst now -249 | Cash free $1500\nAnchor age 130s | Last fill 172s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792178964173-b166a6",
+      "ts": "2026-10-16T19:29:24Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$249. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
@@ -3611,6 +3611,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+283 on NALDEC @ 0.08 (maker)\nworst outcome now -202\nheld 420/154/283/420/250/152/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792178849360-0a37fc",
+      "ts": "2026-10-16T19:27:29Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- UFC-NALLAN - Nate Landwehr by Submission has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- UFC-NALLAN - Mandel Nallo by KO/TKO/DQ has had no resting orders for at least 2520 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
