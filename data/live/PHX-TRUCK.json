@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T18:59:29.321037Z",
+  "generated_at": "2026-10-16T19:02:14.436965Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -88,12 +88,12 @@
         "exposure": 1237.22,
         "exposure_text": "+$1,237",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 2:03pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-16T19:03:03Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-16T18:43:03Z",
-        "lag_note": "Steps to 7c if no fill by 2:03pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -107,7 +107,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Ty Majeski.",
-          "Ty Majeski: 1,673 behind. Steps to 7c if no fill by 2:03pm CT.",
+          "Ty Majeski: 1,673 behind. Steps to 7c at the next check.",
           "Chandler Smith: 214 behind. Price 16c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -206,29 +206,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T18:59:10Z"
+    "ts": "2026-10-16T19:02:11Z"
   },
   "posts": [
-    {
-      "id": "1792123421644-40a075",
-      "ts": "2026-10-16T04:01:25Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 47: Brent Crews x47 at 6c. Worst line -$707.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 47.0,
-        "fills": [
-          {
-            "side": "Brent Crews",
-            "price": 0.06,
-            "qty": 47.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792123461854-26ed6f",
       "ts": "2026-10-16T04:04:07Z",
@@ -3983,18 +3963,29 @@
       "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$437, final target $0. Next: Risk glide starts, 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792177190498-9333cd",
+      "ts": "2026-10-16T18:57:41Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 83: driver STFR x83 at 2c. Worst line -$436.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 83.0,
+        "fills": [
+          {
+            "side": "driver STFR",
+            "price": 0.02,
+            "qty": 83.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792097149220-ab1b40",
-      "ts": "2026-10-15T20:45:49Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 14 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-CHEC low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-LARI low 1019c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1293c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792098802173-3a0a22",
       "ts": "2026-10-15T21:13:22Z",
@@ -4885,6 +4876,15 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- PHX-TRUCK - Christian Eckes has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1792177296699-6cef08",
+      "ts": "2026-10-16T19:01:36Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -435.61 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
