@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T01:38:23.829221Z",
+  "generated_at": "2026-10-16T01:40:05.285658Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,294, 1,687 resting. Worst line -$34. Game 49% done."
+          "In game (Ingame). Sold 10,294, 1,324 resting. Worst line -$34. Game 50% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DEN by 1-6",
         "held": 1875.2,
-        "resting": 130.3,
+        "resting": 113.8,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "DEN by 7-14",
         "held": 1987.8,
-        "resting": 16.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1647.0,
-        "resting": 363.7,
+        "resting": 354.1,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1121.8,
-        "resting": 1004.0,
+        "resting": 683.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T01:38:14Z"
+    "ts": "2026-10-16T01:39:15Z"
   },
   "posts": [
-    {
-      "id": "1792044446249-9ea4f3",
-      "ts": "2026-10-15T06:07:07Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold out: the 21c row on DEN by 1-6 is fully sold (145 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
     {
       "id": "1792044446249-170841",
       "ts": "2026-10-15T06:07:07Z",
@@ -4437,18 +4427,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792114755192-353fc3",
+      "ts": "2026-10-16T01:37:12Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 25: DEN by 1-6 x20 at 24c, DEN by 7-14 x5 at 31c. Worst line -$34.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 25.0,
+        "fills": [
+          {
+            "side": "DEN by 1-6",
+            "price": 0.24,
+            "qty": 20.0
+          },
+          {
+            "side": "DEN by 7-14",
+            "price": 0.31,
+            "qty": 5.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792048541795-7367bb",
-      "ts": "2026-10-15T07:15:41Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): worst -596.90 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792049271950-cc1324",
       "ts": "2026-10-15T07:27:51Z",
@@ -5338,6 +5344,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+14 on DEN 1-6 @ 0.21 (maker)\n+11 on DEN 1-6 @ 0.24 (maker)\n+88 on SEA 1-6 @ 0.17 (maker)\n+28 on SEA 1-6 @ 0.19 (maker)\n+2 on SEA 1-6 @ 0.21 (maker)\n+21 on SEA 7-14 @ 0.09 (maker)\n+41 on DEN 7-14 @ 0.28 (maker)\n+4 on DEN 15+ @ 0.22 (maker)\n+31 on DEN 15+ @ 0.24 (maker)\n+0 on DEN 1-6 @ 0.27 (maker)\nworst outcome now +82\nheld 1855/1983/1836/1826/1647/1122\nIf the game ends... you make\nDEN 1-6: +92 (+1.1% of bankroll)\nDEN 7-14: -35 (-0.4% of bankroll)\nDEN 15+: +111 (+1.4% of bankroll)\nSEA 1-6: +121 (+1.5% of bankroll)\nSEA 7-14: +300 (+3.7% of bankroll)\nSEA 15+: +826 (+10.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792114717171-d30b5e",
+      "ts": "2026-10-16T01:38:37Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (floor -3.0% of slice, no cushion to spend)\nIf the game ends... you make\nDEN 1-6: +78 (+1.0% of bankroll)\nDEN 7-14: -34 (-0.4% of bankroll)\nDEN 15+: +118 (+1.4% of bankroll)\nSEA 1-6: +128 (+1.6% of bankroll)\nSEA 7-14: +307 (+3.7% of bankroll)\nSEA 15+: +832 (+10.2% of bankroll)",
       "severity": "warn"
     }
   ]
