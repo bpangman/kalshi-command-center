@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T00:11:52.707133Z",
+  "generated_at": "2026-10-16T00:13:33.502533Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -14,8 +14,8 @@
         "resting": "68 @ 24c",
         "exposure": -220.51,
         "exposure_text": "-$221",
-        "move": "Next wave 297 contracts",
-        "when": "waits until worst loss is -$150 or better (now -$221)",
+        "move": "Holding",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-15T23:54:14Z"
@@ -25,11 +25,10 @@
         "resting": "none",
         "exposure": -108.28,
         "exposure_text": "-$108",
-        "move": "Next wave 297 contracts",
-        "when": "waits until worst loss is -$150 or better (now -$221)",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing",
         "last_fill": "2026-10-16T00:03:40Z"
       },
       {
@@ -38,10 +37,10 @@
         "exposure": -0.46,
         "exposure_text": "$0",
         "move": "Hold price at 26c",
-        "when": "crowd pays 25.7c; steps down 1c only if it trades lower",
+        "when": "crowd pays 25.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave once worst loss improves",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-15T23:55:20Z",
         "lag_note": "Price 26c matches the crowd."
       },
@@ -54,7 +53,7 @@
         "when": "crowd pays 13.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 188",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-15T23:17:46Z",
         "lag_note": "Price 14c matches the crowd."
       },
@@ -67,7 +66,7 @@
         "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 125",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-15T23:27:15Z",
         "lag_note": "Price 8c matches the crowd."
       },
@@ -80,7 +79,7 @@
         "when": "next cent is under the crowd price (15.2c)",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 188",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-15T22:44:43Z",
         "lag_note": "Price 16c is at its floor."
       }
@@ -183,29 +182,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T00:11:36Z"
+    "ts": "2026-10-16T00:12:36Z"
   },
   "posts": [
-    {
-      "id": "1792031998194-e19b81",
-      "ts": "2026-10-15T02:39:58Z",
-      "book": "W7-SEADEN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 7:15 PM CT. 2,327 contracts sold, 574 resting. Worst line -$179 (goal -$150 by kickoff). Next: Trickle balancing starts in 17h 35m. Confidence: high.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
-    {
-      "id": "1792032058679-5a9be6",
-      "ts": "2026-10-15T02:40:58Z",
-      "book": "W7-SEADEN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 7:16 PM CT. 2,327 contracts sold, 574 resting. Worst line -$179 (goal -$150 by kickoff). Next: Trickle balancing starts in 17h 35m. Confidence: low.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
     {
       "id": "1792032139269-32ceca",
       "ts": "2026-10-15T02:40:10Z",
@@ -3988,6 +3967,25 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792109596964-19c908",
+      "ts": "2026-10-16T00:12:58Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -220.51, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792109601589-c98161",
+      "ts": "2026-10-16T00:13:21Z",
+      "book": "W7-SEADEN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-SEADEN: 0 orders posted in 10 min while the market traded 15953 contracts. Cause: our prices were 1-3c above the crowd on most buckets. Remedy: joined the crowd on those buckets for 15 min.",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4836,6 +4834,24 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-SEADEN): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792109578769-d440d6",
+      "ts": "2026-10-16T00:12:58Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nDEN 1-6: -221 (-2.7% of bankroll)\nDEN 7-14: +384 (+4.7% of bankroll)\nDEN 15+: +406 (+5.0% of bankroll)\nSEA 1-6: -0 (-0.0% of bankroll)\nSEA 7-14: -108 (-1.3% of bankroll)\nSEA 15+: +455 (+5.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792109578922-ba36d8",
+      "ts": "2026-10-16T00:12:58Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W7-SEADEN - Seattle by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
