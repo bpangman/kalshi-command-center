@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T09:40:14.698445Z",
+  "generated_at": "2026-10-16T09:43:52.640003Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$726, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 52,
+    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Jesse Love",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,593, 28,000 resting. Worst line -$726 (limit now -$400). Bot is slow (checks every 52s, set for 30s)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,593, 28,000 resting. Worst line -$726 (limit now -$400)."
         ]
       },
       {
@@ -195,39 +195,9 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T09:39:56Z"
+    "ts": "2026-10-16T09:42:57Z"
   },
   "posts": [
-    {
-      "id": "1792039511021-e6c7d7",
-      "ts": "2026-10-15T04:45:05Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (8 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1792040135426-1ec658",
-      "ts": "2026-10-15T04:55:33Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New posts are on hold: free cash is $1,235 and this book keeps $1,300 free before posting anything new. Orders already on the book stay. The hold lifts by itself once cash is back over $1,300.",
-      "severity": "warn",
-      "title": "Cash hold"
-    },
-    {
-      "id": "1792040155591-fed02e",
-      "ts": "2026-10-15T04:55:55Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$892 (final target -$100 at T-60). 8,673 sold, 29,779 resting. Next: Checkpoint T-2880 in 18h 34m. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792040457850-2fe379",
       "ts": "2026-10-15T05:00:57Z",
@@ -3347,18 +3317,38 @@
       "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$726, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792143675296-e85f04",
+      "ts": "2026-10-16T09:41:15Z",
+      "book": "PHX-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJesse Love: -726\nCarson Kvapil: -414\nJustin Allgaier: -274\nBrandon Jones: +134\nSam Mayer: +170\nAustin Hill: +224\nTaylor Gray: +224\nSammy Smith: +224\nall others (31) >= +307\nCollected $989 premium ($15 fees) | Paper margin over fair $81 (not realized until settlement)\nCore posted book 1.04 | Worst now -726 | Cash free $1834\nAnchor age 205s (source: bovada)",
+      "severity": "info"
+    },
+    {
+      "id": "1792143717287-9858da",
+      "ts": "2026-10-16T09:41:46Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
+      "severity": "info",
+      "title": "Rate limit"
+    },
+    {
+      "id": "1792143777722-bb2aaf",
+      "ts": "2026-10-16T09:42:57Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$726, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792058343409-344723",
-      "ts": "2026-10-15T09:59:03Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -892.04 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792060299584-b33f7c",
       "ts": "2026-10-15T10:31:39Z",
@@ -4244,6 +4234,15 @@
     {
       "id": "1792141653395-344dd0",
       "ts": "2026-10-16T09:07:33Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -726.16 vs floor -425.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792143661611-cca5a1",
+      "ts": "2026-10-16T09:41:01Z",
       "book": "PHX-ORLY",
       "kind": "audit",
       "source": "auditor",
