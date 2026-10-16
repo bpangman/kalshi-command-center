@@ -1,13 +1,13 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T16:03:51.092876Z",
+  "generated_at": "2026-10-16T16:06:28.868770Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$606.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 45,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Buckley by Decision",
@@ -87,19 +87,19 @@
         "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 11:05am CT and the crowd trades under 13c",
-        "at": "2026-10-16T16:05:39Z",
+        "when": "next bot check, if the crowd trades under 13c",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 8:55pm CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 12c if no fill by 11:05am CT."
+        "lag_note": "Steps to 12c if the crowd trades lower."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 781, 3,608 resting. Worst line -$606 (target -$150)."
+          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 781, 3,608 resting. Worst line -$606 (target -$150). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -212,28 +212,9 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T16:03:32Z"
+    "ts": "2026-10-16T16:05:33Z"
   },
   "posts": [
-    {
-      "id": "1792075730952-abc146",
-      "ts": "2026-10-15T14:48:50Z",
-      "book": "UFC-BUCMAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBUCKOTKODQ: +0\nBUCSUB: +0\nBUCDEC: +0\nMALKOTKODQ: +0\nMALSUB: +0\nMALDEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 0\nBUCSUB: 0 / 0\nBUCDEC: 0 / 0\nMALKOTKODQ: 0 / 0\nMALSUB: 0 / 0\nMALDEC: 0 / 0\nDRAW: 0 / 0\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $0\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792075734625-c4db2f",
-      "ts": "2026-10-15T14:48:54Z",
-      "book": "UFC-BUCMAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Narrator started watching this book. Wave 1 is posted for the fight at Sat 10/17 9:55 PM CT. 0 sold, 0 resting; 0 more post at Sat 10/17 9:00 AM CT. Worst line $0.",
-      "severity": "info",
-      "title": "Narrator started"
-    },
     {
       "id": "1792075734625-9b26b5",
       "ts": "2026-10-15T14:48:54Z",
@@ -3414,6 +3395,25 @@
     {
       "id": "1792166431236-466383",
       "ts": "2026-10-16T16:00:31Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$606. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792166672568-0542c4",
+      "ts": "2026-10-16T16:04:32Z",
+      "book": "UFC-BUCMAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBUCKOTKODQ: +108\nBUCSUB: +78\nBUCDEC: -606\nMALKOTKODQ: +71\nMALSUB: +108\nMALDEC: +108\nDRAW: +108\nCollected $108 premium ($0 fees) | Paper margin over fair $8 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 900\nBUCSUB: 30 / 15\nBUCDEC: 714 / 0\nMALKOTKODQ: 37 / 863\nMALSUB: 0 / 900\nMALDEC: 0 / 900\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.029 | Worst now -606 | Cash free $1500\nAnchor age 171s | Last fill 6269s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1792166673149-0818e6",
+      "ts": "2026-10-16T16:04:33Z",
       "book": "UFC-BUCMAL",
       "kind": "plan",
       "source": "narrator",
