@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T14:18:20.366915Z",
+  "generated_at": "2026-10-16T14:21:09.037646Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -12,7 +12,7 @@
       {
         "side": "Buckley by Decision",
         "resting": "none",
-        "exposure": -606.18,
+        "exposure": -605.87,
         "exposure_text": "-$606",
         "move": "Stops adding (backstop)",
         "when": "holding until this side's loss is back above -$475 (now -$606)",
@@ -22,21 +22,21 @@
       },
       {
         "side": "Malott by KO/TKO",
-        "resting": "865 @ 19-20c",
-        "exposure": 72.19,
-        "exposure_text": "+$72",
-        "move": "Step price down 1c (19c to 18c)",
-        "when": "next bot check, if the crowd trades under 19c",
-        "at": null,
+        "resting": "863 @ 20c",
+        "exposure": 70.85,
+        "exposure_text": "+$71",
+        "move": "Step price down 1c (20c to 19c)",
+        "when": "if no fill by 9:39am CT and the crowd trades under 20c",
+        "at": "2026-10-16T14:39:39Z",
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:55pm CT",
-        "last_fill": "2026-10-16T07:21:49Z",
-        "lag_note": "Steps to 18c if the crowd trades lower."
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-16T14:19:39Z",
+        "lag_note": "Steps to 19c if no fill by 9:39am CT."
       },
       {
         "side": "Buckley by Submission",
         "resting": "15 @ 3c",
-        "exposure": 77.54,
+        "exposure": 77.85,
         "exposure_text": "+$78",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
@@ -47,7 +47,7 @@
       {
         "side": "Buckley by KO/TKO",
         "resting": "900 @ 31-33c",
-        "exposure": 107.54,
+        "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (31c to 30c)",
         "when": "next bot check, if the crowd trades under 31c",
@@ -60,7 +60,7 @@
       {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": 107.54,
+        "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
@@ -71,7 +71,7 @@
       {
         "side": "Malott by Decision",
         "resting": "900 @ 25-26c",
-        "exposure": 107.54,
+        "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (25c to 24c)",
         "when": "next bot check, if the crowd trades under 25c",
@@ -84,7 +84,7 @@
       {
         "side": "Malott by Submission",
         "resting": "900 @ 13c",
-        "exposure": 107.54,
+        "exposure": 107.85,
         "exposure_text": "+$108",
         "move": "Step price down 1c (13c to 12c)",
         "when": "if no fill by 9:31am CT and the crowd trades under 13c",
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 779, 3,610 resting. Worst line -$606 (target -$150)."
+          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 781, 3,608 resting. Worst line -$606 (target -$150)."
         ]
       },
       {
@@ -188,11 +188,11 @@
       },
       {
         "label": "Malott by KO/TKO",
-        "held": 35.4,
-        "resting": 864.6,
+        "held": 37.0,
+        "resting": 863.0,
         "target": 1500.0,
         "status": "lagging",
-        "price": 0.19
+        "price": 0.2
       },
       {
         "label": "Malott by Submission",
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T14:17:45Z"
+    "ts": "2026-10-16T14:20:47Z"
   },
   "posts": [
     {
@@ -3095,6 +3095,30 @@
       "text": "Price step on Malott by Submission: added 450 at 12c, one cent lower.",
       "severity": "info",
       "title": "Price step"
+    },
+    {
+      "id": "1792160346272-926b26",
+      "ts": "2026-10-16T14:18:54Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792160346272-0863e3",
+      "ts": "2026-10-16T14:18:54Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 900 (ufc principles fillfair): Malott by Submission x450 at 12c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 900.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
