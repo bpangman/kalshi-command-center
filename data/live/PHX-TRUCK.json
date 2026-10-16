@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T11:09:56.693983Z",
+  "generated_at": "2026-10-16T11:12:42.700781Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$676, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Chandler Smith",
@@ -40,12 +40,12 @@
         "exposure": -19.8,
         "exposure_text": "-$20",
         "move": "Hold price at 14c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 14c (now 1)",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-16T11:09:08Z",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (1 traded)."
       },
       {
         "side": "Brent Crews",
@@ -91,7 +91,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 6,666, 27,785 resting. Worst line -$676 (limit now -$400)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 6,666, 27,785 resting. Worst line -$676 (limit now -$400). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -197,39 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T11:09:38Z"
+    "ts": "2026-10-16T11:12:39Z"
   },
   "posts": [
-    {
-      "id": "1792065581354-a83ee3",
-      "ts": "2026-10-15T11:59:41Z",
-      "book": "PHX-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 29,633 resting across 6 sides. Next scheduled step: Checkpoint T-1440 in 11h 30m. The bot checks every 30s.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792065843289-aea2a2",
-      "ts": "2026-10-15T12:04:03Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30 PM CT. Worst line -$895 (final target -$100 at T-60). 4,817 sold, 29,633 resting. Next: Checkpoint T-1440 in 11h 26m. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792065903679-2ec8aa",
-      "ts": "2026-10-15T12:05:03Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30 PM CT. Worst line -$895 (final target -$100 at T-60). 4,817 sold, 29,633 resting. Next: Checkpoint T-1440 in 11h 25m. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792066165663-3fa5f3",
       "ts": "2026-10-15T12:09:19Z",
@@ -3568,6 +3538,46 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792148998386-7bafdb",
+      "ts": "2026-10-16T11:09:58Z",
+      "book": "PHX-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 27,785 resting. Next: Risk glide starts, 12:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792149099206-d7d767",
+      "ts": "2026-10-16T11:09:29Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 19: Kaden Honeycutt x19 at 14c. Worst line -$676.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 19.0,
+        "fills": [
+          {
+            "side": "Kaden Honeycutt",
+            "price": 0.14,
+            "qty": 19.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792149159743-548e20",
+      "ts": "2026-10-16T11:12:39Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$676, final target -$100. Next: Risk glide starts, 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
