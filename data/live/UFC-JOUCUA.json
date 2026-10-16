@@ -1,6 +1,6 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-16T01:21:39.450125Z",
+  "generated_at": "2026-10-16T01:23:23.695415Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -40,12 +40,12 @@
         "exposure": 113.28,
         "exposure_text": "+$113",
         "move": "Step price down 1c (27c to 26c)",
-        "when": "if no fill by 8:23pm CT and the crowd trades under 27c",
-        "at": "2026-10-16T01:23:37Z",
+        "when": "next bot check, if the crowd trades under 27c",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 5:35pm CT",
         "last_fill": "2026-10-16T01:03:37Z",
-        "lag_note": "Steps to 26c if no fill by 8:23pm CT."
+        "lag_note": "Steps to 26c if the crowd trades lower."
       },
       {
         "side": "Cuamba by Decision",
@@ -214,7 +214,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-16T01:21:07Z"
+    "ts": "2026-10-16T01:23:07Z"
   },
   "posts": [
     {
@@ -2752,6 +2752,16 @@
       "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$247. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792113727495-dfde14",
+      "ts": "2026-10-16T01:22:04Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot error, one loop skipped (loop_once raised: The read operation timed out). It retries.",
+      "severity": "warn",
+      "title": "Bot error"
     }
   ],
   "audits": [
