@@ -1,10 +1,10 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T01:09:53.101596Z",
+  "generated_at": "2026-10-16T01:11:34.107086Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$66.",
+    "headline": "In game (Ingame). Worst line -$33.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,194, 1,172 resting. Worst line -$66. Game 37% done."
+          "In game (Ingame). Sold 9,411, 1,031 resting. Worst line -$33. Game 40% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DEN by 1-6",
         "held": 1783.9,
-        "resting": 3.0,
+        "resting": 3.9,
         "target": null,
         "status": "even",
         "price": null
@@ -54,15 +54,15 @@
       {
         "label": "DEN by 7-14",
         "held": 1684.3,
-        "resting": 3.5,
+        "resting": 1.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "DEN by 15+",
-        "held": 1339.9,
-        "resting": 453.5,
+        "held": 1556.4,
+        "resting": 237.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "SEA by 1-6",
         "held": 1638.4,
-        "resting": 18.4,
+        "resting": 56.9,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1626.2,
-        "resting": 40.0,
+        "resting": 78.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T01:09:01Z"
+    "ts": "2026-10-16T01:11:02Z"
   },
   "posts": [
-    {
-      "id": "1792038906414-beda92",
-      "ts": "2026-10-15T04:34:49Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Lagging SEA by 7-14 not lowered: filling one more row in full would push the worst line to -$171, so the bot holds its price.",
-      "severity": "info",
-      "title": "Price hold"
-    },
     {
       "id": "1792039792920-1f9bd5",
       "ts": "2026-10-15T04:49:52Z",
@@ -4193,18 +4183,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792113002102-ccd088",
+      "ts": "2026-10-16T01:09:43Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 58: DEN by 15+ x55 at 15c, DEN by 1-6 x3 at 33c, DEN by 1-6 x0 at 30c. Worst line -$58.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 58.0,
+        "fills": [
+          {
+            "side": "DEN by 15+",
+            "price": 0.15,
+            "qty": 55.0
+          },
+          {
+            "side": "DEN by 1-6",
+            "price": 0.33,
+            "qty": 3.0
+          },
+          {
+            "side": "DEN by 1-6",
+            "price": 0.3,
+            "qty": 0.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792044852216-fd4ac5",
-      "ts": "2026-10-15T06:14:12Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): worst -596.90 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792045172339-fe3cee",
       "ts": "2026-10-15T06:19:32Z",
@@ -5094,6 +5105,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on DEN 7-14 @ 0.21 (maker)\n+1 on DEN 15+ @ 0.11 (maker)\n+0 on DEN 15+ @ 0.14 (maker)\n+11 on DEN 7-14 @ 0.23 (maker)\n+3 on DEN 1-6 @ 0.24 (maker)\n+4 on DEN 1-6 @ 0.26 (maker)\n+2 on DEN 1-6 @ 0.30 (maker)\n+2 on DEN 1-6 @ 0.32 (maker)\n+16 on SEA 7-14 @ 0.23 (maker)\n+25 on SEA 7-14 @ 0.26 (maker)\n+19 on DEN 7-14 @ 0.25 (maker)\nworst outcome now +123\nheld 1743/1674/1132/1634/1626/1122\nIf the game ends... you make\nDEN 1-6: -66 (-0.8% of bankroll)\nDEN 7-14: +3 (+0.0% of bankroll)\nDEN 15+: +545 (+6.6% of bankroll)\nSEA 1-6: +43 (+0.5% of bankroll)\nSEA 7-14: +51 (+0.6% of bankroll)\nSEA 15+: +555 (+6.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792113070045-024bc3",
+      "ts": "2026-10-16T01:11:10Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+145 on DEN 15+ @ 0.12 (maker)\n+62 on DEN 15+ @ 0.14 (maker)\n+33 on DEN 1-6 @ 0.24 (maker)\n+2 on DEN 1-6 @ 0.27 (maker)\n+3 on DEN 1-6 @ 0.30 (maker)\n+3 on DEN 1-6 @ 0.33 (maker)\n+154 on DEN 15+ @ 0.15 (maker)\n+62 on DEN 15+ @ 0.17 (maker)\n+82 on DEN 15+ @ 0.19 (maker)\nworst outcome now +121\nheld 1784/1684/1638/1638/1626/1122\nIf the game ends... you make\nDEN 1-6: -17 (-0.2% of bankroll)\nDEN 7-14: +82 (+1.0% of bankroll)\nDEN 15+: +129 (+1.6% of bankroll)\nSEA 1-6: +128 (+1.6% of bankroll)\nSEA 7-14: +140 (+1.7% of bankroll)\nSEA 15+: +645 (+7.9% of bankroll)",
       "severity": "warn"
     }
   ]

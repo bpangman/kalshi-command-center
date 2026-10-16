@@ -1,13 +1,13 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-16T01:09:53.101596Z",
+  "generated_at": "2026-10-16T01:11:34.107086Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$298.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 45,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Barriault by KO/TKO",
@@ -46,14 +46,14 @@
       },
       {
         "side": "Barriault by Submission",
-        "resting": "300 @ 7c",
+        "resting": "none",
         "exposure": 122.31,
         "exposure_text": "+$122",
-        "move": "Step price down 1c (7c to 6c)",
-        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
-        "at": null,
+        "move": "Full ladder posts (+100 @ 8c)",
+        "when": "Sat 9:00am CT",
+        "at": "2026-10-17T14:00:00Z",
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 6:10pm CT",
+        "also": "Also: paid balancing starts Sat 6:10pm CT; even-up Sat 7:40pm CT",
         "last_fill": "2026-10-15T01:09:11Z"
       },
       {
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 8:10pm CT. Sold 874, 1,556 resting. Worst line -$298 (target -$100)."
+          "Wave 1 (lowest rung only), fight about Sat 8:10pm CT. Sold 874, 1,256 resting. Worst line -$298 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -172,10 +172,10 @@
       {
         "label": "Barriault by Submission",
         "held": 0.0,
-        "resting": 300.0,
+        "resting": 0.0,
         "target": 400.0,
         "status": "even",
-        "price": 0.07
+        "price": null
       },
       {
         "label": "Daukaus by Decision",
@@ -211,7 +211,7 @@
       }
     ],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-16T01:09:01Z"
+    "ts": "2026-10-16T01:11:02Z"
   },
   "posts": [
     {
@@ -2396,6 +2396,16 @@
     {
       "id": "1792112458219-55460a",
       "ts": "2026-10-16T01:00:58Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$298. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792113062598-e72ed6",
+      "ts": "2026-10-16T01:11:02Z",
       "book": "UFC-BARDAU",
       "kind": "plan",
       "source": "narrator",
