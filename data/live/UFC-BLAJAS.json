@@ -1,13 +1,13 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-16T03:33:42.208992Z",
+  "generated_at": "2026-10-16T03:37:00.465189Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 76,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Blanchfield by Decision",
@@ -46,7 +46,7 @@
       },
       {
         "side": "Jasudavicius by Submission",
-        "resting": "140 @ 6c",
+        "resting": "200 @ 6c",
         "exposure": 237.58,
         "exposure_text": "+$238",
         "move": "Step price down 1c (6c to 5c)",
@@ -82,14 +82,14 @@
       },
       {
         "side": "Jasudavicius by KO/TKO",
-        "resting": "none",
+        "resting": "750 @ 9c",
         "exposure": 337.58,
         "exposure_text": "+$338",
-        "move": "Full ladder posts (+250 @ 10c)",
-        "when": "Sat 9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
+        "move": "Step price down 1c (9c to 8c)",
+        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts Sat 7:20pm CT; even-up Sat 8:50pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:20pm CT",
         "last_fill": "2026-10-15T01:36:09Z"
       }
     ],
@@ -97,7 +97,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:20pm CT. Sold 1,488, 1,182 resting. Worst line -$262 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 9:20pm CT. Sold 1,488, 1,992 resting. Worst line -$262 (target -$100)."
         ]
       },
       {
@@ -187,15 +187,15 @@
       {
         "label": "Jasudavicius by KO/TKO",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 750.0,
         "target": 1000.0,
         "status": "even",
-        "price": null
+        "price": 0.09
       },
       {
         "label": "Jasudavicius by Submission",
         "held": 100.0,
-        "resting": 140.0,
+        "resting": 200.0,
         "target": 300.0,
         "status": "lagging",
         "price": 0.06
@@ -210,7 +210,7 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-16T03:33:08Z"
+    "ts": "2026-10-16T03:36:09Z"
   },
   "posts": [
     {
@@ -2846,6 +2846,30 @@
       "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792121648880-a80f69",
+      "ts": "2026-10-16T03:34:08Z",
+      "book": "UFC-BLAJAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792121709311-218363",
+      "ts": "2026-10-16T03:33:04Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 810 (launch ladder): Jasudavicius by KO/TKO x750 at 9c, Jasudavicius by Submission x60 at 6c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 810.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
