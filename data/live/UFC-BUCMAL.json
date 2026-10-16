@@ -1,10 +1,10 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T01:48:51.308368Z",
+  "generated_at": "2026-10-16T01:50:32.265968Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$26.",
+    "headline": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$25.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 76,
@@ -12,8 +12,8 @@
       {
         "side": "Buckley by Decision",
         "resting": "870 @ 14c",
-        "exposure": -26.02,
-        "exposure_text": "-$26",
+        "exposure": -25.12,
+        "exposure_text": "-$25",
         "move": "Hold price at 14c",
         "when": "already at fair plus margin (14c)",
         "at": null,
@@ -22,10 +22,21 @@
         "last_fill": "2026-10-15T18:55:23Z"
       },
       {
+        "side": "Buckley by Submission",
+        "resting": "none",
+        "exposure": -24.87,
+        "exposure_text": "-$25",
+        "move": "Holding",
+        "when": "no move planned until the full ladder posts at Sat 9:00am CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-16T01:49:15Z"
+      },
+      {
         "side": "Buckley by KO/TKO",
         "resting": "900 @ 31-33c",
-        "exposure": 4.24,
-        "exposure_text": "+$4",
+        "exposure": 5.13,
+        "exposure_text": "+$5",
         "move": "Step price down 1c (31c to 30c)",
         "when": "next bot check, if the crowd trades under 31c",
         "at": null,
@@ -35,21 +46,10 @@
         "lag_note": "Steps to 30c if the crowd trades lower."
       },
       {
-        "side": "Buckley by Submission",
-        "resting": "30 @ 3c",
-        "exposure": 4.24,
-        "exposure_text": "+$4",
-        "move": "Holding",
-        "when": "no move planned until the full ladder posts at Sat 9:00am CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-15T14:48:03Z"
-      },
-      {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": 4.24,
-        "exposure_text": "+$4",
+        "exposure": 5.13,
+        "exposure_text": "+$5",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
         "at": null,
@@ -59,8 +59,8 @@
       {
         "side": "Malott by Decision",
         "resting": "900 @ 25-26c",
-        "exposure": 4.24,
-        "exposure_text": "+$4",
+        "exposure": 5.13,
+        "exposure_text": "+$5",
         "move": "Step price down 1c (25c to 24c)",
         "when": "next bot check, if the crowd trades under 25c",
         "at": null,
@@ -72,8 +72,8 @@
       {
         "side": "Malott by KO/TKO",
         "resting": "900 @ 19-20c",
-        "exposure": 4.24,
-        "exposure_text": "+$4",
+        "exposure": 5.13,
+        "exposure_text": "+$5",
         "move": "Step price down 1c (19c to 18c)",
         "when": "next bot check, if the crowd trades under 19c",
         "at": null,
@@ -85,8 +85,8 @@
       {
         "side": "Malott by Submission",
         "resting": "900 @ 13c",
-        "exposure": 4.24,
-        "exposure_text": "+$4",
+        "exposure": 5.13,
+        "exposure_text": "+$5",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check, if the crowd trades under 13c",
         "at": null,
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 30, 4,530 resting. Worst line -$26 (target -$150). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 9:55pm CT. Sold 60, 4,500 resting. Worst line -$25 (target -$150). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -117,8 +117,8 @@
         "lines": [
           "Full ladder posts Sat 9:00am CT: 3,000 more contracts across 5 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate open: worst line -$26 is better than -$100.",
-          "Batches used: none (max 3 per bucket)."
+          "Gate open: worst line -$25 is better than -$100.",
+          "Batches used: 1 (max 3 per bucket)."
         ]
       },
       {
@@ -173,11 +173,11 @@
       },
       {
         "label": "Buckley by Submission",
-        "held": 0.0,
-        "resting": 30.0,
+        "held": 30.0,
+        "resting": 0.0,
         "target": 30.0,
         "status": "even",
-        "price": 0.03
+        "price": null
       },
       {
         "label": "Malott by Decision",
@@ -213,7 +213,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T01:47:59Z"
+    "ts": "2026-10-16T01:49:59Z"
   },
   "posts": [
     {
@@ -1622,6 +1622,16 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792115379820-2c09ff",
+      "ts": "2026-10-16T01:49:26Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "New wave on Buckley by Submission: batch 1 of 3, 15 contracts.",
+      "severity": "info",
+      "title": "New wave"
     }
   ],
   "audits": [
