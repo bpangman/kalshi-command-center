@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T03:04:19.009393Z",
+  "generated_at": "2026-10-16T03:05:59.505562Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,835, 1,026 resting. Worst line +$47. Game 93% done."
+          "In game (Ingame). Sold 10,835, 1,244 resting. Worst line +$47. Game 94% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1883.8,
-        "resting": 23.7,
+        "resting": 111.7,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1121.8,
-        "resting": 932.0,
+        "resting": 1062.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T03:03:52Z"
+    "ts": "2026-10-16T03:05:53Z"
   },
   "posts": [
-    {
-      "id": "1792054842067-17a90d",
-      "ts": "2026-10-15T09:00:42Z",
-      "book": "W7-SEADEN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 7:15 PM CT. 3,007 contracts sold, 2,931 resting. Worst line -$597 (goal -$150 by kickoff). Next: Trickle balancing starts in 11h 14m. Confidence: high.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
     {
       "id": "1792055205656-53e4b6",
       "ts": "2026-10-15T09:06:45Z",
@@ -4629,18 +4619,29 @@
       "source": "bot",
       "text": "Floor mode: guaranteed minimum is +47; from here only trades that raise it",
       "severity": "info"
+    },
+    {
+      "id": "1792119893354-1d2a8f",
+      "ts": "2026-10-16T03:02:52Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 30: SEA by 7-14 x30 at 6c. Worst line +$47.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 30.0,
+        "fills": [
+          {
+            "side": "SEA by 7-14",
+            "price": 0.06,
+            "qty": 30.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792064170513-822e65",
-      "ts": "2026-10-15T11:36:10Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): held worst -605.59 (backstop -300) or lagging gap 996 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792065304652-d3590f",
       "ts": "2026-10-15T11:55:04Z",
@@ -5530,6 +5531,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792119899375-5ff361",
+      "ts": "2026-10-16T03:04:59Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+56 on SEA 7-14 @ 0.05 (maker)\n+30 on SEA 7-14 @ 0.06 (maker)\nworst outcome now +73\nheld 1962/1988/1926/1953/1884/1122\nIf the game ends... you make\nDEN 1-6: +73 (+0.9% of bankroll)\nDEN 7-14: +47 (+0.6% of bankroll)\nDEN 15+: +109 (+1.3% of bankroll)\nSEA 1-6: +82 (+1.0% of bankroll)\nSEA 7-14: +151 (+1.8% of bankroll)\nSEA 15+: +913 (+11.1% of bankroll)",
       "severity": "warn"
     }
   ]
