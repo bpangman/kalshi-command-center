@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T22:43:17.055602Z",
+  "generated_at": "2026-10-16T22:45:00.985565Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -41,7 +41,7 @@
         "move": "Hold price at 13c",
         "when": "crowd pays 13c; steps down 1c only if it trades lower",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts Sat 2:30pm CT; even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T21:13:09Z",
         "lag_note": "Price 13c matches the crowd."
@@ -65,12 +65,12 @@
         "exposure": 771.92,
         "exposure_text": "+$772",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 5:45pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-16T22:45:19Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T21:04:40Z",
-        "lag_note": "Steps to 6c if no fill by 5:45pm CT."
+        "lag_note": "Steps to 6c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -98,7 +98,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Justin Allgaier, Sheldon Creed.",
           "Brent Crews: 1,630 behind. No crowd trade data yet.",
-          "Sheldon Creed: 1,400 behind. Steps to 6c if no fill by 5:45pm CT.",
+          "Sheldon Creed: 1,400 behind. Steps to 6c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -196,7 +196,7 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T22:42:51Z"
+    "ts": "2026-10-16T22:44:52Z"
   },
   "posts": [
     {
