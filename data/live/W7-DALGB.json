@@ -1,10 +1,10 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-16T18:20:12.632026Z",
+  "generated_at": "2026-10-16T18:22:59.245800Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 7:20pm CT. Worst line -$271, goal -$150.",
+    "headline": "Building toward kickoff Sun 7:20pm CT. Worst line -$261, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "GB by 15+",
         "resting": "583 @ 15-24c",
-        "exposure": -270.53,
-        "exposure_text": "-$271",
+        "exposure": -261.41,
+        "exposure_text": "-$261",
         "move": "Next wave 375 contracts",
         "when": "when resting drops under 188 (now 583) and worst loss is -$200 or better",
         "at": null,
@@ -21,10 +21,23 @@
         "last_fill": "2026-10-16T17:35:12Z"
       },
       {
+        "side": "GB by 1-6",
+        "resting": "1,012 @ 24-32c",
+        "exposure": 17.35,
+        "exposure_text": "+$17",
+        "move": "Step price down 1c (24c to 23c)",
+        "when": "if no fill by 1:29pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-16T18:29:54Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts Sun 6:35pm CT",
+        "last_fill": "2026-10-16T18:19:54Z",
+        "lag_note": "Steps to 23c if no fill by 1:29pm CT."
+      },
+      {
         "side": "DAL by 1-6",
         "resting": "975 @ 24-31c",
-        "exposure": 46.23,
-        "exposure_text": "+$46",
+        "exposure": 55.35,
+        "exposure_text": "+$55",
         "move": "Hold price at 24c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -35,8 +48,8 @@
       {
         "side": "DAL by 15+",
         "resting": "650 @ 12-22c",
-        "exposure": 46.23,
-        "exposure_text": "+$46",
+        "exposure": 55.35,
+        "exposure_text": "+$55",
         "move": "Hold price at 12c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -47,8 +60,8 @@
       {
         "side": "DAL by 7-14",
         "resting": "825 @ 19-26c",
-        "exposure": 46.23,
-        "exposure_text": "+$46",
+        "exposure": 55.35,
+        "exposure_text": "+$55",
         "move": "Hold price at 19c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -57,22 +70,10 @@
         "lag_note": "No crowd trade data yet."
       },
       {
-        "side": "GB by 1-6",
-        "resting": "1,050 @ 24-32c",
-        "exposure": 46.23,
-        "exposure_text": "+$46",
-        "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 1:27pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-16T18:27:37Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts Sun 6:35pm CT",
-        "lag_note": "Steps to 23c if no fill by 1:27pm CT."
-      },
-      {
         "side": "GB by 7-14",
         "resting": "975 @ 21-28c",
-        "exposure": 46.23,
-        "exposure_text": "+$46",
+        "exposure": 55.35,
+        "exposure_text": "+$55",
         "move": "Hold price at 21c",
         "when": "needs 50+ crowd trades under 21c (now 47)",
         "at": null,
@@ -85,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 7:20pm CT. Sold 317, 5,058 resting. Worst line -$271 (goal -$150)."
+          "Pregame build, kickoff Sun 7:20pm CT. Sold 355, 5,020 resting. Worst line -$261 (goal -$150)."
         ]
       },
       {
@@ -101,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$271).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$261).",
           "Closest: GB by 15+, 583 resting vs trigger 188.",
           "Batches used: none (max 3 per side)."
         ]
@@ -166,8 +167,8 @@
       },
       {
         "label": "GB by 1-6",
-        "held": 0.0,
-        "resting": 1050.0,
+        "held": 38.0,
+        "resting": 1012.0,
         "target": 900.0,
         "status": "lagging",
         "price": 0.24
@@ -190,7 +191,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-16T18:19:52Z"
+    "ts": "2026-10-16T18:22:53Z"
   },
   "posts": [
     {
@@ -1002,6 +1003,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+189 on GB 15+ @ 0.15 (maker)\nworst outcome now +76\nheld 0/0/317/0/0/0\nIf the game ends... you make\nGB 1-6: +46 (+0.4% of bankroll)\nGB 7-14: +46 (+0.4% of bankroll)\nGB 15+: -271 (-2.3% of bankroll)\nDAL 1-6: +46 (+0.4% of bankroll)\nDAL 7-14: +46 (+0.4% of bankroll)\nDAL 15+: +46 (+0.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792174929264-90b8e0",
+      "ts": "2026-10-16T18:22:09Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+38 on GB 1-6 @ 0.24 (maker)\nworst outcome now +76\nheld 38/0/317/0/0/0\nIf the game ends... you make\nGB 1-6: +17 (+0.1% of bankroll)\nGB 7-14: +55 (+0.5% of bankroll)\nGB 15+: -261 (-2.2% of bankroll)\nDAL 1-6: +55 (+0.5% of bankroll)\nDAL 7-14: +55 (+0.5% of bankroll)\nDAL 15+: +55 (+0.5% of bankroll)",
       "severity": "warn"
     }
   ]
