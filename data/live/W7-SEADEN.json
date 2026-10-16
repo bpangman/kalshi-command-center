@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T02:40:47.212436Z",
+  "generated_at": "2026-10-16T02:42:28.939424Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,728, 1,039 resting. Worst line +$39. Game 79% done."
+          "In game (Ingame). Sold 10,728, 1,054 resting. Worst line +$39. Game 79% done."
         ]
       },
       {
@@ -70,7 +70,7 @@
       {
         "label": "SEA by 1-6",
         "held": 1950.1,
-        "resting": 0.0,
+        "resting": 3.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1797.3,
-        "resting": 108.0,
+        "resting": 120.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T02:40:42Z"
+    "ts": "2026-10-16T02:41:42Z"
   },
   "posts": [
-    {
-      "id": "1792050430091-ad7127",
-      "ts": "2026-10-15T07:47:10Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,931 resting across 6 sides. Next scheduled step: Trickle balancing starts in 12h 28m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792051337141-0037d6",
       "ts": "2026-10-15T08:02:17Z",
@@ -4595,18 +4585,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792118543274-5caa3f",
+      "ts": "2026-10-16T02:41:46Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 7: DEN by 15+ x4 at 20c, SEA by 1-6 x3 at 18c. Worst line +$39.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 7.0,
+        "fills": [
+          {
+            "side": "DEN by 15+",
+            "price": 0.2,
+            "qty": 4.0
+          },
+          {
+            "side": "SEA by 1-6",
+            "price": 0.18,
+            "qty": 3.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792059710791-039915",
-      "ts": "2026-10-15T10:21:50Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): worst -605.59 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792060440864-2b643e",
       "ts": "2026-10-15T10:34:00Z",
@@ -5496,6 +5502,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+8 on SEA 1-6 @ 0.18 (maker)\n+1 on SEA 1-6 @ 0.20 (maker)\n+2 on DEN 15+ @ 0.16 (maker)\n+4 on DEN 15+ @ 0.18 (maker)\nworst outcome now +106\nheld 1962/1988/1905/1950/1797/1122\nIf the game ends... you make\nDEN 1-6: +63 (+0.8% of bankroll)\nDEN 7-14: +38 (+0.5% of bankroll)\nDEN 15+: +121 (+1.5% of bankroll)\nSEA 1-6: +76 (+0.9% of bankroll)\nSEA 7-14: +228 (+2.8% of bankroll)\nSEA 15+: +904 (+11.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792118547822-c9652c",
+      "ts": "2026-10-16T02:42:27Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
