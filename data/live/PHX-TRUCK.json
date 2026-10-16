@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T02:32:26.749862Z",
+  "generated_at": "2026-10-16T02:34:07.382056Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -27,7 +27,7 @@
         "exposure": -338.24,
         "exposure_text": "-$338",
         "move": "Hold price at 27c",
-        "when": "next cent is under the crowd price (24.8c)",
+        "when": "next cent is under the crowd price (19.6c)",
         "at": null,
         "stuck": true,
         "also": "Also: glide starts Fri 12:30pm CT; even-up Fri 5:30pm CT",
@@ -86,16 +86,16 @@
       },
       {
         "side": "Kaden Honeycutt",
-        "resting": "1,717 @ 14-17c",
+        "resting": "1,717 @ 13-17c",
         "exposure": 432.48,
         "exposure_text": "+$432",
-        "move": "Hold price at 14c",
-        "when": "needs 50+ crowd trades under 14c (now 48)",
+        "move": "Hold price at 13c",
+        "when": "crowd pays 13c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-15T05:41:53Z",
-        "lag_note": "Crowd is quiet here (48 traded)."
+        "lag_note": "Price 13c matches the crowd."
       }
     ],
     "sections": [
@@ -109,7 +109,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
-          "Kaden Honeycutt: 1,181 behind. Crowd is quiet here (48 traded).",
+          "Kaden Honeycutt: 1,181 behind. Price 13c matches the crowd.",
           "Ty Majeski: 1,164 behind. No crowd trade data yet.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -187,7 +187,7 @@
         "resting": 1717.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.14
+        "price": 0.13
       },
       {
         "label": "Layne Riggs",
@@ -208,19 +208,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T02:31:38Z"
+    "ts": "2026-10-16T02:33:39Z"
   },
   "posts": [
-    {
-      "id": "1792030205194-08ecd1",
-      "ts": "2026-10-15T02:07:59Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Re-laid 12 orders (6,712 contracts) that vanished with no fill (a Kalshi pause or exchange cancel): Layne Riggs x622 at 29c, Kaden Honeycutt x919 at 16c, Kaden Honeycutt x219 at 17c, Kaden Honeycutt x19 at 18c, Christian Eckes x1,200 at 11c, Christian Eckes x500 at 12c (+6 more).",
-      "severity": "info",
-      "title": "Re-lay"
-    },
     {
       "id": "1792030326144-b3e185",
       "ts": "2026-10-15T02:11:54Z",
@@ -3615,6 +3605,21 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nChandler Smith: -749\nLayne Riggs: -338\nTristan McKee: -35\nBrent Crews: +9\nChristian Eckes: +115\nLanden Lewis: +321\nConnor Mosack: +377\nTy Majeski: +415\nall others (28) >= +432\nCollected $726 premium ($10 fees) | Paper margin over fair $77 (not realized until settlement)\nCore posted book 1.20 | Worst now -749 | Cash free $1606\nAnchor age 0s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792117978933-7f73cb",
+      "ts": "2026-10-16T02:32:49Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Kaden Honeycutt: no fill for 1251 min, added 300 at 13c (was 14c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Kaden Honeycutt",
+        "from": 0.14,
+        "to": 0.13
+      }
     }
   ],
   "audits": [
