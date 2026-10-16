@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T12:48:11.079136Z",
+  "generated_at": "2026-10-16T12:50:57.566422Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$693, final target -$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 50,
+    "confidence_note": "Rules are set, but reaching -$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Jesse Love",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,743, 27,850 resting. Worst line -$693 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,743, 27,850 resting. Worst line -$693 (limit now -$400)."
         ]
       },
       {
@@ -195,19 +195,9 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T12:47:24Z"
+    "ts": "2026-10-16T12:50:26Z"
   },
   "posts": [
-    {
-      "id": "1792051599195-35547e",
-      "ts": "2026-10-15T08:06:34Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "The bot could not read Kalshi or its data (1 of 3 tries): The read operation timed out. It does nothing this loop and retries. After 3 in a row it goes offline-safe.",
-      "severity": "warn",
-      "title": "Read failure"
-    },
     {
       "id": "1792051639510-651439",
       "ts": "2026-10-15T08:07:19Z",
@@ -3370,18 +3360,19 @@
       "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$693, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792154965763-4c5723",
+      "ts": "2026-10-16T12:49:25Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$693, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792070018126-a44724",
-      "ts": "2026-10-15T13:13:38Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -892.04 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792071826855-013e6c",
       "ts": "2026-10-15T13:43:46Z",
@@ -4272,6 +4263,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1356c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792154960230-9f955c",
+      "ts": "2026-10-16T12:49:20Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): worst -692.87 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
