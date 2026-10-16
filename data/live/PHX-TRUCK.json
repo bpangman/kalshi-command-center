@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T03:48:57.757334Z",
+  "generated_at": "2026-10-16T03:51:36.676484Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -40,12 +40,12 @@
         "exposure": 47.47,
         "exposure_text": "+$47",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 10:52pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-16T03:52:15Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "Steps to 5c if no fill by 10:52pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Christian Eckes",
@@ -53,12 +53,12 @@
         "exposure": 153.87,
         "exposure_text": "+$154",
         "move": "Hold price at 11c",
-        "when": "crowd pays 10.7c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-16T00:47:58Z",
-        "lag_note": "Price 11c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Kaden Honeycutt",
@@ -197,19 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T03:48:14Z"
+    "ts": "2026-10-16T03:51:16Z"
   },
   "posts": [
-    {
-      "id": "1792034373898-12f28c",
-      "ts": "2026-10-15T03:19:33Z",
-      "book": "PHX-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 20,831 resting across 6 sides. Next scheduled step: Checkpoint T-1440 in 20h 10m. The bot checks every 30s.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792034501935-19fc63",
       "ts": "2026-10-15T03:21:41Z",
@@ -3612,6 +3602,26 @@
       "text": "Christian Eckes price not lowered: the next cent is under the crowd price, so it stays at 11c.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792122595561-ab9647",
+      "ts": "2026-10-16T03:47:47Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 300: Kaden Honeycutt x300 at 13c. Worst line -$710.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 300.0,
+        "fills": [
+          {
+            "side": "Kaden Honeycutt",
+            "price": 0.13,
+            "qty": 300.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
