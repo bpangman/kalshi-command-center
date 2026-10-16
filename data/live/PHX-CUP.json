@@ -1,10 +1,10 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-16T04:31:41.073365Z",
+  "generated_at": "2026-10-16T04:34:35.892930Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
-    "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,100, final target -$200.",
+    "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,100, final target -$150.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 50,
@@ -126,7 +126,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Denny Hamlin, Josh Berry, Joey Logano: lines under -$800, no adding until above -$750.",
-          "Glide starts Sun 8:00am CT: limit slides from -$800 to -$200 by Sun 1:00pm CT.",
+          "Glide starts Sun 8:00am CT: limit slides from -$800 to -$150 by Sun 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from Sun 12:30pm CT.",
           "Even-up from Sun 1:00pm CT, last-resort take from Sun 1:40pm CT, green flag Sun 2:00pm CT."
         ]
@@ -142,7 +142,7 @@
       {
         "at": "2026-10-18T13:00:00Z",
         "label": "Risk glide starts",
-        "detail": "Limit slides from -$800 to -$200."
+        "detail": "Limit slides from -$800 to -$150."
       },
       {
         "at": "2026-10-18T17:30:00Z",
@@ -152,7 +152,7 @@
       {
         "at": "2026-10-18T18:00:00Z",
         "label": "Glide target date",
-        "detail": "Worst line should be -$200 or better."
+        "detail": "Worst line should be -$150 or better."
       }
     ],
     "sides": [
@@ -207,7 +207,7 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-16T04:31:35Z"
+    "ts": "2026-10-16T04:33:36Z"
   },
   "posts": [
     {
@@ -3060,18 +3060,39 @@
       "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,100, final target -$200. Next: Risk glide starts, Sun 8:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792125136023-182d85",
+      "ts": "2026-10-16T04:32:13Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792125156142-9938e8",
+      "ts": "2026-10-16T04:32:36Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,100, final target -$200. Next: Risk glide starts, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792125216661-398246",
+      "ts": "2026-10-16T04:33:36Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,100, final target -$150. Next: Risk glide starts, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792040410938-5bc454",
-      "ts": "2026-10-15T05:00:10Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): 12 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-RYBL low 2255c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 940c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-AUCI low 1500c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-CHBR low 2148c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792040410939-78723b",
       "ts": "2026-10-15T05:00:10Z",
@@ -3962,6 +3983,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1099.53 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792125133229-97c835",
+      "ts": "2026-10-16T04:32:13Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
