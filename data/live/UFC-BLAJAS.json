@@ -1,6 +1,6 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-16T06:50:15.436802Z",
+  "generated_at": "2026-10-16T06:53:00.028154Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -50,11 +50,11 @@
         "exposure": 237.58,
         "exposure_text": "+$238",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 1:51am CT and the crowd trades under 6c",
-        "at": "2026-10-16T06:51:23Z",
+        "when": "next bot check, if the crowd trades under 6c",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-15T04:24:08Z",
-        "lag_note": "Steps to 5c if no fill by 1:51am CT."
+        "lag_note": "Steps to 5c if the crowd trades lower."
       },
       {
         "side": "Blanchfield by KO/TKO",
@@ -105,7 +105,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Blanchfield by KO/TKO, Jasudavicius by Decision, Jasudavicius by Submission.",
           "Blanchfield by KO/TKO: 600 behind. Steps to 8c if the crowd trades lower.",
-          "Jasudavicius by Submission: 500 behind. Steps to 5c if no fill by 1:51am CT.",
+          "Jasudavicius by Submission: 500 behind. Steps to 5c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -210,19 +210,9 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-16T06:49:38Z"
+    "ts": "2026-10-16T06:52:39Z"
   },
   "posts": [
-    {
-      "id": "1792035320235-1c359a",
-      "ts": "2026-10-15T03:35:20Z",
-      "book": "UFC-BLAJAS",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 204 sold, 3,216 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line -$116. Next: Full ladder release in 2d 10h. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792035360569-5a9e11",
       "ts": "2026-10-15T03:35:57Z",
@@ -3322,6 +3312,16 @@
         "contracts": 300.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1792133579725-105760",
+      "ts": "2026-10-16T06:52:59Z",
+      "book": "UFC-BLAJAS",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
