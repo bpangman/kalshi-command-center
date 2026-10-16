@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T18:31:20.027811Z",
+  "generated_at": "2026-10-16T18:34:05.529652Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$441, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -71,16 +71,16 @@
       },
       {
         "side": "Chandler Smith",
-        "resting": "214 @ 17-18c",
+        "resting": "214 @ 16-17c",
         "exposure": -227.15,
         "exposure_text": "-$227",
-        "move": "Step price down 1c (17c to 16c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-16T18:30:57Z",
+        "move": "Step price down 1c (16c to 15c)",
+        "when": "if no fill by 1:46pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T18:46:40Z",
         "stuck": false,
         "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-16T18:10:57Z",
-        "lag_note": "Steps to 16c at the next check."
+        "lag_note": "Steps to 15c if no fill by 1:46pm CT."
       },
       {
         "side": "Ty Majeski",
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 14,628, 21,550 resting. Worst line -$441 (limit now -$400)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 14,628, 21,550 resting. Worst line -$441 (limit now -$400). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -108,7 +108,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Ty Majeski.",
           "Ty Majeski: 1,700 behind. Steps to 7c if no fill by 1:38pm CT.",
-          "Chandler Smith: 214 behind. Steps to 16c at the next check.",
+          "Chandler Smith: 214 behind. Steps to 15c if no fill by 1:46pm CT.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -177,7 +177,7 @@
         "resting": 214.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.17
+        "price": 0.16
       },
       {
         "label": "Kaden Honeycutt",
@@ -206,38 +206,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T18:30:57Z"
+    "ts": "2026-10-16T18:33:58Z"
   },
   "posts": [
-    {
-      "id": "1792117978933-7f73cb",
-      "ts": "2026-10-16T02:32:49Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Kaden Honeycutt: no fill for 1251 min, added 300 at 13c (was 14c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Kaden Honeycutt",
-        "from": 0.14,
-        "to": 0.13
-      }
-    },
-    {
-      "id": "1792118099948-abeaca",
-      "ts": "2026-10-16T02:32:49Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 300 (price step): Kaden Honeycutt x300 at 13c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 300.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1792118885807-6fd674",
       "ts": "2026-10-16T02:48:05Z",
@@ -3969,6 +3940,31 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792175537819-58cb59",
+      "ts": "2026-10-16T18:31:59Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Chandler Smith: no fill for 21 min, added 107 at 16c (was 17c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Chandler Smith",
+        "from": 0.17,
+        "to": 0.16
+      }
+    },
+    {
+      "id": "1792175578171-a7bbd8",
+      "ts": "2026-10-16T18:32:58Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$441, final target $0. Next: Risk glide starts, 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
