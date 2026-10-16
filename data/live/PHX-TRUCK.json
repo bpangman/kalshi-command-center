@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T14:10:02.236893Z",
+  "generated_at": "2026-10-16T14:12:48.639757Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -62,16 +62,16 @@
       },
       {
         "side": "Christian Eckes",
-        "resting": "1,400 @ 11-12c",
+        "resting": "1,400 @ 10-11c",
         "exposure": 259.22,
         "exposure_text": "+$259",
-        "move": "Hold price at 11c",
-        "when": "next cent is under the crowd price (10.3c)",
+        "move": "Hold price at 10c",
+        "when": "crowd pays 10c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-16T00:47:58Z",
-        "lag_note": "Price 11c is at its floor."
+        "lag_note": "Price 10c matches the crowd."
       },
       {
         "side": "Ty Majeski",
@@ -91,7 +91,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 7,822, 26,719 resting. Worst line -$605 (limit now -$400)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 7,822, 26,419 resting. Worst line -$605 (limit now -$400)."
         ]
       },
       {
@@ -99,7 +99,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Christian Eckes, Kaden Honeycutt, Layne Riggs, Ty Majeski.",
           "Ty Majeski: 1,164 behind. Price 9c matches the crowd.",
-          "Christian Eckes: 864 behind. Price 11c is at its floor.",
+          "Christian Eckes: 864 behind. Price 10c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -160,7 +160,7 @@
         "resting": 1400.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.11
+        "price": 0.1
       },
       {
         "label": "Chandler Smith",
@@ -197,44 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T14:10:01Z"
+    "ts": "2026-10-16T14:12:02Z"
   },
   "posts": [
-    {
-      "id": "1792080447320-b7d921",
-      "ts": "2026-10-15T16:07:12Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on lagging Kaden Honeycutt: 1,181 behind the leader and no fill for 625 min, so the bot added 300 at 15c, one cent under its old lowest 16c; the crowd has been buying at 15c (55 traded). Next step on this side no sooner than 15 min.",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Kaden Honeycutt",
-        "from": 0.16,
-        "to": 0.15
-      }
-    },
-    {
-      "id": "1792080527860-4edbaf",
-      "ts": "2026-10-15T16:06:39Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 202: Layne Riggs x202 at 28c. Book now: 5,045 sold in all, worst line -$833.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 202.0,
-        "fills": [
-          {
-            "side": "Layne Riggs",
-            "price": 0.28,
-            "qty": 202.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792080568177-38b0ed",
       "ts": "2026-10-15T16:07:12Z",
@@ -3671,6 +3636,41 @@
       "data": {
         "contracts": 10.0,
         "rows": 1
+      }
+    },
+    {
+      "id": "1792159922847-7dff77",
+      "ts": "2026-10-16T14:12:01Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Christian Eckes: no fill for 803 min, added 300 at 10c (was 11c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Christian Eckes",
+        "from": 0.11,
+        "to": 0.1
+      }
+    },
+    {
+      "id": "1792159922848-16d964",
+      "ts": "2026-10-16T14:09:48Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 53: Daniel Hemric x53 at 2c. Worst line -$605.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 53.0,
+        "fills": [
+          {
+            "side": "Daniel Hemric",
+            "price": 0.02,
+            "qty": 53.0
+          }
+        ]
       }
     }
   ],
