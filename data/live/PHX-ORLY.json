@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T20:16:46.847553Z",
+  "generated_at": "2026-10-16T20:19:33.508865Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,13 +51,13 @@
         "resting": "1,202 @ 9-10c",
         "exposure": 241.38,
         "exposure_text": "+$241",
-        "move": "Hold price at 9c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "move": "Step price down 1c (9c to 8c)",
+        "when": "if no fill by 3:36pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T20:36:04Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T20:16:04Z",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Steps to 8c if no fill by 3:36pm CT."
       },
       {
         "side": "Brent Crews",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,981, 27,094 resting. Worst line -$661 (limit now -$400)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 10,981, 27,706 resting. Worst line -$661 (limit now -$400)."
         ]
       },
       {
@@ -195,29 +195,9 @@
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T20:16:45Z"
+    "ts": "2026-10-16T20:18:46Z"
   },
   "posts": [
-    {
-      "id": "1792085676236-cb608b",
-      "ts": "2026-10-15T17:34:36Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$889, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792085736657-06470f",
-      "ts": "2026-10-15T17:35:36Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$889, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792085938133-975401",
       "ts": "2026-10-15T17:36:56Z",
@@ -3421,18 +3401,43 @@
       "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$661, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792181886036-3d2e83",
+      "ts": "2026-10-16T20:16:04Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 88: Corey Day x88 at 8c. Worst line -$661.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 88.0,
+        "fills": [
+          {
+            "side": "Corey Day",
+            "price": 0.08,
+            "qty": 88.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792181886038-e6841a",
+      "ts": "2026-10-16T20:16:05Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 612 (launch ladder): Carson Kvapil x367 at 14c, Carson Kvapil x130 at 15c, +2 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 612.0,
+        "rows": 4
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792094377738-bd2503",
-      "ts": "2026-10-15T19:59:37Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+590 on Sam Mayer @ 0.05 (maker)\nworst outcome now -778\nIf the race ends... you make\nJesse Love: -778\nJustin Allgaier: -326\nCarson Kvapil: -325\nBrandon Jones: +82\nSam Mayer: +142\nAustin Hill: +172\nTaylor Gray: +172\nSammy Smith: +172\nall others (31) >= +255",
-      "severity": "warn"
-    },
     {
       "id": "1792096327940-51a62a",
       "ts": "2026-10-15T20:32:07Z",
@@ -4322,6 +4327,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+34 on Corey Day @ 0.08 (maker)\nworst outcome now -668\nIf the race ends... you make\nJesse Love: -668\nJustin Allgaier: -449\nCarson Kvapil: -355\nBrandon Jones: +192\nSam Mayer: +228\nAustin Hill: +282\nTaylor Gray: +282\nSammy Smith: +282\nall others (31) >= +322",
+      "severity": "warn"
+    },
+    {
+      "id": "1792181913040-29e45c",
+      "ts": "2026-10-16T20:18:33Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: PHX-ORLY - Carson Kvapil is posting again.",
       "severity": "warn"
     }
   ]
