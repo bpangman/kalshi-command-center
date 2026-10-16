@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-16T18:25:45.019477Z",
+  "generated_at": "2026-10-16T18:28:34.882409Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -73,15 +73,15 @@
       },
       {
         "side": "Sheldon Creed",
-        "resting": "2,000 @ 7-10c",
+        "resting": "2,000 @ 6-10c",
         "exposure": 1029.46,
         "exposure_text": "+$1,029",
-        "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 1:27pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-16T18:27:08Z",
+        "move": "Hold price at 6c",
+        "when": "crowd pays 6c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
-        "lag_note": "Steps to 6c if no fill by 1:27pm CT."
+        "lag_note": "Price 6c matches the crowd."
       }
     ],
     "sections": [
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Justin Allgaier, Sheldon Creed.",
-          "Sheldon Creed: 1,700 behind. Steps to 6c if no fill by 1:27pm CT.",
+          "Sheldon Creed: 1,700 behind. Price 6c matches the crowd.",
           "Brent Crews: 1,630 behind. No crowd trade data yet.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -189,24 +189,14 @@
         "resting": 2000.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.07
+        "price": 0.06
       }
     ],
     "moves_note": "33 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-16T18:24:54Z"
+    "ts": "2026-10-16T18:27:55Z"
   },
   "posts": [
-    {
-      "id": "1792076298084-c2b96e",
-      "ts": "2026-10-15T14:58:18Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 10/17 6:30 PM CT. Worst line -$889 (final target -$100 at T-60). 8,800 sold, 29,652 resting. Next: Checkpoint T-2880 in 8h 32m. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792076660786-6be58d",
       "ts": "2026-10-15T15:04:20Z",
@@ -3389,6 +3379,21 @@
       "data": {
         "contracts": 300.0,
         "rows": 1
+      }
+    },
+    {
+      "id": "1792175235578-379ec4",
+      "ts": "2026-10-16T18:27:12Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Sheldon Creed: no fill for 4324 min, added 300 at 6c (was 7c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Sheldon Creed",
+        "from": 0.07,
+        "to": 0.06
       }
     }
   ],
