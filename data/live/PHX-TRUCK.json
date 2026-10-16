@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T11:55:11.452563Z",
+  "generated_at": "2026-10-16T11:57:56.106739Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -40,12 +40,12 @@
         "exposure": -205.14,
         "exposure_text": "-$205",
         "move": "Hold price at 15c",
-        "when": "needs 50+ crowd trades under 15c (now 1)",
+        "when": "crowd pays 15c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: glide starts 12:30pm CT; even-up 5:30pm CT",
         "last_fill": "2026-10-16T11:53:34Z",
-        "lag_note": "Crowd is quiet here (1 traded)."
+        "lag_note": "Price 15c matches the crowd."
       },
       {
         "side": "Brent Crews",
@@ -197,24 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T11:55:00Z"
+    "ts": "2026-10-16T11:57:01Z"
   },
   "posts": [
-    {
-      "id": "1792070678125-530aaa",
-      "ts": "2026-10-15T13:24:24Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on lagging Christian Eckes: 1,164 behind the leader and no fill for 205 min, so the bot added 300 at 10c, one cent under its old lowest 11c; the crowd has been buying at 8c (90 traded). Next step on this side no sooner than 15 min.",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Christian Eckes",
-        "from": 0.11,
-        "to": 0.1
-      }
-    },
     {
       "id": "1792070698304-9965c2",
       "ts": "2026-10-15T13:24:55Z",
@@ -3578,18 +3563,34 @@
       "text": "Quiet for 15 min. 27,779 resting. Next: Risk glide starts, 12:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792151720266-ee1454",
+      "ts": "2026-10-16T11:53:35Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 210: Kaden Honeycutt x141 at 15c, Kaden Honeycutt x69 at 14c. Worst line -$645.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 210.0,
+        "fills": [
+          {
+            "side": "Kaden Honeycutt",
+            "price": 0.15,
+            "qty": 141.0
+          },
+          {
+            "side": "Kaden Honeycutt",
+            "price": 0.14,
+            "qty": 69.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792066434578-b6f02a",
-      "ts": "2026-10-15T12:13:54Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 14 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 2000c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1717c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-LARI low 1247c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792066434579-95e95c",
       "ts": "2026-10-15T12:13:54Z",
@@ -4480,6 +4481,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): worst -675.49 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792151738079-dbadea",
+      "ts": "2026-10-16T11:55:38Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+263 on Kaden Honeycutt @ 0.14 (maker)\n+141 on Kaden Honeycutt @ 0.15 (maker)\nworst outcome now -645\nIf the race ends... you make\nChandler Smith: -645\nLayne Riggs: -235\nKaden Honeycutt: -205\nBrent Crews: +66\nTristan McKee: +69\nChristian Eckes: +219\nLanden Lewis: +425\nConnor Mosack: +481\nall others (28) >= +519",
+      "severity": "warn"
     }
   ]
 }
