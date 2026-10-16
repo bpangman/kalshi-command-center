@@ -1,31 +1,30 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-16T03:13:14.382560Z",
+  "generated_at": "2026-10-16T03:15:05.534028Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$247.",
+    "headline": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$291.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 76,
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Jourdain by Submission",
-        "resting": "49 @ 11c",
-        "exposure": -247.25,
-        "exposure_text": "-$247",
-        "move": "Step price down 1c (11c to 10c)",
-        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "resting": "none",
+        "exposure": -290.78,
+        "exposure_text": "-$291",
+        "move": "Stops adding (backstop)",
+        "when": "holding until this side's loss is back above -$225 (now -$291)",
         "at": null,
-        "stuck": true,
-        "also": "Also: full ladder posts Sat 9:00am CT",
-        "last_fill": "2026-10-16T01:03:37Z"
+        "stuck": false,
+        "last_fill": "2026-10-16T03:13:36Z"
       },
       {
         "side": "Jourdain by KO/TKO",
         "resting": "134 @ 30c",
-        "exposure": -162.47,
-        "exposure_text": "-$162",
+        "exposure": -157.09,
+        "exposure_text": "-$157",
         "move": "Step price down 1c (30c to 29c)",
         "when": "next bot check, if the crowd trades under 30c",
         "at": null,
@@ -37,8 +36,8 @@
       {
         "side": "Jourdain by Decision",
         "resting": "409 @ 27c",
-        "exposure": 113.28,
-        "exposure_text": "+$113",
+        "exposure": 118.66,
+        "exposure_text": "+$119",
         "move": "Step price down 1c (27c to 26c)",
         "when": "next bot check, if the crowd trades under 27c",
         "at": null,
@@ -50,8 +49,8 @@
       {
         "side": "Cuamba by Decision",
         "resting": "420 @ 23c",
-        "exposure": 123.84,
-        "exposure_text": "+$124",
+        "exposure": 129.22,
+        "exposure_text": "+$129",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check, if the crowd trades under 23c",
         "at": null,
@@ -63,8 +62,8 @@
       {
         "side": "Cuamba by KO/TKO",
         "resting": "420 @ 14c",
-        "exposure": 123.84,
-        "exposure_text": "+$124",
+        "exposure": 129.22,
+        "exposure_text": "+$129",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check, if the crowd trades under 14c",
         "at": null,
@@ -76,8 +75,8 @@
       {
         "side": "Cuamba by Submission",
         "resting": "525 @ 6c",
-        "exposure": 123.84,
-        "exposure_text": "+$124",
+        "exposure": 129.22,
+        "exposure_text": "+$129",
         "move": "Hold price at 6c",
         "when": "already at fair plus margin (6c)",
         "at": null,
@@ -88,8 +87,8 @@
       {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": 123.84,
-        "exposure_text": "+$124",
+        "exposure": 129.22,
+        "exposure_text": "+$129",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
         "at": null,
@@ -101,15 +100,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 668, 1,987 resting. Worst line -$247 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 7:35pm CT. Sold 717, 1,938 resting. Worst line -$291 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Cuamba by Decision, Cuamba by KO/TKO, Jourdain by Decision, Jourdain by KO/TKO.",
-          "Cuamba by Decision: 371 behind. Steps to 22c if the crowd trades lower.",
-          "Cuamba by KO/TKO: 371 behind. Steps to 13c if the crowd trades lower.",
+          "Cuamba by Decision: 420 behind. Steps to 22c if the crowd trades lower.",
+          "Cuamba by KO/TKO: 420 behind. Steps to 13c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -118,7 +117,7 @@
         "lines": [
           "Full ladder posts Sat 9:00am CT: 1,575 more contracts across 6 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$247).",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$291).",
           "Batches used: none (max 3 per bucket)."
         ]
       },
@@ -198,11 +197,11 @@
       },
       {
         "label": "Jourdain by Submission",
-        "held": 371.1,
-        "resting": 48.9,
+        "held": 420.0,
+        "resting": 0.0,
         "target": 700.0,
         "status": "heavy",
-        "price": 0.11
+        "price": null
       },
       {
         "label": "Draw / No Contest",
@@ -214,7 +213,7 @@
       }
     ],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-16T03:12:57Z"
+    "ts": "2026-10-16T03:14:58Z"
   },
   "posts": [
     {
@@ -2881,6 +2880,16 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792120437780-e9a837",
+      "ts": "2026-10-16T03:13:46Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on Jourdain by Submission: line -$291 is under -$250. Rows pulled, no adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
