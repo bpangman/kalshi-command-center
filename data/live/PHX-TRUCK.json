@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T23:39:06.928065Z",
+  "generated_at": "2026-10-16T23:41:57.170177Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
     "headline": "Green flag handoff for the green flag 6:30pm CT. Worst line -$152, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Layne Riggs",
@@ -91,7 +91,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Green flag handoff, green flag 6:30pm CT. Sold 22,133, 40,360 resting. Worst line -$152 (limit now $0)."
+          "Green flag handoff, green flag 6:30pm CT. Sold 22,133, 40,360 resting. Worst line -$152 (limit now $0). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -178,19 +178,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T23:38:18Z"
+    "ts": "2026-10-16T23:41:19Z"
   },
   "posts": [
-    {
-      "id": "1792170096860-0fa17d",
-      "ts": "2026-10-16T17:01:20Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Backstop released on Layne Riggs: line is back to -$340. It can add again.",
-      "severity": "info",
-      "title": "Backstop"
-    },
     {
       "id": "1792170096861-05f9e0",
       "ts": "2026-10-16T17:01:20Z",
@@ -4012,18 +4002,19 @@
       "text": "Risk glide: limit $0, worst line -$152. buyback skipped on Layne Riggs (line -152): no clip lifts the worst line 2x its ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1792194079930-30ad3d",
+      "ts": "2026-10-16T23:41:19Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Green flag handoff for the green flag 6:30pm CT. Worst line -$152, final target $0.",
+      "severity": "info",
+      "title": "Plan updated: Green flag handoff"
     }
   ],
   "audits": [
-    {
-      "id": "1792135491156-428725",
-      "ts": "2026-10-16T07:24:51Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 714c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1380c, KXNASCARRACE-ZERCB26-COMO high 412c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1246c, KXNASCARRACE-ZERCB26-TRMC low 490c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792135491157-981f51",
       "ts": "2026-10-16T07:24:51Z",
@@ -4913,6 +4904,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- PHX-TRUCK - Kaden Honeycutt has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792193969303-54d347",
+      "ts": "2026-10-16T23:39:29Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 12 driver(s): Layne Riggs (+78%), Grant Enfinger (+53%), Connor Mosack (+50%), Giovanni Ruggiero (+50%), William Sawalich (+48%), Tristan McKee (+48%), Landen Lewis (+47%), Ben Rhodes (+44%), Brent Crews (+44%), Ty Majeski (+36%) and 2 more",
       "severity": "warn"
     }
   ]
