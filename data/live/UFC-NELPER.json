@@ -1,13 +1,13 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-16T16:00:45.368083Z",
+  "generated_at": "2026-10-16T16:03:51.092876Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Nelson by KO/TKO",
@@ -29,7 +29,7 @@
         "when": "Sat 9:00am CT",
         "at": "2026-10-17T14:00:00Z",
         "stuck": true,
-        "also": "Also: paid balancing starts Sat 6:45pm CT; even-up Sat 8:15pm CT",
+        "also": "Also: even-up Sat 7:45pm CT; paid balancing starts Sat 8:25pm CT",
         "last_fill": "2026-10-15T06:12:37Z"
       },
       {
@@ -41,7 +41,7 @@
         "when": "Sat 9:00am CT",
         "at": "2026-10-17T14:00:00Z",
         "stuck": true,
-        "also": "Also: paid balancing starts Sat 6:45pm CT; even-up Sat 8:15pm CT",
+        "also": "Also: even-up Sat 7:45pm CT; paid balancing starts Sat 8:25pm CT",
         "last_fill": "2026-10-15T06:16:58Z"
       },
       {
@@ -64,7 +64,7 @@
         "when": "next bot check, if the crowd trades under 7c",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 6:45pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 7:45pm CT",
         "last_fill": "2026-10-15T01:18:06Z",
         "lag_note": "Steps to 6c if the crowd trades lower."
       },
@@ -77,7 +77,7 @@
         "when": "next bot check, if 500+ crowd contracts traded in the last hour",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 6:45pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 7:45pm CT",
         "last_fill": "2026-10-15T01:18:06Z"
       },
       {
@@ -89,7 +89,7 @@
         "when": "next bot check, if the crowd trades under 16c",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 6:45pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 7:45pm CT",
         "last_fill": "2026-10-15T01:18:06Z",
         "lag_note": "Steps to 15c if the crowd trades lower."
       }
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 8:45pm CT. Sold 1,365, 1,170 resting. Worst line -$267 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 8:45pm CT. Sold 1,365, 1,170 resting. Worst line -$267 (target -$100)."
         ]
       },
       {
@@ -123,8 +123,8 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON: Nelson by KO/TKO stopped adding until worst line is above -$225.",
-          "Paid balancing starts Sat 6:45pm CT: worst line to -$100, up to $100.",
-          "Even-up Sat 8:15pm CT; last-resort take Sat 8:40pm CT; handoff to the fight Sat 8:42pm CT.",
+          "Paid balancing starts Sat 8:25pm CT: worst line to -$100, up to $100.",
+          "Even-up Sat 7:45pm CT; last-resort take Sat 8:25pm CT; handoff to the fight Sat 8:42pm CT.",
           "The fight start is an estimate and can move."
         ]
       },
@@ -142,14 +142,14 @@
         "detail": "1,395 more contracts go out."
       },
       {
-        "at": "2026-10-17T23:45:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$100."
-      },
-      {
-        "at": "2026-10-18T01:15:00Z",
+        "at": "2026-10-18T00:45:00Z",
         "label": "Even-up window",
         "detail": "Lagging buckets repriced toward fair."
+      },
+      {
+        "at": "2026-10-18T01:25:00Z",
+        "label": "Paid balancing starts",
+        "detail": "Worst line to -$100."
       }
     ],
     "sides": [
@@ -211,19 +211,9 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-16T15:59:50Z"
+    "ts": "2026-10-16T16:02:52Z"
   },
   "posts": [
-    {
-      "id": "1792044265092-22cdaf",
-      "ts": "2026-10-15T06:04:25Z",
-      "book": "UFC-NELPER",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 is posted for the fight at Sat 10/17 8:45 PM CT. 679 sold, 1,856 resting; 1,395 more post at Sat 10/17 9:00 AM CT. Worst line -$206. Next: Full ladder release in 2d 7h. Confidence: medium.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792044325472-e577e8",
       "ts": "2026-10-15T06:05:25Z",
@@ -3228,6 +3218,16 @@
         "contracts": 870.0,
         "rows": 3
       }
+    },
+    {
+      "id": "1792166572416-3b2c28",
+      "ts": "2026-10-16T16:02:52Z",
+      "book": "UFC-NELPER",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
@@ -3499,6 +3499,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- UFC-NELPER - Cristian Perez by Submission has had no resting orders for at least 1970 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792166628774-e272ea",
+      "ts": "2026-10-16T16:03:48Z",
+      "book": "UFC-NELPER",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-NELPER - Cristian Perez by Submission has had no resting orders for at least 2031 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
