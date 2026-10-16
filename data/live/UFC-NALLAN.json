@@ -1,19 +1,19 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-16T17:37:17.721123Z",
+  "generated_at": "2026-10-16T17:40:04.458476Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$169.",
+    "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$166.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 74,
+    "checks_every_s": 75,
     "moves": [
       {
         "side": "Landwehr by KO/TKO",
         "resting": "none",
-        "exposure": -169.19,
-        "exposure_text": "-$169",
+        "exposure": -166.37,
+        "exposure_text": "-$166",
         "move": "Full ladder posts (+280 @ 19-20c)",
         "when": "Sat 9:00am CT",
         "at": "2026-10-17T14:00:00Z",
@@ -23,8 +23,8 @@
       {
         "side": "Nallo by KO/TKO",
         "resting": "none",
-        "exposure": -169.06,
-        "exposure_text": "-$169",
+        "exposure": -166.24,
+        "exposure_text": "-$166",
         "move": "Full ladder posts (+280 @ 58-59c)",
         "when": "Sat 9:00am CT",
         "at": "2026-10-17T14:00:00Z",
@@ -33,10 +33,23 @@
         "last_fill": "2026-10-15T01:30:51Z"
       },
       {
+        "side": "Nallo by Decision",
+        "resting": "137 @ 8c",
+        "exposure": -29.14,
+        "exposure_text": "-$29",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "if no fill by 12:58pm CT and the crowd trades under 8c",
+        "at": "2026-10-16T17:58:27Z",
+        "stuck": false,
+        "also": "Also: full ladder posts Sat 9:00am CT",
+        "last_fill": "2026-10-16T17:38:27Z",
+        "lag_note": "Steps to 7c if no fill by 12:58pm CT."
+      },
+      {
         "side": "Landwehr by Submission",
         "resting": "275 @ 8c",
-        "exposure": 0.81,
-        "exposure_text": "+$1",
+        "exposure": 3.63,
+        "exposure_text": "+$4",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check, if the crowd trades under 8c",
         "at": null,
@@ -46,23 +59,10 @@
         "lag_note": "Steps to 7c if the crowd trades lower."
       },
       {
-        "side": "Nallo by Decision",
-        "resting": "172 @ 8c",
-        "exposure": 3.27,
-        "exposure_text": "+$3",
-        "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check, if the crowd trades under 8c",
-        "at": null,
-        "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 6:00pm CT",
-        "last_fill": "2026-10-16T17:12:08Z",
-        "lag_note": "Steps to 7c if the crowd trades lower."
-      },
-      {
         "side": "Nallo by Submission",
         "resting": "265 @ 13c",
-        "exposure": 96.54,
-        "exposure_text": "+$97",
+        "exposure": 99.36,
+        "exposure_text": "+$99",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check, if the crowd trades under 13c",
         "at": null,
@@ -74,8 +74,8 @@
       {
         "side": "Landwehr by Decision",
         "resting": "267 @ 6c",
-        "exposure": 98.38,
-        "exposure_text": "+$98",
+        "exposure": 101.2,
+        "exposure_text": "+$101",
         "move": "Hold price at 6c",
         "when": "already at fair plus margin (6c)",
         "at": null,
@@ -86,8 +86,8 @@
       {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": 250.81,
-        "exposure_text": "+$251",
+        "exposure": 253.63,
+        "exposure_text": "+$254",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at Sat 9:00am CT",
         "at": null,
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 1,644, 1,009 resting. Worst line -$169 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about Sat 7:00pm CT. Sold 1,679, 974 resting. Worst line -$166 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -107,7 +107,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Landwehr by Submission, Nallo by Decision, Nallo by Submission.",
           "Nallo by Submission: 266 behind. Steps to 12c if the crowd trades lower.",
-          "Nallo by Decision: 172 behind. Steps to 7c if the crowd trades lower.",
+          "Landwehr by Submission: 170 behind. Steps to 7c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -116,7 +116,7 @@
         "lines": [
           "Full ladder posts Sat 9:00am CT: 1,575 more contracts across 6 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$169).",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$166).",
           "Batches used: none (max 3 per bucket)."
         ]
       },
@@ -180,8 +180,8 @@
       },
       {
         "label": "Nallo by Decision",
-        "held": 247.5,
-        "resting": 172.5,
+        "held": 282.8,
+        "resting": 137.2,
         "target": 700.0,
         "status": "lagging",
         "price": 0.08
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-16T17:36:31Z"
+    "ts": "2026-10-16T17:39:33Z"
   },
   "posts": [
     {
