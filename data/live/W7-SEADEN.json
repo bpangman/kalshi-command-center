@@ -1,19 +1,19 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T02:15:58.177721Z",
+  "generated_at": "2026-10-16T02:17:50.426994Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
     "headline": "In game (Ingame). Worst line +$35.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 10,707, 1,048 resting. Worst line +$35. Game 64% done. Bot is slow (checks every 32s, set for 20s)."
+          "In game (Ingame). Sold 10,707, 981 resting. Worst line +$35. Game 65% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DEN by 1-6",
         "held": 1961.4,
-        "resting": 2.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "DEN by 15+",
         "held": 1898.0,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "SEA by 1-6",
         "held": 1941.0,
-        "resting": 4.0,
+        "resting": 3.5,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1797.3,
-        "resting": 177.2,
+        "resting": 144.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1121.8,
-        "resting": 864.0,
+        "resting": 834.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T02:15:31Z"
+    "ts": "2026-10-16T02:17:32Z"
   },
   "posts": [
-    {
-      "id": "1792046198675-86fafc",
-      "ts": "2026-10-15T06:36:38Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,931 resting across 6 sides. Next scheduled step: Trickle balancing starts in 13h 38m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792047105348-5e9c6e",
-      "ts": "2026-10-15T06:51:45Z",
-      "book": "W7-SEADEN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. 2,931 resting across 6 sides. Next scheduled step: Trickle balancing starts in 13h 23m. The bot checks every 1m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792047649426-b7904c",
       "ts": "2026-10-15T07:00:40Z",
@@ -4530,18 +4510,39 @@
       "text": "In game (Ingame). Worst line +$33.",
       "severity": "info",
       "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1792116991787-74953f",
+      "ts": "2026-10-16T02:14:14Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 8: SEA by 1-6 x8 at 21c. Worst line +$35.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 8.0,
+        "fills": [
+          {
+            "side": "SEA by 1-6",
+            "price": 0.21,
+            "qty": 8.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792116991788-d5989b",
+      "ts": "2026-10-16T02:16:31Z",
+      "book": "W7-SEADEN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line +$35.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1792054907598-1deb51",
-      "ts": "2026-10-15T09:01:47Z",
-      "book": "W7-SEADEN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-SEADEN): held worst -596.90 (backstop -300) or lagging gap 985 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792055627092-c11e1b",
       "ts": "2026-10-15T09:13:47Z",
@@ -5431,6 +5432,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792116968068-9f9200",
+      "ts": "2026-10-16T02:16:08Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W7-SEADEN - Denver by 1 to 6 is posting again.",
       "severity": "warn"
     }
   ]
