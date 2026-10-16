@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T03:37:48.445035Z",
+  "generated_at": "2026-10-16T03:41:00.439558Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": 9.07,
         "exposure_text": "+$9",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-16T03:37:13Z",
+        "when": "if no fill by 10:52pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T03:52:15Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Steps to 5c if no fill by 10:52pm CT."
       },
       {
         "side": "Christian Eckes",
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T03:37:10Z"
+    "ts": "2026-10-16T03:40:11Z"
   },
   "posts": [
     {
@@ -3627,24 +3627,6 @@
   ],
   "audits": [
     {
-      "id": "1792039753323-bcdbc4",
-      "ts": "2026-10-15T04:49:13Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 2000c, KXNASCARRACE-ZERCB26-CHEC low 2000c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1719c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-LARI low 1303c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792039753324-78fbf6",
-      "ts": "2026-10-15T04:49:13Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -940.57 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1792039832244-430560",
       "ts": "2026-10-15T04:50:32Z",
       "book": "PHX-TRUCK",
@@ -4520,6 +4502,24 @@
     {
       "id": "1792120075386-98c938",
       "ts": "2026-10-16T03:07:55Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -748.53 vs floor -425.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792121892892-512b45",
+      "ts": "2026-10-16T03:38:12Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 14 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-CHEC low 1400c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 714c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1717c, KXNASCARRACE-ZERCB26-COMO high 412c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1293c, KXNASCARRACE-ZERCB26-TRMC low 490c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792121892893-4dcad7",
+      "ts": "2026-10-16T03:38:12Z",
       "book": "PHX-TRUCK",
       "kind": "audit",
       "source": "auditor",
