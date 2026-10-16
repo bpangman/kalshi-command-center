@@ -1,13 +1,13 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-16T17:57:18.162491Z",
+  "generated_at": "2026-10-16T18:00:31.865778Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$166.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 74,
+    "checks_every_s": 69,
     "moves": [
       {
         "side": "Landwehr by KO/TKO",
@@ -38,12 +38,12 @@
         "exposure": -29.14,
         "exposure_text": "-$29",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 12:58pm CT and the crowd trades under 8c",
-        "at": "2026-10-16T17:58:27Z",
+        "when": "next bot check, if the crowd trades under 8c",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 6:00pm CT",
         "last_fill": "2026-10-16T17:38:27Z",
-        "lag_note": "Steps to 7c if no fill by 12:58pm CT."
+        "lag_note": "Steps to 7c if the crowd trades lower."
       },
       {
         "side": "Landwehr by Submission",
@@ -212,29 +212,9 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-16T17:56:41Z"
+    "ts": "2026-10-16T17:59:42Z"
   },
   "posts": [
-    {
-      "id": "1792064795270-6bcd70",
-      "ts": "2026-10-15T11:46:28Z",
-      "book": "UFC-NALLAN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "The bot hit an error and skipped a loop (loop_once raised: The read operation timed out). It retries next loop; I will say if it keeps happening.",
-      "severity": "warn",
-      "title": "Bot error"
-    },
-    {
-      "id": "1792065702138-7617b9",
-      "ts": "2026-10-15T12:01:42Z",
-      "book": "UFC-NALLAN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 1h. The bot checks every 2m.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792065903690-dda43d",
       "ts": "2026-10-15T12:05:03Z",
@@ -3270,6 +3250,26 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792173461689-17b9cb",
+      "ts": "2026-10-16T17:57:41Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$166. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792173582447-3c9455",
+      "ts": "2026-10-16T17:59:42Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$166. Next: Full ladder posts, Sat 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [

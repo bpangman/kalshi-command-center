@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T17:57:18.162491Z",
+  "generated_at": "2026-10-16T18:00:31.865778Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$469, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 52,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 14,269, 21,487 resting. Worst line -$469 (limit now -$400)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 14,269, 21,527 resting. Worst line -$469 (limit now -$400). Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -206,29 +206,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T17:56:41Z"
+    "ts": "2026-10-16T17:59:42Z"
   },
   "posts": [
-    {
-      "id": "1792110746010-c1d4ba",
-      "ts": "2026-10-16T00:32:24Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Christian Eckes price not lowered: the next cent is under the crowd price, so it stays at 10c.",
-      "severity": "info",
-      "title": "Price hold"
-    },
-    {
-      "id": "1792111471185-b49b25",
-      "ts": "2026-10-16T00:44:27Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1792111612280-fe6646",
       "ts": "2026-10-16T00:46:52Z",
@@ -3919,18 +3899,33 @@
       "data": {
         "side": "Tristan McKee"
       }
+    },
+    {
+      "id": "1792173461671-9ac066",
+      "ts": "2026-10-16T17:56:17Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 80 (new wave): Tristan McKee x80 at 4c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 80.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792173461674-a4ac31",
+      "ts": "2026-10-16T17:57:41Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$469, final target $0. Next: Risk glide starts, 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792093386109-53d38c",
-      "ts": "2026-10-15T19:43:06Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 12 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-COLA low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-WISA low 750c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792094046563-03f377",
       "ts": "2026-10-15T19:54:06Z",
@@ -4821,6 +4816,15 @@
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- PHX-TRUCK - Brent Crews has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PHX-TRUCK - Christian Eckes has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1792173457408-8b31ae",
+      "ts": "2026-10-16T17:57:37Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -468.75 vs floor -425.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
