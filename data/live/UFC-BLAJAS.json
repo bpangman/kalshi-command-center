@@ -1,6 +1,6 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-16T06:02:09.444387Z",
+  "generated_at": "2026-10-16T06:05:18.204399Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -50,11 +50,11 @@
         "exposure": 237.58,
         "exposure_text": "+$238",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 1:04am CT and the crowd trades under 6c",
-        "at": "2026-10-16T06:04:07Z",
+        "when": "next bot check, if the crowd trades under 6c",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-15T04:24:08Z",
-        "lag_note": "Steps to 5c if no fill by 1:04am CT."
+        "lag_note": "Steps to 5c if the crowd trades lower."
       },
       {
         "side": "Blanchfield by KO/TKO",
@@ -105,7 +105,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Blanchfield by KO/TKO, Jasudavicius by Decision, Jasudavicius by Submission.",
           "Blanchfield by KO/TKO: 600 behind. Steps to 8c if the crowd trades lower.",
-          "Jasudavicius by Submission: 500 behind. Steps to 5c if no fill by 1:04am CT.",
+          "Jasudavicius by Submission: 500 behind. Steps to 5c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -210,29 +210,9 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-16T06:01:16Z"
+    "ts": "2026-10-16T06:04:17Z"
   },
   "posts": [
-    {
-      "id": "1792030064054-81ec4d",
-      "ts": "2026-10-15T02:07:44Z",
-      "book": "UFC-BLAJAS",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 is posted for the fight at Sat 10/17 9:20 PM CT. 0 sold, 0 resting; 1,850 more post at Sat 10/17 9:00 AM CT. Worst line $0. Next: Full ladder release in 2d 11h. Confidence: low.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792030970502-410f64",
-      "ts": "2026-10-15T02:22:50Z",
-      "book": "UFC-BLAJAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet: nothing filled or changed in 15 min. Next scheduled step: Full ladder release in 2d 11h. The bot checks every 45s.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792031756324-55e8fa",
       "ts": "2026-10-15T02:35:56Z",
@@ -3314,6 +3294,26 @@
       "source": "bot",
       "text": "If the game ends... you make\nBLAKOTKODQ: +338\nBLASUB: -262\nBLADEC: -262\nJASKOTKODQ: +338\nJASSUB: +238\nJASDEC: +150\nDRAW: +338\nCollected $338 premium ($0 fees) | Paper margin over fair $6 (not realized until settlement)\nheld / resting\nBLAKOTKODQ: 0 / 600\nBLASUB: 600 / 0\nBLADEC: 600 / 0\nJASKOTKODQ: 0 / 750\nJASSUB: 100 / 300\nJASDEC: 188 / 412\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.813 | Worst now -262 | Cash free $1500\nAnchor age 152s | Last fill 64444s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792130698247-a7742b",
+      "ts": "2026-10-16T06:04:46Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Jasudavicius by Submission: added 150 at 5c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792130698248-fdfdd3",
+      "ts": "2026-10-16T06:04:47Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Jasudavicius by Submission: 500 behind, posted 150 at 4c.",
+      "severity": "info",
+      "title": "New wave"
     }
   ],
   "audits": [
