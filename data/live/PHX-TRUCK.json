@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T13:19:00.999960Z",
+  "generated_at": "2026-10-16T13:21:45.483573Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -36,16 +36,16 @@
       },
       {
         "side": "Layne Riggs",
-        "resting": "907 @ 28-31c",
+        "resting": "907 @ 27-29c",
         "exposure": -239.03,
         "exposure_text": "-$239",
-        "move": "Step price down 1c (28c to 27c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-16T13:18:38Z",
+        "move": "Hold price at 27c",
+        "when": "next cent is under the crowd price (25.3c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: glide starts 12:30pm CT",
+        "also": "Also: glide starts 12:30pm CT; even-up 5:30pm CT",
         "last_fill": "2026-10-16T12:58:22Z",
-        "lag_note": "Steps to 27c at the next check."
+        "lag_note": "Price 27c is at its floor."
       },
       {
         "side": "Brent Crews",
@@ -181,10 +181,10 @@
       {
         "label": "Layne Riggs",
         "held": 1090.7,
-        "resting": 907.4,
+        "resting": 907.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.28
+        "price": 0.27
       },
       {
         "label": "Ty Majeski",
@@ -197,34 +197,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T13:18:38Z"
+    "ts": "2026-10-16T13:21:40Z"
   },
   "posts": [
-    {
-      "id": "1792074788085-f05599",
-      "ts": "2026-10-15T14:33:07Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (6 errors in a minute). It skips posting and price changes for this loop and tries again next loop. Nothing is lost.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1792074949357-b3c4d7",
-      "ts": "2026-10-15T14:35:30Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on lagging Kaden Honeycutt: 1,181 behind the leader and no fill for 534 min, so the bot added 300 at 15c, one cent under its old lowest 16c; the crowd has been buying at 15c (55 traded). Next step on this side no sooner than 15 min.",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Kaden Honeycutt",
-        "from": 0.16,
-        "to": 0.15
-      }
-    },
     {
       "id": "1792075835404-b8e4a1",
       "ts": "2026-10-15T14:50:35Z",
@@ -3644,6 +3619,35 @@
       "text": "Quiet for 15 min. 26,980 resting. Next: Risk glide starts, 12:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792156758873-59e905",
+      "ts": "2026-10-16T13:19:04Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Layne Riggs: no fill for 21 min, added 150 at 27c (was 28c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Layne Riggs",
+        "from": 0.28,
+        "to": 0.27
+      }
+    },
+    {
+      "id": "1792156879909-a8e4c4",
+      "ts": "2026-10-16T13:19:04Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 150 (price step): Layne Riggs x150 at 27c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 150.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
