@@ -1,6 +1,6 @@
 {
   "key": "W7-SEADEN",
-  "generated_at": "2026-10-16T00:05:08.039572Z",
+  "generated_at": "2026-10-16T00:06:47.469339Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -38,7 +38,7 @@
         "exposure": -0.46,
         "exposure_text": "$0",
         "move": "Hold price at 26c",
-        "when": "crowd pays 25.9c; steps down 1c only if it trades lower",
+        "when": "crowd pays 25.8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: next wave once worst loss improves",
@@ -51,7 +51,7 @@
         "exposure": 383.86,
         "exposure_text": "+$384",
         "move": "Hold price at 14c",
-        "when": "crowd pays 13.5c; steps down 1c only if it trades lower",
+        "when": "crowd pays 13.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
@@ -183,22 +183,9 @@
       }
     ],
     "book": "W7-SEADEN",
-    "ts": "2026-10-16T00:04:32Z"
+    "ts": "2026-10-16T00:06:33Z"
   },
   "posts": [
-    {
-      "id": "1792031978016-52900a",
-      "ts": "2026-10-15T02:34:26Z",
-      "book": "W7-SEADEN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Not enough free cash: Kalshi refused 1 post. Waiting: DEN by 1-6. The bot now pauses all new asks for 5m so it stops hammering (resting orders already tie up buying power). It will not remove anything on its own; free cash or smaller books are the fix.",
-      "severity": "warn",
-      "title": "Insufficient balance",
-      "data": {
-        "refused": 1
-      }
-    },
     {
       "id": "1792031998194-e19b81",
       "ts": "2026-10-15T02:39:58Z",
@@ -3981,6 +3968,26 @@
       "text": "Final tightening before kickoff 7:15pm CT. Worst line -$221. Next: Kickoff, 7:15pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792109113279-5b5225",
+      "ts": "2026-10-16T00:03:45Z",
+      "book": "W7-SEADEN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 65: SEA by 7-14 x65 at 26c. Worst line -$221.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 65.0,
+        "fills": [
+          {
+            "side": "SEA by 7-14",
+            "price": 0.26,
+            "qty": 65.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4810,6 +4817,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: DEN 1-6 worst outcome -159\nIf the game ends... you make\nDEN 1-6: -271 (-3.3% of bankroll)\nDEN 7-14: +333 (+4.1% of bankroll)\nDEN 15+: +355 (+4.3% of bankroll)\nSEA 1-6: +4 (+0.0% of bankroll)\nSEA 7-14: -24 (-0.3% of bankroll)\nSEA 15+: +405 (+4.9% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792109131288-45ab35",
+      "ts": "2026-10-16T00:05:31Z",
+      "book": "W7-SEADEN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: DEN 1-6 worst outcome -104\nIf the game ends... you make\nDEN 1-6: -221 (-2.7% of bankroll)\nDEN 7-14: +384 (+4.7% of bankroll)\nDEN 15+: +406 (+5.0% of bankroll)\nSEA 1-6: -0 (-0.0% of bankroll)\nSEA 7-14: -108 (-1.3% of bankroll)\nSEA 15+: +455 (+5.6% of bankroll)",
       "severity": "warn"
     }
   ]
