@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-16T13:30:03.385386Z",
+  "generated_at": "2026-10-16T13:32:49.055872Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -87,12 +87,12 @@
         "exposure": 107.54,
         "exposure_text": "+$108",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check, if the crowd trades under 13c",
-        "at": null,
+        "when": "if no fill by 8:44am CT and the crowd trades under 13c",
+        "at": "2026-10-16T13:44:20Z",
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT; paid balancing starts Sat 7:55pm CT",
+        "also": "Also: full ladder posts Sat 9:00am CT",
         "last_fill": "2026-10-15T14:48:03Z",
-        "lag_note": "Steps to 12c if the crowd trades lower."
+        "lag_note": "Steps to 12c if no fill by 8:44am CT."
       }
     ],
     "sections": [
@@ -212,7 +212,7 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-16T13:29:23Z"
+    "ts": "2026-10-16T13:32:25Z"
   },
   "posts": [
     {
@@ -2934,6 +2934,30 @@
       "text": "Price step on Malott by Submission: added 450 at 12c, one cent lower.",
       "severity": "info",
       "title": "Price step"
+    },
+    {
+      "id": "1792157464462-967eae",
+      "ts": "2026-10-16T13:30:45Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792157504685-0b4a4c",
+      "ts": "2026-10-16T13:30:45Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 900 (ufc principles fillfair): Malott by Submission x450 at 12c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 900.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
