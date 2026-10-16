@@ -1,13 +1,13 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T18:36:52.073353Z",
+  "generated_at": "2026-10-16T18:39:37.493971Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$441, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 49,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -74,13 +74,13 @@
         "resting": "214 @ 16-17c",
         "exposure": -227.15,
         "exposure_text": "-$227",
-        "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 1:46pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-16T18:46:40Z",
+        "move": "Glide starts: cheap buybacks, trims rows",
+        "when": "2:30pm CT (limit slides to $0 by 6:30pm CT)",
+        "at": "2026-10-16T19:30:00Z",
         "stuck": false,
-        "also": "Also: glide starts 2:30pm CT",
+        "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-16T18:10:57Z",
-        "lag_note": "Steps to 15c if no fill by 1:46pm CT."
+        "lag_note": "Price 16c is at its floor."
       },
       {
         "side": "Ty Majeski",
@@ -88,27 +88,27 @@
         "exposure": 1258.85,
         "exposure_text": "+$1,259",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 1:38pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-16T18:38:20Z",
+        "when": "if no fill by 1:53pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-16T18:53:34Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-15T19:00:55Z",
-        "lag_note": "Steps to 7c if no fill by 1:38pm CT."
+        "lag_note": "Steps to 7c if no fill by 1:53pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 14,628, 21,550 resting. Worst line -$441 (limit now -$400). Bot is slow (checks every 49s, set for 30s)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 14,628, 21,550 resting. Worst line -$441 (limit now -$400)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Ty Majeski.",
-          "Ty Majeski: 1,700 behind. Steps to 7c if no fill by 1:38pm CT.",
-          "Chandler Smith: 214 behind. Steps to 15c if no fill by 1:46pm CT.",
+          "Ty Majeski: 1,700 behind. Steps to 7c if no fill by 1:53pm CT.",
+          "Chandler Smith: 214 behind. Price 16c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -206,29 +206,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T18:35:59Z"
+    "ts": "2026-10-16T18:39:00Z"
   },
   "posts": [
-    {
-      "id": "1792119772658-d22cb7",
-      "ts": "2026-10-16T03:02:52Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$749, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792119832897-4dd198",
-      "ts": "2026-10-16T03:03:52Z",
-      "book": "PHX-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$749, final target -$100. Next: Risk glide starts, Fri 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792120740105-414ce2",
       "ts": "2026-10-16T03:19:00Z",
@@ -3969,18 +3949,28 @@
         "contracts": 107.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792175880529-b9e8bd",
+      "ts": "2026-10-16T18:38:00Z",
+      "book": "PHX-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$441, final target $0. Next: Risk glide starts, 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792175915045-dad9be",
+      "ts": "2026-10-16T18:38:35Z",
+      "book": "PHX-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nKaden Honeycutt: -441\nBrent Crews: -420\nChristian Eckes: -395\nLayne Riggs: -369\nTristan McKee: -279\nChandler Smith: -227\nDaniel Hemric: +809\nBen Rhodes: +809\nall others (28) >= +1165\nCollected $1582 premium ($23 fees) | Paper margin over fair $205 (not realized until settlement)\nCore posted book 0.87 | Worst now -441 | Cash free $1512\nAnchor age 168s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792095195705-136b82",
-      "ts": "2026-10-15T20:13:15Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 12 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 750c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-COMO low 750c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1293c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792096850650-1b70c9",
       "ts": "2026-10-15T20:40:50Z",
@@ -4871,6 +4861,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): worst -441.14 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792175843043-93bdf8",
+      "ts": "2026-10-16T18:37:23Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 10 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-DAHE low 90c, KXNASCARRACE-ZERCB26-BERH low 90c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYMA low 1700c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 710c, KXNASCARRACE-ZERCB26-JAGA high 412c, KXNASCARRACE-ZERCB26-COMO high 412c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-TRMC low 450c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
