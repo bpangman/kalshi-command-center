@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-16T01:47:11.393944Z",
+  "generated_at": "2026-10-16T01:48:51.308368Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": 9.07,
         "exposure_text": "+$9",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 8:49pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-16T01:49:26Z",
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-14T21:16:53Z",
-        "lag_note": "Steps to 5c if no fill by 8:49pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Christian Eckes",
@@ -64,12 +64,12 @@
         "exposure": 115.47,
         "exposure_text": "+$115",
         "move": "Hold price at 11c",
-        "when": "next cent is under the crowd price (10.4c)",
+        "when": "crowd pays 10.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 5:30pm CT",
         "last_fill": "2026-10-16T00:47:58Z",
-        "lag_note": "Price 11c is at its floor."
+        "lag_note": "Price 11c matches the crowd."
       },
       {
         "side": "Ty Majeski",
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "PHX-TRUCK",
-    "ts": "2026-10-16T01:46:18Z"
+    "ts": "2026-10-16T01:48:19Z"
   },
   "posts": [
     {
@@ -3620,15 +3620,6 @@
   ],
   "audits": [
     {
-      "id": "1792034220589-2e5888",
-      "ts": "2026-10-15T03:17:00Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -945.27 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1792035982310-d2457c",
       "ts": "2026-10-15T03:46:22Z",
       "book": "PHX-TRUCK",
@@ -4518,6 +4509,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-TRUCK): worst -758.50 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792115330525-0dde74",
+      "ts": "2026-10-16T01:48:50Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+300 on Christian Eckes @ 0.10 (maker)\n+338 on Connor Mosack @ 0.03 (maker)\nworst outcome now -749\nIf the race ends... you make\nChandler Smith: -749\nLayne Riggs: -338\nTristan McKee: -35\nBrent Crews: +9\nChristian Eckes: +115\nLanden Lewis: +321\nConnor Mosack: +377\nTy Majeski: +415\nall others (28) >= +432",
+      "severity": "warn"
     }
   ]
 }
