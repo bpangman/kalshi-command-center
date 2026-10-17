@@ -1,10 +1,10 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-17T00:09:43.797818Z",
+  "generated_at": "2026-10-17T00:11:31.083798Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line unknown.",
+    "headline": "In race (Ingame). Worst line -$150.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 24,846, 45,575 resting. Worst line unknown. Race 23% done. Floor protocol off."
+          "In race (Ingame). Sold 24,846, 44,611 resting. Worst line -$150. Race 23% done. Floor protocol off."
         ]
       },
       {
@@ -44,39 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-17T00:09:35Z"
+    "ts": "2026-10-17T00:10:35Z"
   },
   "posts": [
-    {
-      "id": "1792174066356-3f3af2",
-      "ts": "2026-10-16T18:07:40Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Ty Majeski price not lowered: the next cent is under the crowd price, so it stays at 8c.",
-      "severity": "info",
-      "title": "Price hold"
-    },
-    {
-      "id": "1792174408895-92cec6",
-      "ts": "2026-10-16T18:11:16Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 97: Chandler Smith x97 at 16c. Worst line -$454.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 97.0,
-        "fills": [
-          {
-            "side": "Chandler Smith",
-            "price": 0.16,
-            "qty": 97.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792174550117-160500",
       "ts": "2026-10-16T18:15:50Z",
@@ -3907,27 +3877,33 @@
       "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-ZERCB26-LARI: gap $21.64 -> max 21 contracts (evenness/favorite gates by",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792195815911-3c2750",
+      "ts": "2026-10-17T00:10:12Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt KXNASCARRACE-ZERCB26-GREN: hunting rungs decreased 31 -> 13 contracts (room $13.19, floor -200.00)",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792195815914-4e091d",
+      "ts": "2026-10-17T00:09:41Z",
+      "book": "PHX-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,325 (race margin hunt): Ty Majeski x40 at 23c, Brent Crews x30 at 3c, +56 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1325.0,
+        "rows": 58
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792143218687-d03e49",
-      "ts": "2026-10-16T09:33:38Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-GREN low 750c, KXNASCARRACE-ZERCB26-DAHE low 750c, KXNASCARRACE-ZERCB26-BERH low 750c, KXNASCARRACE-ZERCB26-JUHA low 601c, KXNASCARRACE-ZERCB26-STFR low 750c, KXNASCARRACE-ZERCB26-TYAN low 750c, KXNASCARRACE-ZERCB26-TAGR low 714c, KXNASCARRACE-ZERCB26-JAGA low 750c, KXNASCARRACE-ZERCB26-KAHO low 1380c, KXNASCARRACE-ZERCB26-COMO high 412c, KXNASCARRACE-ZERCB26-WISA low 750c, KXNASCARRACE-ZERCB26-BRCR low 1246c, KXNASCARRACE-ZERCB26-TRMC low 490c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792143218687-30b3ea",
-      "ts": "2026-10-16T09:33:38Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-TRUCK): worst -702.30 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792145038340-a23d82",
       "ts": "2026-10-16T10:03:58Z",
@@ -4808,6 +4784,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Health: Brent Crews has room but 0 resting orders for 377s",
+      "severity": "warn"
+    },
+    {
+      "id": "1792195838302-3fe09d",
+      "ts": "2026-10-17T00:10:38Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): 1 ladder(s) stale 10+ min: KXNASCARRACE-ZERCB26-DAHE low 1239c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792195838303-52936d",
+      "ts": "2026-10-17T00:10:38Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): min live outcome (auditor's own read) -186.81 vs bot's ratchet_high n/a vs bot's ceiling_now -154.67. Check the command center.",
       "severity": "warn"
     }
   ]
