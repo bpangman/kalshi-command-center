@@ -1,13 +1,13 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-17T22:59:08.288673Z",
+  "generated_at": "2026-10-17T23:01:00.824966Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
     "headline": "Full ladder posted for the fight about 7:00pm CT. Worst line -$185, target -$100.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 20,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Nallo by KO/TKO",
@@ -38,11 +38,11 @@
         "resting": "240 @ 18-20c",
         "exposure": -17.56,
         "exposure_text": "-$18",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 6:00pm CT",
-        "at": "2026-10-17T23:00:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:40pm CT, up to $100 in all",
+        "at": "2026-10-17T23:40:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:40pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-15T03:32:24Z",
         "lag_note": "Steps to 17c if the crowd trades lower."
       },
@@ -51,11 +51,11 @@
         "resting": "280 @ 6-8c",
         "exposure": -16.99,
         "exposure_text": "-$17",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 6:00pm CT",
-        "at": "2026-10-17T23:00:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:40pm CT, up to $100 in all",
+        "at": "2026-10-17T23:40:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:40pm CT",
+        "also": "Also: holds price",
         "last_fill": "2026-10-17T12:37:39Z"
       },
       {
@@ -63,11 +63,11 @@
         "resting": "364 @ 8-10c",
         "exposure": 66.94,
         "exposure_text": "+$67",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 6:00pm CT",
-        "at": "2026-10-17T23:00:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:40pm CT, up to $100 in all",
+        "at": "2026-10-17T23:40:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:40pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-17T03:17:57Z",
         "lag_note": "Steps to 7c if the crowd trades lower."
       },
@@ -76,11 +76,11 @@
         "resting": "399 @ 13-14c",
         "exposure": 143.17,
         "exposure_text": "+$143",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 6:00pm CT",
-        "at": "2026-10-17T23:00:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:40pm CT, up to $100 in all",
+        "at": "2026-10-17T23:40:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:40pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-17T22:29:37Z",
         "lag_note": "Steps to 12c if the crowd trades lower."
       },
@@ -90,7 +90,7 @@
         "exposure": 402.44,
         "exposure_text": "+$402",
         "move": "Holding",
-        "when": "no move planned until even-up at 6:00pm CT",
+        "when": "no move planned until paid balancing starts at 6:40pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-15T01:00:26Z"
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 7:00pm CT. Sold 2,558, 1,549 resting. Worst line -$185 (target -$100)."
+          "Full ladder posted, fight about 7:00pm CT. Sold 2,558, 1,549 resting. Worst line -$185 (target -$100). Bot is slow (checks every 45s, set for 20s)."
         ]
       },
       {
@@ -139,11 +139,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-17T23:00:00Z",
-        "label": "Even-up window",
-        "detail": "Lagging buckets repriced toward fair."
-      },
-      {
         "at": "2026-10-17T23:40:00Z",
         "label": "Paid balancing starts",
         "detail": "Worst line to -$100."
@@ -152,6 +147,11 @@
         "at": "2026-10-17T23:40:00Z",
         "label": "Last-resort take window",
         "detail": "Bot may sell to close the last gaps."
+      },
+      {
+        "at": "2026-10-17T23:57:00Z",
+        "label": "Handoff to the fight",
+        "detail": "In-fight engine takes over."
       }
     ],
     "sides": [
@@ -213,19 +213,9 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-17T22:58:47Z"
+    "ts": "2026-10-17T23:00:48Z"
   },
   "posts": [
-    {
-      "id": "1792158834561-b1a9e1",
-      "ts": "2026-10-16T13:53:54Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$189. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792159136878-0aa416",
       "ts": "2026-10-16T13:58:56Z",
@@ -3350,6 +3340,16 @@
       "text": "Bot note: COVERAGE TRIM NALSUB: held 259 + resting 419 over the cap 658; decreased 20 in place (queue kept)",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792278048113-1448e7",
+      "ts": "2026-10-17T23:00:48Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 7:00pm CT. Worst line -$185, target -$100. Next: Paid balancing starts, 6:40pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
     }
   ],
   "audits": [
