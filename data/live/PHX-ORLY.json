@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T04:35:02.005593Z",
+  "generated_at": "2026-10-17T04:36:46.278331Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -85,16 +85,16 @@
       },
       {
         "side": "Brent Crews",
-        "resting": "1,929 @ 5-12c",
+        "resting": "1,929 @ 6-12c",
         "exposure": 1141.01,
         "exposure_text": "+$1,141",
-        "move": "Step price down 1c (5c to 4c)",
-        "when": "if no fill by 11:36pm CT (FILLFAIR: 10 min with no fill)",
+        "move": "Step price down 1c (6c to 5c)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-17T04:36:50Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-14T22:11:15Z",
-        "lag_note": "Steps to 4c if no fill by 11:36pm CT."
+        "lag_note": "Steps to 5c at the next check."
       }
     ],
     "sections": [
@@ -108,7 +108,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Sheldon Creed.",
-          "Brent Crews: 1,630 behind. Steps to 4c if no fill by 11:36pm CT.",
+          "Brent Crews: 1,630 behind. Steps to 5c at the next check.",
           "Corey Day: 902 behind. Price 7c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -162,7 +162,7 @@
         "resting": 1929.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.05
+        "price": 0.06
       },
       {
         "label": "Carson Kvapil",
@@ -207,19 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T04:34:05Z"
+    "ts": "2026-10-17T04:36:06Z"
   },
   "posts": [
-    {
-      "id": "1792129932173-92d740",
-      "ts": "2026-10-16T05:52:12Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$726, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792129992708-b02d82",
       "ts": "2026-10-16T05:53:12Z",
@@ -3531,6 +3521,16 @@
       "text": "Brent Crews price not lowered: the next cent is under the crowd price, so it stays at 5c.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792211706001-fefb03",
+      "ts": "2026-10-17T04:34:46Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Brent Crews: lowest row 5c to 6c.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
