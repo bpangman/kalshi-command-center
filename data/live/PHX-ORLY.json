@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T05:15:59.952393Z",
+  "generated_at": "2026-10-17T05:18:47.541872Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 6:30pm CT. Worst line -$489, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 52,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Jesse Love",
@@ -89,26 +89,26 @@
         "exposure": 1141.01,
         "exposure_text": "+$1,141",
         "move": "Step price down 1c (5c to 4c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T05:16:36Z",
+        "when": "if no fill by 12:22am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T05:22:17Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-14T22:11:15Z",
-        "lag_note": "Steps to 4c at the next check."
+        "lag_note": "Steps to 4c if no fill by 12:22am CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 13,298, 69,291 resting. Worst line -$489 (limit now -$400). Bot is slow (checks every 52s, set for 30s)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 13,298, 69,291 resting. Worst line -$489 (limit now -$400)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Sheldon Creed.",
-          "Brent Crews: 1,630 behind. Steps to 4c at the next check.",
+          "Brent Crews: 1,630 behind. Steps to 4c if no fill by 12:22am CT.",
           "Corey Day: 902 behind. Price 7c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -207,19 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T05:15:24Z"
+    "ts": "2026-10-17T05:18:26Z"
   },
   "posts": [
-    {
-      "id": "1792132773705-3e7ad6",
-      "ts": "2026-10-16T06:39:33Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$726, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792132826959-fa85c2",
       "ts": "2026-10-16T06:40:26Z",
@@ -3543,18 +3533,19 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792214245803-59edf7",
+      "ts": "2026-10-17T05:17:25Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792130357953-800bf0",
-      "ts": "2026-10-16T05:59:17Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+300 on Corey Day @ 0.07 (maker)\n+132 on Corey Day @ 0.08 (maker)\nworst outcome now -726\nIf the race ends... you make\nJesse Love: -726\nCarson Kvapil: -414\nJustin Allgaier: -274\nBrandon Jones: +134\nSam Mayer: +170\nAustin Hill: +224\nTaylor Gray: +224\nSammy Smith: +224\nall others (31) >= +307",
-      "severity": "warn"
-    },
     {
       "id": "1792132117681-3ee6d3",
       "ts": "2026-10-16T06:28:37Z",
@@ -4445,6 +4436,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): worst -488.85 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792214237323-5205c1",
+      "ts": "2026-10-17T05:17:17Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
