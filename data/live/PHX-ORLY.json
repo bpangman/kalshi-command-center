@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T17:31:58.042012Z",
+  "generated_at": "2026-10-17T17:35:01.270101Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -103,12 +103,12 @@
         "exposure": 835.32,
         "exposure_text": "+$835",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 12:34pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-17T17:34:11Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-17T17:34:22Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T16:30:55Z",
-        "lag_note": "Steps to 5c if no fill by 12:34pm CT."
+        "lag_note": "Steps to 5c at the next check."
       }
     ],
     "sections": [
@@ -122,7 +122,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Jesse Love, Sheldon Creed.",
-          "Brent Crews: 1,359 behind. Steps to 5c if no fill by 12:34pm CT.",
+          "Brent Crews: 1,359 behind. Steps to 5c at the next check.",
           "Corey Day: 442 behind. Price 9c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -221,19 +221,9 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T17:31:20Z"
+    "ts": "2026-10-17T17:34:22Z"
   },
   "posts": [
-    {
-      "id": "1792210254282-8c9f5d",
-      "ts": "2026-10-17T04:10:54Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792210375221-d90e09",
       "ts": "2026-10-17T04:12:55Z",
@@ -3932,6 +3922,15 @@
       "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$524, final target $0. Next: Risk glide starts, 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792258403389-64e7bf",
+      "ts": "2026-10-17T17:33:23Z",
+      "book": "PHX-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on PHX-ORLY: 0 orders posted in 10 min while the market traded 6831 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
