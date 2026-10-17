@@ -1,10 +1,10 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-17T20:34:18.795406Z",
+  "generated_at": "2026-10-17T20:37:02.612703Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
-    "headline": "Full ladder posted for the fight about 9:20pm CT. Worst line -$482, target -$100.",
+    "headline": "Full ladder posted for the fight about 9:20pm CT. Worst line -$435, target -$100.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
     "checks_every_s": 45,
@@ -12,19 +12,30 @@
       {
         "side": "Jasudavicius by Decision",
         "resting": "none",
-        "exposure": -482.21,
-        "exposure_text": "-$482",
+        "exposure": -434.61,
+        "exposure_text": "-$435",
         "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$325 (now -$482)",
+        "when": "holding until this side's loss is back above -$325 (now -$435)",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-17T20:20:43Z"
       },
       {
+        "side": "Blanchfield by Submission",
+        "resting": "60 @ 15c",
+        "exposure": -374.99,
+        "exposure_text": "-$375",
+        "move": "Stops adding (backstop)",
+        "when": "holding until this side's loss is back above -$325 (now -$375)",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-17T20:36:00Z"
+      },
+      {
         "side": "Blanchfield by Decision",
         "resting": "400 @ 56-60c",
-        "exposure": -82.59,
-        "exposure_text": "-$83",
+        "exposure": -34.99,
+        "exposure_text": "-$35",
         "move": "Step price down 1c (56c to 55c)",
         "when": "next bot check, if the crowd trades under 56c",
         "at": null,
@@ -34,23 +45,10 @@
         "lag_note": "Steps to 55c if the crowd trades lower."
       },
       {
-        "side": "Blanchfield by Submission",
-        "resting": "400 @ 14-15c",
-        "exposure": -82.59,
-        "exposure_text": "-$83",
-        "move": "Step price down 1c (14c to 13c)",
-        "when": "next bot check, if the crowd trades under 14c",
-        "at": null,
-        "stuck": false,
-        "also": "Also: even-up 8:20pm CT; paid balancing starts 9:00pm CT",
-        "last_fill": "2026-10-15T11:58:17Z",
-        "lag_note": "Steps to 13c if the crowd trades lower."
-      },
-      {
         "side": "Jasudavicius by Submission",
         "resting": "284 @ 6c",
-        "exposure": -82.59,
-        "exposure_text": "-$83",
+        "exposure": -34.99,
+        "exposure_text": "-$35",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check, if the crowd trades under 6c",
         "at": null,
@@ -62,8 +60,8 @@
       {
         "side": "Blanchfield by KO/TKO",
         "resting": "919 @ 9-11c",
-        "exposure": 437.89,
-        "exposure_text": "+$438",
+        "exposure": 485.49,
+        "exposure_text": "+$485",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check, if the crowd trades under 9c",
         "at": null,
@@ -75,8 +73,8 @@
       {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": 517.41,
-        "exposure_text": "+$517",
+        "exposure": 565.01,
+        "exposure_text": "+$565",
         "move": "Holding",
         "when": "no move planned until even-up at 8:20pm CT",
         "at": null,
@@ -86,8 +84,8 @@
       {
         "side": "Jasudavicius by KO/TKO",
         "resting": "1,000 @ 5-10c",
-        "exposure": 517.41,
-        "exposure_text": "+$517",
+        "exposure": 565.01,
+        "exposure_text": "+$565",
         "move": "Step price down 1c (5c to 4c)",
         "when": "next bot check, if 500+ crowd contracts traded in the last hour",
         "at": null,
@@ -100,13 +98,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 9:20pm CT. Sold 2,879, 3,033 resting. Worst line -$482 (target -$100)."
+          "Full ladder posted, fight about 9:20pm CT. Sold 3,219, 2,693 resting. Worst line -$435 (target -$100)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Blanchfield by Decision, Blanchfield by KO/TKO, Blanchfield by Submission, Jasudavicius by Submission.",
+          "Lagging (150+ behind the leader): Blanchfield by Decision, Blanchfield by KO/TKO, Jasudavicius by Submission.",
           "Blanchfield by KO/TKO: 920 behind. Steps to 8c if the crowd trades lower.",
           "Blanchfield by Decision: 400 behind. Steps to 55c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
@@ -117,7 +115,7 @@
         "lines": [
           "The full ladder is out.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$482).",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$435).",
           "Batches used: 2 (max 3 per bucket)."
         ]
       },
@@ -173,11 +171,11 @@
       },
       {
         "label": "Blanchfield by Submission",
-        "held": 600.0,
-        "resting": 400.0,
+        "held": 940.0,
+        "resting": 60.0,
         "target": 1000.0,
-        "status": "lagging",
-        "price": 0.14
+        "status": "even",
+        "price": 0.15
       },
       {
         "label": "Jasudavicius by Decision",
@@ -213,29 +211,9 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-17T20:33:42Z"
+    "ts": "2026-10-17T20:36:43Z"
   },
   "posts": [
-    {
-      "id": "1792143777736-d60e44",
-      "ts": "2026-10-16T09:42:57Z",
-      "book": "UFC-BLAJAS",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792144322296-6326df",
-      "ts": "2026-10-16T09:52:02Z",
-      "book": "UFC-BLAJAS",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$262. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792144538045-38678c",
       "ts": "2026-10-16T09:55:38Z",
@@ -3313,6 +3291,26 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Full ladder posted for the fight about 9:20pm CT. Worst line -$482, target -$100. Next: Even-up window, 8:20pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792269403232-7815c7",
+      "ts": "2026-10-17T20:36:25Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on Blanchfield by Submission: line -$375 is under -$350. Rows pulled, no adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792269403235-b1b9ea",
+      "ts": "2026-10-17T20:36:43Z",
+      "book": "UFC-BLAJAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 9:20pm CT. Worst line -$435, target -$100. Next: Even-up window, 8:20pm CT.",
       "severity": "info",
       "title": "Plan updated: Full ladder posted"
     }
