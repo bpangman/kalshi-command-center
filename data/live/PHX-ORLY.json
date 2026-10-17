@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T16:45:29.272421Z",
+  "generated_at": "2026-10-17T16:48:11.164520Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -39,8 +39,8 @@
         "exposure": -330.48,
         "exposure_text": "-$330",
         "move": "Next wave up to 1,000 contracts",
-        "when": "next bot check (90% of the offered has sold)",
-        "at": "2026-10-17T16:44:59Z",
+        "when": "when 90% of the 2,330 offered has sold (now 86%)",
+        "at": null,
         "stuck": false,
         "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-17T16:43:53Z"
@@ -63,8 +63,8 @@
         "exposure": -274.5,
         "exposure_text": "-$275",
         "move": "Next wave up to 750 contracts",
-        "when": "next bot check (91% of the offered has sold)",
-        "at": "2026-10-17T16:44:59Z",
+        "when": "when 90% of the 2,210 offered has sold (now 88%)",
+        "at": null,
         "stuck": false,
         "also": "Also: glide starts 2:30pm CT",
         "last_fill": "2026-10-17T16:18:32Z"
@@ -100,26 +100,26 @@
         "exposure": 698.83,
         "exposure_text": "+$699",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T16:46:06Z",
+        "when": "if no fill by 11:51am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T16:51:11Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T16:30:55Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Steps to 5c if no fill by 11:51am CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 19,253, 75,395 resting. Worst line -$332."
+          "Pre-race growth, green flag 6:30pm CT. Sold 19,253, 75,965 resting. Worst line -$332."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Sheldon Creed.",
-          "Brent Crews: 1,030 behind. Steps to 5c at the next check.",
+          "Brent Crews: 1,030 behind. Steps to 5c if no fill by 11:51am CT.",
           "Sheldon Creed: 500 behind. Price 8c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -129,7 +129,7 @@
         "lines": [
           "A driver gets a new wave when 90% of what he offered has sold.",
           "Growth phase: waves allowed down to -$1,000 per driver, limited by free cash.",
-          "Justin Allgaier: 3 waves so far, latest 110 @ 25c, 0% filled.",
+          "Justin Allgaier: 4 waves so far, latest 110 @ 25c, 0% filled.",
           "Jesse Love: 3 waves so far, latest 210 @ 19c, 0% filled."
         ]
       },
@@ -218,59 +218,9 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T16:44:59Z"
+    "ts": "2026-10-17T16:48:00Z"
   },
   "posts": [
-    {
-      "id": "1792203619638-2af825",
-      "ts": "2026-10-17T02:18:18Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 258: Brandon Jones x258 at 4c. Worst line -$489.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 258.0,
-        "fills": [
-          {
-            "side": "Brandon Jones",
-            "price": 0.04,
-            "qty": 258.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1792203881499-58adbd",
-      "ts": "2026-10-17T02:24:41Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792203942018-4c7d2d",
-      "ts": "2026-10-17T02:25:42Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792204002548-93a53b",
-      "ts": "2026-10-17T02:26:42Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792204486089-8838cf",
       "ts": "2026-10-17T02:34:46Z",
@@ -3812,18 +3762,79 @@
       "data": {
         "side": "Sam Mayer"
       }
+    },
+    {
+      "id": "1792255559692-c5526a",
+      "ts": "2026-10-17T16:45:39Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "New wave for Justin Allgaier: wave 4, 110 contracts at 25c. (growth phase)",
+      "severity": "info",
+      "title": "New wave",
+      "data": {
+        "side": "Justin Allgaier"
+      }
+    },
+    {
+      "id": "1792255559692-8ef4fe",
+      "ts": "2026-10-17T16:45:39Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "New wave for Sam Mayer: wave 42, 70 contracts at 8c. (growth phase)",
+      "severity": "info",
+      "title": "New wave",
+      "data": {
+        "side": "Sam Mayer"
+      }
+    },
+    {
+      "id": "1792255559692-a48fd0",
+      "ts": "2026-10-17T16:44:26Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 497: Justin Allgaier x301 at 23c, Justin Allgaier x138 at 24c, William Sawalich x58 at 3c. Worst line -$332.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 497.0,
+        "fills": [
+          {
+            "side": "Justin Allgaier",
+            "price": 0.23,
+            "qty": 301.0
+          },
+          {
+            "side": "Justin Allgaier",
+            "price": 0.24,
+            "qty": 138.0
+          },
+          {
+            "side": "William Sawalich",
+            "price": 0.03,
+            "qty": 58.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792255559692-bacab9",
+      "ts": "2026-10-17T16:45:39Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,476 (new wave): Jesse Love x420 at 19c, Justin Allgaier x330 at 25c, +4 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1476.0,
+        "rows": 6
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792176576457-00349e",
-      "ts": "2026-10-16T18:49:36Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): 11 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-SHCR low 2000c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1324c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792178416341-4eb327",
       "ts": "2026-10-16T19:20:16Z",
@@ -4713,6 +4724,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1170 on William Sawalich @ 0.03 (maker)\n+372 on Sheldon Creed @ 0.09 (maker)\n+506 on Brent Crews @ 0.05 (maker)\n+174 on Sam Mayer @ 0.07 (maker)\n+300 on Jesse Love @ 0.18 (maker)\n+300 on Justin Allgaier @ 0.23 (maker)\n+138 on Justin Allgaier @ 0.24 (maker)\nworst outcome now -332\nIf the race ends... you make\nWilliam Sawalich: -332\nJesse Love: -331\nJustin Allgaier: -330\nCarson Kvapil: -286\nSam Mayer: -275\nCorey Day: -218\nSheldon Creed: +169\nBrandon Jones: +439\nall others (31) >= +619",
+      "severity": "warn"
+    },
+    {
+      "id": "1792255551180-3738ea",
+      "ts": "2026-10-17T16:45:51Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: PHX-ORLY - Carson Kvapil is posting again.",
       "severity": "warn"
     }
   ]
