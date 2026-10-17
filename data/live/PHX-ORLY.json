@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T13:43:58.777527Z",
+  "generated_at": "2026-10-17T13:46:40.599599Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -47,16 +47,16 @@
       },
       {
         "side": "Corey Day",
-        "resting": "602 @ 9-10c",
+        "resting": "602 @ 8-9c",
         "exposure": -128.73,
         "exposure_text": "-$129",
-        "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T13:43:59Z",
+        "move": "Hold price at 8c",
+        "when": "crowd pays 7.5c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: glide starts 2:30pm CT",
+        "also": "Also: glide starts 2:30pm CT; even-up 5:30pm CT",
         "last_fill": "2026-10-17T13:33:59Z",
-        "lag_note": "Steps to 8c at the next check."
+        "lag_note": "Price 8c matches the crowd."
       },
       {
         "side": "Sam Mayer",
@@ -76,12 +76,12 @@
         "exposure": 368.94,
         "exposure_text": "+$369",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "if no fill by 8:45am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-17T13:45:41Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-17T13:46:23Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T01:39:23Z",
-        "lag_note": "Steps to 8c if no fill by 8:45am CT."
+        "lag_note": "Steps to 8c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -109,7 +109,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Sheldon Creed.",
           "Brent Crews: 1,630 behind. Price 4c matches the crowd.",
-          "Sheldon Creed: 800 behind. Steps to 8c if no fill by 8:45am CT.",
+          "Sheldon Creed: 800 behind. Steps to 8c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -178,7 +178,7 @@
         "resting": 602.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.09
+        "price": 0.08
       },
       {
         "label": "Jesse Love",
@@ -207,28 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T13:43:22Z"
+    "ts": "2026-10-17T13:46:23Z"
   },
   "posts": [
-    {
-      "id": "1792172694769-b23baf",
-      "ts": "2026-10-16T17:44:54Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJesse Love: -671\nJustin Allgaier: -452\nCarson Kvapil: -358\nBrandon Jones: +189\nSam Mayer: +225\nAustin Hill: +279\nTaylor Gray: +279\nSammy Smith: +279\nall others (31) >= +354\nCollected $1045 premium ($15 fees) | Paper margin over fair $81 (not realized until settlement)\nCore posted book 0.79 | Worst now -671 | Cash free $1280\nAnchor age 32s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1792173522036-b19e3b",
-      "ts": "2026-10-16T17:58:42Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 27,216 resting. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792174368581-6f5ee9",
       "ts": "2026-10-16T18:12:48Z",
@@ -3593,6 +3574,35 @@
             "qty": 94.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792244663142-9b23c5",
+      "ts": "2026-10-17T13:44:20Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Corey Day: no fill for 10 min, added 150 at 8c (was 9c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Corey Day",
+        "from": 0.09,
+        "to": 0.08
+      }
+    },
+    {
+      "id": "1792244783994-9273cc",
+      "ts": "2026-10-17T13:44:20Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 150 (price step): Corey Day x150 at 8c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 150.0,
+        "rows": 1
       }
     }
   ],

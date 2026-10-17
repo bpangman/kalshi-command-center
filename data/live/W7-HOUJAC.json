@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-17T13:43:58.777527Z",
+  "generated_at": "2026-10-17T13:46:40.599599Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -50,11 +50,11 @@
         "exposure": 11.97,
         "exposure_text": "+$12",
         "move": "Step price down 1c (18c to 17c)",
-        "when": "if no fill by 8:46am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-17T13:46:01Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Steps to 17c if no fill by 8:46am CT."
+        "lag_note": "Steps to 17c at the next check."
       },
       {
         "side": "JAC by 1-6",
@@ -93,7 +93,7 @@
         "lines": [
           "Lagging (75+ behind the leader): HOU by 1-6, HOU by 7-14, HOU by 15+, JAC by 1-6, JAC by 7-14.",
           "HOU by 1-6: 70 behind. Crowd is quiet here (5 traded).",
-          "HOU by 7-14: 70 behind. Steps to 17c if no fill by 8:46am CT.",
+          "HOU by 7-14: 70 behind. Steps to 17c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-17T13:43:42Z"
+    "ts": "2026-10-17T13:45:43Z"
   },
   "posts": [
     {
@@ -1907,6 +1907,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nJAC 1-6: +12 (+1.0% of bankroll)\nJAC 7-14: +12 (+1.0% of bankroll)\nJAC 15+: -58 (-4.7% of bankroll)\nHOU 1-6: +12 (+1.0% of bankroll)\nHOU 7-14: +12 (+1.0% of bankroll)\nHOU 15+: +12 (+1.0% of bankroll)\nCollected $12 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nJAC 1-6: 0 / 527\nJAC 7-14: 0 / 489\nJAC 15+: 70 / 381\nHOU 1-6: 0 / 489\nHOU 7-14: 0 / 413\nHOU 15+: 0 / 327\nPosted book 1.23 | Sold avg 1.207 | Worst now +38 | Cash free $1250\nAnchor age 0s | Last fill 33247s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792244743774-6d4d77",
+      "ts": "2026-10-17T13:45:43Z",
+      "book": "W7-HOUJAC",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,626 resting. Next: Paid balancing starts, Sun 7:45am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
