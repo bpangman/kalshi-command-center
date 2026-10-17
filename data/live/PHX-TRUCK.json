@@ -1,6 +1,6 @@
 {
   "key": "PHX-TRUCK",
-  "generated_at": "2026-10-17T01:38:40.481387Z",
+  "generated_at": "2026-10-17T01:41:20.581803Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-TRUCK",
-    "ts": "2026-10-17T01:38:20Z"
+    "ts": "2026-10-17T01:40:21Z"
   },
   "posts": [
-    {
-      "id": "1792179729603-1ecc40",
-      "ts": "2026-10-16T19:39:57Z",
-      "book": "PHX-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 273: Ty Majeski x273 at 8c. Worst line -$353.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 273.0,
-        "fills": [
-          {
-            "side": "Ty Majeski",
-            "price": 0.08,
-            "qty": 273.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792179830441-4b5cff",
       "ts": "2026-10-16T19:42:44Z",
@@ -4089,18 +4069,19 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nLanden Lewis: -57\nTy Majeski: -57\nJake Garcia: -57\nChristian Eckes: -56\nLayne Riggs: -54\nKaden Honeycutt: +3\nBrent Crews: +32\nChandler Smith: +93\nall others (28) >= +122\nCollected $2254 premium ($48 fees) | Paper margin over fair $1609 (not realized until settlement)\nEvent: Kaden Honeycutt: race finished; Christian Eckes: race finished\nCore posted book 0.00 | Worst now -57 | Cash free $2036\nAnchor age 200s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792201160862-d7053c",
+      "ts": "2026-10-17T01:39:20Z",
+      "book": "PHX-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 0 resting.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792165422250-d5b8a8",
-      "ts": "2026-10-16T15:43:42Z",
-      "book": "PHX-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1792166135174-9adcd4",
       "ts": "2026-10-16T15:55:35Z",
@@ -4990,6 +4971,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- PHX-TRUCK has no resting orders on any side for at least 10 min while it should be posting.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792201198848-fc7f20",
+      "ts": "2026-10-17T01:39:58Z",
+      "book": "PHX-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=25824. Check the command center.",
       "severity": "warn"
     }
   ]
