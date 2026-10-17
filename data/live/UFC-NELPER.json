@@ -1,19 +1,54 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-17T06:40:56.880075Z",
+  "generated_at": "2026-10-17T06:44:00.218639Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
-    "headline": "Wave 1 posted for the fight about 8:45pm CT. Full ladder 9:00am CT. Worst line unknown.",
-    "confidence": "low",
-    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
+    "headline": "Wave 1 posted for the fight about 8:45pm CT. Full ladder 9:00am CT. Worst line -$267.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 76,
     "moves": [
       {
+        "side": "Nelson by KO/TKO",
+        "resting": "none",
+        "exposure": -266.81,
+        "exposure_text": "-$267",
+        "move": "Stops adding (backstop)",
+        "when": "holding until this side's loss is back above -$225 (now -$267)",
+        "at": null,
+        "stuck": true,
+        "last_fill": "2026-10-15T06:12:37Z"
+      },
+      {
+        "side": "Perez by KO/TKO",
+        "resting": "none",
+        "exposure": -161.58,
+        "exposure_text": "-$162",
+        "move": "Full ladder posts (+280 @ 48-49c)",
+        "when": "9:00am CT",
+        "at": "2026-10-17T14:00:00Z",
+        "stuck": true,
+        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
+        "last_fill": "2026-10-15T06:12:37Z"
+      },
+      {
+        "side": "Perez by Submission",
+        "resting": "none",
+        "exposure": -161.58,
+        "exposure_text": "-$162",
+        "move": "Full ladder posts (+280 @ 20-21c)",
+        "when": "9:00am CT",
+        "at": "2026-10-17T14:00:00Z",
+        "stuck": true,
+        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
+        "last_fill": "2026-10-15T06:16:58Z"
+      },
+      {
         "side": "Draw / No Contest",
         "resting": "30 @ 3c",
-        "exposure": null,
-        "exposure_text": "unknown",
+        "exposure": 258.19,
+        "exposure_text": "+$258",
         "move": "Holding",
         "when": "no move planned until the full ladder posts at 9:00am CT",
         "at": null,
@@ -23,86 +58,56 @@
       {
         "side": "Nelson by Decision",
         "resting": "420 @ 7c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 8-9c)",
-        "when": "9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
-        "stuck": false,
-        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
-        "last_fill": "2026-10-15T01:18:06Z"
-      },
-      {
-        "side": "Nelson by KO/TKO",
-        "resting": "none",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$225 (now unknown)",
+        "exposure": 258.19,
+        "exposure_text": "+$258",
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "next bot check, if the crowd trades under 7c",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-10-15T06:12:37Z"
+        "also": "Also: full ladder posts 9:00am CT; even-up 7:45pm CT",
+        "last_fill": "2026-10-15T01:18:06Z",
+        "lag_note": "Steps to 6c if the crowd trades lower."
       },
       {
         "side": "Nelson by Submission",
         "resting": "300 @ 5c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+100 @ 6c)",
-        "when": "9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
+        "exposure": 258.19,
+        "exposure_text": "+$258",
+        "move": "Step price down 1c (5c to 4c)",
+        "when": "next bot check, if 500+ crowd contracts traded in the last hour",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
+        "also": "Also: full ladder posts 9:00am CT; even-up 7:45pm CT",
         "last_fill": "2026-10-15T01:18:06Z"
       },
       {
         "side": "Perez by Decision",
         "resting": "420 @ 16c",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 17-18c)",
-        "when": "9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
+        "exposure": 258.19,
+        "exposure_text": "+$258",
+        "move": "Step price down 1c (16c to 15c)",
+        "when": "next bot check, if the crowd trades under 16c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
-        "last_fill": "2026-10-15T01:18:06Z"
-      },
-      {
-        "side": "Perez by KO/TKO",
-        "resting": "none",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 48-49c)",
-        "when": "9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
-        "stuck": false,
-        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
-        "last_fill": "2026-10-15T06:12:37Z"
-      },
-      {
-        "side": "Perez by Submission",
-        "resting": "none",
-        "exposure": null,
-        "exposure_text": "unknown",
-        "move": "Full ladder posts (+280 @ 20-21c)",
-        "when": "9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
-        "stuck": false,
-        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
-        "last_fill": "2026-10-15T06:16:58Z"
+        "also": "Also: full ladder posts 9:00am CT; even-up 7:45pm CT",
+        "last_fill": "2026-10-15T01:18:06Z",
+        "lag_note": "Steps to 15c if the crowd trades lower."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about 8:45pm CT. Sold ?, 1,170 resting. Worst line unknown (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about 8:45pm CT. Sold 1,365, 1,170 resting. Worst line -$267 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No bucket is lagging."
+          "Lagging (150+ behind the leader): Nelson by Decision, Perez by Decision, Perez by KO/TKO, Perez by Submission.",
+          "Nelson by Decision: 525 behind. Steps to 6c if the crowd trades lower.",
+          "Perez by Decision: 525 behind. Steps to 15c if the crowd trades lower.",
+          "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -110,6 +115,7 @@
         "lines": [
           "Full ladder posts 9:00am CT: 1,395 more contracts across 6 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$267).",
           "Batches used: none (max 3 per bucket)."
         ]
       },
@@ -152,7 +158,7 @@
         "held": 0.0,
         "resting": 420.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.07
       },
       {
@@ -176,7 +182,7 @@
         "held": 0.0,
         "resting": 420.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.16
       },
       {
@@ -184,7 +190,7 @@
         "held": 419.8,
         "resting": 0.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": null
       },
       {
@@ -192,7 +198,7 @@
         "held": 419.8,
         "resting": 0.0,
         "target": 700.0,
-        "status": "even",
+        "status": "lagging",
         "price": null
       },
       {
@@ -205,18 +211,9 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-17T06:40:04Z"
+    "ts": "2026-10-17T06:43:06Z"
   },
   "posts": [
-    {
-      "id": "1792089217600-0835ec",
-      "ts": "2026-10-15T18:33:37Z",
-      "book": "UFC-NELPER",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNELKOTKODQ: -267\nNELSUB: +258\nNELDEC: +258\nPERKOTKODQ: -162\nPERSUB: -162\nPERDEC: +258\nDRAW: +258\nCollected $258 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNELKOTKODQ: 525 / 0\nNELSUB: 0 / 300\nNELDEC: 0 / 420\nPERKOTKODQ: 420 / 0\nPERSUB: 420 / 0\nPERDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.828 | Worst now -267 | Cash free $1500\nAnchor age 56s | Last fill 44247s ago",
-      "severity": "info"
-    },
     {
       "id": "1792089404066-9a6cfe",
       "ts": "2026-10-15T18:36:25Z",
@@ -3177,6 +3174,16 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Wave 1 posted for the fight about 8:45pm CT. Full ladder 9:00am CT. Worst line unknown. Next: Full ladder posts, 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
+    },
+    {
+      "id": "1792219265203-95fc45",
+      "ts": "2026-10-17T06:41:05Z",
+      "book": "UFC-NELPER",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about 8:45pm CT. Full ladder 9:00am CT. Worst line -$267. Next: Full ladder posts, 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Wave 1 (lowest rung only)"
     }
