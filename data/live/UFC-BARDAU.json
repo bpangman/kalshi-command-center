@@ -1,13 +1,13 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-17T23:54:35.126376Z",
+  "generated_at": "2026-10-17T23:56:17.045314Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
     "headline": "Full ladder posted for the fight about 8:10pm CT. Worst line -$317, target -$100.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 20,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Barriault by KO/TKO",
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 8:10pm CT. Sold 1,679, 2,066 resting. Worst line -$317 (target -$100)."
+          "Full ladder posted, fight about 8:10pm CT. Sold 1,679, 2,066 resting. Worst line -$317 (target -$100). Bot is slow (checks every 45s, set for 20s)."
         ]
       },
       {
@@ -211,18 +211,9 @@
       }
     ],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-17T23:54:12Z"
+    "ts": "2026-10-17T23:56:13Z"
   },
   "posts": [
-    {
-      "id": "1792164652246-32e7ea",
-      "ts": "2026-10-16T15:30:52Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBARKOTKODQ: -290\nBARSUB: +130\nBARDEC: +96\nDAUKOTKODQ: +99\nDAUSUB: -290\nDAUDEC: +130\nDRAW: +130\nCollected $130 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nBARKOTKODQ: 420 / 0\nBARSUB: 0 / 300\nBARDEC: 34 / 386\nDAUKOTKODQ: 31 / 389\nDAUSUB: 420 / 0\nDAUDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.890 | Worst now -290 | Cash free $1500\nAnchor age 241s | Last fill 3529s ago",
-      "severity": "info"
-    },
     {
       "id": "1792164699543-9fce3f",
       "ts": "2026-10-16T15:31:39Z",
@@ -3250,6 +3241,16 @@
       "text": "Bot note: COVERAGE TRIM DAUDEC: held 0 + resting 680 over the cap 660; decreased 20 in place (queue kept)",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792281312647-9693a3",
+      "ts": "2026-10-17T23:55:12Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 8:10pm CT. Worst line -$317, target -$100. Next: Even-up window, 7:10pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
     }
   ],
   "audits": [
@@ -3477,6 +3478,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (UFC-BARDAU): worst -348.85 vs floor -325.00 (real L_max 300.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792281375623-d488c7",
+      "ts": "2026-10-17T23:56:15Z",
+      "book": "UFC-BARDAU",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+168 on BARKOTKODQ @ 0.19 (maker)\nworst outcome now -91\nheld 588/0/420/83/588/0/0",
+      "severity": "warn"
     }
   ]
 }
