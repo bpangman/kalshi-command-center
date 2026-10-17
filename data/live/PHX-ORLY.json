@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T05:49:29.680404Z",
+  "generated_at": "2026-10-17T05:52:13.027924Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -89,12 +89,12 @@
         "exposure": 1141.01,
         "exposure_text": "+$1,141",
         "move": "Step price down 1c (5c to 4c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T05:49:38Z",
+        "when": "if no fill by 12:55am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T05:55:34Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-14T22:11:15Z",
-        "lag_note": "Steps to 4c at the next check."
+        "lag_note": "Steps to 4c if no fill by 12:55am CT."
       }
     ],
     "sections": [
@@ -108,7 +108,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Sheldon Creed.",
-          "Brent Crews: 1,630 behind. Steps to 4c at the next check.",
+          "Brent Crews: 1,630 behind. Steps to 4c if no fill by 12:55am CT.",
           "Corey Day: 902 behind. Price 7c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -207,19 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T05:48:40Z"
+    "ts": "2026-10-17T05:51:42Z"
   },
   "posts": [
-    {
-      "id": "1792133317842-126a9b",
-      "ts": "2026-10-16T06:48:37Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$726, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792133680445-2daf17",
       "ts": "2026-10-16T06:54:40Z",
@@ -3544,6 +3534,15 @@
       "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792216202635-907df3",
+      "ts": "2026-10-17T05:50:02Z",
+      "book": "PHX-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJesse Love: -489\nCarson Kvapil: -487\nJustin Allgaier: -350\nSam Mayer: -38\nBrandon Jones: +90\nTaylor Gray: +161\nSheldon Creed: +311\nCorey Day: +413\nall others (31) >= +461\nCollected $1230 premium ($18 fees) | Paper margin over fair $98 (not realized until settlement)\nCore posted book 0.93 | Worst now -489 | Cash free $1829\nAnchor age 0s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
