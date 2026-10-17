@@ -1,13 +1,13 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-17T11:03:05.565842Z",
+  "generated_at": "2026-10-17T11:05:49.710696Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about 9:20pm CT. Full ladder 9:00am CT. Worst line -$241.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "checks_every_s": 77,
     "moves": [
       {
         "side": "Blanchfield by Decision",
@@ -58,14 +58,14 @@
       },
       {
         "side": "Blanchfield by KO/TKO",
-        "resting": "520 @ 9c",
+        "resting": "919 @ 9-11c",
         "exposure": 279.12,
         "exposure_text": "+$279",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check, if the crowd trades under 9c",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts 9:00am CT; even-up 8:20pm CT",
+        "also": "Also: even-up 8:20pm CT; paid balancing starts 9:00pm CT",
         "last_fill": "2026-10-17T02:53:35Z",
         "lag_note": "Steps to 8c if the crowd trades lower."
       },
@@ -82,14 +82,14 @@
       },
       {
         "side": "Jasudavicius by KO/TKO",
-        "resting": "750 @ 6c",
+        "resting": "1,000 @ 6-10c",
         "exposure": 358.64,
         "exposure_text": "+$359",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check, if 500+ crowd contracts traded in the last hour",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts 9:00am CT; even-up 8:20pm CT",
+        "also": "Also: even-up 8:20pm CT; paid balancing starts 9:00pm CT",
         "last_fill": "2026-10-15T01:36:09Z"
       }
     ],
@@ -97,7 +97,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about 9:20pm CT. Sold 1,877, 1,902 resting. Worst line -$241 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about 9:20pm CT. Sold 1,877, 2,551 resting. Worst line -$241 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -112,7 +112,7 @@
       {
         "title": "Next wave of contracts",
         "lines": [
-          "Full ladder posts 9:00am CT: 1,850 more contracts across 5 buckets.",
+          "Full ladder posts 9:00am CT: 1,200 more contracts across 3 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
           "Gate closed: batches wait for the worst line to reach -$100 (now -$241).",
           "Batches used: 2 (max 3 per bucket)."
@@ -138,7 +138,7 @@
       {
         "at": "2026-10-17T14:00:00Z",
         "label": "Full ladder posts",
-        "detail": "1,850 more contracts go out."
+        "detail": "1,200 more contracts go out."
       },
       {
         "at": "2026-10-18T01:20:00Z",
@@ -163,7 +163,7 @@
       {
         "label": "Blanchfield by KO/TKO",
         "held": 79.5,
-        "resting": 520.5,
+        "resting": 919.5,
         "target": 1000.0,
         "status": "lagging",
         "price": 0.09
@@ -187,7 +187,7 @@
       {
         "label": "Jasudavicius by KO/TKO",
         "held": 0.0,
-        "resting": 750.0,
+        "resting": 1000.0,
         "target": 1000.0,
         "status": "even",
         "price": 0.06
@@ -196,7 +196,7 @@
         "label": "Jasudavicius by Submission",
         "held": 410.0,
         "resting": 190.0,
-        "target": 300.0,
+        "target": 600.0,
         "status": "lagging",
         "price": 0.06
       },
@@ -210,29 +210,9 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-17T11:02:07Z"
+    "ts": "2026-10-17T11:05:09Z"
   },
   "posts": [
-    {
-      "id": "1792122273062-4fa351",
-      "ts": "2026-10-16T03:44:23Z",
-      "book": "UFC-BLAJAS",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Idle step on Jasudavicius by KO/TKO: no fill for 1568 min, lowest row 9c to 8c.",
-      "severity": "info",
-      "title": "Price step"
-    },
-    {
-      "id": "1792122273064-fb8167",
-      "ts": "2026-10-16T03:44:24Z",
-      "book": "UFC-BLAJAS",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Jasudavicius by Submission: added 60 at 5c, one cent lower.",
-      "severity": "info",
-      "title": "Price step"
-    },
     {
       "id": "1792122273065-798478",
       "ts": "2026-10-16T03:44:24Z",
@@ -3285,6 +3265,30 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792235048986-75da1e",
+      "ts": "2026-10-17T11:04:04Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Blanchfield by Submission: lowest row 13c to 14c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792235109511-3f130d",
+      "ts": "2026-10-17T11:03:08Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 649 (launch ladder): Jasudavicius by KO/TKO x250 at 10c, Blanchfield by KO/TKO x230 at 10c, +2 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 649.0,
+        "rows": 4
+      }
     }
   ],
   "audits": [
