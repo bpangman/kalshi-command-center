@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T01:35:57.363038Z",
+  "generated_at": "2026-10-17T01:38:40.481387Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$529, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 79,
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Jesse Love",
@@ -35,16 +35,16 @@
       },
       {
         "side": "Justin Allgaier",
-        "resting": "475 @ 24-26c",
+        "resting": "475 @ 23-26c",
         "exposure": -353.82,
         "exposure_text": "-$354",
-        "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 8:37pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-17T01:37:27Z",
+        "move": "Hold price at 23c",
+        "when": "crowd pays 23c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: glide starts Sat 2:30pm CT",
+        "also": "Also: glide starts Sat 2:30pm CT; even-up Sat 5:30pm CT",
         "last_fill": "2026-10-17T01:27:27Z",
-        "lag_note": "Steps to 23c if no fill by 8:37pm CT."
+        "lag_note": "Price 23c matches the crowd."
       },
       {
         "side": "Sam Mayer",
@@ -77,12 +77,12 @@
         "exposure": 443.2,
         "exposure_text": "+$443",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 8:38pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-17T01:38:38Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T23:22:14Z",
-        "lag_note": "Steps to 7c if no fill by 8:38pm CT."
+        "lag_note": "Steps to 7c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -102,7 +102,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 12,659, 30,424 resting. Worst line -$529 (limit now -$400). Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 12,659, 38,387 resting. Worst line -$529 (limit now -$400). Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Justin Allgaier, Sheldon Creed.",
           "Brent Crews: 1,630 behind. Price 10c matches the crowd.",
-          "Sheldon Creed: 973 behind. Steps to 7c if no fill by 8:38pm CT.",
+          "Sheldon Creed: 973 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -195,7 +195,7 @@
         "resting": 475.0,
         "target": 2000,
         "status": "lagging",
-        "price": 0.24
+        "price": 0.23
       },
       {
         "label": "Sheldon Creed",
@@ -208,38 +208,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T01:35:19Z"
+    "ts": "2026-10-17T01:38:20Z"
   },
   "posts": [
-    {
-      "id": "1792115258862-c08def",
-      "ts": "2026-10-16T01:47:23Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Corey Day: no fill for 1608 min, added 300 at 8c (was 9c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Corey Day",
-        "from": 0.09,
-        "to": 0.08
-      }
-    },
-    {
-      "id": "1792115379816-8de07c",
-      "ts": "2026-10-16T01:47:23Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 300 (price step): Corey Day x300 at 8c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 300.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1792115561233-97cab8",
       "ts": "2026-10-16T01:50:26Z",
@@ -3515,18 +3486,38 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792201040013-49807b",
+      "ts": "2026-10-17T01:36:53Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 6,000 (new wave): Josh Williams x500 at 2c, Harrison Burton x500 at 2c, +10 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 6000.0,
+        "rows": 12
+      }
+    },
+    {
+      "id": "1792201080259-7aa969",
+      "ts": "2026-10-17T01:37:58Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Justin Allgaier: no fill for 10 min, added 37 at 23c (was 24c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Justin Allgaier",
+        "from": 0.24,
+        "to": 0.23
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792117014996-569ab1",
-      "ts": "2026-10-16T02:16:54Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): 9 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-CODA low 1787c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792117014996-e34c1d",
       "ts": "2026-10-16T02:16:54Z",
@@ -4412,6 +4403,15 @@
     {
       "id": "1792200818642-e2b3cc",
       "ts": "2026-10-17T01:33:38Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792200994126-38c457",
+      "ts": "2026-10-17T01:36:34Z",
       "book": "PHX-ORLY",
       "kind": "audit",
       "source": "bot",
