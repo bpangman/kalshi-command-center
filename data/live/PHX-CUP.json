@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-17T19:44:43.338692Z",
+  "generated_at": "2026-10-17T19:47:29.335005Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -40,7 +40,7 @@
         "exposure_text": "-$690",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T19:44:19Z",
+        "at": "2026-10-17T19:47:20Z",
         "stuck": false,
         "also": "Also: glide starts Sun 10:00am CT",
         "last_fill": "2026-10-13T17:49:45Z",
@@ -61,16 +61,16 @@
       },
       {
         "side": "Chase Briscoe",
-        "resting": "2,148 @ 10-13c",
+        "resting": "2,148 @ 9-13c",
         "exposure": -140.75,
         "exposure_text": "-$141",
-        "move": "Hold price at 10c",
-        "when": "crowd pays 10c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Step price down 1c (9c to 8c)",
+        "when": "if no fill by 2:50pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T19:50:56Z",
         "stuck": false,
-        "also": "Also: glide starts Sun 10:00am CT; even-up Sun 1:00pm CT",
+        "also": "Also: glide starts Sun 10:00am CT",
         "last_fill": "2026-10-13T22:59:43Z",
-        "lag_note": "Price 10c matches the crowd."
+        "lag_note": "Steps to 8c if no fill by 2:50pm CT."
       },
       {
         "side": "Kyle Larson",
@@ -103,7 +103,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 16,283, 120,125 resting. Worst line -$1,076 (limit now -$800)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 16,283, 121,133 resting. Worst line -$1,076 (limit now -$800)."
         ]
       },
       {
@@ -172,7 +172,7 @@
         "resting": 2148.0,
         "target": 4000,
         "status": "lagging",
-        "price": 0.1
+        "price": 0.09
       },
       {
         "label": "Denny Hamlin",
@@ -209,39 +209,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-17T19:44:19Z"
+    "ts": "2026-10-17T19:47:20Z"
   },
   "posts": [
-    {
-      "id": "1792169291064-c61d38",
-      "ts": "2026-10-16T16:48:11Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,017, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792170197677-5f2b22",
-      "ts": "2026-10-16T17:03:17Z",
-      "book": "PHX-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 55,251 resting. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792170922470-bfdac4",
-      "ts": "2026-10-16T17:15:22Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,017, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792170982748-030e00",
       "ts": "2026-10-16T17:16:22Z",
@@ -3463,18 +3433,58 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nRyan Blaney: -1076\nJosh Berry: -730\nDenny Hamlin: -690\nJoey Logano: -690\nChase Briscoe: -141\nWilliam Byron: +210\nKyle Larson: +307\nChristopher Bell: +810\nall others (29) >= +1108\nCollected $1737 premium ($26 fees) | Paper margin over fair $263 (not realized until settlement)\nCore posted book 1.07 | Worst now -1076 | Cash free $2098\nAnchor age 217s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792266360140-f97ac4",
+      "ts": "2026-10-17T19:43:50Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 210: Kyle Larson x210 at 10c. Worst line -$1,076.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 210.0,
+        "fills": [
+          {
+            "side": "Kyle Larson",
+            "price": 0.1,
+            "qty": 210.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792266360141-e0bbca",
+      "ts": "2026-10-17T19:43:51Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,308 (new wave): Josh Berry x1,308 at 3c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1308.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792266420644-b8ca9f",
+      "ts": "2026-10-17T19:46:56Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Chase Briscoe: no fill for 5566 min, added 300 at 9c (was 10c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Chase Briscoe",
+        "from": 0.1,
+        "to": 0.09
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792191256367-5dbf5e",
-      "ts": "2026-10-16T22:54:16Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): worst -983.46 vs floor -825.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792193205663-333ce4",
       "ts": "2026-10-16T23:26:45Z",
@@ -4365,6 +4375,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1105.41 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792266327929-d9df25",
+      "ts": "2026-10-17T19:45:27Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: PHX-CUP - Josh Berry is posting again.",
+      "severity": "warn"
     }
   ]
 }
