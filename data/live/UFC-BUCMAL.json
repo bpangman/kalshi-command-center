@@ -1,13 +1,13 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-17T11:05:49.710696Z",
+  "generated_at": "2026-10-17T11:08:44.288341Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about 9:55pm CT. Full ladder 9:00am CT. Worst line -$605.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Buckley by Decision",
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about 9:55pm CT. Sold 796, 3,593 resting. Worst line -$605 (target -$150). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about 9:55pm CT. Sold 796, 3,593 resting. Worst line -$605 (target -$150)."
         ]
       },
       {
@@ -212,39 +212,9 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-17T11:04:49Z"
+    "ts": "2026-10-17T11:07:50Z"
   },
   "posts": [
-    {
-      "id": "1792125922013-d4e780",
-      "ts": "2026-10-16T04:45:22Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$111. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792126184078-5a88bd",
-      "ts": "2026-10-16T04:47:32Z",
-      "book": "UFC-BUCMAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 21: Buckley by Decision x21 at 14c. Worst line -$138.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 21.0,
-        "fills": [
-          {
-            "side": "Buckley by Decision",
-            "price": 0.14,
-            "qty": 21.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792126305034-241b6a",
       "ts": "2026-10-16T04:49:42Z",
@@ -3337,6 +3307,26 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792235270778-05d8b7",
+      "ts": "2026-10-17T11:07:31Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792235270783-7e39c3",
+      "ts": "2026-10-17T11:07:50Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about 9:55pm CT. Full ladder 9:00am CT. Worst line -$605. Next: Full ladder posts, 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
@@ -3802,6 +3792,15 @@
     {
       "id": "1792233372225-1c50a5",
       "ts": "2026-10-17T10:36:12Z",
+      "book": "UFC-BUCMAL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (UFC-BUCMAL): worst -605.42 vs floor -325.00 (real L_max 300.00). Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792235236941-c04401",
+      "ts": "2026-10-17T11:07:16Z",
       "book": "UFC-BUCMAL",
       "kind": "audit",
       "source": "auditor",

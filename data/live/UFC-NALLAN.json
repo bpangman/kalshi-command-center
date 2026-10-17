@@ -1,6 +1,6 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-17T11:05:49.710696Z",
+  "generated_at": "2026-10-17T11:08:44.288341Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -11,12 +11,12 @@
     "moves": [
       {
         "side": "Landwehr by Submission",
-        "resting": "none",
+        "resting": "43 @ 9c",
         "exposure": -238.17,
         "exposure_text": "-$238",
-        "move": "Full ladder posts (+175 @ 9c)",
-        "when": "9:00am CT",
-        "at": "2026-10-17T14:00:00Z",
+        "move": "Hold price at 9c",
+        "when": "already at fair plus margin (9c)",
+        "at": null,
         "stuck": true,
         "last_fill": "2026-10-16T19:20:47Z"
       },
@@ -46,27 +46,27 @@
       },
       {
         "side": "Nallo by Decision",
-        "resting": "84 @ 8c",
+        "resting": "364 @ 8-10c",
         "exposure": -48.67,
         "exposure_text": "-$49",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check, if the crowd trades under 8c",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts 9:00am CT; even-up 6:00pm CT",
+        "also": "Also: even-up 6:00pm CT; paid balancing starts 6:40pm CT",
         "last_fill": "2026-10-17T03:17:57Z",
         "lag_note": "Steps to 7c if the crowd trades lower."
       },
       {
         "side": "Landwehr by Decision",
-        "resting": "151 @ 6c",
+        "resting": "431 @ 6-8c",
         "exposure": 18.13,
         "exposure_text": "+$18",
         "move": "Hold price at 6c",
         "when": "already at fair plus margin (6c)",
         "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts 9:00am CT; even-up 6:00pm CT",
+        "also": "Also: even-up 6:00pm CT; paid balancing starts 6:40pm CT",
         "last_fill": "2026-10-17T09:19:18Z"
       },
       {
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about 7:00pm CT. Sold 2,123, 530 resting. Worst line -$238 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about 7:00pm CT. Sold 2,123, 1,132 resting. Worst line -$238 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -113,7 +113,7 @@
       {
         "title": "Next wave of contracts",
         "lines": [
-          "Full ladder posts 9:00am CT: 1,575 more contracts across 6 buckets.",
+          "Full ladder posts 9:00am CT: 840 more contracts across 3 buckets.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
           "Gate closed: batches wait for the worst line to reach -$100 (now -$238).",
           "Batches used: none (max 3 per bucket)."
@@ -139,7 +139,7 @@
       {
         "at": "2026-10-17T14:00:00Z",
         "label": "Full ladder posts",
-        "detail": "1,575 more contracts go out."
+        "detail": "840 more contracts go out."
       },
       {
         "at": "2026-10-17T23:00:00Z",
@@ -156,7 +156,7 @@
       {
         "label": "Landwehr by Decision",
         "held": 268.7,
-        "resting": 150.7,
+        "resting": 430.7,
         "target": 700.0,
         "status": "even",
         "price": 0.06
@@ -172,15 +172,15 @@
       {
         "label": "Landwehr by Submission",
         "held": 525.0,
-        "resting": 0.0,
+        "resting": 43.0,
         "target": 700.0,
         "status": "heavy",
-        "price": null
+        "price": 0.09
       },
       {
         "label": "Nallo by Decision",
         "held": 335.5,
-        "resting": 84.5,
+        "resting": 363.5,
         "target": 700.0,
         "status": "lagging",
         "price": 0.08
@@ -211,29 +211,9 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-17T11:05:09Z"
+    "ts": "2026-10-17T11:08:10Z"
   },
   "posts": [
-    {
-      "id": "1792114090042-269be6",
-      "ts": "2026-10-16T01:28:10Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line unknown. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792114150421-b43029",
-      "ts": "2026-10-16T01:29:10Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$215. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792115057489-14bd59",
       "ts": "2026-10-16T01:44:17Z",
@@ -3308,6 +3288,30 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1792235270786-ba05f5",
+      "ts": "2026-10-17T11:07:46Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Landwehr by Submission: lowest row 8c to 9c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792235311163-c0e93f",
+      "ts": "2026-10-17T11:07:47Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 734 (launch ladder): Landwehr by Submission x175 at 9c, Nallo by Decision x134 at 8c, +5 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 734.0,
+        "rows": 7
+      }
     }
   ],
   "audits": [
@@ -3813,6 +3817,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- UFC-NALLAN - Nate Landwehr by Submission has had no resting orders for at least 931 min (reason unknown: no reason logged).\n- UFC-NALLAN - Mandel Nallo by KO/TKO/DQ has had no resting orders for at least 3441 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792235299823-b049b0",
+      "ts": "2026-10-17T11:08:19Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: UFC-NALLAN - Nate Landwehr by Submission is posting again.",
       "severity": "warn"
     }
   ]
