@@ -1,13 +1,13 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T01:33:14.938921Z",
+  "generated_at": "2026-10-17T01:35:57.363038Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$529, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 79,
     "moves": [
       {
         "side": "Jesse Love",
@@ -77,12 +77,12 @@
         "exposure": 443.2,
         "exposure_text": "+$443",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T01:33:31Z",
+        "when": "if no fill by 8:38pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T01:38:38Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T23:22:14Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 8:38pm CT."
       },
       {
         "side": "Brent Crews",
@@ -90,27 +90,27 @@
         "exposure": 1100.49,
         "exposure_text": "+$1,100",
         "move": "Hold price at 10c",
-        "when": "no crowd trade data yet",
+        "when": "crowd pays 10c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-14T22:11:15Z",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Price 10c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 6:30pm CT. Sold 12,659, 26,424 resting. Worst line -$529 (limit now -$400)."
+          "Pre-race growth, green flag Sat 6:30pm CT. Sold 12,659, 30,424 resting. Worst line -$529 (limit now -$400). Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Justin Allgaier, Sheldon Creed.",
-          "Brent Crews: 1,630 behind. No crowd trade data yet.",
-          "Sheldon Creed: 973 behind. Steps to 7c at the next check.",
+          "Brent Crews: 1,630 behind. Price 10c matches the crowd.",
+          "Sheldon Creed: 973 behind. Steps to 7c if no fill by 8:38pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -120,7 +120,7 @@
           "A driver gets a new wave when 90% of what he offered has sold.",
           "Growth phase: waves allowed down to -$1,000 per driver, limited by free cash.",
           "Sam Mayer: 2 waves so far, latest 180 @ 5c, 0% filled.",
-          "Brandon Jones: 3 waves so far, latest 390 @ 4c, 29% filled."
+          "Brandon Jones: 4 waves so far, latest 500 @ 4c, 23% filled."
         ]
       },
       {
@@ -208,38 +208,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T01:32:17Z"
+    "ts": "2026-10-17T01:35:19Z"
   },
   "posts": [
-    {
-      "id": "1792113787976-03e018",
-      "ts": "2026-10-16T01:23:07Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$758, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792114508684-4cb814",
-      "ts": "2026-10-16T01:35:08Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJesse Love: -758\nCarson Kvapil: -446\nJustin Allgaier: -306\nBrandon Jones: +102\nSam Mayer: +138\nAustin Hill: +192\nTaylor Gray: +192\nSammy Smith: +192\nall others (31) >= +275\nCollected $956 premium ($14 fees) | Paper margin over fair $80 (not realized until settlement)\nCore posted book 1.06 | Worst now -758 | Cash free $1619\nAnchor age 0s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1792114694651-237f5a",
-      "ts": "2026-10-16T01:38:14Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 28,446 resting. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792115258862-c08def",
       "ts": "2026-10-16T01:47:23Z",
@@ -3510,18 +3481,43 @@
       "text": "Bot note: expiry extend: 40 order(s) moved past green (queue kept; new expiry 1792290600)",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792200798431-fdbf5d",
+      "ts": "2026-10-17T01:33:18Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$529, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792200899161-5bd8d4",
+      "ts": "2026-10-17T01:34:40Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 4,000 (new wave): Brandon Jones x500 at 4c, Sammy Smith x500 at 4c, +6 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 4000.0,
+        "rows": 8
+      }
+    },
+    {
+      "id": "1792200939363-02f8dd",
+      "ts": "2026-10-17T01:35:34Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1792115209947-a51027",
-      "ts": "2026-10-16T01:46:49Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -758.32 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792117014996-569ab1",
       "ts": "2026-10-16T02:16:54Z",
@@ -4412,6 +4408,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): worst -539.13 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792200818642-e2b3cc",
+      "ts": "2026-10-17T01:33:38Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
