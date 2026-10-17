@@ -1,13 +1,13 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-17T14:00:14.069689Z",
+  "generated_at": "2026-10-17T14:02:59.754328Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
     "headline": "Full ladder posted for the fight about 9:55pm CT. Worst line -$605, target -$150.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 97,
+    "checks_every_s": 96,
     "moves": [
       {
         "side": "Buckley by Decision",
@@ -33,27 +33,27 @@
       },
       {
         "side": "Malott by KO/TKO",
-        "resting": "863 @ 20c",
+        "resting": "1,068 @ 19-21c",
         "exposure": 71.3,
         "exposure_text": "+$71",
-        "move": "Full ladder posts (+600 @ 21-22c)",
-        "when": "next bot check",
-        "at": "2026-10-17T14:00:10Z",
+        "move": "Step price down 1c (19c to 18c)",
+        "when": "next bot check, if the crowd trades under 19c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 8:55pm CT",
+        "also": "Also: even-up 8:55pm CT; paid balancing starts 9:35pm CT",
         "last_fill": "2026-10-16T14:19:39Z",
-        "lag_note": "Steps to 19c if the crowd trades lower."
+        "lag_note": "Steps to 18c if the crowd trades lower."
       },
       {
         "side": "Buckley by KO/TKO",
-        "resting": "900 @ 31-33c",
+        "resting": "1,068 @ 31-34c",
         "exposure": 108.3,
         "exposure_text": "+$108",
-        "move": "Full ladder posts (+600 @ 34-35c)",
-        "when": "next bot check",
-        "at": "2026-10-17T14:00:10Z",
+        "move": "Step price down 1c (31c to 30c)",
+        "when": "next bot check, if the crowd trades under 31c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 8:55pm CT",
+        "also": "Also: even-up 8:55pm CT; paid balancing starts 9:35pm CT",
         "last_fill": "2026-10-15T14:48:03Z",
         "lag_note": "Steps to 30c if the crowd trades lower."
       },
@@ -70,27 +70,27 @@
       },
       {
         "side": "Malott by Decision",
-        "resting": "900 @ 26c",
+        "resting": "1,068 @ 26-27c",
         "exposure": 108.3,
         "exposure_text": "+$108",
-        "move": "Full ladder posts (+600 @ 27-28c)",
-        "when": "next bot check",
-        "at": "2026-10-17T14:00:10Z",
+        "move": "Step price down 1c (26c to 25c)",
+        "when": "next bot check, if the crowd trades under 26c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 8:55pm CT",
+        "also": "Also: even-up 8:55pm CT; paid balancing starts 9:35pm CT",
         "last_fill": "2026-10-15T14:48:03Z",
         "lag_note": "Steps to 25c if the crowd trades lower."
       },
       {
         "side": "Malott by Submission",
-        "resting": "900 @ 13c",
+        "resting": "1,068 @ 13-14c",
         "exposure": 108.3,
         "exposure_text": "+$108",
-        "move": "Full ladder posts (+600 @ 14-15c)",
-        "when": "next bot check",
-        "at": "2026-10-17T14:00:10Z",
+        "move": "Step price down 1c (13c to 12c)",
+        "when": "next bot check, if the crowd trades under 13c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 8:55pm CT",
+        "also": "Also: even-up 8:55pm CT; paid balancing starts 9:35pm CT",
         "last_fill": "2026-10-15T14:48:03Z",
         "lag_note": "Steps to 12c if the crowd trades lower."
       }
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 9:55pm CT. Sold 796, 3,593 resting. Worst line -$605 (target -$150). Bot is slow (checks every 2m, set for 45s)."
+          "Full ladder posted, fight about 9:55pm CT. Sold 796, 4,302 resting. Worst line -$605 (target -$150). Bot is slow (checks every 2m, set for 45s)."
         ]
       },
       {
@@ -114,6 +114,7 @@
       {
         "title": "Next wave of contracts",
         "lines": [
+          "The full ladder is out.",
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
           "Gate closed: batches wait for the worst line to reach -$100 (now -$605).",
           "Batches used: 1 (max 3 per bucket)."
@@ -137,11 +138,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-17T14:00:00Z",
-        "label": "Full ladder posts",
-        "detail": "3,000 more contracts go out."
-      },
-      {
         "at": "2026-10-18T01:55:00Z",
         "label": "Even-up window",
         "detail": "Lagging buckets repriced toward fair."
@@ -150,6 +146,11 @@
         "at": "2026-10-18T02:35:00Z",
         "label": "Paid balancing starts",
         "detail": "Worst line to -$150."
+      },
+      {
+        "at": "2026-10-18T02:35:00Z",
+        "label": "Last-resort take window",
+        "detail": "Bot may sell to close the last gaps."
       }
     ],
     "sides": [
@@ -164,7 +165,7 @@
       {
         "label": "Buckley by KO/TKO",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 1068.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.31
@@ -180,7 +181,7 @@
       {
         "label": "Malott by Decision",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 1068.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.26
@@ -188,15 +189,15 @@
       {
         "label": "Malott by KO/TKO",
         "held": 37.0,
-        "resting": 863.0,
+        "resting": 1068.0,
         "target": 1500.0,
         "status": "lagging",
-        "price": 0.2
+        "price": 0.19
       },
       {
         "label": "Malott by Submission",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 1068.0,
         "target": 1500.0,
         "status": "lagging",
         "price": 0.13
@@ -211,78 +212,9 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-17T14:00:10Z"
+    "ts": "2026-10-17T14:02:11Z"
   },
   "posts": [
-    {
-      "id": "1792140734017-160014",
-      "ts": "2026-10-16T08:52:14Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$140. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792140854962-0864bd",
-      "ts": "2026-10-16T08:54:14Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$140. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792141252427-39dd43",
-      "ts": "2026-10-16T09:00:52Z",
-      "book": "UFC-BUCMAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBUCKOTKODQ: +32\nBUCSUB: +2\nBUCDEC: -140\nMALKOTKODQ: -4\nMALSUB: +32\nMALDEC: +32\nDRAW: +32\nCollected $32 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 0 / 900\nBUCSUB: 30 / 15\nBUCDEC: 172 / 728\nMALKOTKODQ: 35 / 865\nMALSUB: 0 / 900\nMALDEC: 0 / 900\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.029 | Worst now -140 | Cash free $1500\nAnchor age 76s | Last fill 8159s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792141762117-9fe4cb",
-      "ts": "2026-10-16T09:09:22Z",
-      "book": "UFC-BUCMAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792142064534-8a8186",
-      "ts": "2026-10-16T09:14:24Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$140. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792142790045-de3dac",
-      "ts": "2026-10-16T09:26:30Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$140. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792143092362-f434ff",
-      "ts": "2026-10-16T09:31:32Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$140. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792143636628-7de426",
       "ts": "2026-10-16T09:40:36Z",
@@ -3291,6 +3223,80 @@
       "text": "Full ladder posted for the fight about 9:55pm CT. Worst line -$605, target -$150. Next: Full ladder posts, 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792245650904-2addcd",
+      "ts": "2026-10-17T14:00:40Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Full ladder out on Buckley by KO/TKO: 600 more contracts posted.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792245650904-ba56e7",
+      "ts": "2026-10-17T14:00:40Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Full ladder out on Buckley by Decision: 600 more contracts posted.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792245650904-fc4161",
+      "ts": "2026-10-17T14:00:40Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Full ladder out on Malott by KO/TKO: 600 more contracts posted.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792245650905-2e30d7",
+      "ts": "2026-10-17T14:00:40Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Full ladder out on Malott by Submission: 600 more contracts posted.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792245650905-29db37",
+      "ts": "2026-10-17T14:00:40Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Full ladder out on Malott by Decision: 600 more contracts posted.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792245671087-3486d1",
+      "ts": "2026-10-17T14:01:11Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 9:55pm CT. Worst line -$605, target -$150. Next: Even-up window, 8:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792245771913-fc5784",
+      "ts": "2026-10-17T14:02:18Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,053 (launch ladder): Malott by KO/TKO x351 at 21c, Buckley by KO/TKO x351 at 34c, +8 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2053.0,
+        "rows": 10
+      }
     }
   ],
   "audits": [
