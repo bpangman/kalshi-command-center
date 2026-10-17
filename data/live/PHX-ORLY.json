@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T17:18:24.149167Z",
+  "generated_at": "2026-10-17T17:21:07.342773Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -103,26 +103,26 @@
         "exposure": 831.78,
         "exposure_text": "+$832",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T17:18:14Z",
+        "when": "if no fill by 12:23pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T17:23:24Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T16:30:55Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Steps to 5c if no fill by 12:23pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 6:30pm CT. Sold 20,268, 80,920 resting. Worst line -$528 (limit now -$400)."
+          "Pre-race growth, green flag 6:30pm CT. Sold 20,268, 82,117 resting. Worst line -$528 (limit now -$400)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Corey Day, Jesse Love, Sheldon Creed.",
-          "Brent Crews: 1,359 behind. Steps to 5c at the next check.",
+          "Brent Crews: 1,359 behind. Steps to 5c if no fill by 12:23pm CT.",
           "Corey Day: 442 behind. Price 9c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -221,48 +221,9 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T17:18:14Z"
+    "ts": "2026-10-17T17:20:15Z"
   },
   "posts": [
-    {
-      "id": "1792207714904-3648dd",
-      "ts": "2026-10-17T03:28:34Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792207956619-127077",
-      "ts": "2026-10-17T03:32:36Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792208621344-297f5b",
-      "ts": "2026-10-17T03:43:41Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$489, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792208926832-338b36",
-      "ts": "2026-10-17T03:48:46Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJesse Love: -489\nCarson Kvapil: -487\nJustin Allgaier: -350\nSam Mayer: -38\nBrandon Jones: +90\nTaylor Gray: +161\nSheldon Creed: +311\nCorey Day: +413\nall others (31) >= +461\nCollected $1230 premium ($18 fees) | Paper margin over fair $98 (not realized until settlement)\nCore posted book 0.97 | Worst now -489 | Cash free $1843\nAnchor age 215s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792209165643-eabeed",
       "ts": "2026-10-17T03:52:45Z",
@@ -3898,6 +3859,64 @@
       "title": "New wave",
       "data": {
         "side": "Sheldon Creed"
+      }
+    },
+    {
+      "id": "1792257535210-29dfd2",
+      "ts": "2026-10-17T17:18:45Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,372 (new wave): Sheldon Creed x330 at 9c, Brandon Jones x139 at 4c, +14 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2372.0,
+        "rows": 16
+      }
+    },
+    {
+      "id": "1792257535210-180942",
+      "ts": "2026-10-17T17:16:45Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 500: Sheldon Creed x500 at 8c. Worst line -$528.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 500.0,
+        "fills": [
+          {
+            "side": "Sheldon Creed",
+            "price": 0.08,
+            "qty": 500.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792257575566-54a6c1",
+      "ts": "2026-10-17T17:17:19Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Re-posted 1 orders (900 contracts) that vanished: Sheldon Creed x900 at 8c.",
+      "severity": "info",
+      "title": "Re-lay"
+    },
+    {
+      "id": "1792257655987-ce9e79",
+      "ts": "2026-10-17T17:20:30Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,224 (new wave): Andrew Patterson x136 at 2c, Jeb Burton x136 at 2c, +7 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1224.0,
+        "rows": 9
       }
     }
   ],
