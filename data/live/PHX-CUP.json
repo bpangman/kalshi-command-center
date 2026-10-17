@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-17T14:30:30.288794Z",
+  "generated_at": "2026-10-17T14:33:26.691493Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,226, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Ryan Blaney",
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 14,277, 115,844 resting. Worst line -$1,226 (limit now -$800)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 14,277, 115,844 resting. Worst line -$1,226 (limit now -$800). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -206,19 +206,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-17T14:29:44Z"
+    "ts": "2026-10-17T14:32:45Z"
   },
   "posts": [
-    {
-      "id": "1792146558993-d21e6d",
-      "ts": "2026-10-16T10:29:18Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,099, final target -$150. Next: Risk glide starts, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792146619427-1dcd40",
       "ts": "2026-10-16T10:30:19Z",
@@ -3320,18 +3310,19 @@
       "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,226, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792247565998-a48b36",
+      "ts": "2026-10-17T14:32:45Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,226, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792168556191-ebf3b4",
-      "ts": "2026-10-16T16:35:56Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): worst -1016.54 vs floor -825.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792169019279-88a5d7",
       "ts": "2026-10-16T16:43:39Z",
@@ -4222,6 +4213,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1226.04 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792247580089-c9e31a",
+      "ts": "2026-10-17T14:33:00Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- PHX-CUP - Josh Berry has had no resting orders for at least 992 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
