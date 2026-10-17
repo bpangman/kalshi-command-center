@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T15:13:33.310874Z",
+  "generated_at": "2026-10-17T15:17:50.735207Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -76,12 +76,12 @@
         "exposure": 399.48,
         "exposure_text": "+$399",
         "move": "Hold price at 9c",
-        "when": "crowd pays 8.6c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (8.4c)",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T14:07:52Z",
-        "lag_note": "Price 9c matches the crowd."
+        "lag_note": "Price 9c is at its floor."
       },
       {
         "side": "Brent Crews",
@@ -89,12 +89,12 @@
         "exposure": 949.9,
         "exposure_text": "+$950",
         "move": "Step price down 1c (5c to 4c)",
-        "when": "if no fill by 10:16am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-17T15:16:37Z",
+        "when": "if no fill by 10:21am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T15:21:58Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T14:45:44Z",
-        "lag_note": "Steps to 4c if no fill by 10:16am CT."
+        "lag_note": "Steps to 4c if no fill by 10:21am CT."
       }
     ],
     "sections": [
@@ -108,8 +108,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Sheldon Creed.",
-          "Brent Crews: 1,330 behind. Steps to 4c if no fill by 10:16am CT.",
-          "Sheldon Creed: 779 behind. Price 9c matches the crowd.",
+          "Brent Crews: 1,330 behind. Steps to 4c if no fill by 10:21am CT.",
+          "Sheldon Creed: 779 behind. Price 9c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -207,44 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T15:13:04Z"
+    "ts": "2026-10-17T15:17:06Z"
   },
   "posts": [
-    {
-      "id": "1792190873919-ea07bd",
-      "ts": "2026-10-16T22:47:53Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$589, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792190974599-6e41f7",
-      "ts": "2026-10-16T22:47:19Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 287: Carson Kvapil x250 at 14c, Carson Kvapil x37 at 13c. Worst line -$589.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 287.0,
-        "fills": [
-          {
-            "side": "Carson Kvapil",
-            "price": 0.14,
-            "qty": 250.0
-          },
-          {
-            "side": "Carson Kvapil",
-            "price": 0.13,
-            "qty": 37.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792190994773-a7cfe1",
       "ts": "2026-10-16T22:49:34Z",
@@ -3693,6 +3658,41 @@
       "text": "Pre-race growth for the green flag 6:30pm CT. Worst line -$449, final target $0. Next: Risk glide starts, 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792250105772-86a3f2",
+      "ts": "2026-10-17T15:15:04Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sheldon Creed price not lowered: the next cent is under the crowd price, so it stays at 9c.",
+      "severity": "info",
+      "title": "Price hold"
+    },
+    {
+      "id": "1792250105773-c12e96",
+      "ts": "2026-10-17T15:12:49Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 98: Sam Mayer x80 at 6c, William Sawalich x18 at 3c. Worst line -$449.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 98.0,
+        "fills": [
+          {
+            "side": "Sam Mayer",
+            "price": 0.06,
+            "qty": 80.0
+          },
+          {
+            "side": "William Sawalich",
+            "price": 0.03,
+            "qty": 18.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
