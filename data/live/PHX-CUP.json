@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-17T20:45:10.815330Z",
+  "generated_at": "2026-10-17T20:47:56.197499Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
     "headline": "Risk glide for the green flag Sun 2:00pm CT. Worst line -$1,742, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 49,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Ty Gibbs",
@@ -101,7 +101,7 @@
         "exposure": 260.47,
         "exposure_text": "+$260",
         "move": "Hold price at 8c",
-        "when": "crowd pays 8c; steps down 1c only if it trades lower",
+        "when": "crowd pays 7.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sun 1:00pm CT",
@@ -126,7 +126,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag Sun 2:00pm CT. Sold 24,592, 84,395 resting. Worst line -$1,742 (limit now -$742). Bot is slow (checks every 49s, set for 30s)."
+          "Risk glide, green flag Sun 2:00pm CT. Sold 24,592, 84,395 resting. Worst line -$1,742 (limit now -$741)."
         ]
       },
       {
@@ -151,7 +151,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Carson Hocevar, Ryan Blaney, Ty Gibbs: lines under -$800, no adding until above -$750.",
-          "Glide is running: limit -$742, worst line -$1,742, final $0 at Sun 2:00pm CT.",
+          "Glide is running: limit -$741, worst line -$1,742, final $0 at Sun 2:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from Sun 12:30pm CT.",
           "Even-up from Sun 1:00pm CT, last-resort take from Sun 1:40pm CT, green flag Sun 2:00pm CT."
         ]
@@ -232,49 +232,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-17T20:44:46Z"
+    "ts": "2026-10-17T20:47:48Z"
   },
   "posts": [
-    {
-      "id": "1792186641634-7d95a2",
-      "ts": "2026-10-16T21:37:21Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792186702186-cd2c03",
-      "ts": "2026-10-16T21:38:22Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792187125319-580f74",
-      "ts": "2026-10-16T21:45:25Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792187185868-097905",
-      "ts": "2026-10-16T21:46:25Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$973, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792187729980-e3dcc9",
       "ts": "2026-10-16T21:55:29Z",
@@ -3631,6 +3591,61 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nTy Gibbs: -1742\nCarson Hocevar: -1625\nRyan Blaney: -847\nJoey Logano: -438\nDenny Hamlin: -339\nJosh Berry: -328\nKyle Larson: -239\nChase Briscoe: +260\nall others (29) >= +612\nCollected $2144 premium ($33 fees) | Paper margin over fair $356 (not realized until settlement)\nCore posted book 0.97 | Worst now -1742 | Cash free $1487\nAnchor age 231s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792269987531-55866d",
+      "ts": "2026-10-17T20:46:12Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Tyler Reddick: no fill for 6713 min, added 300 at 3c (was 4c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Tyler Reddick",
+        "from": 0.04,
+        "to": 0.03
+      }
+    },
+    {
+      "id": "1792269987532-c84696",
+      "ts": "2026-10-17T20:46:12Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$741, worst line -$1,742. post gate Christopher Bell 466@0.18 -> 0 (race_principles; a full fill would tak",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1792270007673-9b8315",
+      "ts": "2026-10-17T20:44:29Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 150: Joey Logano x150 at 10c. Worst line -$1,742.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 150.0,
+        "fills": [
+          {
+            "side": "Joey Logano",
+            "price": 0.1,
+            "qty": 150.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792270007678-57dd85",
+      "ts": "2026-10-17T20:46:47Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag Sun 2:00pm CT. Worst line -$1,742, final target $0. Next: Glide selling opens, Sun 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
