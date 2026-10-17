@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-17T19:14:17.384109Z",
+  "generated_at": "2026-10-17T19:17:03.655896Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,117, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Ryan Blaney",
@@ -40,7 +40,7 @@
         "exposure_text": "-$731",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T19:14:05Z",
+        "at": "2026-10-17T19:16:06Z",
         "stuck": false,
         "also": "Also: glide starts Sun 10:00am CT",
         "last_fill": "2026-10-13T17:49:45Z",
@@ -78,12 +78,12 @@
         "exposure": 563.66,
         "exposure_text": "+$564",
         "move": "Hold price at 10c",
-        "when": "crowd pays 10c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sun 1:00pm CT",
         "last_fill": "2026-10-17T19:10:59Z",
-        "lag_note": "Price 10c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Christopher Bell",
@@ -103,7 +103,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 15,383, 121,025 resting. Worst line -$1,117 (limit now -$800)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 15,383, 121,025 resting. Worst line -$1,117 (limit now -$800). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -111,7 +111,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chase Briscoe, Christopher Bell, Denny Hamlin, Joey Logano, Kyle Larson.",
           "Christopher Bell: 1,886 behind. Price 19c matches the crowd.",
-          "Kyle Larson: 1,681 behind. Price 10c matches the crowd.",
+          "Kyle Larson: 1,681 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -209,19 +209,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-17T19:14:05Z"
+    "ts": "2026-10-17T19:16:06Z"
   },
   "posts": [
-    {
-      "id": "1792166994844-4b5730",
-      "ts": "2026-10-16T16:09:54Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,021, final target -$150. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792167055089-3923e0",
       "ts": "2026-10-16T16:10:55Z",
@@ -3440,18 +3430,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792264506379-f354af",
+      "ts": "2026-10-17T19:15:06Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,117, final target $0. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792189446771-40b902",
-      "ts": "2026-10-16T22:24:06Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): 12 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-ROCH low 1500c, KXNASCARRACE-FREI26-RYBL low 1796c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-WIBY low 1078c, KXNASCARRACE-FREI26-CHBR low 2148c, KXNASCARRACE-FREI26-CAHO low 1500c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792189446772-21469b",
       "ts": "2026-10-16T22:24:06Z",
@@ -4342,6 +4333,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): worst -1121.87 vs floor -825.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792264459848-8e16ad",
+      "ts": "2026-10-17T19:14:19Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+626 on Kyle Larson @ 0.10 (maker)\nworst outcome now -1117\nIf the race ends... you make\nRyan Blaney: -1117\nJosh Berry: -771\nDenny Hamlin: -731\nJoey Logano: -731\nChase Briscoe: -182\nWilliam Byron: +169\nKyle Larson: +564\nChristopher Bell: +769\nall others (29) >= +1669",
+      "severity": "warn"
     }
   ]
 }

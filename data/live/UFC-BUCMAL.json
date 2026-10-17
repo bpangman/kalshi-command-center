@@ -1,13 +1,13 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-17T19:14:17.384109Z",
+  "generated_at": "2026-10-17T19:17:03.655896Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
     "headline": "Full ladder posted for the fight about 9:55pm CT. Worst line -$605, target -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 70,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Buckley by Decision",
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 9:55pm CT. Sold 798, 5,991 resting. Worst line -$605 (target -$150). Bot is slow (checks every 1m, set for 45s)."
+          "Full ladder posted, fight about 9:55pm CT. Sold 798, 5,991 resting. Worst line -$605 (target -$150)."
         ]
       },
       {
@@ -212,19 +212,9 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-17T19:13:45Z"
+    "ts": "2026-10-17T19:16:47Z"
   },
   "posts": [
-    {
-      "id": "1792155630197-e75606",
-      "ts": "2026-10-16T13:00:29Z",
-      "book": "UFC-BUCMAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
-      "severity": "info",
-      "title": "Reprice"
-    },
     {
       "id": "1792155670391-643ee6",
       "ts": "2026-10-16T13:00:30Z",
@@ -3289,6 +3279,16 @@
       "text": "Full ladder posted for the fight about 9:55pm CT. Worst line -$605, target -$150. Next: Even-up window, 8:55pm CT.",
       "severity": "info",
       "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792264607064-2fd77f",
+      "ts": "2026-10-17T19:16:47Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 9:55pm CT. Worst line -$605, target -$150. Next: Even-up window, 8:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
     }
   ],
   "audits": [
@@ -3939,6 +3939,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (UFC-BUCMAL): worst -605.04 vs floor -325.00 (real L_max 300.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792264493327-31cf5a",
+      "ts": "2026-10-17T19:14:53Z",
+      "book": "UFC-BUCMAL",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-BUCMAL - Joaquin Buckley by Decision has had no resting orders for at least 1850 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
