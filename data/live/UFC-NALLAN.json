@@ -1,6 +1,6 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-17T23:43:35.406813Z",
+  "generated_at": "2026-10-17T23:45:17.412402Z",
   "plan": {
     "engine": "ufc",
     "phase": "Final tightening",
@@ -46,26 +46,26 @@
       },
       {
         "side": "Nallo by Submission",
-        "resting": "88 @ 13c",
+        "resting": "none",
         "exposure": -79.45,
         "exposure_text": "-$79",
-        "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 7:42pm CT and 500+ crowd contracts trade",
+        "move": "Next batch 231 contracts",
+        "when": "waits until worst loss is -$100 or better (now -$157)",
         "at": null,
         "stuck": false,
-        "also": "Also: next batch once worst loss improves",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-17T23:42:50Z"
       },
       {
         "side": "Landwehr by KO/TKO",
-        "resting": "95 @ 16c",
+        "resting": "none",
         "exposure": -77.18,
         "exposure_text": "-$77",
-        "move": "Hold price at 16c",
-        "when": "already at fair plus margin (16c)",
+        "move": "Next batch 231 contracts",
+        "when": "waits until worst loss is -$100 or better (now -$157)",
         "at": null,
         "stuck": false,
-        "also": "Also: next batch once worst loss improves",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-17T23:42:24Z"
       },
       {
@@ -96,7 +96,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, fight about 7:00pm CT. Sold 3,898, 298 resting. Worst line -$157 (target -$100)."
+          "Final tightening, fight about 7:00pm CT. Sold 3,898, 115 resting. Worst line -$157 (target -$100)."
         ]
       },
       {
@@ -149,10 +149,10 @@
       {
         "label": "Landwehr by KO/TKO",
         "held": 620.0,
-        "resting": 95.0,
+        "resting": 0.0,
         "target": 700.0,
         "status": "even",
-        "price": 0.16
+        "price": null
       },
       {
         "label": "Landwehr by Submission",
@@ -181,10 +181,10 @@
       {
         "label": "Nallo by Submission",
         "held": 622.3,
-        "resting": 88.0,
+        "resting": 0.0,
         "target": 700.0,
         "status": "even",
-        "price": 0.13
+        "price": null
       },
       {
         "label": "Draw / No Contest",
@@ -196,19 +196,9 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-17T23:43:07Z"
+    "ts": "2026-10-17T23:45:07Z"
   },
   "posts": [
-    {
-      "id": "1792178964173-b166a6",
-      "ts": "2026-10-16T19:29:24Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$249. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792179326741-f6d02e",
       "ts": "2026-10-16T19:35:26Z",
@@ -3395,6 +3385,26 @@
       "text": "Final tightening for the fight about 7:00pm CT. Worst line -$157, target -$100. Next: Handoff to the fight, 6:57pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792280707949-542a0d",
+      "ts": "2026-10-17T23:42:53Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 50: Nallo by Submission x50 at 11c. Worst line -$157.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 50.0,
+        "fills": [
+          {
+            "side": "Nallo by Submission",
+            "price": 0.11,
+            "qty": 50.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
