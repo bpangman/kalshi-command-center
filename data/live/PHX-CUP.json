@@ -1,6 +1,6 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-17T17:45:57.416356Z",
+  "generated_at": "2026-10-17T17:48:39.550642Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -207,39 +207,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-17T17:45:26Z"
+    "ts": "2026-10-17T17:48:28Z"
   },
   "posts": [
-    {
-      "id": "1792159862348-8370c2",
-      "ts": "2026-10-16T14:11:02Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$1,022, final target -$150. Next: Risk glide starts, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792159963185-f81511",
-      "ts": "2026-10-16T14:11:00Z",
-      "book": "PHX-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 370: Ryan Blaney x370 at 21c. Worst line -$1,022.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 370.0,
-        "fills": [
-          {
-            "side": "Ryan Blaney",
-            "price": 0.21,
-            "qty": 370.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792159983340-cf7ffd",
       "ts": "2026-10-16T14:13:03Z",
@@ -3405,27 +3375,29 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nRyan Blaney: -1179\nJosh Berry: -832\nDenny Hamlin: -792\nJoey Logano: -792\nChase Briscoe: -244\nWilliam Byron: +108\nChristopher Bell: +708\nKyle Larson: +1128\nall others (29) >= +1608\nCollected $1632 premium ($25 fees) | Paper margin over fair $241 (not realized until settlement)\nCore posted book 0.78 | Worst now -1179 | Cash free $1955\nAnchor age 215s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792259207645-e5b890",
+      "ts": "2026-10-17T17:46:46Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792259247884-4e56eb",
+      "ts": "2026-10-17T17:47:14Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Tyler Reddick.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1792181885545-9350e3",
-      "ts": "2026-10-16T20:18:05Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): 11 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-CHBU low 1500c, KXNASCARRACE-FREI26-BUWA low 1500c, KXNASCARRACE-FREI26-KYLA low 4000c, KXNASCARRACE-FREI26-CHEL low 1500c, KXNASCARRACE-FREI26-TYRE low 2500c, KXNASCARRACE-FREI26-JOBE low 11c, KXNASCARRACE-FREI26-CHBE low 3100c, KXNASCARRACE-FREI26-WIBY low 1461c, KXNASCARRACE-FREI26-CHBR low 2148c, KXNASCARRACE-FREI26-CAHO low 1500c, KXNASCARRACE-FREI26-TYGI low 1500c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792181885546-8fe063",
-      "ts": "2026-10-16T20:18:05Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): worst -1044.94 vs floor -825.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792183687908-383b05",
       "ts": "2026-10-16T20:48:07Z",
@@ -4306,6 +4278,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- PHX-CUP - Josh Berry has had no resting orders for at least 1176 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792259207040-d84728",
+      "ts": "2026-10-17T17:46:47Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792259234947-f32759",
+      "ts": "2026-10-17T17:47:14Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Tyler Reddick (+46%)",
       "severity": "warn"
     }
   ]
