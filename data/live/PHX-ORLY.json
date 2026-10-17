@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T04:31:35.555204Z",
+  "generated_at": "2026-10-17T04:33:19.780717Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -88,13 +88,13 @@
         "resting": "1,929 @ 5-12c",
         "exposure": 1141.01,
         "exposure_text": "+$1,141",
-        "move": "Hold price at 5c",
-        "when": "crowd pays 9.6c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Step price down 1c (5c to 4c)",
+        "when": "if no fill by 11:36pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T04:36:50Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-14T22:11:15Z",
-        "lag_note": "Price 5c matches the crowd."
+        "lag_note": "Steps to 4c if no fill by 11:36pm CT."
       }
     ],
     "sections": [
@@ -108,7 +108,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Sheldon Creed.",
-          "Brent Crews: 1,630 behind. Price 5c matches the crowd.",
+          "Brent Crews: 1,630 behind. Steps to 4c if no fill by 11:36pm CT.",
           "Corey Day: 902 behind. Price 7c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -207,19 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T04:31:04Z"
+    "ts": "2026-10-17T04:33:04Z"
   },
   "posts": [
-    {
-      "id": "1792129267268-d7ffae",
-      "ts": "2026-10-16T05:41:07Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 28,000 resting. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792129932173-92d740",
       "ts": "2026-10-16T05:52:12Z",
@@ -3531,6 +3521,16 @@
         "contracts": 1272.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792211564833-59d818",
+      "ts": "2026-10-17T04:32:31Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Brent Crews price not lowered: the next cent is under the crowd price, so it stays at 5c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
