@@ -1,6 +1,6 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-17T14:02:59.754328Z",
+  "generated_at": "2026-10-17T14:05:40.260990Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -22,29 +22,29 @@
       },
       {
         "side": "Perez by KO/TKO",
-        "resting": "none",
+        "resting": "280 @ 47-49c",
         "exposure": -161.58,
         "exposure_text": "-$162",
-        "move": "Catch-up batch",
-        "when": "next bot check (lagging with nothing resting)",
+        "move": "Step price down 1c (47c to 46c)",
+        "when": "next bot check, if the crowd trades under 47c",
         "at": null,
         "stuck": true,
         "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
         "last_fill": "2026-10-15T06:12:37Z",
-        "lag_note": "Nothing resting; catch-up batch due."
+        "lag_note": "Steps to 46c if the crowd trades lower."
       },
       {
         "side": "Perez by Submission",
-        "resting": "none",
+        "resting": "210 @ 21c",
         "exposure": -161.58,
         "exposure_text": "-$162",
-        "move": "Catch-up batch",
-        "when": "next bot check (lagging with nothing resting)",
+        "move": "Step price down 1c (21c to 20c)",
+        "when": "next bot check, if the crowd trades under 21c",
         "at": null,
         "stuck": true,
         "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
         "last_fill": "2026-10-15T06:16:58Z",
-        "lag_note": "Nothing resting; catch-up batch due."
+        "lag_note": "Steps to 20c if the crowd trades lower."
       },
       {
         "side": "Draw / No Contest",
@@ -84,7 +84,7 @@
       },
       {
         "side": "Perez by Decision",
-        "resting": "420 @ 16c",
+        "resting": "595 @ 16-17c",
         "exposure": 258.19,
         "exposure_text": "+$258",
         "move": "Step price down 1c (16c to 15c)",
@@ -100,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 8:45pm CT. Sold 1,365, 1,684 resting. Worst line -$267 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Full ladder posted, fight about 8:45pm CT. Sold 1,365, 2,349 resting. Worst line -$267 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -182,7 +182,7 @@
       {
         "label": "Perez by Decision",
         "held": 0.0,
-        "resting": 420.0,
+        "resting": 595.0,
         "target": 700.0,
         "status": "lagging",
         "price": 0.16
@@ -190,18 +190,18 @@
       {
         "label": "Perez by KO/TKO",
         "held": 419.8,
-        "resting": 0.0,
+        "resting": 280.0,
         "target": 700.0,
         "status": "lagging",
-        "price": null
+        "price": 0.47
       },
       {
         "label": "Perez by Submission",
         "held": 419.8,
-        "resting": 0.0,
+        "resting": 210.0,
         "target": 700.0,
         "status": "lagging",
-        "price": null
+        "price": 0.21
       },
       {
         "label": "Draw / No Contest",
@@ -213,39 +213,9 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-17T14:02:31Z"
+    "ts": "2026-10-17T14:05:33Z"
   },
   "posts": [
-    {
-      "id": "1792115117982-4a3767",
-      "ts": "2026-10-16T01:45:17Z",
-      "book": "UFC-NELPER",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792115359653-7d7472",
-      "ts": "2026-10-16T01:49:19Z",
-      "book": "UFC-NELPER",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792115541067-3a6ef6",
-      "ts": "2026-10-16T01:52:21Z",
-      "book": "UFC-NELPER",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792115601600-d449a5",
       "ts": "2026-10-16T01:53:21Z",
@@ -3192,6 +3162,39 @@
       "text": "Catch-up on Perez by Decision: 525 behind, posted 105 at 12c.",
       "severity": "info",
       "title": "New wave"
+    },
+    {
+      "id": "1792245832414-b7ae83",
+      "ts": "2026-10-17T14:03:42Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot error, one loop skipped (loop_once raised: Kalshi API error 401 on GET /portfolio/fills: {'error': {'code': 'header). It retries.",
+      "severity": "warn",
+      "title": "Bot error"
+    },
+    {
+      "id": "1792245852596-1e2d78",
+      "ts": "2026-10-17T14:01:54Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 770 (launch ladder): Perez by Submission x210 at 21c, Perez by Decision x175 at 17c, +4 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 770.0,
+        "rows": 6
+      }
+    },
+    {
+      "id": "1792245875307-d8dfea",
+      "ts": "2026-10-17T14:04:35Z",
+      "book": "UFC-NELPER",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nNELKOTKODQ: -267\nNELSUB: +258\nNELDEC: +258\nPERKOTKODQ: -162\nPERSUB: -162\nPERDEC: +258\nDRAW: +258\nCollected $258 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNELKOTKODQ: 525 / 0\nNELSUB: 0 / 534\nNELDEC: 0 / 700\nPERKOTKODQ: 420 / 280\nPERSUB: 420 / 210\nPERDEC: 0 / 700\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.811 | Worst now -267 | Cash free $1500\nAnchor age 109s | Last fill 200904s ago",
+      "severity": "info"
     }
   ],
   "audits": [
