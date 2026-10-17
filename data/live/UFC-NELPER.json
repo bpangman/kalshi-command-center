@@ -1,6 +1,6 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-17T14:44:05.506374Z",
+  "generated_at": "2026-10-17T14:48:05.487333Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -22,14 +22,16 @@
       },
       {
         "side": "Nelson by KO/TKO",
-        "resting": "none",
+        "resting": "175 @ 17-18c",
         "exposure": -222.71,
         "exposure_text": "-$223",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$225 (now -$223)",
+        "move": "Step price down 1c (17c to 16c)",
+        "when": "next bot check, if the crowd trades under 17c",
         "at": null,
         "stuck": true,
-        "last_fill": "2026-10-15T06:12:37Z"
+        "also": "Also: even-up 7:45pm CT; paid balancing starts 8:25pm CT",
+        "last_fill": "2026-10-15T06:12:37Z",
+        "lag_note": "Steps to 16c if the crowd trades lower."
       },
       {
         "side": "Perez by KO/TKO",
@@ -70,7 +72,7 @@
       },
       {
         "side": "Nelson by Submission",
-        "resting": "534 @ 5-6c",
+        "resting": "581 @ 5-6c",
         "exposure": 302.29,
         "exposure_text": "+$302",
         "move": "Step price down 1c (5c to 4c)",
@@ -98,7 +100,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 8:45pm CT. Sold 1,575, 2,139 resting. Worst line -$327 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Full ladder posted, fight about 8:45pm CT. Sold 1,575, 2,361 resting. Worst line -$327 (target -$100). Bot is slow (checks every 1m, set for 45s)."
         ]
       },
       {
@@ -122,7 +124,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: Nelson by KO/TKO stopped adding until worst line is above -$225.",
+          "Backstop ON: Perez by Submission stopped adding until worst line is above -$225.",
           "Paid balancing starts 8:25pm CT: worst line to -$100, up to $100.",
           "Even-up 7:45pm CT; last-resort take 8:25pm CT; handoff to the fight 8:42pm CT.",
           "The fight start is an estimate and can move."
@@ -164,15 +166,15 @@
       {
         "label": "Nelson by KO/TKO",
         "held": 525.0,
-        "resting": 0.0,
+        "resting": 175.0,
         "target": 700.0,
         "status": "lagging",
-        "price": null
+        "price": 0.17
       },
       {
         "label": "Nelson by Submission",
         "held": 0.0,
-        "resting": 534.0,
+        "resting": 581.0,
         "target": 700.0,
         "status": "even",
         "price": 0.05
@@ -211,29 +213,9 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-17T14:43:51Z"
+    "ts": "2026-10-17T14:47:52Z"
   },
   "posts": [
-    {
-      "id": "1792119047025-4d93aa",
-      "ts": "2026-10-16T02:50:47Z",
-      "book": "UFC-NELPER",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792119228417-66d86f",
-      "ts": "2026-10-16T02:53:48Z",
-      "book": "UFC-NELPER",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792119772674-031418",
       "ts": "2026-10-16T03:02:52Z",
@@ -3194,6 +3176,40 @@
       "text": "Full ladder posted for the fight about 8:45pm CT. Worst line -$327, target -$100. Next: Even-up window, 7:45pm CT.",
       "severity": "info",
       "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792248311669-e1d4f4",
+      "ts": "2026-10-17T14:43:08Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 210: Perez by Submission x210 at 21c. Worst line -$327.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 210.0,
+        "fills": [
+          {
+            "side": "Perez by Submission",
+            "price": 0.21,
+            "qty": 210.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792248311670-ee5f17",
+      "ts": "2026-10-17T14:43:11Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 222 (launch ladder): Nelson by KO/TKO x132 at 17c, Nelson by KO/TKO x43 at 18c, +2 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 222.0,
+        "rows": 4
+      }
     }
   ],
   "audits": [
