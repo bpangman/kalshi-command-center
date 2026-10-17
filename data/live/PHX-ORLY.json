@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T01:30:32.565410Z",
+  "generated_at": "2026-10-17T01:33:14.938921Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -77,12 +77,12 @@
         "exposure": 443.2,
         "exposure_text": "+$443",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 8:33pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-17T01:33:31Z",
         "stuck": false,
         "also": "Also: even-up Sat 5:30pm CT",
         "last_fill": "2026-10-16T23:22:14Z",
-        "lag_note": "Steps to 7c if no fill by 8:33pm CT."
+        "lag_note": "Steps to 7c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Corey Day, Justin Allgaier, Sheldon Creed.",
           "Brent Crews: 1,630 behind. No crowd trade data yet.",
-          "Sheldon Creed: 973 behind. Steps to 7c if no fill by 8:33pm CT.",
+          "Sheldon Creed: 973 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -208,29 +208,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T01:30:17Z"
+    "ts": "2026-10-17T01:32:17Z"
   },
   "posts": [
-    {
-      "id": "1792113485672-d1dc58",
-      "ts": "2026-10-16T01:18:05Z",
-      "book": "PHX-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 28,446 resting. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792113727479-989bab",
-      "ts": "2026-10-16T01:22:07Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$758, final target -$100. Next: Risk glide starts, Sat 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792113787976-03e018",
       "ts": "2026-10-16T01:23:07Z",
@@ -3510,6 +3490,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792200697616-15dbe8",
+      "ts": "2026-10-17T01:31:34Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792200778298-a9cd85",
+      "ts": "2026-10-17T01:32:46Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: expiry extend: 40 order(s) moved past green (queue kept; new expiry 1792290600)",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
