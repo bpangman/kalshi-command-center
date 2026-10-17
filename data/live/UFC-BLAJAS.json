@@ -1,13 +1,13 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-17T10:52:11.164460Z",
+  "generated_at": "2026-10-17T10:54:53.902819Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
     "headline": "Wave 1 posted for the fight about 9:20pm CT. Full ladder 9:00am CT. Worst line -$241.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 75,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
+    "checks_every_s": 45,
     "moves": [
       {
         "side": "Blanchfield by Decision",
@@ -97,7 +97,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Wave 1 (lowest rung only), fight about 9:20pm CT. Sold 1,877, 1,902 resting. Worst line -$241 (target -$100). Bot is slow (checks every 1m, set for 45s)."
+          "Wave 1 (lowest rung only), fight about 9:20pm CT. Sold 1,877, 1,902 resting. Worst line -$241 (target -$100)."
         ]
       },
       {
@@ -210,23 +210,9 @@
       }
     ],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-17T10:52:03Z"
+    "ts": "2026-10-17T10:54:04Z"
   },
   "posts": [
-    {
-      "id": "1792121709311-218363",
-      "ts": "2026-10-16T03:33:04Z",
-      "book": "UFC-BLAJAS",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 810 (launch ladder): Jasudavicius by KO/TKO x750 at 9c, Jasudavicius by Submission x60 at 6c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 810.0,
-        "rows": 2
-      }
-    },
     {
       "id": "1792121830149-e4e649",
       "ts": "2026-10-16T03:37:10Z",
@@ -3289,6 +3275,16 @@
       "text": "Quiet for 15 min. Next: Full ladder posts, 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792234444100-984e06",
+      "ts": "2026-10-17T10:54:04Z",
+      "book": "UFC-BLAJAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Wave 1 posted for the fight about 9:20pm CT. Full ladder 9:00am CT. Worst line -$241. Next: Full ladder posts, 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Wave 1 (lowest rung only)"
     }
   ],
   "audits": [
@@ -3911,6 +3907,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- UFC-BLAJAS - Erin Blanchfield by Decision has had no resting orders for at least 3257 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792234386642-833767",
+      "ts": "2026-10-17T10:53:06Z",
+      "book": "UFC-BLAJAS",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-BLAJAS - Erin Blanchfield by Decision has had no resting orders for at least 3319 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
