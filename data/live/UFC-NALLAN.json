@@ -1,6 +1,6 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-17T03:36:05.725565Z",
+  "generated_at": "2026-10-17T03:37:48.364332Z",
   "plan": {
     "engine": "ufc",
     "phase": "Wave 1 (lowest rung only)",
@@ -50,12 +50,12 @@
         "exposure": -55.65,
         "exposure_text": "-$56",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 10:37pm CT and the crowd trades under 8c",
-        "at": "2026-10-17T03:37:57Z",
+        "when": "next bot check, if the crowd trades under 8c",
+        "at": null,
         "stuck": false,
-        "also": "Also: full ladder posts Sat 9:00am CT",
+        "also": "Also: full ladder posts Sat 9:00am CT; even-up Sat 6:00pm CT",
         "last_fill": "2026-10-17T03:17:57Z",
-        "lag_note": "Steps to 7c if no fill by 10:37pm CT."
+        "lag_note": "Steps to 7c if the crowd trades lower."
       },
       {
         "side": "Nallo by Submission",
@@ -106,7 +106,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Landwehr by KO/TKO, Nallo by Decision, Nallo by KO/TKO, Nallo by Submission.",
           "Nallo by Submission: 371 behind. Steps to 12c if the crowd trades lower.",
-          "Nallo by Decision: 190 behind. Steps to 7c if no fill by 10:37pm CT.",
+          "Nallo by Decision: 190 behind. Steps to 7c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -211,7 +211,7 @@
       }
     ],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-17T03:35:37Z"
+    "ts": "2026-10-17T03:37:38Z"
   },
   "posts": [
     {
@@ -3705,6 +3705,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- UFC-NALLAN - Nate Landwehr by Submission has had no resting orders for at least 438 min (reason unknown: no reason logged).\n- UFC-NALLAN - Mandel Nallo by KO/TKO/DQ has had no resting orders for at least 2949 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792208251383-e49d22",
+      "ts": "2026-10-17T03:37:31Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- UFC-NALLAN - Nate Landwehr by Submission has had no resting orders for at least 500 min (reason unknown: no reason logged).\n- UFC-NALLAN - Mandel Nallo by KO/TKO/DQ has had no resting orders for at least 3011 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
