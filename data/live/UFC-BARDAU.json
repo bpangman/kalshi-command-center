@@ -1,6 +1,6 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-17T15:28:48.481492Z",
+  "generated_at": "2026-10-17T15:31:31.401034Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -51,12 +51,12 @@
         "exposure": 113.96,
         "exposure_text": "+$114",
         "move": "Step price down 1c (25c to 24c)",
-        "when": "if no fill by 10:31am CT and the crowd trades under 25c",
-        "at": "2026-10-17T15:31:56Z",
+        "when": "next bot check, if the crowd trades under 25c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up 7:10pm CT",
+        "also": "Also: even-up 7:10pm CT; paid balancing starts 7:50pm CT",
         "last_fill": "2026-10-17T15:11:56Z",
-        "lag_note": "Steps to 24c if no fill by 10:31am CT."
+        "lag_note": "Steps to 24c if the crowd trades lower."
       },
       {
         "side": "Barriault by Submission",
@@ -107,7 +107,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Daukaus by Decision, Daukaus by KO/TKO.",
           "Daukaus by Decision: 420 behind. Steps to 18c if the crowd trades lower.",
-          "Daukaus by KO/TKO: 337 behind. Steps to 24c if no fill by 10:31am CT.",
+          "Daukaus by KO/TKO: 337 behind. Steps to 24c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -212,28 +212,9 @@
       }
     ],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-17T15:28:12Z"
+    "ts": "2026-10-17T15:31:19Z"
   },
   "posts": [
-    {
-      "id": "1792131925653-6064f0",
-      "ts": "2026-10-16T06:25:25Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBARKOTKODQ: -296\nBARSUB: +124\nBARDEC: +90\nDAUKOTKODQ: +118\nDAUSUB: -296\nDAUDEC: +124\nDRAW: +124\nCollected $124 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nBARKOTKODQ: 420 / 0\nBARSUB: 0 / 300\nBARDEC: 34 / 386\nDAUKOTKODQ: 6 / 414\nDAUSUB: 420 / 0\nDAUDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.890 | Worst now -296 | Cash free $1500\nAnchor age 226s | Last fill 5185s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792132471168-6efc69",
-      "ts": "2026-10-16T06:34:31Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792133378307-cdf286",
       "ts": "2026-10-16T06:49:38Z",
@@ -3237,6 +3218,26 @@
       "text": "Quiet for 15 min. Next: Even-up window, 7:10pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792250952639-a6a1f1",
+      "ts": "2026-10-17T15:29:12Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 8:10pm CT. Worst line -$223, target -$100. Next: Even-up window, 7:10pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792251079368-49e734",
+      "ts": "2026-10-17T15:31:19Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 8:10pm CT. Worst line -$223, target -$100. Next: Even-up window, 7:10pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
     }
   ],
   "audits": [
