@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T15:56:31.786207Z",
+  "generated_at": "2026-10-17T15:59:13.581157Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -90,12 +90,12 @@
         "exposure": 964.35,
         "exposure_text": "+$964",
         "move": "Step price down 1c (5c to 4c)",
-        "when": "if no fill by 10:58am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-17T15:58:04Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-17T15:58:38Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T15:42:55Z",
-        "lag_note": "Steps to 4c if no fill by 10:58am CT."
+        "lag_note": "Steps to 4c at the next check."
       }
     ],
     "sections": [
@@ -109,7 +109,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Jesse Love, Justin Allgaier, Sheldon Creed.",
-          "Brent Crews: 1,491 behind. Steps to 4c if no fill by 10:58am CT.",
+          "Brent Crews: 1,491 behind. Steps to 4c at the next check.",
           "Sheldon Creed: 799 behind. Price 9c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -208,19 +208,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T15:55:36Z"
+    "ts": "2026-10-17T15:58:38Z"
   },
   "posts": [
-    {
-      "id": "1792194382541-181611",
-      "ts": "2026-10-16T23:46:22Z",
-      "book": "PHX-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 6:30pm CT. Worst line -$540, final target $0. Next: Risk glide starts, Sat 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792194421969-480616",
       "ts": "2026-10-16T23:47:01Z",
@@ -3760,6 +3750,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nCarson Kvapil: -526\nCorey Day: -459\nSam Mayer: -341\nJesse Love: -272\nJustin Allgaier: -133\nWilliam Sawalich: +82\nBrandon Jones: +198\nSheldon Creed: +273\nall others (31) >= +378\nCollected $1450 premium ($22 fees) | Paper margin over fair $122 (not realized until settlement)\nCore posted book 1.03 | Worst now -526 | Cash free $1882\nAnchor age 203s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792252617278-cae599",
+      "ts": "2026-10-17T15:56:48Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Justin Allgaier price not lowered: the next cent is under the crowd price, so it stays at 24c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
