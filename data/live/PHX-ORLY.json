@@ -1,6 +1,6 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-17T15:59:13.581157Z",
+  "generated_at": "2026-10-17T16:01:55.519258Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -64,7 +64,7 @@
         "exposure": -133.2,
         "exposure_text": "-$133",
         "move": "Hold price at 24c",
-        "when": "next cent is under the crowd price (23.3c)",
+        "when": "next cent is under the crowd price (23.4c)",
         "at": null,
         "stuck": false,
         "also": "Also: glide starts 2:30pm CT; even-up 5:30pm CT",
@@ -90,12 +90,12 @@
         "exposure": 964.35,
         "exposure_text": "+$964",
         "move": "Step price down 1c (5c to 4c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-17T15:58:38Z",
+        "when": "if no fill by 11:03am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-17T16:03:22Z",
         "stuck": false,
         "also": "Also: even-up 5:30pm CT",
         "last_fill": "2026-10-17T15:42:55Z",
-        "lag_note": "Steps to 4c at the next check."
+        "lag_note": "Steps to 4c if no fill by 11:03am CT."
       }
     ],
     "sections": [
@@ -109,7 +109,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Jesse Love, Justin Allgaier, Sheldon Creed.",
-          "Brent Crews: 1,491 behind. Steps to 4c at the next check.",
+          "Brent Crews: 1,491 behind. Steps to 4c if no fill by 11:03am CT.",
           "Sheldon Creed: 799 behind. Price 9c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -208,7 +208,7 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "PHX-ORLY",
-    "ts": "2026-10-17T15:58:38Z"
+    "ts": "2026-10-17T16:01:39Z"
   },
   "posts": [
     {
@@ -3764,15 +3764,6 @@
   ],
   "audits": [
     {
-      "id": "1792170841928-a6666c",
-      "ts": "2026-10-16T17:14:01Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-RYSI low 409c, KXNASCARRACE-TIMP26-BRJO low 390c, KXNASCARRACE-TIMP26-ANAL low 735c, KXNASCARRACE-TIMP26-TAGR low 500c, KXNASCARRACE-TIMP26-PARE low 750c, KXNASCARRACE-TIMP26-RACA low 186c, KXNASCARRACE-TIMP26-SASM high 778c, KXNASCARRACE-TIMP26-CODA low 1324c, KXNASCARRACE-TIMP26-BRCR low 1929c, KXNASCARRACE-TIMP26-JAFI low 687c. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1792172461421-252182",
       "ts": "2026-10-16T17:41:01Z",
       "book": "PHX-ORLY",
@@ -4662,6 +4653,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-ORLY): worst -528.16 vs floor -425.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792252898123-a853ff",
+      "ts": "2026-10-17T16:01:38Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-TIMP26-BRJO low 1219c, KXNASCARRACE-TIMP26-ANAL low 2300c, KXNASCARRACE-TIMP26-TAGR low 200c, KXNASCARRACE-TIMP26-PARE low 2458c, KXNASCARRACE-TIMP26-SASM low 1723c, KXNASCARRACE-TIMP26-WISA low 1112c, KXNASCARRACE-TIMP26-JELO low 300c, KXNASCARRACE-TIMP26-BRCR low 1535c, KXNASCARRACE-TIMP26-JAFI low 2298c, KXNASCARRACE-TIMP26-NISA low 2454c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
