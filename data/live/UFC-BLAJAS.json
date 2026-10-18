@@ -1,6 +1,6 @@
 {
   "key": "UFC-BLAJAS",
-  "generated_at": "2026-10-18T02:06:52.629290Z",
+  "generated_at": "2026-10-18T02:08:16.951839Z",
   "plan": {
     "engine": "ufc",
     "phase": "Fight on",
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "UFC-BLAJAS",
-    "ts": "2026-10-18T02:06:08Z"
+    "ts": "2026-10-18T02:08:09Z"
   },
   "posts": [
-    {
-      "id": "1792178238723-e5abea",
-      "ts": "2026-10-16T19:17:18Z",
-      "book": "UFC-BLAJAS",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:20pm CT. Full ladder Sat 9:00am CT. Worst line -$256. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792178722074-7b30fd",
       "ts": "2026-10-16T19:25:22Z",
@@ -3267,6 +3257,16 @@
       "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.83 winner_mid=0.890",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792289228849-7f4e3a",
+      "ts": "2026-10-18T02:07:05Z",
+      "book": "UFC-BLAJAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "FIGHT END: MOV crowd best bid 0.85 >= 0.85",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
@@ -4105,6 +4105,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: safety gate caught a violation before posting - J2 KXUFCMOV-26OCT17BLAJAS-BLAKOTKODQ held+resting 500 over ceiling 300; J2 KXUFCMOV-26OCT17BLAJAS-BLASUB held+resting 500 over ceiling 300; J2 KXUFCMOV-26OCT17BLAJAS-BLADEC held+resting 500 over ceiling 300; J2 KXUFCMOV-26OCT17BLAJAS-JASKOTKODQ held+resting 499 over ceiling 300; J2 KXUFCMOV-26OCT17B",
+      "severity": "warn"
+    },
+    {
+      "id": "1792289229426-8972e9",
+      "ts": "2026-10-18T02:07:09Z",
+      "book": "UFC-BLAJAS",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- UFC-BLAJAS has no resting orders on any side for at least 10 min while it should be posting.",
       "severity": "warn"
     }
   ]
