@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T20:19:27.263122Z",
+  "generated_at": "2026-10-18T20:21:19.313938Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -39,12 +39,12 @@
         "exposure": 135.26,
         "exposure_text": "+$135",
         "move": "Step price down 1c (18c to 17c)",
-        "when": "if no fill by 3:21pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T20:21:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T19:50:30Z",
-        "lag_note": "Steps to 17c if no fill by 3:21pm CT."
+        "lag_note": "Steps to 17c at the next check."
       },
       {
         "side": "DAL by 15+",
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T20:19:00Z"
+    "ts": "2026-10-18T20:21:01Z"
   },
   "posts": [
-    {
-      "id": "1792168626863-5e9db1",
-      "ts": "2026-10-16T16:37:06Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,247 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792169532938-864c49",
       "ts": "2026-10-16T16:52:12Z",
@@ -3298,6 +3288,16 @@
       "text": "Quiet for 15 min. 4,220 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792354841057-8489dc",
+      "ts": "2026-10-18T20:20:41Z",
+      "book": "W7-DALGB",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 4,220 resting. Next: Paid balancing starts, 6:35pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -4037,6 +4037,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-DALGB): lagging bucket priced over the crowd: GB15PLUS ask 0.14 vs clearing 0.110 for 52 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792354849413-c6fd95",
+      "ts": "2026-10-18T20:20:49Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-DALGB): worst -428.28 vs floor -325.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792354849414-b2aec3",
+      "ts": "2026-10-18T20:20:49Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-DALGB): held worst -428.28 (backstop -300) or lagging gap 657 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
