@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T13:26:47.314171Z",
+  "generated_at": "2026-10-18T13:28:02.917708Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -14,8 +14,8 @@
         "resting": "52 @ 23c",
         "exposure": -81.42,
         "exposure_text": "-$81",
-        "move": "Next wave 148 contracts",
-        "when": "waits until worst loss is -$75 or better (now -$81)",
+        "move": "Holding",
+        "when": "no move planned until kickoff at 8:30am CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-18T13:03:59Z"
@@ -25,8 +25,8 @@
         "resting": "45 @ 23c",
         "exposure": -81.42,
         "exposure_text": "-$81",
-        "move": "Next wave 148 contracts",
-        "when": "waits until worst loss is -$75 or better (now -$81)",
+        "move": "Holding",
+        "when": "no move planned until kickoff at 8:30am CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-18T13:09:06Z"
@@ -36,11 +36,10 @@
         "resting": "226 @ 18-27c",
         "exposure": -59.42,
         "exposure_text": "-$59",
-        "move": "Next wave 123 contracts",
-        "when": "when resting drops under 94 (now 226) and worst loss is -$75 or better",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing",
         "last_fill": "2026-10-18T13:21:18Z"
       },
       {
@@ -52,7 +51,7 @@
         "when": "if no fill by 8:41am CT (FILLFAIR: 20 min with no fill)",
         "at": "2026-10-18T13:41:18Z",
         "stuck": false,
-        "also": "Also: next wave if resting drops under 62",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-18T13:21:18Z",
         "lag_note": "Steps to 11c if no fill by 8:41am CT."
       },
@@ -65,7 +64,7 @@
         "when": "if no fill by 8:41am CT (FILLFAIR: 20 min with no fill)",
         "at": "2026-10-18T13:41:18Z",
         "stuck": false,
-        "also": "Also: next wave if resting drops under 112",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-18T13:21:18Z",
         "lag_note": "Steps to 22c if no fill by 8:41am CT."
       },
@@ -78,7 +77,7 @@
         "when": "crowd pays 15c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 94",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-18T13:21:17Z",
         "lag_note": "Price 15c matches the crowd."
       }
@@ -181,19 +180,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T13:26:23Z"
+    "ts": "2026-10-18T13:27:23Z"
   },
   "posts": [
-    {
-      "id": "1792166390896-9b6390",
-      "ts": "2026-10-16T15:59:50Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792167296904-7cb6f8",
       "ts": "2026-10-16T16:14:56Z",
@@ -3355,6 +3344,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792330063875-16cd18",
+      "ts": "2026-10-18T13:27:43Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -81.42, L_max 150.00)",
+      "severity": "info",
+      "title": "Phase change"
     }
   ],
   "audits": [
@@ -3923,6 +3922,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: JAC 7-14 worst outcome -120\nIf the game ends... you make\nJAC 1-6: +133 (+10.6% of bankroll)\nJAC 7-14: -92 (-7.4% of bankroll)\nJAC 15+: -65 (-5.2% of bankroll)\nHOU 1-6: -92 (-7.4% of bankroll)\nHOU 7-14: +158 (+12.6% of bankroll)\nHOU 15+: -17 (-1.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792330063017-62afa4",
+      "ts": "2026-10-18T13:27:43Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nJAC 1-6: +94 (+7.5% of bankroll)\nJAC 7-14: -81 (-6.5% of bankroll)\nJAC 15+: -59 (-4.8% of bankroll)\nHOU 1-6: -81 (-6.5% of bankroll)\nHOU 7-14: +167 (+13.3% of bankroll)\nHOU 15+: -10 (-0.8% of bankroll)",
       "severity": "warn"
     }
   ]
