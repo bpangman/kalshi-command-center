@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T22:44:55.125177Z",
+  "generated_at": "2026-10-18T22:46:15.560366Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -48,16 +48,16 @@
       },
       {
         "side": "DAL by 7-14",
-        "resting": "717 @ 17-26c",
+        "resting": "792 @ 16-21c",
         "exposure": 293.74,
         "exposure_text": "+$294",
-        "move": "Step price down 1c (17c to 16c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T22:44:26Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:35pm CT, up to $100 in all",
+        "at": "2026-10-18T23:35:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:35pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-18T21:03:18Z",
-        "lag_note": "Steps to 16c at the next check."
+        "lag_note": "Price 16c is at its floor."
       },
       {
         "side": "DAL by 15+",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 2,163, 4,249 resting. Worst line -$543 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 2,163, 4,324 resting. Worst line -$543 (goal -$150)."
         ]
       },
       {
@@ -155,10 +155,10 @@
       {
         "label": "DAL by 7-14",
         "held": 108.1,
-        "resting": 716.9,
+        "resting": 791.9,
         "target": 750.0,
         "status": "lagging",
-        "price": 0.17
+        "price": 0.16
       },
       {
         "label": "DAL by 15+",
@@ -194,19 +194,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T22:44:03Z"
+    "ts": "2026-10-18T22:46:04Z"
   },
   "posts": [
-    {
-      "id": "1792195351984-b634f9",
-      "ts": "2026-10-17T00:02:29Z",
-      "book": "W7-DALGB",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot could not read Kalshi (1 of 3 tries). It does nothing and retries.",
-      "severity": "warn",
-      "title": "Read failure"
-    },
     {
       "id": "1792196259076-75a016",
       "ts": "2026-10-17T00:17:39Z",
@@ -3396,6 +3386,21 @@
             "qty": 250.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792363503548-3e64aa",
+      "ts": "2026-10-18T22:44:46Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on DAL by 7-14: no fill for 101 min, added 300 at 16c (was 17c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "DAL by 7-14",
+        "from": 0.17,
+        "to": 0.16
       }
     }
   ],
