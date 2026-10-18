@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T22:50:16.271242Z",
+  "generated_at": "2026-10-18T22:51:36.597971Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -14,8 +14,8 @@
         "resting": "425 @ 22-28c",
         "exposure": -550.64,
         "exposure_text": "-$551",
-        "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$300 (now -$551)",
+        "move": "Next wave 450 contracts",
+        "when": "when resting drops under 225 (now 425) and worst loss is -$200 or better",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-18T22:47:24Z"
@@ -113,7 +113,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: GB by 7-14 stopped adding until worst line is above -$300 (now -$551).",
+          "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 6:35pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
           "At 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
@@ -194,39 +194,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T22:50:05Z"
+    "ts": "2026-10-18T22:51:06Z"
   },
   "posts": [
-    {
-      "id": "1792197790742-ef5566",
-      "ts": "2026-10-17T00:43:10Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792198702485-a80b4c",
-      "ts": "2026-10-17T00:58:22Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792199608947-cd8c65",
-      "ts": "2026-10-17T01:13:28Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792200516266-016841",
       "ts": "2026-10-17T01:28:36Z",
@@ -3417,6 +3387,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792363825831-eed56b",
+      "ts": "2026-10-18T22:50:20Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop released: worst line is back to -$551. The heavy side can add again.",
+      "severity": "info",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792363825831-e84bae",
+      "ts": "2026-10-18T22:50:20Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$551. Lagging: GB by 1-6, GB by 15+, DAL by 1-6 +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792363866191-d4e564",
+      "ts": "2026-10-18T22:51:06Z",
+      "book": "W7-DALGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$551, goal -$150. Next: Paid balancing starts, 6:35pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
