@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T19:45:42.499699Z",
+  "generated_at": "2026-10-18T19:47:04.869433Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -65,11 +65,11 @@
         "exposure": 220.92,
         "exposure_text": "+$221",
         "move": "Hold price at 22c",
-        "when": "next cent is under the crowd price (21c)",
+        "when": "crowd pays 21.5c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "lag_note": "Price 22c is at its floor."
+        "lag_note": "Price 22c matches the crowd."
       },
       {
         "side": "DAL by 7-14",
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 7-14, GB by 15+.",
-          "DAL by 1-6: 657 behind. Price 22c is at its floor.",
+          "DAL by 1-6: 657 behind. Price 22c matches the crowd.",
           "DAL by 7-14: 657 behind. Price 17c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T19:44:45Z"
+    "ts": "2026-10-18T19:46:46Z"
   },
   "posts": [
-    {
-      "id": "1792165908476-989eb1",
-      "ts": "2026-10-16T15:51:48Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,247 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792166814096-1faf63",
       "ts": "2026-10-16T16:06:54Z",
@@ -3288,6 +3278,16 @@
       "text": "Quiet for 15 min. 4,262 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792352785934-591cba",
+      "ts": "2026-10-18T19:46:21Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot warning: GB15PLUS ask 0.14 vs clearing 0.110 for 46 min",
+      "severity": "warn",
+      "title": "Lag alert"
     }
   ],
   "audits": [
