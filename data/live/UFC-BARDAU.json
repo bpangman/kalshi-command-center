@@ -1,6 +1,6 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-18T00:10:13.862881Z",
+  "generated_at": "2026-10-18T00:11:54.577109Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -36,11 +36,11 @@
         "resting": "240 @ 15-16c",
         "exposure": -148.57,
         "exposure_text": "-$149",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 7:10pm CT",
-        "at": "2026-10-18T00:10:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:50pm CT, up to $100 in all",
+        "at": "2026-10-18T00:50:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 7:50pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-16T19:32:11Z",
         "lag_note": "Steps to 14c if the crowd trades lower."
       },
@@ -49,11 +49,11 @@
         "resting": "576 @ 25-27c",
         "exposure": 187.88,
         "exposure_text": "+$188",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 7:10pm CT",
-        "at": "2026-10-18T00:10:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:50pm CT, up to $100 in all",
+        "at": "2026-10-18T00:50:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 7:50pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-17T15:11:56Z",
         "lag_note": "Steps to 24c if the crowd trades lower."
       },
@@ -62,11 +62,11 @@
         "resting": "560 @ 7-8c",
         "exposure": 271.07,
         "exposure_text": "+$271",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 7:10pm CT",
-        "at": "2026-10-18T00:10:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:50pm CT, up to $100 in all",
+        "at": "2026-10-18T00:50:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 7:50pm CT",
+        "also": "Also: idle price step",
         "last_fill": "2026-10-15T01:09:11Z"
       },
       {
@@ -74,11 +74,11 @@
         "resting": "660 @ 19-21c",
         "exposure": 271.07,
         "exposure_text": "+$271",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 7:10pm CT",
-        "at": "2026-10-18T00:10:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:50pm CT, up to $100 in all",
+        "at": "2026-10-18T00:50:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 7:50pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-15T01:09:11Z",
         "lag_note": "Steps to 18c if the crowd trades lower."
       },
@@ -88,7 +88,7 @@
         "exposure": 271.07,
         "exposure_text": "+$271",
         "move": "Holding",
-        "when": "no move planned until even-up at 7:10pm CT",
+        "when": "no move planned until paid balancing starts at 7:50pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-15T04:37:39Z"
@@ -137,11 +137,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-18T00:10:00Z",
-        "label": "Even-up window",
-        "detail": "Lagging buckets repriced toward fair."
-      },
-      {
         "at": "2026-10-18T00:50:00Z",
         "label": "Paid balancing starts",
         "detail": "Worst line to -$100."
@@ -150,6 +145,11 @@
         "at": "2026-10-18T00:50:00Z",
         "label": "Last-resort take window",
         "detail": "Bot may sell to close the last gaps."
+      },
+      {
+        "at": "2026-10-18T01:07:00Z",
+        "label": "Handoff to the fight",
+        "detail": "In-fight engine takes over."
       }
     ],
     "sides": [
@@ -211,19 +211,9 @@
       }
     ],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-18T00:09:19Z"
+    "ts": "2026-10-18T00:11:20Z"
   },
   "posts": [
-    {
-      "id": "1792164759921-8b3781",
-      "ts": "2026-10-16T15:32:39Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line unknown. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792164820299-c0adf1",
       "ts": "2026-10-16T15:33:40Z",
@@ -3249,6 +3239,16 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Full ladder posted for the fight about 8:10pm CT. Worst line -$317, target -$100. Next: Even-up window, 7:10pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792282280273-6fa111",
+      "ts": "2026-10-18T00:11:20Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 8:10pm CT. Worst line -$317, target -$100. Next: Paid balancing starts, 7:50pm CT.",
       "severity": "info",
       "title": "Plan updated: Full ladder posted"
     }
