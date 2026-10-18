@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T09:30:21.259333Z",
+  "generated_at": "2026-10-18T09:32:38.762831Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -91.34,
         "exposure_text": "-$91",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 4:32am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T09:32:00Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 4:32am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 1-6",
@@ -63,11 +63,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 4:32am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T09:32:00Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 23c if no fill by 4:32am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "JAC by 7-14",
@@ -75,11 +75,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 4:32am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T09:32:00Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 20c if no fill by 4:32am CT."
+        "lag_note": "Steps to 20c at the next check."
       }
     ],
     "sections": [
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T09:29:42Z"
+    "ts": "2026-10-18T09:31:43Z"
   },
   "posts": [
     {
@@ -3150,6 +3150,16 @@
       "text": "Quiet for 15 min. 2,468 resting. Next: Paid balancing starts, 7:45am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792315863111-02b295",
+      "ts": "2026-10-18T09:30:53Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$189. Lagging: JAC by 1-6, JAC by 7-14, HOU by 1-6 +more.",
+      "severity": "info",
+      "title": "Checkpoint"
     }
   ],
   "audits": [
