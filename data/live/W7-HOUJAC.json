@@ -1,10 +1,10 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T12:59:02.737771Z",
+  "generated_at": "2026-10-18T13:00:18.107696Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 8:30am CT. Worst line -$125, goal -$75.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 8:30am CT. Worst line -$125.",
     "confidence": "medium",
     "confidence_note": "Timers are set, but reaching -$75 depends on the crowd.",
     "checks_every_s": 20,
@@ -14,8 +14,8 @@
         "resting": "226 @ 18-27c",
         "exposure": -124.6,
         "exposure_text": "-$125",
-        "move": "Next wave 187 contracts",
-        "when": "when resting drops under 94 (now 226) and worst loss is -$129 or better",
+        "move": "Next wave 123 contracts",
+        "when": "when resting drops under 94 (now 226) and worst loss is -$124 or better",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-18T08:49:58Z"
@@ -25,8 +25,8 @@
         "resting": "136 @ 20-23c",
         "exposure": -113.64,
         "exposure_text": "-$114",
-        "move": "Next wave 225 contracts",
-        "when": "when resting drops under 112 (now 136) and worst loss is -$129 or better",
+        "move": "Next wave 148 contracts",
+        "when": "when resting drops under 112 (now 136) and worst loss is -$124 or better",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -38,12 +38,12 @@
         "exposure": -26.6,
         "exposure_text": "-$27",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T12:58:55Z",
+        "when": "if no fill by 8:09am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T13:09:13Z",
         "stuck": false,
         "also": "Also: next wave if resting drops under 62",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Steps to 11c if no fill by 8:09am CT."
       },
       {
         "side": "HOU by 1-6",
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 8:30am CT. Sold 726, 1,652 resting. Worst line -$125 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 726, 1,652 resting. Worst line -$125 (goal -$75)."
         ]
       },
       {
@@ -103,7 +103,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$125 is better than -$129.",
+          "Gate closed: batches wait for the worst line to reach -$124 (now -$125).",
           "Closest: JAC by 7-14, 136 resting vs trigger 112.",
           "Batches used: none (max 3 per side)."
         ]
@@ -112,8 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$129, worst line -$125; spent $0 of $50.",
-          "At 8:00am CT, if worst line is -$75 or better, paid balancing stops.",
+          "Paid balancing is running: plan -$124, worst line -$125; spent $0 of $50.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -187,39 +186,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T12:58:11Z"
+    "ts": "2026-10-18T13:00:12Z"
   },
   "posts": [
-    {
-      "id": "1792146941867-9fd7fe",
-      "ts": "2026-10-16T10:35:41Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792147848991-bf1f3d",
-      "ts": "2026-10-16T10:50:48Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792148756559-84c808",
-      "ts": "2026-10-16T11:05:56Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792149663683-d7457c",
       "ts": "2026-10-16T11:21:03Z",
@@ -3280,6 +3249,40 @@
       "text": "Bot note: COVERAGE-CAP decrease HOU7TO14: resting 413 -> 362 (held 0 + resting was over the cap 363 = 1.37x; tighten pha",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792328351727-712378",
+      "ts": "2026-10-18T12:57:07Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 38 (rung 3 allotment): HOU by 7-14 x38 at 20c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 38.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792328412038-b64cfd",
+      "ts": "2026-10-18T13:00:12Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792328412038-1d88de",
+      "ts": "2026-10-18T13:00:12Z",
+      "book": "W7-HOUJAC",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 8:30am CT. Worst line -$125. Next: Even-done check, 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
