@@ -1,171 +1,107 @@
 {
   "key": "W7-LACKC",
-  "generated_at": "2026-10-18T20:21:19.313938Z",
+  "generated_at": "2026-10-18T20:24:11.169500Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:25pm CT. Worst line $0.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "KC by 1-6",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 148 contracts",
-        "when": "next bot check (resting 0 is under 112)",
-        "at": "2026-10-18T20:21:01Z",
-        "stuck": false
-      },
-      {
-        "side": "KC by 15+",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 123 contracts",
-        "when": "next bot check (resting 0 is under 94)",
-        "at": "2026-10-18T20:21:01Z",
-        "stuck": false
-      },
-      {
-        "side": "KC by 7-14",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 148 contracts",
-        "when": "next bot check (resting 0 is under 112)",
-        "at": "2026-10-18T20:21:01Z",
-        "stuck": false
-      },
-      {
-        "side": "LAC by 1-6",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 148 contracts",
-        "when": "next bot check (resting 0 is under 112)",
-        "at": "2026-10-18T20:21:01Z",
-        "stuck": false
-      },
-      {
-        "side": "LAC by 15+",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 82 contracts",
-        "when": "next bot check (resting 0 is under 62)",
-        "at": "2026-10-18T20:21:01Z",
-        "stuck": false
-      },
-      {
-        "side": "LAC by 7-14",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 123 contracts",
-        "when": "next bot check (resting 0 is under 94)",
-        "at": "2026-10-18T20:21:01Z",
-        "stuck": false
-      }
-    ],
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line $0.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 5,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 0, 0 resting. Worst line $0 (goal -$75)."
+          "In game (Ingame). Sold 0, 1,072 resting. Worst line $0. Game 0% done. Bot is slow (checks every 21s, set for 5s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line $0 is better than -$100.",
-          "Closest: KC by 15+, 0 resting vs trigger 94.",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan unknown, worst line $0; spent $0 of $50.",
-          "Kickoff 3:25pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-18T20:25:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "KC by 1-6",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 450.0,
+        "resting": 188.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "KC by 7-14",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 450.0,
+        "resting": 190.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "KC by 15+",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 375.0,
+        "resting": 193.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "LAC by 1-6",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 450.0,
+        "resting": 175.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "LAC by 7-14",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 375.0,
+        "resting": 169.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "LAC by 15+",
         "held": 0.0,
+        "resting": 157.0,
+        "target": null,
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
         "resting": 0.0,
-        "target": 250.0,
+        "target": null,
         "status": "even",
         "price": null
       }
     ],
     "book": "W7-LACKC",
-    "ts": "2026-10-18T20:21:01Z"
+    "ts": "2026-10-18T20:24:02Z"
   },
   "posts": [
     {
@@ -224,6 +160,54 @@
       "text": "Quiet for 15 min. 0 resting. Next: Kickoff, 3:25pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792354933561-4ab0f4",
+      "ts": "2026-10-18T20:22:13Z",
+      "book": "W7-LACKC",
+      "kind": "update",
+      "source": "bot",
+      "text": "LAC at KC: in-game-only book is live (nothing posted pregame). Worst case $150; early cap $150, tapering to the floor by the end of the 3rd quarter.",
+      "severity": "info"
+    },
+    {
+      "id": "1792354941369-ac3336",
+      "ts": "2026-10-18T20:22:21Z",
+      "book": "W7-LACKC",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: LAC now 42%",
+      "severity": "info"
+    },
+    {
+      "id": "1792354941959-43177c",
+      "ts": "2026-10-18T20:22:08Z",
+      "book": "W7-LACKC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line +0.00, L_max 150.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792354982150-bd182c",
+      "ts": "2026-10-18T20:23:02Z",
+      "book": "W7-LACKC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792354982150-e659ac",
+      "ts": "2026-10-18T20:23:02Z",
+      "book": "W7-LACKC",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line $0.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
@@ -243,6 +227,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "House v2 T-60 table\nIf the game ends... you make\nKC 1-6: +0 (+0.0% of bankroll)\nKC 7-14: +0 (+0.0% of bankroll)\nKC 15+: +0 (+0.0% of bankroll)\nLAC 1-6: +0 (+0.0% of bankroll)\nLAC 7-14: +0 (+0.0% of bankroll)\nLAC 15+: +0 (+0.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792354928019-c0c794",
+      "ts": "2026-10-18T20:22:08Z",
+      "book": "W7-LACKC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nKC 1-6: +0 (+0.0% of bankroll)\nKC 7-14: +0 (+0.0% of bankroll)\nKC 15+: +0 (+0.0% of bankroll)\nLAC 1-6: +0 (+0.0% of bankroll)\nLAC 7-14: +0 (+0.0% of bankroll)\nLAC 15+: +0 (+0.0% of bankroll)",
       "severity": "warn"
     }
   ]

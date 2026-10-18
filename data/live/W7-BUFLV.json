@@ -1,139 +1,68 @@
 {
   "key": "W7-BUFLV",
-  "generated_at": "2026-10-18T20:21:19.313938Z",
+  "generated_at": "2026-10-18T20:24:11.169500Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:25pm CT. Worst line $0.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "BUF by 1-6",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
-        "side": "BUF by 15+",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
-        "side": "BUF by 7-14",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
-        "side": "LV by 1-6",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
-        "side": "LV by 15+",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
-        "side": "LV by 7-14",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false
-      }
-    ],
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$4.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 5,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 0, 0 resting. Worst line $0 (goal -$75)."
+          "In game (Ingame). Sold 7, 1,119 resting. Worst line -$4. Game 0% done. Bot is slow (checks every 20s, set for 5s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line $0 is better than -$100.",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan unknown, worst line $0; spent $0 of $50.",
-          "Kickoff 3:25pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-18T20:25:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "BUF by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 214.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "BUF by 7-14",
-        "held": 0.0,
-        "resting": 0.0,
+        "held": 5.5,
+        "resting": 182.5,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "BUF by 15+",
-        "held": 0.0,
-        "resting": 0.0,
+        "held": 1.0,
+        "resting": 204.0,
         "target": null,
         "status": "even",
         "price": null
@@ -141,7 +70,7 @@
       {
         "label": "LV by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 181.0,
         "target": null,
         "status": "even",
         "price": null
@@ -149,13 +78,21 @@
       {
         "label": "LV by 7-14",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 173.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "LV by 15+",
+        "held": 0.0,
+        "resting": 165.0,
+        "target": null,
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
         "held": 0.0,
         "resting": 0.0,
         "target": null,
@@ -164,7 +101,7 @@
       }
     ],
     "book": "W7-BUFLV",
-    "ts": "2026-10-18T20:21:01Z"
+    "ts": "2026-10-18T20:24:02Z"
   },
   "posts": [
     {
@@ -214,6 +151,64 @@
       "text": "Quiet for 15 min. 0 resting. Next: Kickoff, 3:25pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792354921459-1285f8",
+      "ts": "2026-10-18T20:22:01Z",
+      "book": "W7-BUFLV",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-BUFLV: 0 orders posted in 10 min while the market traded 760 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1792354921769-0d1ab2",
+      "ts": "2026-10-18T20:22:01Z",
+      "book": "W7-BUFLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line +0.00, L_max 150.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792354921770-925c8d",
+      "ts": "2026-10-18T20:22:01Z",
+      "book": "W7-BUFLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792354921770-3b2c02",
+      "ts": "2026-10-18T20:22:01Z",
+      "book": "W7-BUFLV",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line $0.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1792354926913-653bf7",
+      "ts": "2026-10-18T20:22:06Z",
+      "book": "W7-BUFLV",
+      "kind": "update",
+      "source": "bot",
+      "text": "BUF at LV: in-game-only book is live (nothing posted pregame). Worst case $150; early cap $150, tapering to the floor by the end of the 3rd quarter.",
+      "severity": "info"
+    },
+    {
+      "id": "1792354982133-fc8bf0",
+      "ts": "2026-10-18T20:23:02Z",
+      "book": "W7-BUFLV",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line $0.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
@@ -233,6 +228,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792354921456-bfb793",
+      "ts": "2026-10-18T20:22:01Z",
+      "book": "W7-BUFLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nLV 1-6: +0 (+0.0% of bankroll)\nLV 7-14: +0 (+0.0% of bankroll)\nLV 15+: +0 (+0.0% of bankroll)\nBUF 1-6: +0 (+0.0% of bankroll)\nBUF 7-14: +0 (+0.0% of bankroll)\nBUF 15+: +0 (+0.0% of bankroll)",
       "severity": "warn"
     }
   ]
