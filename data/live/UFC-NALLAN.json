@@ -1,237 +1,52 @@
 {
   "key": "UFC-NALLAN",
-  "generated_at": "2026-10-17T23:59:41.044261Z",
+  "generated_at": "2026-10-18T00:01:22.535728Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Final tightening",
-    "headline": "Final tightening for the fight about 7:00pm CT. Worst line -$134, target -$100.",
+    "phase": "Fight on",
+    "headline": "Fight on. Worst line -$120.",
     "confidence": "medium",
-    "confidence_note": "Timers are set, but reaching -$100 depends on the crowd.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "Landwehr by KO/TKO",
-        "resting": "none",
-        "exposure": -134.19,
-        "exposure_text": "-$134",
-        "move": "Next batch 231 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$134)",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-17T23:56:50Z"
-      },
-      {
-        "side": "Landwehr by Decision",
-        "resting": "none",
-        "exposure": -133.62,
-        "exposure_text": "-$134",
-        "move": "Next batch 231 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$134)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-17T23:56:50Z"
-      },
-      {
-        "side": "Nallo by KO/TKO",
-        "resting": "none",
-        "exposure": -102.06,
-        "exposure_text": "-$102",
-        "move": "Next batch 231 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$134)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-17T23:40:26Z"
-      },
-      {
-        "side": "Nallo by Submission",
-        "resting": "none",
-        "exposure": -86.46,
-        "exposure_text": "-$86",
-        "move": "Next batch 231 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$134)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-17T23:42:50Z"
-      },
-      {
-        "side": "Landwehr by Submission",
-        "resting": "none",
-        "exposure": -64.19,
-        "exposure_text": "-$64",
-        "move": "Next batch 231 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$134)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-17T23:57:02Z"
-      },
-      {
-        "side": "Nallo by Decision",
-        "resting": "none",
-        "exposure": -63.69,
-        "exposure_text": "-$64",
-        "move": "Next batch 231 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$134)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-17T23:57:03Z"
-      },
-      {
-        "side": "Draw / No Contest",
-        "resting": "30 @ 3c",
-        "exposure": 535.81,
-        "exposure_text": "+$536",
-        "move": "Holding",
-        "when": "no move planned",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-15T01:00:26Z"
-      }
-    ],
+    "confidence_note": "During the fight the steps follow the action.",
+    "checks_every_s": 10,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, fight about 7:00pm CT. Sold 3,999, 30 resting. Worst line -$134 (target -$100)."
+          "Fight on. Sold 3,999. Worst line -$120. Bout in, round 0."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No bucket is lagging."
+          "No lag rule in the fight; short-lived rows follow the live price."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "The full ladder is out.",
-          "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$134).",
-          "Batches used: none (max 3 per bucket)."
+          "Short rungs (about 30s) are priced off the live moneyline, inside the loss floor."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if a bucket's line falls under -$250.",
-          "Paid balancing is open: started at -$250, target -$100, now -$134.",
-          "Even-up 6:00pm CT; last-resort take 6:40pm CT; handoff to the fight 6:57pm CT.",
-          "The fight start is an estimate and can move."
+          "Everything is pulled when the fight ends or the winner's price passes 0.95."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: the full ladder, extra batches, price steps and paid balancing run by rule. The start time can shift."
+          "Yes, it refreshes every 10s and pulls on a finish."
         ]
       }
     ],
     "next_steps": [],
-    "sides": [
-      {
-        "label": "Landwehr by Decision",
-        "held": 669.4,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Landwehr by KO/TKO",
-        "held": 670.0,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "heavy",
-        "price": null
-      },
-      {
-        "label": "Landwehr by Submission",
-        "held": 600.0,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Nallo by Decision",
-        "held": 599.5,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Nallo by KO/TKO",
-        "held": 637.9,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Nallo by Submission",
-        "held": 622.3,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Draw / No Contest",
-        "held": 0.0,
-        "resting": 30.0,
-        "target": 30.0,
-        "status": "even",
-        "price": 0.03
-      }
-    ],
+    "sides": [],
     "book": "UFC-NALLAN",
-    "ts": "2026-10-17T23:59:14Z"
+    "ts": "2026-10-18T00:01:15Z"
   },
   "posts": [
-    {
-      "id": "1792182192284-ef7bf4",
-      "ts": "2026-10-16T20:23:12Z",
-      "book": "UFC-NALLAN",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNALKOTKODQ: -144\nNALSUB: +121\nNALDEC: -7\nLANKOTKODQ: -144\nLANSUB: -249\nLANDEC: +123\nDRAW: +276\nCollected $276 premium ($0 fees) | Paper margin over fair $15 (not realized until settlement)\nheld / resting\nNALKOTKODQ: 420 / 0\nNALSUB: 154 / 265\nNALDEC: 283 / 137\nLANKOTKODQ: 420 / 0\nLANSUB: 525 / 0\nLANDEC: 152 / 267\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.798 | Worst now -249 | Cash free $1500\nAnchor age 55s | Last fill 3760s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792182712283-c57a60",
-      "ts": "2026-10-16T20:31:52Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$249. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792183500290-0cf138",
-      "ts": "2026-10-16T20:45:00Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$249. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792183620837-c21ac9",
-      "ts": "2026-10-16T20:47:00Z",
-      "book": "UFC-NALLAN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:00pm CT. Full ladder Sat 9:00am CT. Worst line -$249. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792184223768-fa2f18",
       "ts": "2026-10-16T20:57:03Z",
@@ -3434,6 +3249,46 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792281614804-9ee1be",
+      "ts": "2026-10-18T00:00:13Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: espn-live",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792281634971-0422cd",
+      "ts": "2026-10-18T00:00:17Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.55 winner_mid=0.715",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792281675311-a1c6a7",
+      "ts": "2026-10-18T00:01:15Z",
+      "book": "UFC-NALLAN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to Fight on.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792281675312-62ad17",
+      "ts": "2026-10-18T00:01:15Z",
+      "book": "UFC-NALLAN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Fight on. Worst line -$120.",
+      "severity": "info",
+      "title": "Plan updated: Fight on"
     }
   ],
   "audits": [
@@ -4020,6 +3875,42 @@
       "kind": "audit",
       "source": "bot",
       "text": "+126 on NALSUB @ 0.11 (maker)\n+175 on LANSUB @ 0.09 (maker)\n+176 on NALDEC @ 0.07 (maker)\nworst outcome now -144\nheld 588/322/511/420/700/419/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792281613788-d62207",
+      "ts": "2026-10-18T00:00:13Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: CUTOVER - espn-live",
+      "severity": "warn"
+    },
+    {
+      "id": "1792281614960-b2af81",
+      "ts": "2026-10-18T00:00:14Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+187 on NALDEC @ 0.07 (maker)\n+50 on NALKOTKODQ @ 0.55 (taker)\n+250 on LANDEC @ 0.05 (taker)\n+250 on LANKOTKODQ @ 0.14 (taker)\n+300 on NALSUB @ 0.11 (taker)\n+1 on NALDEC @ 0.05 (taker)\n+100 on NALDEC @ 0.06 (taker)\n+100 on LANSUB @ 0.09 (taker)\n+80 on LANDEC @ 0.06 (taker)\n+80 on LANKOTKODQ @ 0.15 (taker)\nworst outcome now -120\nheld 638/622/600/590/600/589/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792281617863-dc5ca1",
+      "ts": "2026-10-18T00:00:17Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: safety gate caught a violation before posting - J2 KXUFCMOV-26OCT17NALLAN-NALKOTKODQ held+resting 638 over ceiling 300; J2 KXUFCMOV-26OCT17NALLAN-NALSUB held+resting 628 over ceiling 300; J2 KXUFCMOV-26OCT17NALLAN-NALDEC held+resting 632 over ceiling 300; J2 KXUFCMOV-26OCT17NALLAN-LANKOTKODQ held+resting 640 over ceiling 300; J2 KXUFCMOV-26OCT17N",
+      "severity": "warn"
+    },
+    {
+      "id": "1792281617863-176312",
+      "ts": "2026-10-18T00:00:17Z",
+      "book": "UFC-NALLAN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "INFIGHT floor elevator: first post on Mandel Nallo vs Nate Landwehr: Method of Victory, floor $-119.89",
       "severity": "warn"
     }
   ]
