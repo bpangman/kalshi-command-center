@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T10:02:24.061743Z",
+  "generated_at": "2026-10-18T10:04:40.951965Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -91.34,
         "exposure_text": "-$91",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 5:04am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T10:04:34Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 5:04am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 1-6",
@@ -51,11 +51,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Hold price at 15c",
-        "when": "next cent is under the crowd price (13.5c)",
+        "when": "crowd pays 14.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Price 15c is at its floor."
+        "lag_note": "Price 15c matches the crowd."
       },
       {
         "side": "JAC by 1-6",
@@ -63,23 +63,23 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 5:04am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T10:04:34Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 23c if no fill by 5:04am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "JAC by 7-14",
         "resting": "489 @ 21-28c",
         "exposure": 58.66,
         "exposure_text": "+$59",
-        "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 5:04am CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-18T10:04:34Z",
+        "move": "Hold price at 21c",
+        "when": "crowd pays 20.9c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 20c if no fill by 5:04am CT."
+        "lag_note": "Price 21c matches the crowd."
       }
     ],
     "sections": [
@@ -94,7 +94,7 @@
         "lines": [
           "Lagging (75+ behind the leader): HOU by 1-6, HOU by 7-14, HOU by 15+, JAC by 1-6, JAC by 7-14.",
           "HOU by 1-6: 248 behind. Price 20c matches the crowd.",
-          "HOU by 7-14: 248 behind. Price 15c is at its floor.",
+          "HOU by 7-14: 248 behind. Price 15c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T10:01:56Z"
+    "ts": "2026-10-18T10:03:57Z"
   },
   "posts": [
     {
