@@ -1,10 +1,10 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T16:13:08.971593Z",
+  "generated_at": "2026-10-18T16:14:59.357096Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$40.",
+    "headline": "In game (Ingame). Worst line +$46.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 3,080, 261 resting. Worst line +$40. Game 80% done."
+          "In game (Ingame). Sold 3,097, 243 resting. Worst line +$46. Game 81% done."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "HOU by 1-6",
-        "held": 529.0,
-        "resting": 17.2,
+        "held": 546.2,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "JAC by 7-14",
         "held": 550.6,
-        "resting": 11.0,
+        "resting": 10.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T16:12:34Z"
+    "ts": "2026-10-18T16:14:35Z"
   },
   "posts": [
-    {
-      "id": "1792204808411-316696",
-      "ts": "2026-10-17T02:40:08Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,643 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792205715203-77a2dd",
       "ts": "2026-10-17T02:55:15Z",
@@ -3975,6 +3965,31 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792340035018-656af0",
+      "ts": "2026-10-18T16:11:50Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 11: HOU by 1-6 x8 at 33c, HOU by 1-6 x3 at 31c. Worst line +$40.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 11.0,
+        "fills": [
+          {
+            "side": "HOU by 1-6",
+            "price": 0.33,
+            "qty": 8.0
+          },
+          {
+            "side": "HOU by 1-6",
+            "price": 0.31,
+            "qty": 3.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4759,6 +4774,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792340084634-3609b7",
+      "ts": "2026-10-18T16:14:44Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+13 on HOU 1-6 @ 0.33 (maker)\n+3 on HOU 1-6 @ 0.31 (maker)\n+12 on HOU 1-6 @ 0.39 (maker)\n+5 on HOU 1-6 @ 0.42 (maker)\nworst outcome now +59\nheld 561/551/375/546/541/523\nIf the game ends... you make\nJAC 1-6: +46 (+3.7% of bankroll)\nJAC 7-14: +57 (+4.6% of bankroll)\nJAC 15+: +232 (+18.6% of bankroll)\nHOU 1-6: +61 (+4.9% of bankroll)\nHOU 7-14: +67 (+5.3% of bankroll)\nHOU 15+: +85 (+6.8% of bankroll)",
       "severity": "warn"
     }
   ]
