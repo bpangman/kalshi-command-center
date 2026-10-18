@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T11:11:19.548832Z",
+  "generated_at": "2026-10-18T11:13:35.849260Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -55,7 +55,7 @@
         "at": "2026-10-18T12:45:00Z",
         "stuck": false,
         "also": "Also: price step",
-        "lag_note": "Price 15c is at its floor."
+        "lag_note": "Price 15c matches the crowd."
       },
       {
         "side": "JAC by 1-6",
@@ -94,7 +94,7 @@
         "lines": [
           "Lagging (75+ behind the leader): HOU by 1-6, HOU by 7-14, HOU by 15+, JAC by 1-6, JAC by 7-14.",
           "HOU by 1-6: 248 behind. Price 20c matches the crowd.",
-          "HOU by 7-14: 248 behind. Price 15c is at its floor.",
+          "HOU by 7-14: 248 behind. Price 15c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T11:10:25Z"
+    "ts": "2026-10-18T11:13:26Z"
   },
   "posts": [
     {
@@ -3626,6 +3626,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-HOUJAC): held worst -189.34 (backstop -150) or lagging gap 248 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792321982490-735102",
+      "ts": "2026-10-18T11:13:02Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-HOUJAC): worst -189.34 vs floor -175.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
