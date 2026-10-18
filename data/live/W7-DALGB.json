@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T15:08:59.356683Z",
+  "generated_at": "2026-10-18T15:10:18.117541Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,100, 4,270 resting. Worst line -$444 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,100, 4,312 resting. Worst line -$444 (goal -$150)."
         ]
       },
       {
@@ -162,7 +162,7 @@
       {
         "label": "DAL by 15+",
         "held": 42.5,
-        "resting": 902.5,
+        "resting": 944.5,
         "target": 500.0,
         "status": "lagging",
         "price": 0.13
@@ -193,29 +193,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T15:08:47Z"
+    "ts": "2026-10-18T15:09:47Z"
   },
   "posts": [
-    {
-      "id": "1792148252350-10706a",
-      "ts": "2026-10-16T10:57:32Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,375 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792149159767-72e43a",
-      "ts": "2026-10-16T11:12:39Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,375 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792150066815-934c2a",
       "ts": "2026-10-16T11:27:46Z",
@@ -3270,6 +3250,40 @@
       "text": "Fast fill on lagging DAL by 15+: 36 of 125 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792336207953-19f156",
+      "ts": "2026-10-18T15:08:06Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 36: DAL by 15+ x36 at 13c. Worst line -$444.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 36.0,
+        "fills": [
+          {
+            "side": "DAL by 15+",
+            "price": 0.13,
+            "qty": 36.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792336207954-b8c942",
+      "ts": "2026-10-18T15:08:07Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 42 (same-price reload): DAL by 15+ x42 at 13c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 42.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -3802,6 +3816,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-DALGB): held worst -448.85 (backstop -300) or lagging gap 657 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792336148788-1236cb",
+      "ts": "2026-10-18T15:09:08Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+36 on DAL 15+ @ 0.13 (maker)\nworst outcome now +40\nheld 657/20/380/0/0/43\nIf the game ends... you make\nGB 1-6: -444 (-3.7% of bankroll)\nGB 7-14: +193 (+1.6% of bankroll)\nGB 15+: -168 (-1.4% of bankroll)\nDAL 1-6: +213 (+1.8% of bankroll)\nDAL 7-14: +213 (+1.8% of bankroll)\nDAL 15+: +170 (+1.4% of bankroll)",
       "severity": "warn"
     }
   ]
