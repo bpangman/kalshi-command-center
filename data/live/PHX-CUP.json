@@ -1,10 +1,10 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-18T19:15:00.494211Z",
+  "generated_at": "2026-10-18T19:16:23.153498Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$471.",
+    "headline": "In race (Ingame). Worst line unknown.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 71,239, 28,793 resting. Worst line -$471. Race 4% done. Floor protocol off."
+          "In race (Ingame). Sold 71,239, 28,793 resting. Worst line unknown. Race 5% done. Floor protocol off."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-CUP",
-    "ts": "2026-10-18T19:14:32Z"
+    "ts": "2026-10-18T19:15:32Z"
   },
   "posts": [
-    {
-      "id": "1792289047536-c94158",
-      "ts": "2026-10-18T02:04:07Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Risk glide for the green flag Sun 2:00pm CT. Worst line -$364, final target $0. Next: Glide selling opens, Sun 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Risk glide"
-    },
-    {
-      "id": "1792289228844-9d0315",
-      "ts": "2026-10-18T02:07:08Z",
-      "book": "PHX-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Risk glide for the green flag Sun 2:00pm CT. Worst line -$364, final target $0. Next: Glide selling opens, Sun 12:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Risk glide"
-    },
     {
       "id": "1792289289267-daab6d",
       "ts": "2026-10-18T02:08:09Z",
@@ -3957,18 +3937,29 @@
         "contracts": 98425.0,
         "rows": 48
       }
+    },
+    {
+      "id": "1792350932491-60570e",
+      "ts": "2026-10-18T19:15:28Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-FREI26-TYGI: gap $0.00 -> max 0 contracts (evenness/favorite gates bypas",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792350972732-6633f0",
+      "ts": "2026-10-18T19:15:57Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt: 0 drivers laddered, room used $0 of $84",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792301721572-27dacc",
-      "ts": "2026-10-18T05:35:21Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 3 unexplained\n- PHX-CUP - Christopher Bell has had no resting orders for at least 440 min (reason unknown: no reason logged).\n- PHX-CUP - Denny Hamlin has had no resting orders for at least 440 min (reason unknown: no reason logged).\n- PHX-CUP - Ryan Blaney has had no resting orders for at least 440 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792302025130-15c97f",
       "ts": "2026-10-18T05:40:25Z",
@@ -4858,6 +4849,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (PHX-CUP): min live outcome (auditor's own read) -471.11 vs bot's ratchet_high n/a vs bot's ceiling_now -143.27. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792350957840-c35aea",
+      "ts": "2026-10-18T19:15:57Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Health: posting blocked 161s (RISK-BREACH: worst-all-resting -1863.05 past allowed limit -800.00)",
       "severity": "warn"
     }
   ]
