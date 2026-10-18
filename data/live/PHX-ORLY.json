@@ -1,19 +1,19 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-18T01:48:18.948071Z",
+  "generated_at": "2026-10-18T01:49:46.802966Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$77.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 41,853, 410 resting. Worst line -$77. Race 90% done. Floor protocol off."
+          "In race (Ingame). Sold 41,853, 410 resting. Worst line -$77. Race 90% done. Floor protocol ON. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -44,61 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-ORLY",
-    "ts": "2026-10-18T01:48:00Z"
+    "ts": "2026-10-18T01:49:00Z"
   },
   "posts": [
-    {
-      "id": "1792264627219-72a56f",
-      "ts": "2026-10-17T19:16:59Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Corey Day: wave 16, 20 contracts at 9c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Corey Day"
-      }
-    },
-    {
-      "id": "1792264627219-843896",
-      "ts": "2026-10-17T19:16:59Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 29, 10 contracts at 5c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
-    {
-      "id": "1792264687585-5f8b9c",
-      "ts": "2026-10-17T19:17:51Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 30, 10 contracts at 5c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
-    {
-      "id": "1792264707699-8e740f",
-      "ts": "2026-10-17T19:18:21Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 31, 10 contracts at 5c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
     {
       "id": "1792264707699-6e6267",
       "ts": "2026-10-17T19:18:21Z",
@@ -4342,18 +4290,58 @@
       "text": "In race (Ingame). Worst line -$77.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1792288113547-e9379a",
+      "ts": "2026-10-18T01:48:33Z",
+      "book": "PHX-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is -77; from here only trades that raise it",
+      "severity": "info"
+    },
+    {
+      "id": "1792288120811-4b151d",
+      "ts": "2026-10-18T01:48:33Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite Jesse Love at 0.55); likely ['Jesse Love', 'Sam Mayer']; floor mode: KXNASCARRACE-TI",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792288140877-da58e0",
+      "ts": "2026-10-18T01:49:00Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$77.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1792288181208-07a2f7",
+      "ts": "2026-10-18T01:47:22Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 50: Jesse Love x50 at 49c. Worst line -$77.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 50.0,
+        "fills": [
+          {
+            "side": "Jesse Love",
+            "price": 0.49,
+            "qty": 50.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792243362141-917e13",
-      "ts": "2026-10-17T13:22:42Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -450.03 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792245183665-a070d7",
       "ts": "2026-10-17T13:53:03Z",
@@ -5243,6 +5231,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: PHX-ORLY - Carson Kvapil is posting again.\nBack: PHX-ORLY - Corey Day is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792288113546-5d93d7",
+      "ts": "2026-10-18T01:48:33Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min (or progress >= 90%) before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
