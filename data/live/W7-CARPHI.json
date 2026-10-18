@@ -1,171 +1,107 @@
 {
   "key": "W7-CARPHI",
-  "generated_at": "2026-10-18T16:57:05.153991Z",
+  "generated_at": "2026-10-18T16:58:26.602283Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 12:00pm CT. Worst line $0.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "CAR by 1-6",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 148 contracts",
-        "when": "next bot check (resting 0 is under 112)",
-        "at": "2026-10-18T16:56:33Z",
-        "stuck": false
-      },
-      {
-        "side": "CAR by 15+",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 82 contracts",
-        "when": "next bot check (resting 0 is under 62)",
-        "at": "2026-10-18T16:56:33Z",
-        "stuck": false
-      },
-      {
-        "side": "CAR by 7-14",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 123 contracts",
-        "when": "next bot check (resting 0 is under 94)",
-        "at": "2026-10-18T16:56:33Z",
-        "stuck": false
-      },
-      {
-        "side": "PHI by 1-6",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 148 contracts",
-        "when": "next bot check (resting 0 is under 112)",
-        "at": "2026-10-18T16:56:33Z",
-        "stuck": false
-      },
-      {
-        "side": "PHI by 15+",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 123 contracts",
-        "when": "next bot check (resting 0 is under 94)",
-        "at": "2026-10-18T16:56:33Z",
-        "stuck": false
-      },
-      {
-        "side": "PHI by 7-14",
-        "resting": "none",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Next wave 148 contracts",
-        "when": "next bot check (resting 0 is under 112)",
-        "at": "2026-10-18T16:56:33Z",
-        "stuck": false
-      }
-    ],
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$35.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 5,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 12:00pm CT. Sold 0, 0 resting. Worst line $0 (goal -$75)."
+          "In game (Ingame). Sold 44, 1,039 resting. Worst line -$35. Game 0% done. Bot is slow (checks every 21s, set for 5s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line $0 is better than -$100.",
-          "Closest: CAR by 15+, 0 resting vs trigger 62.",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan unknown, worst line $0; spent $0 of $50.",
-          "Kickoff 12:00pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-18T17:00:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "CAR by 1-6",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 450.0,
+        "resting": 186.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "CAR by 7-14",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 375.0,
+        "resting": 186.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "CAR by 15+",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 250.0,
+        "resting": 181.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "PHI by 1-6",
-        "held": 0.0,
-        "resting": 0.0,
-        "target": 450.0,
+        "held": 43.7,
+        "resting": 140.3,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "PHI by 7-14",
         "held": 0.0,
-        "resting": 0.0,
-        "target": 450.0,
+        "resting": 179.0,
+        "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "PHI by 15+",
         "held": 0.0,
+        "resting": 167.0,
+        "target": null,
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
         "resting": 0.0,
-        "target": 375.0,
+        "target": null,
         "status": "even",
         "price": null
       }
     ],
     "book": "W7-CARPHI",
-    "ts": "2026-10-18T16:56:33Z"
+    "ts": "2026-10-18T16:57:34Z"
   },
   "posts": [
     {
@@ -215,6 +151,54 @@
       "text": "Quiet for 15 min. 0 resting. Next: Kickoff, 12:00pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792342632313-f85b45",
+      "ts": "2026-10-18T16:57:12Z",
+      "book": "W7-CARPHI",
+      "kind": "update",
+      "source": "bot",
+      "text": "CAR at PHI: in-game-only book is live (nothing posted pregame). Worst case $150; early cap $150, tapering to the floor by the end of the 3rd quarter.",
+      "severity": "info"
+    },
+    {
+      "id": "1792342633989-10f7d7",
+      "ts": "2026-10-18T16:57:06Z",
+      "book": "W7-CARPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line +0.00, L_max 150.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792342640313-22c908",
+      "ts": "2026-10-18T16:57:20Z",
+      "book": "W7-CARPHI",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: PHI now 44%",
+      "severity": "info"
+    },
+    {
+      "id": "1792342654130-5aaeec",
+      "ts": "2026-10-18T16:57:34Z",
+      "book": "W7-CARPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792342654131-e26ae6",
+      "ts": "2026-10-18T16:57:34Z",
+      "book": "W7-CARPHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$35.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
@@ -234,6 +218,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "House v2 T-60 table\nIf the game ends... you make\nPHI 1-6: +0 (+0.0% of bankroll)\nPHI 7-14: +0 (+0.0% of bankroll)\nPHI 15+: +0 (+0.0% of bankroll)\nCAR 1-6: +0 (+0.0% of bankroll)\nCAR 7-14: +0 (+0.0% of bankroll)\nCAR 15+: +0 (+0.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792342626826-e67020",
+      "ts": "2026-10-18T16:57:06Z",
+      "book": "W7-CARPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nPHI 1-6: +0 (+0.0% of bankroll)\nPHI 7-14: +0 (+0.0% of bankroll)\nPHI 15+: +0 (+0.0% of bankroll)\nCAR 1-6: +0 (+0.0% of bankroll)\nCAR 7-14: +0 (+0.0% of bankroll)\nCAR 15+: +0 (+0.0% of bankroll)",
       "severity": "warn"
     }
   ]
