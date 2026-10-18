@@ -1,10 +1,10 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T23:52:11.550989Z",
+  "generated_at": "2026-10-18T23:53:22.944740Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$345.",
+    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$314.",
     "confidence": "medium",
     "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
     "checks_every_s": 20,
@@ -12,10 +12,10 @@
       {
         "side": "GB by 7-14",
         "resting": "246 @ 22-23c",
-        "exposure": -344.85,
-        "exposure_text": "-$345",
+        "exposure": -314.44,
+        "exposure_text": "-$314",
         "move": "Next wave 297 contracts",
-        "when": "when resting drops under 225 (now 246) and worst loss is -$257 or better",
+        "when": "when resting drops under 225 (now 246) and worst loss is -$251 or better",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-18T22:47:24Z"
@@ -23,20 +23,33 @@
       {
         "side": "GB by 1-6",
         "resting": "none",
-        "exposure": -344.76,
-        "exposure_text": "-$345",
+        "exposure": -314.35,
+        "exposure_text": "-$314",
         "move": "Next wave 297 contracts",
-        "when": "waits until worst loss is -$257 or better (now -$345)",
+        "when": "waits until worst loss is -$251 or better (now -$314)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-18T23:45:50Z"
       },
       {
+        "side": "GB by 15+",
+        "resting": "612 @ 14-24c",
+        "exposure": 12.56,
+        "exposure_text": "+$13",
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "if no fill by 7:11pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-19T00:11:57Z",
+        "stuck": false,
+        "also": "Also: next wave if resting drops under 188",
+        "last_fill": "2026-10-18T23:51:57Z",
+        "lag_note": "Steps to 13c if no fill by 7:11pm CT."
+      },
+      {
         "side": "DAL by 1-6",
         "resting": "425 @ 25-31c",
-        "exposure": 48.75,
-        "exposure_text": "+$49",
+        "exposure": 79.16,
+        "exposure_text": "+$79",
         "move": "Step price down 1c (25c to 24c)",
         "when": "if no fill by 7:05pm CT (FILLFAIR: 20 min with no fill)",
         "at": "2026-10-19T00:05:50Z",
@@ -46,25 +59,12 @@
         "lag_note": "Steps to 24c if no fill by 7:05pm CT."
       },
       {
-        "side": "GB by 15+",
-        "resting": "829 @ 14-24c",
-        "exposure": 199.39,
-        "exposure_text": "+$199",
-        "move": "Step price down 1c (14c to 13c)",
-        "when": "if no fill by 6:58pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-18T23:58:25Z",
-        "stuck": false,
-        "also": "Also: next wave if resting drops under 188",
-        "last_fill": "2026-10-18T21:16:19Z",
-        "lag_note": "Steps to 13c if no fill by 6:58pm CT."
-      },
-      {
         "side": "DAL by 7-14",
         "resting": "792 @ 16-21c",
-        "exposure": 481.09,
-        "exposure_text": "+$481",
+        "exposure": 511.5,
+        "exposure_text": "+$512",
         "move": "Hold price at 16c",
-        "when": "next cent is under the crowd price (14.7c)",
+        "when": "next cent is under the crowd price (14.8c)",
         "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
@@ -74,8 +74,8 @@
       {
         "side": "DAL by 15+",
         "resting": "1,195 @ 13-22c",
-        "exposure": 558.81,
-        "exposure_text": "+$559",
+        "exposure": 589.22,
+        "exposure_text": "+$589",
         "move": "Hold price at 13c",
         "when": "next cent is under the crowd price (10.5c)",
         "at": null,
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 3,056, 3,488 resting. Worst line -$345 (goal -$150)."
+          "Final tightening, kickoff 7:20pm CT. Sold 3,274, 3,270 resting. Worst line -$314 (goal -$150)."
         ]
       },
       {
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$257 (now -$345).",
+          "Gate closed: batches wait for the worst line to reach -$251 (now -$314).",
           "Closest: GB by 1-6, 0 resting vs trigger 225.",
           "Batches used: none (max 3 per side)."
         ]
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$257, worst line -$345; spent $8 of $100.",
+          "Paid balancing is running: plan -$251, worst line -$314; spent $8 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -175,36 +175,17 @@
       },
       {
         "label": "GB by 15+",
-        "held": 409.8,
-        "resting": 829.2,
+        "held": 627.0,
+        "resting": 612.0,
         "target": 750.0,
         "status": "lagging",
         "price": 0.14
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T23:51:31Z"
+    "ts": "2026-10-18T23:52:32Z"
   },
   "posts": [
-    {
-      "id": "1792222288544-d915f3",
-      "ts": "2026-10-17T07:31:28Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792222920977-9963c5",
-      "ts": "2026-10-17T07:42:00Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +17 (+0.1% of bankroll)\nGB 7-14: +55 (+0.5% of bankroll)\nGB 15+: -261 (-2.2% of bankroll)\nDAL 1-6: +55 (+0.5% of bankroll)\nDAL 7-14: +55 (+0.5% of bankroll)\nDAL 15+: +55 (+0.5% of bankroll)\nCollected $55 premium ($0 fees) | Paper margin over fair $7 (not realized until settlement)\nheld / resting\nGB 1-6: 38 / 1012\nGB 7-14: 0 / 975\nGB 15+: 317 / 583\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 825\nDAL 15+: 0 / 650\nPosted book 1.23 | Sold avg 1.199 | Worst now +76 | Cash free $2500\nAnchor age 0s | Last fill 48124s ago",
-      "severity": "info"
-    },
     {
       "id": "1792223195782-20d98f",
       "ts": "2026-10-17T07:46:35Z",
@@ -3471,6 +3452,26 @@
       "text": "Final tightening before kickoff 7:20pm CT. Worst line -$345. Next: Kickoff, 7:20pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792367532047-da2109",
+      "ts": "2026-10-18T23:51:57Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: GB by 15+ at 14c (131 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792367532048-574e52",
+      "ts": "2026-10-18T23:51:57Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: GB by 15+ at 14c (20 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
