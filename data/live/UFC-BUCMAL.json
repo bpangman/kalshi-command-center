@@ -1,6 +1,6 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-18T00:48:54.216349Z",
+  "generated_at": "2026-10-18T00:50:32.479092Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -212,29 +212,9 @@
       }
     ],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-18T00:48:15Z"
+    "ts": "2026-10-18T00:50:16Z"
   },
   "posts": [
-    {
-      "id": "1792163953682-7038a3",
-      "ts": "2026-10-16T15:19:12Z",
-      "book": "UFC-BUCMAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Malott by Submission: added 450 at 12c, one cent lower.",
-      "severity": "info",
-      "title": "Price step"
-    },
-    {
-      "id": "1792164014205-bdf690",
-      "ts": "2026-10-16T15:20:07Z",
-      "book": "UFC-BUCMAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Fair value rose on Malott by Submission: lowest row 12c to 13c.",
-      "severity": "info",
-      "title": "Reprice"
-    },
     {
       "id": "1792164074742-8d4c78",
       "ts": "2026-10-16T15:20:07Z",
@@ -3253,6 +3233,25 @@
       "text": "Quiet for 15 min. Next: Even-up window, 8:55pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792284596308-baa0e6",
+      "ts": "2026-10-18T00:49:53Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792284631049-fe888a",
+      "ts": "2026-10-18T00:50:31Z",
+      "book": "UFC-BUCMAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBUCKOTKODQ: -14\nBUCSUB: -16\nBUCDEC: -5\nMALKOTKODQ: -10\nMALSUB: +29\nMALDEC: +29\nDRAW: -1\nCollected $34 premium ($5 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nBUCKOTKODQ: 43 / 59\nBUCSUB: 45 / 0\nBUCDEC: 34 / 0\nMALKOTKODQ: 39 / 55\nMALSUB: 0 / 95\nMALDEC: 0 / 112\nDRAW: 30 / 0\nPosted book 1.00 | Sold avg 1.051 | Worst now -16 | Cash free $0\nAnchor age 0s | Last fill 866s ago",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4002,6 +4001,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (UFC-BUCMAL): worst -591.11 vs floor -325.00 (real L_max 300.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792284631046-7e284f",
+      "ts": "2026-10-18T00:50:31Z",
+      "book": "UFC-BUCMAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+30 on DRAW @ 0.02 (maker)\n+680 on BUCDEC @ 0.13 (taker)\nworst outcome now -18\nheld 43/45/34/39/0/0/30",
+      "severity": "warn"
     }
   ]
 }
