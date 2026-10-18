@@ -1,6 +1,6 @@
 {
   "key": "UFC-NELPER",
-  "generated_at": "2026-10-18T01:08:52.406690Z",
+  "generated_at": "2026-10-18T01:10:26.561562Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -70,16 +70,16 @@
       },
       {
         "side": "Perez by Decision",
-        "resting": "310 @ 13c",
+        "resting": "310 @ 12-13c",
         "exposure": 34.27,
         "exposure_text": "+$34",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 8:25pm CT, up to $100 in all",
-        "at": "2026-10-18T01:25:00Z",
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "if no fill by 8:23pm CT and the crowd trades under 12c",
+        "at": "2026-10-18T01:23:47Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 8:25pm CT",
         "last_fill": "2026-10-18T00:48:04Z",
-        "lag_note": "Steps to 12c if the crowd trades lower."
+        "lag_note": "Steps to 11c if no fill by 8:23pm CT."
       },
       {
         "side": "Draw / No Contest",
@@ -104,7 +104,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Nelson by Decision, Perez by Decision.",
-          "Perez by Decision: 170 behind. Steps to 12c if the crowd trades lower.",
+          "Perez by Decision: 170 behind. Steps to 11c if no fill by 8:23pm CT.",
           "Nelson by Decision: 109 behind. Steps to 6c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -182,7 +182,7 @@
         "resting": 309.8,
         "target": 700.0,
         "status": "lagging",
-        "price": 0.13
+        "price": 0.12
       },
       {
         "label": "Perez by KO/TKO",
@@ -210,29 +210,9 @@
       }
     ],
     "book": "UFC-NELPER",
-    "ts": "2026-10-18T01:08:44Z"
+    "ts": "2026-10-18T01:09:44Z"
   },
   "posts": [
-    {
-      "id": "1792164699558-9e1936",
-      "ts": "2026-10-16T15:31:39Z",
-      "book": "UFC-NELPER",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:45pm CT. Full ladder Sat 9:00am CT. Worst line -$267. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792165606201-b843fa",
-      "ts": "2026-10-16T15:46:46Z",
-      "book": "UFC-NELPER",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792165705066-3c734e",
       "ts": "2026-10-16T15:48:25Z",
@@ -3260,6 +3240,30 @@
       "data": {
         "contracts": 733.0,
         "rows": 8
+      }
+    },
+    {
+      "id": "1792285744238-1a590e",
+      "ts": "2026-10-18T01:08:54Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Perez by Decision: added 154 at 12c, one cent lower.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792285764360-5ba710",
+      "ts": "2026-10-18T01:08:54Z",
+      "book": "UFC-NELPER",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 881 (launch ladder): Nelson by Submission x146 at 4c, Nelson by Submission x112 at 6c, +7 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 881.0,
+        "rows": 9
       }
     }
   ],
