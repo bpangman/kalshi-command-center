@@ -1963,8 +1963,10 @@ function buildBookTile(b, opts) {
   // 1.00+ means every outcome is positive.
   if (b.coverage_ratio !== null && b.coverage_ratio !== undefined && isFinite(b.coverage_ratio)) {
     var covSpan = document.createElement("span");
-    covSpan.className = "book-tile-coverage " + (b.coverage_ratio >= 1 ? "pos" : "neg");
-    covSpan.textContent = Number(b.coverage_ratio).toFixed(2).replace(/^0\./, ".");
+    var covText = Number(b.coverage_ratio).toFixed(2);
+    // color follows the rounded number shown, so "1.00" is never red
+    covSpan.className = "book-tile-coverage " + (Number(covText) >= 1 ? "pos" : "neg");
+    covSpan.textContent = covText.replace(/^0\./, ".");
     covSpan.title = "Filling at (coverage ratio): 1.00 or more means every outcome is positive";
     row4.appendChild(covSpan);
   }
