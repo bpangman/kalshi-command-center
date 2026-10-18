@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T09:11:52.278498Z",
+  "generated_at": "2026-10-18T09:14:08.977370Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -91.34,
         "exposure_text": "-$91",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T09:11:34Z",
+        "when": "if no fill by 4:21am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T09:21:32Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Steps to 11c if no fill by 4:21am CT."
       },
       {
         "side": "HOU by 1-6",
@@ -63,11 +63,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T09:11:34Z",
+        "when": "if no fill by 4:21am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T09:21:32Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 23c at the next check."
+        "lag_note": "Steps to 23c if no fill by 4:21am CT."
       },
       {
         "side": "JAC by 7-14",
@@ -75,11 +75,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T09:11:34Z",
+        "when": "if no fill by 4:21am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T09:21:32Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Steps to 20c if no fill by 4:21am CT."
       }
     ],
     "sections": [
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T09:11:34Z"
+    "ts": "2026-10-18T09:13:35Z"
   },
   "posts": [
     {
@@ -3130,6 +3130,16 @@
       "text": "Quiet for 15 min. 2,468 resting. Next: Paid balancing starts, 7:45am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792314714315-75510e",
+      "ts": "2026-10-18T09:11:35Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "HOU by 15+ price not lowered: a full fill would push the worst line to -$189.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
