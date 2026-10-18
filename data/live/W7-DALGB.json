@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T02:24:52.240005Z",
+  "generated_at": "2026-10-18T02:26:16.838307Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -40,7 +40,7 @@
         "exposure_text": "+$55",
         "move": "Step price down 1c (24c to 23c)",
         "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T02:24:16Z",
+        "at": "2026-10-18T02:25:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
         "lag_note": "Steps to 23c at the next check."
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T02:24:16Z"
+    "ts": "2026-10-18T02:25:16Z"
   },
   "posts": [
     {
@@ -2581,6 +2581,36 @@
       "text": "Quiet for 15 min. 5,315 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792290357126-ce3893",
+      "ts": "2026-10-18T02:25:42Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792290357128-78a80d",
+      "ts": "2026-10-18T02:25:53Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "DAL by 1-6 price not lowered: the next cent is under the crowd price, so it stays at 22c.",
+      "severity": "info",
+      "title": "Price hold"
+    },
+    {
+      "id": "1792290357128-98e354",
+      "ts": "2026-10-18T02:25:53Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "DAL by 15+ price not lowered: the next cent is under the crowd price, so it stays at 13c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
@@ -2623,6 +2653,15 @@
     {
       "id": "1792256617487-34049f",
       "ts": "2026-10-17T17:03:37Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792290342438-1dc4a7",
+      "ts": "2026-10-18T02:25:42Z",
       "book": "W7-DALGB",
       "kind": "audit",
       "source": "bot",
