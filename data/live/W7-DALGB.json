@@ -1,13 +1,13 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T21:22:03.185356Z",
+  "generated_at": "2026-10-18T21:23:25.344371Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:20pm CT. Worst line -$326, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 63,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "checks_every_s": 20,
     "moves": [
       {
         "side": "GB by 1-6",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,767, 4,357 resting. Worst line -$326 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,767, 4,357 resting. Worst line -$326 (goal -$150)."
         ]
       },
       {
@@ -194,19 +194,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T21:21:27Z"
+    "ts": "2026-10-18T21:22:28Z"
   },
   "posts": [
-    {
-      "id": "1792181220801-6fdce8",
-      "ts": "2026-10-16T20:07:00Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792182127683-634984",
       "ts": "2026-10-16T20:22:07Z",
@@ -3353,6 +3343,16 @@
       "text": "Building toward kickoff 7:20pm CT. Worst line -$326, goal -$150. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792358548451-c169e4",
+      "ts": "2026-10-18T21:22:28Z",
+      "book": "W7-DALGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$326, goal -$150. Next: Paid balancing starts, 6:35pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4164,6 +4164,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+135 on GB 7-14 @ 0.18 (maker)\n+10 on GB 15+ @ 0.14 (maker)\nworst outcome now -237\nheld 657/550/410/0/108/43\nIf the game ends... you make\nGB 1-6: -326 (-2.8% of bankroll)\nGB 7-14: -219 (-1.9% of bankroll)\nGB 15+: -79 (-0.7% of bankroll)\nDAL 1-6: +331 (+2.8% of bankroll)\nDAL 7-14: +223 (+1.9% of bankroll)\nDAL 15+: +288 (+2.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792358582471-f13b08",
+      "ts": "2026-10-18T21:23:02Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed -> REST fallback",
+      "severity": "warn"
+    },
+    {
+      "id": "1792358603815-aa749d",
+      "ts": "2026-10-18T21:23:23Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
