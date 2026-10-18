@@ -1,10 +1,10 @@
 {
   "key": "W7-CARPHI",
-  "generated_at": "2026-10-18T20:10:32.366657Z",
+  "generated_at": "2026-10-18T20:12:00.915395Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$29.",
+    "headline": "In game (Ingame). Worst line -$30.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 950, 286 resting. Worst line -$29. Game 89% done. Bot is slow (checks every 18s, set for 5s)."
+          "In game (Ingame). Sold 950, 292 resting. Worst line -$30. Game 90% done. Bot is slow (checks every 22s, set for 5s)."
         ]
       },
       {
@@ -46,14 +46,14 @@
       {
         "label": "CAR by 1-6",
         "held": 183.6,
-        "resting": 0.0,
+        "resting": 8.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "CAR by 7-14",
-        "held": 183.0,
+        "held": 181.2,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -78,7 +78,7 @@
       {
         "label": "PHI by 7-14",
         "held": 0.0,
-        "resting": 216.0,
+        "resting": 214.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-CARPHI",
-    "ts": "2026-10-18T20:09:56Z"
+    "ts": "2026-10-18T20:11:57Z"
   },
   "posts": [
     {
@@ -1238,6 +1238,15 @@
       "text": "Bot note: endgame: active (favorite CAR 7-14 at 0.57); likely ['CAR 1-6', 'CAR 7-14']; endgame: KXNFLWINMARGIN-26OCT18CA",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792354269222-7c6437",
+      "ts": "2026-10-18T20:11:09Z",
+      "book": "W7-CARPHI",
+      "kind": "update",
+      "source": "endgame",
+      "text": "W7-CARPHI: buying back 2 CAR 7-14 at 59c (about $1) (worst case right now -$23). Plus 5 more buybacks, $21 total since 2:34pm. Reply in Claude if you want it stopped.",
+      "severity": "critical"
     }
   ],
   "audits": [
@@ -1500,6 +1509,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792354269516-ac70e7",
+      "ts": "2026-10-18T20:11:09Z",
+      "book": "W7-CARPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "In-game:\nEndgame breakeven repair: floor -23 -> -23 (1 leg(s))\nIf the game ends... you make\nPHI 1-6: -29 (-0.7% of bankroll)\nPHI 7-14: +159 (+3.7% of bankroll)\nPHI 15+: +30 (+0.7% of bankroll)\nCAR 1-6: -24 (-0.6% of bankroll)\nCAR 7-14: -23 (-0.5% of bankroll)\nCAR 15+: -29 (-0.7% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792354314979-6f811b",
+      "ts": "2026-10-18T20:11:54Z",
+      "book": "W7-CARPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+5 on CAR 15+ @ 0.11 (maker)\n+1 on CAR 15+ @ 0.13 (maker)\n+2 on CAR 7-14 @ 0.59 (taker)\nworst outcome now -9\nheld 189/0/129/184/181/189\nIf the game ends... you make\nPHI 1-6: -30 (-0.7% of bankroll)\nPHI 7-14: +158 (+3.7% of bankroll)\nPHI 15+: +29 (+0.7% of bankroll)\nCAR 1-6: -25 (-0.6% of bankroll)\nCAR 7-14: -23 (-0.5% of bankroll)\nCAR 15+: -30 (-0.7% of bankroll)",
       "severity": "warn"
     }
   ]
