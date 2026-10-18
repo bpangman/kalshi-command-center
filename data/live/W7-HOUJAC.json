@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T08:49:02.699816Z",
+  "generated_at": "2026-10-18T08:51:19.620759Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -62,11 +62,11 @@
         "exposure": 36.34,
         "exposure_text": "+$36",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 3:50am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T08:50:30Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 23c if no fill by 3:50am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "JAC by 7-14",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T08:48:23Z"
+    "ts": "2026-10-18T08:50:24Z"
   },
   "posts": [
     {
@@ -3046,6 +3046,26 @@
         "contracts": 275.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792313465241-292aec",
+      "ts": "2026-10-18T08:51:02Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: JAC by 15+ at 17c (225 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792313465242-22395d",
+      "ts": "2026-10-18T08:51:02Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: JAC by 15+ at 17c (23 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
