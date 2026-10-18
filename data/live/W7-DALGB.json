@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T03:41:27.688808Z",
+  "generated_at": "2026-10-18T03:42:47.455643Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -64,11 +64,11 @@
         "exposure": 175.79,
         "exposure_text": "+$176",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T03:40:50Z",
+        "when": "if no fill by 10:51pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T03:51:14Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
-        "lag_note": "Steps to 12c at the next check."
+        "lag_note": "Steps to 12c if no fill by 10:51pm CT."
       },
       {
         "side": "DAL by 7-14",
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 7:20pm CT. Sold 917, 4,798 resting. Worst line -$374 (goal -$150)."
+          "Pregame build, kickoff Sun 7:20pm CT. Sold 917, 4,828 resting. Worst line -$374 (goal -$150)."
         ]
       },
       {
@@ -104,7 +104,7 @@
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
           "Gate closed: batches wait for the worst line to reach -$200 (now -$374).",
-          "Closest: GB by 15+, 598 resting vs trigger 188.",
+          "Closest: GB by 15+, 628 resting vs trigger 188.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -185,14 +185,14 @@
       {
         "label": "GB by 15+",
         "held": 346.8,
-        "resting": 598.2,
+        "resting": 628.2,
         "target": 750.0,
         "status": "lagging",
         "price": 0.14
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T03:40:50Z"
+    "ts": "2026-10-18T03:41:50Z"
   },
   "posts": [
     {
@@ -2775,6 +2775,40 @@
       "text": "Fast fill on lagging GB by 15+: 30 of 45 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792294950843-677d15",
+      "ts": "2026-10-18T03:40:12Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 30: GB by 15+ x30 at 14c. Worst line -$374.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 30.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.14,
+            "qty": 30.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792294950845-fb913d",
+      "ts": "2026-10-18T03:40:13Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 30 (same-price reload): GB by 15+ x30 at 14c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 30.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
