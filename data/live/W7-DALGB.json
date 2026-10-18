@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T22:35:30.770423Z",
+  "generated_at": "2026-10-18T22:37:49.395377Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -50,26 +50,26 @@
         "resting": "717 @ 17-26c",
         "exposure": 248.74,
         "exposure_text": "+$249",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-18T23:35:00Z",
+        "move": "Step price down 1c (17c to 16c)",
+        "when": "if no fill by 5:44pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T22:44:26Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T21:03:18Z",
-        "lag_note": "Price 17c is at its floor."
+        "lag_note": "Steps to 16c if no fill by 5:44pm CT."
       },
       {
         "side": "DAL by 15+",
         "resting": "1,101 @ 13-22c",
         "exposure": 314.25,
         "exposure_text": "+$314",
-        "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 5:38pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-18T22:38:46Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:35pm CT, up to $100 in all",
+        "at": "2026-10-18T23:35:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:35pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-18T15:07:49Z",
-        "lag_note": "Steps to 12c if no fill by 5:38pm CT."
+        "lag_note": "Price 13c is at its floor."
       },
       {
         "side": "DAL by 1-6",
@@ -96,7 +96,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 15+.",
           "DAL by 1-6: 695 behind. Price 23c is at its floor.",
-          "DAL by 15+: 653 behind. Steps to 12c if no fill by 5:38pm CT.",
+          "DAL by 15+: 653 behind. Price 13c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T22:34:59Z"
+    "ts": "2026-10-18T22:37:00Z"
   },
   "posts": [
-    {
-      "id": "1792192103071-c43853",
-      "ts": "2026-10-16T23:08:23Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792193011466-68f01c",
       "ts": "2026-10-16T23:23:31Z",
@@ -3386,6 +3376,15 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792362933217-7e0080",
+      "ts": "2026-10-18T22:35:33Z",
+      "book": "W7-DALGB",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nGB 1-6: -300 (-2.5% of bankroll)\nGB 7-14: -338 (-2.9% of bankroll)\nGB 15+: -53 (-0.4% of bankroll)\nDAL 1-6: +357 (+3.0% of bankroll)\nDAL 7-14: +249 (+2.1% of bankroll)\nDAL 15+: +314 (+2.7% of bankroll)\nCollected $357 premium ($0 fees) | Paper margin over fair $35 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; DAL 7-14: DAL 0-0, Q0 0:00\nheld / resting\nGB 1-6: 657 / 0\nGB 7-14: 695 / 684\nGB 15+: 410 / 734\nDAL 1-6: 0 / 975\nDAL 7-14: 108 / 717\nDAL 15+: 43 / 1101\nPosted book 1.18 | Sold avg 1.095 | Worst now -226 | Cash free $2500\nAnchor age 0s | Last fill 200s ago",
+      "severity": "info"
     }
   ],
   "audits": [
