@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T12:16:19.701699Z",
+  "generated_at": "2026-10-18T12:18:36.825459Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -88.69,
         "exposure_text": "-$89",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 7:18am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T12:18:30Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 7:18am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 1-6",
@@ -63,12 +63,12 @@
         "resting": "527 @ 23-33c",
         "exposure": 61.31,
         "exposure_text": "+$61",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:45am CT, up to $50 in all",
-        "at": "2026-10-18T12:45:00Z",
+        "move": "Step price down 1c (23c to 22c)",
+        "when": "next bot check (no fill for 20+ min)",
+        "at": "2026-10-18T12:18:30Z",
         "stuck": false,
-        "also": "Also: price step",
-        "lag_note": "Price 23c is at its floor."
+        "also": "Also: paid balancing starts 7:45am CT",
+        "lag_note": "Steps to 22c at the next check."
       },
       {
         "side": "JAC by 7-14",
@@ -95,7 +95,7 @@
         "lines": [
           "Lagging (75+ behind the leader): HOU by 1-6, HOU by 7-14, HOU by 15+, JAC by 1-6, JAC by 7-14.",
           "HOU by 7-14: 248 behind. Price 15c matches the crowd.",
-          "JAC by 1-6: 248 behind. Price 23c is at its floor.",
+          "JAC by 1-6: 248 behind. Steps to 22c at the next check.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -192,18 +192,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T12:15:53Z"
+    "ts": "2026-10-18T12:17:54Z"
   },
   "posts": [
-    {
-      "id": "1792135174128-267022",
-      "ts": "2026-10-16T07:19:34Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nJAC 1-6: +0 (+0.0% of bankroll)\nJAC 7-14: +0 (+0.0% of bankroll)\nJAC 15+: +0 (+0.0% of bankroll)\nHOU 1-6: +0 (+0.0% of bankroll)\nHOU 7-14: +0 (+0.0% of bankroll)\nHOU 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nJAC 1-6: 0 / 527\nJAC 7-14: 0 / 489\nJAC 15+: 0 / 451\nHOU 1-6: 0 / 489\nHOU 7-14: 0 / 413\nHOU 15+: 0 / 327\nPosted book 1.22 | Sold avg 1.224 | Worst now +38 | Cash free $1250\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792136058110-b9a2b5",
       "ts": "2026-10-16T07:34:18Z",
@@ -3218,6 +3209,26 @@
       "source": "bot",
       "text": "Inactivity on W7-HOUJAC: 0 orders posted in 10 min while the market traded 713 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1792325834213-eff44f",
+      "ts": "2026-10-18T12:15:12Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 14: HOU by 1-6 x14 at 19c. Worst line -$187.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 14.0,
+        "fills": [
+          {
+            "side": "HOU by 1-6",
+            "price": 0.19,
+            "qty": 14.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3697,6 +3708,15 @@
       "source": "bot",
       "text": "+14 on HOU 1-6 @ 0.19 (maker)\nworst outcome now +36\nheld 0/0/248/14/0/150\nIf the game ends... you make\nJAC 1-6: +61 (+4.9% of bankroll)\nJAC 7-14: +61 (+4.9% of bankroll)\nJAC 15+: -187 (-14.9% of bankroll)\nHOU 1-6: +47 (+3.8% of bankroll)\nHOU 7-14: +61 (+4.9% of bankroll)\nHOU 15+: -89 (-7.1% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1792325782997-8fecfc",
+      "ts": "2026-10-18T12:16:22Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-HOUJAC): worst -186.69 vs floor -175.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
