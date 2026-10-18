@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T15:06:21.658779Z",
+  "generated_at": "2026-10-18T15:07:40.531615Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -52,12 +52,12 @@
         "exposure": 201.76,
         "exposure_text": "+$202",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 10:08am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T15:08:02Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T12:29:44Z",
-        "lag_note": "Steps to 12c if no fill by 10:08am CT."
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "DAL by 1-6",
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T15:05:46Z"
+    "ts": "2026-10-18T15:06:46Z"
   },
   "posts": [
     {
@@ -3784,6 +3784,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792336033783-7c3445",
+      "ts": "2026-10-18T15:07:13Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-DALGB): worst -448.85 vs floor -325.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792336033783-ed0ce5",
+      "ts": "2026-10-18T15:07:13Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-DALGB): held worst -448.85 (backstop -300) or lagging gap 657 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]

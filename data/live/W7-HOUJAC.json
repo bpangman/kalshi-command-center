@@ -1,10 +1,10 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T15:06:21.658779Z",
+  "generated_at": "2026-10-18T15:07:40.531615Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$14.",
+    "headline": "In game (Ingame). Worst line -$12.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,393, 390 resting. Worst line -$14. Game 50% done."
+          "In game (Ingame). Sold 2,400, 274 resting. Worst line -$12. Game 50% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "HOU by 1-6",
         "held": 465.0,
-        "resting": 54.1,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "HOU by 7-14",
         "held": 384.3,
-        "resting": 58.4,
+        "resting": 26.4,
         "target": null,
         "status": "even",
         "price": null
@@ -69,8 +69,8 @@
       },
       {
         "label": "JAC by 1-6",
-        "held": 427.0,
-        "resting": 9.1,
+        "held": 434.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "JAC by 7-14",
         "held": 458.6,
-        "resting": 20.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T15:06:06Z"
+    "ts": "2026-10-18T15:07:06Z"
   },
   "posts": [
-    {
-      "id": "1792191276829-42df23",
-      "ts": "2026-10-16T22:52:35Z",
-      "book": "W7-HOUJAC",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 53: JAC by 15+ x53 at 17c. Worst line -$44.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 53.0,
-        "fills": [
-          {
-            "side": "JAC by 15+",
-            "price": 0.17,
-            "qty": 53.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792192103077-0f5b3d",
       "ts": "2026-10-16T23:08:23Z",
@@ -3664,6 +3644,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792335986411-73dc6b",
+      "ts": "2026-10-18T15:04:45Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 72: HOU by 1-6 x32 at 31c, HOU by 1-6 x21 at 35c, HOU by 1-6 x19 at 33c. Worst line -$14.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 72.0,
+        "fills": [
+          {
+            "side": "HOU by 1-6",
+            "price": 0.31,
+            "qty": 32.0
+          },
+          {
+            "side": "HOU by 1-6",
+            "price": 0.35,
+            "qty": 21.0
+          },
+          {
+            "side": "HOU by 1-6",
+            "price": 0.33,
+            "qty": 19.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4358,6 +4368,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: Floor clamp on (floor -2.5% of slice, no cushion to spend)\nIf the game ends... you make\nJAC 1-6: +24 (+1.9% of bankroll)\nJAC 7-14: -8 (-0.6% of bankroll)\nJAC 15+: +75 (+6.0% of bankroll)\nHOU 1-6: -14 (-1.1% of bankroll)\nHOU 7-14: +67 (+5.3% of bankroll)\nHOU 15+: +168 (+13.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792336012677-522600",
+      "ts": "2026-10-18T15:06:52Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+34 on JAC 7-14 @ 0.23 (maker)\n+2 on JAC 7-14 @ 0.25 (maker)\n+23 on HOU 7-14 @ 0.17 (maker)\n+4 on HOU 1-6 @ 0.26 (maker)\n+2 on HOU 1-6 @ 0.29 (maker)\n+38 on HOU 1-6 @ 0.31 (maker)\n+17 on HOU 7-14 @ 0.19 (maker)\n+4 on HOU 7-14 @ 0.21 (maker)\n+19 on HOU 1-6 @ 0.33 (maker)\n+21 on HOU 1-6 @ 0.35 (maker)\n+7 on JAC 1-6 @ 0.25 (maker)\nworst outcome now +21\nheld 434/459/375/465/384/283\nIf the game ends... you make\nJAC 1-6: +19 (+1.5% of bankroll)\nJAC 7-14: -6 (-0.5% of bankroll)\nJAC 15+: +77 (+6.2% of bankroll)\nHOU 1-6: -12 (-1.0% of bankroll)\nHOU 7-14: +68 (+5.5% of bankroll)\nHOU 15+: +170 (+13.6% of bankroll)",
       "severity": "warn"
     }
   ]
