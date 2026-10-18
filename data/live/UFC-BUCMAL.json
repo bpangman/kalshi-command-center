@@ -1,249 +1,52 @@
 {
   "key": "UFC-BUCMAL",
-  "generated_at": "2026-10-18T02:11:40.258159Z",
+  "generated_at": "2026-10-18T02:13:02.934377Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Full ladder posted",
-    "headline": "Full ladder posted for the fight about 9:55pm CT. Worst line -$52, target -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "Buckley by Submission",
-        "resting": "none",
-        "exposure": 22.28,
-        "exposure_text": "+$22",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at 9:35pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-18T02:09:55Z"
-      },
-      {
-        "side": "Buckley by KO/TKO",
-        "resting": "none",
-        "exposure": 24.28,
-        "exposure_text": "+$24",
-        "move": "Next batch 750 contracts",
-        "when": "next bot check (resting 0 is under 375)",
-        "at": "2026-10-18T02:10:50Z",
-        "stuck": false,
-        "last_fill": "2026-10-18T02:04:28Z"
-      },
-      {
-        "side": "Malott by KO/TKO",
-        "resting": "80 @ 20c",
-        "exposure": 28.28,
-        "exposure_text": "+$28",
-        "move": "Next batch 750 contracts",
-        "when": "next bot check (resting 80 is under 375)",
-        "at": "2026-10-18T02:10:50Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts 9:35pm CT",
-        "last_fill": "2026-10-17T15:35:44Z"
-      },
-      {
-        "side": "Buckley by Decision",
-        "resting": "80 @ 14c",
-        "exposure": 33.56,
-        "exposure_text": "+$34",
-        "move": "Next batch 750 contracts",
-        "when": "next bot check (resting 80 is under 375)",
-        "at": "2026-10-18T02:10:50Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts 9:35pm CT",
-        "last_fill": "2026-10-18T01:18:58Z",
-        "lag_note": "Steps to 13c if the crowd trades lower."
-      },
-      {
-        "side": "Draw / No Contest",
-        "resting": "15 @ 2c",
-        "exposure": 37.28,
-        "exposure_text": "+$37",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at 9:35pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-17T23:19:14Z"
-      },
-      {
-        "side": "Malott by Decision",
-        "resting": "none",
-        "exposure": 67.28,
-        "exposure_text": "+$67",
-        "move": "Next batch 750 contracts",
-        "when": "next bot check (resting 0 is under 375)",
-        "at": "2026-10-18T02:10:50Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts 9:35pm CT",
-        "last_fill": "2026-10-18T01:18:58Z",
-        "lag_note": "Nothing resting; catch-up batch due."
-      },
-      {
-        "side": "Malott by Submission",
-        "resting": "none",
-        "exposure": 67.28,
-        "exposure_text": "+$67",
-        "move": "Next batch 750 contracts",
-        "when": "next bot check (resting 0 is under 375)",
-        "at": "2026-10-18T02:10:50Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts 9:35pm CT",
-        "last_fill": "2026-10-18T01:18:58Z",
-        "lag_note": "Nothing resting; catch-up batch due."
-      }
-    ],
+    "phase": "Fight on",
+    "headline": "Fight on. Worst line -$43.",
+    "confidence": "medium",
+    "confidence_note": "During the fight the steps follow the action.",
+    "checks_every_s": 10,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 9:55pm CT. Sold 1,117, 175 resting. Worst line -$52 (target -$150)."
+          "Fight on. Sold 1,197. Worst line -$43. Bout in, round 0."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Buckley by Decision, Malott by Decision, Malott by Submission.",
-          "Malott by Decision: 43 behind. Nothing resting; catch-up batch due.",
-          "Malott by Submission: 43 behind. Nothing resting; catch-up batch due.",
-          "A price step needs 20 min with no fill and the crowd paying less."
+          "No lag rule in the fight; short-lived rows follow the live price."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "The full ladder is out.",
-          "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate open: worst line -$52 is better than -$100.",
-          "Batches used: 7 (max 3 per bucket)."
+          "Short rungs (about 30s) are priced off the live moneyline, inside the loss floor."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if a bucket's line falls under -$200.",
-          "Paid balancing starts 9:35pm CT: worst line to -$150, up to $100.",
-          "Even-up 8:55pm CT; last-resort take 9:35pm CT; handoff to the fight 9:52pm CT.",
-          "The fight start is an estimate and can move."
+          "Everything is pulled when the fight ends or the winner's price passes 0.95."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: the full ladder, extra batches, price steps and paid balancing run by rule. The start time can shift."
+          "Yes, it refreshes every 10s and pulls on a finish."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-18T02:35:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$150."
-      },
-      {
-        "at": "2026-10-18T02:35:00Z",
-        "label": "Last-resort take window",
-        "detail": "Bot may sell to close the last gaps."
-      },
-      {
-        "at": "2026-10-18T02:52:00Z",
-        "label": "Handoff to the fight",
-        "detail": "In-fight engine takes over."
-      }
-    ],
-    "sides": [
-      {
-        "label": "Buckley by Decision",
-        "held": 33.7,
-        "resting": 80.0,
-        "target": 1500.0,
-        "status": "lagging",
-        "price": 0.14
-      },
-      {
-        "label": "Buckley by KO/TKO",
-        "held": 43.0,
-        "resting": 0.0,
-        "target": 1500.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Buckley by Submission",
-        "held": 45.0,
-        "resting": 0.0,
-        "target": 30.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Malott by Decision",
-        "held": 0.0,
-        "resting": 0.0,
-        "target": 1500.0,
-        "status": "lagging",
-        "price": null
-      },
-      {
-        "label": "Malott by KO/TKO",
-        "held": 39.0,
-        "resting": 80.0,
-        "target": 1500.0,
-        "status": "even",
-        "price": 0.2
-      },
-      {
-        "label": "Malott by Submission",
-        "held": 0.0,
-        "resting": 0.0,
-        "target": 1500.0,
-        "status": "lagging",
-        "price": null
-      },
-      {
-        "label": "Draw / No Contest",
-        "held": 30.0,
-        "resting": 15.0,
-        "target": 30.0,
-        "status": "even",
-        "price": 0.02
-      }
-    ],
+    "next_steps": [],
+    "sides": [],
     "book": "UFC-BUCMAL",
-    "ts": "2026-10-18T02:10:50Z"
+    "ts": "2026-10-18T02:12:51Z"
   },
   "posts": [
-    {
-      "id": "1792172474030-be9502",
-      "ts": "2026-10-16T17:41:14Z",
-      "book": "UFC-BUCMAL",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 9:55pm CT. Full ladder Sat 9:00am CT. Worst line -$606. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792172998312-1d95b5",
-      "ts": "2026-10-16T17:49:46Z",
-      "book": "UFC-BUCMAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot note: PRINCIPLES: expiry extend order id kept BUCKOTKODQ 0.32: 01a140e6-4ff0-7211-90e3-ff81f773802c",
-      "severity": "info",
-      "title": "Bot note"
-    },
-    {
-      "id": "1792173904959-4adae9",
-      "ts": "2026-10-16T18:05:04Z",
-      "book": "UFC-BUCMAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792174013593-2332da",
       "ts": "2026-10-16T18:06:53Z",
@@ -3314,6 +3117,51 @@
       "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.30 winner_mid=0.555",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792289510849-1d0e12",
+      "ts": "2026-10-18T02:11:50Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Full ladder posted to Fight on.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792289510849-5a943a",
+      "ts": "2026-10-18T02:11:50Z",
+      "book": "UFC-BUCMAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Fight on. Worst line -$43.",
+      "severity": "info",
+      "title": "Plan updated: Fight on"
+    },
+    {
+      "id": "1792289530963-5e5804",
+      "ts": "2026-10-18T02:11:43Z",
+      "book": "UFC-BUCMAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 160: Buckley by Submission x80 at 3c, Malott by Submission x80 at 12c. Worst line -$43.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 160.0,
+        "fills": [
+          {
+            "side": "Buckley by Submission",
+            "price": 0.03,
+            "qty": 80.0
+          },
+          {
+            "side": "Malott by Submission",
+            "price": 0.12,
+            "qty": 80.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4089,6 +3937,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+40 on MALDEC @ 0.22 (taker)\n+40 on MALSUB @ 0.12 (taker)\n+6 on BUCDEC @ 0.12 (taker)\n+4 on BUCKOTKODQ @ 0.30 (taker)\n+6 on BUCSUB @ 0.03 (taker)\n+80 on BUCKOTKODQ @ 0.30 (maker)\n+80 on BUCSUB @ 0.03 (maker)\nworst outcome now +2\nheld 119/119/40/39/40/40/30",
+      "severity": "warn"
+    },
+    {
+      "id": "1792289543121-7acd61",
+      "ts": "2026-10-18T02:12:23Z",
+      "book": "UFC-BUCMAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "INFIGHT floor elevator: first post on Joaquin Buckley vs Mike Malott: Method of Victory, floor $-43.12",
       "severity": "warn"
     }
   ]
