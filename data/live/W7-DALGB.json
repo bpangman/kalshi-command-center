@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T17:32:31.190727Z",
+  "generated_at": "2026-10-18T17:33:55.180178Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -39,12 +39,12 @@
         "exposure": 172.88,
         "exposure_text": "+$173",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 12:34pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T17:34:51Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T15:07:49Z",
-        "lag_note": "Steps to 12c if no fill by 12:34pm CT."
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "GB by 7-14",
@@ -77,11 +77,11 @@
         "exposure": 215.43,
         "exposure_text": "+$215",
         "move": "Hold price at 17c",
-        "when": "crowd pays 17.6c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (15c)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "lag_note": "Price 17c matches the crowd."
+        "lag_note": "Price 17c is at its floor."
       }
     ],
     "sections": [
@@ -96,7 +96,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 7-14, GB by 15+.",
           "DAL by 1-6: 657 behind. Price 22c matches the crowd.",
-          "DAL by 7-14: 657 behind. Price 17c matches the crowd.",
+          "DAL by 7-14: 657 behind. Price 17c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T17:31:49Z"
+    "ts": "2026-10-18T17:33:50Z"
   },
   "posts": [
-    {
-      "id": "1792159136884-e98361",
-      "ts": "2026-10-16T13:58:56Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,375 resting. Next: Paid balancing starts, Sun 6:36pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792160043894-bcbb76",
       "ts": "2026-10-16T14:14:03Z",
@@ -3295,6 +3285,16 @@
       "text": "Quiet for 15 min. 4,293 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792344830559-391a58",
+      "ts": "2026-10-18T17:33:37Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "DAL by 7-14 price not lowered: the next cent is under the crowd price, so it stays at 17c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
