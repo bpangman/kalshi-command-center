@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T03:30:33.504394Z",
+  "generated_at": "2026-10-18T03:31:54.030148Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,16 +22,16 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "583 @ 15-24c",
+        "resting": "628 @ 14-24c",
         "exposure": -145.17,
         "exposure_text": "-$145",
-        "move": "Step price down 1c (15c to 14c)",
-        "when": "if no fill by 10:38pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-18T03:38:40Z",
+        "move": "Hold price at 14c",
+        "when": "next cent is under the crowd price (13c)",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
         "last_fill": "2026-10-16T17:35:12Z",
-        "lag_note": "Steps to 14c if no fill by 10:38pm CT."
+        "lag_note": "Price 14c is at its floor."
       },
       {
         "side": "GB by 7-14",
@@ -64,11 +64,11 @@
         "exposure": 171.59,
         "exposure_text": "+$172",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T03:29:58Z",
+        "when": "if no fill by 10:40pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T03:40:46Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
-        "lag_note": "Steps to 12c at the next check."
+        "lag_note": "Steps to 12c if no fill by 10:40pm CT."
       },
       {
         "side": "DAL by 7-14",
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T03:29:45Z"
+    "ts": "2026-10-18T03:31:46Z"
   },
   "posts": [
     {
@@ -2731,6 +2731,26 @@
       "text": "Building toward kickoff Sun 7:20pm CT. Worst line -$378, goal -$150. Next: Paid balancing starts, Sun 6:35pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792294245869-fd48be",
+      "ts": "2026-10-18T03:28:42Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 512: GB by 1-6 x512 at 22c. Worst line -$378.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 512.0,
+        "fills": [
+          {
+            "side": "GB by 1-6",
+            "price": 0.22,
+            "qty": 512.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
