@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T13:07:50.689990Z",
+  "generated_at": "2026-10-18T13:09:06.214559Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -15,7 +15,7 @@
         "exposure": -116.68,
         "exposure_text": "-$117",
         "move": "Next wave 148 contracts",
-        "when": "waits until worst loss is -$107 or better (now -$117)",
+        "when": "waits until worst loss is -$104 or better (now -$117)",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-18T13:03:59Z"
@@ -26,7 +26,7 @@
         "exposure": -89.68,
         "exposure_text": "-$90",
         "move": "Next wave 123 contracts",
-        "when": "when resting drops under 94 (now 226) and worst loss is -$107 or better",
+        "when": "when resting drops under 94 (now 226) and worst loss is -$104 or better",
         "at": null,
         "stuck": true,
         "also": "Also: paid balancing",
@@ -38,7 +38,7 @@
         "exposure": -78.72,
         "exposure_text": "-$79",
         "move": "Next wave 148 contracts",
-        "when": "when resting drops under 112 (now 136) and worst loss is -$107 or better",
+        "when": "when resting drops under 112 (now 136) and worst loss is -$104 or better",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -50,12 +50,12 @@
         "exposure": 8.32,
         "exposure_text": "+$8",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 8:09am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T13:09:13Z",
         "stuck": false,
         "also": "Also: next wave if resting drops under 62",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 8:09am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 7-14",
@@ -102,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$107 (now -$117).",
+          "Gate closed: batches wait for the worst line to reach -$104 (now -$117).",
           "Closest: HOU by 1-6, 104 resting vs trigger 112.",
           "Batches used: none (max 3 per side)."
         ]
@@ -111,7 +111,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$107, worst line -$117; spent $0 of $50.",
+          "Paid balancing is running: plan -$104, worst line -$117; spent $0 of $50.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -180,7 +180,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T13:07:15Z"
+    "ts": "2026-10-18T13:08:15Z"
   },
   "posts": [
     {
