@@ -1,30 +1,30 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T01:58:58.442339Z",
+  "generated_at": "2026-10-18T02:00:26.090794Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$108, goal -$75.",
+    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$154, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "JAC by 15+",
-        "resting": "344 @ 17-27c",
-        "exposure": -108.23,
-        "exposure_text": "-$108",
-        "move": "Next wave 187 contracts",
-        "when": "when resting drops under 94 (now 344) and worst loss is -$100 or better",
+        "resting": "288 @ 17-27c",
+        "exposure": -154.37,
+        "exposure_text": "-$154",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$150 (now -$154)",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-17T17:37:29Z"
+        "stuck": false,
+        "last_fill": "2026-10-18T01:57:53Z"
       },
       {
         "side": "HOU by 1-6",
         "resting": "489 @ 22-29c",
-        "exposure": 22.17,
-        "exposure_text": "+$22",
+        "exposure": 31.62,
+        "exposure_text": "+$32",
         "move": "Hold price at 22c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -35,8 +35,8 @@
       {
         "side": "HOU by 15+",
         "resting": "474 @ 11-21c",
-        "exposure": 22.17,
-        "exposure_text": "+$22",
+        "exposure": 31.62,
+        "exposure_text": "+$32",
         "move": "Hold price at 11c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -47,8 +47,8 @@
       {
         "side": "HOU by 7-14",
         "resting": "413 @ 18-25c",
-        "exposure": 22.17,
-        "exposure_text": "+$22",
+        "exposure": 31.62,
+        "exposure_text": "+$32",
         "move": "Hold price at 18c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -59,8 +59,8 @@
       {
         "side": "JAC by 1-6",
         "resting": "527 @ 24-33c",
-        "exposure": 22.17,
-        "exposure_text": "+$22",
+        "exposure": 31.62,
+        "exposure_text": "+$32",
         "move": "Hold price at 24c",
         "when": "needs 50+ crowd trades under 24c (now 22)",
         "at": null,
@@ -71,8 +71,8 @@
       {
         "side": "JAC by 7-14",
         "resting": "489 @ 22-28c",
-        "exposure": 22.17,
-        "exposure_text": "+$22",
+        "exposure": 31.62,
+        "exposure_text": "+$32",
         "move": "Hold price at 22c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -85,15 +85,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 130, 2,736 resting. Worst line -$108 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 186, 2,680 resting. Worst line -$154 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): HOU by 1-6, HOU by 7-14, HOU by 15+, JAC by 1-6, JAC by 7-14.",
-          "HOU by 1-6: 130 behind. No crowd trade data yet.",
-          "HOU by 7-14: 130 behind. No crowd trade data yet.",
+          "HOU by 1-6: 186 behind. No crowd trade data yet.",
+          "HOU by 7-14: 186 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -101,15 +101,15 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$108).",
-          "Closest: JAC by 15+, 344 resting vs trigger 94.",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$154).",
+          "Closest: HOU by 1-6, 489 resting vs trigger 112.",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
+          "Backstop ON: JAC by 15+ stopped adding until worst line is above -$150 (now -$154).",
           "Paid balancing starts Sun 7:45am CT: worst line to -$75 by Sun 8:20am CT, up to $50.",
           "At Sun 8:00am CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff Sun 8:30am CT: the in-game engine takes over."
@@ -182,15 +182,15 @@
       },
       {
         "label": "JAC by 15+",
-        "held": 130.4,
-        "resting": 343.6,
+        "held": 186.0,
+        "resting": 288.0,
         "target": 375.0,
         "status": "heavy",
         "price": 0.17
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T01:58:25Z"
+    "ts": "2026-10-18T02:00:25Z"
   },
   "posts": [
     {
@@ -2609,6 +2609,16 @@
       "text": "Backstop on: worst line -$154 is under -$150. JAC by 15+ stops adding.",
       "severity": "warn",
       "title": "Backstop"
+    },
+    {
+      "id": "1792288765514-36869a",
+      "ts": "2026-10-18T01:59:25Z",
+      "book": "W7-HOUJAC",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Sun 8:30am CT. Worst line -$154, goal -$75. Next: Paid balancing starts, Sun 7:45am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -2718,6 +2728,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-HOUJAC): lagging bucket priced over the crowd: HOU7TO14 ask 0.18 vs clearing 0.148 for 177 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792288785411-9be067",
+      "ts": "2026-10-18T01:59:45Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+56 on JAC 15+ @ 0.17 (maker)\nworst outcome now +60\nheld 0/0/186/0/0/0\nIf the game ends... you make\nJAC 1-6: +32 (+2.5% of bankroll)\nJAC 7-14: +32 (+2.5% of bankroll)\nJAC 15+: -154 (-12.3% of bankroll)\nHOU 1-6: +32 (+2.5% of bankroll)\nHOU 7-14: +32 (+2.5% of bankroll)\nHOU 15+: +32 (+2.5% of bankroll)",
       "severity": "warn"
     }
   ]
