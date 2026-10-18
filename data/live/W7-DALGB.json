@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T21:16:31.936429Z",
+  "generated_at": "2026-10-18T21:17:53.971326Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -151.29,
         "exposure_text": "-$151",
         "move": "Step price down 1c (18c to 17c)",
-        "when": "if no fill by 4:35pm CT (FILLFAIR: 20 min with no fill)",
-        "at": "2026-10-18T21:35:08Z",
+        "when": "if no fill by 4:36pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T21:36:08Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "last_fill": "2026-10-18T21:15:08Z",
-        "lag_note": "Steps to 17c if no fill by 4:35pm CT."
+        "last_fill": "2026-10-18T21:16:08Z",
+        "lag_note": "Steps to 17c if no fill by 4:36pm CT."
       },
       {
         "side": "GB by 15+",
@@ -43,7 +43,7 @@
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "last_fill": "2026-10-18T16:16:56Z",
+        "last_fill": "2026-10-18T21:16:19Z",
         "lag_note": "Price 14c is at its floor."
       },
       {
@@ -66,7 +66,7 @@
         "exposure_text": "+$271",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T21:16:25Z",
+        "at": "2026-10-18T21:17:26Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T15:07:49Z",
@@ -194,29 +194,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T21:16:25Z"
+    "ts": "2026-10-18T21:17:26Z"
   },
   "posts": [
-    {
-      "id": "1792176686709-071cc2",
-      "ts": "2026-10-16T18:51:26Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792177593544-ee2b8a",
-      "ts": "2026-10-16T19:06:33Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,020 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792178500288-0740a8",
       "ts": "2026-10-16T19:21:40Z",
@@ -3333,6 +3313,26 @@
         "contracts": 267.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1792358246225-8d9775",
+      "ts": "2026-10-18T21:17:26Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: GB by 7-14 at 18c (550 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792358266411-9e7479",
+      "ts": "2026-10-18T21:17:26Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: GB by 15+ at 14c (18 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -4135,6 +4135,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+45 on GB 7-14 @ 0.18 (maker)\nworst outcome now +40\nheld 657/154/399/0/0/43\nIf the game ends... you make\nGB 1-6: -417 (-3.5% of bankroll)\nGB 7-14: +85 (+0.7% of bankroll)\nGB 15+: -160 (-1.3% of bankroll)\nDAL 1-6: +240 (+2.0% of bankroll)\nDAL 7-14: +240 (+2.0% of bankroll)\nDAL 15+: +197 (+1.7% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792358245986-e81980",
+      "ts": "2026-10-18T21:17:25Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+135 on GB 7-14 @ 0.18 (maker)\n+10 on GB 15+ @ 0.14 (maker)\nworst outcome now -237\nheld 657/550/410/0/108/43\nIf the game ends... you make\nGB 1-6: -326 (-2.8% of bankroll)\nGB 7-14: -219 (-1.9% of bankroll)\nGB 15+: -79 (-0.7% of bankroll)\nDAL 1-6: +331 (+2.8% of bankroll)\nDAL 7-14: +223 (+1.9% of bankroll)\nDAL 15+: +288 (+2.4% of bankroll)",
       "severity": "warn"
     }
   ]
