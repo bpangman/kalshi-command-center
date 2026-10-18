@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T12:57:47.478547Z",
+  "generated_at": "2026-10-18T12:59:02.737771Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame balancing",
@@ -15,7 +15,7 @@
         "exposure": -124.6,
         "exposure_text": "-$125",
         "move": "Next wave 187 contracts",
-        "when": "when resting drops under 94 (now 226) and worst loss is -$132 or better",
+        "when": "when resting drops under 94 (now 226) and worst loss is -$129 or better",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-18T08:49:58Z"
@@ -26,7 +26,7 @@
         "exposure": -113.64,
         "exposure_text": "-$114",
         "move": "Next wave 225 contracts",
-        "when": "when resting drops under 112 (now 187) and worst loss is -$132 or better",
+        "when": "when resting drops under 112 (now 136) and worst loss is -$129 or better",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -38,12 +38,12 @@
         "exposure": -26.6,
         "exposure_text": "-$27",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 7:58am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T12:58:55Z",
         "stuck": false,
         "also": "Also: next wave if resting drops under 62",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 7:58am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 1-6",
@@ -60,7 +60,7 @@
       },
       {
         "side": "HOU by 7-14",
-        "resting": "400 @ 15-20c",
+        "resting": "342 @ 15-20c",
         "exposure": 123.4,
         "exposure_text": "+$123",
         "move": "Hold price at 15c",
@@ -72,7 +72,7 @@
       },
       {
         "side": "JAC by 1-6",
-        "resting": "388 @ 23-25c",
+        "resting": "336 @ 23-25c",
         "exposure": 123.4,
         "exposure_text": "+$123",
         "move": "Hold price at 23c",
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 8:30am CT. Sold 726, 1,775 resting. Worst line -$125 (goal -$75)."
+          "Pregame balancing, kickoff 8:30am CT. Sold 726, 1,652 resting. Worst line -$125 (goal -$75)."
         ]
       },
       {
@@ -103,8 +103,8 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$125 is better than -$132.",
-          "Closest: JAC by 7-14, 187 resting vs trigger 112.",
+          "Gate open: worst line -$125 is better than -$129.",
+          "Closest: JAC by 7-14, 136 resting vs trigger 112.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -112,7 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$132, worst line -$125; spent $0 of $50.",
+          "Paid balancing is running: plan -$129, worst line -$125; spent $0 of $50.",
           "At 8:00am CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
@@ -148,7 +148,7 @@
       {
         "label": "HOU by 7-14",
         "held": 0.0,
-        "resting": 362.0,
+        "resting": 342.0,
         "target": 375.0,
         "status": "lagging",
         "price": 0.15
@@ -164,7 +164,7 @@
       {
         "label": "JAC by 1-6",
         "held": 0.0,
-        "resting": 388.0,
+        "resting": 336.0,
         "target": 450.0,
         "status": "lagging",
         "price": 0.23
@@ -172,7 +172,7 @@
       {
         "label": "JAC by 7-14",
         "held": 237.0,
-        "resting": 187.0,
+        "resting": 136.0,
         "target": 450.0,
         "status": "even",
         "price": 0.2
@@ -187,7 +187,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T12:57:10Z"
+    "ts": "2026-10-18T12:58:11Z"
   },
   "posts": [
     {
