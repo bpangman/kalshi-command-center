@@ -1,10 +1,10 @@
 {
   "key": "W7-BUFLV",
-  "generated_at": "2026-10-18T22:56:57.937266Z",
+  "generated_at": "2026-10-18T22:58:18.266498Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$2.",
+    "headline": "In game (Ingame). Worst line +$18.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,252, 732 resting. Worst line +$2. Game 80% done. Bot is slow (checks every 19s, set for 5s)."
+          "In game (Ingame). Sold 2,356, 600 resting. Worst line +$18. Game 84% done. Bot is slow (checks every 20s, set for 5s)."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "BUF by 1-6",
-        "held": 468.9,
-        "resting": 4.0,
+        "held": 469.9,
+        "resting": 8.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,15 +62,15 @@
       {
         "label": "BUF by 15+",
         "held": 357.5,
-        "resting": 111.4,
+        "resting": 54.9,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "LV by 1-6",
-        "held": 411.8,
-        "resting": 82.7,
+        "held": 514.0,
+        "resting": 1.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "LV by 7-14",
         "held": 437.8,
-        "resting": 56.0,
+        "resting": 57.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "LV by 15+",
         "held": 36.5,
-        "resting": 478.0,
+        "resting": 479.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-BUFLV",
-    "ts": "2026-10-18T22:56:08Z"
+    "ts": "2026-10-18T22:58:08Z"
   },
   "posts": [
     {
@@ -1471,6 +1471,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792364281660-69972f",
+      "ts": "2026-10-18T22:58:01Z",
+      "book": "W7-BUFLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
