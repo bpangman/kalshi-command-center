@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T11:45:37.808973Z",
+  "generated_at": "2026-10-18T11:47:55.082426Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -91.34,
         "exposure_text": "-$91",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 6:48am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T11:48:01Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 6:48am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 1-6",
@@ -63,11 +63,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 6:48am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T11:48:01Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 23c if no fill by 6:48am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "JAC by 7-14",
@@ -191,19 +191,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T11:44:39Z"
+    "ts": "2026-10-18T11:47:41Z"
   },
   "posts": [
-    {
-      "id": "1792129710537-b4d0f9",
-      "ts": "2026-10-16T05:48:30Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792130617568-d2d286",
       "ts": "2026-10-16T06:03:37Z",
@@ -3218,6 +3208,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nJAC 1-6: +59 (+4.7% of bankroll)\nJAC 7-14: +59 (+4.7% of bankroll)\nJAC 15+: -189 (-15.1% of bankroll)\nHOU 1-6: +59 (+4.7% of bankroll)\nHOU 7-14: +59 (+4.7% of bankroll)\nHOU 15+: -91 (-7.3% of bankroll)\nCollected $59 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nEvent: JAC 7-14: JAC 0-0, Q0 0:00; HOU 7-14: HOU 0-0, Q0 0:00\nheld / resting\nJAC 1-6: 0 / 527\nJAC 7-14: 0 / 489\nJAC 15+: 248 / 226\nHOU 1-6: 0 / 489\nHOU 7-14: 0 / 413\nHOU 15+: 150 / 324\nPosted book 1.21 | Sold avg 1.152 | Worst now +45 | Cash free $1250\nAnchor age 0s | Last fill 9601s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792323940171-9d9634",
+      "ts": "2026-10-18T11:45:40Z",
+      "book": "W7-HOUJAC",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,468 resting. Next: Paid balancing starts, 7:45am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
