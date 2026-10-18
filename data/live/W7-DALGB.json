@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T12:25:29.873581Z",
+  "generated_at": "2026-10-18T12:27:46.829695Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "GB by 1-6",
-        "resting": "393 @ 25-32c",
+        "resting": "none",
         "exposure": -449.67,
         "exposure_text": "-$450",
         "move": "Stops adding (backstop)",
@@ -51,12 +51,12 @@
         "resting": "975 @ 22-31c",
         "exposure": 207.24,
         "exposure_text": "+$207",
-        "move": "Hold price at 22c",
-        "when": "next cent is under the crowd price (21.3c)",
-        "at": null,
+        "move": "Step price down 1c (22c to 21c)",
+        "when": "if no fill by 7:29am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T12:29:19Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "lag_note": "Price 22c is at its floor."
+        "lag_note": "Steps to 21c if no fill by 7:29am CT."
       },
       {
         "side": "DAL by 15+",
@@ -87,14 +87,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,057, 4,706 resting. Worst line -$450 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,057, 4,313 resting. Worst line -$450 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 7-14, GB by 15+.",
-          "DAL by 1-6: 657 behind. Price 22c is at its floor.",
+          "DAL by 1-6: 657 behind. Steps to 21c if no fill by 7:29am CT.",
           "DAL by 7-14: 657 behind. Price 17c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -169,10 +169,10 @@
       {
         "label": "GB by 1-6",
         "held": 656.9,
-        "resting": 393.1,
+        "resting": 0.0,
         "target": 900.0,
         "status": "heavy",
-        "price": 0.25
+        "price": null
       },
       {
         "label": "GB by 7-14",
@@ -192,29 +192,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T12:24:37Z"
+    "ts": "2026-10-18T12:27:38Z"
   },
   "posts": [
-    {
-      "id": "1792132834236-c47d83",
-      "ts": "2026-10-16T06:40:34Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,375 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792133740831-9149c0",
-      "ts": "2026-10-16T06:55:40Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,375 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792134647855-a2a601",
       "ts": "2026-10-16T07:10:47Z",
@@ -3258,6 +3238,26 @@
       "text": "Quiet for 15 min. 4,706 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792326458681-111c35",
+      "ts": "2026-10-18T12:27:24Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792326458682-f083bc",
+      "ts": "2026-10-18T12:27:35Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$450 is under -$300. GB by 1-6 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
@@ -3655,6 +3655,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+100 on GB 1-6 @ 0.25 (maker)\nworst outcome now +84\nheld 657/20/380/0/0/0\nIf the game ends... you make\nGB 1-6: -450 (-3.8% of bankroll)\nGB 7-14: +187 (+1.6% of bankroll)\nGB 15+: -173 (-1.5% of bankroll)\nDAL 1-6: +207 (+1.7% of bankroll)\nDAL 7-14: +207 (+1.7% of bankroll)\nDAL 15+: +207 (+1.7% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792326445016-e28064",
+      "ts": "2026-10-18T12:27:25Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
