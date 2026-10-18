@@ -1,425 +1,52 @@
 {
   "key": "UFC-BARDAU",
-  "generated_at": "2026-10-18T00:50:32.479092Z",
+  "generated_at": "2026-10-18T00:56:57.146657Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Full ladder posted",
-    "headline": "Full ladder posted for the fight about 8:10pm CT. Worst line -$175, target -$100.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "Barriault by Decision",
-        "resting": "none",
-        "exposure": -175.02,
-        "exposure_text": "-$175",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$125 (now -$175)",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-16T19:32:11Z"
-      },
-      {
-        "side": "Barriault by KO/TKO",
-        "resting": "none",
-        "exposure": -163.38,
-        "exposure_text": "-$163",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$125 (now -$163)",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-18T00:02:40Z"
-      },
-      {
-        "side": "Daukaus by Submission",
-        "resting": "none",
-        "exposure": -153.38,
-        "exposure_text": "-$153",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$125 (now -$153)",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-18T00:35:30Z"
-      },
-      {
-        "side": "Daukaus by KO/TKO",
-        "resting": "256 @ 24c",
-        "exposure": 41.43,
-        "exposure_text": "+$41",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:50pm CT, up to $100 in all",
-        "at": "2026-10-18T00:50:00Z",
-        "stuck": false,
-        "also": "Also: price step 8:06pm CT",
-        "last_fill": "2026-10-18T00:46:47Z",
-        "lag_note": "Steps to 23c if no fill by 8:06pm CT."
-      },
-      {
-        "side": "Daukaus by Decision",
-        "resting": "260 @ 18c",
-        "exposure": 44.62,
-        "exposure_text": "+$45",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:50pm CT, up to $100 in all",
-        "at": "2026-10-18T00:50:00Z",
-        "stuck": false,
-        "also": "Also: price step 8:06pm CT",
-        "last_fill": "2026-10-18T00:46:47Z",
-        "lag_note": "Steps to 17c if no fill by 8:06pm CT."
-      },
-      {
-        "side": "Barriault by Submission",
-        "resting": "550 @ 5c",
-        "exposure": 94.62,
-        "exposure_text": "+$95",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:50pm CT, up to $100 in all",
-        "at": "2026-10-18T00:50:00Z",
-        "stuck": false,
-        "also": "Also: holds price",
-        "last_fill": "2026-10-18T00:46:47Z"
-      },
-      {
-        "side": "Draw / No Contest",
-        "resting": "30 @ 3c",
-        "exposure": 244.62,
-        "exposure_text": "+$245",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at 7:50pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-15T04:37:39Z"
-      }
-    ],
+    "phase": "Fight on",
+    "headline": "Fight on. Worst line -$141.",
+    "confidence": "medium",
+    "confidence_note": "During the fight the steps follow the action.",
+    "checks_every_s": 10,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 8:10pm CT. Sold 2,149, 1,096 resting. Worst line -$175 (target -$100)."
+          "Fight on. Sold 2,494. Worst line -$141. Bout in, round 0."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Daukaus by Decision, Daukaus by KO/TKO.",
-          "Daukaus by Decision: 220 behind. Steps to 17c if no fill by 8:06pm CT.",
-          "Daukaus by KO/TKO: 216 behind. Steps to 23c if no fill by 8:06pm CT.",
-          "A price step needs 20 min with no fill and the crowd paying less."
+          "No lag rule in the fight; short-lived rows follow the live price."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "The full ladder is out.",
-          "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$175).",
-          "Batches used: none (max 3 per bucket)."
+          "Short rungs (about 30s) are priced off the live moneyline, inside the loss floor."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: Barriault by KO/TKO, Barriault by Decision, Daukaus by Submission stopped adding until worst line is above -$125.",
-          "Paid balancing starts 7:50pm CT: worst line to -$100, up to $100.",
-          "Even-up 7:10pm CT; last-resort take 7:50pm CT; handoff to the fight 8:07pm CT.",
-          "The fight start is an estimate and can move."
+          "Everything is pulled when the fight ends or the winner's price passes 0.95."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: the full ladder, extra batches, price steps and paid balancing run by rule. The start time can shift."
+          "Yes, it refreshes every 10s and pulls on a finish."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-18T00:50:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$100."
-      },
-      {
-        "at": "2026-10-18T00:50:00Z",
-        "label": "Last-resort take window",
-        "detail": "Bot may sell to close the last gaps."
-      },
-      {
-        "at": "2026-10-18T01:07:00Z",
-        "label": "Handoff to the fight",
-        "detail": "In-fight engine takes over."
-      }
-    ],
-    "sides": [
-      {
-        "label": "Barriault by Decision",
-        "held": 419.6,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "heavy",
-        "price": null
-      },
-      {
-        "label": "Barriault by KO/TKO",
-        "held": 408.0,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Barriault by Submission",
-        "held": 150.0,
-        "resting": 550.0,
-        "target": 700.0,
-        "status": "even",
-        "price": 0.05
-      },
-      {
-        "label": "Daukaus by Decision",
-        "held": 200.0,
-        "resting": 260.0,
-        "target": 700.0,
-        "status": "lagging",
-        "price": 0.18
-      },
-      {
-        "label": "Daukaus by KO/TKO",
-        "held": 203.2,
-        "resting": 256.0,
-        "target": 700.0,
-        "status": "lagging",
-        "price": 0.24
-      },
-      {
-        "label": "Daukaus by Submission",
-        "held": 398.0,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "even",
-        "price": null
-      },
-      {
-        "label": "Draw / No Contest",
-        "held": 0.0,
-        "resting": 30.0,
-        "target": 30.0,
-        "status": "even",
-        "price": 0.03
-      }
-    ],
+    "next_steps": [],
+    "sides": [],
     "book": "UFC-BARDAU",
-    "ts": "2026-10-18T00:49:36Z"
+    "ts": "2026-10-18T00:56:39Z"
   },
   "posts": [
-    {
-      "id": "1792169653868-d5e0c8",
-      "ts": "2026-10-16T16:54:13Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792169714361-aa95e0",
-      "ts": "2026-10-16T16:55:14Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792170137199-82288b",
-      "ts": "2026-10-16T17:02:17Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792170560246-295fb2",
-      "ts": "2026-10-16T17:09:20Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792171103751-669352",
-      "ts": "2026-10-16T17:18:23Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792171224693-f8779c",
-      "ts": "2026-10-16T17:20:24Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792171285094-882bb2",
-      "ts": "2026-10-16T17:21:25Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792171587244-e3a946",
-      "ts": "2026-10-16T17:26:27Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792171901191-34b963",
-      "ts": "2026-10-16T17:31:41Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBARKOTKODQ: -290\nBARSUB: +130\nBARDEC: +96\nDAUKOTKODQ: +99\nDAUSUB: -290\nDAUDEC: +130\nDRAW: +130\nCollected $130 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nBARKOTKODQ: 420 / 0\nBARSUB: 0 / 300\nBARDEC: 34 / 386\nDAUKOTKODQ: 31 / 389\nDAUSUB: 420 / 0\nDAUDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.890 | Worst now -290 | Cash free $1500\nAnchor age 150s | Last fill 10838s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792172312803-4fe487",
-      "ts": "2026-10-16T17:38:32Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792172736179-d824c2",
-      "ts": "2026-10-16T17:45:36Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792172917641-560ef6",
-      "ts": "2026-10-16T17:48:37Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792173340735-8270cf",
-      "ts": "2026-10-16T17:55:40Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792173401238-0ff630",
-      "ts": "2026-10-16T17:56:34Z",
-      "book": "UFC-BARDAU",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot error, one loop skipped (loop_once raised: The read operation timed out). It retries.",
-      "severity": "warn",
-      "title": "Bot error"
-    },
-    {
-      "id": "1792174308126-f2e3df",
-      "ts": "2026-10-16T18:11:48Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792175215397-50707b",
-      "ts": "2026-10-16T18:26:55Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792175275917-e6e6bb",
-      "ts": "2026-10-16T18:27:55Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792175514441-99abdb",
-      "ts": "2026-10-16T18:31:54Z",
-      "book": "UFC-BARDAU",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBARKOTKODQ: -290\nBARSUB: +130\nBARDEC: +96\nDAUKOTKODQ: +99\nDAUSUB: -290\nDAUDEC: +130\nDRAW: +130\nCollected $130 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nBARKOTKODQ: 420 / 0\nBARSUB: 0 / 300\nBARDEC: 34 / 386\nDAUKOTKODQ: 31 / 389\nDAUSUB: 420 / 0\nDAUDEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 0.890 | Worst now -290 | Cash free $1500\nAnchor age 239s | Last fill 14471s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792175940968-dac616",
-      "ts": "2026-10-16T18:39:00Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792176122275-daae3c",
-      "ts": "2026-10-16T18:42:02Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792176485264-98ae08",
-      "ts": "2026-10-16T18:48:05Z",
-      "book": "UFC-BARDAU",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 8:10pm CT. Full ladder Sat 9:00am CT. Worst line -$290. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
     {
       "id": "1792177029233-78fb8a",
       "ts": "2026-10-16T18:57:09Z",
@@ -3284,6 +2911,253 @@
         "contracts": 1188.0,
         "rows": 3
       }
+    },
+    {
+      "id": "1792284634315-48f7a1",
+      "ts": "2026-10-18T00:50:34Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "ufc-trickle",
+      "text": "UFC-BARDAU: selling 21 DAUSUB at 23c into the crowd's bid (about $0) (worst case right now -$175), a paid sale under fair value. Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792284636617-f21b14",
+      "ts": "2026-10-18T00:50:33Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$175.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1792284636618-b68e28",
+      "ts": "2026-10-18T00:50:34Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 21 Daukaus by Submission at the bid 23c. Worst line -$170.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1792284636618-4fa91e",
+      "ts": "2026-10-18T00:50:34Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 11 Barriault by KO/TKO at the bid 18c. Worst line -$169.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1792284636618-f9e860",
+      "ts": "2026-10-18T00:50:34Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Take: sold 50 Barriault by Submission at the bid 3c. Cost $0.38.",
+      "severity": "info",
+      "title": "Take"
+    },
+    {
+      "id": "1792284636618-e3486c",
+      "ts": "2026-10-18T00:50:34Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Take: sold 11 Daukaus by Decision at the bid 16c. Cost $0.21.",
+      "severity": "info",
+      "title": "Take"
+    },
+    {
+      "id": "1792284636620-18463c",
+      "ts": "2026-10-18T00:50:36Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Full ladder posted to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792284636620-0196fd",
+      "ts": "2026-10-18T00:50:36Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 8:10pm CT. Worst line -$175, target -$100. Next: Handoff to the fight, 8:07pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792284717283-9c681b",
+      "ts": "2026-10-18T00:51:20Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 318 (launch ladder): Barriault by Submission x292 at 5c, Daukaus by Decision x19 at 18c, +1 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 318.0,
+        "rows": 3
+      }
+    },
+    {
+      "id": "1792284777721-6407b3",
+      "ts": "2026-10-18T00:52:51Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop released on Barriault by KO/TKO: line is back to -$104. It can add again.",
+      "severity": "info",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792284777722-f31b66",
+      "ts": "2026-10-18T00:52:51Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop released on Barriault by Decision: line is back to -$105. It can add again.",
+      "severity": "info",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792284777723-d739a2",
+      "ts": "2026-10-18T00:52:51Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on Daukaus by KO/TKO: the 24c row sold 97% in 6 min, re-posted.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792284777723-1ed1ad",
+      "ts": "2026-10-18T00:52:51Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop released on Daukaus by Submission: line is back to -$104. It can add again.",
+      "severity": "info",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792284797902-5b0354",
+      "ts": "2026-10-18T00:52:48Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 345: Daukaus by KO/TKO x252 at 24c, Barriault by Submission x50 at 3c, Daukaus by Submission x21 at 23c, +2 more. Worst line -$141.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 345.0,
+        "fills": [
+          {
+            "side": "Daukaus by KO/TKO",
+            "price": 0.24,
+            "qty": 252.0
+          },
+          {
+            "side": "Barriault by Submission",
+            "price": 0.03,
+            "qty": 50.0
+          },
+          {
+            "side": "Daukaus by Submission",
+            "price": 0.23,
+            "qty": 21.0
+          },
+          {
+            "side": "Daukaus by Decision",
+            "price": 0.16,
+            "qty": 11.0
+          },
+          {
+            "side": "Barriault by KO/TKO",
+            "price": 0.18,
+            "qty": 11.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792284818044-e6b702",
+      "ts": "2026-10-18T00:53:38Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 8:10pm CT. Worst line -$141, target -$100. Next: Handoff to the fight, 8:07pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792284858330-f44164",
+      "ts": "2026-10-18T00:54:10Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Barriault by KO/TKO: lowest row 19c to 20c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792284898541-f2d9a5",
+      "ts": "2026-10-18T00:54:52Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: espn-live",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792284898541-c1ffd9",
+      "ts": "2026-10-18T00:54:11Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,389 (launch ladder): Daukaus by KO/TKO x319 at 25c, Daukaus by Decision x253 at 18c, +8 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1389.0,
+        "rows": 10
+      }
+    },
+    {
+      "id": "1792284918692-7687f0",
+      "ts": "2026-10-18T00:55:16Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.24 winner_mid=0.645",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792284938735-48b63a",
+      "ts": "2026-10-18T00:55:38Z",
+      "book": "UFC-BARDAU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to Fight on.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792284938735-2b26cd",
+      "ts": "2026-10-18T00:55:38Z",
+      "book": "UFC-BARDAU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Fight on. Worst line -$141.",
+      "severity": "info",
+      "title": "Plan updated: Fight on"
     }
   ],
   "audits": [
@@ -3519,6 +3393,33 @@
       "kind": "audit",
       "source": "bot",
       "text": "+168 on BARKOTKODQ @ 0.19 (maker)\nworst outcome now -91\nheld 588/0/420/83/588/0/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792284892668-680521",
+      "ts": "2026-10-18T00:54:52Z",
+      "book": "UFC-BARDAU",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: CUTOVER - espn-live",
+      "severity": "warn"
+    },
+    {
+      "id": "1792284959698-a54a6f",
+      "ts": "2026-10-18T00:55:59Z",
+      "book": "UFC-BARDAU",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: safety gate caught a violation before posting - J1B KXUFCMOV-26OCT17BARDAU-BARSUB outcome if its own 499 resting @ 0.04 fills ALONE -364.95 below -L_max -300.00 (outcome_now 114.56, overshoot_limit -360.00); J2 KXUFCMOV-26OCT17BARDAU-BARKOTKODQ held+resting 621 over ceiling 300; J2 KXUFCMOV-26OCT17BARDAU-BARSUB held+resting 699 over ceiling 300; ",
+      "severity": "warn"
+    },
+    {
+      "id": "1792284959698-0c3b6e",
+      "ts": "2026-10-18T00:55:59Z",
+      "book": "UFC-BARDAU",
+      "kind": "audit",
+      "source": "bot",
+      "text": "INFIGHT floor elevator: first post on Marc Andre Barriault vs Kyle Daukaus: Method of Victory, floor $-140.51",
       "severity": "warn"
     }
   ]
