@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T07:56:08.324987Z",
+  "generated_at": "2026-10-18T07:58:25.398180Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -64,11 +64,11 @@
         "exposure": 182.24,
         "exposure_text": "+$182",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T07:55:41Z",
+        "when": "if no fill by 3:05am CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T08:05:42Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "lag_note": "Steps to 12c at the next check."
+        "lag_note": "Steps to 12c if no fill by 3:05am CT."
       },
       {
         "side": "DAL by 7-14",
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T07:55:41Z"
+    "ts": "2026-10-18T07:57:42Z"
   },
   "posts": [
     {
@@ -3099,6 +3099,25 @@
       "text": "Quiet for 15 min. 4,806 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792310201996-a8bb6b",
+      "ts": "2026-10-18T07:56:41Z",
+      "book": "W7-DALGB",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 4,806 resting. Next: Paid balancing starts, 6:35pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792310254600-e096e5",
+      "ts": "2026-10-18T07:57:34Z",
+      "book": "W7-DALGB",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nGB 1-6: -375 (-3.2% of bankroll)\nGB 7-14: +162 (+1.4% of bankroll)\nGB 15+: -198 (-1.7% of bankroll)\nDAL 1-6: +182 (+1.5% of bankroll)\nDAL 7-14: +182 (+1.5% of bankroll)\nDAL 15+: +182 (+1.5% of bankroll)\nCollected $182 premium ($0 fees) | Paper margin over fair $9 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; DAL 7-14: DAL 0-0, Q0 0:00\nheld / resting\nGB 1-6: 557 / 493\nGB 7-14: 20 / 955\nGB 15+: 380 / 613\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 825\nDAL 15+: 0 / 945\nPosted book 1.21 | Sold avg 1.117 | Worst now +84 | Cash free $2500\nAnchor age 0s | Last fill 1890s ago",
+      "severity": "info"
     }
   ],
   "audits": [
