@@ -1,32 +1,44 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T13:04:04.280233Z",
+  "generated_at": "2026-10-18T13:05:19.870153Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 8:30am CT. Worst line -$120.",
+    "headline": "Final tightening before kickoff 8:30am CT. Worst line -$117.",
     "confidence": "medium",
     "confidence_note": "Timers are set, but reaching -$75 depends on the crowd.",
     "checks_every_s": 20,
     "moves": [
       {
+        "side": "HOU by 1-6",
+        "resting": "104 @ 23c",
+        "exposure": -116.68,
+        "exposure_text": "-$117",
+        "move": "Next wave 148 contracts",
+        "when": "waits until worst loss is -$112 or better (now -$117)",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-18T13:03:59Z"
+      },
+      {
         "side": "JAC by 15+",
         "resting": "226 @ 18-27c",
-        "exposure": -119.87,
-        "exposure_text": "-$120",
+        "exposure": -89.68,
+        "exposure_text": "-$90",
         "move": "Next wave 123 contracts",
-        "when": "when resting drops under 94 (now 226) and worst loss is -$117 or better",
+        "when": "when resting drops under 94 (now 226) and worst loss is -$112 or better",
         "at": null,
         "stuck": true,
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-18T08:49:58Z"
       },
       {
         "side": "JAC by 7-14",
         "resting": "136 @ 20-23c",
-        "exposure": -108.91,
-        "exposure_text": "-$109",
+        "exposure": -78.72,
+        "exposure_text": "-$79",
         "move": "Next wave 148 contracts",
-        "when": "when resting drops under 112 (now 136) and worst loss is -$117 or better",
+        "when": "when resting drops under 112 (now 136) and worst loss is -$112 or better",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -35,8 +47,8 @@
       {
         "side": "HOU by 15+",
         "resting": "324 @ 12-21c",
-        "exposure": -21.87,
-        "exposure_text": "-$22",
+        "exposure": 8.32,
+        "exposure_text": "+$8",
         "move": "Step price down 1c (12c to 11c)",
         "when": "if no fill by 8:09am CT (FILLFAIR: 20 min with no fill)",
         "at": "2026-10-18T13:09:13Z",
@@ -46,23 +58,10 @@
         "lag_note": "Steps to 11c if no fill by 8:09am CT."
       },
       {
-        "side": "HOU by 1-6",
-        "resting": "263 @ 19-23c",
-        "exposure": 12.02,
-        "exposure_text": "+$12",
-        "move": "Hold price at 19c",
-        "when": "crowd pays 19c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next wave if resting drops under 112",
-        "last_fill": "2026-10-18T13:01:55Z",
-        "lag_note": "Price 19c matches the crowd."
-      },
-      {
         "side": "HOU by 7-14",
         "resting": "342 @ 15-20c",
-        "exposure": 128.13,
-        "exposure_text": "+$128",
+        "exposure": 158.32,
+        "exposure_text": "+$158",
         "move": "Hold price at 15c",
         "when": "crowd pays 15c; steps down 1c only if it trades lower",
         "at": null,
@@ -73,8 +72,8 @@
       {
         "side": "JAC by 1-6",
         "resting": "336 @ 23-25c",
-        "exposure": 128.13,
-        "exposure_text": "+$128",
+        "exposure": 158.32,
+        "exposure_text": "+$158",
         "move": "Hold price at 23c",
         "when": "next cent is under the crowd price (22c)",
         "at": null,
@@ -87,15 +86,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 751, 1,627 resting. Worst line -$120 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 910, 1,468 resting. Worst line -$117 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (75+ behind the leader): HOU by 1-6, HOU by 7-14, HOU by 15+, JAC by 1-6.",
-          "HOU by 7-14: 248 behind. Price 15c matches the crowd.",
-          "JAC by 1-6: 248 behind. Price 23c is at its floor.",
+          "Lagging (75+ behind the leader): HOU by 7-14, HOU by 15+, JAC by 1-6.",
+          "HOU by 7-14: 275 behind. Price 15c matches the crowd.",
+          "JAC by 1-6: 275 behind. Price 23c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -103,8 +102,8 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$117 (now -$120).",
-          "Closest: JAC by 7-14, 136 resting vs trigger 112.",
+          "Gate closed: batches wait for the worst line to reach -$112 (now -$117).",
+          "Closest: HOU by 1-6, 104 resting vs trigger 112.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -112,7 +111,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$117, worst line -$120; spent $0 of $50.",
+          "Paid balancing is running: plan -$112, worst line -$117; spent $0 of $50.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -133,11 +132,11 @@
     "sides": [
       {
         "label": "HOU by 1-6",
-        "held": 116.1,
-        "resting": 262.9,
+        "held": 275.0,
+        "resting": 104.0,
         "target": 450.0,
-        "status": "lagging",
-        "price": 0.19
+        "status": "even",
+        "price": 0.23
       },
       {
         "label": "HOU by 7-14",
@@ -181,39 +180,9 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T13:03:13Z"
+    "ts": "2026-10-18T13:05:14Z"
   },
   "posts": [
-    {
-      "id": "1792150974001-dfc8de",
-      "ts": "2026-10-16T11:42:54Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:46am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792151881638-8a8f0c",
-      "ts": "2026-10-16T11:58:01Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792152788551-51472c",
-      "ts": "2026-10-16T12:13:08Z",
-      "book": "W7-HOUJAC",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,696 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792153480492-7b268a",
       "ts": "2026-10-16T12:24:40Z",
@@ -3278,6 +3247,46 @@
       "source": "bot",
       "text": "If the game ends... you make\nJAC 1-6: +128 (+10.3% of bankroll)\nJAC 7-14: -109 (-8.7% of bankroll)\nJAC 15+: -120 (-9.6% of bankroll)\nHOU 1-6: +12 (+1.0% of bankroll)\nHOU 7-14: +128 (+10.3% of bankroll)\nHOU 15+: -22 (-1.7% of bankroll)\nCollected $128 premium ($0 fees) | Paper margin over fair $9 (not realized until settlement)\nEvent: JAC 7-14: JAC 0-0, Q0 0:00; HOU 7-14: HOU 0-0, Q0 0:00\nheld / resting\nJAC 1-6: 0 / 336\nJAC 7-14: 237 / 136\nJAC 15+: 248 / 226\nHOU 1-6: 116 / 263\nHOU 7-14: 0 / 342\nHOU 15+: 150 / 324\nPosted book 1.17 | Sold avg 1.068 | Worst now -37 | Cash free $1250\nAnchor age 0s | Last fill 6s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792328653738-d32bfd",
+      "ts": "2026-10-18T13:03:54Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 40: HOU by 1-6 x40 at 19c. Worst line -$117.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 40.0,
+        "fills": [
+          {
+            "side": "HOU by 1-6",
+            "price": 0.19,
+            "qty": 40.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792328694084-489fa5",
+      "ts": "2026-10-18T13:04:36Z",
+      "book": "W7-HOUJAC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: HOU by 1-6 at 19c (275 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792328714242-771a10",
+      "ts": "2026-10-18T13:05:14Z",
+      "book": "W7-HOUJAC",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 8:30am CT. Worst line -$117. Next: Kickoff, 8:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
