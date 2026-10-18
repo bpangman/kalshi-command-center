@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T17:01:09.621280Z",
+  "generated_at": "2026-10-18T17:02:29.481869Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -39,12 +39,12 @@
         "exposure": 172.88,
         "exposure_text": "+$173",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 12:02pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T17:02:33Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T15:07:49Z",
-        "lag_note": "Steps to 12c if no fill by 12:02pm CT."
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "GB by 7-14",
@@ -52,12 +52,12 @@
         "exposure": 195.43,
         "exposure_text": "+$195",
         "move": "Step price down 1c (18c to 17c)",
-        "when": "next bot check (no fill for 20+ min)",
-        "at": "2026-10-18T17:00:35Z",
+        "when": "if no fill by 12:10pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T17:10:56Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T02:40:14Z",
-        "lag_note": "Steps to 17c at the next check."
+        "lag_note": "Steps to 17c if no fill by 12:10pm CT."
       },
       {
         "side": "DAL by 1-6",
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T17:00:35Z"
+    "ts": "2026-10-18T17:01:35Z"
   },
   "posts": [
-    {
-      "id": "1792157323426-2db5e1",
-      "ts": "2026-10-16T13:28:43Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,375 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792157381570-a1e752",
       "ts": "2026-10-16T13:29:41Z",
@@ -3295,6 +3285,15 @@
       "text": "Quiet for 15 min. 4,293 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792342921470-cfdcbd",
+      "ts": "2026-10-18T17:02:01Z",
+      "book": "W7-DALGB",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nGB 1-6: -441 (-3.7% of bankroll)\nGB 7-14: +195 (+1.6% of bankroll)\nGB 15+: -184 (-1.6% of bankroll)\nDAL 1-6: +215 (+1.8% of bankroll)\nDAL 7-14: +215 (+1.8% of bankroll)\nDAL 15+: +173 (+1.5% of bankroll)\nCollected $215 premium ($0 fees) | Paper margin over fair $16 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; DAL 7-14: DAL 0-0, Q0 0:00\nheld / resting\nGB 1-6: 657 / 0\nGB 7-14: 20 / 955\nGB 15+: 399 / 594\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 825\nDAL 15+: 43 / 944\nPosted book 1.18 | Sold avg 1.110 | Worst now +40 | Cash free $2500\nAnchor age 0s | Last fill 2704s ago",
+      "severity": "info"
     }
   ],
   "audits": [
