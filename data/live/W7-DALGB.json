@@ -1,43 +1,43 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T03:27:52.208211Z",
+  "generated_at": "2026-10-18T03:29:12.853787Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 7:20pm CT. Worst line -$258, goal -$150.",
+    "headline": "Building toward kickoff Sun 7:20pm CT. Worst line -$378, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "GB by 15+",
-        "resting": "583 @ 15-24c",
-        "exposure": -257.81,
-        "exposure_text": "-$258",
-        "move": "Next wave 375 contracts",
-        "when": "when resting drops under 188 (now 583) and worst loss is -$200 or better",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-16T17:35:12Z"
-      },
-      {
         "side": "GB by 1-6",
-        "resting": "1,012 @ 22-32c",
-        "exposure": 20.95,
-        "exposure_text": "+$21",
-        "move": "Hold price at 22c",
-        "when": "next cent is under the crowd price (21c)",
+        "resting": "500 @ 25-32c",
+        "exposure": -378.41,
+        "exposure_text": "-$378",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$300 (now -$378)",
         "at": null,
         "stuck": false,
+        "last_fill": "2026-10-18T03:27:58Z"
+      },
+      {
+        "side": "GB by 15+",
+        "resting": "583 @ 15-24c",
+        "exposure": -145.17,
+        "exposure_text": "-$145",
+        "move": "Step price down 1c (15c to 14c)",
+        "when": "if no fill by 10:38pm CT (FILLFAIR: 20 min with no fill)",
+        "at": "2026-10-18T03:38:40Z",
+        "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
-        "last_fill": "2026-10-16T18:19:54Z",
-        "lag_note": "Price 22c is at its floor."
+        "last_fill": "2026-10-16T17:35:12Z",
+        "lag_note": "Steps to 14c if no fill by 10:38pm CT."
       },
       {
         "side": "GB by 7-14",
         "resting": "955 @ 18-28c",
-        "exposure": 38.95,
-        "exposure_text": "+$39",
+        "exposure": 151.59,
+        "exposure_text": "+$152",
         "move": "Hold price at 18c",
         "when": "crowd pays 18.9c; steps down 1c only if it trades lower",
         "at": null,
@@ -49,8 +49,8 @@
       {
         "side": "DAL by 1-6",
         "resting": "975 @ 22-31c",
-        "exposure": 58.95,
-        "exposure_text": "+$59",
+        "exposure": 171.59,
+        "exposure_text": "+$172",
         "move": "Hold price at 22c",
         "when": "next cent is under the crowd price (21.3c)",
         "at": null,
@@ -61,20 +61,20 @@
       {
         "side": "DAL by 15+",
         "resting": "945 @ 13-22c",
-        "exposure": 58.95,
-        "exposure_text": "+$59",
+        "exposure": 171.59,
+        "exposure_text": "+$172",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 10:29pm CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T03:29:58Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
-        "lag_note": "Steps to 12c if no fill by 10:29pm CT."
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "DAL by 7-14",
         "resting": "825 @ 17-26c",
-        "exposure": 58.95,
-        "exposure_text": "+$59",
+        "exposure": 171.59,
+        "exposure_text": "+$172",
         "move": "Hold price at 17c",
         "when": "crowd pays 18c; steps down 1c only if it trades lower",
         "at": null,
@@ -87,15 +87,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 7:20pm CT. Sold 375, 5,295 resting. Worst line -$258 (goal -$150)."
+          "Pregame build, kickoff Sun 7:20pm CT. Sold 887, 4,783 resting. Worst line -$378 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 1-6, GB by 7-14.",
-          "DAL by 1-6: 317 behind. Price 22c is at its floor.",
-          "DAL by 7-14: 317 behind. Price 17c matches the crowd.",
+          "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 7-14, GB by 15+.",
+          "DAL by 1-6: 550 behind. Price 22c is at its floor.",
+          "DAL by 7-14: 550 behind. Price 17c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -103,7 +103,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$258).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$378).",
           "Closest: GB by 15+, 583 resting vs trigger 188.",
           "Batches used: none (max 3 per side)."
         ]
@@ -111,7 +111,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
+          "Backstop ON: GB by 1-6 stopped adding until worst line is above -$300 (now -$378).",
           "Paid balancing starts Sun 6:35pm CT: worst line to -$150 by Sun 7:10pm CT, up to $100.",
           "At Sun 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Sun 7:20pm CT: the in-game engine takes over."
@@ -168,11 +168,11 @@
       },
       {
         "label": "GB by 1-6",
-        "held": 38.0,
-        "resting": 1012.0,
+        "held": 550.0,
+        "resting": 500.0,
         "target": 900.0,
-        "status": "lagging",
-        "price": 0.22
+        "status": "heavy",
+        "price": 0.25
       },
       {
         "label": "GB by 7-14",
@@ -187,12 +187,12 @@
         "held": 316.8,
         "resting": 583.2,
         "target": 750.0,
-        "status": "heavy",
+        "status": "lagging",
         "price": 0.15
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T03:27:44Z"
+    "ts": "2026-10-18T03:28:45Z"
   },
   "posts": [
     {
@@ -2691,6 +2691,46 @@
       "text": "GB by 1-6 price not lowered: the next cent is under the crowd price, so it stays at 22c.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792294125161-20b411",
+      "ts": "2026-10-18T03:28:42Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$378 is under -$300. GB by 1-6 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792294125161-ccf39b",
+      "ts": "2026-10-18T03:28:42Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: GB by 1-6 at 22c (512 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792294125161-e06a15",
+      "ts": "2026-10-18T03:28:43Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "GB by 15+ price not lowered: a full fill would push the worst line to -$378.",
+      "severity": "info",
+      "title": "Price hold"
+    },
+    {
+      "id": "1792294125164-29f7f5",
+      "ts": "2026-10-18T03:28:45Z",
+      "book": "W7-DALGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Sun 7:20pm CT. Worst line -$378, goal -$150. Next: Paid balancing starts, Sun 6:35pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
