@@ -1,13 +1,13 @@
 {
   "key": "PHX-CUP",
-  "generated_at": "2026-10-18T19:02:30.945301Z",
+  "generated_at": "2026-10-18T19:03:53.712638Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
     "headline": "Green flag handoff for the green flag 2:00pm CT. Worst line -$374, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Carson Hocevar",
@@ -113,7 +113,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Green flag handoff, green flag 2:00pm CT. Sold 70,440, 91,597 resting. Worst line -$374 (limit now $0)."
+          "Green flag handoff, green flag 2:00pm CT. Sold 70,440, 91,597 resting. Worst line -$374 (limit now $0). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -202,29 +202,9 @@
     ],
     "moves_note": "7 more drivers with small exposure are not shown. 21 other drivers: nothing sold, no exposure.",
     "book": "PHX-CUP",
-    "ts": "2026-10-18T19:02:27Z"
+    "ts": "2026-10-18T19:03:27Z"
   },
   "posts": [
-    {
-      "id": "1792282884393-75603a",
-      "ts": "2026-10-18T00:21:13Z",
-      "book": "PHX-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Idle step on Kyle Larson: no fill for 95 min, lowest row 6c to 5c.",
-      "severity": "info",
-      "title": "Price step"
-    },
-    {
-      "id": "1792283166448-4a9c20",
-      "ts": "2026-10-18T00:25:53Z",
-      "book": "PHX-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Fair value rose on Kyle Larson: lowest row 5c to 6c.",
-      "severity": "info",
-      "title": "Reprice"
-    },
     {
       "id": "1792284072963-228b28",
       "ts": "2026-10-18T00:41:12Z",
@@ -4060,27 +4040,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792350187412-f27f8e",
+      "ts": "2026-10-18T19:02:54Z",
+      "book": "PHX-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit $0, worst line -$168. worst held is $18 under the hard minimum -150 inside 1:00pm CT; still working (fills,",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1792350207474-59967d",
+      "ts": "2026-10-18T19:03:27Z",
+      "book": "PHX-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Green flag handoff for the green flag 2:00pm CT. Worst line -$374, final target $0.",
+      "severity": "info",
+      "title": "Plan updated: Green flag handoff"
     }
   ],
   "audits": [
-    {
-      "id": "1792295022486-4f9fa3",
-      "ts": "2026-10-18T03:43:42Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- PHX-CUP - Carson Hocevar has had no resting orders for at least 256 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792295964766-9630c7",
-      "ts": "2026-10-18T03:59:24Z",
-      "book": "PHX-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-CUP): 23 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-AJAL low 4479c, KXNASCARRACE-FREI26-AUDI low 4479c, KXNASCARRACE-FREI26-RIST low 4479c, KXNASCARRACE-FREI26-SHVA low 4479c, KXNASCARRACE-FREI26-CHBU low 4479c, KXNASCARRACE-FREI26-TYDI low 4479c, KXNASCARRACE-FREI26-BUWA low 4524c, KXNASCARRACE-FREI26-ALBO low 4479c, KXNASCARRACE-FREI26-CHEL low 4524c, KXNASCARRACE-FREI26-ERJO low 4479c, KXNASCARRACE-FREI26-RYPR low 4479c, KXNASCARRACE-FREI26-JONE low 4479c, KXNASCARRACE-FREI26-COCU low 4479c, KXNASCARRACE-FREI26-DASU low 4479c, KXNASCARRACE-FREI26-COWA low 4479c, KXNASCARRACE-FREI26-AUHI low 4479c, KXNASCARRACE-FREI26-WIBY high 102c, KXNASCARRACE-FREI26-NOGR low 4479c, KXNASCARRACE-FREI26-TOGI low 4479c, KXNASCARRACE-FREI26-RIHE low 4479c, KXNASCARRACE-FREI26-ZASM low 4479c, KXNASCARRACE-FREI26-COHE low 4479c, KXNASCARRACE-FREI26-COZI low 4479c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792296257064-b7e09d",
       "ts": "2026-10-18T04:04:17Z",
@@ -4961,6 +4943,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- PHX-CUP - Denny Hamlin has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792350156169-2e25f9",
+      "ts": "2026-10-18T19:02:36Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- PHX-CUP - Chase Briscoe has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PHX-CUP - Kyle Larson has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792350169891-b195d3",
+      "ts": "2026-10-18T19:02:49Z",
+      "book": "PHX-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PHX-CUP): 24 ladder(s) stale 10+ min: KXNASCARRACE-FREI26-BRKE low 372c, KXNASCARRACE-FREI26-AJAL low 4452c, KXNASCARRACE-FREI26-AUDI low 4452c, KXNASCARRACE-FREI26-RIST low 4452c, KXNASCARRACE-FREI26-SHVA low 4452c, KXNASCARRACE-FREI26-CHBU low 4452c, KXNASCARRACE-FREI26-ROCH low 393c, KXNASCARRACE-FREI26-TYDI low 4452c, KXNASCARRACE-FREI26-ALBO low 4452c, KXNASCARRACE-FREI26-ERJO low 4452c, KXNASCARRACE-FREI26-RYPR low 4452c, KXNASCARRACE-FREI26-JONE low 4452c, KXNASCARRACE-FREI26-COCU low 4452c, KXNASCARRACE-FREI26-DASU low 4452c, KXNASCARRACE-FREI26-COWA low 4452c, KXNASCARRACE-FREI26-AUHI low 4452c, KXNASCARRACE-FREI26-NOGR low 4452c, KXNASCARRACE-FREI26-TOGI low 4452c, KXNASCARRACE-FREI26-RIHE low 4452c, KXNASCARRACE-FREI26-ZASM low 4452c, KXNASCARRACE-FREI26-CAHO low 100c, KXNASCARRACE-FREI26-TYGI low 100c, KXNASCARRACE-FREI26-COHE low 820c, KXNASCARRACE-FREI26-COZI low 4452c. Check the command center.",
       "severity": "warn"
     }
   ]
