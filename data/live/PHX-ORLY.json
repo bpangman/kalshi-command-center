@@ -1,19 +1,19 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-18T01:19:25.454345Z",
+  "generated_at": "2026-10-18T01:20:58.181628Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$2.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 41,172, 76,669 resting. Worst line -$2. Race 64% done. Floor protocol off."
+          "In race (Ingame). Sold 41,172, 76,669 resting. Worst line -$2. Race 66% done. Floor protocol off. Bot is slow (checks every 48s, set for 30s)."
         ]
       },
       {
@@ -44,22 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-ORLY",
-    "ts": "2026-10-18T01:18:48Z"
+    "ts": "2026-10-18T01:20:48Z"
   },
   "posts": [
-    {
-      "id": "1792264163604-50f3bd",
-      "ts": "2026-10-17T19:09:05Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Corey Day: wave 11, 30 contracts at 10c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Corey Day"
-      }
-    },
     {
       "id": "1792264163604-0fc89f",
       "ts": "2026-10-17T19:09:05Z",
@@ -4365,18 +4352,19 @@
         "contracts": 10883.0,
         "rows": 11
       }
+    },
+    {
+      "id": "1792286448959-3eee77",
+      "ts": "2026-10-18T01:20:48Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$2.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1792232125129-f74be1",
-      "ts": "2026-10-17T10:15:25Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -484.56 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792233981659-af6a30",
       "ts": "2026-10-17T10:46:21Z",
@@ -5266,6 +5254,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792286434517-43d1e1",
+      "ts": "2026-10-18T01:20:34Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+15 on Sam Mayer @ 0.15 (maker)\n+10 on Justin Allgaier @ 0.33 (maker)\n+40 on Justin Allgaier @ 0.34 (maker)\n+10 on Carson Kvapil @ 0.10 (maker)\n+10 on Jesse Love @ 0.41 (maker)\n+20 on Corey Day @ 0.10 (maker)\n+65 on Rajah Caruth @ 0.08 (taker)\n+50 on Taylor Gray @ 0.06 (maker)\n+30 on Corey Day @ 0.08 (maker)\n+150 on Rajah Caruth @ 0.03 (maker)\n+100 on Rajah Caruth @ 0.04 (maker)\n+30 on Corey Day @ 0.07 (maker)\n+30 on Jesse Love @ 0.33 (maker)\n+20 on Sheldon Creed @ 0.13 (maker)\n+30 on Sam Mayer @ 0.08 (taker)\n+14 on Justin Allgaier @ 0.36 (taker)\n+30 on Jesse Love @ 0.22 (taker)\n+110 on William Sawalich @ 0.04 (taker)\n+40 on Taylor Gray @ 0.05 (maker)\n+80 on Sheldon Creed @ 0.14 (maker)\n+40 on Carson Kvapil @ 0.16 (maker)\n+60 on Sam Mayer @ 0.07 (taker)\n+30 on Sammy Smith @ 0.02 (taker)\n+80 on Brandon Jones @ 0.08 (taker)\n+60 on Jesse Love @ 0.36 (taker)\n+16 on Justin Allgaier @ 0.21 (taker)\n+3 on Brandon Jones @ 0.07 (taker)\n+72 on Sam Mayer @ 0.07 (maker)\n+37 on Brandon Jones @ 0.09 (maker)\n+122 on Jesse Love @ 0.36 (maker)\n+408 on Sam Mayer @ 0.05 (maker)\n+103 on Justin Allgaier @ 0.24 (maker)\nworst outcome now -2\nIf the race ends... you make\nJesse Love: -2\nCarson Kvapil: +0\nSam Mayer: +1\nRajah Caruth: +2\nJustin Allgaier: +5\nCorey Day: +8\nWilliam Sawalich: +10\nSheldon Creed: +12\nall others (31) >= +16",
       "severity": "warn"
     }
   ]
