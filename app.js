@@ -1958,6 +1958,16 @@ function buildBookTile(b, opts) {
     floorTag.textContent = "floor mode";
     row4.appendChild(floorTag);
   }
+  // Blake 2026-10-17: the rate the book is filling at (coverage ratio:
+  // premium / most contracts held on one outcome), bottom right of the tile.
+  // 1.00+ means every outcome is positive.
+  if (b.coverage_ratio !== null && b.coverage_ratio !== undefined && isFinite(b.coverage_ratio)) {
+    var covSpan = document.createElement("span");
+    covSpan.className = "book-tile-coverage " + (b.coverage_ratio >= 1 ? "pos" : "neg");
+    covSpan.textContent = Number(b.coverage_ratio).toFixed(2).replace(/^0\./, ".");
+    covSpan.title = "Filling at (coverage ratio): 1.00 or more means every outcome is positive";
+    row4.appendChild(covSpan);
+  }
   tile.appendChild(row4);
 
   function applyMinimized(val) {
