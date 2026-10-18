@@ -1,261 +1,52 @@
 {
   "key": "UFC-JOUCUA",
-  "generated_at": "2026-10-18T00:27:15.413762Z",
+  "generated_at": "2026-10-18T00:28:28.053069Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Final tightening",
-    "headline": "Final tightening for the fight about 7:35pm CT. Worst line -$46, target -$100.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "Jourdain by Decision",
-        "resting": "none",
-        "exposure": -204.32,
-        "exposure_text": "-$204",
-        "move": "Stops adding (backstop)",
-        "when": "holding until this side's loss is back above -$225 (now -$204)",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-18T00:02:39Z"
-      },
-      {
-        "side": "Cuamba by Submission",
-        "resting": "none",
-        "exposure": -91.58,
-        "exposure_text": "-$92",
-        "move": "Catch-up batch",
-        "when": "next bot check (lagging with nothing resting)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch after others catch up",
-        "last_fill": "2026-10-18T00:17:36Z",
-        "lag_note": "Nothing resting; catch-up batch due."
-      },
-      {
-        "side": "Jourdain by Submission",
-        "resting": "none",
-        "exposure": -27.76,
-        "exposure_text": "-$28",
-        "move": "Catch-up batch",
-        "when": "next bot check (lagging with nothing resting)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch after others catch up",
-        "last_fill": "2026-10-18T00:17:35Z",
-        "lag_note": "Nothing resting; catch-up batch due."
-      },
-      {
-        "side": "Jourdain by KO/TKO",
-        "resting": "126 @ 27c",
-        "exposure": 41.93,
-        "exposure_text": "+$42",
-        "move": "Step price down 1c (27c to 26c)",
-        "when": "next bot check, if the crowd trades under 27c",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch after others catch up",
-        "last_fill": "2026-10-17T16:37:38Z",
-        "lag_note": "Steps to 26c if the crowd trades lower."
-      },
-      {
-        "side": "Cuamba by KO/TKO",
-        "resting": "34 @ 13c",
-        "exposure": 329.24,
-        "exposure_text": "+$329",
-        "move": "Next batch 231 contracts",
-        "when": "next bot check (resting 34 is under 175)",
-        "at": "2026-10-18T00:26:26Z",
-        "stuck": false,
-        "also": "Also: price step 7:37pm CT",
-        "last_fill": "2026-10-18T00:17:38Z",
-        "lag_note": "Steps to 12c if no fill by 7:37pm CT."
-      },
-      {
-        "side": "Cuamba by Decision",
-        "resting": "117 @ 21c",
-        "exposure": 392.24,
-        "exposure_text": "+$392",
-        "move": "Next batch 231 contracts",
-        "when": "next bot check (resting 117 is under 175)",
-        "at": "2026-10-18T00:26:26Z",
-        "stuck": false,
-        "also": "Also: price step 7:37pm CT",
-        "last_fill": "2026-10-18T00:17:37Z",
-        "lag_note": "Steps to 20c if no fill by 7:37pm CT."
-      },
-      {
-        "side": "Draw / No Contest",
-        "resting": "30 @ 3c",
-        "exposure": 392.24,
-        "exposure_text": "+$392",
-        "move": "Holding",
-        "when": "no move planned until the handoff to the fight at 7:32pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-15T04:40:06Z"
-      }
-    ],
+    "phase": "Fight on",
+    "headline": "Fight on. Worst line -$46.",
+    "confidence": "medium",
+    "confidence_note": "During the fight the steps follow the action.",
+    "checks_every_s": 10,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, fight about 7:35pm CT. Sold 2,894, 306 resting. Worst line -$46 (target -$100)."
+          "Fight on. Sold 2,894. Worst line -$46. Bout in, round 0."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Cuamba by Decision, Cuamba by KO/TKO, Cuamba by Submission, Jourdain by KO/TKO, Jourdain by Submission.",
-          "Cuamba by Decision: 597 behind. Steps to 20c if no fill by 7:37pm CT.",
-          "Cuamba by KO/TKO: 534 behind. Steps to 12c if no fill by 7:37pm CT.",
-          "A price step needs 20 min with no fill and the crowd paying less."
+          "No lag rule in the fight; short-lived rows follow the live price."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "The full ladder is out.",
-          "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate open: worst line -$46 is better than -$100.",
-          "Batches used: none (max 3 per bucket)."
+          "Short rungs (about 30s) are priced off the live moneyline, inside the loss floor."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: Jourdain by Decision stopped adding until worst line is above -$225.",
-          "Paid balancing is open: started at not recorded, target -$100, now -$46.",
-          "Even-up 6:35pm CT; last-resort take 7:15pm CT; handoff to the fight 7:32pm CT.",
-          "The fight start is an estimate and can move."
+          "Everything is pulled when the fight ends or the winner's price passes 0.95."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: the full ladder, extra batches, price steps and paid balancing run by rule. The start time can shift."
+          "Yes, it refreshes every 10s and pulls on a finish."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-18T00:32:00Z",
-        "label": "Handoff to the fight",
-        "detail": "In-fight engine takes over."
-      }
-    ],
-    "sides": [
-      {
-        "label": "Cuamba by Decision",
-        "held": 0.0,
-        "resting": 116.8,
-        "target": 700.0,
-        "status": "lagging",
-        "price": 0.21
-      },
-      {
-        "label": "Cuamba by KO/TKO",
-        "held": 63.0,
-        "resting": 33.6,
-        "target": 700.0,
-        "status": "lagging",
-        "price": 0.13
-      },
-      {
-        "label": "Cuamba by Submission",
-        "held": 483.8,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "lagging",
-        "price": null
-      },
-      {
-        "label": "Jourdain by Decision",
-        "held": 596.6,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "heavy",
-        "price": null
-      },
-      {
-        "label": "Jourdain by KO/TKO",
-        "held": 350.3,
-        "resting": 125.9,
-        "target": 700.0,
-        "status": "lagging",
-        "price": 0.27
-      },
-      {
-        "label": "Jourdain by Submission",
-        "held": 420.0,
-        "resting": 0.0,
-        "target": 700.0,
-        "status": "lagging",
-        "price": null
-      },
-      {
-        "label": "Draw / No Contest",
-        "held": 0.0,
-        "resting": 30.0,
-        "target": 30.0,
-        "status": "even",
-        "price": 0.03
-      }
-    ],
+    "next_steps": [],
+    "sides": [],
     "book": "UFC-JOUCUA",
-    "ts": "2026-10-18T00:26:26Z"
+    "ts": "2026-10-18T00:28:27Z"
   },
   "posts": [
-    {
-      "id": "1792191659619-b538f0",
-      "ts": "2026-10-16T23:00:59Z",
-      "book": "UFC-JOUCUA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792192566919-a9797c",
-      "ts": "2026-10-16T23:16:06Z",
-      "book": "UFC-JOUCUA",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$326. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792193112178-4cb691",
-      "ts": "2026-10-16T23:25:12Z",
-      "book": "UFC-JOUCUA",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Wave 1 posted for the fight about Sat 7:35pm CT. Full ladder Sat 9:00am CT. Worst line -$326. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Wave 1 (lowest rung only)"
-    },
-    {
-      "id": "1792193246643-56272a",
-      "ts": "2026-10-16T23:27:26Z",
-      "book": "UFC-JOUCUA",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nJOUKOTKODQ: -128\nJOUSUB: -262\nJOUDEC: +148\nCUAKOTKODQ: +158\nCUASUB: -326\nCUADEC: +158\nDRAW: +158\nCollected $158 premium ($0 fees) | Paper margin over fair $18 (not realized until settlement)\nheld / resting\nJOUKOTKODQ: 286 / 133\nJOUSUB: 420 / 0\nJOUDEC: 11 / 409\nCUAKOTKODQ: 0 / 420\nCUASUB: 484 / 0\nCUADEC: 0 / 420\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.064 | Worst now -326 | Cash free $1500\nAnchor age 207s | Last fill 63506s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792194019646-630dd5",
-      "ts": "2026-10-16T23:40:19Z",
-      "book": "UFC-JOUCUA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Full ladder posts, Sat 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792194039673-2fd3f2",
       "ts": "2026-10-16T23:40:35Z",
@@ -3302,6 +3093,86 @@
       "text": "Paid balancing started. Worst line -$46.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1792283247071-14938b",
+      "ts": "2026-10-18T00:27:21Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: espn-live",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792283247071-94e105",
+      "ts": "2026-10-18T00:27:25Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.25 winner_mid=0.595",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792283247073-d821b6",
+      "ts": "2026-10-18T00:27:27Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to Fight on.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792283247073-836260",
+      "ts": "2026-10-18T00:27:27Z",
+      "book": "UFC-JOUCUA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Fight on. Worst line -$46.",
+      "severity": "info",
+      "title": "Plan updated: Fight on"
+    },
+    {
+      "id": "1792283307492-3086c9",
+      "ts": "2026-10-18T00:26:15Z",
+      "book": "UFC-JOUCUA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,470: Cuamba by KO/TKO x350 at 11c, Cuamba by Decision x350 at 20c, Jourdain by Submission x318 at 11c, +2 more. Worst line -$46.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1470.0,
+        "fills": [
+          {
+            "side": "Cuamba by KO/TKO",
+            "price": 0.11,
+            "qty": 350.0
+          },
+          {
+            "side": "Cuamba by Decision",
+            "price": 0.2,
+            "qty": 350.0
+          },
+          {
+            "side": "Jourdain by Submission",
+            "price": 0.11,
+            "qty": 318.0
+          },
+          {
+            "side": "Cuamba by Submission",
+            "price": 0.07,
+            "qty": 292.0
+          },
+          {
+            "side": "Jourdain by Decision",
+            "price": 0.28,
+            "qty": 160.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4014,6 +3885,33 @@
       "kind": "audit",
       "source": "bot",
       "text": "+167 on JOUDEC @ 0.28 (maker)\n+63 on CUAKOTKODQ @ 0.12 (maker)\nworst outcome now -10\nheld 350/420/597/63/484/0/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792283241957-703669",
+      "ts": "2026-10-18T00:27:21Z",
+      "book": "UFC-JOUCUA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: CUTOVER - espn-live",
+      "severity": "warn"
+    },
+    {
+      "id": "1792283247296-5a328f",
+      "ts": "2026-10-18T00:27:27Z",
+      "book": "UFC-JOUCUA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: safety gate caught a violation before posting - J2 KXUFCMOV-26OCT17JOUCUA-JOUKOTKODQ held+resting 496 over ceiling 300; J2 KXUFCMOV-26OCT17JOUCUA-JOUSUB held+resting 700 over ceiling 300; J2 KXUFCMOV-26OCT17JOUCUA-JOUDEC held+resting 437 over ceiling 300; J2 KXUFCMOV-26OCT17JOUCUA-CUAKOTKODQ held+resting 437 over ceiling 300; J2 KXUFCMOV-26OCT17J",
+      "severity": "warn"
+    },
+    {
+      "id": "1792283247296-e0dbcd",
+      "ts": "2026-10-18T00:27:27Z",
+      "book": "UFC-JOUCUA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "INFIGHT floor elevator: first post on Louis Jourdain vs Timothy Angel Cuamba: Method of Victory, floor $-45.76",
       "severity": "warn"
     }
   ]
