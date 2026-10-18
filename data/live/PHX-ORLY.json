@@ -1,19 +1,19 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-18T01:45:51.841552Z",
+  "generated_at": "2026-10-18T01:46:28.404868Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$5.",
+    "headline": "In race (Ingame). Worst line -$54.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 41,596, 0 resting. Worst line -$5. Race 84% done. Floor protocol off."
+          "In race (Ingame). Sold 41,722, 455 resting. Worst line -$54. Race 86% done. Floor protocol off. Bot is slow (checks every 53s, set for 30s)."
         ]
       },
       {
@@ -44,48 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-ORLY",
-    "ts": "2026-10-18T01:44:59Z"
+    "ts": "2026-10-18T01:45:59Z"
   },
   "posts": [
-    {
-      "id": "1792264486205-b3aa13",
-      "ts": "2026-10-17T19:14:27Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 25, 10 contracts at 4c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
-    {
-      "id": "1792264526590-f9c8d7",
-      "ts": "2026-10-17T19:15:19Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 26, 10 contracts at 5c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
-    {
-      "id": "1792264566830-20713e",
-      "ts": "2026-10-17T19:15:54Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 27, 10 contracts at 5c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
     {
       "id": "1792264566831-bed4cc",
       "ts": "2026-10-17T19:15:18Z",
@@ -4340,18 +4301,38 @@
       "text": "Bot note: endgame: active (favorite Jesse Love at 0.49); likely ['Jesse Love', 'Sam Mayer']; endgame: repairing toward b",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792287959708-6031bd",
+      "ts": "2026-10-18T01:45:59Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$54.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1792287979737-691bf6",
+      "ts": "2026-10-18T01:46:19Z",
+      "book": "PHX-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJesse Love: -20\nCarson Kvapil: +58\nSam Mayer: +59\nRajah Caruth: +60\nJustin Allgaier: +63\nCorey Day: +66\nWilliam Sawalich: +68\nSheldon Creed: +70\nall others (31) >= +73\nCollected $3327 premium ($64 fees) | Paper margin over fair $1884 (not realized until settlement)\nEvent: Jesse Love: running P1; Sam Mayer: running P2\nCore posted book 0.23 | Worst now -20 | Cash free $4609\nAnchor age 0s (source: kalshi)",
+      "severity": "info"
+    },
+    {
+      "id": "1792287979837-613f1d",
+      "ts": "2026-10-18T01:46:18Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 7 drivers: Sam Mayer, Corey Day, Carson Kvapil.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1792241342630-f3b857",
-      "ts": "2026-10-17T12:49:02Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -484.56 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792243362141-3195ce",
       "ts": "2026-10-17T13:22:42Z",
@@ -5241,6 +5222,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Health: Rajah Caruth has room but 0 resting orders for 1738s",
+      "severity": "warn"
+    },
+    {
+      "id": "1792287979736-5038ff",
+      "ts": "2026-10-18T01:46:19Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Shock on Jesse Love: pulled every in-game order, pausing 30s\nIf the race ends... you make\nJesse Love: -20\nCarson Kvapil: +58\nSam Mayer: +59\nRajah Caruth: +60\nJustin Allgaier: +63\nCorey Day: +66\nWilliam Sawalich: +68\nSheldon Creed: +70\nall others (31) >= +73",
       "severity": "warn"
     }
   ]
