@@ -1,10 +1,10 @@
 {
   "key": "W7-LACKC",
-  "generated_at": "2026-10-18T23:00:59.303816Z",
+  "generated_at": "2026-10-18T23:02:19.569556Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$47.",
+    "headline": "In game (Ingame). Worst line -$42.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 962, 766 resting. Worst line -$47. Game 81% done. Bot is slow (checks every 19s, set for 5s)."
+          "In game (Ingame). Sold 962, 801 resting. Worst line -$42. Game 84% done. Bot is slow (checks every 19s, set for 5s)."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "KC by 1-6",
-        "held": 258.6,
-        "resting": 5.0,
+        "held": 259.4,
+        "resting": 1.0,
         "target": null,
         "status": "even",
         "price": null
@@ -61,7 +61,7 @@
       },
       {
         "label": "KC by 15+",
-        "held": 307.1,
+        "held": 295.1,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -70,7 +70,7 @@
       {
         "label": "LAC by 1-6",
         "held": 0.0,
-        "resting": 271.0,
+        "resting": 310.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-LACKC",
-    "ts": "2026-10-18T23:00:09Z"
+    "ts": "2026-10-18T23:02:10Z"
   },
   "posts": [
     {
@@ -856,6 +856,25 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792364514128-b7787d",
+      "ts": "2026-10-18T23:01:54Z",
+      "book": "W7-LACKC",
+      "kind": "update",
+      "source": "endgame",
+      "text": "W7-LACKC: buying back 12 KC 15+ at 59c (about $7) (worst case right now -$47). Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792364530782-3d6a78",
+      "ts": "2026-10-18T23:01:54Z",
+      "book": "W7-LACKC",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite KC 15+ at 0.43); likely ['KC 15+', 'KC 7-14']; endgame: repairing toward breakeven -",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
@@ -1055,6 +1074,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+23 on KC 1-6 @ 0.15 (maker)\n+8 on KC 1-6 @ 0.18 (maker)\n+4 on KC 1-6 @ 0.21 (maker)\nworst outcome now +15\nheld 259/272/307/0/123/0\nIf the game ends... you make\nKC 1-6: +1 (+0.0% of bankroll)\nKC 7-14: -12 (-0.3% of bankroll)\nKC 15+: -47 (-1.1% of bankroll)\nLAC 1-6: +260 (+6.1% of bankroll)\nLAC 7-14: +137 (+3.2% of bankroll)\nLAC 15+: +260 (+6.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792364479798-bae6af",
+      "ts": "2026-10-18T23:01:19Z",
+      "book": "W7-LACKC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1792364514449-d0302e",
+      "ts": "2026-10-18T23:01:54Z",
+      "book": "W7-LACKC",
+      "kind": "audit",
+      "source": "bot",
+      "text": "In-game:\nEndgame breakeven repair: floor -47 -> -42 (1 leg(s))\nIf the game ends... you make\nKC 1-6: +1 (+0.0% of bankroll)\nKC 7-14: -12 (-0.3% of bankroll)\nKC 15+: -47 (-1.1% of bankroll)\nLAC 1-6: +260 (+6.1% of bankroll)\nLAC 7-14: +137 (+3.2% of bankroll)\nLAC 15+: +260 (+6.1% of bankroll)",
       "severity": "warn"
     }
   ]
