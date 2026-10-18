@@ -1,6 +1,6 @@
 {
   "key": "W7-HOUJAC",
-  "generated_at": "2026-10-18T09:18:46.439974Z",
+  "generated_at": "2026-10-18T09:21:03.243337Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -91.34,
         "exposure_text": "-$91",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 4:21am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T09:21:32Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-18T08:51:26Z",
-        "lag_note": "Steps to 11c if no fill by 4:21am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "HOU by 1-6",
@@ -63,11 +63,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 4:21am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T09:21:32Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 23c if no fill by 4:21am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "JAC by 7-14",
@@ -75,11 +75,11 @@
         "exposure": 58.66,
         "exposure_text": "+$59",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 4:21am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T09:21:32Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 20c if no fill by 4:21am CT."
+        "lag_note": "Steps to 20c at the next check."
       }
     ],
     "sections": [
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-HOUJAC",
-    "ts": "2026-10-18T09:18:37Z"
+    "ts": "2026-10-18T09:20:38Z"
   },
   "posts": [
     {
@@ -3484,6 +3484,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-HOUJAC): worst -189.34 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792315160692-0ffb47",
+      "ts": "2026-10-18T09:19:20Z",
+      "book": "W7-HOUJAC",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-HOUJAC): held worst -189.34 (backstop -150) or lagging gap 248 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
