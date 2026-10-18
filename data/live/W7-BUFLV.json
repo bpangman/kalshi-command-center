@@ -1,10 +1,10 @@
 {
   "key": "W7-BUFLV",
-  "generated_at": "2026-10-18T22:40:33.662366Z",
+  "generated_at": "2026-10-18T22:41:53.889421Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$6.",
+    "headline": "In game (Ingame). Worst line -$4.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,197, 666 resting. Worst line -$6. Game 75% done. Bot is slow (checks every 22s, set for 5s)."
+          "In game (Ingame). Sold 2,205, 612 resting. Worst line -$4. Game 75% done. Bot is slow (checks every 20s, set for 5s)."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "BUF by 1-6",
-        "held": 460.7,
-        "resting": 16.2,
+        "held": 468.9,
+        "resting": 4.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "LV by 1-6",
         "held": 367.1,
-        "resting": 16.0,
+        "resting": 48.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "LV by 7-14",
         "held": 437.8,
-        "resting": 53.0,
+        "resting": 59.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "LV by 15+",
         "held": 36.5,
-        "resting": 560.5,
+        "resting": 481.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-BUFLV",
-    "ts": "2026-10-18T22:40:01Z"
+    "ts": "2026-10-18T22:41:01Z"
   },
   "posts": [
     {
@@ -1218,6 +1218,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792363241714-d999ce",
+      "ts": "2026-10-18T22:40:06Z",
+      "book": "W7-BUFLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 14: BUF by 1-6 x9 at 31c, BUF by 15+ x4 at 31c, LV by 1-6 x1 at 14c. Worst line -$4.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 14.0,
+        "fills": [
+          {
+            "side": "BUF by 1-6",
+            "price": 0.31,
+            "qty": 9.0
+          },
+          {
+            "side": "BUF by 15+",
+            "price": 0.31,
+            "qty": 4.0
+          },
+          {
+            "side": "LV by 1-6",
+            "price": 0.14,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -1341,6 +1371,24 @@
     {
       "id": "1792362669582-d91fd7",
       "ts": "2026-10-18T22:31:09Z",
+      "book": "W7-BUFLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792363235414-a11e4a",
+      "ts": "2026-10-18T22:40:35Z",
+      "book": "W7-BUFLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (hard clamp (end of Q3))\nIf the game ends... you make\nLV 1-6: +169 (+3.9% of bankroll)\nLV 7-14: +98 (+2.3% of bankroll)\nLV 15+: +499 (+11.6% of bankroll)\nBUF 1-6: +67 (+1.6% of bankroll)\nBUF 7-14: -4 (-0.1% of bankroll)\nBUF 15+: +181 (+4.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792363270237-41f79f",
+      "ts": "2026-10-18T22:41:10Z",
       "book": "W7-BUFLV",
       "kind": "audit",
       "source": "bot",
