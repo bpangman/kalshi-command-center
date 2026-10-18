@@ -1,10 +1,10 @@
 {
   "key": "W7-BUFLV",
-  "generated_at": "2026-10-18T22:30:10.385906Z",
+  "generated_at": "2026-10-18T22:31:30.667053Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line $0.",
+    "headline": "In game (Ingame). Worst line -$8.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,178, 720 resting. Worst line $0. Game 65% done. Bot is slow (checks every 23s, set for 5s)."
+          "In game (Ingame). Sold 2,191, 709 resting. Worst line -$8. Game 67% done. Bot is slow (checks every 18s, set for 5s)."
         ]
       },
       {
@@ -53,8 +53,8 @@
       },
       {
         "label": "BUF by 7-14",
-        "held": 526.9,
-        "resting": 29.0,
+        "held": 539.9,
+        "resting": 16.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "BUF by 15+",
         "held": 350.9,
-        "resting": 28.0,
+        "resting": 41.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "LV by 1-6",
         "held": 366.1,
-        "resting": 31.0,
+        "resting": 17.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "LV by 15+",
         "held": 36.5,
-        "resting": 562.0,
+        "resting": 565.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-BUFLV",
-    "ts": "2026-10-18T22:29:57Z"
+    "ts": "2026-10-18T22:30:57Z"
   },
   "posts": [
     {
@@ -1178,6 +1178,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nLV 1-6: +158 (+3.7% of bankroll)\nLV 7-14: +86 (+2.0% of bankroll)\nLV 15+: +487 (+11.4% of bankroll)\nBUF 1-6: +64 (+1.5% of bankroll)\nBUF 7-14: -3 (-0.1% of bankroll)\nBUF 15+: +182 (+4.2% of bankroll)\nCollected $524 premium ($0 fees) | Paper margin over fair $101 (not realized until settlement)\nEvent: BUF 7-14: BUF 13-23, Q3 6:22; BUF 15+: BUF 13-23, Q3 6:22\nheld / resting\nLV 1-6: 366 / 31\nLV 7-14: 438 / 53\nLV 15+: 36 / 560\nBUF 1-6: 460 / 17\nBUF 7-14: 527 / 29\nBUF 15+: 342 / 20\nPosted book 1.49 | Sold avg 1.295 | Worst now +16 | Cash free $1250\nAnchor age 1680s | Last fill 190s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792362657579-ec7e18",
+      "ts": "2026-10-18T22:30:52Z",
+      "book": "W7-BUFLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26OCT18BUFLV-BUF7TO14: held floor -15, resting 16 -> cap 12, trimmed 4 highest-",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
@@ -1296,6 +1306,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+11 on BUF 15+ @ 0.22 (maker)\n+1 on BUF 15+ @ 0.24 (maker)\n+5 on BUF 7-14 @ 0.36 (maker)\n+2 on BUF 15+ @ 0.27 (maker)\n+21 on BUF 7-14 @ 0.38 (maker)\n+2 on BUF 15+ @ 0.30 (maker)\nworst outcome now +16\nheld 366/438/36/460/527/342\nIf the game ends... you make\nLV 1-6: +158 (+3.7% of bankroll)\nLV 7-14: +86 (+2.0% of bankroll)\nLV 15+: +487 (+11.4% of bankroll)\nBUF 1-6: +64 (+1.5% of bankroll)\nBUF 7-14: -3 (-0.1% of bankroll)\nBUF 15+: +182 (+4.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792362669582-d91fd7",
+      "ts": "2026-10-18T22:31:09Z",
+      "book": "W7-BUFLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
