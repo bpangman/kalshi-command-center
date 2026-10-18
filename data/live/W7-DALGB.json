@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-18T14:23:37.042819Z",
+  "generated_at": "2026-10-18T14:24:56.184588Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -52,12 +52,12 @@
         "exposure": 201.76,
         "exposure_text": "+$202",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 9:25am CT (FILLFAIR: 20 min with no fill)",
+        "when": "next bot check (no fill for 20+ min)",
         "at": "2026-10-18T14:25:55Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-18T12:29:44Z",
-        "lag_note": "Steps to 12c if no fill by 9:25am CT."
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "DAL by 1-6",
@@ -65,11 +65,11 @@
         "exposure": 208.06,
         "exposure_text": "+$208",
         "move": "Hold price at 22c",
-        "when": "crowd pays 22c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (21.2c)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "lag_note": "Price 22c matches the crowd."
+        "lag_note": "Price 22c is at its floor."
       },
       {
         "side": "DAL by 7-14",
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DAL by 1-6, DAL by 7-14, DAL by 15+, GB by 7-14, GB by 15+.",
-          "DAL by 1-6: 657 behind. Price 22c matches the crowd.",
+          "DAL by 1-6: 657 behind. Price 22c is at its floor.",
           "DAL by 7-14: 657 behind. Price 17c matches the crowd.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-18T14:23:28Z"
+    "ts": "2026-10-18T14:24:28Z"
   },
   "posts": [
     {
