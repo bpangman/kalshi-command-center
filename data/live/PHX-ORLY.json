@@ -1,19 +1,19 @@
 {
   "key": "PHX-ORLY",
-  "generated_at": "2026-10-18T01:39:11.412001Z",
+  "generated_at": "2026-10-18T01:40:59.740035Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$6.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 41,572, 16,250 resting. Worst line +$6. Race 82% done. Floor protocol off. Bot is slow (checks every 51s, set for 30s)."
+          "In race (Ingame). Sold 41,572, 16,250 resting. Worst line +$6. Race 82% done. Floor protocol off."
         ]
       },
       {
@@ -44,35 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PHX-ORLY",
-    "ts": "2026-10-18T01:38:56Z"
+    "ts": "2026-10-18T01:40:57Z"
   },
   "posts": [
-    {
-      "id": "1792264324979-aee265",
-      "ts": "2026-10-17T19:11:57Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Corey Day: wave 15, 20 contracts at 10c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Corey Day"
-      }
-    },
-    {
-      "id": "1792264324979-a22e11",
-      "ts": "2026-10-17T19:11:57Z",
-      "book": "PHX-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave for Taylor Gray: wave 21, 10 contracts at 4c. (growth phase)",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "Taylor Gray"
-      }
-    },
     {
       "id": "1792264385370-f52c3a",
       "ts": "2026-10-17T19:12:50Z",
@@ -4357,18 +4331,39 @@
         "contracts": 18990.0,
         "rows": 12
       }
+    },
+    {
+      "id": "1792287597006-f1c6fc",
+      "ts": "2026-10-18T01:39:57Z",
+      "book": "PHX-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$6.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1792287657530-897ecf",
+      "ts": "2026-10-18T01:38:41Z",
+      "book": "PHX-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 400: Parker Retzlaff x400 at 2c. Worst line +$6.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 400.0,
+        "fills": [
+          {
+            "side": "Parker Retzlaff",
+            "price": 0.02,
+            "qty": 400.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792237662100-13b248",
-      "ts": "2026-10-17T11:47:42Z",
-      "book": "PHX-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PHX-ORLY): worst -484.56 vs floor -425.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792239580282-160846",
       "ts": "2026-10-17T12:19:40Z",
@@ -5258,6 +5253,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Shock on Carson Kvapil: pulled every in-game order, pausing 30s\nIf the race ends... you make\nJesse Love: -2\nCarson Kvapil: +0\nSam Mayer: +1\nRajah Caruth: +2\nJustin Allgaier: +5\nCorey Day: +8\nWilliam Sawalich: +10\nSheldon Creed: +12\nall others (31) >= +16",
+      "severity": "warn"
+    },
+    {
+      "id": "1792287606183-1bc482",
+      "ts": "2026-10-18T01:40:06Z",
+      "book": "PHX-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 3 driver(s): Justin Allgaier (+93%), Carson Kvapil (+46%), Corey Day (+36%)",
       "severity": "warn"
     }
   ]
