@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T14:42:49.111629Z",
+  "generated_at": "2026-10-19T14:45:02.628798Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -51,11 +51,11 @@
         "exposure": 553.39,
         "exposure_text": "+$553",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 9:45am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T14:45:23Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "lag_note": "Steps to 11c if no fill by 9:45am CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "WAS by 15+",
@@ -63,11 +63,11 @@
         "exposure": 553.39,
         "exposure_text": "+$553",
         "move": "Hold price at 4c",
-        "when": "crowd pays 4c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "lag_note": "Price 4c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "WAS by 7-14",
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 1-6: 868 behind. Steps to 11c if no fill by 9:45am CT.",
+          "WAS by 1-6: 868 behind. Steps to 11c at the next check.",
           "WAS by 7-14: 868 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T14:42:22Z"
+    "ts": "2026-10-19T14:44:22Z"
   },
   "posts": [
     {
