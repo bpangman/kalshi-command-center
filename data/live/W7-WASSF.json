@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T12:55:08.620516Z",
+  "generated_at": "2026-10-19T12:57:42.143594Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$314, goal -$150.",
+    "headline": "Building toward kickoff 7:16pm CT. Worst line -$314, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -29,7 +29,7 @@
         "when": "waits until worst loss is -$200 or better (now -$314)",
         "at": null,
         "stuck": true,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: paid balancing starts 6:31pm CT",
         "last_fill": "2026-10-19T07:22:33Z"
       },
       {
@@ -41,7 +41,7 @@
         "when": "if no fill by 8:00am CT (FILLFAIR: 10 min with no fill)",
         "at": "2026-10-19T13:00:33Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: paid balancing starts 6:31pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
         "lag_note": "Steps to 23c if no fill by 8:00am CT."
       },
@@ -54,7 +54,7 @@
         "when": "crowd pays 12.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: paid balancing starts 6:31pm CT",
         "lag_note": "Price 13c matches the crowd."
       },
       {
@@ -66,7 +66,7 @@
         "when": "crowd pays 4c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: paid balancing starts 6:31pm CT",
         "lag_note": "Price 4c matches the crowd."
       },
       {
@@ -78,7 +78,7 @@
         "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: paid balancing starts 6:31pm CT",
         "lag_note": "No crowd trade data yet."
       }
     ],
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,452 resting. Worst line -$314 (goal -$150)."
+          "Pregame build, kickoff 7:16pm CT. Sold 1,894, 3,452 resting. Worst line -$314 (goal -$150)."
         ]
       },
       {
@@ -111,9 +111,9 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON: SF by 7-14 stopped adding until worst line is above -$300 (now -$314).",
-          "Paid balancing starts 6:30pm CT: worst line to -$150 by 7:05pm CT, up to $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "Paid balancing starts 6:31pm CT: worst line to -$150 by 7:06pm CT, up to $100.",
+          "At 6:46pm CT, if worst line is -$150 or better, paid balancing stops.",
+          "Kickoff 7:16pm CT: the in-game engine takes over."
         ]
       },
       {
@@ -125,17 +125,17 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-19T23:30:00Z",
+        "at": "2026-10-19T23:31:00Z",
         "label": "Paid balancing starts",
-        "detail": "Worst line to -$150 by 7:05pm CT."
+        "detail": "Worst line to -$150 by 7:06pm CT."
       },
       {
-        "at": "2026-10-19T23:45:00Z",
+        "at": "2026-10-19T23:46:00Z",
         "label": "Even-done check",
         "detail": "Paid balancing stops if worst line is -$150 or better."
       },
       {
-        "at": "2026-10-20T00:15:00Z",
+        "at": "2026-10-20T00:16:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
       }
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T12:54:37Z"
+    "ts": "2026-10-19T12:57:38Z"
   },
   "posts": [
     {
@@ -1882,6 +1882,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W7-WASSF - San Francisco by 7 to 14 has had no resting orders for at least 434 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792414572534-7cf124",
+      "ts": "2026-10-19T12:56:12Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-WASSF): held worst -314.49 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
