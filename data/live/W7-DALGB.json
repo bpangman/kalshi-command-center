@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T00:10:05.723956Z",
+  "generated_at": "2026-10-19T00:11:36.123560Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -15,7 +15,7 @@
         "exposure": -411.91,
         "exposure_text": "-$412",
         "move": "Next wave 165 contracts",
-        "when": "waits until worst loss is -$152 or better (now -$412)",
+        "when": "waits until worst loss is -$150 or better (now -$412)",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-19T00:08:09Z"
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$152 (now -$412).",
+          "Gate closed: batches wait for the worst line to reach -$150 (now -$412).",
           "Closest: DAL by 15+, 0 resting vs trigger 125.",
           "Batches used: none (max 3 per side)."
         ]
@@ -115,7 +115,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$152, worst line -$412; spent $15 of $100.",
+          "Paid balancing is running: plan -$150, worst line -$412; spent $15 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -184,7 +184,7 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T00:09:38Z"
+    "ts": "2026-10-19T00:10:39Z"
   },
   "posts": [
     {
@@ -3555,15 +3555,6 @@
   ],
   "audits": [
     {
-      "id": "1792301805800-f62551",
-      "ts": "2026-10-18T05:36:45Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+34 on GB 15+ @ 0.14 (maker)\nworst outcome now +84\nheld 550/20/380/0/0/0\nIf the game ends... you make\nGB 1-6: -369 (-3.1% of bankroll)\nGB 7-14: +161 (+1.4% of bankroll)\nGB 15+: -200 (-1.7% of bankroll)\nDAL 1-6: +181 (+1.5% of bankroll)\nDAL 7-14: +181 (+1.5% of bankroll)\nDAL 15+: +181 (+1.5% of bankroll)",
-      "severity": "warn"
-    },
-    {
       "id": "1792301981378-fac9d7",
       "ts": "2026-10-18T05:39:41Z",
       "book": "W7-DALGB",
@@ -4452,6 +4443,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-DALGB): held worst -302.36 (backstop -300) or lagging gap 904 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792368624832-21ec51",
+      "ts": "2026-10-19T00:10:24Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: DAL 15+ worst outcome -80\nIf the game ends... you make\nGB 1-6: -120 (-1.0% of bankroll)\nGB 7-14: -120 (-1.0% of bankroll)\nGB 15+: +128 (+1.1% of bankroll)\nDAL 1-6: +240 (+2.0% of bankroll)\nDAL 7-14: +606 (+5.1% of bankroll)\nDAL 15+: -412 (-3.5% of bankroll)",
       "severity": "warn"
     }
   ]
