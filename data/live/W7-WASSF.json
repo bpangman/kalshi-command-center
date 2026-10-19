@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T15:16:36.935685Z",
+  "generated_at": "2026-10-19T15:18:50.239299Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -51,12 +51,12 @@
         "exposure": 390.12,
         "exposure_text": "+$390",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 10:18am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-19T15:18:21Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-19T15:18:37Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c if no fill by 10:18am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "WAS by 1-6",
@@ -73,7 +73,7 @@
       },
       {
         "side": "WAS by 15+",
-        "resting": "872 @ 4-14c",
+        "resting": "918 @ 4-14c",
         "exposure": 591.25,
         "exposure_text": "+$591",
         "move": "Hold price at 4c",
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T15:16:36Z"
+    "ts": "2026-10-19T15:18:37Z"
   },
   "posts": [
     {
@@ -2312,6 +2312,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+450 on WAS 7-14 @ 0.07 (maker)\nworst outcome now -8\nheld 201/868/825/58/450/0\nIf the game ends... you make\nSF 1-6: +390 (+8.3% of bankroll)\nSF 7-14: -277 (-5.9% of bankroll)\nSF 15+: -234 (-5.0% of bankroll)\nWAS 1-6: +533 (+11.3% of bankroll)\nWAS 7-14: +141 (+3.0% of bankroll)\nWAS 15+: +591 (+12.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792423094197-32d6c5",
+      "ts": "2026-10-19T15:18:14Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W7-WASSF - San Francisco by 7 to 14 is posting again.",
       "severity": "warn"
     }
   ]
