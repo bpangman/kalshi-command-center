@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T14:45:02.628798Z",
+  "generated_at": "2026-10-19T14:47:15.595115Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,24 +38,24 @@
         "exposure": 352.26,
         "exposure_text": "+$352",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 9:46am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T14:46:26Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c if no fill by 9:46am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "WAS by 1-6",
-        "resting": "647 @ 12-14c",
+        "resting": "647 @ 11-14c",
         "exposure": 553.39,
         "exposure_text": "+$553",
-        "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T14:45:23Z",
+        "move": "Hold price at 11c",
+        "when": "crowd pays 11c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Price 11c matches the crowd."
       },
       {
         "side": "WAS by 15+",
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 1-6: 868 behind. Steps to 11c at the next check.",
+          "WAS by 1-6: 868 behind. Price 11c matches the crowd.",
           "WAS by 7-14: 868 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T14:44:22Z"
+    "ts": "2026-10-19T14:46:23Z"
   },
   "posts": [
     {
@@ -1644,6 +1644,36 @@
       "kind": "update",
       "source": "narrator",
       "text": "Price step on SF by 1-6: no fill for 232 min, added 300 at 23c (was 24c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 1-6",
+        "from": 0.24,
+        "to": 0.23
+      }
+    },
+    {
+      "id": "1792421163680-353e16",
+      "ts": "2026-10-19T14:45:54Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on WAS by 1-6: no fill for 10 min, added 300 at 11c (was 12c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "WAS by 1-6",
+        "from": 0.12,
+        "to": 0.11
+      }
+    },
+    {
+      "id": "1792421224107-648d83",
+      "ts": "2026-10-19T14:46:57Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 1-6: no fill for 243 min, added 300 at 23c (was 24c).",
       "severity": "info",
       "title": "Price step",
       "data": {
