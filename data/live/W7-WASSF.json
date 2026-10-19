@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T10:54:45.440166Z",
+  "generated_at": "2026-10-19T10:56:58.701183Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,12 +38,12 @@
         "exposure": 352.26,
         "exposure_text": "+$352",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 5:57am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-19T10:57:00Z",
+        "when": "if no fill by 6:04am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T11:04:39Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c if no fill by 5:57am CT."
+        "lag_note": "Steps to 23c if no fill by 6:04am CT."
       },
       {
         "side": "WAS by 1-6",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,425 resting. Worst line -$314 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,452 resting. Worst line -$314 (goal -$150)."
         ]
       },
       {
@@ -184,14 +184,14 @@
       {
         "label": "WAS by 15+",
         "held": 0.0,
-        "resting": 845.0,
+        "resting": 872.0,
         "target": 500.0,
         "status": "lagging",
         "price": 0.05
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T10:53:46Z"
+    "ts": "2026-10-19T10:56:48Z"
   },
   "posts": [
     {
@@ -1257,6 +1257,30 @@
         "contracts": 30.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792407287281-4b3df5",
+      "ts": "2026-10-19T10:54:42Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "SF by 1-6 price not lowered: the next cent is under the crowd price, so it stays at 24c.",
+      "severity": "info",
+      "title": "Price hold"
+    },
+    {
+      "id": "1792407347692-c1a8a4",
+      "ts": "2026-10-19T10:53:39Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 27 (FIELD far-bucket row (all-fill): WAS by 15+ x27 at 5c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 27.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -1627,6 +1651,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+59 on SF 1-6 @ 0.24 (maker)\nworst outcome now +46\nheld 201/868/825/0/0/0\nIf the game ends... you make\nSF 1-6: +352 (+7.5% of bankroll)\nSF 7-14: -314 (-6.7% of bankroll)\nSF 15+: -272 (-5.8% of bankroll)\nWAS 1-6: +553 (+11.8% of bankroll)\nWAS 7-14: +553 (+11.8% of bankroll)\nWAS 15+: +553 (+11.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792407296295-256105",
+      "ts": "2026-10-19T10:54:56Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-WASSF): held worst -314.49 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
