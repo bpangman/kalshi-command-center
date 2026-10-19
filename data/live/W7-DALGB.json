@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T02:55:05.520202Z",
+  "generated_at": "2026-10-19T02:56:20.669448Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,969, 1,041 resting. Worst line +$61. Game 78% done."
+          "In game (Ingame). Sold 9,969, 999 resting. Worst line +$61. Game 78% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DAL by 1-6",
         "held": 1792.2,
-        "resting": 40.3,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -69,8 +69,8 @@
       },
       {
         "label": "GB by 1-6",
-        "held": 1831.7,
-        "resting": 2.4,
+        "held": 1832.4,
+        "resting": 1.4,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T02:54:45Z"
+    "ts": "2026-10-19T02:55:46Z"
   },
   "posts": [
-    {
-      "id": "1792288725170-c7dbde",
-      "ts": "2026-10-18T01:58:45Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,315 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792289631706-096646",
       "ts": "2026-10-18T02:13:51Z",
@@ -4425,18 +4415,29 @@
       "text": "Bot note: floor-only trim KXNFLWINMARGIN-26OCT18DALGB-GB1TO6: held floor +61, resting 3 -> cap 2, trimmed 0 highest-pric",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792378546105-dcca1e",
+      "ts": "2026-10-19T02:54:45Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 6: GB by 1-6 x6 at 18c. Worst line +$61.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 6.0,
+        "fills": [
+          {
+            "side": "GB by 1-6",
+            "price": 0.18,
+            "qty": 6.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792326631349-de3200",
-      "ts": "2026-10-18T12:30:31Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): held worst -448.85 (backstop -300) or lagging gap 657 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792326725406-264274",
       "ts": "2026-10-18T12:32:05Z",
@@ -5326,6 +5327,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W7-DALGB - Green Bay by 15 or more has had no resting orders for at least 72 min (reason unknown: no reason logged).\nBack: W7-DALGB - Green Bay by 1 to 6 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792378549903-e055b8",
+      "ts": "2026-10-19T02:55:49Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
