@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T11:52:44.788291Z",
+  "generated_at": "2026-10-19T11:54:58.346022Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -59,15 +59,15 @@
       },
       {
         "side": "WAS by 15+",
-        "resting": "872 @ 5-14c",
+        "resting": "655 @ 4-14c",
         "exposure": 553.39,
         "exposure_text": "+$553",
-        "move": "Step price down 1c (5c to 4c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T11:52:16Z",
+        "move": "Hold price at 4c",
+        "when": "crowd pays 4c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "lag_note": "Steps to 4c at the next check."
+        "lag_note": "Price 4c matches the crowd."
       },
       {
         "side": "WAS by 7-14",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,452 resting. Worst line -$314 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,235 resting. Worst line -$314 (goal -$150)."
         ]
       },
       {
@@ -184,14 +184,14 @@
       {
         "label": "WAS by 15+",
         "held": 0.0,
-        "resting": 872.0,
+        "resting": 655.0,
         "target": 500.0,
         "status": "lagging",
-        "price": 0.05
+        "price": 0.04
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T11:52:11Z"
+    "ts": "2026-10-19T11:54:12Z"
   },
   "posts": [
     {
@@ -1330,6 +1330,21 @@
       "text": "WAS by 15+ price not lowered: the next cent is under the crowd price, so it stays at 5c.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792410791703-4fda88",
+      "ts": "2026-10-19T11:52:57Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on WAS by 15+: no fill for 10 min, added 300 at 4c (was 5c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "WAS by 15+",
+        "from": 0.05,
+        "to": 0.04
+      }
     }
   ],
   "audits": [
