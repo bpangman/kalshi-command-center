@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T23:44:08.781360Z",
+  "generated_at": "2026-10-19T23:46:26.924408Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 7:15pm CT. Worst line -$26, goal -$150.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$26.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -14,7 +14,7 @@
         "resting": "37 @ 40c",
         "exposure": -26.06,
         "exposure_text": "-$26",
-        "move": "Next wave 375 contracts",
+        "move": "Next wave 247 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
         "stuck": false,
@@ -25,7 +25,7 @@
         "resting": "none",
         "exposure": -16.94,
         "exposure_text": "-$17",
-        "move": "Next wave 450 contracts",
+        "move": "Next wave 297 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
         "stuck": false,
@@ -37,7 +37,7 @@
         "resting": "169 @ 24c",
         "exposure": -7.4,
         "exposure_text": "-$7",
-        "move": "Next wave 450 contracts",
+        "move": "Next wave 297 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
         "stuck": false,
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 7:15pm CT. Sold 5,280, 1,412 resting. Worst line -$26 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 5,280, 1,412 resting. Worst line -$26 (goal -$150)."
         ]
       },
       {
@@ -114,7 +114,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing is running: plan -$150, worst line -$26; spent $0 of $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -126,11 +125,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-19T23:45:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-10-20T00:15:00Z",
         "label": "Kickoff",
@@ -188,7 +182,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T23:44:00Z"
+    "ts": "2026-10-19T23:46:01Z"
   },
   "posts": [
     {
@@ -3810,6 +3804,56 @@
       "text": "Balancing before kickoff 7:15pm CT. Worst line -$26, goal -$150. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame balancing"
+    },
+    {
+      "id": "1792453500541-55938c",
+      "ts": "2026-10-19T23:45:00Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792453500541-fc4f27",
+      "ts": "2026-10-19T23:45:00Z",
+      "book": "W7-WASSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line -$26. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792453520718-992304",
+      "ts": "2026-10-19T23:45:14Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line -$26 beats the -$150 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1792453520719-543b57",
+      "ts": "2026-10-19T23:45:14Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$26. Lagging: WAS by 1-6, WAS by 7-14, WAS by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792453561066-2ff4f5",
+      "ts": "2026-10-19T23:46:01Z",
+      "book": "W7-WASSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line -$26. Next: Kickoff, 7:15pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
