@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T04:18:36.559100Z",
+  "generated_at": "2026-10-19T04:20:50.065097Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -198.09,
         "exposure_text": "-$198",
         "move": "Step price down 1c (29c to 28c)",
-        "when": "if no fill by 11:19pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-19T04:19:56Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-19T04:20:01Z",
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
         "last_fill": "2026-10-19T04:09:56Z",
-        "lag_note": "Steps to 28c if no fill by 11:19pm CT."
+        "lag_note": "Steps to 28c at the next check."
       },
       {
         "side": "SF by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T04:18:01Z"
+    "ts": "2026-10-19T04:20:01Z"
   },
   "posts": [
     {
@@ -521,6 +521,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nSF 1-6: +368 (+7.8% of bankroll)\nSF 7-14: -198 (-4.2% of bankroll)\nSF 15+: -321 (-6.8% of bankroll)\nWAS 1-6: +368 (+7.8% of bankroll)\nWAS 7-14: +368 (+7.8% of bankroll)\nWAS 15+: +368 (+7.8% of bankroll)\nCollected $368 premium ($0 fees) | Paper margin over fair $13 (not realized until settlement)\nheld / resting\nSF 1-6: 0 / 873\nSF 7-14: 566 / 312\nSF 15+: 689 / 173\nWAS 1-6: 0 / 860\nWAS 7-14: 0 / 852\nWAS 15+: 0 / 790\nPosted book 1.17 | Sold avg 1.111 | Worst now +93 | Cash free $3795\nAnchor age 0s | Last fill 68s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792383642245-9783bc",
+      "ts": "2026-10-19T04:20:36Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "SF by 7-14 price not lowered: the next cent is under the crowd price, so it stays at 29c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
