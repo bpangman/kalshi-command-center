@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T21:21:49.282815Z",
+  "generated_at": "2026-10-19T21:24:43.637994Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$135, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$121, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "SF by 15+",
         "resting": "37 @ 40c",
-        "exposure": -134.86,
-        "exposure_text": "-$135",
+        "exposure": -121.09,
+        "exposure_text": "-$121",
         "move": "Next wave 375 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "SF by 7-14",
         "resting": "none",
-        "exposure": -125.74,
-        "exposure_text": "-$126",
+        "exposure": -111.97,
+        "exposure_text": "-$112",
         "move": "Next wave 450 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
@@ -35,8 +35,8 @@
       {
         "side": "WAS by 1-6",
         "resting": "314 @ 11-13c",
-        "exposure": 135.14,
-        "exposure_text": "+$135",
+        "exposure": 148.91,
+        "exposure_text": "+$149",
         "move": "Hold price at 11c",
         "when": "crowd pays 11c; steps down 1c only if it trades lower",
         "at": null,
@@ -46,10 +46,23 @@
         "lag_note": "Price 11c matches the crowd."
       },
       {
+        "side": "SF by 1-6",
+        "resting": "378 @ 21-22c",
+        "exposure": 275.88,
+        "exposure_text": "+$276",
+        "move": "Hold price at 21c",
+        "when": "crowd pays 20.8c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 6:30pm CT",
+        "last_fill": "2026-10-19T21:21:23Z",
+        "lag_note": "Price 21c matches the crowd."
+      },
+      {
         "side": "WAS by 7-14",
         "resting": "202 @ 8c",
-        "exposure": 267.14,
-        "exposure_text": "+$267",
+        "exposure": 280.91,
+        "exposure_text": "+$281",
         "move": "Hold price at 8c",
         "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
@@ -59,23 +72,10 @@
         "lag_note": "Price 8c matches the crowd."
       },
       {
-        "side": "SF by 1-6",
-        "resting": "360 @ 21-22c",
-        "exposure": 327.67,
-        "exposure_text": "+$328",
-        "move": "Hold price at 21c",
-        "when": "crowd pays 20.8c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
-        "last_fill": "2026-10-19T21:11:58Z",
-        "lag_note": "Price 21c matches the crowd."
-      },
-      {
         "side": "WAS by 15+",
         "resting": "692 @ 4-14c",
-        "exposure": 398.95,
-        "exposure_text": "+$399",
+        "exposure": 412.72,
+        "exposure_text": "+$413",
         "move": "Hold price at 4c",
         "when": "next cent is under the crowd price (3.3c)",
         "at": null,
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,635, 1,605 resting. Worst line -$135 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,700, 1,623 resting. Worst line -$121 (goal -$150)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
           "WAS by 15+: 534 behind. Price 4c is at its floor.",
-          "SF by 1-6: 462 behind. Price 21c matches the crowd.",
+          "WAS by 7-14: 402 behind. Price 8c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$135 is better than -$200.",
+          "Gate open: worst line -$121 is better than -$200.",
           "Closest: SF by 7-14, 0 resting vs trigger 225.",
           "Batches used: 1 (max 3 per side)."
         ]
@@ -146,8 +146,8 @@
     "sides": [
       {
         "label": "SF by 1-6",
-        "held": 589.5,
-        "resting": 359.9,
+        "held": 655.0,
+        "resting": 378.3,
         "target": 900.0,
         "status": "lagging",
         "price": 0.21
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T21:20:58Z"
+    "ts": "2026-10-19T21:23:59Z"
   },
   "posts": [
     {
@@ -3424,6 +3424,40 @@
       "text": "Fast fill on lagging SF by 1-6: 62 of 234 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792444999632-228142",
+      "ts": "2026-10-19T21:21:50Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 66: SF by 1-6 x66 at 21c. Worst line -$121.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 66.0,
+        "fills": [
+          {
+            "side": "SF by 1-6",
+            "price": 0.21,
+            "qty": 66.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792445019808-219b57",
+      "ts": "2026-10-19T21:21:50Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 84 (same-price reload): SF by 1-6 x84 at 21c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 84.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
