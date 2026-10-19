@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T00:02:56.934591Z",
+  "generated_at": "2026-10-19T00:04:08.213407Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -15,7 +15,7 @@
         "exposure": -302.36,
         "exposure_text": "-$302",
         "move": "Next wave 297 contracts",
-        "when": "waits until worst loss is -$193 or better (now -$302)",
+        "when": "waits until worst loss is -$187 or better (now -$302)",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-18T22:47:24Z"
@@ -26,7 +26,7 @@
         "exposure": -302.27,
         "exposure_text": "-$302",
         "move": "Next wave 297 contracts",
-        "when": "waits until worst loss is -$193 or better (now -$302)",
+        "when": "waits until worst loss is -$187 or better (now -$302)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -64,7 +64,7 @@
         "exposure": 523.58,
         "exposure_text": "+$524",
         "move": "Hold price at 16c",
-        "when": "next cent is under the crowd price (14.6c)",
+        "when": "next cent is under the crowd price (14.7c)",
         "at": null,
         "stuck": false,
         "also": "Also: next wave if resting drops under 188",
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$193 (now -$302).",
+          "Gate closed: batches wait for the worst line to reach -$187 (now -$302).",
           "Closest: GB by 1-6, 0 resting vs trigger 225.",
           "Batches used: none (max 3 per side)."
         ]
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$193, worst line -$302; spent $12 of $100.",
+          "Paid balancing is running: plan -$187, worst line -$302; spent $12 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -183,18 +183,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T00:02:36Z"
+    "ts": "2026-10-19T00:03:36Z"
   },
   "posts": [
-    {
-      "id": "1792230199449-738aaa",
-      "ts": "2026-10-17T09:43:19Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +17 (+0.1% of bankroll)\nGB 7-14: +55 (+0.5% of bankroll)\nGB 15+: -261 (-2.2% of bankroll)\nDAL 1-6: +55 (+0.5% of bankroll)\nDAL 7-14: +55 (+0.5% of bankroll)\nDAL 15+: +55 (+0.5% of bankroll)\nCollected $55 premium ($0 fees) | Paper margin over fair $7 (not realized until settlement)\nheld / resting\nGB 1-6: 38 / 1012\nGB 7-14: 0 / 975\nGB 15+: 317 / 583\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 825\nDAL 15+: 0 / 650\nPosted book 1.23 | Sold avg 1.199 | Worst now +76 | Cash free $2500\nAnchor age 0s | Last fill 55404s ago",
-      "severity": "info"
-    },
     {
       "id": "1792230452569-66d1b7",
       "ts": "2026-10-17T09:47:32Z",
@@ -3492,27 +3483,34 @@
       "text": "Balancing: sold 50 GB by 15+ at the bid 10c. Worst line -$310. Cost $1.34.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1792368236588-6acc33",
+      "ts": "2026-10-19T00:01:38Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 67: GB by 15+ x50 at 10c, DAL by 1-6 x17 at 21c. Worst line -$302.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 67.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.1,
+            "qty": 50.0
+          },
+          {
+            "side": "DAL by 1-6",
+            "price": 0.21,
+            "qty": 17.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792300113272-7343bd",
-      "ts": "2026-10-18T05:08:33Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): worst -374.21 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792300113273-7e3df7",
-      "ts": "2026-10-18T05:08:33Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): held worst -374.21 (backstop -300) or lagging gap 550 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792301805800-f62551",
       "ts": "2026-10-18T05:36:45Z",
@@ -4393,6 +4391,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+17 on DAL 1-6 @ 0.21 (taker)\n+50 on GB 15+ @ 0.10 (taker)\nworst outcome now -93\nheld 954/954/706/577/128/50\nIf the game ends... you make\nGB 1-6: -302 (-2.6% of bankroll)\nGB 7-14: -302 (-2.6% of bankroll)\nGB 15+: -54 (-0.5% of bankroll)\nDAL 1-6: +74 (+0.6% of bankroll)\nDAL 7-14: +524 (+4.4% of bankroll)\nDAL 15+: +601 (+5.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792368238217-0f7955",
+      "ts": "2026-10-19T00:03:58Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-DALGB): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=13669. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792368238217-aedb55",
+      "ts": "2026-10-19T00:03:58Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-DALGB): held worst -302.36 (backstop -300) or lagging gap 904 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
