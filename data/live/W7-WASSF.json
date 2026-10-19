@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T11:23:43.130642Z",
+  "generated_at": "2026-10-19T11:25:56.613488Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,12 +38,12 @@
         "exposure": 352.26,
         "exposure_text": "+$352",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 6:25am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T11:25:57Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c if no fill by 6:25am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "WAS by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T11:22:59Z"
+    "ts": "2026-10-19T11:25:00Z"
   },
   "posts": [
     {
@@ -1300,6 +1300,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nSF 1-6: +352 (+7.5% of bankroll)\nSF 7-14: -314 (-6.7% of bankroll)\nSF 15+: -272 (-5.8% of bankroll)\nWAS 1-6: +553 (+11.8% of bankroll)\nWAS 7-14: +553 (+11.8% of bankroll)\nWAS 15+: +553 (+11.8% of bankroll)\nCollected $553 premium ($0 fees) | Paper margin over fair $34 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; WAS 7-14: WAS 0-0, Q0 0:00\nheld / resting\nSF 1-6: 201 / 768\nSF 7-14: 868 / 0\nSF 15+: 825 / 37\nWAS 1-6: 0 / 923\nWAS 7-14: 0 / 852\nWAS 15+: 0 / 872\nPosted book 1.29 | Sold avg 1.123 | Worst now +47 | Cash free $3795\nAnchor age 0s | Last fill 1738s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792409100635-1026eb",
+      "ts": "2026-10-19T11:25:00Z",
+      "book": "W7-WASSF",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 3,452 resting. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -1675,6 +1685,15 @@
     {
       "id": "1792407296295-256105",
       "ts": "2026-10-19T10:54:56Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-WASSF): held worst -314.49 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792409115813-fb0203",
+      "ts": "2026-10-19T11:25:15Z",
       "book": "W7-WASSF",
       "kind": "audit",
       "source": "auditor",
