@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T03:06:24.941214Z",
+  "generated_at": "2026-10-19T03:07:39.965816Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T03:05:50Z"
+    "ts": "2026-10-19T03:06:50Z"
   },
   "posts": [
-    {
-      "id": "1792290357126-ce3893",
-      "ts": "2026-10-18T02:25:42Z",
-      "book": "W7-DALGB",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1792290357128-78a80d",
       "ts": "2026-10-18T02:25:53Z",
@@ -4445,18 +4435,18 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792379228300-541e01",
+      "ts": "2026-10-19T03:07:08Z",
+      "book": "W7-DALGB",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nGB 1-6: +61 (+0.5% of bankroll)\nGB 7-14: +105 (+0.9% of bankroll)\nGB 15+: +62 (+0.5% of bankroll)\nDAL 1-6: +103 (+0.9% of bankroll)\nDAL 7-14: +459 (+3.9% of bankroll)\nDAL 15+: +611 (+5.2% of bankroll)\nCollected $1898 premium ($3 fees) | Paper margin over fair $249 (not realized until settlement)\nEvent: GB 7-14: GB 23-7, Q4 9:26; GB 15+: GB 23-7, Q4 9:26\nheld / resting\nGB 1-6: 1834 / 0\nGB 7-14: 1790 / 0\nGB 15+: 1834 / 0\nDAL 1-6: 1792 / 45\nDAL 7-14: 1437 / 443\nDAL 15+: 1284 / 617\nPosted book 1.46 | Sold avg 1.117 | Worst now +57 | Cash free $2500\nAnchor age 5546s | Last fill 640s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792330387953-0a7b73",
-      "ts": "2026-10-18T13:33:07Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): worst -448.85 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792330387953-f64e5a",
       "ts": "2026-10-18T13:33:07Z",
@@ -5346,6 +5336,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792379228301-e0e1dd",
+      "ts": "2026-10-19T03:07:08Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
