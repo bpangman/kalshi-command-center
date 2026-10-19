@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T14:54:17.295155Z",
+  "generated_at": "2026-10-19T14:56:30.918791Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,12 +38,12 @@
         "exposure": 358.62,
         "exposure_text": "+$359",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 9:56am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T14:56:55Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c if no fill by 9:56am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "WAS by 1-6",
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T14:53:26Z"
+    "ts": "2026-10-19T14:56:27Z"
   },
   "posts": [
     {
@@ -1681,6 +1681,26 @@
         "side": "SF by 1-6",
         "from": 0.24,
         "to": 0.23
+      }
+    },
+    {
+      "id": "1792421667095-a06071",
+      "ts": "2026-10-19T14:52:11Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 58: WAS by 1-6 x58 at 11c. Worst line -$308.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 58.0,
+        "fills": [
+          {
+            "side": "WAS by 1-6",
+            "price": 0.11,
+            "qty": 58.0
+          }
+        ]
       }
     }
   ],
