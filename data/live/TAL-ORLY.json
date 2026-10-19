@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-19T21:34:01.164230Z",
+  "generated_at": "2026-10-19T21:36:23.107056Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 0, 9,635 resting. Worst line $0."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 0, 0 resting. Worst line $0."
         ]
       },
       {
@@ -26,8 +26,6 @@
         "title": "Next wave of contracts",
         "lines": [
           "A driver gets a new wave when 90% of what he offered has sold.",
-          "Growth phase: waves allowed down to -$1,000 per driver, limited by free cash.",
-          "Caesar Bacarella: 2 waves so far, latest 93 @ 3c, 0% filled.",
           "Waves stop Sat 1:30pm CT."
         ]
       },
@@ -67,7 +65,7 @@
     "sides": [],
     "moves_note": "37 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-19T21:33:23Z"
+    "ts": "2026-10-19T21:35:27Z"
   },
   "posts": [
     {
@@ -138,6 +136,26 @@
       "text": "Sharp price move on 1 driver: driver CAWA.",
       "severity": "info",
       "title": "Price shock"
+    },
+    {
+      "id": "1792445727165-35e5a9",
+      "ts": "2026-10-19T21:35:10Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792445727167-4acdad",
+      "ts": "2026-10-19T21:35:22Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
+      "severity": "warn",
+      "title": "Pricing source"
     }
   ],
   "audits": [
@@ -175,6 +193,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Carson Ware (+41%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792445722215-e82774",
+      "ts": "2026-10-19T21:35:22Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1792445754437-bb58b4",
+      "ts": "2026-10-19T21:35:54Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
