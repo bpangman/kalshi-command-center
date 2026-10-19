@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T22:19:45.044404Z",
+  "generated_at": "2026-10-19T22:22:06.280883Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -59,16 +59,16 @@
       },
       {
         "side": "WAS by 7-14",
-        "resting": "202 @ 8c",
+        "resting": "202 @ 7c",
         "exposure": 361.8,
         "exposure_text": "+$362",
-        "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T22:19:25Z",
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "if no fill by 5:29pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T22:29:33Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T18:03:43Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 6c if no fill by 5:29pm CT."
       },
       {
         "side": "WAS by 15+",
@@ -76,12 +76,12 @@
         "exposure": 493.61,
         "exposure_text": "+$494",
         "move": "Step price down 1c (4c to 3c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T22:19:25Z",
+        "when": "if no fill by 5:29pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T22:29:33Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T20:57:55Z",
-        "lag_note": "Steps to 3c at the next check."
+        "lag_note": "Steps to 3c if no fill by 5:29pm CT."
       }
     ],
     "sections": [
@@ -95,8 +95,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 534 behind. Steps to 3c at the next check.",
-          "WAS by 7-14: 402 behind. Steps to 7c at the next check.",
+          "WAS by 15+: 534 behind. Steps to 3c if no fill by 5:29pm CT.",
+          "WAS by 7-14: 402 behind. Steps to 6c if no fill by 5:29pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -181,7 +181,7 @@
         "resting": 202.0,
         "target": 750.0,
         "status": "lagging",
-        "price": 0.08
+        "price": 0.07
       },
       {
         "label": "WAS by 15+",
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T22:19:25Z"
+    "ts": "2026-10-19T22:21:26Z"
   },
   "posts": [
     {
@@ -3663,6 +3663,21 @@
       "source": "bot",
       "text": "If the game ends... you make\nSF 1-6: -22 (-0.5% of bankroll)\nSF 7-14: -31 (-0.7% of bankroll)\nSF 15+: -40 (-0.9% of bankroll)\nWAS 1-6: +230 (+4.9% of bankroll)\nWAS 7-14: +362 (+7.7% of bankroll)\nWAS 15+: +494 (+10.5% of bankroll)\nCollected $1012 premium ($0 fees) | Paper margin over fair $62 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; WAS 7-14: WAS 0-0, Q0 0:00\nheld / resting\nSF 1-6: 1033 / 169\nSF 7-14: 1043 / 0\nSF 15+: 1052 / 37\nWAS 1-6: 782 / 314\nWAS 7-14: 650 / 202\nWAS 15+: 518 / 692\nPosted book 1.24 | Sold avg 1.042 | Worst now -47 | Cash free $3781\nAnchor age 0s | Last fill 1479s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792448385747-14150c",
+      "ts": "2026-10-19T22:19:41Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on WAS by 7-14: no fill for 256 min, added 202 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "WAS by 7-14",
+        "from": 0.08,
+        "to": 0.07
+      }
     }
   ],
   "audits": [
