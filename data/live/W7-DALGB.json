@@ -1,10 +1,10 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T02:14:50.491629Z",
+  "generated_at": "2026-10-19T02:16:05.737929Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$3.",
+    "headline": "In game (Ingame). Worst line +$16.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,572, 1,270 resting. Worst line +$3. Game 56% done."
+          "In game (Ingame). Sold 9,647, 1,218 resting. Worst line +$16. Game 59% done."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "DAL by 1-6",
-        "held": 1634.1,
-        "resting": 79.4,
+        "held": 1709.2,
+        "resting": 58.3,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "DAL by 7-14",
         "held": 1253.0,
-        "resting": 612.0,
+        "resting": 564.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "GB by 1-6",
         "held": 1776.3,
-        "resting": 0.0,
+        "resting": 17.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T02:14:29Z"
+    "ts": "2026-10-19T02:15:29Z"
   },
   "posts": [
-    {
-      "id": "1792282622672-1245fa",
-      "ts": "2026-10-18T00:17:02Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,315 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792283529065-e1e0c9",
       "ts": "2026-10-18T00:32:09Z",
@@ -4344,18 +4334,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792376149549-db96d3",
+      "ts": "2026-10-19T02:15:22Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 76: DAL by 1-6 x28 at 15c, DAL by 1-6 x24 at 20c, DAL by 1-6 x23 at 18c, +1 more. Worst line +$16.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 76.0,
+        "fills": [
+          {
+            "side": "DAL by 1-6",
+            "price": 0.15,
+            "qty": 28.0
+          },
+          {
+            "side": "DAL by 1-6",
+            "price": 0.2,
+            "qty": 24.0
+          },
+          {
+            "side": "DAL by 1-6",
+            "price": 0.18,
+            "qty": 23.0
+          },
+          {
+            "side": "GB by 1-6",
+            "price": 0.25,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792322599488-2db2b3",
-      "ts": "2026-10-18T11:23:19Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): held worst -374.67 (backstop -300) or lagging gap 557 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792324488169-d3d75d",
       "ts": "2026-10-18T11:54:48Z",
@@ -5245,6 +5261,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+14 on DAL 1-6 @ 0.13 (maker)\n+1 on GB 1-6 @ 0.21 (maker)\n+1 on GB 1-6 @ 0.25 (maker)\nworst outcome now +131\nheld 1776/1790/1834/1634/1253/1284\nIf the game ends... you make\nGB 1-6: +60 (+0.5% of bankroll)\nGB 7-14: +46 (+0.4% of bankroll)\nGB 15+: +3 (+0.0% of bankroll)\nDAL 1-6: +202 (+1.7% of bankroll)\nDAL 7-14: +583 (+4.9% of bankroll)\nDAL 15+: +552 (+4.7% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792376099731-a23bb0",
+      "ts": "2026-10-19T02:14:59Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
