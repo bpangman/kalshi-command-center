@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T16:12:26.913069Z",
+  "generated_at": "2026-10-19T16:18:25.266457Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -12,7 +12,7 @@
       {
         "side": "SF by 7-14",
         "resting": "75 @ 37c",
-        "exposure": -310.35,
+        "exposure": -309.55,
         "exposure_text": "-$310",
         "move": "Stops adding (backstop)",
         "when": "holding until worst loss is back above -$300 (now -$310)",
@@ -23,7 +23,7 @@
       {
         "side": "SF by 15+",
         "resting": "37 @ 40c",
-        "exposure": -167.47,
+        "exposure": -166.67,
         "exposure_text": "-$167",
         "move": "Next wave 375 contracts",
         "when": "waits until worst loss is -$200 or better (now -$310)",
@@ -34,21 +34,21 @@
       },
       {
         "side": "WAS by 7-14",
-        "resting": "370 @ 8-16c",
-        "exposure": 175.53,
-        "exposure_text": "+$176",
+        "resting": "360 @ 8-16c",
+        "exposure": 166.33,
+        "exposure_text": "+$166",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 11:14am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-19T16:14:46Z",
+        "when": "if no fill by 11:23am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T16:23:27Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "last_fill": "2026-10-19T15:42:53Z",
-        "lag_note": "Steps to 7c if no fill by 11:14am CT."
+        "last_fill": "2026-10-19T16:13:27Z",
+        "lag_note": "Steps to 7c if no fill by 11:23am CT."
       },
       {
         "side": "WAS by 1-6",
         "resting": "347 @ 11-13c",
-        "exposure": 357.53,
+        "exposure": 358.33,
         "exposure_text": "+$358",
         "move": "Hold price at 11c",
         "when": "crowd pays 11c; steps down 1c only if it trades lower",
@@ -61,43 +61,43 @@
       {
         "side": "SF by 1-6",
         "resting": "516 @ 23-25c",
-        "exposure": 456.4,
-        "exposure_text": "+$456",
+        "exposure": 457.2,
+        "exposure_text": "+$457",
         "move": "Hold price at 23c",
-        "when": "next cent is under the crowd price (22.5c)",
+        "when": "crowd pays 22.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Price 23c is at its floor."
+        "lag_note": "Price 23c matches the crowd."
       },
       {
         "side": "WAS by 15+",
         "resting": "895 @ 4-14c",
-        "exposure": 499.34,
-        "exposure_text": "+$499",
+        "exposure": 500.14,
+        "exposure_text": "+$500",
         "move": "Step price down 1c (4c to 3c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T16:12:00Z",
+        "when": "if no fill by 11:22am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T16:22:34Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T15:29:31Z",
-        "lag_note": "Steps to 3c at the next check."
+        "lag_note": "Steps to 3c if no fill by 11:22am CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 2,934, 2,240 resting. Worst line -$310 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 2,944, 2,230 resting. Worst line -$310 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 810 behind. Steps to 3c at the next check.",
-          "SF by 1-6: 767 behind. Price 23c is at its floor.",
+          "WAS by 15+: 810 behind. Steps to 3c if no fill by 11:22am CT.",
+          "SF by 1-6: 767 behind. Price 23c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -178,8 +178,8 @@
       },
       {
         "label": "WAS by 7-14",
-        "held": 482.0,
-        "resting": 370.0,
+        "held": 492.0,
+        "resting": 360.0,
         "target": 750.0,
         "status": "lagging",
         "price": 0.08
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T16:12:00Z"
+    "ts": "2026-10-19T16:18:02Z"
   },
   "posts": [
     {
@@ -2174,6 +2174,26 @@
       "text": "SF by 1-6 price not lowered: the next cent is under the crowd price, so it stays at 23c.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792426541963-21e251",
+      "ts": "2026-10-19T16:13:39Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 10: WAS by 7-14 x10 at 8c. Worst line -$310.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 10.0,
+        "fills": [
+          {
+            "side": "WAS by 7-14",
+            "price": 0.08,
+            "qty": 10.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
