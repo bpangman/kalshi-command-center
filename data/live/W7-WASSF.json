@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T22:58:08.737493Z",
+  "generated_at": "2026-10-19T23:00:50.555089Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -50,12 +50,12 @@
         "exposure": 173.94,
         "exposure_text": "+$174",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T22:58:19Z",
+        "when": "if no fill by 6:08pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T23:08:24Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T22:28:05Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 6:08pm CT."
       },
       {
         "side": "WAS by 1-6",
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T22:57:41Z"
+    "ts": "2026-10-19T23:00:42Z"
   },
   "posts": [
     {
@@ -3756,6 +3756,16 @@
       "source": "bot",
       "text": "Inactivity on W7-WASSF: 0 orders posted in 10 min while the market traded 9515 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1792450822569-6428a5",
+      "ts": "2026-10-19T23:00:22Z",
+      "book": "W7-WASSF",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 1,412 resting. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
