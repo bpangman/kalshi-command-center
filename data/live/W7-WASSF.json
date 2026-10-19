@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T23:10:13.884960Z",
+  "generated_at": "2026-10-19T23:12:44.216225Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -49,13 +49,13 @@
         "resting": "200 @ 8c",
         "exposure": 173.94,
         "exposure_text": "+$174",
-        "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 6:18pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-19T23:18:34Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:30pm CT, up to $100 in all",
+        "at": "2026-10-19T23:30:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:30pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-19T22:28:05Z",
-        "lag_note": "Steps to 7c if no fill by 6:18pm CT."
+        "lag_note": "Price 8c is at its floor."
       },
       {
         "side": "WAS by 1-6",
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T23:09:46Z"
+    "ts": "2026-10-19T23:11:47Z"
   },
   "posts": [
     {
@@ -4650,6 +4650,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-WASSF): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=8690. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792451432294-e5f993",
+      "ts": "2026-10-19T23:10:32Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-WASSF): 1 order(s) with an unsafe price. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
