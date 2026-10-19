@@ -1,13 +1,13 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T21:14:54.007372Z",
+  "generated_at": "2026-10-19T21:17:11.227232Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$130, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 63,
     "moves": [
       {
         "side": "SF by 7-14",
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,621, 1,618 resting. Worst line -$130 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,621, 1,618 resting. Worst line -$130 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T21:13:55Z"
+    "ts": "2026-10-19T21:16:56Z"
   },
   "posts": [
     {
@@ -3345,6 +3345,35 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792444563912-f9f4e3",
+      "ts": "2026-10-19T21:16:03Z",
+      "book": "W7-WASSF",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nSF 1-6: +323 (+6.9% of bankroll)\nSF 7-14: -130 (-2.8% of bankroll)\nSF 15+: -126 (-2.7% of bankroll)\nWAS 1-6: +131 (+2.8% of bankroll)\nWAS 7-14: +263 (+5.6% of bankroll)\nWAS 15+: +395 (+8.4% of bankroll)\nCollected $913 premium ($0 fees) | Paper margin over fair $64 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; WAS 7-14: WAS 0-0, Q0 0:00\nheld / resting\nSF 1-6: 589 / 360\nSF 7-14: 1043 / 0\nSF 15+: 1039 / 50\nWAS 1-6: 782 / 314\nWAS 7-14: 650 / 202\nWAS 15+: 518 / 692\nPosted book 1.16 | Sold avg 1.046 | Worst now -105 | Cash free $3781\nAnchor age 0s | Last fill 224s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1792444576682-f928a0",
+      "ts": "2026-10-19T21:16:04Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$130. Lagging: SF by 1-6, WAS by 1-6, WAS by 7-14 +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792444616957-1542b7",
+      "ts": "2026-10-19T21:16:56Z",
+      "book": "W7-WASSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$130, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4156,6 +4185,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+19 on SF 1-6 @ 0.21 (maker)\nworst outcome now -105\nheld 589/1043/1039/782/650/518\nIf the game ends... you make\nSF 1-6: +323 (+6.9% of bankroll)\nSF 7-14: -130 (-2.8% of bankroll)\nSF 15+: -126 (-2.7% of bankroll)\nWAS 1-6: +131 (+2.8% of bankroll)\nWAS 7-14: +263 (+5.6% of bankroll)\nWAS 15+: +395 (+8.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792444593991-80f82f",
+      "ts": "2026-10-19T21:16:33Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W7-WASSF - San Francisco by 7 to 14 has had no resting orders for at least 192 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
