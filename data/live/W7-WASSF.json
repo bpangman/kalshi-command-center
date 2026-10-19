@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T04:34:09.993704Z",
+  "generated_at": "2026-10-19T04:37:41.551374Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -227.97,
         "exposure_text": "-$228",
         "move": "Step price down 1c (30c to 29c)",
-        "when": "if no fill by 11:38pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T04:38:34Z",
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
         "last_fill": "2026-10-19T04:28:34Z",
-        "lag_note": "Steps to 29c if no fill by 11:38pm CT."
+        "lag_note": "Steps to 29c at the next check."
       },
       {
         "side": "SF by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T04:34:07Z"
+    "ts": "2026-10-19T04:37:09Z"
   },
   "posts": [
     {
@@ -634,6 +634,26 @@
       "text": "Building toward kickoff Mon 7:15pm CT. Worst line -$342, goal -$150. Next: Paid balancing starts, Mon 6:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792384548464-a7d2a4",
+      "ts": "2026-10-19T04:33:31Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 61: SF by 15+ x61 at 32c. Worst line -$342.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 61.0,
+        "fills": [
+          {
+            "side": "SF by 15+",
+            "price": 0.32,
+            "qty": 61.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
