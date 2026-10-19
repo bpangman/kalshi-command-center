@@ -1,6 +1,6 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T01:58:09.284006Z",
+  "generated_at": "2026-10-19T01:59:21.169416Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,397, 1,171 resting. Worst line -$38. Game 50% done."
+          "In game (Ingame). Sold 9,397, 1,298 resting. Worst line -$38. Game 50% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DAL by 1-6",
         "held": 1620.1,
-        "resting": 113.7,
+        "resting": 98.2,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "DAL by 7-14",
         "held": 1253.0,
-        "resting": 536.0,
+        "resting": 551.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "DAL by 15+",
         "held": 1284.3,
-        "resting": 502.0,
+        "resting": 518.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "GB by 1-6",
         "held": 1687.8,
-        "resting": 19.5,
+        "resting": 121.5,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "GB by 7-14",
         "held": 1717.8,
-        "resting": 0.0,
+        "resting": 9.8,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T01:57:22Z"
+    "ts": "2026-10-19T01:58:22Z"
   },
   "posts": [
-    {
-      "id": "1792277547581-03eaab",
-      "ts": "2026-10-17T22:52:27Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +17 (+0.1% of bankroll)\nGB 7-14: +55 (+0.5% of bankroll)\nGB 15+: -261 (-2.2% of bankroll)\nDAL 1-6: +55 (+0.5% of bankroll)\nDAL 7-14: +55 (+0.5% of bankroll)\nDAL 15+: +55 (+0.5% of bankroll)\nCollected $55 premium ($0 fees) | Paper margin over fair $5 (not realized until settlement)\nheld / resting\nGB 1-6: 38 / 1012\nGB 7-14: 0 / 975\nGB 15+: 317 / 583\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 825\nDAL 15+: 0 / 945\nPosted book 1.23 | Sold avg 1.199 | Worst now +118 | Cash free $2500\nAnchor age 0s | Last fill 102751s ago",
-      "severity": "info"
-    },
     {
       "id": "1792278088463-9a9efb",
       "ts": "2026-10-17T23:01:28Z",
@@ -4258,18 +4249,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792375102686-74fd8a",
+      "ts": "2026-10-19T01:57:18Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: GB by 7-14 x1 at 32c, GB by 1-6 x0 at 18c. Worst line -$38.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "GB by 7-14",
+            "price": 0.32,
+            "qty": 1.0
+          },
+          {
+            "side": "GB by 1-6",
+            "price": 0.18,
+            "qty": 0.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792317014808-7eb314",
-      "ts": "2026-10-18T09:50:14Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): held worst -374.67 (backstop -300) or lagging gap 557 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792318862400-8748e3",
       "ts": "2026-10-18T10:21:02Z",
@@ -5159,6 +5166,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- W7-DALGB - Green Bay by 15 or more has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W7-DALGB - Green Bay by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792375119321-4c0425",
+      "ts": "2026-10-19T01:58:39Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W7-DALGB - Green Bay by 7 to 14 is posting again.",
       "severity": "warn"
     }
   ]
