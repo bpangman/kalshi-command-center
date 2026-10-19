@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T04:46:38.468996Z",
+  "generated_at": "2026-10-19T04:48:51.494889Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -210.4,
         "exposure_text": "-$210",
         "move": "Step price down 1c (30c to 29c)",
-        "when": "if no fill by 11:48pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T04:48:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
         "last_fill": "2026-10-19T04:28:34Z",
-        "lag_note": "Steps to 29c if no fill by 11:48pm CT."
+        "lag_note": "Steps to 29c at the next check."
       },
       {
         "side": "SF by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T04:46:12Z"
+    "ts": "2026-10-19T04:48:13Z"
   },
   "posts": [
     {
@@ -668,6 +668,40 @@
         "side": "SF by 7-14",
         "from": 0.3,
         "to": 0.29
+      }
+    },
+    {
+      "id": "1792385213117-7ba0a9",
+      "ts": "2026-10-19T04:44:41Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 50: SF by 15+ x50 at 35c. Worst line -$375.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 50.0,
+        "fills": [
+          {
+            "side": "SF by 15+",
+            "price": 0.35,
+            "qty": 50.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792385213118-297d3c",
+      "ts": "2026-10-19T04:44:42Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 61 (rung 1 allotment): SF by 7-14 x61 at 30c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 61.0,
+        "rows": 1
       }
     }
   ],
