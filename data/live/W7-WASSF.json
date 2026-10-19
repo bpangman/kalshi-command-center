@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T18:48:13.805626Z",
+  "generated_at": "2026-10-19T18:50:23.024935Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -73,16 +73,16 @@
       },
       {
         "side": "WAS by 15+",
-        "resting": "893 @ 4-14c",
+        "resting": "893 @ 3-14c",
         "exposure": 634.61,
         "exposure_text": "+$635",
-        "move": "Step price down 1c (4c to 3c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T18:48:37Z",
+        "move": "Hold price at 3c",
+        "when": "crowd pays 3c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T17:45:53Z",
-        "lag_note": "Steps to 3c at the next check."
+        "lag_note": "Price 3c matches the crowd."
       }
     ],
     "sections": [
@@ -96,7 +96,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 883 behind. Steps to 3c at the next check.",
+          "WAS by 15+: 883 behind. Price 3c matches the crowd.",
           "SF by 1-6: 772 behind. Price 21c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T18:47:59Z"
+    "ts": "2026-10-19T18:50:00Z"
   },
   "posts": [
     {
@@ -2787,6 +2787,21 @@
       "text": "Quiet for 15 min. 1,777 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792435760491-ab8d3b",
+      "ts": "2026-10-19T18:49:10Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on WAS by 15+: no fill for 63 min, added 300 at 3c (was 4c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "WAS by 15+",
+        "from": 0.04,
+        "to": 0.03
+      }
     }
   ],
   "audits": [
