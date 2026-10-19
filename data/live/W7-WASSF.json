@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T22:08:51.552444Z",
+  "generated_at": "2026-10-19T22:12:42.702587Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -62,13 +62,13 @@
         "resting": "202 @ 8c",
         "exposure": 361.8,
         "exposure_text": "+$362",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-19T23:30:00Z",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "if no fill by 5:19pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T22:19:15Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T18:03:43Z",
-        "lag_note": "Price 8c matches the crowd."
+        "lag_note": "Steps to 7c if no fill by 5:19pm CT."
       },
       {
         "side": "WAS by 15+",
@@ -76,12 +76,12 @@
         "exposure": 493.61,
         "exposure_text": "+$494",
         "move": "Step price down 1c (4c to 3c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T22:09:11Z",
+        "when": "if no fill by 5:19pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T22:19:15Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T20:57:55Z",
-        "lag_note": "Steps to 3c at the next check."
+        "lag_note": "Steps to 3c if no fill by 5:19pm CT."
       }
     ],
     "sections": [
@@ -95,8 +95,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 534 behind. Steps to 3c at the next check.",
-          "WAS by 7-14: 402 behind. Price 8c matches the crowd.",
+          "WAS by 15+: 534 behind. Steps to 3c if no fill by 5:19pm CT.",
+          "WAS by 7-14: 402 behind. Steps to 7c if no fill by 5:19pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T22:08:20Z"
+    "ts": "2026-10-19T22:12:22Z"
   },
   "posts": [
     {
@@ -3634,6 +3634,16 @@
       "text": "Quiet for 15 min. 1,414 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792447761125-aa5ecd",
+      "ts": "2026-10-19T22:09:17Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "WAS by 7-14 price not lowered: the next cent is under the crowd price, so it stays at 8c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
@@ -4481,6 +4491,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+13 on SF 1-6 @ 0.21 (maker)\nworst outcome now -47\nheld 817/1043/1052/782/650/518\nIf the game ends... you make\nSF 1-6: +148 (+3.1% of bankroll)\nSF 7-14: -78 (-1.7% of bankroll)\nSF 15+: -87 (-1.9% of bankroll)\nWAS 1-6: +183 (+3.9% of bankroll)\nWAS 7-14: +315 (+6.7% of bankroll)\nWAS 15+: +447 (+9.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792447793784-294483",
+      "ts": "2026-10-19T22:09:53Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W7-WASSF): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=3843. Check the command center.",
       "severity": "warn"
     }
   ]

@@ -1,0 +1,133 @@
+{
+  "key": "TAL-TRUCK",
+  "generated_at": "2026-10-19T22:12:42.702587Z",
+  "plan": {
+    "engine": "race",
+    "phase": "Pre-race growth",
+    "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line $0, final target $0.",
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "checks_every_s": 30,
+    "moves": [],
+    "sections": [
+      {
+        "title": "Right now",
+        "lines": [
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 10,332 resting. Worst line $0."
+        ]
+      },
+      {
+        "title": "Lagging sides",
+        "lines": [
+          "No contender is lagging."
+        ]
+      },
+      {
+        "title": "Next wave of contracts",
+        "lines": [
+          "A driver gets a new wave when 90% of what he offered has sold.",
+          "Growth phase: waves allowed down to -$1,000 per driver, limited by free cash.",
+          "Clay Greenfield: 2 waves so far, latest 120 @ 2c, 0% filled.",
+          "Bryan Dauzat: 2 waves so far, latest 120 @ 2c, 0% filled."
+        ]
+      },
+      {
+        "title": "Tightening",
+        "lines": [
+          "Backstop off. It stops a driver whose line falls under -$250.",
+          "Glide starts Fri 11:00am CT: limit slides from -$250 to $0 by Fri 3:00pm CT.",
+          "Under the limit it trims rows, buys back cheaply, and sells to close gaps from Fri 1:30pm CT.",
+          "Even-up from Fri 2:00pm CT, last-resort take from Fri 2:40pm CT, green flag Fri 3:00pm CT."
+        ]
+      },
+      {
+        "title": "Will it adapt on its own?",
+        "lines": [
+          "Mostly yes: waves, price steps and the glide run by rule. The worst line may not fully close."
+        ]
+      }
+    ],
+    "next_steps": [
+      {
+        "at": "2026-10-23T16:00:00Z",
+        "label": "Risk glide starts",
+        "detail": "Limit slides from -$250 to $0."
+      },
+      {
+        "at": "2026-10-23T18:30:00Z",
+        "label": "Glide selling opens",
+        "detail": "Bot may sell to close gaps."
+      },
+      {
+        "at": "2026-10-23T19:00:00Z",
+        "label": "Even-up begins",
+        "detail": "Waves stop; lagging drivers repriced toward fair."
+      }
+    ],
+    "sides": [],
+    "moves_note": "38 other drivers: nothing sold, no exposure.",
+    "book": "TAL-TRUCK",
+    "ts": "2026-10-19T22:12:22Z"
+  },
+  "posts": [
+    {
+      "id": "1792447802262-dfed7a",
+      "ts": "2026-10-19T22:10:02Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nNorm Benning: +0\nTony Stewart: +0\nClay Greenfield: +0\nGrant Enfinger: +0\nTimmy Hill: +0\nCorey LaJoie: +0\nJosh Reaume: +0\nDaniel Hemric: +0\nall others (30) >= +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nCore posted book 0.00 | Worst now +0 | Cash free $4697\nAnchor age 0s (source: kalshi)",
+      "severity": "info"
+    },
+    {
+      "id": "1792447821596-eed82b",
+      "ts": "2026-10-19T22:10:21Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Now watching this book. Pre-race growth for the green flag Fri 3:00pm CT. Worst line $0, final target $0.",
+      "severity": "info",
+      "title": "Narrator started"
+    },
+    {
+      "id": "1792447821596-d74e4f",
+      "ts": "2026-10-19T22:10:21Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line $0, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792447841762-2ea456",
+      "ts": "2026-10-19T22:10:33Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Pricing note: interim: crowd anchor (sportsbook covers 0/38); fair = the crowd's best asks power de-vigged over the field; l",
+      "severity": "info",
+      "title": "Pricing source"
+    }
+  ],
+  "audits": [
+    {
+      "id": "1792447777052-cbb256",
+      "ts": "2026-10-19T22:09:37Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1792447833384-172a1f",
+      "ts": "2026-10-19T22:10:33Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    }
+  ]
+}
