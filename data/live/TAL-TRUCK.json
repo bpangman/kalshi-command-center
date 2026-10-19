@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-19T22:22:06.280883Z",
+  "generated_at": "2026-10-19T22:24:50.932733Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 10,332 resting. Worst line $0."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 0 resting. Worst line $0."
         ]
       },
       {
@@ -26,9 +26,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A driver gets a new wave when 90% of what he offered has sold.",
-          "Growth phase: waves allowed down to -$1,000 per driver, limited by free cash.",
-          "Clay Greenfield: 2 waves so far, latest 120 @ 2c, 0% filled.",
-          "Bryan Dauzat: 2 waves so far, latest 120 @ 2c, 0% filled."
+          "Waves stop Fri 2:00pm CT."
         ]
       },
       {
@@ -67,7 +65,7 @@
     "sides": [],
     "moves_note": "38 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-19T22:21:26Z"
+    "ts": "2026-10-19T22:24:27Z"
   },
   "posts": [
     {
@@ -118,6 +116,26 @@
       "text": "Sharp price move on 4 drivers: Norm Benning, Clay Greenfield, driver CORO.",
       "severity": "info",
       "title": "Price shock"
+    },
+    {
+      "id": "1792448566867-c0af6c",
+      "ts": "2026-10-19T22:22:34Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792448566867-cbd7fc",
+      "ts": "2026-10-19T22:22:45Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
+      "severity": "warn",
+      "title": "Pricing source"
     }
   ],
   "audits": [
@@ -155,6 +173,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): 1 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-CLMC low 247c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792448565571-9dc0ad",
+      "ts": "2026-10-19T22:22:45Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1792448597424-689887",
+      "ts": "2026-10-19T22:23:17Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
