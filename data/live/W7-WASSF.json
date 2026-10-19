@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T15:18:50.239299Z",
+  "generated_at": "2026-10-19T15:21:04.562758Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -47,16 +47,16 @@
       },
       {
         "side": "SF by 1-6",
-        "resting": "768 @ 24-33c",
+        "resting": "516 @ 23-25c",
         "exposure": 390.12,
         "exposure_text": "+$390",
-        "move": "Step price down 1c (24c to 23c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T15:18:37Z",
+        "move": "Hold price at 23c",
+        "when": "crowd pays 22.7c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c at the next check."
+        "lag_note": "Price 23c matches the crowd."
       },
       {
         "side": "WAS by 1-6",
@@ -64,12 +64,12 @@
         "exposure": 533.38,
         "exposure_text": "+$533",
         "move": "Hold price at 11c",
-        "when": "crowd pays 11c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T14:51:44Z",
-        "lag_note": "Price 11c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "WAS by 15+",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 2,402, 2,821 resting. Worst line -$277 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 2,402, 2,615 resting. Worst line -$277 (goal -$150)."
         ]
       },
       {
@@ -96,7 +96,7 @@
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
           "WAS by 15+: 868 behind. No crowd trade data yet.",
-          "WAS by 1-6: 810 behind. Price 11c matches the crowd.",
+          "WAS by 1-6: 810 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -146,10 +146,10 @@
       {
         "label": "SF by 1-6",
         "held": 201.1,
-        "resting": 767.9,
+        "resting": 515.9,
         "target": 900.0,
         "status": "lagging",
-        "price": 0.24
+        "price": 0.23
       },
       {
         "label": "SF by 7-14",
@@ -186,14 +186,14 @@
       {
         "label": "WAS by 15+",
         "held": 0.0,
-        "resting": 872.0,
+        "resting": 918.0,
         "target": 500.0,
         "status": "lagging",
         "price": 0.04
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T15:18:37Z"
+    "ts": "2026-10-19T15:20:38Z"
   },
   "posts": [
     {
@@ -1806,6 +1806,44 @@
       "data": {
         "contracts": 153.0,
         "rows": 2
+      }
+    },
+    {
+      "id": "1792423173582-47f192",
+      "ts": "2026-10-19T15:19:33Z",
+      "book": "W7-WASSF",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nSF 1-6: +390 (+8.3% of bankroll)\nSF 7-14: -277 (-5.9% of bankroll)\nSF 15+: -234 (-5.0% of bankroll)\nWAS 1-6: +533 (+11.3% of bankroll)\nWAS 7-14: +141 (+3.0% of bankroll)\nWAS 15+: +591 (+12.6% of bankroll)\nCollected $591 premium ($0 fees) | Paper margin over fair $42 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; WAS 7-14: WAS 0-0, Q0 0:00\nheld / resting\nSF 1-6: 201 / 768\nSF 7-14: 868 / 153\nSF 15+: 825 / 37\nWAS 1-6: 58 / 589\nWAS 7-14: 450 / 402\nWAS 15+: 0 / 918\nPosted book 1.26 | Sold avg 1.076 | Worst now -6 | Cash free $3795\nAnchor age 0s | Last fill 353s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1792423178059-adee3f",
+      "ts": "2026-10-19T15:19:33Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 1-6: no fill for 276 min, added 300 at 23c (was 24c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 1-6",
+        "from": 0.24,
+        "to": 0.23
+      }
+    },
+    {
+      "id": "1792423238518-67212e",
+      "ts": "2026-10-19T15:18:31Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 46 (FIELD far-bucket row (all-fill): WAS by 15+ x46 at 5c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 46.0,
+        "rows": 1
       }
     }
   ],
