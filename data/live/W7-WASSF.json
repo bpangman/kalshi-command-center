@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T17:02:57.831767Z",
+  "generated_at": "2026-10-19T17:05:08.598181Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,12 +38,12 @@
         "exposure": 160.72,
         "exposure_text": "+$161",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T17:02:21Z",
+        "when": "if no fill by 12:12pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T17:12:21Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T16:18:55Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 12:12pm CT."
       },
       {
         "side": "WAS by 1-6",
@@ -60,16 +60,16 @@
       },
       {
         "side": "SF by 1-6",
-        "resting": "516 @ 23-25c",
+        "resting": "515 @ 22-24c",
         "exposure": 463.33,
         "exposure_text": "+$463",
-        "move": "Hold price at 23c",
-        "when": "next cent is under the crowd price (22.4c)",
+        "move": "Hold price at 22c",
+        "when": "crowd pays 21.9c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Price 23c is at its floor."
+        "lag_note": "Price 22c matches the crowd."
       },
       {
         "side": "WAS by 15+",
@@ -77,12 +77,12 @@
         "exposure": 506.27,
         "exposure_text": "+$506",
         "move": "Step price down 1c (4c to 3c)",
-        "when": "if no fill by 12:05pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T17:05:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T15:29:31Z",
-        "lag_note": "Steps to 3c if no fill by 12:05pm CT."
+        "lag_note": "Steps to 3c at the next check."
       }
     ],
     "sections": [
@@ -96,8 +96,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 810 behind. Steps to 3c if no fill by 12:05pm CT.",
-          "SF by 1-6: 767 behind. Price 23c is at its floor.",
+          "WAS by 15+: 810 behind. Steps to 3c at the next check.",
+          "SF by 1-6: 767 behind. Price 22c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T17:02:21Z"
+    "ts": "2026-10-19T17:04:22Z"
   },
   "posts": [
     {
@@ -2263,6 +2263,21 @@
       "text": "Quiet for 15 min. 2,171 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792429422207-a40c65",
+      "ts": "2026-10-19T17:03:26Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 1-6: no fill for 379 min, added 300 at 22c (was 23c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 1-6",
+        "from": 0.23,
+        "to": 0.22
+      }
     }
   ],
   "audits": [
