@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T20:47:53.646384Z",
+  "generated_at": "2026-10-19T20:50:06.734332Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$167, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$154, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "SF by 7-14",
         "resting": "none",
-        "exposure": -167.46,
-        "exposure_text": "-$167",
+        "exposure": -153.7,
+        "exposure_text": "-$154",
         "move": "Next wave 450 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "SF by 15+",
         "resting": "109 @ 32-40c",
-        "exposure": -104.58,
-        "exposure_text": "-$105",
+        "exposure": -90.82,
+        "exposure_text": "-$91",
         "move": "Next wave 375 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
@@ -35,8 +35,8 @@
       {
         "side": "WAS by 1-6",
         "resting": "200 @ 11-13c",
-        "exposure": 93.42,
-        "exposure_text": "+$93",
+        "exposure": 107.18,
+        "exposure_text": "+$107",
         "move": "Hold price at 11c",
         "when": "crowd pays 11c; steps down 1c only if it trades lower",
         "at": null,
@@ -48,8 +48,8 @@
       {
         "side": "WAS by 7-14",
         "resting": "202 @ 8c",
-        "exposure": 225.42,
-        "exposure_text": "+$225",
+        "exposure": 239.18,
+        "exposure_text": "+$239",
         "move": "Hold price at 8c",
         "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
@@ -60,22 +60,22 @@
       },
       {
         "side": "SF by 1-6",
-        "resting": "445 @ 21-22c",
-        "exposure": 370.59,
-        "exposure_text": "+$371",
+        "resting": "379 @ 21-22c",
+        "exposure": 318.84,
+        "exposure_text": "+$319",
         "move": "Hold price at 21c",
-        "when": "crowd pays 20.8c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (20.3c)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "last_fill": "2026-10-19T20:30:24Z",
-        "lag_note": "Price 21c matches the crowd."
+        "last_fill": "2026-10-19T20:48:01Z",
+        "lag_note": "Price 21c is at its floor."
       },
       {
         "side": "WAS by 15+",
         "resting": "722 @ 3-14c",
-        "exposure": 387.23,
-        "exposure_text": "+$387",
+        "exposure": 400.99,
+        "exposure_text": "+$401",
         "move": "Hold price at 3c",
         "when": "crowd pays 3.4c; steps down 1c only if it trades lower",
         "at": null,
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,448, 1,677 resting. Worst line -$167 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,513, 1,612 resting. Worst line -$154 (goal -$150)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
           "WAS by 15+: 555 behind. Price 3c matches the crowd.",
-          "SF by 1-6: 538 behind. Price 21c matches the crowd.",
+          "SF by 1-6: 472 behind. Price 21c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$167 is better than -$200.",
+          "Gate open: worst line -$154 is better than -$200.",
           "Closest: SF by 7-14, 0 resting vs trigger 225.",
           "Batches used: none (max 3 per side)."
         ]
@@ -146,8 +146,8 @@
     "sides": [
       {
         "label": "SF by 1-6",
-        "held": 504.8,
-        "resting": 444.5,
+        "held": 570.3,
+        "resting": 379.0,
         "target": 900.0,
         "status": "lagging",
         "price": 0.21
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T20:47:45Z"
+    "ts": "2026-10-19T20:49:46Z"
   },
   "posts": [
     {
@@ -3212,6 +3212,25 @@
         "contracts": 72.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792442899792-135af4",
+      "ts": "2026-10-19T20:48:19Z",
+      "book": "W7-WASSF",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-WASSF: 0 orders posted in 10 min while the market traded 2111 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1792442905902-931c8c",
+      "ts": "2026-10-19T20:48:18Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SF by 1-6 at 21c (300 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -3978,6 +3997,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+18 on SF 15+ @ 0.30 (maker)\nworst outcome now -193\nheld 397/1043/928/782/650/488\nIf the game ends... you make\nSF 1-6: +440 (+9.4% of bankroll)\nSF 7-14: -206 (-4.4% of bankroll)\nSF 15+: -91 (-1.9% of bankroll)\nWAS 1-6: +55 (+1.2% of bankroll)\nWAS 7-14: +187 (+4.0% of bankroll)\nWAS 15+: +348 (+7.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792442962127-574498",
+      "ts": "2026-10-19T20:49:22Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+66 on SF 1-6 @ 0.21 (maker)\nworst outcome now -120\nheld 570/1043/980/782/650/488\nIf the game ends... you make\nSF 1-6: +319 (+6.8% of bankroll)\nSF 7-14: -154 (-3.3% of bankroll)\nSF 15+: -91 (-1.9% of bankroll)\nWAS 1-6: +107 (+2.3% of bankroll)\nWAS 7-14: +239 (+5.1% of bankroll)\nWAS 15+: +401 (+8.5% of bankroll)",
       "severity": "warn"
     }
   ]
