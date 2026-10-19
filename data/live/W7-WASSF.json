@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T17:35:10.091713Z",
+  "generated_at": "2026-10-19T17:37:19.317018Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -17,7 +17,7 @@
         "move": "Next wave 450 contracts",
         "when": "waits until worst loss is -$200 or better (now -$248)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "last_fill": "2026-10-19T16:05:02Z"
       },
       {
@@ -51,12 +51,12 @@
         "exposure": 215.73,
         "exposure_text": "+$216",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T17:34:34Z",
+        "when": "if no fill by 12:44pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T17:44:09Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T16:18:55Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 12:44pm CT."
       },
       {
         "side": "SF by 1-6",
@@ -77,12 +77,12 @@
         "exposure": 561.28,
         "exposure_text": "+$561",
         "move": "Step price down 1c (4c to 3c)",
-        "when": "if no fill by 12:37pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-19T17:37:42Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T15:29:31Z",
-        "lag_note": "Steps to 3c if no fill by 12:37pm CT."
+        "lag_note": "Steps to 3c at the next check."
       }
     ],
     "sections": [
@@ -96,7 +96,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 810 behind. Steps to 3c if no fill by 12:37pm CT.",
+          "WAS by 15+: 810 behind. Steps to 3c at the next check.",
           "SF by 1-6: 767 behind. Price 22c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T17:34:34Z"
+    "ts": "2026-10-19T17:36:35Z"
   },
   "posts": [
     {
@@ -2426,6 +2426,26 @@
       "text": "Row sold out: SF by 15+ at 32c (85 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1792431315289-15a473",
+      "ts": "2026-10-19T17:33:08Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 73: SF by 15+ x73 at 32c. Worst line -$248.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 73.0,
+        "fills": [
+          {
+            "side": "SF by 15+",
+            "price": 0.32,
+            "qty": 73.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
