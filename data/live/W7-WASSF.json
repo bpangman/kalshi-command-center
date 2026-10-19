@@ -1,42 +1,42 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T21:17:11.227232Z",
+  "generated_at": "2026-10-19T21:19:28.316187Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$130, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 63,
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$135, goal -$150.",
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "checks_every_s": 20,
     "moves": [
       {
-        "side": "SF by 7-14",
-        "resting": "none",
-        "exposure": -130.02,
-        "exposure_text": "-$130",
-        "move": "Next wave 450 contracts",
-        "when": "waits for other sides to catch up",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-19T18:09:06Z"
-      },
-      {
         "side": "SF by 15+",
-        "resting": "50 @ 32-40c",
-        "exposure": -125.77,
-        "exposure_text": "-$126",
+        "resting": "37 @ 40c",
+        "exposure": -134.86,
+        "exposure_text": "-$135",
         "move": "Next wave 375 contracts",
         "when": "waits for other sides to catch up",
         "at": null,
         "stuck": false,
+        "last_fill": "2026-10-19T21:17:00Z"
+      },
+      {
+        "side": "SF by 7-14",
+        "resting": "none",
+        "exposure": -125.74,
+        "exposure_text": "-$126",
+        "move": "Next wave 450 contracts",
+        "when": "waits for other sides to catch up",
+        "at": null,
+        "stuck": true,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "last_fill": "2026-10-19T21:02:53Z"
+        "last_fill": "2026-10-19T18:09:06Z"
       },
       {
         "side": "WAS by 1-6",
         "resting": "314 @ 11-13c",
-        "exposure": 130.86,
-        "exposure_text": "+$131",
+        "exposure": 135.14,
+        "exposure_text": "+$135",
         "move": "Hold price at 11c",
         "when": "crowd pays 11c; steps down 1c only if it trades lower",
         "at": null,
@@ -48,8 +48,8 @@
       {
         "side": "WAS by 7-14",
         "resting": "202 @ 8c",
-        "exposure": 262.86,
-        "exposure_text": "+$263",
+        "exposure": 267.14,
+        "exposure_text": "+$267",
         "move": "Hold price at 8c",
         "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
@@ -61,8 +61,8 @@
       {
         "side": "SF by 1-6",
         "resting": "360 @ 21-22c",
-        "exposure": 323.39,
-        "exposure_text": "+$323",
+        "exposure": 327.67,
+        "exposure_text": "+$328",
         "move": "Hold price at 21c",
         "when": "crowd pays 20.8c; steps down 1c only if it trades lower",
         "at": null,
@@ -74,8 +74,8 @@
       {
         "side": "WAS by 15+",
         "resting": "692 @ 4-14c",
-        "exposure": 394.67,
-        "exposure_text": "+$395",
+        "exposure": 398.95,
+        "exposure_text": "+$399",
         "move": "Hold price at 4c",
         "when": "next cent is under the crowd price (3.3c)",
         "at": null,
@@ -89,15 +89,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,621, 1,618 resting. Worst line -$130 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,635, 1,605 resting. Worst line -$135 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 525 behind. Price 4c is at its floor.",
-          "SF by 1-6: 453 behind. Price 21c matches the crowd.",
+          "WAS by 15+: 534 behind. Price 4c is at its floor.",
+          "SF by 1-6: 462 behind. Price 21c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$130 is better than -$200.",
+          "Gate open: worst line -$135 is better than -$200.",
           "Closest: SF by 7-14, 0 resting vs trigger 225.",
           "Batches used: 1 (max 3 per side)."
         ]
@@ -162,11 +162,11 @@
       },
       {
         "label": "SF by 15+",
-        "held": 1038.6,
-        "resting": 50.4,
+        "held": 1052.0,
+        "resting": 37.0,
         "target": 750.0,
         "status": "even",
-        "price": 0.32
+        "price": 0.4
       },
       {
         "label": "WAS by 1-6",
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T21:16:56Z"
+    "ts": "2026-10-19T21:18:57Z"
   },
   "posts": [
     {
@@ -3374,6 +3374,46 @@
       "text": "Building toward kickoff 7:15pm CT. Worst line -$130, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792444637122-d09bbd",
+      "ts": "2026-10-19T21:17:08Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SF by 15+ at 32c (72 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792444677329-835aa2",
+      "ts": "2026-10-19T21:17:57Z",
+      "book": "W7-WASSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$135, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792444757862-a22468",
+      "ts": "2026-10-19T21:17:08Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 13: SF by 15+ x13 at 32c. Worst line -$135.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 13.0,
+        "fills": [
+          {
+            "side": "SF by 15+",
+            "price": 0.32,
+            "qty": 13.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
