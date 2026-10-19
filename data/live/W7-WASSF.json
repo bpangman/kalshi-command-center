@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T13:33:24.099350Z",
+  "generated_at": "2026-10-19T13:35:41.265279Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,16 +38,16 @@
         "exposure": 352.26,
         "exposure_text": "+$352",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T13:32:53Z",
+        "when": "if no fill by 8:43am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T13:43:41Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c at the next check."
+        "lag_note": "Steps to 23c if no fill by 8:43am CT."
       },
       {
         "side": "WAS by 1-6",
-        "resting": "923 @ 12-14c",
+        "resting": "647 @ 12-14c",
         "exposure": 553.39,
         "exposure_text": "+$553",
         "move": "Hold price at 12c",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,452 resting. Worst line -$314 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 1,894, 3,176 resting. Worst line -$314 (goal -$150)."
         ]
       },
       {
@@ -168,10 +168,10 @@
       {
         "label": "WAS by 1-6",
         "held": 0.0,
-        "resting": 923.0,
+        "resting": 647.0,
         "target": 900.0,
         "status": "lagging",
-        "price": 0.13
+        "price": 0.12
       },
       {
         "label": "WAS by 7-14",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T13:32:53Z"
+    "ts": "2026-10-19T13:34:54Z"
   },
   "posts": [
     {
@@ -1526,6 +1526,21 @@
         "side": "WAS by 1-6",
         "from": 0.13,
         "to": 0.12
+      }
+    },
+    {
+      "id": "1792416833797-242477",
+      "ts": "2026-10-19T13:33:43Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 1-6: no fill for 170 min, added 300 at 23c (was 24c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 1-6",
+        "from": 0.24,
+        "to": 0.23
       }
     }
   ],
