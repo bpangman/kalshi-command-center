@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T13:42:22.303819Z",
+  "generated_at": "2026-10-19T13:44:35.942180Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,12 +38,12 @@
         "exposure": 352.26,
         "exposure_text": "+$352",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 8:43am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-19T13:43:41Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-19T13:43:57Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T10:47:00Z",
-        "lag_note": "Steps to 23c if no fill by 8:43am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "WAS by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T13:41:56Z"
+    "ts": "2026-10-19T13:43:57Z"
   },
   "posts": [
     {
@@ -1535,6 +1535,31 @@
       "kind": "update",
       "source": "narrator",
       "text": "Price step on SF by 1-6: no fill for 170 min, added 300 at 23c (was 24c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 1-6",
+        "from": 0.24,
+        "to": 0.23
+      }
+    },
+    {
+      "id": "1792417397425-3ac52e",
+      "ts": "2026-10-19T13:43:09Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "WAS by 1-6 price not lowered: the next cent is under the crowd price, so it stays at 12c.",
+      "severity": "info",
+      "title": "Price hold"
+    },
+    {
+      "id": "1792417457786-0dad48",
+      "ts": "2026-10-19T13:44:12Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 1-6: no fill for 180 min, added 300 at 23c (was 24c).",
       "severity": "info",
       "title": "Price step",
       "data": {
