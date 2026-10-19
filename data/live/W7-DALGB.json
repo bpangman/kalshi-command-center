@@ -1,10 +1,10 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T02:04:08.671314Z",
+  "generated_at": "2026-10-19T02:05:20.705253Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$30.",
+    "headline": "In game (Ingame). Worst line -$29.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,443, 1,204 resting. Worst line -$30. Game 50% done."
+          "In game (Ingame). Sold 9,445, 1,187 resting. Worst line -$29. Game 50% done."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "DAL by 7-14",
         "held": 1253.0,
-        "resting": 540.0,
+        "resting": 538.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "DAL by 15+",
         "held": 1284.3,
-        "resting": 518.0,
+        "resting": 505.0,
         "target": null,
         "status": "even",
         "price": null
@@ -77,8 +77,8 @@
       },
       {
         "label": "GB by 7-14",
-        "held": 1717.8,
-        "resting": 2.0,
+        "held": 1719.8,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T02:03:24Z"
+    "ts": "2026-10-19T02:04:24Z"
   },
   "posts": [
-    {
-      "id": "1792278995376-9ceddb",
-      "ts": "2026-10-17T23:16:35Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,315 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792279901804-44e102",
       "ts": "2026-10-17T23:31:41Z",
@@ -4284,18 +4274,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792375485087-08f2a2",
+      "ts": "2026-10-19T02:03:41Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 22: GB by 1-6 x20 at 17c, GB by 7-14 x2 at 31c. Worst line -$29.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 22.0,
+        "fills": [
+          {
+            "side": "GB by 1-6",
+            "price": 0.17,
+            "qty": 20.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.31,
+            "qty": 2.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792318862400-df381a",
-      "ts": "2026-10-18T10:21:02Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): held worst -374.67 (backstop -300) or lagging gap 557 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792320731052-48267b",
       "ts": "2026-10-18T10:52:11Z",
@@ -5185,6 +5191,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on GB 7-14 @ 0.32 (maker)\n+0 on GB 1-6 @ 0.18 (maker)\n+26 on GB 1-6 @ 0.16 (maker)\nworst outcome now +104\nheld 1714/1718/1834/1620/1253/1284\nIf the game ends... you make\nGB 1-6: +86 (+0.7% of bankroll)\nGB 7-14: +82 (+0.7% of bankroll)\nGB 15+: -33 (-0.3% of bankroll)\nDAL 1-6: +180 (+1.5% of bankroll)\nDAL 7-14: +547 (+4.6% of bankroll)\nDAL 15+: +516 (+4.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792375487486-e537ad",
+      "ts": "2026-10-19T02:04:47Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
