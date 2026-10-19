@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T04:37:41.551374Z",
+  "generated_at": "2026-10-19T04:39:54.931449Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -227.97,
         "exposure_text": "-$228",
         "move": "Step price down 1c (30c to 29c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T04:38:34Z",
+        "when": "if no fill by 11:48pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T04:48:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
         "last_fill": "2026-10-19T04:28:34Z",
-        "lag_note": "Steps to 29c at the next check."
+        "lag_note": "Steps to 29c if no fill by 11:48pm CT."
       },
       {
         "side": "SF by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T04:37:09Z"
+    "ts": "2026-10-19T04:39:09Z"
   },
   "posts": [
     {
@@ -653,6 +653,21 @@
             "qty": 61.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792384749966-857670",
+      "ts": "2026-10-19T04:39:06Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 7-14: no fill for 10 min, added 103 at 29c (was 30c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 7-14",
+        "from": 0.3,
+        "to": 0.29
       }
     }
   ],
