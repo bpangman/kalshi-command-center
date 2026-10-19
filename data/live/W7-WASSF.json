@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T17:07:19.652931Z",
+  "generated_at": "2026-10-19T17:09:30.711800Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -77,26 +77,26 @@
         "exposure": 521.1,
         "exposure_text": "+$521",
         "move": "Step price down 1c (4c to 3c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-19T17:06:23Z",
+        "when": "if no fill by 12:16pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-19T17:16:34Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-19T15:29:31Z",
-        "lag_note": "Steps to 3c at the next check."
+        "lag_note": "Steps to 3c if no fill by 12:16pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,138, 2,035 resting. Worst line -$289 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,138, 2,302 resting. Worst line -$289 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 810 behind. Steps to 3c at the next check.",
+          "WAS by 15+: 810 behind. Steps to 3c if no fill by 12:16pm CT.",
           "SF by 1-6: 767 behind. Price 22c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -106,7 +106,7 @@
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
           "Gate closed: batches wait for the worst line to reach -$200 (now -$289).",
-          "Closest: SF by 15+, 37 resting vs trigger 188.",
+          "Closest: SF by 7-14, 75 resting vs trigger 225.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -163,15 +163,15 @@
       {
         "label": "SF by 15+",
         "held": 825.0,
-        "resting": 37.0,
+        "resting": 122.0,
         "target": 750.0,
         "status": "even",
-        "price": 0.4
+        "price": 0.32
       },
       {
         "label": "WAS by 1-6",
         "held": 482.0,
-        "resting": 165.0,
+        "resting": 347.0,
         "target": 900.0,
         "status": "lagging",
         "price": 0.11
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T17:06:23Z"
+    "ts": "2026-10-19T17:09:24Z"
   },
   "posts": [
     {
@@ -2308,6 +2308,40 @@
       "text": "Building toward kickoff 7:15pm CT. Worst line -$289, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792429663866-344515",
+      "ts": "2026-10-19T17:05:33Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 135: WAS by 1-6 x135 at 11c. Worst line -$289.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 135.0,
+        "fills": [
+          {
+            "side": "WAS by 1-6",
+            "price": 0.11,
+            "qty": 135.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792429663867-36f7c4",
+      "ts": "2026-10-19T17:05:33Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 267 (same-price reload): WAS by 1-6 x182 at 11c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 267.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
