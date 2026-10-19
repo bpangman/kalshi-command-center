@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-19T15:00:58.527192Z",
+  "generated_at": "2026-10-19T15:03:12.480854Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -76,11 +76,11 @@
         "exposure": 559.75,
         "exposure_text": "+$560",
         "move": "Hold price at 7c",
-        "when": "no crowd trade data yet",
+        "when": "next cent is under the crowd price (6.3c)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Price 7c is at its floor."
       }
     ],
     "sections": [
@@ -94,7 +94,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): SF by 1-6, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 7-14: 868 behind. No crowd trade data yet.",
+          "WAS by 7-14: 868 behind. Price 7c is at its floor.",
           "WAS by 15+: 868 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-19T15:00:29Z"
+    "ts": "2026-10-19T15:02:30Z"
   },
   "posts": [
     {
@@ -1717,6 +1717,16 @@
         "from": 0.24,
         "to": 0.23
       }
+    },
+    {
+      "id": "1792422110412-96e1d3",
+      "ts": "2026-10-19T15:01:38Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "WAS by 7-14 price not lowered: the next cent is under the crowd price, so it stays at 7c.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
