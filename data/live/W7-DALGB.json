@@ -1,10 +1,10 @@
 {
   "key": "W7-DALGB",
-  "generated_at": "2026-10-19T01:52:10.119611Z",
+  "generated_at": "2026-10-19T01:53:22.757318Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$41.",
+    "headline": "In game (Ingame). Worst line -$38.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,338, 1,627 resting. Worst line -$41. Game 49% done."
+          "In game (Ingame). Sold 9,395, 1,220 resting. Worst line -$38. Game 50% done."
         ]
       },
       {
@@ -46,15 +46,15 @@
       {
         "label": "DAL by 1-6",
         "held": 1620.1,
-        "resting": 182.0,
+        "resting": 113.7,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "DAL by 7-14",
-        "held": 1196.6,
-        "resting": 701.6,
+        "held": 1253.0,
+        "resting": 522.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "DAL by 15+",
         "held": 1284.3,
-        "resting": 609.2,
+        "resting": 502.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "GB by 1-6",
         "held": 1687.4,
-        "resting": 121.6,
+        "resting": 82.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "GB by 7-14",
         "held": 1716.4,
-        "resting": 13.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-DALGB",
-    "ts": "2026-10-19T01:51:20Z"
+    "ts": "2026-10-19T01:53:20Z"
   },
   "posts": [
-    {
-      "id": "1792277181451-f63ec4",
-      "ts": "2026-10-17T22:46:21Z",
-      "book": "W7-DALGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,315 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792277547581-03eaab",
       "ts": "2026-10-17T22:52:27Z",
@@ -4243,18 +4233,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792374780781-639ac4",
+      "ts": "2026-10-19T01:52:33Z",
+      "book": "W7-DALGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 58: DAL by 7-14 x56 at 6c, GB by 7-14 x2 at 33c. Worst line -$38.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 58.0,
+        "fills": [
+          {
+            "side": "DAL by 7-14",
+            "price": 0.06,
+            "qty": 56.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.33,
+            "qty": 2.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792317014808-3dab61",
-      "ts": "2026-10-18T09:50:14Z",
-      "book": "W7-DALGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-DALGB): worst -374.67 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792317014808-7eb314",
       "ts": "2026-10-18T09:50:14Z",
@@ -5144,6 +5150,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: Floor clamp on (leader at p 0.96, game decided)\nIf the game ends... you make\nGB 1-6: +105 (+0.9% of bankroll)\nGB 7-14: +76 (+0.6% of bankroll)\nGB 15+: -41 (-0.4% of bankroll)\nDAL 1-6: +172 (+1.5% of bankroll)\nDAL 7-14: +595 (+5.0% of bankroll)\nDAL 15+: +508 (+4.3% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792374795918-c14d98",
+      "ts": "2026-10-19T01:53:15Z",
+      "book": "W7-DALGB",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- W7-DALGB - Green Bay by 15 or more has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W7-DALGB - Green Bay by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
