@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T02:43:50.316827Z",
+  "generated_at": "2026-10-20T02:45:12.926523Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line $0.",
+    "headline": "In game (Ingame). Worst line +$6.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,541, 1,435 resting. Worst line $0. Game 82% done."
+          "In game (Ingame). Sold 7,609, 1,527 resting. Worst line +$6. Game 82% done."
         ]
       },
       {
@@ -69,8 +69,8 @@
       },
       {
         "label": "WAS by 1-6",
-        "held": 1311.0,
-        "resting": 143.4,
+        "held": 1379.0,
+        "resting": 103.4,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "WAS by 7-14",
         "held": 852.0,
-        "resting": 673.0,
+        "resting": 721.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "WAS by 15+",
         "held": 902.9,
-        "resting": 619.0,
+        "resting": 703.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T02:43:16Z"
+    "ts": "2026-10-20T02:44:16Z"
   },
   "posts": [
-    {
-      "id": "1792382856395-e94ee4",
-      "ts": "2026-10-19T04:07:26Z",
-      "book": "W7-WASSF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Backstop released: worst line is back to -$261. The heavy side can add again.",
-      "severity": "info",
-      "title": "Backstop"
-    },
     {
       "id": "1792382856395-47fbad",
       "ts": "2026-10-19T04:07:27Z",
@@ -4453,18 +4443,34 @@
       "text": "Bot note: endgame: active (favorite SF 7-14 at 0.44); likely ['SF 15+', 'SF 7-14']; endgame: repairing toward breakeven ",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792464256970-db35d1",
+      "ts": "2026-10-20T02:43:26Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 73: WAS by 1-6 x68 at 9c, SF by 15+ x5 at 26c. Worst line +$6.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 73.0,
+        "fills": [
+          {
+            "side": "WAS by 1-6",
+            "price": 0.09,
+            "qty": 68.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.26,
+            "qty": 5.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792404911019-819645",
-      "ts": "2026-10-19T10:15:11Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): worst -344.71 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792405456831-ebb563",
       "ts": "2026-10-19T10:24:16Z",
@@ -5354,6 +5360,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+9 on SF 1-6 @ 0.21 (maker)\n+3 on SF 1-6 @ 0.24 (maker)\n+5 on SF 15+ @ 0.26 (taker)\nworst outcome now +99\nheld 1511/1424/1536/1311/852/903\nIf the game ends... you make\nSF 1-6: +26 (+0.5% of bankroll)\nSF 7-14: +113 (+2.4% of bankroll)\nSF 15+: +0 (+0.0% of bankroll)\nWAS 1-6: +225 (+4.8% of bankroll)\nWAS 7-14: +684 (+14.6% of bankroll)\nWAS 15+: +634 (+13.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464293783-ee7a98",
+      "ts": "2026-10-20T02:44:53Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
