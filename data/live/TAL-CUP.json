@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T03:47:52.982470Z",
+  "generated_at": "2026-10-20T03:50:14.155099Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -41,7 +41,7 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$500 (now -$521)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts Sun 9:00am CT",
         "last_fill": "2026-10-20T02:18:48Z"
       },
@@ -112,12 +112,12 @@
         "exposure": 385.06,
         "exposure_text": "+$385",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 10:49pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-20T03:49:24Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-20T03:49:25Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c if no fill by 10:49pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -131,7 +131,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c if no fill by 10:49pm CT.",
+          "Austin Cindric: 999 behind. Steps to 7c at the next check.",
           "Brad Keselowski: 795 behind. Crowd is quiet here (26 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -213,7 +213,7 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T03:47:24Z"
+    "ts": "2026-10-20T03:49:25Z"
   },
   "posts": [
     {
@@ -1639,6 +1639,46 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$614, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792468165181-e3c285",
+      "ts": "2026-10-20T03:47:12Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,024: Joey Logano x986 at 8c, Chase Elliott x38 at 5c. Worst line -$614.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1024.0,
+        "fills": [
+          {
+            "side": "Joey Logano",
+            "price": 0.08,
+            "qty": 986.0
+          },
+          {
+            "side": "Chase Elliott",
+            "price": 0.05,
+            "qty": 38.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792468185357-0487af",
+      "ts": "2026-10-20T03:49:27Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Austin Cindric: no fill for 398 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Austin Cindric",
+        "from": 0.08,
+        "to": 0.07
+      }
     }
   ],
   "audits": [
