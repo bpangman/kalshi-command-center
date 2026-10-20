@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T00:53:01.694717Z",
+  "generated_at": "2026-10-20T00:55:04.730200Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -99,12 +99,12 @@
         "exposure": 34.36,
         "exposure_text": "+$34",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T00:52:18Z",
+        "when": "if no fill by 7:58pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T00:58:51Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Steps to 5c if no fill by 7:58pm CT."
       },
       {
         "side": "Austin Cindric",
@@ -112,12 +112,12 @@
         "exposure": 238.36,
         "exposure_text": "+$238",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T00:52:08Z",
+        "when": "if no fill by 7:57pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T00:57:09Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 7:57pm CT."
       }
     ],
     "sections": [
@@ -132,7 +132,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
           "Joey Logano: 576 behind. Price 8c matches the crowd.",
-          "Austin Cindric: 576 behind. Steps to 7c at the next check.",
+          "Austin Cindric: 576 behind. Steps to 7c if no fill by 7:57pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -213,7 +213,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T00:52:08Z"
+    "ts": "2026-10-20T00:54:09Z"
   },
   "posts": [
     {
@@ -1210,6 +1210,15 @@
       "source": "bot",
       "text": "+1000 on Ricky Stenhouse Jr. @ 0.02 (maker)\n+402 on Christopher Bell @ 0.06 (maker)\n+276 on Chase Briscoe @ 0.07 (maker)\n+216 on Tyler Reddick @ 0.07 (maker)\n+528 on Ryan Blaney @ 0.09 (maker)\n+480 on Kyle Larson @ 0.05 (maker)\n+205 on Brad Keselowski @ 0.06 (maker)\n+160 on Chase Elliott @ 0.05 (maker)\n+58 on William Byron @ 0.05 (maker)\n+89 on Denny Hamlin @ 0.05 (maker)\nworst outcome now -780\nIf the race ends... you make\nRicky Stenhouse Jr.: -780\nChristopher Bell: -495\nRyan Blaney: -309\nKyle Larson: -261\nWilliam Byron: -151\nChase Briscoe: -57\nTyler Reddick: +3\nBrad Keselowski: +15\nall others (32) >= +59",
       "severity": "warn"
+    },
+    {
+      "id": "1792457662407-0ccc6d",
+      "ts": "2026-10-20T00:54:22Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -760.64 vs floor -363.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
