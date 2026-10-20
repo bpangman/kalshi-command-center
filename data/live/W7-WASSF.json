@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T00:20:58.462258Z",
+  "generated_at": "2026-10-20T00:22:17.657373Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$85.",
+    "headline": "In game (Ingame). Worst line -$100.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,708, 1,383 resting. Worst line -$85. Game 2% done."
+          "In game (Ingame). Sold 5,734, 1,396 resting. Worst line -$100. Game 6% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "SF by 1-6",
         "held": 1150.3,
-        "resting": 40.5,
+        "resting": 70.5,
         "target": null,
         "status": "even",
         "price": null
@@ -54,15 +54,15 @@
       {
         "label": "SF by 7-14",
         "held": 1135.9,
-        "resting": 150.0,
+        "resting": 64.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SF by 15+",
-        "held": 1238.0,
-        "resting": 0.0,
+        "held": 1264.0,
+        "resting": 69.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T00:20:14Z"
+    "ts": "2026-10-20T00:22:15Z"
   },
   "posts": [
     {
@@ -3933,18 +3933,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792455735604-a4d495",
+      "ts": "2026-10-20T00:19:56Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 96: SF by 15+ x37 at 40c, SF by 15+ x30 at 42c, SF by 15+ x23 at 34c, +1 more. Worst line -$100.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 96.0,
+        "fills": [
+          {
+            "side": "SF by 15+",
+            "price": 0.4,
+            "qty": 37.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.42,
+            "qty": 30.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.34,
+            "qty": 23.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.36,
+            "qty": 6.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792386449964-3ba25b",
-      "ts": "2026-10-19T05:07:29Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+4 on SF 15+ @ 0.35 (maker)\nworst outcome now +76\nheld 0/636/804/0/0/0\nIf the game ends... you make\nSF 1-6: +427 (+9.1% of bankroll)\nSF 7-14: -209 (-4.4% of bankroll)\nSF 15+: -377 (-8.0% of bankroll)\nWAS 1-6: +427 (+9.1% of bankroll)\nWAS 7-14: +427 (+9.1% of bankroll)\nWAS 15+: +427 (+9.1% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1792386678257-515783",
       "ts": "2026-10-19T05:11:18Z",
@@ -4834,6 +4860,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W7-WASSF - San Francisco by 7 to 14 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792455659755-9690e9",
+      "ts": "2026-10-20T00:20:59Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+90 on SF 7-14 @ 0.35 (maker)\n+117 on SF 1-6 @ 0.24 (maker)\n+90 on SF 15+ @ 0.31 (maker)\n+3 on SF 7-14 @ 0.33 (maker)\n+31 on WAS 15+ @ 0.05 (maker)\n+23 on SF 15+ @ 0.34 (maker)\n+6 on SF 15+ @ 0.36 (maker)\n+37 on SF 15+ @ 0.40 (maker)\n+30 on SF 15+ @ 0.42 (maker)\nworst outcome now +114\nheld 1150/1136/1238/782/852/550\nIf the game ends... you make\nSF 1-6: +3 (+0.1% of bankroll)\nSF 7-14: +17 (+0.4% of bankroll)\nSF 15+: -85 (-1.8% of bankroll)\nWAS 1-6: +371 (+7.9% of bankroll)\nWAS 7-14: +301 (+6.4% of bankroll)\nWAS 15+: +604 (+12.8% of bankroll)",
       "severity": "warn"
     }
   ]
