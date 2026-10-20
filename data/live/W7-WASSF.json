@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T02:41:05.132526Z",
+  "generated_at": "2026-10-20T02:42:28.431267Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$3.",
+    "headline": "In game (Ingame). Worst line $0.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,541, 1,475 resting. Worst line -$3. Game 78% done."
+          "In game (Ingame). Sold 7,541, 1,435 resting. Worst line $0. Game 81% done."
         ]
       },
       {
@@ -61,7 +61,7 @@
       },
       {
         "label": "SF by 15+",
-        "held": 1541.1,
+        "held": 1536.1,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -78,7 +78,7 @@
       {
         "label": "WAS by 7-14",
         "held": 852.0,
-        "resting": 693.0,
+        "resting": 673.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "WAS by 15+",
         "held": 902.9,
-        "resting": 639.0,
+        "resting": 619.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,49 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T02:40:15Z"
+    "ts": "2026-10-20T02:42:16Z"
   },
   "posts": [
-    {
-      "id": "1792382473773-8f615f",
-      "ts": "2026-10-19T03:59:04Z",
-      "book": "W7-WASSF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 550: SF by 7-14 x550 at 28c. Worst line -$396.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 550.0,
-        "fills": [
-          {
-            "side": "SF by 7-14",
-            "price": 0.28,
-            "qty": 550.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1792382795965-824b1c",
-      "ts": "2026-10-19T04:04:18Z",
-      "book": "W7-WASSF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 85: SF by 15+ x85 at 30c. Worst line -$370.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 85.0,
-        "fills": [
-          {
-            "side": "SF by 15+",
-            "price": 0.3,
-            "qty": 85.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792382856395-e94ee4",
       "ts": "2026-10-19T04:07:26Z",
@@ -4474,45 +4434,28 @@
           }
         ]
       }
-    }
-  ],
-  "audits": [
-    {
-      "id": "1792401818920-2b9c52",
-      "ts": "2026-10-19T09:23:38Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): held worst -344.71 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
     },
     {
-      "id": "1792403086419-c1a16d",
-      "ts": "2026-10-19T09:44:46Z",
+      "id": "1792464099785-3f557a",
+      "ts": "2026-10-20T02:41:39Z",
       "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- W7-WASSF - San Francisco by 7 to 14 has had no resting orders for at least 252 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792403091874-b79220",
-      "ts": "2026-10-19T09:44:51Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): worst -344.71 vs floor -325.00. Check the command center.",
+      "kind": "update",
+      "source": "endgame",
+      "text": "W7-WASSF: buying back 5 SF 15+ at 26c (about $1) (worst case right now -$3). Reply in Claude if you want it stopped.",
       "severity": "critical"
     },
     {
-      "id": "1792403637464-0feadc",
-      "ts": "2026-10-19T09:53:57Z",
+      "id": "1792464116057-d7107e",
+      "ts": "2026-10-20T02:41:39Z",
       "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): held worst -344.71 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite SF 7-14 at 0.44); likely ['SF 15+', 'SF 7-14']; endgame: repairing toward breakeven ",
+      "severity": "info",
+      "title": "Bot note"
+    }
+  ],
+  "audits": [
     {
       "id": "1792404911019-819645",
       "ts": "2026-10-19T10:15:11Z",
@@ -5375,6 +5318,42 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W7-WASSF - San Francisco by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464077089-7411cd",
+      "ts": "2026-10-20T02:41:17Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464099783-632ad4",
+      "ts": "2026-10-20T02:41:39Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Endgame mode on: SF 7-14 at 0.44; likely outcomes: SF 15+, SF 7-14; action: repairing KXNFLWINMARGIN-26OCT19WASSF-SF15PLUS",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464100118-fe1430",
+      "ts": "2026-10-20T02:41:40Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "In-game:\nEndgame breakeven repair: floor -3 -> +0 (1 leg(s))\nIf the game ends... you make\nSF 1-6: +27 (+0.6% of bankroll)\nSF 7-14: +114 (+2.4% of bankroll)\nSF 15+: -3 (-0.1% of bankroll)\nWAS 1-6: +227 (+4.8% of bankroll)\nWAS 7-14: +686 (+14.6% of bankroll)\nWAS 15+: +635 (+13.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464120577-979807",
+      "ts": "2026-10-20T02:42:00Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+9 on SF 1-6 @ 0.21 (maker)\n+3 on SF 1-6 @ 0.24 (maker)\n+5 on SF 15+ @ 0.26 (taker)\nworst outcome now +99\nheld 1511/1424/1536/1311/852/903\nIf the game ends... you make\nSF 1-6: +26 (+0.5% of bankroll)\nSF 7-14: +113 (+2.4% of bankroll)\nSF 15+: +0 (+0.0% of bankroll)\nWAS 1-6: +225 (+4.8% of bankroll)\nWAS 7-14: +684 (+14.6% of bankroll)\nWAS 15+: +634 (+13.5% of bankroll)",
       "severity": "warn"
     }
   ]
