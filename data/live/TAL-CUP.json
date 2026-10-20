@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T05:17:32.098282Z",
+  "generated_at": "2026-10-20T05:19:52.927418Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$554, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Joey Logano",
@@ -17,7 +17,7 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$500 (now -$554)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts Sun 9:00am CT",
         "last_fill": "2026-10-20T03:47:11Z"
       },
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 8,659, 32,805 resting. Worst line -$554 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 8,659, 32,805 resting. Worst line -$554 (limit now -$550)."
         ]
       },
       {
@@ -212,7 +212,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T05:17:01Z"
+    "ts": "2026-10-20T05:19:02Z"
   },
   "posts": [
     {
@@ -2124,6 +2124,16 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$554, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792473481650-f0c90e",
+      "ts": "2026-10-20T05:18:01Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$554, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -2459,6 +2469,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -562.72 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792473515938-9534a3",
+      "ts": "2026-10-20T05:18:35Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 15 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-DEHA low 792c, KXNASCARRACE-YEL26-SHVA low 103c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-RYBL low 92c, KXNASCARRACE-YEL26-BUWA low 999c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 604c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-TYRE low 723c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-WIBY low 176c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-CHBR low 591c, KXNASCARRACE-YEL26-ZASM low 1000c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
