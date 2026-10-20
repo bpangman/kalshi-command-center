@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T16:58:27.831228Z",
+  "generated_at": "2026-10-20T17:00:49.362171Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -129,8 +129,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c at the next check.",
-          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
+          "Austin Cindric: 999 behind. Steps to 7c if no fill by 12:03pm CT.",
+          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 12:03pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,68 +211,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T16:58:03Z"
+    "ts": "2026-10-20T17:00:04Z"
   },
   "posts": [
-    {
-      "id": "1792457226276-caaaea",
-      "ts": "2026-10-20T00:46:47Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Fast fill on Christopher Bell: the 6c row sold 29% in 8 min, re-posted.",
-      "severity": "info",
-      "title": "Reprice"
-    },
-    {
-      "id": "1792457266626-b871ac",
-      "ts": "2026-10-20T00:46:47Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 192: Christopher Bell x68 at 6c, Tyler Reddick x60 at 7c, Ryan Blaney x48 at 9c, +1 more. Worst line -$767.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 192.0,
-        "fills": [
-          {
-            "side": "Christopher Bell",
-            "price": 0.06,
-            "qty": 68.0
-          },
-          {
-            "side": "Tyler Reddick",
-            "price": 0.07,
-            "qty": 60.0
-          },
-          {
-            "side": "Ryan Blaney",
-            "price": 0.09,
-            "qty": 48.0
-          },
-          {
-            "side": "William Byron",
-            "price": 0.05,
-            "qty": 16.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1792457387557-306a56",
-      "ts": "2026-10-20T00:47:39Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 217 (launch ladder): Christopher Bell x217 at 7c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 217.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1792457427877-338bdc",
       "ts": "2026-10-20T00:48:10Z",
@@ -4401,18 +4342,59 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792515544335-4d6a3c",
+      "ts": "2026-10-20T16:58:48Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Austin Cindric: no fill for 1187 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Austin Cindric",
+        "from": 0.08,
+        "to": 0.07
+      }
+    },
+    {
+      "id": "1792515544336-79ec98",
+      "ts": "2026-10-20T16:58:48Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 982 min, added 300 at 5c (was 6c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.06,
+        "to": 0.05
+      }
+    },
+    {
+      "id": "1792515544343-ee44c2",
+      "ts": "2026-10-20T16:56:53Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 37: Denny Hamlin x37 at 5c. Worst line -$983.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 37.0,
+        "fills": [
+          {
+            "side": "Denny Hamlin",
+            "price": 0.05,
+            "qty": 37.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792464549174-fd6f84",
-      "ts": "2026-10-20T02:49:09Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+331 on Ryan Blaney @ 0.09 (maker)\n+185 on William Byron @ 0.05 (maker)\n+47 on Shane van Gisbergen @ 0.02 (maker)\nworst outcome now -709\nIf the race ends... you make\nRicky Stenhouse Jr.: -709\nRyan Blaney: -616\nChristopher Bell: -491\nKyle Larson: -318\nWilliam Byron: -303\nShane van Gisbergen: -67\nTyler Reddick: +14\nChase Briscoe: +14\nall others (32) >= +18",
-      "severity": "warn"
-    },
     {
       "id": "1792465256442-753417",
       "ts": "2026-10-20T03:00:56Z",
@@ -5303,6 +5285,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -1004.61 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792515533527-9a4563",
+      "ts": "2026-10-20T16:58:53Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 192 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
