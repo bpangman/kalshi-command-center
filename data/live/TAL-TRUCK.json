@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-20T23:17:58.347645Z",
+  "generated_at": "2026-10-20T23:20:20.689436Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -40,7 +40,7 @@
         "exposure_text": "-$52",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T23:17:06Z",
+        "at": "2026-10-20T23:20:07Z",
         "stuck": false,
         "also": "Also: glide starts Fri 11:00am CT",
         "last_fill": "2026-10-20T22:43:21Z",
@@ -53,7 +53,7 @@
         "exposure_text": "+$27",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T23:17:06Z",
+        "at": "2026-10-20T23:20:07Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "last_fill": "2026-10-20T22:19:50Z",
@@ -78,7 +78,7 @@
         "exposure_text": "+$54",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T23:17:06Z",
+        "at": "2026-10-20T23:20:07Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 17c at the next check."
@@ -102,7 +102,7 @@
         "exposure_text": "+$54",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T23:17:06Z",
+        "at": "2026-10-20T23:20:07Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -114,7 +114,7 @@
         "exposure_text": "+$54",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T23:17:06Z",
+        "at": "2026-10-20T23:20:07Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 7c at the next check."
@@ -246,7 +246,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-20T23:17:06Z"
+    "ts": "2026-10-20T23:20:07Z"
   },
   "posts": [
     {
@@ -2653,6 +2653,35 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792538326938-097ddc",
+      "ts": "2026-10-20T23:16:41Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 31: Justin Haley x31 at 5c. Worst line -$271.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 31.0,
+        "fills": [
+          {
+            "side": "Justin Haley",
+            "price": 0.05,
+            "qty": 31.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792538381615-053417",
+      "ts": "2026-10-20T23:19:41Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nLayne Riggs: -271\nThomas Annunziata: -179\nChandler Smith: -52\nJustin Haley: +23\nGiovanni Ruggiero: +27\nBen Rhodes: +43\nNorm Benning: +54\nTony Stewart: +54\nall others (30) >= +54\nCollected $55 premium ($1 fees) | Paper margin over fair $15 (not realized until settlement)\nCore posted book 1.49 | Worst now -271 | Cash free $3460\nAnchor age 181s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -3176,6 +3205,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): 12 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TOST low 699c, KXNASCARRACE-LOVRS26-GREN high 703c, KXNASCARRACE-LOVRS26-JUHA low 717c, KXNASCARRACE-LOVRS26-STFR low 700c, KXNASCARRACE-LOVRS26-CHEC high 707c, KXNASCARRACE-LOVRS26-COHE high 719c, KXNASCARRACE-LOVRS26-KAHO low 707c, KXNASCARRACE-LOVRS26-SASM high 725c, KXNASCARRACE-LOVRS26-BRQU low 698c, KXNASCARRACE-LOVRS26-THAN low 465c, KXNASCARRACE-LOVRS26-GIRU low 676c, KXNASCARRACE-LOVRS26-CLMC low 697c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792538413204-894424",
+      "ts": "2026-10-20T23:20:13Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+27 on Giovanni Ruggiero @ 0.07 (maker)\n+12 on Ben Rhodes @ 0.06 (maker)\n+233 on Thomas Annunziata @ 0.02 (maker)\n+107 on Chandler Smith @ 0.13 (maker)\n+326 on Layne Riggs @ 0.10 (maker)\n+31 on Justin Haley @ 0.05 (maker)\nworst outcome now -271\nIf the race ends... you make\nLayne Riggs: -271\nThomas Annunziata: -179\nChandler Smith: -52\nJustin Haley: +23\nGiovanni Ruggiero: +27\nBen Rhodes: +43\nNorm Benning: +54\nTony Stewart: +54\nall others (30) >= +54",
       "severity": "warn"
     }
   ]
