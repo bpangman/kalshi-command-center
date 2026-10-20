@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T03:54:56.822018Z",
+  "generated_at": "2026-10-20T03:57:17.529634Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -123,14 +123,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 7,887, 33,578 resting. Worst line -$578 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 7,887, 32,579 resting. Worst line -$578 (limit now -$550)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c at the next check.",
+          "Austin Cindric: 999 behind. Steps to 7c if no fill by 10:59pm CT.",
           "Brad Keselowski: 795 behind. Crowd is quiet here (26 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -212,7 +212,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T03:54:27Z"
+    "ts": "2026-10-20T03:56:28Z"
   },
   "posts": [
     {
@@ -1708,6 +1708,65 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$578, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792468507599-525841",
+      "ts": "2026-10-20T03:54:49Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Austin Cindric: no fill for 403 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Austin Cindric",
+        "from": 0.08,
+        "to": 0.07
+      }
+    },
+    {
+      "id": "1792468547821-47160b",
+      "ts": "2026-10-20T03:55:42Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Idle step on Bubba Wallace: no fill for 404 min, lowest row 7c to 6c.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792468567967-0c6da7",
+      "ts": "2026-10-20T03:53:48Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 922: Carson Hocevar x922 at 4c. Worst line -$578.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 922.0,
+        "fills": [
+          {
+            "side": "Carson Hocevar",
+            "price": 0.04,
+            "qty": 922.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792468567967-a0a0b2",
+      "ts": "2026-10-20T03:53:48Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 92 (launch ladder): Ryan Blaney x92 at 9c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 92.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -1961,6 +2020,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): 11 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-JOLO low 986c, KXNASCARRACE-YEL26-SHVA low 641c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 657c, KXNASCARRACE-YEL26-TYRE low 723c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-CHBR low 723c, KXNASCARRACE-YEL26-ZASM low 1000c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792468557710-bdca0d",
+      "ts": "2026-10-20T03:55:57Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: TAL-CUP - Ryan Blaney is posting again.",
       "severity": "warn"
     }
   ]
