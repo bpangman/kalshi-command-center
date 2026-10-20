@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T20:15:37.793514Z",
+  "generated_at": "2026-10-20T20:18:00.056309Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -17,7 +17,7 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$500 (now -$930)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts Sun 9:00am CT",
         "last_fill": "2026-10-20T18:46:48Z"
       },
@@ -130,7 +130,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
           "Austin Cindric: 999 behind. Crowd is quiet here (31 traded).",
-          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
+          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 3:21pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,19 +211,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T20:15:29Z"
+    "ts": "2026-10-20T20:17:30Z"
   },
   "posts": [
-    {
-      "id": "1792484054189-f5fb34",
-      "ts": "2026-10-20T08:14:05Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1792484235529-8ecd59",
       "ts": "2026-10-20T08:17:15Z",
@@ -4294,27 +4284,24 @@
       "text": "Kalshi refused a post on Joey Logano: order(s) rejected: [{'code': 'invalid_order', 'details': 'po.",
       "severity": "warn",
       "title": "Post refused"
+    },
+    {
+      "id": "1792527430071-9f2658",
+      "ts": "2026-10-20T20:16:50Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 1180 min, added 300 at 5c (was 6c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.06,
+        "to": 0.05
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792481116842-c3ff58",
-      "ts": "2026-10-20T07:25:16Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 17 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-DEHA low 792c, KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 987c, KXNASCARRACE-YEL26-SHVA low 103c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-RYBL low 92c, KXNASCARRACE-YEL26-BUWA low 999c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 511c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-CHBE low 217c, KXNASCARRACE-YEL26-WIBY low 176c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-CHBR low 591c, KXNASCARRACE-YEL26-ZASM low 1000c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792481280829-b3f025",
-      "ts": "2026-10-20T07:28:00Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Tyler Reddick has had no resting orders for at least 131 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792482346047-f85504",
       "ts": "2026-10-20T07:45:46Z",
@@ -5195,6 +5182,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Carson Hocevar has had no resting orders for at least 980 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792527347997-2e7fe4",
+      "ts": "2026-10-20T20:15:47Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Ricky Stenhouse Jr. has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792527359577-bb5e68",
+      "ts": "2026-10-20T20:15:59Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 13 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 987c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-RYBL low 750c, KXNASCARRACE-YEL26-CHEL low 2c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-AUHI low 1000c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-TYGI low 999c, KXNASCARRACE-YEL26-COZI low 1000c. Check the command center.",
       "severity": "warn"
     }
   ]
