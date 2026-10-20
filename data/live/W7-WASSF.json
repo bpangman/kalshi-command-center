@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T03:11:29.682016Z",
+  "generated_at": "2026-10-20T03:12:51.772668Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,49 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T03:11:29Z"
+    "ts": "2026-10-20T03:12:29Z"
   },
   "posts": [
-    {
-      "id": "1792383118340-a19e65",
-      "ts": "2026-10-19T04:11:58Z",
-      "book": "W7-WASSF",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Mon 7:15pm CT. Worst line -$321, goal -$150. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
-    {
-      "id": "1792383158644-f08504",
-      "ts": "2026-10-19T04:11:39Z",
-      "book": "W7-WASSF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 255: SF by 15+ x200 at 31c, SF by 15+ x39 at 32c, SF by 7-14 x16 at 29c. Worst line -$321.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 255.0,
-        "fills": [
-          {
-            "side": "SF by 15+",
-            "price": 0.31,
-            "qty": 200.0
-          },
-          {
-            "side": "SF by 15+",
-            "price": 0.32,
-            "qty": 39.0
-          },
-          {
-            "side": "SF by 7-14",
-            "price": 0.29,
-            "qty": 16.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792383162189-2790da",
       "ts": "2026-10-19T04:12:42Z",
@@ -4526,18 +4486,27 @@
       "text": "Quiet for 15 min. 1,039 resting.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792465940879-8625cb",
+      "ts": "2026-10-20T03:12:20Z",
+      "book": "W7-WASSF",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-WASSF: 0 orders posted in 10 min while the market traded 35622 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
+      "severity": "info"
+    },
+    {
+      "id": "1792465961421-7501cf",
+      "ts": "2026-10-20T03:12:41Z",
+      "book": "W7-WASSF",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-WASSF: 0 orders posted in 10 min while the market traded 35622 contracts. Cause: our prices were 1-3c above the crowd on most buckets. Remedy: joined the crowd on those buckets for 15 min.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792407296295-256105",
-      "ts": "2026-10-19T10:54:56Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): held worst -314.49 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792409115813-fb0203",
       "ts": "2026-10-19T11:25:15Z",
@@ -5427,6 +5396,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W7-WASSF - San Francisco by 7 to 14 has had no resting orders for at least 10 min (reason unknown: repeated post rejections (35 in 10 min)).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792465920200-fa841d",
+      "ts": "2026-10-20T03:12:00Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
