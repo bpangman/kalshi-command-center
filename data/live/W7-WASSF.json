@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T01:08:51.993305Z",
+  "generated_at": "2026-10-20T01:10:15.006225Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$54.",
+    "headline": "In game (Ingame). Worst line -$85.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,964, 1,449 resting. Worst line -$54. Game 30% done."
+          "In game (Ingame). Sold 7,028, 1,397 resting. Worst line -$85. Game 33% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "SF by 1-6",
         "held": 1281.0,
-        "resting": 22.3,
+        "resting": 48.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,15 +54,15 @@
       {
         "label": "SF by 7-14",
         "held": 1343.7,
-        "resting": 103.3,
+        "resting": 99.7,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SF by 15+",
-        "held": 1477.0,
-        "resting": 74.0,
+        "held": 1541.1,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T01:08:35Z"
+    "ts": "2026-10-20T01:09:35Z"
   },
   "posts": [
-    {
-      "id": "1792375916733-9cb7a8",
-      "ts": "2026-10-19T02:11:56Z",
-      "book": "W7-WASSF",
-      "kind": "text",
-      "source": "bot",
-      "text": "Lopsided: SF 77% favored (no premium collected yet); pregame keeps posting both sides, the heavier side a few cents higher (no favored-side cap)",
-      "severity": "info"
-    },
     {
       "id": "1792375917141-b26c4f",
       "ts": "2026-10-19T02:11:57Z",
@@ -4317,18 +4308,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792458555457-6f3c7a",
+      "ts": "2026-10-20T01:09:04Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26OCT19WASSF-SF15PLUS: held floor -85, resting 35 -> cap 25, trimmed 10 highest",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792390338253-fc8c77",
-      "ts": "2026-10-19T06:12:18Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): worst -370.04 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792390883948-e24de0",
       "ts": "2026-10-19T06:21:23Z",
@@ -5218,6 +5210,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+63 on SF 1-6 @ 0.20 (maker)\n+166 on WAS 1-6 @ 0.11 (maker)\n+272 on WAS 1-6 @ 0.13 (maker)\n+28 on WAS 1-6 @ 0.15 (maker)\n+101 on SF 7-14 @ 0.32 (maker)\n+19 on SF 1-6 @ 0.21 (maker)\n+46 on SF 15+ @ 0.38 (maker)\n+12 on SF 15+ @ 0.41 (maker)\nworst outcome now +82\nheld 1281/1325/1429/1311/852/699\nIf the game ends... you make\nSF 1-6: +114 (+2.4% of bankroll)\nSF 7-14: +71 (+1.5% of bankroll)\nSF 15+: -34 (-0.7% of bankroll)\nWAS 1-6: +84 (+1.8% of bankroll)\nWAS 7-14: +543 (+11.6% of bankroll)\nWAS 15+: +696 (+14.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792458565277-8ee980",
+      "ts": "2026-10-20T01:09:25Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
