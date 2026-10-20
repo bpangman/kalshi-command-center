@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T00:50:21.201783Z",
+  "generated_at": "2026-10-20T00:51:41.744752Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -99,12 +99,12 @@
         "exposure": 34.36,
         "exposure_text": "+$34",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 7:52pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T00:52:18Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c if no fill by 7:52pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Austin Cindric",
@@ -112,12 +112,12 @@
         "exposure": 238.36,
         "exposure_text": "+$238",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 7:51pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T00:51:47Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c if no fill by 7:51pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -132,7 +132,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
           "Joey Logano: 576 behind. Price 8c matches the crowd.",
-          "Austin Cindric: 576 behind. Steps to 7c if no fill by 7:51pm CT.",
+          "Austin Cindric: 576 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -213,7 +213,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T00:50:07Z"
+    "ts": "2026-10-20T00:51:08Z"
   },
   "posts": [
     {
@@ -1061,6 +1061,26 @@
       "data": {
         "contracts": 217.0,
         "rows": 1
+      }
+    },
+    {
+      "id": "1792457427877-338bdc",
+      "ts": "2026-10-20T00:48:10Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 128: Kyle Larson x128 at 5c. Worst line -$761.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 128.0,
+        "fills": [
+          {
+            "side": "Kyle Larson",
+            "price": 0.05,
+            "qty": 128.0
+          }
+        ]
       }
     }
   ],
