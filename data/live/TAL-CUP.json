@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T21:03:01.565467Z",
+  "generated_at": "2026-10-20T21:07:01.781530Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -130,7 +130,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
           "Austin Cindric: 999 behind. Crowd is quiet here (31 traded).",
-          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 4:05pm CT.",
+          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 4:10pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,44 +211,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T21:02:50Z"
+    "ts": "2026-10-20T21:06:52Z"
   },
   "posts": [
-    {
-      "id": "1792496545108-fcf3d9",
-      "ts": "2026-10-20T11:42:25Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 30,911 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792496746698-6cf6f9",
-      "ts": "2026-10-20T11:43:28Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 129: Denny Hamlin x100 at 5c, Christopher Bell x29 at 5c. Worst line -$451.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 129.0,
-        "fills": [
-          {
-            "side": "Denny Hamlin",
-            "price": 0.05,
-            "qty": 100.0
-          },
-          {
-            "side": "Christopher Bell",
-            "price": 0.05,
-            "qty": 29.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792497512545-fd4bbd",
       "ts": "2026-10-20T11:58:32Z",
@@ -4320,18 +4285,34 @@
       "text": "Nudged Joey Logano up from 8c to 9c to stay a maker order.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792530191155-877110",
+      "ts": "2026-10-20T21:03:01Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on Joey Logano: order(s) rejected: [{'code': 'invalid_order', 'details': 'po.",
+      "severity": "warn",
+      "title": "Post refused"
+    },
+    {
+      "id": "1792530332138-797a78",
+      "ts": "2026-10-20T21:05:28Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 1228 min, added 300 at 5c (was 6c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.06,
+        "to": 0.05
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792484340524-a1a152",
-      "ts": "2026-10-20T08:19:00Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+94 on Chase Elliott @ 0.05 (maker)\nworst outcome now -513\nIf the race ends... you make\nJoey Logano: -513\nRicky Stenhouse Jr.: -513\nTyler Reddick: -513\nCarson Hocevar: -512\nRyan Blaney: -421\nShane van Gisbergen: -410\nWilliam Byron: -336\nChristopher Bell: -296\nall others (32) >= -122",
-      "severity": "warn"
-    },
     {
       "id": "1792484916024-e0c100",
       "ts": "2026-10-20T08:28:36Z",
@@ -5222,6 +5203,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -926.70 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792530397520-947535",
+      "ts": "2026-10-20T21:06:37Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 1041 min (reason unknown: repeated post rejections (15 in 10 min)).\n- TAL-CUP - Kyle Larson has had no resting orders for at least 253 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
