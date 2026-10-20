@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T01:17:09.360655Z",
+  "generated_at": "2026-10-20T01:18:32.776596Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -99,12 +99,12 @@
         "exposure": 34.36,
         "exposure_text": "+$34",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T01:16:18Z",
+        "when": "if no fill by 8:21pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T01:21:22Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Steps to 5c if no fill by 8:21pm CT."
       },
       {
         "side": "Austin Cindric",
@@ -112,12 +112,12 @@
         "exposure": 238.36,
         "exposure_text": "+$238",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 8:19pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T01:19:38Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c if no fill by 8:19pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -132,7 +132,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
           "Joey Logano: 576 behind. Price 8c matches the crowd.",
-          "Austin Cindric: 576 behind. Steps to 7c if no fill by 8:19pm CT.",
+          "Austin Cindric: 576 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -213,7 +213,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T01:16:18Z"
+    "ts": "2026-10-20T01:18:19Z"
   },
   "posts": [
     {
@@ -1101,6 +1101,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nRicky Stenhouse Jr.: -761\nChristopher Bell: -543\nKyle Larson: -370\nRyan Blaney: -338\nWilliam Byron: -147\nTyler Reddick: -38\nChase Briscoe: -38\nBrad Keselowski: +34\nall others (32) >= +78\nCollected $243 premium ($4 fees) | Paper margin over fair $75 (not realized until settlement)\nCore posted book 1.39 | Worst now -761 | Cash free $4171\nAnchor age 281s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792459099595-fdd793",
+      "ts": "2026-10-20T01:18:19Z",
+      "book": "TAL-CUP",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 38,345 resting. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
