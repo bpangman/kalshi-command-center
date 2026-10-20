@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T04:58:42.535948Z",
+  "generated_at": "2026-10-20T05:01:06.970251Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -112,12 +112,12 @@
         "exposure": 436.28,
         "exposure_text": "+$436",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 11:59pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-20T04:59:24Z",
+        "when": "if no fill by 12:04am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T05:04:50Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c if no fill by 11:59pm CT."
+        "lag_note": "Steps to 7c if no fill by 12:04am CT."
       }
     ],
     "sections": [
@@ -131,7 +131,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c if no fill by 11:59pm CT.",
+          "Austin Cindric: 999 behind. Steps to 7c if no fill by 12:04am CT.",
           "Brad Keselowski: 795 behind. Crowd is quiet here (3 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -213,7 +213,7 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T04:57:53Z"
+    "ts": "2026-10-20T05:00:54Z"
   },
   "posts": [
     {
@@ -2026,6 +2026,21 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792472414378-258d86",
+      "ts": "2026-10-20T05:00:10Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Austin Cindric: no fill for 468 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Austin Cindric",
+        "from": 0.08,
+        "to": 0.07
+      }
     }
   ],
   "audits": [
@@ -2342,6 +2357,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792472409937-3a6285",
+      "ts": "2026-10-20T05:00:09Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+41 on William Byron @ 0.05 (maker)\n+15 on Chase Elliott @ 0.05 (maker)\n+116 on Denny Hamlin @ 0.05 (maker)\n+132 on Chase Briscoe @ 0.05 (maker)\nworst outcome now -563\nIf the race ends... you make\nJoey Logano: -563\nRicky Stenhouse Jr.: -563\nCarson Hocevar: -562\nRyan Blaney: -470\nWilliam Byron: -386\nChristopher Bell: -345\nKyle Larson: -172\nShane van Gisbergen: +8\nall others (32) >= +28",
       "severity": "warn"
     }
   ]
