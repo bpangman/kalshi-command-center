@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T03:30:02.424389Z",
+  "generated_at": "2026-10-20T03:32:49.211346Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -99,12 +99,12 @@
         "exposure": 99.29,
         "exposure_text": "+$99",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 10:32pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-20T03:32:07Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-20T03:32:18Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c if no fill by 10:32pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Joey Logano",
@@ -112,12 +112,12 @@
         "exposure": 290.41,
         "exposure_text": "+$290",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 10:32pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-20T03:32:14Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-20T03:32:18Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T03:22:14Z",
-        "lag_note": "Steps to 7c if no fill by 10:32pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -131,8 +131,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
-          "Austin Cindric: 906 behind. Steps to 7c if no fill by 10:33pm CT.",
-          "Joey Logano: 894 behind. Steps to 7c if no fill by 10:32pm CT.",
+          "Austin Cindric: 906 behind. Steps to 7c at the next check.",
+          "Joey Logano: 894 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -213,7 +213,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T03:29:16Z"
+    "ts": "2026-10-20T03:32:18Z"
   },
   "posts": [
     {
@@ -1520,6 +1520,31 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792467017186-fe3ea5",
+      "ts": "2026-10-20T03:28:33Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 22: Chase Elliott x19 at 5c, driver CHBU x3 at 4c. Worst line -$696.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 22.0,
+        "fills": [
+          {
+            "side": "Chase Elliott",
+            "price": 0.05,
+            "qty": 19.0
+          },
+          {
+            "side": "driver CHBU",
+            "price": 0.04,
+            "qty": 3.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -1756,6 +1781,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): 9 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-SHVA low 641c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 694c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-WIBY low 405c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-CAHO low 922c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792467020836-486893",
+      "ts": "2026-10-20T03:30:20Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -695.71 vs floor -363.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
