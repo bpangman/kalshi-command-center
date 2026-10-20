@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T03:10:06.908165Z",
+  "generated_at": "2026-10-20T03:11:29.682016Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$707, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Ricky Stenhouse Jr.",
@@ -99,12 +99,12 @@
         "exposure": 88.01,
         "exposure_text": "+$88",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T03:09:51Z",
+        "when": "if no fill by 10:15pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T03:15:25Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Steps to 5c if no fill by 10:15pm CT."
       },
       {
         "side": "Austin Cindric",
@@ -112,27 +112,27 @@
         "exposure": 292.01,
         "exposure_text": "+$292",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 10:12pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T03:12:08Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c if no fill by 10:12pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 5,630, 36,477 resting. Worst line -$707 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 5,630, 36,477 resting. Worst line -$707 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
-          "Joey Logano: 906 behind. Steps to 7c if no fill by 10:12pm CT.",
-          "Austin Cindric: 906 behind. Steps to 7c if no fill by 10:12pm CT.",
+          "Joey Logano: 906 behind. Steps to 7c at the next check.",
+          "Austin Cindric: 906 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -213,7 +213,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T03:09:08Z"
+    "ts": "2026-10-20T03:11:08Z"
   },
   "posts": [
     {
@@ -1427,6 +1427,25 @@
       "text": "Joey Logano price not lowered: a full fill would push the worst line to -$615.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792465868946-4f9a1c",
+      "ts": "2026-10-20T03:11:08Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$707, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792465878677-537ab9",
+      "ts": "2026-10-20T03:11:18Z",
+      "book": "TAL-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nRicky Stenhouse Jr.: -707\nRyan Blaney: -615\nChristopher Bell: -490\nKyle Larson: -316\nWilliam Byron: -302\nShane van Gisbergen: -66\nChase Elliott: -13\nTyler Reddick: +16\nall others (32) >= +16\nCollected $298 premium ($5 fees) | Paper margin over fair $84 (not realized until settlement)\nCore posted book 1.27 | Worst now -707 | Cash free $4362\nAnchor age 52s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
