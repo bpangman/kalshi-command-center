@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T06:08:12.327964Z",
+  "generated_at": "2026-10-20T06:10:33.733599Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$518, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Joey Logano",
@@ -122,14 +122,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 9,395, 32,069 resting. Worst line -$518."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 9,395, 32,069 resting. Worst line -$518. Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c if no fill by 1:10am CT.",
+          "Austin Cindric: 999 behind. Steps to 7c at the next check.",
           "Brad Keselowski: 795 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -211,7 +211,7 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 29 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T06:07:22Z"
+    "ts": "2026-10-20T06:10:23Z"
   },
   "posts": [
     {
@@ -2328,6 +2328,16 @@
         "from": 0.08,
         "to": 0.07
       }
+    },
+    {
+      "id": "1792476623442-951e98",
+      "ts": "2026-10-20T06:10:23Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$518, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -2707,6 +2717,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 131 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792476584306-276223",
+      "ts": "2026-10-20T06:09:44Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -517.72 vs floor -363.40. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792476624735-287ed3",
+      "ts": "2026-10-20T06:10:24Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+468 on Shane van Gisbergen @ 0.02 (maker)\n+723 on Tyler Reddick @ 0.05 (maker)\n+13 on Austin Dillon @ 0.02 (maker)\nworst outcome now -518\nIf the race ends... you make\nJoey Logano: -518\nRicky Stenhouse Jr.: -518\nTyler Reddick: -518\nCarson Hocevar: -517\nRyan Blaney: -425\nShane van Gisbergen: -415\nWilliam Byron: -341\nChristopher Bell: -300\nall others (32) >= -127",
       "severity": "warn"
     }
   ]
