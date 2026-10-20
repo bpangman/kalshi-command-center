@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T02:30:03.692649Z",
+  "generated_at": "2026-10-20T02:31:26.547168Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -87,12 +87,12 @@
         "exposure": 86.44,
         "exposure_text": "+$86",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 9:32pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T02:32:01Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c if no fill by 9:32pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Austin Cindric",
@@ -214,7 +214,7 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T02:29:51Z"
+    "ts": "2026-10-20T02:30:51Z"
   },
   "posts": [
     {
@@ -1364,6 +1364,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792463471796-dcfc18",
+      "ts": "2026-10-20T02:31:11Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Idle step on Chase Briscoe: no fill for 112 min, lowest row 7c to 6c.",
+      "severity": "info",
+      "title": "Price step"
     }
   ],
   "audits": [
@@ -1555,6 +1565,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): 9 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-SHVA low 688c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-RYBL low 354c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 726c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-CAHO low 922c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792463431384-957cd2",
+      "ts": "2026-10-20T02:30:31Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -708.56 vs floor -363.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
