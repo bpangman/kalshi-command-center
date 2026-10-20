@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-20T22:28:03.061042Z",
+  "generated_at": "2026-10-20T22:30:24.361665Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$26, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Giovanni Ruggiero",
@@ -76,7 +76,7 @@
         "exposure_text": "+$2",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T22:27:44Z",
+        "at": "2026-10-20T22:29:45Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -110,7 +110,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 27, 26,682 resting. Worst line -$26."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 27, 26,682 resting. Worst line -$26. Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -232,7 +232,7 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-20T22:27:44Z"
+    "ts": "2026-10-20T22:29:45Z"
   },
   "posts": [
     {
@@ -2505,6 +2505,25 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792535324647-b6317e",
+      "ts": "2026-10-20T22:28:44Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$26, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792535367305-235f88",
+      "ts": "2026-10-20T22:29:27Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "trajectory_monitor",
+      "text": "TAL-TRUCK is behind its coverage path: coverage 0.07 vs glide 0.55 with 0 percent of the crowd in (worst line about -26). OK for Claude to review it? Reply in Claude; nothing changes until you do.",
+      "severity": "warn"
     }
   ],
   "audits": [
