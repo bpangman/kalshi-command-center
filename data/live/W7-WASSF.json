@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T00:11:42.372939Z",
+  "generated_at": "2026-10-20T00:13:01.014814Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -14,8 +14,8 @@
         "resting": "37 @ 40c",
         "exposure": -26.06,
         "exposure_text": "-$26",
-        "move": "Next wave 247 contracts",
-        "when": "waits for other sides to catch up",
+        "move": "Holding",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-19T21:17:00Z"
@@ -25,11 +25,10 @@
         "resting": "none",
         "exposure": -16.94,
         "exposure_text": "-$17",
-        "move": "Next wave 297 contracts",
-        "when": "waits for other sides to catch up",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing",
         "last_fill": "2026-10-19T18:09:06Z"
       },
       {
@@ -37,11 +36,10 @@
         "resting": "117 @ 24c",
         "exposure": -7.4,
         "exposure_text": "-$7",
-        "move": "Next wave 297 contracts",
-        "when": "waits for other sides to catch up",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing",
         "last_fill": "2026-10-19T21:51:42Z"
       },
       {
@@ -53,7 +51,7 @@
         "when": "crowd pays 7.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 188",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-19T22:28:05Z",
         "lag_note": "Price 8c matches the crowd."
       },
@@ -66,7 +64,7 @@
         "when": "crowd pays 11c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 225",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-19T18:28:20Z",
         "lag_note": "Price 11c matches the crowd."
       },
@@ -79,7 +77,7 @@
         "when": "crowd pays 3.8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: next wave if resting drops under 125",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-19T20:57:55Z",
         "lag_note": "Price 4c matches the crowd."
       }
@@ -182,7 +180,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T00:11:11Z"
+    "ts": "2026-10-20T00:12:11Z"
   },
   "posts": [
     {
@@ -3901,18 +3899,28 @@
       "text": "Bot note: COVERAGE-CAP decrease SF1TO6: resting 169 -> 117 (held 1033 + resting was over the cap 1151 = 1.06x; tighten p",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792455151660-94c3ff",
+      "ts": "2026-10-20T00:12:29Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -26.06, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792455170664-c6b9ba",
+      "ts": "2026-10-20T00:12:50Z",
+      "book": "W7-WASSF",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W7-WASSF: 0 orders posted in 10 min while the market traded 38596 contracts. Cause: our prices were 1-3c above the crowd on most buckets. Remedy: joined the crowd on those buckets for 15 min.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792384838843-0b9988",
-      "ts": "2026-10-19T04:40:38Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): worst -342.09 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792385144699-1c6bc4",
       "ts": "2026-10-19T04:45:44Z",
@@ -4803,6 +4811,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-WASSF): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792455149140-ac89e5",
+      "ts": "2026-10-20T00:12:29Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nSF 1-6: -7 (-0.2% of bankroll)\nSF 7-14: -17 (-0.4% of bankroll)\nSF 15+: -26 (-0.6% of bankroll)\nWAS 1-6: +244 (+5.2% of bankroll)\nWAS 7-14: +174 (+3.7% of bankroll)\nWAS 15+: +508 (+10.8% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
