@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T02:34:11.954673Z",
+  "generated_at": "2026-10-20T02:36:55.813889Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -87,12 +87,12 @@
         "exposure": 86.44,
         "exposure_text": "+$86",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 9:37pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T02:37:15Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c if no fill by 9:37pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Austin Cindric",
@@ -100,12 +100,12 @@
         "exposure": 290.44,
         "exposure_text": "+$290",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T02:34:47Z",
+        "when": "if no fill by 9:40pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T02:40:11Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 9:40pm CT."
       },
       {
         "side": "Joey Logano",
@@ -113,12 +113,12 @@
         "exposure": 290.44,
         "exposure_text": "+$290",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T02:34:47Z",
+        "when": "if no fill by 9:40pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T02:40:11Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 9:40pm CT."
       }
     ],
     "sections": [
@@ -132,8 +132,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
-          "Joey Logano: 906 behind. Steps to 7c at the next check.",
-          "Austin Cindric: 906 behind. Steps to 7c at the next check.",
+          "Joey Logano: 906 behind. Steps to 7c if no fill by 9:40pm CT.",
+          "Austin Cindric: 906 behind. Steps to 7c if no fill by 9:40pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -214,7 +214,7 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T02:33:52Z"
+    "ts": "2026-10-20T02:36:54Z"
   },
   "posts": [
     {
@@ -1588,6 +1588,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -708.56 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792463796882-b6d277",
+      "ts": "2026-10-20T02:36:36Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 7 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-SHVA low 641c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 726c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
