@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T01:28:27.344181Z",
+  "generated_at": "2026-10-20T01:29:49.663602Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$58.",
+    "headline": "In game (Ingame). Worst line -$53.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,292, 1,426 resting. Worst line -$58. Game 47% done."
+          "In game (Ingame). Sold 7,310, 1,533 resting. Worst line -$53. Game 47% done."
         ]
       },
       {
@@ -46,15 +46,15 @@
       {
         "label": "SF by 1-6",
         "held": 1303.4,
-        "resting": 12.5,
+        "resting": 37.5,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SF by 7-14",
-        "held": 1381.8,
-        "resting": 26.6,
+        "held": 1399.8,
+        "resting": 41.6,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "WAS by 1-6",
         "held": 1311.0,
-        "resting": 149.9,
+        "resting": 194.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "WAS by 15+",
         "held": 902.9,
-        "resting": 670.3,
+        "resting": 693.3,
         "target": null,
         "status": "even",
         "price": null
@@ -101,23 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T01:27:43Z"
+    "ts": "2026-10-20T01:29:44Z"
   },
   "posts": [
-    {
-      "id": "1792376632519-b50e9a",
-      "ts": "2026-10-19T02:21:48Z",
-      "book": "W7-WASSF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 140 (FIELD far-bucket row (all-fill): WAS by 15+ x140 at 5c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 140.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1792377418068-1b72bf",
       "ts": "2026-10-19T02:36:58Z",
@@ -4390,18 +4376,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792459784811-80c6c5",
+      "ts": "2026-10-20T01:28:18Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 134: WAS by 15+ x116 at 5c, SF by 7-14 x18 at 31c. Worst line -$53.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 134.0,
+        "fills": [
+          {
+            "side": "WAS by 15+",
+            "price": 0.05,
+            "qty": 116.0
+          },
+          {
+            "side": "SF by 7-14",
+            "price": 0.31,
+            "qty": 18.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792392184440-da5771",
-      "ts": "2026-10-19T06:43:04Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- W7-WASSF - San Francisco by 7 to 14 has had no resting orders for at least 71 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792392703282-7ac023",
       "ts": "2026-10-19T06:51:43Z",
@@ -5287,6 +5289,15 @@
     {
       "id": "1792459168576-df78f4",
       "ts": "2026-10-20T01:19:28Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792459784749-3c373b",
+      "ts": "2026-10-20T01:29:44Z",
       "book": "W7-WASSF",
       "kind": "audit",
       "source": "bot",
