@@ -1961,14 +1961,42 @@ function buildBookTile(b, opts) {
   // Blake 2026-10-17: the rate the book is filling at (coverage ratio:
   // premium / most contracts held on one outcome), bottom right of the tile.
   // 1.00+ means every outcome is positive.
-  if (b.coverage_ratio !== null && b.coverage_ratio !== undefined && isFinite(b.coverage_ratio)) {
+  // Blake 2026-10-19: "<coverage> / <posted book sum>": to the right of the
+  // slash, in white, the sum of our posted asks across every outcome (the
+  // crowd's best ask on an outcome where nothing of ours rests), so the tile
+  // shows both what the book is filling at and the vig the crowd is offering.
+  var hasCov = (b.coverage_ratio !== null && b.coverage_ratio !== undefined && isFinite(b.coverage_ratio));
+  var hasSum = (b.posted_book_sum !== null && b.posted_book_sum !== undefined && isFinite(b.posted_book_sum));
+  if (hasCov || hasSum) {
+    var covWrap = document.createElement("span");
+    covWrap.className = "book-tile-coverage-wrap";
     var covSpan = document.createElement("span");
-    var covText = Number(b.coverage_ratio).toFixed(2);
-    // color follows the rounded number shown, so "1.00" is never red
-    covSpan.className = "book-tile-coverage " + (Number(covText) >= 1 ? "pos" : "neg");
-    covSpan.textContent = covText.replace(/^0\./, ".");
+    if (hasCov) {
+      var covText = Number(b.coverage_ratio).toFixed(2);
+      // color follows the rounded number shown, so "1.00" is never red
+      covSpan.className = "book-tile-coverage " + (Number(covText) >= 1 ? "pos" : "neg");
+      covSpan.textContent = covText.replace(/^0\./, ".");
+    } else {
+      covSpan.className = "book-tile-coverage none";
+      covSpan.textContent = "\u2013";
+    }
     covSpan.title = "Filling at (coverage ratio): 1.00 or more means every outcome is positive";
-    row4.appendChild(covSpan);
+    covWrap.appendChild(covSpan);
+    if (hasSum) {
+      var slash = document.createElement("span");
+      slash.className = "book-tile-booksum-slash";
+      slash.textContent = " / ";
+      covWrap.appendChild(slash);
+      var sumSpan = document.createElement("span");
+      sumSpan.className = "book-tile-booksum";
+      sumSpan.textContent = Number(b.posted_book_sum).toFixed(2);
+      var nRest = b.posted_book_sum_resting_outcomes, nAll = b.posted_book_sum_outcomes;
+      sumSpan.title = "Posted book sum: our lowest resting ask on every outcome added up" +
+        ((nRest !== undefined && nAll !== undefined) ? " (" + nRest + " of " + nAll + " outcomes from our own asks, the rest from the crowd's best ask)" : "") +
+        ". Over 1.00 = the crowd is paying a vig at these prices.";
+      covWrap.appendChild(sumSpan);
+    }
+    row4.appendChild(covWrap);
   }
   tile.appendChild(row4);
 

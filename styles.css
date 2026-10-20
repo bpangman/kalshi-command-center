@@ -1038,14 +1038,24 @@ tfoot td {
   overflow: hidden;
 }
 
-.book-tile-row4 .book-tile-coverage {
+.book-tile-row4 .book-tile-coverage-wrap {
   margin-left: auto;
+  font-weight: 700;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.book-tile-row4 .book-tile-coverage {
   font-weight: 700;
   font-size: 0.72rem;
   font-variant-numeric: tabular-nums;
 }
 .book-tile-row4 .book-tile-coverage.pos { color: var(--green); }
 .book-tile-row4 .book-tile-coverage.neg { color: var(--red); }
+.book-tile-row4 .book-tile-coverage.none { color: var(--muted, #888); }
+/* Blake 2026-10-19: posted book sum (sum of our asks over every outcome), white */
+.book-tile-row4 .book-tile-booksum-slash { color: var(--muted, #888); font-weight: 400; }
+.book-tile-row4 .book-tile-booksum { color: #fff; }
 
 .book-tile-row4 .floor-mode-tag {
   background: rgba(63, 185, 80, 0.15);
