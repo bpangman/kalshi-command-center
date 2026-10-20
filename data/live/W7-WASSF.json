@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T01:18:32.776596Z",
+  "generated_at": "2026-10-20T01:19:55.492663Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,176, 1,342 resting. Worst line -$64. Game 39% done."
+          "In game (Ingame). Sold 7,176, 1,362 resting. Worst line -$64. Game 39% done."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "SF by 7-14",
         "held": 1381.8,
-        "resting": 24.3,
+        "resting": 44.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T01:17:39Z"
+    "ts": "2026-10-20T01:19:40Z"
   },
   "posts": [
-    {
-      "id": "1792376037696-0071c4",
-      "ts": "2026-10-19T02:13:57Z",
-      "book": "W7-WASSF",
-      "kind": "update",
-      "source": "coordinator",
-      "text": "MNF W7-WASSF (Washington at San Francisco, Mon 7:15pm CT) is LIVE on strategy v2: 24 orders / 4975 contracts resting, every side at the crowd's price, purse $300, pin $2,500. Also done tonight: strategy v2 core + NFL wiring, Trump book moved to T-120 balance rule, four line watchers built (NFL primetime + NFL daytime loaded; NASCAR + UFC load after their modules are wired, NASCAR before Mon 4pm).",
-      "severity": "info"
-    },
     {
       "id": "1792376632519-b50e9a",
       "ts": "2026-10-19T02:21:48Z",
@@ -4379,18 +4370,29 @@
       "source": "bot",
       "text": "If the game ends... you make\nSF 1-6: +174 (+3.7% of bankroll)\nSF 7-14: +95 (+2.0% of bankroll)\nSF 15+: -64 (-1.4% of bankroll)\nWAS 1-6: +166 (+3.5% of bankroll)\nWAS 7-14: +625 (+13.3% of bankroll)\nWAS 15+: +690 (+14.7% of bankroll)\nCollected $1477 premium ($0 fees) | Paper margin over fair $136 (not realized until settlement)\nEvent: SF 15+: SF 13-3, Q2 6:26; SF 7-14: SF 13-3, Q2 6:26\nheld / resting\nSF 1-6: 1303 / 56\nSF 7-14: 1382 / 24\nSF 15+: 1541 / 0\nWAS 1-6: 1311 / 150\nWAS 7-14: 852 / 567\nWAS 15+: 787 / 546\nPosted book 1.24 | Sold avg 1.093 | Worst now +38 | Cash free $3781\nAnchor age 2896s | Last fill 34s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792459159978-b37204",
+      "ts": "2026-10-20T01:17:13Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 81: WAS by 15+ x81 at 5c. Worst line -$64.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 81.0,
+        "fills": [
+          {
+            "side": "WAS by 15+",
+            "price": 0.05,
+            "qty": 81.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792392157666-7e48a6",
-      "ts": "2026-10-19T06:42:37Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): worst -370.04 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792392184440-da5771",
       "ts": "2026-10-19T06:43:04Z",
@@ -5280,6 +5282,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+23 on SF 7-14 @ 0.32 (maker)\n+22 on SF 1-6 @ 0.19 (maker)\n+11 on SF 7-14 @ 0.31 (maker)\n+4 on SF 7-14 @ 0.33 (maker)\n+7 on WAS 15+ @ 0.05 (maker)\nworst outcome now +44\nheld 1303/1382/1541/1311/852/706\nIf the game ends... you make\nSF 1-6: +169 (+3.6% of bankroll)\nSF 7-14: +91 (+1.9% of bankroll)\nSF 15+: -68 (-1.5% of bankroll)\nWAS 1-6: +162 (+3.4% of bankroll)\nWAS 7-14: +621 (+13.2% of bankroll)\nWAS 15+: +767 (+16.3% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792459168576-df78f4",
+      "ts": "2026-10-20T01:19:28Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
