@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T01:14:23.634292Z",
+  "generated_at": "2026-10-20T01:15:46.390615Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$70.",
+    "headline": "In game (Ingame). Worst line -$68.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,085, 1,336 resting. Worst line -$70. Game 35% done."
+          "In game (Ingame). Sold 7,095, 1,423 resting. Worst line -$68. Game 37% done."
         ]
       },
       {
@@ -53,8 +53,8 @@
       },
       {
         "label": "SF by 7-14",
-        "held": 1378.0,
-        "resting": 17.8,
+        "held": 1381.8,
+        "resting": 24.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,15 +78,15 @@
       {
         "label": "WAS by 7-14",
         "held": 852.0,
-        "resting": 478.7,
+        "resting": 566.9,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "WAS by 15+",
-        "held": 699.0,
-        "resting": 633.6,
+        "held": 706.1,
+        "resting": 626.5,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T01:13:37Z"
+    "ts": "2026-10-20T01:15:38Z"
   },
   "posts": [
-    {
-      "id": "1792375928074-f63e06",
-      "ts": "2026-10-19T02:12:08Z",
-      "book": "W7-WASSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Now watching this book. Building toward kickoff Mon 7:16pm CT. Worst line $0, goal -$150.",
-      "severity": "info",
-      "title": "Narrator started"
-    },
     {
       "id": "1792375928075-63471f",
       "ts": "2026-10-19T02:12:08Z",
@@ -4349,18 +4339,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792458897868-9df098",
+      "ts": "2026-10-20T01:13:40Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 16: SF by 7-14 x11 at 31c, SF by 7-14 x4 at 33c, SF by 1-6 x1 at 19c. Worst line -$69.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 16.0,
+        "fills": [
+          {
+            "side": "SF by 7-14",
+            "price": 0.31,
+            "qty": 11.0
+          },
+          {
+            "side": "SF by 7-14",
+            "price": 0.33,
+            "qty": 4.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.19,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792390883948-e24de0",
-      "ts": "2026-10-19T06:21:23Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): held worst -370.04 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792392157666-7e48a6",
       "ts": "2026-10-19T06:42:37Z",
@@ -5250,6 +5261,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792458927627-28c8d5",
+      "ts": "2026-10-20T01:15:27Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+23 on SF 7-14 @ 0.32 (maker)\n+22 on SF 1-6 @ 0.19 (maker)\n+11 on SF 7-14 @ 0.31 (maker)\n+4 on SF 7-14 @ 0.33 (maker)\n+7 on WAS 15+ @ 0.05 (maker)\nworst outcome now +44\nheld 1303/1382/1541/1311/852/706\nIf the game ends... you make\nSF 1-6: +169 (+3.6% of bankroll)\nSF 7-14: +91 (+1.9% of bankroll)\nSF 15+: -68 (-1.5% of bankroll)\nWAS 1-6: +162 (+3.4% of bankroll)\nWAS 7-14: +621 (+13.2% of bankroll)\nWAS 15+: +767 (+16.3% of bankroll)",
       "severity": "warn"
     }
   ]
