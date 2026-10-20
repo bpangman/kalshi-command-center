@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T20:46:19.080333Z",
+  "generated_at": "2026-10-20T20:48:40.702972Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$928, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Bubba Wallace",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 16,304, 29,737 resting. Worst line -$928 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 16,304, 29,737 resting. Worst line -$928 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -130,7 +130,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
           "Austin Cindric: 999 behind. Crowd is quiet here (31 traded).",
-          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 3:48pm CT.",
+          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,18 +211,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T20:45:43Z"
+    "ts": "2026-10-20T20:47:43Z"
   },
   "posts": [
-    {
-      "id": "1792494905248-3d5d27",
-      "ts": "2026-10-20T11:15:05Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJoey Logano: -467\nRicky Stenhouse Jr.: -467\nTyler Reddick: -467\nRyan Blaney: -466\nCarson Hocevar: -466\nShane van Gisbergen: -364\nWilliam Byron: -290\nChase Briscoe: -251\nall others (32) >= -250\nCollected $542 premium ($9 fees) | Paper margin over fair $126 (not realized until settlement)\nCore posted book 1.03 | Worst now -467 | Cash free $4655\nAnchor age 251s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792494912634-1b2cea",
       "ts": "2026-10-20T11:15:05Z",
@@ -4314,18 +4305,19 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$928, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792529203494-23298a",
+      "ts": "2026-10-20T20:46:43Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$928, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792483098327-9dd250",
-      "ts": "2026-10-20T07:58:18Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 252 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792484120071-45d830",
       "ts": "2026-10-20T08:15:20Z",
@@ -5215,6 +5207,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Denny Hamlin has had no resting orders for at least 192 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792529318264-5b0e72",
+      "ts": "2026-10-20T20:48:38Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 11 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 893c, KXNASCARRACE-YEL26-RYBL low 750c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-AUHI low 1000c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-TYGI low 999c, KXNASCARRACE-YEL26-COZI low 1000c. Check the command center.",
       "severity": "warn"
     }
   ]
