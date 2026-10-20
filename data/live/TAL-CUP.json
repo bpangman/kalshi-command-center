@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T14:00:08.239591Z",
+  "generated_at": "2026-10-20T14:02:29.505804Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -129,8 +129,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c at the next check.",
-          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
+          "Austin Cindric: 999 behind. Steps to 7c if no fill by 9:04am CT.",
+          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 9:04am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,7 +211,7 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T13:59:44Z"
+    "ts": "2026-10-20T14:01:45Z"
   },
   "posts": [
     {
@@ -3573,18 +3573,39 @@
       "text": "Kalshi refused a post on Joey Logano: order(s) rejected: [{'code': 'invalid_order', 'details': 'po.",
       "severity": "warn",
       "title": "Post refused"
+    },
+    {
+      "id": "1792504824781-f10c21",
+      "ts": "2026-10-20T14:00:20Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Austin Cindric: no fill for 1008 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Austin Cindric",
+        "from": 0.08,
+        "to": 0.07
+      }
+    },
+    {
+      "id": "1792504824782-647861",
+      "ts": "2026-10-20T14:00:20Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 803 min, added 300 at 5c (was 6c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.06,
+        "to": 0.05
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792446881244-be1e11",
-      "ts": "2026-10-19T21:54:41Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 20 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-BRKE low 1715c, KXNASCARRACE-YEL26-AJAL low 1000c, KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 1000c, KXNASCARRACE-YEL26-RIST low 1000c, KXNASCARRACE-YEL26-SHVA low 1000c, KXNASCARRACE-YEL26-CHBU low 1000c, KXNASCARRACE-YEL26-ROCH low 312c, KXNASCARRACE-YEL26-ALBO low 1000c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-RYPR low 860c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-COCU low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-TOGI low 1000c, KXNASCARRACE-YEL26-RIHE low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-TYGI high 1733c, KXNASCARRACE-YEL26-COZI low 1000c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792447374910-323816",
       "ts": "2026-10-19T22:02:54Z",
@@ -4474,6 +4495,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792504929348-4af91e",
+      "ts": "2026-10-20T14:02:09Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 616 min (reason unknown: repeated post rejections (15 in 10 min)).",
       "severity": "warn"
     }
   ]
