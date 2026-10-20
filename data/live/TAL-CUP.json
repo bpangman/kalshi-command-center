@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T21:34:48.229184Z",
+  "generated_at": "2026-10-20T21:37:19.318060Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$927, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Bubba Wallace",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 16,328, 29,714 resting. Worst line -$927 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 16,328, 29,714 resting. Worst line -$927 (limit now -$550). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -130,7 +130,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
           "Austin Cindric: 999 behind. Crowd is quiet here (31 traded).",
-          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 4:37pm CT.",
+          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,24 +211,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T21:34:02Z"
+    "ts": "2026-10-20T21:37:04Z"
   },
   "posts": [
-    {
-      "id": "1792502185249-b74218",
-      "ts": "2026-10-20T13:16:22Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Austin Cindric: no fill for 965 min, added 300 at 7c (was 8c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Austin Cindric",
-        "from": 0.08,
-        "to": 0.07
-      }
-    },
     {
       "id": "1792502567996-1d7304",
       "ts": "2026-10-20T13:22:33Z",
@@ -4276,18 +4261,19 @@
       "text": "Nudged Joey Logano up from 8c to 9c to stay a maker order.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792532224243-25e11c",
+      "ts": "2026-10-20T21:37:04Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$927, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792488085771-c1886c",
-      "ts": "2026-10-20T09:21:25Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -513.11 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792488551440-c95d70",
       "ts": "2026-10-20T09:29:11Z",
@@ -5177,6 +5163,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792532218723-30b889",
+      "ts": "2026-10-20T21:36:58Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- TAL-CUP - Christopher Bell has had no resting orders for at least 313 min (reason unknown: no reason logged).\n- TAL-CUP - Chase Elliott has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
