@@ -1,10 +1,10 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T02:50:45.117179Z",
+  "generated_at": "2026-10-20T02:52:07.745931Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$48.",
+    "headline": "In game (Ingame). Worst line +$62.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 8,101, 1,078 resting. Worst line +$48. Game 84% done."
+          "In game (Ingame). Sold 8,268, 842 resting. Worst line +$62. Game 86% done."
         ]
       },
       {
@@ -53,8 +53,8 @@
       },
       {
         "label": "SF by 7-14",
-        "held": 1437.8,
-        "resting": 0.0,
+        "held": 1463.4,
+        "resting": 56.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,23 +62,23 @@
       {
         "label": "SF by 15+",
         "held": 1536.1,
-        "resting": 0.0,
+        "resting": 18.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "WAS by 1-6",
-        "held": 1441.0,
-        "resting": 120.0,
+        "held": 1552.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "WAS by 7-14",
-        "held": 1268.0,
-        "resting": 255.0,
+        "held": 1298.0,
+        "resting": 284.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "WAS by 15+",
         "held": 902.9,
-        "resting": 703.0,
+        "resting": 484.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T02:50:19Z"
+    "ts": "2026-10-20T02:51:20Z"
   },
   "posts": [
     {
@@ -4511,15 +4511,6 @@
   ],
   "audits": [
     {
-      "id": "1792405456831-ebb563",
-      "ts": "2026-10-19T10:24:16Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): held worst -344.71 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1792406246899-4f06c8",
       "ts": "2026-10-19T10:37:26Z",
       "book": "W7-WASSF",
@@ -5408,6 +5399,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464694992-cff6ee",
+      "ts": "2026-10-20T02:51:34Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
