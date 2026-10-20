@@ -1,10 +1,10 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-20T22:30:24.361665Z",
+  "generated_at": "2026-10-20T22:33:47.905575Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$596, goal -$150.",
+    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$506, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,32 +12,32 @@
       {
         "side": "CHI by 1-6",
         "resting": "67 @ 29c",
-        "exposure": -596.0,
-        "exposure_text": "-$596",
+        "exposure": -506.24,
+        "exposure_text": "-$506",
         "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$300 (now -$596)",
+        "when": "holding until worst loss is back above -$300 (now -$506)",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-20T21:47:54Z"
       },
       {
         "side": "CHI by 7-14",
-        "resting": "860 @ 22-24c",
-        "exposure": 197.28,
-        "exposure_text": "+$197",
+        "resting": "452 @ 22-24c",
+        "exposure": -120.96,
+        "exposure_text": "-$121",
         "move": "Hold price at 22c",
         "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
-        "last_fill": "2026-10-20T15:54:53Z",
+        "last_fill": "2026-10-20T22:31:34Z",
         "lag_note": "No crowd trade data yet."
       },
       {
         "side": "CHI by 15+",
         "resting": "825 @ 20-27c",
-        "exposure": 237.11,
-        "exposure_text": "+$237",
+        "exposure": 326.87,
+        "exposure_text": "+$327",
         "move": "Hold price at 20c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -48,8 +48,8 @@
       {
         "side": "NE by 1-6",
         "resting": "900 @ 22-24c",
-        "exposure": 237.11,
-        "exposure_text": "+$237",
+        "exposure": 326.87,
+        "exposure_text": "+$327",
         "move": "Hold price at 22c",
         "when": "needs 50+ crowd trades under 22c (now 6)",
         "at": null,
@@ -60,8 +60,8 @@
       {
         "side": "NE by 15+",
         "resting": "810 @ 12-19c",
-        "exposure": 237.11,
-        "exposure_text": "+$237",
+        "exposure": 326.87,
+        "exposure_text": "+$327",
         "move": "Hold price at 12c",
         "when": "crowd pays 12c; steps down 1c only if it trades lower",
         "at": null,
@@ -72,8 +72,8 @@
       {
         "side": "NE by 7-14",
         "resting": "533 @ 15-19c",
-        "exposure": 237.11,
-        "exposure_text": "+$237",
+        "exposure": 326.87,
+        "exposure_text": "+$327",
         "move": "Hold price at 15c",
         "when": "crowd pays 15c; steps down 1c only if it trades lower",
         "at": null,
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 873, 3,995 resting. Worst line -$596 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,281, 3,587 resting. Worst line -$506 (goal -$150)."
         ]
       },
       {
@@ -102,14 +102,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$596).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$506).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: CHI by 1-6 stopped adding until worst line is above -$300 (now -$596).",
+          "Backstop ON: CHI by 1-6 stopped adding until worst line is above -$300 (now -$506).",
           "Paid balancing starts Thu 6:30pm CT: worst line to -$150 by Thu 7:05pm CT, up to $100.",
           "At Thu 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Thu 7:15pm CT: the in-game engine takes over."
@@ -150,8 +150,8 @@
       },
       {
         "label": "CHI by 7-14",
-        "held": 39.8,
-        "resting": 860.2,
+        "held": 447.8,
+        "resting": 452.2,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-20T22:29:24Z"
+    "ts": "2026-10-20T22:33:26Z"
   },
   "posts": [
     {
@@ -1560,6 +1560,16 @@
       "text": "Quiet for 15 min. 3,995 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792535526255-115ef0",
+      "ts": "2026-10-20T22:31:56Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on lagging CHI by 7-14: 408 of 550 sold, re-posted at the same price.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
@@ -1643,6 +1653,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-NECHI): worst -596.00 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792535578729-fd288c",
+      "ts": "2026-10-20T22:32:58Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+408 on CHI 7-14 @ 0.22 (maker)\nworst outcome now +121\nheld 833/448/0/0/0/0\nIf the game ends... you make\nCHI 1-6: -506 (-36.4% of bankroll)\nCHI 7-14: -121 (-8.7% of bankroll)\nCHI 15+: +327 (+23.5% of bankroll)\nNE 1-6: +327 (+23.5% of bankroll)\nNE 7-14: +327 (+23.5% of bankroll)\nNE 15+: +327 (+23.5% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
