@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T23:05:06.825127Z",
+  "generated_at": "2026-10-20T23:07:28.888461Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$907, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Bubba Wallace",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 16,659, 30,133 resting. Worst line -$907 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 16,659, 30,133 resting. Worst line -$907 (limit now -$550)."
         ]
       },
       {
@@ -211,39 +211,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T23:04:40Z"
+    "ts": "2026-10-20T23:06:41Z"
   },
   "posts": [
-    {
-      "id": "1792503998513-234ba0",
-      "ts": "2026-10-20T13:46:19Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 252: Chase Briscoe x107 at 5c, Tyler Reddick x107 at 5c, William Byron x38 at 5c. Worst line -$477.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 252.0,
-        "fills": [
-          {
-            "side": "Chase Briscoe",
-            "price": 0.05,
-            "qty": 107.0
-          },
-          {
-            "side": "Tyler Reddick",
-            "price": 0.05,
-            "qty": 107.0
-          },
-          {
-            "side": "William Byron",
-            "price": 0.05,
-            "qty": 38.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792504018677-15f7ec",
       "ts": "2026-10-20T13:46:51Z",
@@ -4220,18 +4190,19 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$907, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792537601391-71b697",
+      "ts": "2026-10-20T23:06:41Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$907, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792494910349-48e13f",
-      "ts": "2026-10-20T11:15:10Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 15 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-BRKE high 1510c, KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 987c, KXNASCARRACE-YEL26-SHVA low 103c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-BUWA low 999c, KXNASCARRACE-YEL26-ALBO low 1000c, KXNASCARRACE-YEL26-CHEL low 511c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-CHBE low 217c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-CHBR low 591c, KXNASCARRACE-YEL26-ZASM low 1000c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792495216513-b791a9",
       "ts": "2026-10-20T11:20:16Z",
@@ -5122,6 +5093,15 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 556 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1792537579026-691151",
+      "ts": "2026-10-20T23:06:19Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -907.16 vs floor -363.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
