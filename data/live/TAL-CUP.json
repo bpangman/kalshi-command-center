@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T17:03:10.719190Z",
+  "generated_at": "2026-10-20T17:05:48.959281Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -129,8 +129,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Steps to 7c at the next check.",
-          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
+          "Austin Cindric: 999 behind. Steps to 7c if no fill by 12:08pm CT.",
+          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 12:08pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,38 +211,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T17:03:06Z"
+    "ts": "2026-10-20T17:05:07Z"
   },
   "posts": [
-    {
-      "id": "1792458192800-6b0765",
-      "ts": "2026-10-20T01:03:12Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 38,345 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792458660951-a1f6f3",
-      "ts": "2026-10-20T01:11:00Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRicky Stenhouse Jr.: -761\nChristopher Bell: -543\nKyle Larson: -370\nRyan Blaney: -338\nWilliam Byron: -147\nTyler Reddick: -38\nChase Briscoe: -38\nBrad Keselowski: +34\nall others (32) >= +78\nCollected $243 premium ($4 fees) | Paper margin over fair $75 (not realized until settlement)\nCore posted book 1.39 | Worst now -761 | Cash free $4171\nAnchor age 281s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1792459099595-fdd793",
-      "ts": "2026-10-20T01:18:19Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 38,345 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792460006364-f65c4b",
       "ts": "2026-10-20T01:33:26Z",
@@ -4382,18 +4353,49 @@
       "text": "Nudged Joey Logano up from 8c to 9c to stay a maker order.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792515846676-9badf1",
+      "ts": "2026-10-20T17:03:53Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Austin Cindric: no fill for 1192 min, added 300 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Austin Cindric",
+        "from": 0.08,
+        "to": 0.07
+      }
+    },
+    {
+      "id": "1792515846676-ff51af",
+      "ts": "2026-10-20T17:03:53Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 987 min, added 300 at 5c (was 6c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.06,
+        "to": 0.05
+      }
+    },
+    {
+      "id": "1792515927340-805855",
+      "ts": "2026-10-20T17:05:17Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on Joey Logano: order(s) rejected: [{'code': 'invalid_order', 'details': 'po.",
+      "severity": "warn",
+      "title": "Post refused"
     }
   ],
   "audits": [
-    {
-      "id": "1792465256442-753417",
-      "ts": "2026-10-20T03:00:56Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -706.99 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792465661632-6422da",
       "ts": "2026-10-20T03:07:41Z",
@@ -5283,6 +5285,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 192 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792515836409-ee77b1",
+      "ts": "2026-10-20T17:03:56Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 798 min (reason unknown: repeated post rejections (16 in 10 min)).\n- TAL-CUP - Kyle Larson has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
