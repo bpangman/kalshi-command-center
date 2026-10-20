@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T19:54:04.192806Z",
+  "generated_at": "2026-10-20T19:56:29.702518Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -129,8 +129,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski.",
-          "Austin Cindric: 999 behind. Crowd is quiet here (47 traded).",
-          "Brad Keselowski: 795 behind. Steps to 5c at the next check.",
+          "Austin Cindric: 999 behind. Crowd is quiet here (31 traded).",
+          "Brad Keselowski: 795 behind. Steps to 5c if no fill by 2:59pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,19 +211,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T19:53:19Z"
+    "ts": "2026-10-20T19:56:20Z"
   },
   "posts": [
-    {
-      "id": "1792480308759-3776c3",
-      "ts": "2026-10-20T07:11:48Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$518, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792480385704-21ec0e",
       "ts": "2026-10-20T07:13:05Z",
@@ -4282,18 +4272,24 @@
       "text": "Nudged Joey Logano up from 8c to 9c to stay a maker order.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792526100242-83d4af",
+      "ts": "2026-10-20T19:54:43Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 1157 min, added 300 at 5c (was 6c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.06,
+        "to": 0.05
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792479463446-a38bf0",
-      "ts": "2026-10-20T06:57:43Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Joey Logano has had no resting orders for at least 192 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792480350789-9de8c7",
       "ts": "2026-10-20T07:12:30Z",
@@ -5184,6 +5180,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): 13 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 987c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-RYBL low 750c, KXNASCARRACE-YEL26-CHEL low 2c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-AUHI low 1000c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-TYGI low 999c, KXNASCARRACE-YEL26-COZI low 1000c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1792526057946-8bf277",
+      "ts": "2026-10-20T19:54:17Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -929.55 vs floor -363.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
