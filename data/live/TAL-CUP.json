@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T02:47:58.093144Z",
+  "generated_at": "2026-10-20T02:49:21.190370Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -87,12 +87,12 @@
         "exposure": 86.44,
         "exposure_text": "+$86",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 9:48pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-20T02:48:31Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-20T02:48:58Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c if no fill by 9:48pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Austin Cindric",
@@ -214,7 +214,7 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T02:46:58Z"
+    "ts": "2026-10-20T02:48:58Z"
   },
   "posts": [
     {
@@ -1606,6 +1606,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): 7 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-SHVA low 641c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-KYLA low 391c, KXNASCARRACE-YEL26-CHEL low 726c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792464549174-fd6f84",
+      "ts": "2026-10-20T02:49:09Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+331 on Ryan Blaney @ 0.09 (maker)\n+185 on William Byron @ 0.05 (maker)\n+47 on Shane van Gisbergen @ 0.02 (maker)\nworst outcome now -709\nIf the race ends... you make\nRicky Stenhouse Jr.: -709\nRyan Blaney: -616\nChristopher Bell: -491\nKyle Larson: -318\nWilliam Byron: -303\nShane van Gisbergen: -67\nTyler Reddick: +14\nChase Briscoe: +14\nall others (32) >= +18",
       "severity": "warn"
     }
   ]
