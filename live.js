@@ -43,6 +43,9 @@
     keys: null, // { cmdTopic, replyTopic, hmacKey } once a passcode exists
     es: null,
     esTopic: null,
+    qIndex: null, // last good data/queue/index.json
+    qFiles: {}, // key -> parsed data/queue/<key>.json
+    qSigs: {}, // key -> ts of the cached file
   };
 
   /* -- small helpers -- */
@@ -199,6 +202,7 @@
 
   function poll() {
     if (!L.active || document.hidden) return Promise.resolve();
+    pollQueue();
     return fetchJSON("data/live/index.json").then(function (idx) {
       return idx;
     }, function (err) {
@@ -1052,12 +1056,135 @@
     return chat;
   }
 
+
+  /* -- queue view (where our resting contracts sit in line) -- */
+
+  var VERDICT_RANK = { unlikely: 0, maybe: 1, likely: 2, none: 3 };
+  var VERDICT_MARK = { likely: "✓", maybe: "●", unlikely: "✕", none: "-" };
+  var VERDICT_WORD = { likely: "Likely to fill", maybe: "Maybe", unlikely: "Unlikely", none: "Nothing resting" };
+
+  function fmtPx(p) {
+    if (p === null || p === undefined || isNaN(Number(p))) return "-";
+    var v = Number(p);
+    var d = Math.abs(v * 100 - Math.round(v * 100)) > 0.001 ? 3 : 2;
+    return v.toFixed(d).replace(/^0\./, ".");
+  }
+
+  function fmtTraded(n, avg) {
+    if (n === null || n === undefined) return "-";
+    if (!n) return "0";
+    return fmtNum(n) + " @ " + fmtPx(avg);
+  }
+
+  function pollQueue() {
+    return fetchJSON("data/queue/index.json").then(function (idx) {
+      var books = (idx && Array.isArray(idx.books)) ? idx.books : [];
+      var fetches = books.map(function (b) {
+        if (L.qFiles[b.key] && L.qSigs[b.key] === b.ts) return Promise.resolve();
+        return fetchJSON("data/queue/" + encodeURIComponent(b.key) + ".json").then(function (data) {
+          L.qFiles[b.key] = data;
+          L.qSigs[b.key] = b.ts;
+        }, function () { /* keep what we had */ });
+      });
+      return Promise.all(fetches).then(function () {
+        L.qIndex = idx;
+        Object.keys(L.blocks).forEach(function (k) { if (L.blocks[k].queueEl) renderQueue(L.blocks[k]); });
+      });
+    }).catch(function () { /* queue files not there yet: the card says so */ });
+  }
+
+  function sortQueueRows(rows, mode) {
+    var out = rows.slice();
+    var num = function (v) { return (v === null || v === undefined) ? Infinity : Number(v); };
+    out.sort(function (a, c) {
+      var an = a.verdict === "none", cn = c.verdict === "none";
+      if (an !== cn) return an ? 1 : -1;
+      if (mode === "ahead") {
+        return (num(a.ahead) - num(c.ahead)) || (VERDICT_RANK[a.verdict] - VERDICT_RANK[c.verdict]);
+      }
+      return (VERDICT_RANK[a.verdict] - VERDICT_RANK[c.verdict]) || (num(a.ahead) - num(c.ahead));
+    });
+    return out;
+  }
+
+  function renderQueue(B) {
+    var q = L.qFiles[B.key];
+    var box = B.queueEl;
+    var sig = q ? (q.ts + "|" + B.qSort) : "none|" + B.qSort;
+    if (sig === B.queueSig) return;
+    B.queueSig = sig;
+    var top = box.scrollTop, left = box.scrollLeft;
+    box.innerHTML = "";
+    if (!q) {
+      box.appendChild(el("div", "lv-q-empty", "Queue numbers have not arrived for this book yet."));
+      return;
+    }
+    var head = el("div", "lv-q-head");
+    var cd = el("span", "lv-cd");
+    cd.setAttribute("data-at", q.start_time || "");
+    head.appendChild(cd);
+    var age = el("span", "lv-age");
+    age.setAttribute("data-ago", q.ts || "");
+    head.appendChild(age);
+    var src = q.trades_src === "rest" ? "Trades: last 24h tape" : "Trades: not available";
+    head.appendChild(el("span", "lv-q-src", src));
+    box.appendChild(head);
+    if (q.queue_read_ok === false) {
+      box.appendChild(el("div", "lv-q-warn", "Line position could not be read this pass, so Ahead shows a dash."));
+    }
+    var wrap = el("div", "lv-q-scroll");
+    var t = el("table", "lv-q-table");
+    var thead = el("thead");
+    var hr = el("tr");
+    [["Outcome", null], ["Ours", null], ["Ahead", "ahead"], ["Crowd bid / ask", null], ["Last", null], ["1h", null], ["24h", null], ["Held", null], ["Fill?", "verdict"]].forEach(function (h) {
+      var th = el("th", null, h[0] + (h[1] && B.qSort === h[1] ? " ▾" : ""));
+      if (h[1]) {
+        th.className = "lv-q-sortable";
+        th.title = "Sort by " + h[0];
+        th.addEventListener("click", function () { B.qSort = h[1]; renderQueue(B); });
+      }
+      hr.appendChild(th);
+    });
+    thead.appendChild(hr);
+    t.appendChild(thead);
+    var tb = el("tbody");
+    sortQueueRows(q.outcomes || [], B.qSort).forEach(function (o) {
+      var tr = el("tr", "lv-q-row lv-q-" + o.verdict);
+      tr.appendChild(el("td", "lv-q-name", o.label));
+      tr.appendChild(el("td", "num", o.our_ask === null || o.our_ask === undefined ? "-" : fmtPx(o.our_ask) + " x " + fmtNum(o.our_size_at_ask) + (o.our_resting_total > o.our_size_at_ask ? " (+" + fmtNum(o.our_resting_total - o.our_size_at_ask) + ")" : "")));
+      tr.appendChild(el("td", "num", o.verdict === "none" ? "-" : fmtNum(o.ahead)));
+      tr.appendChild(el("td", "num", fmtPx(o.crowd_bid) + " / " + fmtPx(o.crowd_ask)));
+      tr.appendChild(el("td", "num", fmtPx(o.last_price)));
+      tr.appendChild(el("td", "num", o.verdict === "none" ? "-" : fmtTraded(o.traded_1h, o.traded_1h_avg)));
+      tr.appendChild(el("td", "num", o.verdict === "none" ? "-" : fmtTraded(o.traded_24h, o.traded_24h_avg)));
+      tr.appendChild(el("td", "num", o.held ? fmtNum(o.held) + (o.avg_sale_price ? " @ " + fmtPx(o.avg_sale_price) : "") : "-"));
+      var vt = el("td", "lv-q-verdict lv-qv-" + o.verdict, VERDICT_MARK[o.verdict] || "-");
+      vt.title = (VERDICT_WORD[o.verdict] || "") + (o.verdict_why ? ": " + o.verdict_why : "");
+      vt.setAttribute("aria-label", vt.title);
+      tr.appendChild(vt);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);
+    wrap.appendChild(t);
+    box.appendChild(wrap);
+    box.scrollTop = top;
+    box.scrollLeft = left;
+    tick();
+  }
+
+  function setFeedOpen(B, open) {
+    B.feedOpen = !!open;
+    B.boxEl.classList.toggle("feed-open", B.feedOpen);
+    if (B.feedBtn) B.feedBtn.setAttribute("aria-expanded", String(B.feedOpen));
+    if (B.feedOpen) renderBookFeed(B, true);
+  }
+
   /* -- blocks (one unit per book: tile, fills drop-down, feed box) -- */
 
   function buildBlock(key) {
     var B = {
       key: key, cache: {}, inited: false, drawerOpen: false, planOpen: false, planHas: false, secOpen: null, secHas: {}, secEls: {}, secBtns: {}, fillsOpen: false,
-      planSig: null, drawerSig: null, tileGen: null, tileKey: null, tileNode: null, fillsSig: null, newestKey: null,
+      feedOpen: key === FLEET, qSort: "verdict", queueSig: null, planSig: null, drawerSig: null, tileGen: null, tileKey: null, tileNode: null, fillsSig: null, newestKey: null,
     };
     var root = el("section", "lv-unit");
     root.id = "lv-" + key;
@@ -1088,6 +1215,13 @@
     B.boxEl = box;
     var bar = el("div", "lv-bar");
     bar.appendChild(el("span", "lv-bar-title", key === FLEET ? "Fleet feed" : "Live feed"));
+    if (key !== FLEET) {
+      B.feedBtn = el("button", "lv-btn lv-btn-ghost lv-btn-tiny lv-feed-btn", "Feed");
+      B.feedBtn.type = "button";
+      B.feedBtn.setAttribute("aria-expanded", "false");
+      B.feedBtn.addEventListener("click", function () { setFeedOpen(B, !B.feedOpen); });
+      bar.appendChild(B.feedBtn);
+    }
     B.planBtn = el("button", "lv-btn lv-btn-ghost lv-btn-tiny", "Plan");
     B.planBtn.type = "button";
     B.planBtn.hidden = true;
@@ -1133,6 +1267,10 @@
       if (B.feedEl.scrollHeight - B.feedEl.scrollTop - B.feedEl.clientHeight < 48) B.pillEl.hidden = true;
     });
     body.appendChild(fw);
+    if (key !== FLEET) {
+      B.queueEl = el("div", "lv-queue");
+      body.appendChild(B.queueEl);
+    }
     /* plan text and audit alerts open as panels over the feed, inside the box */
     B.planEl = el("div", "lv-plan");
     B.planEl.hidden = true;
@@ -1149,6 +1287,7 @@
     box.appendChild(body);
 
     if (key !== FLEET) box.appendChild(buildChat(B));
+    if (key === FLEET) box.classList.add("feed-open");
     root.appendChild(box);
     return B;
   }
@@ -1235,6 +1374,7 @@
       markAuditsSeen(B.key);
       renderAuditButton(B);
     }
+    if (B.queueEl) renderQueue(B);
     renderBookFeed(B);
   }
 

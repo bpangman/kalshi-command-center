@@ -2546,3 +2546,33 @@ tr.awaiting-row td {
 body.on-live .fills-toggle {
   display: none;
 }
+
+/* LIVE tab queue view (2026-10-20): where our resting contracts sit in line */
+.lv-box:not(.feed-open) .lv-feedwrap,
+.lv-box:not(.feed-open) .lv-plan,
+.lv-box:not(.feed-open) .lv-bar .lv-btn:not(.lv-feed-btn):not(.lv-audit-btn) { display: none; }
+.lv-box.feed-open .lv-queue { display: none; }
+.lv-feed-btn[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+.lv-queue {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  padding: 6px 8px;
+  min-width: 0;
+}
+.lv-q-head { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: 0.78rem; margin-bottom: 4px; }
+.lv-q-warn { color: var(--amber); font-size: 0.8rem; margin-bottom: 4px; }
+.lv-q-empty { color: var(--muted); padding: 14px 4px; font-size: 0.9rem; }
+.lv-q-scroll { max-width: 100%; overflow-x: auto; }
+.lv-q-table { border-collapse: collapse; width: 100%; font-size: 0.82rem; white-space: nowrap; }
+.lv-q-table th { text-align: left; color: var(--muted); font-weight: 600; padding: 3px 8px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--panel); }
+.lv-q-table td { padding: 3px 8px; border-bottom: 1px solid var(--border); }
+.lv-q-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.lv-q-table th.lv-q-sortable { cursor: pointer; text-decoration: underline dotted; }
+.lv-q-name { max-width: 14ch; overflow: hidden; text-overflow: ellipsis; }
+.lv-q-none { color: var(--muted); }
+.lv-q-verdict { text-align: center; font-weight: 700; cursor: help; }
+.lv-qv-likely { color: var(--green); }
+.lv-qv-maybe { color: var(--amber); }
+.lv-qv-unlikely { color: var(--red); }
+.lv-qv-none { color: var(--muted); }
