@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T01:02:00.686234Z",
+  "generated_at": "2026-10-20T01:03:22.574725Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -99,12 +99,12 @@
         "exposure": 34.36,
         "exposure_text": "+$34",
         "move": "Step price down 1c (6c to 5c)",
-        "when": "if no fill by 8:04pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-20T01:04:03Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-20T00:37:12Z",
-        "lag_note": "Steps to 5c if no fill by 8:04pm CT."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "Austin Cindric",
@@ -112,12 +112,12 @@
         "exposure": 238.36,
         "exposure_text": "+$238",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 8:03pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-20T01:03:01Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-20T01:03:12Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c if no fill by 8:03pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -132,7 +132,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
           "Joey Logano: 576 behind. Price 8c matches the crowd.",
-          "Austin Cindric: 576 behind. Steps to 7c if no fill by 8:03pm CT.",
+          "Austin Cindric: 576 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -213,7 +213,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T01:01:12Z"
+    "ts": "2026-10-20T01:03:12Z"
   },
   "posts": [
     {
@@ -1082,6 +1082,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792458192800-6b0765",
+      "ts": "2026-10-20T01:03:12Z",
+      "book": "TAL-CUP",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 38,345 resting. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -1219,6 +1229,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -760.64 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792458169870-530fc6",
+      "ts": "2026-10-20T01:02:49Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 17 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-AJAL low 1000c, KXNASCARRACE-YEL26-MIMC low 1000c, KXNASCARRACE-YEL26-AUDI low 1000c, KXNASCARRACE-YEL26-SHVA low 1000c, KXNASCARRACE-YEL26-ROCH low 1000c, KXNASCARRACE-YEL26-ALBO low 1000c, KXNASCARRACE-YEL26-CHEL low 839c, KXNASCARRACE-YEL26-ERJO low 1000c, KXNASCARRACE-YEL26-RYPR low 860c, KXNASCARRACE-YEL26-JONE low 1000c, KXNASCARRACE-YEL26-COCU low 1000c, KXNASCARRACE-YEL26-DASU low 1000c, KXNASCARRACE-YEL26-WIBY low 613c, KXNASCARRACE-YEL26-NOGR low 1000c, KXNASCARRACE-YEL26-RIHE low 1000c, KXNASCARRACE-YEL26-ZASM low 1000c, KXNASCARRACE-YEL26-COZI low 1000c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
