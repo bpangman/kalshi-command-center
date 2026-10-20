@@ -1,6 +1,6 @@
 {
   "key": "W7-WASSF",
-  "generated_at": "2026-10-20T02:09:55.476997Z",
+  "generated_at": "2026-10-20T02:11:17.854922Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,310, 1,462 resting. Worst line -$53. Game 63% done."
+          "In game (Ingame). Sold 7,310, 1,656 resting. Worst line -$53. Game 65% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "SF by 1-6",
         "held": 1303.4,
-        "resting": 88.5,
+        "resting": 194.5,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "WAS by 7-14",
         "held": 852.0,
-        "resting": 648.0,
+        "resting": 690.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "WAS by 15+",
         "held": 902.9,
-        "resting": 594.0,
+        "resting": 640.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W7-WASSF",
-    "ts": "2026-10-20T02:09:02Z"
+    "ts": "2026-10-20T02:11:03Z"
   },
   "posts": [
-    {
-      "id": "1792380137232-e173b8",
-      "ts": "2026-10-19T03:22:17Z",
-      "book": "W7-WASSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,115 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792381043683-2ecbd4",
       "ts": "2026-10-19T03:37:23Z",
@@ -4400,27 +4390,19 @@
       "text": "Quiet for 15 min. 1,497 resting.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792462263053-32540f",
+      "ts": "2026-10-20T02:10:59Z",
+      "book": "W7-WASSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite SF 15+ at 0.66); likely ['SF 15+', 'SF 7-14']; endgame: KXNFLWINMARGIN-26OCT19WASSF-",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792397634774-4392b2",
-      "ts": "2026-10-19T08:13:54Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): worst -344.71 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792398180514-97cee8",
-      "ts": "2026-10-19T08:23:00Z",
-      "book": "W7-WASSF",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W7-WASSF): held worst -344.71 (backstop -300) or lagging gap 868 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792399452576-0f5a36",
       "ts": "2026-10-19T08:44:12Z",
@@ -5301,6 +5283,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W7-WASSF): inactive, cause=price_above_crowd, remedy=join_crowd_ask, posts_last_10m=64, market_volume_last_30m=27666. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792462236573-d3d9ab",
+      "ts": "2026-10-20T02:10:36Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792462259274-8b251c",
+      "ts": "2026-10-20T02:10:59Z",
+      "book": "W7-WASSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Endgame mode on: SF 15+ at 0.66; likely outcomes: SF 15+, SF 7-14; action: none",
       "severity": "warn"
     }
   ]
