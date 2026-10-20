@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-20T22:08:51.364031Z",
+  "generated_at": "2026-10-20T22:12:51.806099Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -71,22 +71,22 @@
       },
       {
         "side": "NE by 7-14",
-        "resting": "608 @ 16-19c",
+        "resting": "533 @ 15-19c",
         "exposure": 237.11,
         "exposure_text": "+$237",
-        "move": "Step price down 1c (16c to 15c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T22:09:20Z",
+        "move": "Hold price at 15c",
+        "when": "crowd pays 15c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
-        "lag_note": "Steps to 15c at the next check."
+        "lag_note": "Price 15c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 873, 4,070 resting. Worst line -$596 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 873, 3,995 resting. Worst line -$596 (goal -$150)."
         ]
       },
       {
@@ -175,10 +175,10 @@
       {
         "label": "NE by 7-14",
         "held": 0.0,
-        "resting": 608.0,
+        "resting": 533.0,
         "target": null,
         "status": "lagging",
-        "price": 0.16
+        "price": 0.15
       },
       {
         "label": "NE by 15+",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-20T22:08:15Z"
+    "ts": "2026-10-20T22:12:17Z"
   },
   "posts": [
     {
@@ -1534,6 +1534,21 @@
       "data": {
         "contracts": 75.0,
         "rows": 1
+      }
+    },
+    {
+      "id": "1792534256607-18cd34",
+      "ts": "2026-10-20T22:10:52Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on NE by 7-14: no fill for 10 min, added 300 at 15c (was 16c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "NE by 7-14",
+        "from": 0.16,
+        "to": 0.15
       }
     }
   ],
