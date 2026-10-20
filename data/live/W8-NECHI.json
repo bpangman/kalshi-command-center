@@ -1,10 +1,10 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-20T22:33:47.905575Z",
+  "generated_at": "2026-10-20T22:36:10.769655Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$506, goal -$150.",
+    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$472, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,10 +12,10 @@
       {
         "side": "CHI by 1-6",
         "resting": "67 @ 29c",
-        "exposure": -506.24,
-        "exposure_text": "-$506",
+        "exposure": -472.49,
+        "exposure_text": "-$472",
         "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$300 (now -$506)",
+        "when": "holding until worst loss is back above -$300 (now -$472)",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-20T21:47:54Z"
@@ -23,8 +23,8 @@
       {
         "side": "CHI by 7-14",
         "resting": "452 @ 22-24c",
-        "exposure": -120.96,
-        "exposure_text": "-$121",
+        "exposure": -87.21,
+        "exposure_text": "-$87",
         "move": "Hold price at 22c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -34,10 +34,23 @@
         "lag_note": "No crowd trade data yet."
       },
       {
+        "side": "NE by 7-14",
+        "resting": "383 @ 15-19c",
+        "exposure": 135.62,
+        "exposure_text": "+$136",
+        "move": "Hold price at 15c",
+        "when": "crowd pays 15c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Thu 6:30pm CT",
+        "last_fill": "2026-10-20T22:33:36Z",
+        "lag_note": "Price 15c matches the crowd."
+      },
+      {
         "side": "CHI by 15+",
         "resting": "825 @ 20-27c",
-        "exposure": 326.87,
-        "exposure_text": "+$327",
+        "exposure": 360.62,
+        "exposure_text": "+$361",
         "move": "Hold price at 20c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -48,8 +61,8 @@
       {
         "side": "NE by 1-6",
         "resting": "900 @ 22-24c",
-        "exposure": 326.87,
-        "exposure_text": "+$327",
+        "exposure": 360.62,
+        "exposure_text": "+$361",
         "move": "Hold price at 22c",
         "when": "needs 50+ crowd trades under 22c (now 6)",
         "at": null,
@@ -60,33 +73,21 @@
       {
         "side": "NE by 15+",
         "resting": "810 @ 12-19c",
-        "exposure": 326.87,
-        "exposure_text": "+$327",
+        "exposure": 360.62,
+        "exposure_text": "+$361",
         "move": "Hold price at 12c",
         "when": "crowd pays 12c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
         "lag_note": "Price 12c matches the crowd."
-      },
-      {
-        "side": "NE by 7-14",
-        "resting": "533 @ 15-19c",
-        "exposure": 326.87,
-        "exposure_text": "+$327",
-        "move": "Hold price at 15c",
-        "when": "crowd pays 15c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts Thu 6:30pm CT",
-        "lag_note": "Price 15c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,281, 3,587 resting. Worst line -$506 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,506, 3,362 resting. Worst line -$472 (goal -$150)."
         ]
       },
       {
@@ -102,14 +103,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$506).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$472).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: CHI by 1-6 stopped adding until worst line is above -$300 (now -$506).",
+          "Backstop ON: CHI by 1-6 stopped adding until worst line is above -$300 (now -$472).",
           "Paid balancing starts Thu 6:30pm CT: worst line to -$150 by Thu 7:05pm CT, up to $100.",
           "At Thu 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Thu 7:15pm CT: the in-game engine takes over."
@@ -174,11 +175,11 @@
       },
       {
         "label": "NE by 7-14",
-        "held": 0.0,
-        "resting": 533.0,
+        "held": 225.0,
+        "resting": 308.0,
         "target": null,
         "status": "lagging",
-        "price": 0.15
+        "price": 0.16
       },
       {
         "label": "NE by 15+",
@@ -190,7 +191,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-20T22:33:26Z"
+    "ts": "2026-10-20T22:35:27Z"
   },
   "posts": [
     {
@@ -1570,6 +1571,46 @@
       "text": "Fast fill on lagging CHI by 7-14: 408 of 550 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792535647087-4c3afa",
+      "ts": "2026-10-20T22:31:56Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 408: CHI by 7-14 x408 at 22c. Worst line -$472.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 408.0,
+        "fills": [
+          {
+            "side": "CHI by 7-14",
+            "price": 0.22,
+            "qty": 408.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792535768122-76a90c",
+      "ts": "2026-10-20T22:34:01Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 225: NE by 7-14 x225 at 15c. Worst line -$472.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 225.0,
+        "fills": [
+          {
+            "side": "NE by 7-14",
+            "price": 0.15,
+            "qty": 225.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
