@@ -1,12 +1,12 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-20T21:26:21.297037Z",
+  "generated_at": "2026-10-20T21:30:04.752432Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line $0, final target $0.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [
       {
@@ -94,7 +94,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 26,709 resting. Worst line $0."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 26,709 resting. Worst line $0. Live feed is down; the bot is polling, so numbers may lag."
         ]
       },
       {
@@ -213,7 +213,7 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-20T21:26:20Z"
+    "ts": "2026-10-20T21:29:21Z"
   },
   "posts": [
     {
@@ -2353,6 +2353,50 @@
         "contracts": 980.0,
         "rows": 10
       }
+    },
+    {
+      "id": "1792531640398-65855a",
+      "ts": "2026-10-20T21:27:19Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Idle step on Kris Wright: no fill for 1398 min, lowest row 4c to 3c.",
+      "severity": "info",
+      "title": "Price step"
+    },
+    {
+      "id": "1792531700782-99c8dd",
+      "ts": "2026-10-20T21:28:05Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792531761294-715ce7",
+      "ts": "2026-10-20T21:29:21Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line $0, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792531801575-8ef51b",
+      "ts": "2026-10-20T21:27:50Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 600 (launch ladder): Kris Wright x600 at 2c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 600.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -2822,6 +2866,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: TAL-TRUCK - whole book is posting again.\nBack: TAL-TRUCK - Brenden Queen is posting again.\nBack: TAL-TRUCK - Christian Eckes is posting again.\nBack: TAL-TRUCK - Chandler Smith is posting again.\nBack: TAL-TRUCK - Corey Heim is posting again.\nBack: TAL-TRUCK - Corey LaJoie is posting again.\nBack: TAL-TRUCK - Giovanni Ruggiero is posting again.\nBack: TAL-TRUCK - Grant Enfinger is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792531743444-fd0b86",
+      "ts": "2026-10-20T21:29:03Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
