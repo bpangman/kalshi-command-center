@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-20T00:33:10.615596Z",
+  "generated_at": "2026-10-20T00:34:30.414159Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$901, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Ricky Stenhouse Jr.",
@@ -87,12 +87,12 @@
         "exposure": 97.81,
         "exposure_text": "+$98",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-20T00:33:00Z",
+        "when": "if no fill by 7:38pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-20T00:38:12Z",
         "stuck": false,
         "also": "Also: even-up Sun 12:00pm CT",
         "last_fill": "2026-10-19T21:11:37Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 7:38pm CT."
       },
       {
         "side": "Brad Keselowski",
@@ -111,7 +111,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 2,396, 40,233 resting. Worst line -$901 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 2,396, 40,233 resting. Worst line -$901 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -119,7 +119,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano.",
           "Brad Keselowski: 28 behind. No crowd trade data yet.",
-          "Joey Logano: 27 behind. Steps to 7c at the next check.",
+          "Joey Logano: 27 behind. Steps to 7c if no fill by 7:38pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -200,7 +200,7 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-20T00:33:00Z"
+    "ts": "2026-10-20T00:34:00Z"
   },
   "posts": [
     {
@@ -826,6 +826,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792456440563-0ca12f",
+      "ts": "2026-10-20T00:34:00Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$901, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
