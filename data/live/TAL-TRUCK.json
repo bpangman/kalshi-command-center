@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T18:32:15.963962Z",
+  "generated_at": "2026-10-21T18:34:39.052418Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$450, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 52,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Giovanni Ruggiero",
@@ -100,12 +100,12 @@
         "resting": "935 @ 18c",
         "exposure": 137.47,
         "exposure_text": "+$137",
-        "move": "Hold price at 18c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "move": "Step price down 1c (18c to 17c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-21T18:34:37Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Steps to 17c at the next check."
       },
       {
         "side": "Grant Enfinger",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 1,983, 40,020 resting. Worst line -$450 (limit now -$250). Bot is slow (checks every 52s, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 1,983, 40,020 resting. Worst line -$450 (limit now -$250)."
         ]
       },
       {
@@ -246,19 +246,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T18:31:36Z"
+    "ts": "2026-10-21T18:34:37Z"
   },
   "posts": [
-    {
-      "id": "1792497008574-1da189",
-      "ts": "2026-10-20T11:50:00Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
     {
       "id": "1792497915680-634b1c",
       "ts": "2026-10-20T12:05:15Z",
@@ -3440,6 +3430,16 @@
     {
       "id": "1792607435888-75d48b",
       "ts": "2026-10-21T18:30:35Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$450, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792607617373-8ba2db",
+      "ts": "2026-10-21T18:33:37Z",
       "book": "TAL-TRUCK",
       "kind": "plan",
       "source": "narrator",
