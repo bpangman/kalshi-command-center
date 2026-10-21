@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T21:20:05.769579Z",
+  "generated_at": "2026-10-21T21:29:47.800824Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 67,
+    "checks_every_s": 78,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, ? resting. Worst line unknown. Bot heartbeat is 8m old: it may be down."
         ]
       },
       {
@@ -239,28 +239,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 24 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T21:19:56Z"
+    "ts": "2026-10-21T21:29:44Z"
   },
   "posts": [
-    {
-      "id": "1792516531860-fd936d",
-      "ts": "2026-10-20T17:15:31Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Risk glide starts, Fri 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792516618549-d0360a",
-      "ts": "2026-10-20T17:16:58Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nNorm Benning: +0\nTony Stewart: +0\nClay Greenfield: +0\nGrant Enfinger: +0\nTimmy Hill: +0\nCorey LaJoie: +0\nJosh Reaume: +0\nDaniel Hemric: +0\nall others (30) >= +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nCore posted book 0.00 | Worst now +0 | Cash free $4128\nAnchor age 149s (source: kalshi)",
-      "severity": "info"
-    },
     {
       "id": "1792517438443-e07a7d",
       "ts": "2026-10-20T17:30:38Z",
@@ -3507,18 +3488,29 @@
       "text": "Quiet for 15 min. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792617963896-7dd91e",
+      "ts": "2026-10-21T21:26:03Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792618164770-42994d",
+      "ts": "2026-10-21T21:29:24Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 8m old (normal is under 8m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
     }
   ],
   "audits": [
-    {
-      "id": "1792544975589-d25fe1",
-      "ts": "2026-10-21T01:09:35Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): 5 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TYMA high 704c, KXNASCARRACE-LOVRS26-CHEC high 707c, KXNASCARRACE-LOVRS26-BRQU low 465c, KXNASCARRACE-LOVRS26-THAN low 465c, KXNASCARRACE-LOVRS26-CLMC low 697c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792546414669-417b37",
       "ts": "2026-10-21T01:33:34Z",
@@ -4409,6 +4401,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -707.00 vs floor -385.61. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792617648630-aad049",
+      "ts": "2026-10-21T21:20:48Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
