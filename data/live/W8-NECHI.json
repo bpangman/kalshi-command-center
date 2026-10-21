@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-21T00:30:57.076560Z",
+  "generated_at": "2026-10-21T00:33:19.624472Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -35,16 +35,16 @@
       },
       {
         "side": "NE by 7-14",
-        "resting": "308 @ 16-19c",
+        "resting": "308 @ 15-16c",
         "exposure": 71.87,
         "exposure_text": "+$72",
-        "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 7:32pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-21T00:32:59Z",
+        "move": "Hold price at 15c",
+        "when": "crowd pays 15c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
         "last_fill": "2026-10-21T00:22:59Z",
-        "lag_note": "Steps to 15c if no fill by 7:32pm CT."
+        "lag_note": "Price 15c matches the crowd."
       },
       {
         "side": "CHI by 15+",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-21T00:30:18Z"
+    "ts": "2026-10-21T00:33:19Z"
   },
   "posts": [
     {
@@ -1742,6 +1742,21 @@
             "qty": 75.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792542799521-bfae68",
+      "ts": "2026-10-21T00:33:02Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on NE by 7-14: no fill for 10 min, added 300 at 15c (was 16c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "NE by 7-14",
+        "from": 0.16,
+        "to": 0.15
       }
     }
   ],
