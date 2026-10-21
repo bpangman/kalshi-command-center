@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-21T08:34:21.774149Z",
+  "generated_at": "2026-10-21T08:36:44.975707Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -52.03,
         "exposure_text": "-$52",
         "move": "Step price down 1c (22c to 21c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T08:34:10Z",
+        "when": "if no fill by 3:44am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-21T08:44:50Z",
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
         "last_fill": "2026-10-20T22:31:34Z",
-        "lag_note": "Steps to 21c at the next check."
+        "lag_note": "Steps to 21c if no fill by 3:44am CT."
       },
       {
         "side": "NE by 7-14",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-21T08:33:48Z"
+    "ts": "2026-10-21T08:35:49Z"
   },
   "posts": [
     {
@@ -2358,6 +2358,21 @@
       "kind": "update",
       "source": "narrator",
       "text": "Price step on CHI by 7-14: no fill for 593 min, added 300 at 21c (was 22c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "CHI by 7-14",
+        "from": 0.22,
+        "to": 0.21
+      }
+    },
+    {
+      "id": "1792571709313-17c9a8",
+      "ts": "2026-10-21T08:34:53Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on CHI by 7-14: no fill for 603 min, added 300 at 21c (was 22c).",
       "severity": "info",
       "title": "Price step",
       "data": {
