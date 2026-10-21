@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T21:37:47.464872Z",
+  "generated_at": "2026-10-21T21:40:14.797816Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$530, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 94,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -114,7 +114,7 @@
         "exposure_text": "+$177",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T21:36:47Z",
+        "at": "2026-10-21T21:39:48Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 17c at the next check."
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 2,732, 39,271 resting. Worst line -$530 (limit now -$250). Bot is slow (checks every 2m, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 2,732, 39,271 resting. Worst line -$530 (limit now -$250)."
         ]
       },
       {
@@ -246,29 +246,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T21:36:47Z"
+    "ts": "2026-10-21T21:39:48Z"
   },
   "posts": [
-    {
-      "id": "1792523924918-af7bbd",
-      "ts": "2026-10-20T19:18:44Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Risk glide starts, Fri 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792524831587-d2f3c0",
-      "ts": "2026-10-20T19:33:51Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Risk glide starts, Fri 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792525737839-2a9fd1",
       "ts": "2026-10-20T19:48:57Z",
@@ -3516,27 +3496,39 @@
       "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$530, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792618667828-785958",
+      "ts": "2026-10-21T21:35:42Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 34: Layne Riggs x34 at 10c. Worst line -$530.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 34.0,
+        "fills": [
+          {
+            "side": "Layne Riggs",
+            "price": 0.1,
+            "qty": 34.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792618728297-63592d",
+      "ts": "2026-10-21T21:38:48Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$530, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792548215986-cb6eb7",
-      "ts": "2026-10-21T02:03:35Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -255.37 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792548458247-a309ee",
-      "ts": "2026-10-21T02:07:38Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+116 on Giovanni Ruggiero @ 0.07 (maker)\nworst outcome now -255\nIf the race ends... you make\nLayne Riggs: -255\nBrenden Queen: -163\nThomas Annunziata: -163\nGiovanni Ruggiero: -109\nChandler Smith: -36\nJustin Haley: +39\nJake Garcia: +48\nBen Rhodes: +59\nall others (30) >= +70",
-      "severity": "warn"
-    },
     {
       "id": "1792548560197-f8cb6b",
       "ts": "2026-10-21T02:09:20Z",
@@ -4418,6 +4410,24 @@
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
+    },
+    {
+      "id": "1792618766947-99a60a",
+      "ts": "2026-10-21T21:39:26Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): 3 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TOST low 1131c, KXNASCARRACE-LOVRS26-DAHE low 1181c, KXNASCARRACE-LOVRS26-TAGR low 696c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792618766948-81c34c",
+      "ts": "2026-10-21T21:39:26Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -530.24 vs floor -165.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
