@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T23:32:05.033246Z",
+  "generated_at": "2026-10-21T23:38:27.043752Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": -182.94,
         "exposure_text": "-$183",
         "move": "Hold price at 10c",
-        "when": "crowd pays 10c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: glide starts Fri 11:00am CT; even-up Fri 2:00pm CT",
         "last_fill": "2026-10-21T21:34:56Z",
-        "lag_note": "Price 10c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Brenden Queen",
@@ -112,12 +112,12 @@
         "resting": "935 @ 18c",
         "exposure": 176.91,
         "exposure_text": "+$177",
-        "move": "Step price down 1c (18c to 17c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T23:31:31Z",
+        "move": "Hold price at 18c",
+        "when": "needs 50+ crowd trades under 18c (now 21)",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
-        "lag_note": "Steps to 17c at the next check."
+        "lag_note": "Crowd is quiet here (21 traded)."
       }
     ],
     "sections": [
@@ -246,19 +246,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T23:31:31Z"
+    "ts": "2026-10-21T23:37:34Z"
   },
   "posts": [
-    {
-      "id": "1792531097715-e612b6",
-      "ts": "2026-10-20T21:18:05Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: interim -> sportsbook: Kaden Honeycutt contender allotment 1150, ladder 0.08/0.09/0.10 at sportsbook fair 0.08",
-      "severity": "info",
-      "title": "Pricing source"
-    },
     {
       "id": "1792531097715-7bf3d0",
       "ts": "2026-10-20T21:18:05Z",
@@ -3536,18 +3526,18 @@
       "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$530, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792625809159-7cb368",
+      "ts": "2026-10-21T23:36:49Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nKaden Honeycutt: -530\nGiovanni Ruggiero: -417\nTanner Gray: -257\nLayne Riggs: -183\nBrenden Queen: -56\nThomas Annunziata: -56\nChandler Smith: +70\nJustin Haley: +146\nall others (30) >= +154\nCollected $180 premium ($3 fees) | Paper margin over fair $28 (not realized until settlement)\nCore posted book 1.31 | Worst now -530 | Cash free $2626\nAnchor age 96s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792553998173-ebb921",
-      "ts": "2026-10-21T03:39:58Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -254.61 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792554341988-d1b244",
       "ts": "2026-10-21T03:45:41Z",
@@ -4438,6 +4428,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -530.09 vs floor -165.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792625549340-75b34d",
+      "ts": "2026-10-21T23:32:29Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+4 on Sammy Smith @ 0.04 (maker)\nworst outcome now -530\nIf the race ends... you make\nKaden Honeycutt: -530\nGiovanni Ruggiero: -417\nTanner Gray: -257\nLayne Riggs: -183\nBrenden Queen: -56\nThomas Annunziata: -56\nChandler Smith: +70\nJustin Haley: +146\nall others (30) >= +154",
+      "severity": "warn"
     }
   ]
 }
