@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-21T15:43:13.402763Z",
+  "generated_at": "2026-10-21T15:45:40.269074Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -64,11 +64,11 @@
         "exposure": 401.03,
         "exposure_text": "+$401",
         "move": "Step price down 1c (22c to 21c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T15:43:41Z",
+        "when": "if no fill by 10:54am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-21T15:54:08Z",
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
-        "lag_note": "Steps to 21c at the next check."
+        "lag_note": "Steps to 21c if no fill by 10:54am CT."
       },
       {
         "side": "NE by 15+",
@@ -95,7 +95,7 @@
         "lines": [
           "Lagging (150+ behind the leader): CHI by 7-14, CHI by 15+, NE by 1-6, NE by 7-14, NE by 15+.",
           "CHI by 15+: 900 behind. No crowd trade data yet.",
-          "NE by 1-6: 900 behind. Steps to 21c at the next check.",
+          "NE by 1-6: 900 behind. Steps to 21c if no fill by 10:54am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-21T15:42:56Z"
+    "ts": "2026-10-21T15:44:57Z"
   },
   "posts": [
     {
@@ -3038,6 +3038,21 @@
         "from": 0.22,
         "to": 0.21
       }
+    },
+    {
+      "id": "1792597456858-985757",
+      "ts": "2026-10-21T15:44:11Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "NE by 1-6",
+        "from": 0.22,
+        "to": 0.21
+      }
     }
   ],
   "audits": [
@@ -3530,6 +3545,15 @@
     {
       "id": "1792595703775-a101c6",
       "ts": "2026-10-21T15:15:03Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-NECHI): worst -498.97 vs floor -325.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792597523633-8a26c0",
+      "ts": "2026-10-21T15:45:23Z",
       "book": "W8-NECHI",
       "kind": "audit",
       "source": "auditor",
