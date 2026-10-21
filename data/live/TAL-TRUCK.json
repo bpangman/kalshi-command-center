@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T17:53:41.761177Z",
+  "generated_at": "2026-10-21T17:56:04.803952Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$316, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 49,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -90,7 +90,7 @@
         "exposure_text": "+$116",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T17:53:18Z",
+        "at": "2026-10-21T17:55:18Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -102,7 +102,7 @@
         "exposure_text": "+$116",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T17:53:18Z",
+        "at": "2026-10-21T17:55:18Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 17c at the next check."
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 1,627, 38,935 resting. Worst line -$316 (limit now -$250). Bot is slow (checks every 49s, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 1,627, 38,935 resting. Worst line -$316 (limit now -$250)."
         ]
       },
       {
@@ -246,19 +246,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T17:53:18Z"
+    "ts": "2026-10-21T17:55:18Z"
   },
   "posts": [
-    {
-      "id": "1792489613143-a0fd41",
-      "ts": "2026-10-20T09:46:38Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
     {
       "id": "1792490056487-eb519b",
       "ts": "2026-10-20T09:54:16Z",
@@ -3427,18 +3417,19 @@
         "contracts": 686.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792605258542-a7c5cc",
+      "ts": "2026-10-21T17:54:18Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$316, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792525530415-076b84",
-      "ts": "2026-10-20T19:45:30Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 29 unexplained\n- TAL-TRUCK - Andres Perez de Lara has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Austin Green has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Ben Rhodes has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Brenden Queen has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Christian Eckes has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Chandler Smith has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Cole Butcher has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- TAL-TRUCK - Corey Heim has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- plus 21 more (fleet/state/empty_side_sentinel.json)",
-      "severity": "warn"
-    },
     {
       "id": "1792525833310-926f0b",
       "ts": "2026-10-20T19:50:33Z",
@@ -4328,6 +4319,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792605232845-fd285b",
+      "ts": "2026-10-21T17:53:52Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+292 on Kaden Honeycutt @ 0.10 (maker)\nworst outcome now -316\nIf the race ends... you make\nKaden Honeycutt: -316\nLayne Riggs: -209\nBrenden Queen: -117\nThomas Annunziata: -117\nGiovanni Ruggiero: -114\nChandler Smith: +10\nJustin Haley: +85\nJake Garcia: +94\nall others (30) >= +105",
       "severity": "warn"
     }
   ]
