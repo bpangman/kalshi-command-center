@@ -1107,13 +1107,65 @@
     return out;
   }
 
+  var VERDICT_PILL = { likely: "Likely to sell", maybe: "Might sell", unlikely: "Not selling at this price", none: "Nothing posted" };
+
+  function cents(p) {
+    if (p === null || p === undefined || isNaN(Number(p))) return "none";
+    var c = Number(p) * 100;
+    var r = Math.round(c);
+    return (Math.abs(c - r) > 0.05 ? c.toFixed(1) : String(r)) + "¢";
+  }
+
+  function plural(n, w) { return fmtNum(n) + " " + w + (Number(n) === 1 ? "" : "s"); }
+
+  function qRow(label, value) {
+    var r = el("div", "lv-qc-row");
+    r.appendChild(el("span", "lv-qc-label", label));
+    r.appendChild(el("span", "lv-qc-value", value));
+    return r;
+  }
+
+  function buildOutcomeCard(o, readOk, compact) {
+    var v = o.verdict || "none";
+    var card = el("div", "lv-qc lv-q-" + v + (compact ? " lv-qc-compact" : ""));
+    var hd = el("div", "lv-qc-head");
+    hd.appendChild(el("span", "lv-qc-name", o.label));
+    hd.appendChild(el("span", "lv-qc-pill lv-qp-" + v, VERDICT_PILL[v] || v));
+    card.appendChild(hd);
+    if (compact) return card;
+    var hasAsk = o.our_ask !== null && o.our_ask !== undefined;
+    var ours = "none posted";
+    if (hasAsk) {
+      ours = cents(o.our_ask) + " for " + plural(o.our_size_at_ask || 0, "contract");
+      if (o.our_resting_total > o.our_size_at_ask) ours += " (+" + fmtNum(o.our_resting_total - o.our_size_at_ask) + " more at higher prices)";
+    }
+    card.appendChild(qRow("Our price", ours));
+    var ahead = "-";
+    if (v !== "none" && readOk !== false && o.ahead !== null && o.ahead !== undefined) {
+      ahead = Number(o.ahead) === 0 ? "0 contracts (we're first)" : plural(o.ahead, "contract");
+    }
+    card.appendChild(qRow("Ahead of us in line", ahead));
+    card.appendChild(qRow("Crowd's prices", "buyers will pay " + cents(o.crowd_bid) + " · cheapest other seller " + cents(o.crowd_ask) + " · last sale " + cents(o.last_price)));
+    var act;
+    if (o.traded_24h === null || o.traded_24h === undefined) act = "not available";
+    else if (!o.traded_24h) act = "nothing in the last 24h";
+    else {
+      act = plural(o.traded_24h, "contract") + " in the last 24h" + (o.traded_24h_avg ? " (avg " + cents(o.traded_24h_avg) + ")" : "");
+      if (o.traded_1h) act += " · " + fmtNum(o.traded_1h) + " in the last hour";
+    }
+    card.appendChild(qRow("Buying activity", act));
+    card.appendChild(qRow("Already sold", o.held ? fmtNum(o.held) + (o.avg_sale_price ? " at " + cents(o.avg_sale_price) + " avg" : "") : "none yet"));
+    if (v !== "none" && o.verdict_why) card.appendChild(el("div", "lv-qc-why", o.verdict_why));
+    return card;
+  }
+
   function renderQueue(B) {
     var q = L.qFiles[B.key];
     var box = B.queueEl;
-    var sig = q ? (q.ts + "|" + B.qSort) : "none|" + B.qSort;
+    var sig = (q ? q.ts : "none") + "|" + B.qSort + "|" + (B.qNoneOpen ? 1 : 0) + "|" + (B.qHelpOpen ? 1 : 0);
     if (sig === B.queueSig) return;
     B.queueSig = sig;
-    var top = box.scrollTop, left = box.scrollLeft;
+    var top = box.scrollTop;
     box.innerHTML = "";
     if (!q) {
       box.appendChild(el("div", "lv-q-empty", "Queue numbers have not arrived for this book yet."));
@@ -1129,46 +1181,61 @@
     var src = q.trades_src === "rest" ? "Trades: last 24h tape" : "Trades: not available";
     head.appendChild(el("span", "lv-q-src", src));
     box.appendChild(head);
+    box.appendChild(el("div", "lv-q-explain", "We're selling a contract on every outcome. Each card shows our price, our place in line, and whether buyers are likely to take it."));
+
+    var help = el("details", "lv-q-help");
+    help.open = !!B.qHelpOpen;
+    help.appendChild(el("summary", null, "How to read this"));
+    var ul = el("ul");
+    [
+      ["Our price: ", "what we're asking for one contract on this outcome, and how many we're offering."],
+      ["Ahead of us in line: ", "contracts at our price that were posted before ours. Cheaper offers sell first; at equal prices, earlier ones go first."],
+      ["Crowd's prices: ", "what buyers will pay right now, and the cheapest price any other seller is asking."],
+      ["Buying activity: ", "how many contracts people actually bought recently."],
+      ["Status colours: ", "green means likely to sell, yellow means might sell, red means not selling at this price, grey means we have nothing posted."]
+    ].forEach(function (p) {
+      var li = el("li");
+      li.appendChild(el("strong", null, p[0]));
+      li.appendChild(document.createTextNode(p[1]));
+      ul.appendChild(li);
+    });
+    help.appendChild(ul);
+    help.addEventListener("toggle", function () { B.qHelpOpen = help.open; });
+    box.appendChild(help);
+
     if (q.queue_read_ok === false) {
-      box.appendChild(el("div", "lv-q-warn", "Line position could not be read this pass, so Ahead shows a dash."));
+      box.appendChild(el("div", "lv-q-warn", "Line position could not be read this pass, so place in line shows a dash."));
     }
-    var wrap = el("div", "lv-q-scroll");
-    var t = el("table", "lv-q-table");
-    var thead = el("thead");
-    var hr = el("tr");
-    [["Outcome", null], ["Ours", null], ["Ahead", "ahead"], ["Crowd bid / ask", null], ["Last", null], ["1h", null], ["24h", null], ["Held", null], ["Fill?", "verdict"]].forEach(function (h) {
-      var th = el("th", null, h[0] + (h[1] && B.qSort === h[1] ? " ▾" : ""));
-      if (h[1]) {
-        th.className = "lv-q-sortable";
-        th.title = "Sort by " + h[0];
-        th.addEventListener("click", function () { B.qSort = h[1]; renderQueue(B); });
+
+    var sorter = el("div", "lv-q-sort");
+    [["verdict", "By likelihood"], ["ahead", "By place in line"]].forEach(function (m) {
+      var b = el("button", "lv-btn lv-btn-ghost lv-btn-tiny" + (B.qSort === m[0] ? " active" : ""), m[1]);
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(B.qSort === m[0]));
+      b.addEventListener("click", function () { B.qSort = m[0]; renderQueue(B); });
+      sorter.appendChild(b);
+    });
+    box.appendChild(sorter);
+
+    var rows = sortQueueRows(q.outcomes || [], B.qSort);
+    var active = rows.filter(function (o) { return o.verdict !== "none"; });
+    var none = rows.filter(function (o) { return o.verdict === "none"; });
+    var list = el("div", "lv-qc-list");
+    active.forEach(function (o) { list.appendChild(buildOutcomeCard(o, q.queue_read_ok, false)); });
+    box.appendChild(list);
+    if (none.length) {
+      var tg = el("button", "lv-qc-nonebtn", "Nothing posted on " + none.length + " outcome" + (none.length === 1 ? "" : "s") + (B.qNoneOpen ? " (hide)" : " (show)"));
+      tg.type = "button";
+      tg.setAttribute("aria-expanded", String(!!B.qNoneOpen));
+      tg.addEventListener("click", function () { B.qNoneOpen = !B.qNoneOpen; renderQueue(B); });
+      box.appendChild(tg);
+      if (B.qNoneOpen) {
+        var nl = el("div", "lv-qc-list");
+        none.forEach(function (o) { nl.appendChild(buildOutcomeCard(o, q.queue_read_ok, true)); });
+        box.appendChild(nl);
       }
-      hr.appendChild(th);
-    });
-    thead.appendChild(hr);
-    t.appendChild(thead);
-    var tb = el("tbody");
-    sortQueueRows(q.outcomes || [], B.qSort).forEach(function (o) {
-      var tr = el("tr", "lv-q-row lv-q-" + o.verdict);
-      tr.appendChild(el("td", "lv-q-name", o.label));
-      tr.appendChild(el("td", "num", o.our_ask === null || o.our_ask === undefined ? "-" : fmtPx(o.our_ask) + " x " + fmtNum(o.our_size_at_ask) + (o.our_resting_total > o.our_size_at_ask ? " (+" + fmtNum(o.our_resting_total - o.our_size_at_ask) + ")" : "")));
-      tr.appendChild(el("td", "num", o.verdict === "none" ? "-" : fmtNum(o.ahead)));
-      tr.appendChild(el("td", "num", fmtPx(o.crowd_bid) + " / " + fmtPx(o.crowd_ask)));
-      tr.appendChild(el("td", "num", fmtPx(o.last_price)));
-      tr.appendChild(el("td", "num", o.verdict === "none" ? "-" : fmtTraded(o.traded_1h, o.traded_1h_avg)));
-      tr.appendChild(el("td", "num", o.verdict === "none" ? "-" : fmtTraded(o.traded_24h, o.traded_24h_avg)));
-      tr.appendChild(el("td", "num", o.held ? fmtNum(o.held) + (o.avg_sale_price ? " @ " + fmtPx(o.avg_sale_price) : "") : "-"));
-      var vt = el("td", "lv-q-verdict lv-qv-" + o.verdict, VERDICT_MARK[o.verdict] || "-");
-      vt.title = (VERDICT_WORD[o.verdict] || "") + (o.verdict_why ? ": " + o.verdict_why : "");
-      vt.setAttribute("aria-label", vt.title);
-      tr.appendChild(vt);
-      tb.appendChild(tr);
-    });
-    t.appendChild(tb);
-    wrap.appendChild(t);
-    box.appendChild(wrap);
+    }
     box.scrollTop = top;
-    box.scrollLeft = left;
     tick();
   }
 

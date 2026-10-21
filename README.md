@@ -25,7 +25,7 @@ https://bpangman.github.io/kalshi-command-center/
    allocated to it, a full table of every outcome (how many contracts we are
    holding, how many more are resting in the order book, the current price,
    and what we would make or lose if that exact outcome happened right
-   now), and the most recent fills. 2026-09-28: a green banner ("Floor
+   now), and the most recent fills. The Feed button swaps to a queue view (2026-10-20): a vertical stack of plain-English cards, one per outcome, each showing our price, how many contracts are ahead of us in line, what the crowd is paying and asking, recent buying activity, how many we already sold, and a colored status (likely to sell, might sell, not selling at this price, nothing posted). Outcomes with nothing posted are folded into one collapsed line. 2026-09-28: a green banner ("Floor
    mode: guaranteed +$96") appears once the bot has locked in a guaranteed
    minimum and switched to only-raise-it mode; right below that, a small
    line shows how much the bot has posted/filled in the last 10-30

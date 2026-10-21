@@ -2556,23 +2556,39 @@ body.on-live .fills-toggle {
 .lv-queue {
   position: absolute;
   inset: 0;
-  overflow: auto;
-  padding: 6px 8px;
+  overflow-y: auto; overflow-x: hidden;
+  padding: 6px 16px;
   min-width: 0;
 }
 .lv-q-head { display: flex; flex-wrap: wrap; gap: 4px 12px; color: var(--muted); font-size: 0.78rem; margin-bottom: 4px; }
 .lv-q-warn { color: var(--amber); font-size: 0.8rem; margin-bottom: 4px; }
 .lv-q-empty { color: var(--muted); padding: 14px 4px; font-size: 0.9rem; }
-.lv-q-scroll { max-width: 100%; overflow-x: auto; }
-.lv-q-table { border-collapse: collapse; width: 100%; font-size: 0.82rem; white-space: nowrap; }
-.lv-q-table th { text-align: left; color: var(--muted); font-weight: 600; padding: 3px 8px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--panel); }
-.lv-q-table td { padding: 3px 8px; border-bottom: 1px solid var(--border); }
-.lv-q-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
-.lv-q-table th.lv-q-sortable { cursor: pointer; text-decoration: underline dotted; }
-.lv-q-name { max-width: 14ch; overflow: hidden; text-overflow: ellipsis; }
+.lv-q-explain { color: var(--muted); font-size: 0.82rem; margin: 2px 0 6px; }
+.lv-q-help { font-size: 0.82rem; margin-bottom: 8px; }
+.lv-q-help summary { cursor: pointer; color: var(--accent); }
+.lv-q-help ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); }
+.lv-q-help li { margin-bottom: 3px; }
+.lv-q-help strong { color: var(--text, inherit); }
+.lv-q-sort { display: flex; gap: 6px; margin-bottom: 8px; }
+.lv-q-sort .lv-btn.active { border-color: var(--accent); color: var(--accent); }
+.lv-qc-list { display: flex; flex-direction: column; gap: 8px; }
+.lv-qc { border: 1px solid var(--border); border-left-width: 4px; border-radius: 8px; padding: 8px 10px; background: var(--panel); min-width: 0; }
+.lv-qc.lv-q-likely { border-left-color: var(--green); }
+.lv-qc.lv-q-maybe { border-left-color: var(--amber); }
+.lv-qc.lv-q-unlikely { border-left-color: var(--red); }
+.lv-qc.lv-q-none { border-left-color: var(--muted); }
+.lv-qc-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+.lv-qc-name { font-weight: 700; overflow-wrap: anywhere; min-width: 0; }
+.lv-qc-pill { font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.lv-qp-likely { color: var(--green); }
+.lv-qp-maybe { color: var(--amber); }
+.lv-qp-unlikely { color: var(--red); }
+.lv-qp-none { color: var(--muted); }
+.lv-qc-row { display: flex; justify-content: space-between; gap: 12px; font-size: 0.85rem; padding: 2px 0; }
+.lv-qc-label { color: var(--muted); flex: 0 0 auto; }
+.lv-qc-value { text-align: right; min-width: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.lv-qc-why { color: var(--muted); font-size: 0.75rem; margin-top: 4px; }
+.lv-qc-compact { padding: 5px 10px; }
+.lv-qc-compact .lv-qc-head { margin-bottom: 0; }
+.lv-qc-nonebtn { display: block; width: 100%; margin: 10px 0 8px; padding: 8px; background: none; border: 1px dashed var(--border); border-radius: 8px; color: var(--muted); cursor: pointer; font: inherit; font-size: 0.85rem; }
 .lv-q-none { color: var(--muted); }
-.lv-q-verdict { text-align: center; font-weight: 700; cursor: help; }
-.lv-qv-likely { color: var(--green); }
-.lv-qv-maybe { color: var(--amber); }
-.lv-qv-unlikely { color: var(--red); }
-.lv-qv-none { color: var(--muted); }
