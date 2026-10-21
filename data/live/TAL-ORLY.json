@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-21T18:19:17.698505Z",
+  "generated_at": "2026-10-21T18:22:06.924266Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -87,7 +87,7 @@
         "exposure": 152.66,
         "exposure_text": "+$153",
         "move": "Hold price at 8c",
-        "when": "crowd pays 7.5c; steps down 1c only if it trades lower",
+        "when": "crowd pays 7.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 1:30pm CT",
@@ -99,13 +99,13 @@
         "resting": "1,054 @ 17-19c",
         "exposure": 169.15,
         "exposure_text": "+$169",
-        "move": "Step price down 1c (17c to 16c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T18:18:50Z",
+        "move": "Hold price at 17c",
+        "when": "needs 50+ crowd trades under 17c (now 10)",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 1:30pm CT",
         "last_fill": "2026-10-20T22:29:11Z",
-        "lag_note": "Steps to 16c at the next check."
+        "lag_note": "Crowd is quiet here (10 traded)."
       },
       {
         "side": "Austin Hill",
@@ -114,7 +114,7 @@
         "exposure_text": "+$177",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T18:18:50Z",
+        "at": "2026-10-21T18:21:51Z",
         "stuck": false,
         "also": "Also: even-up Sat 1:30pm CT",
         "lag_note": "Steps to 19c at the next check."
@@ -230,7 +230,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 31 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-21T18:18:50Z"
+    "ts": "2026-10-21T18:21:51Z"
   },
   "posts": [
     {
@@ -3330,15 +3330,6 @@
   ],
   "audits": [
     {
-      "id": "1792449754660-cbe93a",
-      "ts": "2026-10-19T22:42:34Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 38 unexplained\n- TAL-ORLY - Austin Hill has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Blaine Perkins has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Brent Crews has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Brennan Poole has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Caesar Bacarella has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Carson Kvapil has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-ORLY - Carson Ware has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- plus 30 more (fleet/state/empty_side_sentinel.json)",
-      "severity": "warn"
-    },
-    {
       "id": "1792451182341-bccbe4",
       "ts": "2026-10-19T23:06:22Z",
       "book": "TAL-ORLY",
@@ -4228,6 +4219,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -546.85 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792606854779-400303",
+      "ts": "2026-10-21T18:20:54Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-ORLY): 19 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JECL low 1215c, KXNASCARRACE-THEPG26-JUAL low 1175c, KXNASCARRACE-THEPG26-RYSI low 1220c, KXNASCARRACE-THEPG26-JEBU low 1222c, KXNASCARRACE-THEPG26-BRJO low 1224c, KXNASCARRACE-THEPG26-BRPO low 1216c, KXNASCARRACE-THEPG26-KYSI low 1216c, KXNASCARRACE-THEPG26-TAGR high 1c, KXNASCARRACE-THEPG26-DETH low 1222c, KXNASCARRACE-THEPG26-RACA low 1217c, KXNASCARRACE-THEPG26-SASM high 1c, KXNASCARRACE-THEPG26-LEHO low 1222c, KXNASCARRACE-THEPG26-WISA low 1223c, KXNASCARRACE-THEPG26-JELO low 1192c, KXNASCARRACE-THEPG26-CODA low 716c, KXNASCARRACE-THEPG26-BRCR low 1006c, KXNASCARRACE-THEPG26-JAFI low 1222c, KXNASCARRACE-THEPG26-LEPU low 1216c, KXNASCARRACE-THEPG26-PARE low 1222c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
