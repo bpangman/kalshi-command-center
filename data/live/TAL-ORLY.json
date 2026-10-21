@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-21T19:01:05.076761Z",
+  "generated_at": "2026-10-21T19:04:34.040159Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$534, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 72,
     "moves": [
       {
         "side": "Sam Mayer",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 4,073, 42,465 resting. Worst line -$534 (limit now -$250)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 4,073, 42,465 resting. Worst line -$534 (limit now -$250). Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -230,19 +230,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-21T19:00:08Z"
+    "ts": "2026-10-21T19:04:10Z"
   },
   "posts": [
-    {
-      "id": "1792479080438-5f45ea",
-      "ts": "2026-10-20T06:51:20Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line $0, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792479140860-e66df8",
       "ts": "2026-10-20T06:52:20Z",
@@ -3336,18 +3326,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792609269453-f1abfb",
+      "ts": "2026-10-21T19:01:09Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$534, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792453391379-24d7f1",
-      "ts": "2026-10-19T23:43:11Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 31 unexplained\n- TAL-ORLY - Austin Hill has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Brent Crews has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Brennan Poole has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Caesar Bacarella has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Carson Kvapil has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Corey Day has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- TAL-ORLY - Daniel Dye has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- plus 23 more (fleet/state/empty_side_sentinel.json)",
-      "severity": "warn"
-    },
     {
       "id": "1792453826881-a2bba2",
       "ts": "2026-10-19T23:50:26Z",
@@ -4238,6 +4229,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -534.05 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792609408553-4a3be7",
+      "ts": "2026-10-21T19:03:28Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Sam Mayer has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
