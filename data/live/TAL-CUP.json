@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-21T21:11:42.179487Z",
+  "generated_at": "2026-10-21T21:20:05.769579Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 145,
+    "checks_every_s": 83,
     "moves": [
       {
         "side": "Bubba Wallace",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 2m, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -207,24 +207,9 @@
     ],
     "moves_note": "11 more drivers with small exposure are not shown. 20 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-21T21:11:33Z"
+    "ts": "2026-10-21T21:19:36Z"
   },
   "posts": [
-    {
-      "id": "1792518768750-053621",
-      "ts": "2026-10-20T17:52:48Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Austin Cindric: no fill for 1241 min, added 300 at 7c (was 8c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Austin Cindric",
-        "from": 0.08,
-        "to": 0.07
-      }
-    },
     {
       "id": "1792518768750-5f8ad1",
       "ts": "2026-10-20T17:52:48Z",
@@ -3647,27 +3632,19 @@
       "text": "Quiet for 15 min. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792617576542-3391e1",
+      "ts": "2026-10-21T21:19:36Z",
+      "book": "TAL-CUP",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792577186584-6decc5",
-      "ts": "2026-10-21T10:06:26Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- TAL-CUP - Bubba Wallace has had no resting orders for at least 921 min (reason unknown: no reason logged).\n- TAL-CUP - Tyler Reddick has had no resting orders for at least 1224 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792577490173-749d19",
-      "ts": "2026-10-21T10:11:30Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 1224 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792577793797-78368a",
       "ts": "2026-10-21T10:16:33Z",
@@ -4549,6 +4526,24 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): heartbeat ok=false. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792617334792-5fb3d3",
+      "ts": "2026-10-21T21:15:34Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
+    },
+    {
+      "id": "1792617569476-2d73c0",
+      "ts": "2026-10-21T21:19:29Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
