@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T00:33:19.624472Z",
+  "generated_at": "2026-10-21T00:35:41.736286Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -17,7 +17,7 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$200 (now -$263)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts Fri 11:00am CT",
         "last_fill": "2026-10-20T23:05:14Z"
       },
@@ -52,7 +52,7 @@
         "exposure_text": "-$44",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T00:32:39Z",
+        "at": "2026-10-21T00:35:40Z",
         "stuck": false,
         "also": "Also: glide starts Fri 11:00am CT",
         "last_fill": "2026-10-20T22:43:21Z",
@@ -90,7 +90,7 @@
         "exposure_text": "+$62",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T00:32:39Z",
+        "at": "2026-10-21T00:35:40Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 17c at the next check."
@@ -114,7 +114,7 @@
         "exposure_text": "+$62",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T00:32:39Z",
+        "at": "2026-10-21T00:35:40Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -246,7 +246,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T00:32:39Z"
+    "ts": "2026-10-21T00:35:40Z"
   },
   "posts": [
     {
@@ -2806,6 +2806,16 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nLayne Riggs: -263\nBrenden Queen: -171\nThomas Annunziata: -171\nChandler Smith: -44\nGiovanni Ruggiero: -1\nJustin Haley: +31\nJake Garcia: +40\nBen Rhodes: +51\nall others (30) >= +62\nCollected $63 premium ($1 fees) | Paper margin over fair $14 (not realized until settlement)\nCore posted book 1.49 | Worst now -263 | Cash free $3484\nAnchor age 225s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792542819672-9ce85b",
+      "ts": "2026-10-21T00:33:39Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 25,301 resting. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -3393,6 +3403,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -263.36 vs floor -165.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792542893333-798259",
+      "ts": "2026-10-21T00:34:53Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+36 on Giovanni Ruggiero @ 0.07 (maker)\n+233 on Brenden Queen @ 0.02 (maker)\n+23 on Jake Garcia @ 0.04 (maker)\nworst outcome now -263\nIf the race ends... you make\nLayne Riggs: -263\nBrenden Queen: -171\nThomas Annunziata: -171\nChandler Smith: -44\nGiovanni Ruggiero: -1\nJustin Haley: +31\nJake Garcia: +40\nBen Rhodes: +51\nall others (30) >= +62",
+      "severity": "warn"
     }
   ]
 }
