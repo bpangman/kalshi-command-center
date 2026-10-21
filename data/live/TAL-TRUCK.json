@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T01:08:19.004011Z",
+  "generated_at": "2026-10-21T01:11:39.713745Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -51,12 +51,12 @@
         "exposure": -46.65,
         "exposure_text": "-$47",
         "move": "Hold price at 7c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 7c (now 21)",
         "at": null,
         "stuck": false,
         "also": "Also: glide starts Fri 11:00am CT; even-up Fri 2:00pm CT",
         "last_fill": "2026-10-21T01:07:18Z",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (21 traded)."
       },
       {
         "side": "Chandler Smith",
@@ -65,7 +65,7 @@
         "exposure_text": "-$41",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T01:07:54Z",
+        "at": "2026-10-21T01:10:55Z",
         "stuck": false,
         "also": "Also: glide starts Fri 11:00am CT",
         "last_fill": "2026-10-20T22:43:21Z",
@@ -90,7 +90,7 @@
         "exposure_text": "+$66",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T01:07:54Z",
+        "at": "2026-10-21T01:10:55Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 17c at the next check."
@@ -102,7 +102,7 @@
         "exposure_text": "+$66",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T01:07:54Z",
+        "at": "2026-10-21T01:10:55Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 6c at the next check."
@@ -114,7 +114,7 @@
         "exposure_text": "+$66",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T01:07:54Z",
+        "at": "2026-10-21T01:10:55Z",
         "stuck": false,
         "also": "Also: even-up Fri 2:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -246,7 +246,7 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T01:07:54Z"
+    "ts": "2026-10-21T01:10:55Z"
   },
   "posts": [
     {
@@ -2846,6 +2846,36 @@
       "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$263, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792544934897-b7d911",
+      "ts": "2026-10-21T01:08:54Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 25,252 resting. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792544975108-d84511",
+      "ts": "2026-10-21T01:07:18Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 49: Giovanni Ruggiero x49 at 7c. Worst line -$260.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 49.0,
+        "fills": [
+          {
+            "side": "Giovanni Ruggiero",
+            "price": 0.07,
+            "qty": 49.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3460,6 +3490,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -263.36 vs floor -165.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792544975589-d25fe1",
+      "ts": "2026-10-21T01:09:35Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): 5 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TYMA high 704c, KXNASCARRACE-LOVRS26-CHEC high 707c, KXNASCARRACE-LOVRS26-BRQU low 465c, KXNASCARRACE-LOVRS26-THAN low 465c, KXNASCARRACE-LOVRS26-CLMC low 697c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
