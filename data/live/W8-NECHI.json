@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-21T15:08:52.305476Z",
+  "generated_at": "2026-10-21T15:12:13.280627Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -64,11 +64,11 @@
         "exposure": 401.03,
         "exposure_text": "+$401",
         "move": "Step price down 1c (22c to 21c)",
-        "when": "if no fill by 10:11am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-21T15:11:49Z",
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
-        "lag_note": "Steps to 21c if no fill by 10:11am CT."
+        "lag_note": "Steps to 21c at the next check."
       },
       {
         "side": "NE by 15+",
@@ -95,7 +95,7 @@
         "lines": [
           "Lagging (150+ behind the leader): CHI by 7-14, CHI by 15+, NE by 1-6, NE by 7-14, NE by 15+.",
           "CHI by 15+: 900 behind. No crowd trade data yet.",
-          "NE by 1-6: 900 behind. Steps to 21c if no fill by 10:11am CT.",
+          "NE by 1-6: 900 behind. Steps to 21c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-21T15:08:40Z"
+    "ts": "2026-10-21T15:11:42Z"
   },
   "posts": [
     {
@@ -2984,6 +2984,15 @@
         "from": 0.22,
         "to": 0.21
       }
+    },
+    {
+      "id": "1792595501872-4c6c95",
+      "ts": "2026-10-21T15:11:41Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nCHI 1-6: -499 (-35.8% of bankroll)\nCHI 7-14: -47 (-3.4% of bankroll)\nCHI 15+: +401 (+28.8% of bankroll)\nNE 1-6: +401 (+28.8% of bankroll)\nNE 7-14: +36 (+2.6% of bankroll)\nNE 15+: +401 (+28.8% of bankroll)\nCollected $401 premium ($0 fees) | Paper margin over fair $58 (not realized until settlement)\nheld / resting\nCHI 1-6: 900 / 0\nCHI 7-14: 448 / 452\nCHI 15+: 0 / 825\nNE 1-6: 0 / 900\nNE 7-14: 365 / 168\nNE 15+: 0 / 810\nPosted book 1.23 | Sold avg 1.212 | Worst now +113 | Cash free $1392\nAnchor age 0s | Last fill 11764s ago",
+      "severity": "info"
     }
   ],
   "audits": [
