@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-21T21:40:14.797816Z",
+  "generated_at": "2026-10-21T21:44:40.985406Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$524, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 62,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Sam Mayer",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 4,223, 42,315 resting. Worst line -$524 (limit now -$250). Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 4,223, 42,315 resting. Worst line -$524 (limit now -$250)."
         ]
       },
       {
@@ -230,19 +230,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-21T21:39:48Z"
+    "ts": "2026-10-21T21:43:49Z"
   },
   "posts": [
-    {
-      "id": "1792494227336-b6d3e4",
-      "ts": "2026-10-20T11:03:32Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
     {
       "id": "1792494910545-1e18bd",
       "ts": "2026-10-20T11:15:10Z",
@@ -3358,27 +3348,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792618909259-18bcb8",
+      "ts": "2026-10-21T21:41:49Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$524, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792484613054-251307",
-      "ts": "2026-10-20T08:23:33Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 4 unexplained\n- TAL-ORLY - Anthony Alfredo has had no resting orders for at least 616 min (reason unknown: no reason logged).\n- TAL-ORLY - Josh Williams has had no resting orders for at least 616 min (reason unknown: no reason logged).\n- TAL-ORLY - Mason Maggio has had no resting orders for at least 616 min (reason unknown: no reason logged).\n- TAL-ORLY - Parker Retzlaff has had no resting orders for at least 616 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792486127622-30576b",
-      "ts": "2026-10-20T08:48:47Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 30 unexplained\n- TAL-ORLY - Austin Hill has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Brent Crews has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Brennan Poole has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Carson Kvapil has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Corey Day has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Daniel Dye has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- TAL-ORLY - Dean Thompson has had no resting orders for at least 677 min (reason unknown: no reason logged).\n- plus 22 more (fleet/state/empty_side_sentinel.json)",
-      "severity": "warn"
-    },
     {
       "id": "1792488248426-c1b71a",
       "ts": "2026-10-20T09:24:08Z",
@@ -4260,6 +4242,24 @@
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
+    },
+    {
+      "id": "1792618935270-f6d050",
+      "ts": "2026-10-21T21:42:15Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-ORLY): 7 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-RYSI low 1220c, KXNASCARRACE-THEPG26-JEBU low 1222c, KXNASCARRACE-THEPG26-BRJO low 1224c, KXNASCARRACE-THEPG26-BRPO low 1216c, KXNASCARRACE-THEPG26-JELO low 1192c, KXNASCARRACE-THEPG26-CODA low 638c, KXNASCARRACE-THEPG26-BRCR low 1006c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792618935271-07f6db",
+      "ts": "2026-10-21T21:42:15Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-ORLY): worst -523.77 vs floor -170.08. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
