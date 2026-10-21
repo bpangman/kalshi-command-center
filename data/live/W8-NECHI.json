@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-21T23:38:27.043752Z",
+  "generated_at": "2026-10-21T23:45:19.546394Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -35,11 +35,11 @@
       },
       {
         "side": "CHI by 7-14",
-        "resting": "491 @ 22-29c",
+        "resting": "566 @ 21-24c",
         "exposure": 69.21,
         "exposure_text": "+$69",
-        "move": "Hold price at 22c",
-        "when": "needs 50+ crowd trades under 22c (now 5)",
+        "move": "Hold price at 21c",
+        "when": "needs 50+ crowd trades under 21c (now 5)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
@@ -61,23 +61,23 @@
       },
       {
         "side": "CHI by 15+",
-        "resting": "825 @ 20-27c",
+        "resting": "892 @ 18-27c",
         "exposure": 501.03,
         "exposure_text": "+$501",
-        "move": "Step price down 1c (20c to 19c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T23:37:34Z",
+        "move": "Hold price at 18c",
+        "when": "next cent is under the crowd price (17.5c)",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:30pm CT",
         "last_fill": "2026-10-21T21:25:23Z",
-        "lag_note": "Steps to 19c at the next check."
+        "lag_note": "Price 18c is at its floor."
       },
       {
         "side": "NE by 15+",
-        "resting": "877 @ 11-19c",
+        "resting": "944 @ 10-19c",
         "exposure": 553.03,
         "exposure_text": "+$553",
-        "move": "Hold price at 11c",
+        "move": "Hold price at 10c",
         "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 2,434, 2,703 resting. Worst line -$347 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 2,434, 2,778 resting. Worst line -$347 (goal -$150)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (150+ behind the leader): CHI by 7-14, CHI by 15+, NE by 1-6, NE by 7-14, NE by 15+.",
           "NE by 15+: 900 behind. No crowd trade data yet.",
-          "CHI by 15+: 848 behind. Steps to 19c at the next check.",
+          "CHI by 15+: 848 behind. Price 18c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -154,10 +154,10 @@
       {
         "label": "CHI by 7-14",
         "held": 483.8,
-        "resting": 491.2,
+        "resting": 566.0,
         "target": null,
         "status": "lagging",
-        "price": 0.22
+        "price": 0.21
       },
       {
         "label": "CHI by 15+",
@@ -193,33 +193,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-21T23:37:34Z"
+    "ts": "2026-10-21T23:44:38Z"
   },
   "posts": [
-    {
-      "id": "1792458353939-efed0f",
-      "ts": "2026-10-20T01:05:38Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot note: allotment SCALE applied: pregame_allotment_scale 0.50 recorded book-wide (one-time decrease done; a restart or",
-      "severity": "info",
-      "title": "Bot note"
-    },
-    {
-      "id": "1792458454691-9d9c0d",
-      "ts": "2026-10-20T01:05:37Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 4,925 (launch ladder): CHI by 1-6 x550 at 27c, CHI by 7-14 x550 at 22c, +19 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 4925.0,
-        "rows": 21
-      }
-    },
     {
       "id": "1792459099598-9022f4",
       "ts": "2026-10-20T01:16:03Z",
@@ -3671,6 +3647,30 @@
             "qty": 14.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792625995856-1d2de1",
+      "ts": "2026-10-21T23:39:55Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,703 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792626056251-cd8191",
+      "ts": "2026-10-21T23:39:53Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 566 (ANCHOR step 0.21): CHI by 7-14 x491 at 21c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 566.0,
+        "rows": 2
       }
     }
   ],
