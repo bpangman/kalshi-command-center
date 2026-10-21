@@ -1,12 +1,12 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-21T19:57:38.074816Z",
+  "generated_at": "2026-10-21T20:05:40.426939Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$859, final target $0.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence": "low",
+    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
     "checks_every_s": 53,
     "moves": [
       {
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 17,666, 62,997 resting. Worst line -$859 (limit now -$550). Bot is slow (checks every 53s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 17,666, 62,997 resting. Worst line -$859 (limit now -$550). Bot heartbeat is 8m old: it may be down."
         ]
       },
       {
@@ -212,59 +212,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-21T19:56:55Z"
+    "ts": "2026-10-21T20:04:59Z"
   },
   "posts": [
-    {
-      "id": "1792517498895-cbbd02",
-      "ts": "2026-10-20T17:31:36Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Austin Cindric: no fill for 1220 min, added 300 at 7c (was 8c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Austin Cindric",
-        "from": 0.08,
-        "to": 0.07
-      }
-    },
-    {
-      "id": "1792517498896-1a0b9f",
-      "ts": "2026-10-20T17:31:36Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Brad Keselowski: no fill for 1014 min, added 300 at 5c (was 6c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Brad Keselowski",
-        "from": 0.06,
-        "to": 0.05
-      }
-    },
-    {
-      "id": "1792517680087-a5f4d1",
-      "ts": "2026-10-20T17:34:37Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Nudged Joey Logano up from 8c to 9c to stay a maker order.",
-      "severity": "info",
-      "title": "Reprice"
-    },
-    {
-      "id": "1792517801065-1705be",
-      "ts": "2026-10-20T17:36:31Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi refused a post on Joey Logano: order(s) rejected: [{'code': 'invalid_order', 'details': 'po.",
-      "severity": "warn",
-      "title": "Post refused"
-    },
     {
       "id": "1792517841365-dc624b",
       "ts": "2026-10-20T17:37:04Z",
@@ -3692,18 +3642,49 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$859, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792612877445-47184e",
+      "ts": "2026-10-21T20:01:06Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792612958183-cfddf8",
+      "ts": "2026-10-21T20:02:38Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 5m old (normal is under 5m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
+    },
+    {
+      "id": "1792612978371-1823a8",
+      "ts": "2026-10-21T20:02:58Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$859, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792613119443-1694f1",
+      "ts": "2026-10-21T20:05:06Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1792574150780-3b655a",
-      "ts": "2026-10-21T09:15:50Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Kyle Larson has had no resting orders for at least 982 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792574371699-d7fc36",
       "ts": "2026-10-21T09:19:31Z",
@@ -4594,6 +4575,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -859.32 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792612719406-8a16e2",
+      "ts": "2026-10-21T19:58:39Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 17 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-BRKE low 1891c, KXNASCARRACE-YEL26-MIMC low 2096c, KXNASCARRACE-YEL26-AUDI low 1895c, KXNASCARRACE-YEL26-RIST low 1096c, KXNASCARRACE-YEL26-ROCH low 1910c, KXNASCARRACE-YEL26-RYBL low 1096c, KXNASCARRACE-YEL26-KYLA low 721c, KXNASCARRACE-YEL26-ALBO low 2096c, KXNASCARRACE-YEL26-CHEL low 1096c, KXNASCARRACE-YEL26-ERJO low 2096c, KXNASCARRACE-YEL26-JONE low 2096c, KXNASCARRACE-YEL26-DASU low 2096c, KXNASCARRACE-YEL26-AUHI low 2096c, KXNASCARRACE-YEL26-WIBY low 1185c, KXNASCARRACE-YEL26-NOGR low 2096c, KXNASCARRACE-YEL26-ZASM low 2096c, KXNASCARRACE-YEL26-TYGI low 1749c. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
