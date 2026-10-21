@@ -1,6 +1,6 @@
 {
   "key": "UFC-VOLEVL",
-  "generated_at": "2026-10-21T22:28:05.326219Z",
+  "generated_at": "2026-10-21T22:33:21.724075Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -37,12 +37,12 @@
         "exposure": 107.19,
         "exposure_text": "+$107",
         "move": "Step price down 1c (26c to 25c)",
-        "when": "if no fill by 5:34pm CT and the crowd trades under 26c",
-        "at": "2026-10-21T22:34:17Z",
+        "when": "next bot check, if the crowd trades under 26c",
+        "at": null,
         "stuck": false,
-        "also": "Also: even-up Sat 2:20pm CT",
+        "also": "Also: even-up Sat 2:20pm CT; paid balancing starts Sat 3:00pm CT",
         "last_fill": "2026-10-21T22:14:17Z",
-        "lag_note": "Steps to 25c if no fill by 5:34pm CT."
+        "lag_note": "Steps to 25c if the crowd trades lower."
       },
       {
         "side": "Evloev by Decision",
@@ -213,7 +213,7 @@
       }
     ],
     "book": "UFC-VOLEVL",
-    "ts": "2026-10-21T22:27:05Z"
+    "ts": "2026-10-21T22:33:07Z"
   },
   "posts": [
     {
@@ -464,6 +464,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nVOLKOTKODQ: +116\nVOLSUB: +107\nVOLDEC: -134\nEVLKOTKODQ: +116\nEVLSUB: +116\nEVLDEC: +116\nDRAW: +105\nCollected $116 premium ($0 fees) | Paper margin over fair $53 (not realized until settlement)\nheld / resting\nVOLKOTKODQ: 0 / 250\nVOLSUB: 9 / 241\nVOLDEC: 250 / 0\nEVLKOTKODQ: 0 / 250\nEVLSUB: 0 / 250\nEVLDEC: 0 / 250\nDRAW: 11 / 19\nPosted book 1.00 | Sold avg 1.419 | Worst now -134 | Cash free $500\nAnchor age 49s | Last fill 703s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792621826671-32d4b5",
+      "ts": "2026-10-21T22:30:26Z",
+      "book": "UFC-VOLEVL",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
@@ -493,6 +503,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (UFC-VOLEVL): worst -133.96 vs floor -125.00 (real L_max 100.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792622001235-cd269c",
+      "ts": "2026-10-21T22:33:21Z",
+      "book": "UFC-VOLEVL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+25 on VOLDEC @ 0.47 (maker)\n+50 on VOLDEC @ 0.46 (maker)\n+175 on VOLDEC @ 0.45 (maker)\n+11 on DRAW @ 0.03 (maker)\n+9 on VOLSUB @ 0.25 (maker)\nworst outcome now +51\nheld 0/9/250/0/0/0/11",
+      "severity": "warn"
     }
   ]
 }
