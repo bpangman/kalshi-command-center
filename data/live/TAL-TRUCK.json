@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-21T21:04:32.038617Z",
+  "generated_at": "2026-10-21T21:11:42.179487Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 235,
+    "checks_every_s": 81,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 4m, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -239,19 +239,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 24 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-21T21:03:50Z"
+    "ts": "2026-10-21T21:10:53Z"
   },
   "posts": [
-    {
-      "id": "1792515645150-dda286",
-      "ts": "2026-10-20T17:00:31Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
     {
       "id": "1792516531860-fd936d",
       "ts": "2026-10-20T17:15:31Z",
@@ -3507,18 +3497,19 @@
       "text": "Bot heartbeat is back to normal.",
       "severity": "info",
       "title": "Heartbeat back"
+    },
+    {
+      "id": "1792617053782-5194b8",
+      "ts": "2026-10-21T21:10:53Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792542893333-798259",
-      "ts": "2026-10-21T00:34:53Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+36 on Giovanni Ruggiero @ 0.07 (maker)\n+233 on Brenden Queen @ 0.02 (maker)\n+23 on Jake Garcia @ 0.04 (maker)\nworst outcome now -263\nIf the race ends... you make\nLayne Riggs: -263\nBrenden Queen: -171\nThomas Annunziata: -171\nChandler Smith: -44\nGiovanni Ruggiero: -1\nJustin Haley: +31\nJake Garcia: +40\nBen Rhodes: +51\nall others (30) >= +62",
-      "severity": "warn"
-    },
     {
       "id": "1792543179938-28d829",
       "ts": "2026-10-21T00:39:39Z",
@@ -4409,6 +4400,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): heartbeat ok=false. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792616930697-9a13aa",
+      "ts": "2026-10-21T21:08:50Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
     }
   ]
 }

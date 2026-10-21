@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-21T21:04:32.038617Z",
+  "generated_at": "2026-10-21T21:11:42.179487Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 166,
+    "checks_every_s": 81,
     "moves": [
       {
         "side": "Sam Mayer",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 3m, set for 30s)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 0, ? resting. Worst line unknown. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -223,19 +223,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 29 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-21T21:04:10Z"
+    "ts": "2026-10-21T21:11:13Z"
   },
   "posts": [
-    {
-      "id": "1792487638930-116adf",
-      "ts": "2026-10-20T09:13:58Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792487656940-b2647a",
       "ts": "2026-10-20T09:14:16Z",
@@ -3340,18 +3330,19 @@
       "text": "Bot could not read Kalshi (1 of 3 tries). It does nothing and retries.",
       "severity": "warn",
       "title": "Read failure"
+    },
+    {
+      "id": "1792616892890-d03d9a",
+      "ts": "2026-10-21T21:08:12Z",
+      "book": "TAL-ORLY",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792473707623-494322",
-      "ts": "2026-10-20T05:21:47Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 4 unexplained\n- TAL-ORLY - Anthony Alfredo has had no resting orders for at least 435 min (reason unknown: no reason logged).\n- TAL-ORLY - Josh Williams has had no resting orders for at least 435 min (reason unknown: no reason logged).\n- TAL-ORLY - Mason Maggio has had no resting orders for at least 435 min (reason unknown: no reason logged).\n- TAL-ORLY - Parker Retzlaff has had no resting orders for at least 435 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792475222289-a43870",
       "ts": "2026-10-20T05:47:02Z",
@@ -4242,6 +4233,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): heartbeat ok=false. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792616838251-829c44",
+      "ts": "2026-10-21T21:07:18Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
     }
   ]
 }
