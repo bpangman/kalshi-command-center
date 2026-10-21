@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-21T20:38:26.845316Z",
+  "generated_at": "2026-10-21T21:04:32.038617Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -40,7 +40,7 @@
         "exposure_text": "+$69",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T20:38:17Z",
+        "at": "2026-10-21T21:04:31Z",
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:34pm CT",
         "last_fill": "2026-10-20T22:31:34Z",
@@ -53,7 +53,7 @@
         "exposure_text": "+$152",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-21T20:38:17Z",
+        "at": "2026-10-21T21:04:31Z",
         "stuck": false,
         "also": "Also: paid balancing starts Thu 6:34pm CT",
         "last_fill": "2026-10-21T09:08:05Z",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:19pm CT. Sold 2,239, 2,898 resting. Worst line -$383 (goal -$150). Bot heartbeat is 18m old: it may be down."
+          "Pregame build, kickoff Thu 7:19pm CT. Sold 2,239, 2,898 resting. Worst line -$383 (goal -$150). Bot heartbeat is 44m old: it may be down."
         ]
       },
       {
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-21T20:38:17Z"
+    "ts": "2026-10-21T21:04:31Z"
   },
   "posts": [
     {
@@ -3437,6 +3437,56 @@
       "text": "Bot is in safe mode: reads failed, so it does nothing until they work.",
       "severity": "warn",
       "title": "Bot offline-safe"
+    },
+    {
+      "id": "1792615904276-9e5d6c",
+      "ts": "2026-10-21T20:51:44Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,898 resting. Next: Paid balancing starts, Thu 6:34pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792615964834-c68cee",
+      "ts": "2026-10-21T20:52:33Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (9 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
+    },
+    {
+      "id": "1792615964835-670dba",
+      "ts": "2026-10-21T20:52:33Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot is in safe mode: reads failed, so it does nothing until they work.",
+      "severity": "warn",
+      "title": "Bot offline-safe"
+    },
+    {
+      "id": "1792615985015-0dca51",
+      "ts": "2026-10-21T20:53:01Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792616570217-9031e9",
+      "ts": "2026-10-21T21:02:50Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 43m old (normal is under 12m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
     }
   ],
   "audits": [
@@ -4077,6 +4127,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: OFFLINE more than 5 min - no writes until reads succeed; resting orders expire at T-2 on their own",
+      "severity": "warn"
+    },
+    {
+      "id": "1792615391499-167dc2",
+      "ts": "2026-10-21T20:43:11Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 5 min - no writes until reads succeed; resting orders expire at T-2 on their own",
+      "severity": "warn"
+    },
+    {
+      "id": "1792616013652-4622b2",
+      "ts": "2026-10-21T20:53:33Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
