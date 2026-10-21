@@ -2592,3 +2592,8 @@ body.on-live .fills-toggle {
 .lv-qc-compact .lv-qc-head { margin-bottom: 0; }
 .lv-qc-nonebtn { display: block; width: 100%; margin: 10px 0 8px; padding: 8px; background: none; border: 1px dashed var(--border); border-radius: 8px; color: var(--muted); cursor: pointer; font: inherit; font-size: 0.85rem; }
 .lv-q-none { color: var(--muted); }
+
+/* Queue view flows down the page: no fixed height, no inner scroll (2026-10-20) */
+.lv-box:not(.feed-open) { height: auto !important; overflow: visible; }
+.lv-box:not(.feed-open) .lv-box-body { min-height: 260px; }
+.lv-box:not(.feed-open) .lv-queue { position: static; inset: auto; overflow: visible; }
