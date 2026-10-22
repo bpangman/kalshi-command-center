@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-22T18:39:28.896042Z",
+  "generated_at": "2026-10-22T18:42:05.651950Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$718, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 48,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Austin Green",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 8,119, 40,371 resting. Worst line -$718 (limit now -$250). Bot is slow (checks every 48s, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 8,119, 40,371 resting. Worst line -$718 (limit now -$250)."
         ]
       },
       {
@@ -245,29 +245,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-22T18:38:52Z"
+    "ts": "2026-10-22T18:41:54Z"
   },
   "posts": [
-    {
-      "id": "1792610336655-b2486b",
-      "ts": "2026-10-21T19:16:42Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 1: Giovanni Ruggiero x1 at 6c. Worst line -$451.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 1.0,
-        "fills": [
-          {
-            "side": "Giovanni Ruggiero",
-            "price": 0.06,
-            "qty": 1.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792610397152-637d06",
       "ts": "2026-10-21T19:19:57Z",
@@ -3628,27 +3608,19 @@
       "text": "Bot could not read Kalshi (1 of 3 tries). It does nothing and retries.",
       "severity": "warn",
       "title": "Read failure"
+    },
+    {
+      "id": "1792694393374-bbee40",
+      "ts": "2026-10-22T18:39:53Z",
+      "book": "TAL-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$718, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792617648630-aad049",
-      "ts": "2026-10-21T21:20:48Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
-      "id": "1792618542472-d50b47",
-      "ts": "2026-10-21T21:35:42Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+266 on Kaden Honeycutt @ 0.10 (maker)\n+6 on Giovanni Ruggiero @ 0.06 (maker)\n+34 on Layne Riggs @ 0.10 (maker)\nworst outcome now -530\nIf the race ends... you make\nKaden Honeycutt: -530\nGiovanni Ruggiero: -417\nTanner Gray: -257\nLayne Riggs: -183\nBrenden Queen: -56\nThomas Annunziata: -56\nChandler Smith: +70\nJustin Haley: +146\nall others (30) >= +154",
-      "severity": "warn"
-    },
     {
       "id": "1792618576119-fd0346",
       "ts": "2026-10-21T21:36:16Z",
@@ -4530,6 +4502,24 @@
       "source": "bot",
       "text": "+174 on Layne Riggs @ 0.10 (maker)\n+73 on Corey Heim @ 0.11 (maker)\n+47 on Tony Stewart @ 0.02 (maker)\nworst outcome now -718\nIf the race ends... you make\nAustin Green: -718\nTanner Gray: -716\nGiovanni Ruggiero: -597\nCorey Heim: -450\nTony Stewart: -417\nLayne Riggs: -389\nKaden Honeycutt: -293\nCory Roper: -136\nall others (30) >= +162",
       "severity": "warn"
+    },
+    {
+      "id": "1792694391834-a01985",
+      "ts": "2026-10-22T18:39:51Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): 17 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TOST low 545c, KXNASCARRACE-LOVRS26-DAHE low 1395c, KXNASCARRACE-LOVRS26-BERH low 516c, KXNASCARRACE-LOVRS26-JUHA low 1378c, KXNASCARRACE-LOVRS26-STFR low 1391c, KXNASCARRACE-LOVRS26-TYMA low 1150c, KXNASCARRACE-LOVRS26-CORO low 812c, KXNASCARRACE-LOVRS26-CHEC low 1150c, KXNASCARRACE-LOVRS26-TYAN low 1397c, KXNASCARRACE-LOVRS26-CHSM low 1042c, KXNASCARRACE-LOVRS26-COJO low 1385c, KXNASCARRACE-LOVRS26-LALE low 1380c, KXNASCARRACE-LOVRS26-BRQU low 1132c, KXNASCARRACE-LOVRS26-ANPE low 1385c, KXNASCARRACE-LOVRS26-THAN low 1113c, KXNASCARRACE-LOVRS26-COBU low 1384c, KXNASCARRACE-LOVRS26-CLMC low 1369c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792694391834-66f872",
+      "ts": "2026-10-22T18:39:51Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -718.33 vs floor -165.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
