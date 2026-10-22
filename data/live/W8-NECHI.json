@@ -1,10 +1,10 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T23:43:48.751585Z",
+  "generated_at": "2026-10-22T23:46:12.992681Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 7:15pm CT. Worst line $0, goal -$150.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 7:15pm CT. Worst line +$4.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,10 +12,10 @@
       {
         "side": "NE by 7-14",
         "resting": "none",
-        "exposure": -0.22,
-        "exposure_text": "$0",
+        "exposure": 4.42,
+        "exposure_text": "+$4",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-22T23:21:14Z"
@@ -23,8 +23,8 @@
       {
         "side": "CHI by 7-14",
         "resting": "none",
-        "exposure": 4.96,
-        "exposure_text": "+$5",
+        "exposure": 9.6,
+        "exposure_text": "+$10",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -34,8 +34,8 @@
       {
         "side": "NE by 1-6",
         "resting": "none",
-        "exposure": 5.68,
-        "exposure_text": "+$6",
+        "exposure": 10.32,
+        "exposure_text": "+$10",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -45,8 +45,8 @@
       {
         "side": "CHI by 15+",
         "resting": "128 @ 21c",
-        "exposure": 92.78,
-        "exposure_text": "+$93",
+        "exposure": 97.42,
+        "exposure_text": "+$97",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -55,22 +55,20 @@
       },
       {
         "side": "CHI by 1-6",
-        "resting": "158 @ 26c",
-        "exposure": 157.78,
-        "exposure_text": "+$158",
-        "move": "Hold price at 26c",
-        "when": "crowd pays 25.8c; steps down 1c only if it trades lower",
+        "resting": "140 @ 26c",
+        "exposure": 144.57,
+        "exposure_text": "+$145",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-22T23:32:35Z",
-        "lag_note": "Price 26c matches the crowd."
+        "last_fill": "2026-10-22T23:44:58Z"
       },
       {
         "side": "NE by 15+",
         "resting": "529 @ 9-12c",
-        "exposure": 618.78,
-        "exposure_text": "+$619",
+        "exposure": 623.42,
+        "exposure_text": "+$623",
         "move": "Hold price at 9c",
         "when": "crowd pays 9c; steps down 1c only if it trades lower",
         "at": null,
@@ -84,15 +82,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 7:15pm CT. Sold 6,367, 815 resting. Worst line $0 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 6,385, 797 resting. Worst line +$4 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): CHI by 1-6, NE by 15+.",
+          "Lagging (150+ behind the leader): NE by 15+.",
           "NE by 15+: 619 behind. Price 9c matches the crowd.",
-          "CHI by 1-6: 158 behind. Price 26c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -100,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line $0 is better than -$150.",
+          "Gate open: worst line +$4 is better than -$150.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -108,8 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line $0; spent $0 of $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
+          "Paid balancing is running: plan -$150, worst line +$4; spent $0 of $100.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -122,11 +118,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-22T23:45:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
-      {
         "at": "2026-10-23T00:15:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
@@ -135,10 +126,10 @@
     "sides": [
       {
         "label": "CHI by 1-6",
-        "held": 1050.0,
-        "resting": 158.0,
+        "held": 1067.8,
+        "resting": 140.2,
         "target": null,
-        "status": "lagging",
+        "status": "even",
         "price": 0.26
       },
       {
@@ -183,84 +174,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T23:43:06Z"
+    "ts": "2026-10-22T23:46:08Z"
   },
   "posts": [
-    {
-      "id": "1792595582978-29faf7",
-      "ts": "2026-10-21T15:12:45Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "NE by 1-6",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
-    {
-      "id": "1792596227779-51971b",
-      "ts": "2026-10-21T15:23:38Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "NE by 1-6",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
-    {
-      "id": "1792596832235-48e223",
-      "ts": "2026-10-21T15:33:44Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "NE by 1-6",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
-    {
-      "id": "1792597456858-985757",
-      "ts": "2026-10-21T15:44:11Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "NE by 1-6",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
-    {
-      "id": "1792598121864-9f2821",
-      "ts": "2026-10-21T15:55:08Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "NE by 1-6",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
     {
       "id": "1792599028174-cbe890",
       "ts": "2026-10-21T16:10:28Z",
@@ -3778,18 +3694,59 @@
       "source": "bot",
       "text": "Inactivity on W8-NECHI: 0 orders posted in 10 min while the market traded 16824 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1792712707735-ecbd10",
+      "ts": "2026-10-22T23:45:07Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792712707736-c8d12f",
+      "ts": "2026-10-22T23:45:07Z",
+      "book": "W8-NECHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line +$4. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792712727910-99e9d5",
+      "ts": "2026-10-22T23:45:19Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line +$4 beats the -$150 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1792712727910-828777",
+      "ts": "2026-10-22T23:45:19Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line +$4. Lagging: NE by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792712768139-e6c58b",
+      "ts": "2026-10-22T23:46:08Z",
+      "book": "W8-NECHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line +$4. Next: Kickoff, 7:15pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
-    {
-      "id": "1792593863653-6a626b",
-      "ts": "2026-10-21T14:44:23Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-NECHI): worst -498.97 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792595099195-b6c2f6",
       "ts": "2026-10-21T15:04:59Z",
@@ -4679,6 +4636,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W8-NECHI - New England by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792712762306-e0e166",
+      "ts": "2026-10-22T23:46:02Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+18 on CHI 1-6 @ 0.26 (maker)\nworst outcome now +85\nheld 1068/1203/1115/1202/1208/589\nIf the game ends... you make\nCHI 1-6: +145 (+10.4% of bankroll)\nCHI 7-14: +10 (+0.7% of bankroll)\nCHI 15+: +97 (+7.0% of bankroll)\nNE 1-6: +10 (+0.7% of bankroll)\nNE 7-14: +4 (+0.3% of bankroll)\nNE 15+: +623 (+44.8% of bankroll)",
       "severity": "warn"
     }
   ]
