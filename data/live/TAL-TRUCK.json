@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-22T16:01:24.908625Z",
+  "generated_at": "2026-10-22T16:04:12.308890Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -111,12 +111,12 @@
         "exposure": 280.92,
         "exposure_text": "+$281",
         "move": "Hold price at 8c",
-        "when": "crowd pays 8c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Fri 3:00pm CT",
         "last_fill": "2026-10-20T22:43:21Z",
-        "lag_note": "Price 8c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       }
     ],
     "sections": [
@@ -245,23 +245,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-22T16:00:43Z"
+    "ts": "2026-10-22T16:03:44Z"
   },
   "posts": [
-    {
-      "id": "1792605076956-fe8201",
-      "ts": "2026-10-21T17:49:11Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 1,714 (new wave): Spencer Boyd x432 at 2c, Frankie Muniz x432 at 2c, +2 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 1714.0,
-        "rows": 4
-      }
-    },
     {
       "id": "1792605137494-05113d",
       "ts": "2026-10-21T17:52:17Z",
@@ -3661,18 +3647,19 @@
       "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line -$744, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792685024908-b073d2",
+      "ts": "2026-10-22T16:03:44Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 40,665 resting. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792614634994-e68486",
-      "ts": "2026-10-21T20:30:34Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -707.00 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792615131473-09537e",
       "ts": "2026-10-21T20:38:51Z",
@@ -4563,6 +4550,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -744.32 vs floor -165.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792684960388-0f83e6",
+      "ts": "2026-10-22T16:02:40Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+784 on Tony Stewart @ 0.02 (maker)\n+215 on Corey Heim @ 0.11 (maker)\nworst outcome now -744\nIf the race ends... you make\nAustin Green: -744\nTanner Gray: -742\nGiovanni Ruggiero: -623\nCorey Heim: -403\nTony Stewart: -396\nKaden Honeycutt: -319\nLayne Riggs: -241\nCory Roper: -162\nall others (30) >= +136",
+      "severity": "warn"
     }
   ]
 }
