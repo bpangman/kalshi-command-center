@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T18:44:56.950593Z",
+  "generated_at": "2026-10-22T18:48:12.560187Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -49,7 +49,7 @@
         "exposure_text": "+$258",
         "move": "Step price down 1c (16c to 15c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-22T18:44:55Z",
+        "at": "2026-10-22T18:47:56Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T18:20:05Z",
@@ -190,18 +190,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T18:44:55Z"
+    "ts": "2026-10-22T18:47:56Z"
   },
   "posts": [
-    {
-      "id": "1792551958682-9cecc5",
-      "ts": "2026-10-21T03:05:58Z",
-      "book": "W8-NECHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nCHI 1-6: -483 (-34.7% of bankroll)\nCHI 7-14: -67 (-4.8% of bankroll)\nCHI 15+: +381 (+27.3% of bankroll)\nNE 1-6: +381 (+27.3% of bankroll)\nNE 7-14: +81 (+5.8% of bankroll)\nNE 15+: +381 (+27.3% of bankroll)\nCollected $381 premium ($0 fees) | Paper margin over fair $56 (not realized until settlement)\nheld / resting\nCHI 1-6: 863 / 37\nCHI 7-14: 448 / 452\nCHI 15+: 0 / 825\nNE 1-6: 0 / 900\nNE 7-14: 300 / 233\nNE 15+: 0 / 810\nPosted book 1.24 | Sold avg 1.211 | Worst now +113 | Cash free $1392\nAnchor age 0s | Last fill 5675s ago",
-      "severity": "info"
-    },
     {
       "id": "1792552750698-17fb4f",
       "ts": "2026-10-21T03:19:10Z",
@@ -3836,18 +3827,29 @@
       "text": "Row sold out: NE by 15+ at 10c (243 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1792694795831-30b377",
+      "ts": "2026-10-22T18:44:16Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 226: NE by 15+ x226 at 10c. Worst line -$127.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 226.0,
+        "fills": [
+          {
+            "side": "NE by 15+",
+            "price": 0.1,
+            "qty": 226.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792568205232-2bbc4b",
-      "ts": "2026-10-21T07:36:45Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-NECHI): worst -498.89 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792569936981-5ffa00",
       "ts": "2026-10-21T08:05:36Z",
@@ -4737,6 +4739,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-NECHI): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=5727. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792694720388-cc60f4",
+      "ts": "2026-10-22T18:45:20Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+226 on NE 15+ @ 0.10 (maker)\nworst outcome now -17\nheld 975/1050/349/1050/665/377\nIf the game ends... you make\nCHI 1-6: -52 (-3.7% of bankroll)\nCHI 7-14: -127 (-9.1% of bankroll)\nCHI 15+: +575 (+41.3% of bankroll)\nNE 1-6: -127 (-9.1% of bankroll)\nNE 7-14: +258 (+18.6% of bankroll)\nNE 15+: +546 (+39.2% of bankroll)",
       "severity": "warn"
     }
   ]
