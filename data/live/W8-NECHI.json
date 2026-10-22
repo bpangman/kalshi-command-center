@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T18:28:03.580868Z",
+  "generated_at": "2026-10-22T18:30:44.044485Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -48,12 +48,12 @@
         "exposure": 235.65,
         "exposure_text": "+$236",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 1:30pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-22T18:30:05Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T18:20:05Z",
-        "lag_note": "Steps to 15c if no fill by 1:30pm CT."
+        "lag_note": "Steps to 15c at the next check."
       },
       {
         "side": "CHI by 15+",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T18:27:47Z"
+    "ts": "2026-10-22T18:29:48Z"
   },
   "posts": [
     {
@@ -3840,15 +3840,6 @@
   ],
   "audits": [
     {
-      "id": "1792566647276-d39bdc",
-      "ts": "2026-10-21T07:10:47Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+30 on CHI 1-6 @ 0.29 (maker)\nworst outcome now +113\nheld 893/448/0/0/334/0\nIf the game ends... you make\nCHI 1-6: -499 (-35.8% of bankroll)\nCHI 7-14: -53 (-3.8% of bankroll)\nCHI 15+: +394 (+28.3% of bankroll)\nNE 1-6: +394 (+28.3% of bankroll)\nNE 7-14: +61 (+4.4% of bankroll)\nNE 15+: +394 (+28.3% of bankroll)",
-      "severity": "warn"
-    },
-    {
       "id": "1792568205232-2bbc4b",
       "ts": "2026-10-21T07:36:45Z",
       "book": "W8-NECHI",
@@ -4737,6 +4728,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+63 on NE 7-14 @ 0.15 (maker)\nworst outcome now -17\nheld 975/1050/349/1050/665/151\nIf the game ends... you make\nCHI 1-6: -74 (-5.3% of bankroll)\nCHI 7-14: -149 (-10.7% of bankroll)\nCHI 15+: +552 (+39.7% of bankroll)\nNE 1-6: -149 (-10.7% of bankroll)\nNE 7-14: +236 (+16.9% of bankroll)\nNE 15+: +750 (+53.9% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792693814797-aa68f8",
+      "ts": "2026-10-22T18:30:14Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-NECHI): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=5727. Check the command center.",
       "severity": "warn"
     }
   ]
