@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-22T21:33:51.679289Z",
+  "generated_at": "2026-10-22T21:37:56.581906Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "BAL by 1-6",
-        "resting": "none",
+        "resting": "527 @ 22-33c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -21,7 +21,7 @@
       },
       {
         "side": "BAL by 15+",
-        "resting": "none",
+        "resting": "451 @ 15-24c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -31,7 +31,7 @@
       },
       {
         "side": "BAL by 7-14",
-        "resting": "none",
+        "resting": "489 @ 20-27c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -41,7 +41,7 @@
       },
       {
         "side": "CIN by 1-6",
-        "resting": "none",
+        "resting": "527 @ 21-32c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -51,7 +51,7 @@
       },
       {
         "side": "CIN by 15+",
-        "resting": "none",
+        "resting": "289 @ 14-21c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -61,7 +61,7 @@
       },
       {
         "side": "CIN by 7-14",
-        "resting": "none",
+        "resting": "451 @ 17-25c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -74,7 +74,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 12:00pm CT. Sold 0, 0 resting. Worst line $0 (goal -$75)."
+          "Pregame build, kickoff Sun 12:00pm CT. Sold 0, 2,734 resting. Worst line $0 (goal -$75)."
         ]
       },
       {
@@ -128,54 +128,54 @@
       {
         "label": "BAL by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 527.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.22
       },
       {
         "label": "BAL by 7-14",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 489.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.2
       },
       {
         "label": "BAL by 15+",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 451.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.15
       },
       {
         "label": "CIN by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 527.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.21
       },
       {
         "label": "CIN by 7-14",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 451.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.17
       },
       {
         "label": "CIN by 15+",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 289.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.14
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-22T21:33:48Z"
+    "ts": "2026-10-22T21:37:50Z"
   },
   "posts": [
     {
@@ -206,7 +206,51 @@
       "text": "Building toward kickoff Sun 12:00pm CT. Worst line $0, goal -$75. Next: Paid balancing starts, Sun 11:15am CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792704848957-a11337",
+      "ts": "2026-10-22T21:33:54Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792704889278-a24740",
+      "ts": "2026-10-22T21:34:29Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: allotment SCALE applied: pregame_allotment_scale 0.25 recorded book-wide (one-time decrease done; a restart or",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792704970035-89a92d",
+      "ts": "2026-10-22T21:34:29Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,734 (launch ladder): BAL by 1-6 x275 at 22c, BAL by 7-14 x275 at 20c, +26 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2734.0,
+        "rows": 28
+      }
     }
   ],
-  "audits": []
+  "audits": [
+    {
+      "id": "1792704929681-ef0cab",
+      "ts": "2026-10-22T21:35:29Z",
+      "book": "W8-CINBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    }
+  ]
 }
