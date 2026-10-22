@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T23:38:03.222109Z",
+  "generated_at": "2026-10-22T23:40:10.010665Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame balancing",
@@ -59,7 +59,7 @@
         "exposure": 157.78,
         "exposure_text": "+$158",
         "move": "Hold price at 26c",
-        "when": "crowd pays 25.9c; steps down 1c only if it trades lower",
+        "when": "crowd pays 25.8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -183,24 +183,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T23:37:04Z"
+    "ts": "2026-10-22T23:40:05Z"
   },
   "posts": [
-    {
-      "id": "1792594917585-b2cfba",
-      "ts": "2026-10-21T15:01:51Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on NE by 1-6: no fill for 10 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "NE by 1-6",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
     {
       "id": "1792595501872-4c6c95",
       "ts": "2026-10-21T15:11:41Z",
@@ -3784,18 +3769,18 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792712403000-8385b2",
+      "ts": "2026-10-22T23:40:03Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nCHI 1-6: +158 (+11.3% of bankroll)\nCHI 7-14: +5 (+0.4% of bankroll)\nCHI 15+: +93 (+6.7% of bankroll)\nNE 1-6: +6 (+0.4% of bankroll)\nNE 7-14: -0 (-0.0% of bankroll)\nNE 15+: +619 (+44.5% of bankroll)\nCollected $1208 premium ($0 fees) | Paper margin over fair $128 (not realized until settlement)\nEvent: CHI 7-14: CHI 0-0, Q0 0:00; NE 7-14: NE 0-0, Q0 0:00\nheld / resting\nCHI 1-6: 1050 / 158\nCHI 7-14: 1203 / 0\nCHI 15+: 1115 / 128\nNE 1-6: 1202 / 0\nNE 7-14: 1208 / 0\nNE 15+: 589 / 529\nPosted book 1.14 | Sold avg 1.099 | Worst now +85 | Cash free $1392\nAnchor age 43s | Last fill 440s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792592043654-0bd373",
-      "ts": "2026-10-21T14:14:03Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-NECHI): worst -498.97 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792593863653-6a626b",
       "ts": "2026-10-21T14:44:23Z",
@@ -4685,6 +4670,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+81 on NE 1-6 @ 0.19 (maker)\nworst outcome now +58\nheld 997/1203/1115/1139/1208/589\nIf the game ends... you make\nCHI 1-6: +185 (+13.3% of bankroll)\nCHI 7-14: -21 (-1.5% of bankroll)\nCHI 15+: +67 (+4.8% of bankroll)\nNE 1-6: +43 (+3.1% of bankroll)\nNE 7-14: -26 (-1.9% of bankroll)\nNE 15+: +593 (+42.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792712352159-6f0ae7",
+      "ts": "2026-10-22T23:39:12Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W8-NECHI - New England by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
