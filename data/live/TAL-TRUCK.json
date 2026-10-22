@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-22T07:36:05.061844Z",
+  "generated_at": "2026-10-22T07:44:42.457992Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 48,
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Giovanni Ruggiero",
@@ -125,7 +125,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 41,606 resting. Worst line unknown. Bot is slow (checks every 48s, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 41,606 resting. Worst line unknown. Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -247,19 +247,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 23 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-22T07:36:00Z"
+    "ts": "2026-10-22T07:44:04Z"
   },
   "posts": [
-    {
-      "id": "1792550534566-c64dc0",
-      "ts": "2026-10-21T02:42:14Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 25,174 resting. Next: Risk glide starts, Fri 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792551441316-ad15fc",
       "ts": "2026-10-21T02:57:21Z",
@@ -3566,18 +3556,19 @@
       "text": "Bot could not read Kalshi (24 of 3 tries). It does nothing and retries.",
       "severity": "warn",
       "title": "Read failure"
+    },
+    {
+      "id": "1792655044718-aa2bf6",
+      "ts": "2026-10-22T07:43:53Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (36 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
     }
   ],
   "audits": [
-    {
-      "id": "1792586923115-2a5aaa",
-      "ts": "2026-10-21T12:48:43Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -246.28 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792587284932-e60f68",
       "ts": "2026-10-21T12:54:44Z",
@@ -4463,6 +4454,15 @@
     {
       "id": "1792654423961-c00506",
       "ts": "2026-10-22T07:33:43Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
+    },
+    {
+      "id": "1792655033434-21736c",
+      "ts": "2026-10-22T07:43:53Z",
       "book": "TAL-TRUCK",
       "kind": "audit",
       "source": "bot",
