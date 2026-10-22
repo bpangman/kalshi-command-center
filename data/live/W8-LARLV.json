@@ -1,6 +1,6 @@
 {
   "key": "W8-LARLV",
-  "generated_at": "2026-10-22T21:29:17.501509Z",
+  "generated_at": "2026-10-22T21:33:51.679289Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "LAR by 1-6",
-        "resting": "none",
+        "resting": "527 @ 24-34c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -21,7 +21,7 @@
       },
       {
         "side": "LAR by 15+",
-        "resting": "none",
+        "resting": "451 @ 23-31c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -31,7 +31,7 @@
       },
       {
         "side": "LAR by 7-14",
-        "resting": "none",
+        "resting": "489 @ 24-31c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -41,7 +41,7 @@
       },
       {
         "side": "LV by 1-6",
-        "resting": "none",
+        "resting": "489 @ 21-28c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -51,7 +51,7 @@
       },
       {
         "side": "LV by 15+",
-        "resting": "none",
+        "resting": "327 @ 10-18c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -61,7 +61,7 @@
       },
       {
         "side": "LV by 7-14",
-        "resting": "none",
+        "resting": "451 @ 13-21c",
         "exposure": 0.0,
         "exposure_text": "$0",
         "move": "Holding",
@@ -74,7 +74,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 3:25pm CT. Sold 0, 0 resting. Worst line $0 (goal -$75)."
+          "Pregame build, kickoff Sun 3:25pm CT. Sold 0, 2,734 resting. Worst line $0 (goal -$75)."
         ]
       },
       {
@@ -128,54 +128,54 @@
       {
         "label": "LAR by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 527.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.24
       },
       {
         "label": "LAR by 7-14",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 489.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.24
       },
       {
         "label": "LAR by 15+",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 451.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.23
       },
       {
         "label": "LV by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 489.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.21
       },
       {
         "label": "LV by 7-14",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 451.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.13
       },
       {
         "label": "LV by 15+",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 327.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.1
       }
     ],
     "book": "W8-LARLV",
-    "ts": "2026-10-22T21:29:06Z"
+    "ts": "2026-10-22T21:33:08Z"
   },
   "posts": [
     {
@@ -215,7 +215,60 @@
       "text": "Building toward kickoff Sun 3:25pm CT. Worst line $0, goal -$75. Next: Paid balancing starts, Sun 2:40pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792704606931-f821cf",
+      "ts": "2026-10-22T21:30:05Z",
+      "book": "W8-LARLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792704627118-9bf303",
+      "ts": "2026-10-22T21:30:19Z",
+      "book": "W8-LARLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: allotment SCALE applied: pregame_allotment_scale 0.25 recorded book-wide (one-time decrease done; a restart or",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792704748108-3e5f89",
+      "ts": "2026-10-22T21:30:19Z",
+      "book": "W8-LARLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,734 (launch ladder): LV by 1-6 x275 at 21c, LAR by 1-6 x275 at 24c, +26 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2734.0,
+        "rows": 28
+      }
     }
   ],
-  "audits": []
+  "audits": [
+    {
+      "id": "1792704592035-8addde",
+      "ts": "2026-10-22T21:29:52Z",
+      "book": "W8-LARLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792704680266-b62eee",
+      "ts": "2026-10-22T21:31:20Z",
+      "book": "W8-LARLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    }
+  ]
 }
