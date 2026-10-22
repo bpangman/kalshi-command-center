@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-22T11:10:25.326871Z",
+  "generated_at": "2026-10-22T11:16:56.804976Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$897, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 61,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Ricky Stenhouse Jr.",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 21,425, 63,451 resting. Worst line -$897 (limit now -$550). Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 21,425, 63,451 resting. Worst line -$897 (limit now -$550)."
         ]
       },
       {
@@ -212,18 +212,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-22T11:09:37Z"
+    "ts": "2026-10-22T11:16:40Z"
   },
   "posts": [
-    {
-      "id": "1792563740671-bdb08e",
-      "ts": "2026-10-21T06:22:20Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBubba Wallace: -891\nTyler Reddick: -891\nChase Briscoe: -891\nDenny Hamlin: -745\nChristopher Bell: -558\nKyle Larson: -516\nJoey Logano: -141\nRicky Stenhouse Jr.: -141\nall others (32) >= -141\nCollected $873 premium ($14 fees) | Paper margin over fair $163 (not realized until settlement)\nCore posted book 0.87 | Worst now -891 | Cash free $3492\nAnchor age 31s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792563952570-e361bd",
       "ts": "2026-10-21T06:25:52Z",
@@ -3476,27 +3467,19 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$897, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792667558754-03a51b",
+      "ts": "2026-10-22T11:12:38Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$897, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792603011239-7e5377",
-      "ts": "2026-10-21T17:16:51Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 1650 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792603334693-28c77b",
-      "ts": "2026-10-21T17:22:14Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Kyle Larson has had no resting orders for at least 1468 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792603509969-e38b41",
       "ts": "2026-10-21T17:25:09Z",
@@ -4377,6 +4360,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -919.41 vs floor -363.40. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792667756285-50792c",
+      "ts": "2026-10-22T11:15:56Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 20 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-BRKE low 1443c, KXNASCARRACE-YEL26-MIMC low 2187c, KXNASCARRACE-YEL26-JOLO low 859c, KXNASCARRACE-YEL26-AUDI low 1549c, KXNASCARRACE-YEL26-RIST low 171c, KXNASCARRACE-YEL26-ROCH low 1187c, KXNASCARRACE-YEL26-RYBL low 1187c, KXNASCARRACE-YEL26-ALBO low 2187c, KXNASCARRACE-YEL26-CHEL low 1187c, KXNASCARRACE-YEL26-ERJO low 2067c, KXNASCARRACE-YEL26-JONE low 2187c, KXNASCARRACE-YEL26-COCU low 2187c, KXNASCARRACE-YEL26-DASU low 2187c, KXNASCARRACE-YEL26-AUHI low 2187c, KXNASCARRACE-YEL26-CHBE low 408c, KXNASCARRACE-YEL26-WIBY low 1277c, KXNASCARRACE-YEL26-NOGR low 2187c, KXNASCARRACE-YEL26-ZASM low 2187c, KXNASCARRACE-YEL26-CAHO low 296c, KXNASCARRACE-YEL26-TYGI low 1749c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792667756286-892fea",
+      "ts": "2026-10-22T11:15:56Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -896.88 vs floor -363.40. Check the command center.",
       "severity": "critical"
     }
   ]
