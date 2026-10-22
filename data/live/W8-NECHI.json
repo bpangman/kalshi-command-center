@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T14:20:11.210389Z",
+  "generated_at": "2026-10-22T14:40:44.143660Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -48,12 +48,12 @@
         "exposure": 253.08,
         "exposure_text": "+$253",
         "move": "Hold price at 15c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 15c (now 18)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T12:44:43Z",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (18 traded)."
       },
       {
         "side": "NE by 15+",
@@ -61,7 +61,7 @@
         "exposure": 721.08,
         "exposure_text": "+$721",
         "move": "Hold price at 10c",
-        "when": "crowd pays 11c; steps down 1c only if it trades lower",
+        "when": "crowd pays 10.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
@@ -73,13 +73,13 @@
         "resting": "900 @ 18-22c",
         "exposure": 736.08,
         "exposure_text": "+$736",
-        "move": "Hold price at 18c",
-        "when": "crowd pays 19c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Step price down 1c (18c to 17c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-22T14:40:08Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T05:09:15Z",
-        "lag_note": "Price 18c matches the crowd."
+        "lag_note": "Steps to 17c at the next check."
       }
     ],
     "sections": [
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): CHI by 15+, NE by 7-14, NE by 15+.",
-          "CHI by 15+: 931 behind. Price 18c matches the crowd.",
+          "CHI by 15+: 931 behind. Steps to 17c at the next check.",
           "NE by 15+: 916 behind. Price 10c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -190,23 +190,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T14:20:00Z"
+    "ts": "2026-10-22T14:40:08Z"
   },
   "posts": [
-    {
-      "id": "1792533773171-4ba773",
-      "ts": "2026-10-20T22:00:46Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 75 (rung 3 allotment): NE by 7-14 x75 at 19c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 75.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1792534256607-18cd34",
       "ts": "2026-10-20T22:10:52Z",
@@ -3827,6 +3813,16 @@
     {
       "id": "1792678719761-bffd7a",
       "ts": "2026-10-22T14:18:39Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,215 resting. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792679625392-e59d6a",
+      "ts": "2026-10-22T14:33:45Z",
       "book": "W8-NECHI",
       "kind": "status",
       "source": "narrator",
