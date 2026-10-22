@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-22T04:16:01.473342Z",
+  "generated_at": "2026-10-22T04:22:26.049712Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -95,16 +95,16 @@
       },
       {
         "side": "Justin Allgaier",
-        "resting": "1,102 @ 8c",
+        "resting": "1,102 @ 7-8c",
         "exposure": 134.45,
         "exposure_text": "+$134",
-        "move": "Hold price at 8c",
-        "when": "needs 50+ crowd trades under 8c (now 23)",
+        "move": "Hold price at 7c",
+        "when": "crowd pays 7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up Sat 2:30pm CT",
         "last_fill": "2026-10-21T19:11:53Z",
-        "lag_note": "Crowd is quiet here (23 traded)."
+        "lag_note": "Price 7c matches the crowd."
       },
       {
         "side": "Jesse Love",
@@ -209,7 +209,7 @@
         "resting": 1102.0,
         "target": 1200.0,
         "status": "lagging",
-        "price": 0.08
+        "price": 0.07
       },
       {
         "label": "Sam Mayer",
@@ -230,29 +230,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-22T04:15:28Z"
+    "ts": "2026-10-22T04:21:31Z"
   },
   "posts": [
-    {
-      "id": "1792529909104-f06a9f",
-      "ts": "2026-10-20T20:58:21Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sportsbook prices are back (Bovada).",
-      "severity": "info",
-      "title": "Price source"
-    },
-    {
-      "id": "1792529909105-5cc6af",
-      "ts": "2026-10-20T20:58:21Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 33 drivers: Sam Mayer, driver TAGR, driver SASM.",
-      "severity": "info",
-      "title": "Price shock"
-    },
     {
       "id": "1792529909105-a6c711",
       "ts": "2026-10-20T20:58:22Z",
@@ -3417,18 +3397,33 @@
       "text": "Quiet for 15 min. 41,277 resting. Next: Risk glide starts, Sat 10:30am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792642750500-31db12",
+      "ts": "2026-10-22T04:18:58Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792642932110-8dd670",
+      "ts": "2026-10-22T04:19:59Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 330 (race anchor): Justin Allgaier x330 at 7c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 330.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792544254029-914c51",
-      "ts": "2026-10-21T00:57:34Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): 17 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-RYSI high 721c, KXNASCARRACE-THEPG26-JEBU high 722c, KXNASCARRACE-THEPG26-RYEL high 722c, KXNASCARRACE-THEPG26-PAEM high 722c, KXNASCARRACE-THEPG26-SAMA high 724c, KXNASCARRACE-THEPG26-WIRO high 722c, KXNASCARRACE-THEPG26-TAGR high 724c, KXNASCARRACE-THEPG26-DETH high 722c, KXNASCARRACE-THEPG26-NILE high 722c, KXNASCARRACE-THEPG26-SASM high 724c, KXNASCARRACE-THEPG26-LEHO high 722c, KXNASCARRACE-THEPG26-DADY high 722c, KXNASCARRACE-THEPG26-WISA high 723c, KXNASCARRACE-THEPG26-LASC high 722c, KXNASCARRACE-THEPG26-JAFI high 722c, KXNASCARRACE-THEPG26-JOWI high 723c, KXNASCARRACE-THEPG26-MAMA high 723c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792546192635-facd7e",
       "ts": "2026-10-21T01:29:52Z",
@@ -4319,6 +4314,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -537.91 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792642829887-1dcdb2",
+      "ts": "2026-10-22T04:20:29Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
