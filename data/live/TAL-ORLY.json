@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-22T07:18:25.940354Z",
+  "generated_at": "2026-10-22T07:27:33.633923Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -228,29 +228,9 @@
     ],
     "moves_note": "4 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-22T07:17:52Z"
+    "ts": "2026-10-22T07:26:56Z"
   },
   "posts": [
-    {
-      "id": "1792529909110-60513e",
-      "ts": "2026-10-20T20:58:22Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: interim -> sportsbook: Josh Bilicki longshot allotment 650, ladder 0.02 at sportsbook fair 0.006; interim rows",
-      "severity": "info",
-      "title": "Pricing source"
-    },
-    {
-      "id": "1792529909110-3b284a",
-      "ts": "2026-10-20T20:58:22Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: interim -> sportsbook: Kyle Sieg longshot allotment 650, ladder 0.04 at sportsbook fair 0.006; interim rows ke",
-      "severity": "info",
-      "title": "Pricing source"
-    },
     {
       "id": "1792529909110-8a926d",
       "ts": "2026-10-20T20:58:22Z",
@@ -3416,18 +3396,29 @@
       "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line unknown, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792653532678-50470f",
+      "ts": "2026-10-22T07:00:51Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi paused trading. The bot waits, then re-posts anything the pause wipes.",
+      "severity": "warn",
+      "title": "Kalshi pause"
+    },
+    {
+      "id": "1792653532678-4d20f9",
+      "ts": "2026-10-22T07:14:26Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (1 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
     }
   ],
   "audits": [
-    {
-      "id": "1792565407981-20dbbe",
-      "ts": "2026-10-21T06:50:07Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): 17 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JEBU high 722c, KXNASCARRACE-THEPG26-RYEL high 722c, KXNASCARRACE-THEPG26-BRJO high 724c, KXNASCARRACE-THEPG26-PAEM high 722c, KXNASCARRACE-THEPG26-SAMA high 724c, KXNASCARRACE-THEPG26-WIRO high 722c, KXNASCARRACE-THEPG26-TAGR high 724c, KXNASCARRACE-THEPG26-DETH high 722c, KXNASCARRACE-THEPG26-NILE high 722c, KXNASCARRACE-THEPG26-LEHO high 722c, KXNASCARRACE-THEPG26-DADY high 722c, KXNASCARRACE-THEPG26-WISA high 723c, KXNASCARRACE-THEPG26-LASC high 722c, KXNASCARRACE-THEPG26-JAFI high 722c, KXNASCARRACE-THEPG26-JOWI high 723c, KXNASCARRACE-THEPG26-PARE high 722c, KXNASCARRACE-THEPG26-MAMA high 723c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792567320271-994262",
       "ts": "2026-10-21T07:22:00Z",
@@ -4318,6 +4309,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -537.91 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792653972472-42eb3d",
+      "ts": "2026-10-22T07:26:12Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
     }
   ]
 }

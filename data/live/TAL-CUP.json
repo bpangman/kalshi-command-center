@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-22T07:18:25.940354Z",
+  "generated_at": "2026-10-22T07:27:33.633923Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 48,
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Ricky Stenhouse Jr.",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 0, 61,368 resting. Worst line unknown. Bot is slow (checks every 48s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 0, 61,368 resting. Worst line unknown. Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -212,19 +212,9 @@
     ],
     "moves_note": "12 more drivers with small exposure are not shown. 19 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-22T07:17:52Z"
+    "ts": "2026-10-22T07:26:56Z"
   },
   "posts": [
-    {
-      "id": "1792535667240-033b46",
-      "ts": "2026-10-20T22:34:27Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$927, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792535727775-0dda1e",
       "ts": "2026-10-20T22:35:27Z",
@@ -3445,18 +3435,19 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line unknown, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792653774605-2bd090",
+      "ts": "2026-10-22T07:22:42Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (13 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
     }
   ],
   "audits": [
-    {
-      "id": "1792595706355-2a7a23",
-      "ts": "2026-10-21T15:15:06Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 1528 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792596010035-e9b3f0",
       "ts": "2026-10-21T15:20:10Z",
@@ -4346,6 +4337,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+268 on Joey Logano @ 0.08 (maker)\nworst outcome now -935\nIf the race ends... you make\nRicky Stenhouse Jr.: -935\nBubba Wallace: -760\nTyler Reddick: -760\nChase Briscoe: -760\nDenny Hamlin: -615\nCarson Hocevar: -485\nChristopher Bell: -427\nKyle Larson: -385\nall others (32) >= -338",
+      "severity": "warn"
+    },
+    {
+      "id": "1792653811159-481615",
+      "ts": "2026-10-22T07:23:31Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
       "severity": "warn"
     }
   ]

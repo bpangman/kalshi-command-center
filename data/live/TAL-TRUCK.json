@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-22T07:18:25.940354Z",
+  "generated_at": "2026-10-22T07:27:33.633923Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 49,
+    "checks_every_s": 64,
     "moves": [
       {
         "side": "Giovanni Ruggiero",
@@ -125,7 +125,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 41,606 resting. Worst line unknown. Bot is slow (checks every 49s, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 41,606 resting. Worst line unknown. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -247,18 +247,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 23 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-22T07:17:52Z"
+    "ts": "2026-10-22T07:26:56Z"
   },
   "posts": [
-    {
-      "id": "1792549204200-2d7792",
-      "ts": "2026-10-21T02:20:04Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nLayne Riggs: -255\nBrenden Queen: -163\nThomas Annunziata: -163\nGiovanni Ruggiero: -109\nChandler Smith: -36\nJustin Haley: +39\nJake Garcia: +48\nBen Rhodes: +59\nall others (30) >= +70\nCollected $71 premium ($1 fees) | Paper margin over fair $16 (not realized until settlement)\nCore posted book 1.49 | Worst now -255 | Cash free $3482\nAnchor age 83s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792549749004-76e75e",
       "ts": "2026-10-21T02:27:04Z",
@@ -3575,18 +3566,19 @@
       "text": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line unknown, final target $0. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792653734332-309567",
+      "ts": "2026-10-22T07:21:58Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (12 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
     }
   ],
   "audits": [
-    {
-      "id": "1792585089749-f39383",
-      "ts": "2026-10-21T12:18:09Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -246.28 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792585311461-e7665c",
       "ts": "2026-10-21T12:21:51Z",
@@ -4477,6 +4469,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -470.67 vs floor -165.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792653813792-a7d7f8",
+      "ts": "2026-10-22T07:23:33Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
     }
   ]
 }
