@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-22T04:22:26.049712Z",
+  "generated_at": "2026-10-22T04:29:12.418619Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$962, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Ricky Stenhouse Jr.",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 20,220, 61,122 resting. Worst line -$962 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 20,220, 61,122 resting. Worst line -$962 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -212,44 +212,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-22T04:21:31Z"
+    "ts": "2026-10-22T04:28:34Z"
   },
   "posts": [
-    {
-      "id": "1792528336789-5c8e04",
-      "ts": "2026-10-20T20:32:13Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi refused a post on Joey Logano: order(s) rejected: [{'code': 'invalid_order', 'details': 'po.",
-      "severity": "warn",
-      "title": "Post refused"
-    },
-    {
-      "id": "1792528356931-dfbef5",
-      "ts": "2026-10-20T20:32:12Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 96: driver AUDI x94 at 2c, Chase Elliott x2 at 5c. Worst line -$928.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 96.0,
-        "fills": [
-          {
-            "side": "driver AUDI",
-            "price": 0.02,
-            "qty": 94.0
-          },
-          {
-            "side": "Chase Elliott",
-            "price": 0.05,
-            "qty": 2.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792528377091-4d49a1",
       "ts": "2026-10-20T20:32:45Z",
@@ -3476,18 +3441,29 @@
       "text": "Quiet for 15 min. 61,122 resting. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792643093223-bb0d2b",
+      "ts": "2026-10-22T04:24:38Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792643314842-10bb69",
+      "ts": "2026-10-22T04:28:34Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$962, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792590559819-6e7f10",
-      "ts": "2026-10-21T13:49:19Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 12 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-MIMC low 1048c, KXNASCARRACE-YEL26-AUDI low 895c, KXNASCARRACE-YEL26-RYBL low 750c, KXNASCARRACE-YEL26-CHEL low 750c, KXNASCARRACE-YEL26-ERJO low 1048c, KXNASCARRACE-YEL26-JONE low 1048c, KXNASCARRACE-YEL26-COCU low 1048c, KXNASCARRACE-YEL26-DASU low 1048c, KXNASCARRACE-YEL26-AUHI low 1048c, KXNASCARRACE-YEL26-NOGR low 1048c, KXNASCARRACE-YEL26-ZASM low 1048c, KXNASCARRACE-YEL26-TYGI low 1047c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792591440951-8b1628",
       "ts": "2026-10-21T14:04:00Z",
@@ -4378,6 +4354,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -962.14 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792643119575-dcfd49",
+      "ts": "2026-10-22T04:25:19Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
