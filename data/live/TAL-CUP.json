@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-22T07:51:32.131526Z",
+  "generated_at": "2026-10-22T08:00:12.323324Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 48,
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Ricky Stenhouse Jr.",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 0, 61,368 resting. Worst line unknown. Bot is slow (checks every 48s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 0, 61,368 resting. Worst line unknown. Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -212,29 +212,9 @@
     ],
     "moves_note": "12 more drivers with small exposure are not shown. 19 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-22T07:51:07Z"
+    "ts": "2026-10-22T08:00:12Z"
   },
   "posts": [
-    {
-      "id": "1792537278777-b4e0e3",
-      "ts": "2026-10-20T22:59:18Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 331: Denny Hamlin x331 at 6c. Worst line -$907.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 331.0,
-        "fills": [
-          {
-            "side": "Denny Hamlin",
-            "price": 0.06,
-            "qty": 331.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792537419822-0b8856",
       "ts": "2026-10-20T23:03:39Z",
@@ -3445,27 +3425,19 @@
       "text": "Bot could not read Kalshi (37 of 3 tries). It does nothing and retries.",
       "severity": "warn",
       "title": "Read failure"
+    },
+    {
+      "id": "1792655749910-9f2122",
+      "ts": "2026-10-22T07:55:45Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (49 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
     }
   ],
   "audits": [
-    {
-      "id": "1792597224135-a18ef6",
-      "ts": "2026-10-21T15:40:24Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Denny Hamlin has had no resting orders for at least 982 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792597831264-e5c17e",
-      "ts": "2026-10-21T15:50:31Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Christopher Bell has had no resting orders for at least 1407 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792597953780-ea86ed",
       "ts": "2026-10-21T15:52:33Z",
@@ -4347,6 +4319,24 @@
       "source": "bot",
       "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
       "severity": "warn"
+    },
+    {
+      "id": "1792655745111-d7ec2b",
+      "ts": "2026-10-22T07:55:45Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
+    },
+    {
+      "id": "1792655944616-e3c883",
+      "ts": "2026-10-22T07:59:04Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): heartbeat ok=false. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
