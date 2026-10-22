@@ -422,10 +422,22 @@ function statMoneyEl(label, value) {
 
 /* -- data fetch -- */
 
-function fetchJSON(path) {
-  return fetch(path + "?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
-    if (!res.ok) throw new Error(path + " returned " + res.status);
+/* Data is read straight from the repo's raw GitHub URL so a slow or failed
+   GitHub Pages build never delays it; the relative path (Pages copy) is the
+   fallback if the raw fetch fails. */
+var RAW_BASE = "https://raw.githubusercontent.com/bpangman/kalshi-command-center/main/";
+
+function fetchJSONFrom(url) {
+  return fetch(url + "?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
+    if (!res.ok) throw new Error(url + " returned " + res.status);
     return res.json();
+  });
+}
+
+function fetchJSON(path) {
+  if (path.indexOf("data/") !== 0) return fetchJSONFrom(path);
+  return fetchJSONFrom(RAW_BASE + path).catch(function () {
+    return fetchJSONFrom(path);
   });
 }
 
