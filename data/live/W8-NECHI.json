@@ -1,10 +1,10 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T21:06:02.067630Z",
+  "generated_at": "2026-10-22T21:08:56.139327Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$113, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$110, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "CHI by 7-14",
         "resting": "none",
-        "exposure": -113.13,
-        "exposure_text": "-$113",
+        "exposure": -110.48,
+        "exposure_text": "-$110",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at 6:30pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "NE by 1-6",
         "resting": "none",
-        "exposure": -113.07,
-        "exposure_text": "-$113",
+        "exposure": -110.42,
+        "exposure_text": "-$110",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-22T23:30:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "CHI by 1-6",
         "resting": "75 @ 34c",
-        "exposure": -38.31,
-        "exposure_text": "-$38",
+        "exposure": -35.66,
+        "exposure_text": "-$36",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-22T23:30:00Z",
@@ -45,11 +45,11 @@
       {
         "side": "NE by 7-14",
         "resting": "292 @ 14c",
-        "exposure": 175.69,
-        "exposure_text": "+$176",
+        "exposure": 178.34,
+        "exposure_text": "+$178",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-22T21:05:55Z",
+        "at": "2026-10-22T21:07:56Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T20:08:25Z",
@@ -58,8 +58,8 @@
       {
         "side": "NE by 15+",
         "resting": "741 @ 10-14c",
-        "exposure": 559.69,
-        "exposure_text": "+$560",
+        "exposure": 562.34,
+        "exposure_text": "+$562",
         "move": "Hold price at 10c",
         "when": "crowd pays 10c; steps down 1c only if it trades lower",
         "at": null,
@@ -70,30 +70,30 @@
       },
       {
         "side": "CHI by 15+",
-        "resting": "894 @ 15-21c",
-        "exposure": 588.17,
-        "exposure_text": "+$588",
+        "resting": "877 @ 15-21c",
+        "exposure": 573.18,
+        "exposure_text": "+$573",
         "move": "Step price down 1c (15c to 14c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-22T21:05:55Z",
+        "when": "if no fill by 4:17pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-22T21:17:15Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
-        "last_fill": "2026-10-22T18:09:16Z",
-        "lag_note": "Steps to 14c at the next check."
+        "last_fill": "2026-10-22T21:07:15Z",
+        "lag_note": "Steps to 14c if no fill by 4:17pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,561, 2,002 resting. Worst line -$113 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,579, 1,985 resting. Worst line -$110 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): CHI by 15+, NE by 7-14, NE by 15+.",
-          "CHI by 15+: 701 behind. Steps to 14c at the next check.",
+          "CHI by 15+: 684 behind. Steps to 14c if no fill by 4:17pm CT.",
           "NE by 15+: 673 behind. Price 10c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -102,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$113 is better than -$200.",
+          "Gate open: worst line -$110 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -158,8 +158,8 @@
       },
       {
         "label": "CHI by 15+",
-        "held": 348.5,
-        "resting": 894.5,
+        "held": 366.2,
+        "resting": 876.8,
         "target": null,
         "status": "lagging",
         "price": 0.15
@@ -190,24 +190,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T21:05:55Z"
+    "ts": "2026-10-22T21:07:56Z"
   },
   "posts": [
-    {
-      "id": "1792563408807-870ce6",
-      "ts": "2026-10-21T06:16:35Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on CHI by 7-14: no fill for 465 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "CHI by 7-14",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
     {
       "id": "1792563509182-1f0fd4",
       "ts": "2026-10-21T06:16:14Z",
@@ -3844,18 +3829,18 @@
       "text": "Quiet for 15 min. 2,002 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792703265340-9e3c84",
+      "ts": "2026-10-22T21:07:45Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nCHI 1-6: -36 (-2.6% of bankroll)\nCHI 7-14: -110 (-7.9% of bankroll)\nCHI 15+: +573 (+41.2% of bankroll)\nNE 1-6: -110 (-7.9% of bankroll)\nNE 7-14: +178 (+12.8% of bankroll)\nNE 15+: +562 (+40.4% of bankroll)\nCollected $939 premium ($0 fees) | Paper margin over fair $123 (not realized until settlement)\nEvent: CHI 7-14: CHI 0-0, Q0 0:00; NE 7-14: NE 0-0, Q0 0:00\nheld / resting\nCHI 1-6: 975 / 75\nCHI 7-14: 1050 / 0\nCHI 15+: 366 / 877\nNE 1-6: 1050 / 0\nNE 7-14: 761 / 292\nNE 15+: 377 / 741\nPosted book 1.19 | Sold avg 1.124 | Worst now -9 | Cash free $1392\nAnchor age 0s | Last fill 29s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792573760033-6c5b0d",
-      "ts": "2026-10-21T09:09:20Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+31 on NE 7-14 @ 0.15 (maker)\nworst outcome now +113\nheld 898/448/0/0/365/0\nIf the game ends... you make\nCHI 1-6: -498 (-35.8% of bankroll)\nCHI 7-14: -47 (-3.4% of bankroll)\nCHI 15+: +401 (+28.8% of bankroll)\nNE 1-6: +401 (+28.8% of bankroll)\nNE 7-14: +35 (+2.5% of bankroll)\nNE 15+: +401 (+28.8% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1792575523529-fe0691",
       "ts": "2026-10-21T09:38:43Z",
@@ -4745,6 +4730,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-NECHI): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=1296. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792703330037-7fd730",
+      "ts": "2026-10-22T21:08:50Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+18 on CHI 15+ @ 0.15 (maker)\nworst outcome now -9\nheld 975/1050/366/1050/761/377\nIf the game ends... you make\nCHI 1-6: -36 (-2.6% of bankroll)\nCHI 7-14: -110 (-7.9% of bankroll)\nCHI 15+: +573 (+41.2% of bankroll)\nNE 1-6: -110 (-7.9% of bankroll)\nNE 7-14: +178 (+12.8% of bankroll)\nNE 15+: +562 (+40.4% of bankroll)",
       "severity": "warn"
     }
   ]
