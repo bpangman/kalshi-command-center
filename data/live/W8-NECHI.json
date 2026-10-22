@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T21:14:47.837176Z",
+  "generated_at": "2026-10-22T21:17:07.455857Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -49,7 +49,7 @@
         "exposure_text": "+$178",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-22T21:13:59Z",
+        "at": "2026-10-22T21:17:00Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T20:08:25Z",
@@ -74,12 +74,12 @@
         "exposure": 573.18,
         "exposure_text": "+$573",
         "move": "Step price down 1c (15c to 14c)",
-        "when": "if no fill by 4:17pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-22T21:17:15Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:30pm CT",
         "last_fill": "2026-10-22T21:07:15Z",
-        "lag_note": "Steps to 14c if no fill by 4:17pm CT."
+        "lag_note": "Steps to 14c at the next check."
       }
     ],
     "sections": [
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): CHI by 15+, NE by 7-14, NE by 15+.",
-          "CHI by 15+: 684 behind. Steps to 14c if no fill by 4:17pm CT.",
+          "CHI by 15+: 684 behind. Steps to 14c at the next check.",
           "NE by 15+: 673 behind. Price 10c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -190,24 +190,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T21:13:59Z"
+    "ts": "2026-10-22T21:17:00Z"
   },
   "posts": [
-    {
-      "id": "1792563992677-f411ce",
-      "ts": "2026-10-21T06:26:20Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on CHI by 7-14: no fill for 475 min, added 300 at 21c (was 22c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "CHI by 7-14",
-        "from": 0.22,
-        "to": 0.21
-      }
-    },
     {
       "id": "1792564596992-c63786",
       "ts": "2026-10-21T06:36:33Z",
@@ -3838,6 +3823,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792703720087-470b47",
+      "ts": "2026-10-22T21:15:10Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$110. Lagging: CHI by 15+, NE by 7-14, NE by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
     }
   ],
   "audits": [
