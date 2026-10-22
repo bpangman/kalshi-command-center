@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-22T11:46:10.513652Z",
+  "generated_at": "2026-10-22T11:52:39.146828Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -115,7 +115,7 @@
         "exposure_text": "+$254",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-22T11:45:53Z",
+        "at": "2026-10-22T11:51:55Z",
         "stuck": false,
         "also": "Also: even-up Fri 3:00pm CT",
         "lag_note": "Steps to 7c at the next check."
@@ -247,19 +247,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-22T11:45:53Z"
+    "ts": "2026-10-22T11:51:55Z"
   },
   "posts": [
-    {
-      "id": "1792580353071-15b1a9",
-      "ts": "2026-10-21T10:59:13Z",
-      "book": "TAL-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 25,077 resting. Next: Risk glide starts, Fri 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792581259770-b15b47",
       "ts": "2026-10-21T11:14:19Z",
@@ -3580,18 +3570,19 @@
       "text": "Quiet for 15 min. 41,407 resting. Next: Risk glide starts, Fri 11:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792669875346-d25a32",
+      "ts": "2026-10-22T11:51:13Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (7 errors). It retries next loop.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [
-    {
-      "id": "1792602069872-946253",
-      "ts": "2026-10-21T17:01:09Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -230.83 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792602211347-f3a83f",
       "ts": "2026-10-21T17:03:31Z",
@@ -4482,6 +4473,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): worst -531.27 vs floor -165.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792669689493-03c867",
+      "ts": "2026-10-22T11:48:09Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+111 on Corey Heim @ 0.11 (maker)\n+78 on Giovanni Ruggiero @ 0.06 (maker)\n+9 on Layne Riggs @ 0.10 (maker)\nworst outcome now -531\nIf the race ends... you make\nGiovanni Ruggiero: -531\nKaden Honeycutt: -453\nCorey Heim: -192\nTanner Gray: -180\nLayne Riggs: -153\nThomas Annunziata: +3\nBrenden Queen: +21\nBen Rhodes: +22\nall others (30) >= +148",
+      "severity": "warn"
     }
   ]
 }
