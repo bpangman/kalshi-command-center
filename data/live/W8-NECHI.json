@@ -1,12 +1,12 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-22T07:13:01.572467Z",
+  "generated_at": "2026-10-22T07:18:25.940354Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$222, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence": "low",
+    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
     "checks_every_s": 60,
     "moves": [
       {
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,707, 1,863 resting. Worst line -$222 (goal -$150). Kalshi trading is paused."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,707, 1,863 resting. Worst line -$222 (goal -$150). Bot heartbeat is 7m old: it may be down."
         ]
       },
       {
@@ -189,39 +189,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-22T07:12:49Z"
+    "ts": "2026-10-22T07:17:52Z"
   },
   "posts": [
-    {
-      "id": "1792498923400-676ac0",
-      "ts": "2026-10-20T12:22:03Z",
-      "book": "W8-NECHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,140 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792499829569-bcbee9",
-      "ts": "2026-10-20T12:37:09Z",
-      "book": "W8-NECHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,140 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792500735244-a75d2b",
-      "ts": "2026-10-20T12:52:15Z",
-      "book": "W8-NECHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,140 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792501047603-4d67d4",
       "ts": "2026-10-20T12:57:27Z",
@@ -3811,6 +3781,36 @@
       "text": "Bot could not read Kalshi (1 of 3 tries). It does nothing and retries.",
       "severity": "warn",
       "title": "Read failure"
+    },
+    {
+      "id": "1792653290627-5f59f8",
+      "ts": "2026-10-22T07:14:48Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot is in safe mode: reads failed, so it does nothing until they work.",
+      "severity": "warn",
+      "title": "Bot offline-safe"
+    },
+    {
+      "id": "1792653411638-20abb4",
+      "ts": "2026-10-22T07:16:51Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 6m old (normal is under 6m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
+    },
+    {
+      "id": "1792653411640-30156b",
+      "ts": "2026-10-22T07:16:51Z",
+      "book": "W8-NECHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$222, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
