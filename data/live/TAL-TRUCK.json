@@ -1,13 +1,13 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-22T07:27:33.633923Z",
+  "generated_at": "2026-10-22T07:36:05.061844Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 3:00pm CT. Worst line unknown, final target $0.",
     "confidence": "low",
     "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 64,
+    "checks_every_s": 48,
     "moves": [
       {
         "side": "Giovanni Ruggiero",
@@ -125,7 +125,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 41,606 resting. Worst line unknown. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Fri 3:00pm CT. Sold 0, 41,606 resting. Worst line unknown. Bot is slow (checks every 48s, set for 30s)."
         ]
       },
       {
@@ -247,29 +247,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 23 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-22T07:26:56Z"
+    "ts": "2026-10-22T07:36:00Z"
   },
   "posts": [
-    {
-      "id": "1792549749004-76e75e",
-      "ts": "2026-10-21T02:27:04Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 11: Giovanni Ruggiero x11 at 7c. Worst line -$255.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 11.0,
-        "fills": [
-          {
-            "side": "Giovanni Ruggiero",
-            "price": 0.07,
-            "qty": 11.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792550534566-c64dc0",
       "ts": "2026-10-21T02:42:14Z",
@@ -3576,27 +3556,19 @@
       "text": "Bot could not read Kalshi (12 of 3 tries). It does nothing and retries.",
       "severity": "warn",
       "title": "Read failure"
+    },
+    {
+      "id": "1792654379338-adcba8",
+      "ts": "2026-10-22T07:32:55Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot could not read Kalshi (24 of 3 tries). It does nothing and retries.",
+      "severity": "warn",
+      "title": "Read failure"
     }
   ],
   "audits": [
-    {
-      "id": "1792585311461-e7665c",
-      "ts": "2026-10-21T12:21:51Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): 10 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TYMA high 704c, KXNASCARRACE-LOVRS26-CHEC high 707c, KXNASCARRACE-LOVRS26-CHSM high 604c, KXNASCARRACE-LOVRS26-COHE high 719c, KXNASCARRACE-LOVRS26-KAHO low 651c, KXNASCARRACE-LOVRS26-SASM high 725c, KXNASCARRACE-LOVRS26-BRQU low 465c, KXNASCARRACE-LOVRS26-THAN low 465c, KXNASCARRACE-LOVRS26-GIRU low 472c, KXNASCARRACE-LOVRS26-CLMC low 697c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792585384163-f62665",
-      "ts": "2026-10-21T12:23:04Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-TRUCK - Layne Riggs has had no resting orders for at least 800 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792586923115-2a5aaa",
       "ts": "2026-10-21T12:48:43Z",
@@ -4473,6 +4445,24 @@
     {
       "id": "1792653813792-a7d7f8",
       "ts": "2026-10-22T07:23:33Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
+      "severity": "warn"
+    },
+    {
+      "id": "1792654111792-f6118b",
+      "ts": "2026-10-22T07:28:31Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): heartbeat ok=false. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792654423961-c00506",
+      "ts": "2026-10-22T07:33:43Z",
       "book": "TAL-TRUCK",
       "kind": "audit",
       "source": "bot",
