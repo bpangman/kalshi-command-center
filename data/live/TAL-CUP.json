@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-23T13:10:55.279464Z",
+  "generated_at": "2026-10-23T13:13:46.338218Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$1,009, final target $0.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 52,
+    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Brad Keselowski",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 26,414, 62,534 resting. Worst line -$1,009 (limit now -$550). Bot is slow (checks every 52s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 26,414, 62,534 resting. Worst line -$1,009 (limit now -$550)."
         ]
       },
       {
@@ -212,29 +212,9 @@
     ],
     "moves_note": "4 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-23T13:10:17Z"
+    "ts": "2026-10-23T13:13:18Z"
   },
   "posts": [
-    {
-      "id": "1792667558754-03a51b",
-      "ts": "2026-10-22T11:12:38Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$897, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792668062734-ed2213",
-      "ts": "2026-10-22T11:20:45Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (8 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1792668949318-0797ce",
       "ts": "2026-10-22T11:35:49Z",
@@ -3550,27 +3530,28 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$1,009, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792761198542-5ac687",
+      "ts": "2026-10-23T13:13:18Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$1,009, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792761206141-29dda0",
+      "ts": "2026-10-23T13:13:26Z",
+      "book": "TAL-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nBrad Keselowski: -1009\nCarson Hocevar: -918\nRicky Stenhouse Jr.: -747\nChristopher Bell: -747\nBubba Wallace: -572\nTyler Reddick: -572\nChase Briscoe: -572\nDenny Hamlin: -427\nall others (32) >= -263\nCollected $1197 premium ($20 fees) | Paper margin over fair $194 (not realized until settlement)\nCore posted book 1.07 | Worst now -1009 | Cash free $2340\nAnchor age 280s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792692399331-ca0e6c",
-      "ts": "2026-10-22T18:06:39Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 16 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-BRKE low 712c, KXNASCARRACE-YEL26-MIMC low 2187c, KXNASCARRACE-YEL26-JOLO low 859c, KXNASCARRACE-YEL26-AUDI low 1305c, KXNASCARRACE-YEL26-RIST low 171c, KXNASCARRACE-YEL26-ROCH low 1187c, KXNASCARRACE-YEL26-RYBL low 1187c, KXNASCARRACE-YEL26-CHEL low 1187c, KXNASCARRACE-YEL26-ERJO low 1676c, KXNASCARRACE-YEL26-JONE low 2187c, KXNASCARRACE-YEL26-COCU low 2187c, KXNASCARRACE-YEL26-DASU low 2187c, KXNASCARRACE-YEL26-AUHI low 2187c, KXNASCARRACE-YEL26-WIBY low 1108c, KXNASCARRACE-YEL26-ZASM low 2187c, KXNASCARRACE-YEL26-TYGI low 1749c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792692399332-af722b",
-      "ts": "2026-10-22T18:06:39Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -984.60 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792692618740-0bd8b9",
       "ts": "2026-10-22T18:10:18Z",
@@ -4452,6 +4433,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Carson Hocevar has had no resting orders for at least 1485 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1792761158684-3485e6",
+      "ts": "2026-10-23T13:12:38Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 14 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-MIMC low 2296c, KXNASCARRACE-YEL26-JOLO low 968c, KXNASCARRACE-YEL26-AUDI low 1296c, KXNASCARRACE-YEL26-RIST low 171c, KXNASCARRACE-YEL26-ROCH low 1296c, KXNASCARRACE-YEL26-RYBL low 1297c, KXNASCARRACE-YEL26-CHEL low 1296c, KXNASCARRACE-YEL26-ERJO low 1296c, KXNASCARRACE-YEL26-JONE low 2296c, KXNASCARRACE-YEL26-COCU low 2296c, KXNASCARRACE-YEL26-AUHI low 2296c, KXNASCARRACE-YEL26-NOGR low 1982c, KXNASCARRACE-YEL26-ZASM low 2296c, KXNASCARRACE-YEL26-TYGI low 1749c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792761158685-11b11e",
+      "ts": "2026-10-23T13:12:38Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -1009.36 vs floor -363.40. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
