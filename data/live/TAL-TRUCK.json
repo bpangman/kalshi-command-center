@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-23T04:13:23.313120Z",
+  "generated_at": "2026-10-23T04:16:15.680470Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -246,43 +246,9 @@
     ],
     "moves_note": "4 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-TRUCK",
-    "ts": "2026-10-23T04:13:10Z"
+    "ts": "2026-10-23T04:16:11Z"
   },
   "posts": [
-    {
-      "id": "1792643496405-419c5c",
-      "ts": "2026-10-22T04:29:34Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 215: Corey Heim x215 at 11c. Worst line -$486.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 215.0,
-        "fills": [
-          {
-            "side": "Corey Heim",
-            "price": 0.11,
-            "qty": 215.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1792643496406-864739",
-      "ts": "2026-10-22T04:31:17Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 1,671 (new wave): Landen Lewis x123 at 3c, Tony Stewart x121 at 2c, +11 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 1671.0,
-        "rows": 13
-      }
-    },
     {
       "id": "1792643637498-79bd56",
       "ts": "2026-10-22T04:32:22Z",
@@ -3697,36 +3663,29 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nLayne Riggs: -632\nAustin Green: -614\nTanner Gray: -612\nTony Stewart: -515\nGiovanni Ruggiero: -493\nCorey Heim: -346\nKaden Honeycutt: -189\nBrenden Queen: -82\nall others (30) >= -36\nCollected $527 premium ($9 fees) | Paper margin over fair $56 (not realized until settlement)\nCore posted book 1.22 | Worst now -632 | Cash free $2714\nAnchor age 230s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792728831025-3de416",
+      "ts": "2026-10-23T04:13:51Z",
+      "book": "TAL-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 41,740 resting. Next: Risk glide starts, Fri 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792728931699-35347f",
+      "ts": "2026-10-23T04:15:27Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [
-    {
-      "id": "1792653813792-a7d7f8",
-      "ts": "2026-10-22T07:23:33Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
-      "severity": "warn"
-    },
-    {
-      "id": "1792654111792-f6118b",
-      "ts": "2026-10-22T07:28:31Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): heartbeat ok=false. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792654423961-c00506",
-      "ts": "2026-10-22T07:33:43Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
-      "severity": "warn"
-    },
     {
       "id": "1792655033434-21736c",
       "ts": "2026-10-22T07:43:53Z",
@@ -4594,6 +4553,33 @@
     {
       "id": "1792727129869-b18c42",
       "ts": "2026-10-23T03:45:29Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -631.64 vs floor -165.40. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792728948801-84f28f",
+      "ts": "2026-10-23T04:15:48Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-TRUCK - Layne Riggs has had no resting orders for at least 194 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792728964110-76791a",
+      "ts": "2026-10-23T04:16:04Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): 18 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-GREN low 909c, KXNASCARRACE-LOVRS26-DAHE low 1394c, KXNASCARRACE-LOVRS26-BERH low 301c, KXNASCARRACE-LOVRS26-JUHA low 1478c, KXNASCARRACE-LOVRS26-STFR low 1497c, KXNASCARRACE-LOVRS26-TYMA low 657c, KXNASCARRACE-LOVRS26-CORO low 912c, KXNASCARRACE-LOVRS26-CHEC low 936c, KXNASCARRACE-LOVRS26-TYAN low 1503c, KXNASCARRACE-LOVRS26-CHSM low 594c, KXNASCARRACE-LOVRS26-SASM low 721c, KXNASCARRACE-LOVRS26-COJO low 1490c, KXNASCARRACE-LOVRS26-LALE low 1486c, KXNASCARRACE-LOVRS26-BRQU low 887c, KXNASCARRACE-LOVRS26-ANPE low 1490c, KXNASCARRACE-LOVRS26-THAN low 1218c, KXNASCARRACE-LOVRS26-COBU low 1489c, KXNASCARRACE-LOVRS26-CLMC low 1474c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792728964110-3c3c23",
+      "ts": "2026-10-23T04:16:04Z",
       "book": "TAL-TRUCK",
       "kind": "audit",
       "source": "auditor",
