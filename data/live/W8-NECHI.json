@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-23T02:44:32.717022Z",
+  "generated_at": "2026-10-23T02:46:53.821956Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,611, 1,580 resting. Worst line +$75. Game 81% done."
+          "In game (Ingame). Sold 9,611, 1,509 resting. Worst line +$75. Game 83% done."
         ]
       },
       {
@@ -78,7 +78,7 @@
       {
         "label": "NE by 7-14",
         "held": 1656.2,
-        "resting": 246.9,
+        "resting": 176.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-23T02:44:28Z"
+    "ts": "2026-10-23T02:46:29Z"
   },
   "posts": [
-    {
-      "id": "1792620618683-3d848c",
-      "ts": "2026-10-21T22:08:00Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 60: NE by 7-14 x60 at 15c. Worst line -$365.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 60.0,
-        "fills": [
-          {
-            "side": "NE by 7-14",
-            "price": 0.15,
-            "qty": 60.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792621383444-77d7e7",
       "ts": "2026-10-21T22:23:03Z",
@@ -4366,18 +4346,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nCHI 1-6: +139 (+10.0% of bankroll)\nCHI 7-14: +105 (+7.6% of bankroll)\nCHI 15+: +75 (+5.4% of bankroll)\nNE 1-6: +113 (+8.1% of bankroll)\nNE 7-14: +291 (+20.9% of bankroll)\nNE 15+: +1348 (+96.8% of bankroll)\nCollected $1947 premium ($0 fees) | Paper margin over fair $241 (not realized until settlement)\nEvent: CHI 7-14: CHI 27-21, Q4 14:48; CHI 1-6: CHI 27-21, Q4 14:48\nheld / resting\nCHI 1-6: 1808 / 0\nCHI 7-14: 1842 / 0\nCHI 15+: 1872 / 0\nNE 1-6: 1834 / 0\nNE 7-14: 1656 / 180\nNE 15+: 600 / 1333\nPosted book 1.19 | Sold avg 1.139 | Worst now +169 | Cash free $1392\nAnchor age 4439s | Last fill 661s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792723529069-3cb1ce",
+      "ts": "2026-10-23T02:45:29Z",
+      "book": "W8-NECHI",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 1,509 resting.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1792617881242-764117",
-      "ts": "2026-10-21T21:24:41Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1792617892543-6ea6e1",
       "ts": "2026-10-21T21:24:52Z",
@@ -5267,6 +5248,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792723592124-d14301",
+      "ts": "2026-10-23T02:46:32Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
