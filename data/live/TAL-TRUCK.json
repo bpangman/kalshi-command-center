@@ -1,10 +1,10 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-23T20:34:58.525255Z",
+  "generated_at": "2026-10-23T20:36:49.192686Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$11.",
+    "headline": "In race (Ingame). Worst line +$18.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 43,215, 628 resting. Worst line +$11. Race 14% done. Floor protocol off."
+          "In race (Ingame). Sold 43,285, 3,511 resting. Worst line +$18. Race 16% done. Floor protocol off."
         ]
       },
       {
@@ -44,39 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-TRUCK",
-    "ts": "2026-10-23T20:34:39Z"
+    "ts": "2026-10-23T20:36:40Z"
   },
   "posts": [
-    {
-      "id": "1792771457454-adf754",
-      "ts": "2026-10-23T16:03:59Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Even-up: Ty Majeski 100% behind the leader (held 0 vs 1189); lowest rung 0.08 -> 0.06, queue ahead 240 (book)",
-      "severity": "info",
-      "title": "Reprice"
-    },
-    {
-      "id": "1792771457455-20045b",
-      "ts": "2026-10-23T16:03:59Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Next wave waiting: (tighten): 12 filled to the trigger but the book's held worst line -822 is under the backstop -250: Corey Heim",
-      "severity": "info",
-      "title": "Wave wait"
-    },
-    {
-      "id": "1792771457458-5e2f63",
-      "ts": "2026-10-23T16:04:00Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Glide check: limit -$249, worst line -$822.",
-      "severity": "info",
-      "title": "Checkpoint"
-    },
     {
       "id": "1792771477514-6688d0",
       "ts": "2026-10-23T16:04:37Z",
@@ -4472,18 +4442,59 @@
         "contracts": 3426.0,
         "rows": 33
       }
+    },
+    {
+      "id": "1792787720222-60fe6c",
+      "ts": "2026-10-23T20:35:03Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-LOVRS26-COHE: gap $0.00 -> max 0 contracts (evenness/favorite gates bypa",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792787760624-d7ae5f",
+      "ts": "2026-10-23T20:35:42Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 61: Giovanni Ruggiero x48 at 9c, Sammy Smith x12 at 8c, Layne Riggs x1 at 10c. Worst line +$15.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 61.0,
+        "fills": [
+          {
+            "side": "Giovanni Ruggiero",
+            "price": 0.09,
+            "qty": 48.0
+          },
+          {
+            "side": "Sammy Smith",
+            "price": 0.08,
+            "qty": 12.0
+          },
+          {
+            "side": "Layne Riggs",
+            "price": 0.1,
+            "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792787800981-915f68",
+      "ts": "2026-10-23T20:36:21Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt: 11 drivers laddered, room used $1744 of $1863",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792751808994-88b4aa",
-      "ts": "2026-10-23T10:36:48Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -566.92 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792753777347-34ed64",
       "ts": "2026-10-23T11:09:37Z",
@@ -5373,6 +5384,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Health: Daniel Hemric has room but 0 resting orders for 378s",
+      "severity": "warn"
+    },
+    {
+      "id": "1792787728677-bf5c5e",
+      "ts": "2026-10-23T20:35:28Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 7 unexplained\n- TAL-TRUCK - Austin Green has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Daniel Hemric has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Jake Garcia has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Justin Haley has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Landen Lewis has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Stewart Friesen has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Tanner Gray has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
