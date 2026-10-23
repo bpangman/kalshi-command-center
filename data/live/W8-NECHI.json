@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-23T03:17:51.369291Z",
+  "generated_at": "2026-10-23T03:20:15.616818Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,666, 1,742 resting. Worst line +$88. Game 98% done. Floor mode ON: only raising the worst line."
+          "In game (Ingame). Sold 9,666, 1,741 resting. Worst line +$88. Game 98% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -70,7 +70,7 @@
       {
         "label": "NE by 1-6",
         "held": 1873.0,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-23T03:17:44Z"
+    "ts": "2026-10-23T03:19:45Z"
   },
   "posts": [
-    {
-      "id": "1792625148412-373f3d",
-      "ts": "2026-10-21T23:25:48Z",
-      "book": "W8-NECHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nCHI 1-6: -347 (-24.9% of bankroll)\nCHI 7-14: +69 (+5.0% of bankroll)\nCHI 15+: +501 (+36.0% of bankroll)\nNE 1-6: -20 (-1.4% of bankroll)\nNE 7-14: +128 (+9.2% of bankroll)\nNE 15+: +553 (+39.7% of bankroll)\nCollected $553 premium ($0 fees) | Paper margin over fair $75 (not realized until settlement)\nheld / resting\nCHI 1-6: 900 / 0\nCHI 7-14: 484 / 491\nCHI 15+: 52 / 825\nNE 1-6: 573 / 402\nNE 7-14: 425 / 108\nNE 15+: 0 / 877\nPosted book 1.28 | Sold avg 1.164 | Worst now +97 | Cash free $1392\nAnchor age 0s | Last fill 108s ago",
-      "severity": "info"
-    },
     {
       "id": "1792625149216-be42d8",
       "ts": "2026-10-21T23:24:46Z",
@@ -4332,27 +4323,29 @@
       "text": "Bot note: floor-only trim KXNFLWINMARGIN-26OCT22NECHI-NE1TO6: held floor +88, resting 1 -> cap 0, trimmed 1 highest-pric",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792725565430-180d4a",
+      "ts": "2026-10-23T03:17:22Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 39: NE by 1-6 x39 at 5c. Worst line +$88.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 39.0,
+        "fills": [
+          {
+            "side": "NE by 1-6",
+            "price": 0.05,
+            "qty": 39.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792622483696-94c54a",
-      "ts": "2026-10-21T22:41:23Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+22 on CHI 7-14 @ 0.22 (maker)\n+22 on NE 1-6 @ 0.22 (maker)\nworst outcome now +97\nheld 900/469/52/548/425/0\nIf the game ends... you make\nCHI 1-6: -356 (-25.6% of bankroll)\nCHI 7-14: +75 (+5.4% of bankroll)\nCHI 15+: +492 (+35.4% of bankroll)\nNE 1-6: -4 (-0.3% of bankroll)\nNE 7-14: +119 (+8.6% of bankroll)\nNE 15+: +544 (+39.1% of bankroll)",
-      "severity": "warn"
-    },
-    {
-      "id": "1792623538517-938bce",
-      "ts": "2026-10-21T22:58:58Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-NECHI): worst -355.86 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792623639647-bcbf35",
       "ts": "2026-10-21T23:00:39Z",
@@ -5233,6 +5226,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W8-NECHI - New England by 1 to 6 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792725504724-3936da",
+      "ts": "2026-10-23T03:18:24Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792725504726-6ae1cc",
+      "ts": "2026-10-23T03:18:24Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+15 on CHI 1-6 @ 0.78 (maker)\n+39 on NE 1-6 @ 0.05 (maker)\nworst outcome now +128\nheld 1823/1842/1872/1873/1656/600\nIf the game ends... you make\nCHI 1-6: +138 (+9.9% of bankroll)\nCHI 7-14: +119 (+8.6% of bankroll)\nCHI 15+: +89 (+6.4% of bankroll)\nNE 1-6: +88 (+6.3% of bankroll)\nNE 7-14: +305 (+21.9% of bankroll)\nNE 15+: +1361 (+97.8% of bankroll)",
       "severity": "warn"
     }
   ]
