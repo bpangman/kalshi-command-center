@@ -1,10 +1,10 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-23T21:41:49.772718Z",
+  "generated_at": "2026-10-23T21:43:37.580378Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$51.",
+    "headline": "In race (Ingame). Worst line -$50.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 52,672, 2,667 resting. Worst line -$51. Race 61% done. Floor protocol off."
+          "In race (Ingame). Sold 52,672, 4,338 resting. Worst line -$50. Race 64% done. Floor protocol off."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-TRUCK",
-    "ts": "2026-10-23T21:41:11Z"
+    "ts": "2026-10-23T21:43:12Z"
   },
   "posts": [
-    {
-      "id": "1792780244592-d7c963",
-      "ts": "2026-10-23T18:30:35Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Take: sold 20 Kaden Honeycutt at the bid 7c. Cost $0.29.",
-      "severity": "info",
-      "title": "Take"
-    },
-    {
-      "id": "1792780244592-188ff5",
-      "ts": "2026-10-23T18:30:35Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Take: sold 100 Corey Heim at the bid 13c. Cost $0.79.",
-      "severity": "info",
-      "title": "Take"
-    },
     {
       "id": "1792780244599-6889ea",
       "ts": "2026-10-23T18:30:44Z",
@@ -4832,27 +4812,48 @@
       "text": "Bot note: stage2 shrink: cohort target 11 -> 8 (schedule threshold 0.60)",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792791711589-d3e6c2",
+      "ts": "2026-10-23T21:39:37Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 118: Tanner Gray x76 at 6c, Austin Green x42 at 3c. Worst line -$51.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 118.0,
+        "fills": [
+          {
+            "side": "Tanner Gray",
+            "price": 0.06,
+            "qty": 76.0
+          },
+          {
+            "side": "Austin Green",
+            "price": 0.03,
+            "qty": 42.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792791812497-d788cc",
+      "ts": "2026-10-23T21:43:20Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 3,927 (race ladder rebase): Thomas Annunziata x271 at 11c, Corey LaJoie x264 at 4c, +19 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 3927.0,
+        "rows": 21
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792765133352-61c7b8",
-      "ts": "2026-10-23T14:18:53Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -893.08 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792766213615-4aacd8",
-      "ts": "2026-10-23T14:36:53Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-TRUCK - Christian Eckes has had no resting orders for at least 133 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792767129912-a12089",
       "ts": "2026-10-23T14:52:09Z",
@@ -5733,6 +5734,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 7 driver(s): Timmy Hill (+93%), Tanner Gray (+54%), Mini Tyrrell (+54%), Thomas Annunziata (+51%), Sammy Smith (+33%), Austin Green (+30%), Chandler Smith (+20%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792791733809-755278",
+      "ts": "2026-10-23T21:42:13Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): 7 ladder(s) stale 10+ min: KXNASCARRACE-LOVRS26-TOST high 150c, KXNASCARRACE-LOVRS26-TYAN high 32c, KXNASCARRACE-LOVRS26-LALE high 63c, KXNASCARRACE-LOVRS26-DASU high 170c, KXNASCARRACE-LOVRS26-GIRU high 297c, KXNASCARRACE-LOVRS26-COBU high 150c, KXNASCARRACE-LOVRS26-CLMC high 150c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792791796739-0ab72d",
+      "ts": "2026-10-23T21:43:16Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+145 on Austin Green @ 0.03 (taker)\n+76 on Tanner Gray @ 0.06 (taker)\n+43 on Brenden Queen @ 0.02 (taker)\nworst outcome now -50\nIf the race ends... you make\nAustin Green: -50\nKaden Honeycutt: -48\nTanner Gray: -38\nJustin Haley: -4\nTyler Ankrum: +110\nLayne Riggs: +111\nBen Rhodes: +158\nTy Majeski: +179\nall others (30) >= +212",
       "severity": "warn"
     }
   ]
