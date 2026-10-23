@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-23T17:24:29.301266Z",
+  "generated_at": "2026-10-23T17:28:01.507926Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -178,7 +178,7 @@
         "resting": 381.0,
         "target": null,
         "status": "lagging",
-        "price": 0.22
+        "price": 0.21
       },
       {
         "label": "SF by 15+",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-23T17:24:15Z"
+    "ts": "2026-10-23T17:27:17Z"
   },
   "posts": [
     {
@@ -1519,6 +1519,40 @@
       "text": "Row sold out: SF by 7-14 at 21c (146 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1792776336308-296064",
+      "ts": "2026-10-23T17:23:33Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 85: SF by 7-14 x85 at 21c. Worst line -$174.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 85.0,
+        "fills": [
+          {
+            "side": "SF by 7-14",
+            "price": 0.21,
+            "qty": 85.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792776336309-d4172f",
+      "ts": "2026-10-23T17:23:34Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 93 (ANCHOR step 0.21): SF by 7-14 x93 at 21c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 93.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -1656,6 +1690,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-SFATL): worst -192.13 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792776275873-9fbdde",
+      "ts": "2026-10-23T17:24:35Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+85 on SF 7-14 @ 0.21 (maker)\nworst outcome now +72\nheld 0/0/0/0/146/247\nIf the game ends... you make\nATL 1-6: +73 (+3.6% of bankroll)\nATL 7-14: +73 (+3.6% of bankroll)\nATL 15+: +73 (+3.6% of bankroll)\nSF 1-6: +73 (+3.6% of bankroll)\nSF 7-14: -73 (-3.6% of bankroll)\nSF 15+: -174 (-8.6% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
