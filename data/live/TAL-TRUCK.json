@@ -1,10 +1,10 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-23T21:34:04.244747Z",
+  "generated_at": "2026-10-23T21:35:58.370774Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$72.",
+    "headline": "In race (Ingame). Worst line -$67.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 51,873, 4,737 resting. Worst line -$72. Race 58% done. Floor protocol off."
+          "In race (Ingame). Sold 52,055, 4,874 resting. Worst line -$67. Race 59% done. Floor protocol off."
         ]
       },
       {
@@ -44,54 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-TRUCK",
-    "ts": "2026-10-23T21:33:07Z"
+    "ts": "2026-10-23T21:35:08Z"
   },
   "posts": [
-    {
-      "id": "1792779319123-d93b20",
-      "ts": "2026-10-23T18:15:02Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 2 drivers: Sammy Smith, Ty Majeski.",
-      "severity": "info",
-      "title": "Price shock"
-    },
-    {
-      "id": "1792779419784-9db439",
-      "ts": "2026-10-23T18:16:42Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1792779419784-7f66fd",
-      "ts": "2026-10-23T18:16:43Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Corey Heim price not lowered: the next cent is under the crowd price, so it stays at 15c.",
-      "severity": "info",
-      "title": "Price hold"
-    },
-    {
-      "id": "1792779520414-c96a69",
-      "ts": "2026-10-23T18:18:29Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Kaden Honeycutt: no fill for 21 min, added 300 at 8c (was 9c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Kaden Honeycutt",
-        "from": 0.09,
-        "to": 0.08
-      }
-    },
     {
       "id": "1792779520414-4fd23e",
       "ts": "2026-10-23T18:18:29Z",
@@ -4811,18 +4766,68 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nKaden Honeycutt: -69\nJustin Haley: -25\nTanner Gray: +17\nTyler Ankrum: +89\nLayne Riggs: +90\nBen Rhodes: +137\nTy Majeski: +158\nCorey Heim: +191\nall others (30) >= +205\nCollected $2550 premium ($53 fees) | Paper margin over fair $882 (not realized until settlement)\nEvent: Ty Majeski: running P1; Layne Riggs: running P2\nCore posted book 2.36 | Worst now -69 | Cash free $3120\nAnchor age 256s (source: kalshi)",
       "severity": "info"
+    },
+    {
+      "id": "1792791247916-eda2a0",
+      "ts": "2026-10-23T21:32:42Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 88: Austin Green x58 at 5c, Austin Green x30 at 6c. Worst line -$69.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 88.0,
+        "fills": [
+          {
+            "side": "Austin Green",
+            "price": 0.05,
+            "qty": 58.0
+          },
+          {
+            "side": "Austin Green",
+            "price": 0.06,
+            "qty": 30.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792791247916-130bd4",
+      "ts": "2026-10-23T21:33:54Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 4,786 (race catchup): Brenden Queen x309 at 12c, Tony Stewart x150 at 15c, +29 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 4786.0,
+        "rows": 31
+      }
+    },
+    {
+      "id": "1792791288279-8fb21d",
+      "ts": "2026-10-23T21:34:29Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-LOVRS26-TAGR: gap $0.00 -> max 0 contracts (evenness/favorite gates bypa",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792791308471-361590",
+      "ts": "2026-10-23T21:35:02Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt: 0 drivers laddered, room used $0 of $0",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792764928315-5fafd9",
-      "ts": "2026-10-23T14:15:28Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=505. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792764928315-3b1f6d",
       "ts": "2026-10-23T14:15:28Z",
@@ -5712,6 +5717,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+503 on Tanner Gray @ 0.04 (taker)\n+57 on Tyler Ankrum @ 0.04 (taker)\n+200 on Brenden Queen @ 0.02 (taker)\n+546 on Mini Tyrrell @ 0.02 (taker)\n+23 on Kaden Honeycutt @ 0.11 (maker)\n+300 on Tyler Ankrum @ 0.03 (taker)\n+69 on Tyler Ankrum @ 0.02 (taker)\nworst outcome now -77\nIf the race ends... you make\nKaden Honeycutt: -77\nJustin Haley: -32\nTanner Gray: +10\nTyler Ankrum: +82\nLayne Riggs: +83\nBen Rhodes: +130\nTy Majeski: +151\nCorey Heim: +184\nall others (30) >= +198",
+      "severity": "warn"
+    },
+    {
+      "id": "1792791302944-c9271d",
+      "ts": "2026-10-23T21:35:02Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Health: Norm Benning has room but 0 resting orders for 2714s",
       "severity": "warn"
     }
   ]
