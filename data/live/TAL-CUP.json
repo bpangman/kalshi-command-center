@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-23T02:42:41.810076Z",
+  "generated_at": "2026-10-23T02:44:32.717022Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -212,19 +212,9 @@
     ],
     "moves_note": "4 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-23T02:42:27Z"
+    "ts": "2026-10-23T02:44:28Z"
   },
   "posts": [
-    {
-      "id": "1792639428197-5092ec",
-      "ts": "2026-10-22T03:23:48Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 61,122 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792640334109-ec7fc7",
       "ts": "2026-10-22T03:38:54Z",
@@ -3585,27 +3575,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792723367769-573b9e",
+      "ts": "2026-10-23T02:42:27Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (4 errors). It retries next loop.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [
-    {
-      "id": "1792655083365-208394",
-      "ts": "2026-10-22T07:44:43Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
-      "severity": "warn"
-    },
-    {
-      "id": "1792655745111-d7ec2b",
-      "ts": "2026-10-22T07:55:45Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: OFFLINE more than 10 min - no writes until reads succeed; resting orders expire on the exchange on their own",
-      "severity": "warn"
-    },
     {
       "id": "1792655944616-e3c883",
       "ts": "2026-10-22T07:59:04Z",
@@ -4486,6 +4468,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -964.55 vs floor -363.40. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792723363029-731272",
+      "ts": "2026-10-23T02:42:43Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 17 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-BRKE low 436c, KXNASCARRACE-YEL26-DEHA low 583c, KXNASCARRACE-YEL26-MIMC low 2187c, KXNASCARRACE-YEL26-JOLO low 859c, KXNASCARRACE-YEL26-AUDI low 1187c, KXNASCARRACE-YEL26-RIST low 171c, KXNASCARRACE-YEL26-ROCH low 1187c, KXNASCARRACE-YEL26-RYBL low 1187c, KXNASCARRACE-YEL26-CHEL low 1187c, KXNASCARRACE-YEL26-ERJO low 1352c, KXNASCARRACE-YEL26-JONE low 2187c, KXNASCARRACE-YEL26-COCU low 2187c, KXNASCARRACE-YEL26-DASU low 2187c, KXNASCARRACE-YEL26-AUHI low 2187c, KXNASCARRACE-YEL26-WIBY low 978c, KXNASCARRACE-YEL26-ZASM low 2187c, KXNASCARRACE-YEL26-TYGI low 1749c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792723363029-65cbd2",
+      "ts": "2026-10-23T02:42:43Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): worst -959.96 vs floor -363.40. Check the command center.",
       "severity": "critical"
     }
   ]
