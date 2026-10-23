@@ -1,6 +1,6 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-23T03:05:33.598923Z",
+  "generated_at": "2026-10-23T03:07:32.249302Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,611, 1,554 resting. Worst line +$75. Game 93% done."
+          "In game (Ingame). Sold 9,611, 1,709 resting. Worst line +$75. Game 94% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -78,7 +78,7 @@
       {
         "label": "NE by 7-14",
         "held": 1656.2,
-        "resting": 221.0,
+        "resting": 222.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "NE by 15+",
         "held": 599.6,
-        "resting": 1333.0,
+        "resting": 1487.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,34 +101,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-23T03:04:37Z"
+    "ts": "2026-10-23T03:06:38Z"
   },
   "posts": [
-    {
-      "id": "1792622551654-b2f558",
-      "ts": "2026-10-21T22:41:23Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 44: CHI by 7-14 x22 at 22c, NE by 1-6 x22 at 22c. Worst line -$356.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 44.0,
-        "fills": [
-          {
-            "side": "CHI by 7-14",
-            "price": 0.22,
-            "qty": 22.0
-          },
-          {
-            "side": "NE by 1-6",
-            "price": 0.22,
-            "qty": 22.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792623396575-1bd854",
       "ts": "2026-10-21T22:56:36Z",
@@ -4355,18 +4330,18 @@
       "source": "bot",
       "text": "Inactivity on W8-NECHI: 0 orders posted in 10 min while the market traded 13718 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
       "severity": "info"
+    },
+    {
+      "id": "1792724735128-0f8919",
+      "ts": "2026-10-23T03:05:35Z",
+      "book": "W8-NECHI",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is +75; from here only trades that raise it",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792619866987-956fec",
-      "ts": "2026-10-21T21:57:46Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-NECHI): worst -374.34 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792620542715-c16b23",
       "ts": "2026-10-21T22:09:02Z",
@@ -5256,6 +5231,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792724842576-6f21db",
+      "ts": "2026-10-23T03:07:22Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-NECHI): inactive, cause=price_above_crowd, remedy=join_crowd_ask, posts_last_10m=5, market_volume_last_30m=16554. Check the command center.",
       "severity": "warn"
     }
   ]
