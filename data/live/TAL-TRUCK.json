@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-23T22:04:28.316891Z",
+  "generated_at": "2026-10-23T22:06:14.707575Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 53,343, 1,538 resting. Worst line +$41. Race 79% done. Floor protocol off."
+          "In race (Ingame). Sold 53,343, 1,599 resting. Worst line +$41. Race 81% done. Floor protocol off."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-TRUCK",
-    "ts": "2026-10-23T22:04:22Z"
+    "ts": "2026-10-23T22:05:22Z"
   },
   "posts": [
-    {
-      "id": "1792780809438-246606",
-      "ts": "2026-10-23T18:40:06Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$83, worst line -$207. decrease Grant Enfinger resting 619 -> 0 (a full fill would take his line -100 t",
-      "severity": "info",
-      "title": "Glide"
-    },
-    {
-      "id": "1792780809439-6fe4aa",
-      "ts": "2026-10-23T18:40:06Z",
-      "book": "TAL-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Backstop released on Landen Lewis: line is back to -$194. It can add again.",
-      "severity": "info",
-      "title": "Backstop"
-    },
     {
       "id": "1792780809439-9c0fb9",
       "ts": "2026-10-23T18:40:06Z",
@@ -4939,18 +4919,43 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nJustin Haley: +41\nTanner Gray: +41\nKaden Honeycutt: +41\nAustin Green: +41\nBrenden Queen: +42\nTyler Ankrum: +55\nLayne Riggs: +56\nBen Rhodes: +102\nall others (30) >= +124\nCollected $2522 premium ($59 fees) | Paper margin over fair $1018 (not realized until settlement)\nEvent: Ben Rhodes: running P1; Tanner Gray: running P2\nCore posted book 0.24 | Worst now +41 | Cash free $3254\nAnchor age 150s (source: kalshi)",
       "severity": "info"
+    },
+    {
+      "id": "1792793122730-065d19",
+      "ts": "2026-10-23T22:03:16Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 26: Dawson Sutton x26 at 2c. Worst line +$41.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 26.0,
+        "fills": [
+          {
+            "side": "Dawson Sutton",
+            "price": 0.02,
+            "qty": 26.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792793122730-8e0fe8",
+      "ts": "2026-10-23T22:04:26Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 122 (race ingame): Landen Lewis x122 at 10c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 122.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792769103123-67f7ac",
-      "ts": "2026-10-23T15:25:03Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-TRUCK): worst -840.16 vs floor -165.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792769599306-5cf96e",
       "ts": "2026-10-23T15:33:19Z",
@@ -5840,6 +5845,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 3 unexplained\n- TAL-TRUCK - Brenden Queen has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Cory Roper has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- TAL-TRUCK - Layne Riggs has had no resting orders for at least 72 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792793132004-991afe",
+      "ts": "2026-10-23T22:05:32Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Shock on Kaden Honeycutt: pulled every in-game order, pausing 120s\nIf the race ends... you make\nJustin Haley: +41\nTanner Gray: +41\nKaden Honeycutt: +42\nAustin Green: +42\nBrenden Queen: +42\nTyler Ankrum: +55\nLayne Riggs: +56\nBen Rhodes: +103\nall others (30) >= +124",
       "severity": "warn"
     }
   ]
