@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-23T13:22:59.693516Z",
+  "generated_at": "2026-10-23T13:25:49.794716Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -112,7 +112,7 @@
         "exposure_text": "-$166",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-23T13:22:22Z",
+        "at": "2026-10-23T13:25:23Z",
         "stuck": false,
         "also": "Also: glide starts Sat 10:30am CT",
         "last_fill": "2026-10-23T12:30:46Z",
@@ -229,18 +229,9 @@
     ],
     "moves_note": "4 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-23T13:22:22Z"
+    "ts": "2026-10-23T13:25:23Z"
   },
   "posts": [
-    {
-      "id": "1792666976067-246858",
-      "ts": "2026-10-22T11:02:56Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRajah Caruth: -538\nSam Mayer: -493\nTaylor Gray: -492\nSammy Smith: -492\nAnthony Alfredo: -488\nRyan Sieg: -412\nCarson Kvapil: -237\nBrent Crews: +15\nall others (33) >= +60\nCollected $235 premium ($4 fees) | Paper margin over fair $49 (not realized until settlement)\nCore posted book 1.50 | Worst now -538 | Cash free $2830\nAnchor age 97s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792667075269-90c285",
       "ts": "2026-10-22T11:04:35Z",
@@ -3477,18 +3468,29 @@
         "contracts": 258.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792761783148-75da82",
+      "ts": "2026-10-23T13:21:01Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 62: Parker Retzlaff x62 at 3c. Worst line -$778.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 62.0,
+        "fills": [
+          {
+            "side": "Parker Retzlaff",
+            "price": 0.03,
+            "qty": 62.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792677042630-a17710",
-      "ts": "2026-10-22T13:50:42Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): worst -537.91 vs floor -170.08. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792678856000-7162e4",
       "ts": "2026-10-22T14:20:56Z",
@@ -4379,6 +4381,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -786.02 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792761926798-11af55",
+      "ts": "2026-10-23T13:25:26Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
