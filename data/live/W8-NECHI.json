@@ -1,10 +1,10 @@
 {
   "key": "W8-NECHI",
-  "generated_at": "2026-10-23T00:56:09.364460Z",
+  "generated_at": "2026-10-23T00:58:04.519368Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$59.",
+    "headline": "In game (Ingame). Worst line -$55.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,613, 1,634 resting. Worst line -$59. Game 25% done."
+          "In game (Ingame). Sold 7,632, 1,577 resting. Worst line -$55. Game 25% done."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "CHI by 1-6",
-        "held": 1314.3,
-        "resting": 262.5,
+        "held": 1333.0,
+        "resting": 226.5,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "CHI by 15+",
         "held": 1567.0,
-        "resting": 60.0,
+        "resting": 39.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-NECHI",
-    "ts": "2026-10-23T00:55:40Z"
+    "ts": "2026-10-23T00:57:41Z"
   },
   "posts": [
-    {
-      "id": "1792613725032-1d31ed",
-      "ts": "2026-10-21T20:15:05Z",
-      "book": "W8-NECHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot could not read Kalshi (1 of 3 tries). It does nothing and retries.",
-      "severity": "warn",
-      "title": "Read failure"
-    },
     {
       "id": "1792613932346-51f139",
       "ts": "2026-10-21T20:18:52Z",
@@ -3893,18 +3883,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792717001398-699b59",
+      "ts": "2026-10-23T00:54:38Z",
+      "book": "W8-NECHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 68: CHI by 15+ x39 at 34c, CHI by 7-14 x29 at 27c. Worst line -$59.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 68.0,
+        "fills": [
+          {
+            "side": "CHI by 15+",
+            "price": 0.34,
+            "qty": 39.0
+          },
+          {
+            "side": "CHI by 7-14",
+            "price": 0.27,
+            "qty": 29.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792602404164-3d173a",
-      "ts": "2026-10-21T17:06:44Z",
-      "book": "W8-NECHI",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- W8-NECHI - Chicago by 1 to 6 has had no resting orders for at least 314 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792603022953-5bc210",
       "ts": "2026-10-21T17:17:02Z",
@@ -4794,6 +4800,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+30 on NE 1-6 @ 0.21 (maker)\n+25 on CHI 15+ @ 0.23 (maker)\nworst outcome now +86\nheld 1208/1413/1313/1292/1358/589\nIf the game ends... you make\nCHI 1-6: +177 (+12.7% of bankroll)\nCHI 7-14: -29 (-2.1% of bankroll)\nCHI 15+: +72 (+5.2% of bankroll)\nNE 1-6: +93 (+6.6% of bankroll)\nNE 7-14: +27 (+1.9% of bankroll)\nNE 15+: +796 (+57.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792717005405-b32c22",
+      "ts": "2026-10-23T00:56:45Z",
+      "book": "W8-NECHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+90 on CHI 15+ @ 0.33 (maker)\n+76 on CHI 1-6 @ 0.25 (maker)\n+60 on CHI 7-14 @ 0.27 (maker)\n+39 on CHI 15+ @ 0.34 (maker)\nworst outcome now +136\nheld 1314/1493/1567/1292/1358/589\nIf the game ends... you make\nCHI 1-6: +194 (+13.9% of bankroll)\nCHI 7-14: +16 (+1.1% of bankroll)\nCHI 15+: -59 (-4.2% of bankroll)\nNE 1-6: +216 (+15.5% of bankroll)\nNE 7-14: +150 (+10.8% of bankroll)\nNE 15+: +919 (+66.0% of bankroll)",
       "severity": "warn"
     }
   ]
