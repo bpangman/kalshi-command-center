@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-23T01:39:18.387078Z",
+  "generated_at": "2026-10-23T01:41:05.872871Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$935, final target $0.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching $0 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 6,726, 43,429 resting. Worst line -$935 (limit now -$250)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 6,726, 43,429 resting. Worst line -$935 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -230,29 +230,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 29 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-23T01:38:58Z"
+    "ts": "2026-10-23T01:40:59Z"
   },
   "posts": [
-    {
-      "id": "1792618647655-a85610",
-      "ts": "2026-10-21T21:16:44Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot could not read Kalshi (3 of 3 tries). It does nothing and retries.",
-      "severity": "warn",
-      "title": "Read failure"
-    },
-    {
-      "id": "1792618647655-9dfde4",
-      "ts": "2026-10-21T21:37:26Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1792618675534-2a826a",
       "ts": "2026-10-21T21:37:55Z",
@@ -3387,18 +3367,29 @@
       "text": "Quiet for 15 min. 43,429 resting. Next: Risk glide starts, Sat 10:30am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792719558476-63a048",
+      "ts": "2026-10-23T01:39:18Z",
+      "book": "TAL-ORLY",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 43,429 resting. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792719659294-532d45",
+      "ts": "2026-10-23T01:40:59Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$935, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792635679308-d57616",
-      "ts": "2026-10-22T02:21:19Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+288 on Rajah Caruth @ 0.03 (maker)\n+47 on Rajah Caruth @ 0.04 (maker)\n+47 on Corey Day @ 0.06 (maker)\n+427 on Ryan Sieg @ 0.03 (maker)\nworst outcome now -538\nIf the race ends... you make\nRajah Caruth: -538\nSam Mayer: -493\nTaylor Gray: -492\nSammy Smith: -492\nAnthony Alfredo: -488\nRyan Sieg: -412\nCarson Kvapil: -237\nBrent Crews: +15\nall others (33) >= +60",
-      "severity": "warn"
-    },
     {
       "id": "1792636198147-81a86d",
       "ts": "2026-10-22T02:29:58Z",
@@ -4289,6 +4280,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -935.00 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792719601094-91ef35",
+      "ts": "2026-10-23T01:40:01Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+13 on Austin Hill @ 0.15 (maker)\nworst outcome now -935\nIf the race ends... you make\nBrandon Jones: -935\nRajah Caruth: -480\nSam Mayer: -435\nTaylor Gray: -434\nSammy Smith: -434\nAnthony Alfredo: -430\nRyan Sieg: -354\nCarson Kvapil: -179\nall others (33) >= +65",
+      "severity": "warn"
     }
   ]
 }
