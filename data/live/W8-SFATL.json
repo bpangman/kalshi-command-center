@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-23T18:56:05.061057Z",
+  "generated_at": "2026-10-23T18:58:53.135724Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,12 +26,12 @@
         "exposure": -73.37,
         "exposure_text": "-$73",
         "move": "Hold price at 21c",
-        "when": "needs 50+ crowd trades under 21c (now 14)",
+        "when": "needs 50+ crowd trades under 21c (now 6)",
         "at": null,
         "stuck": true,
         "also": "Also: paid balancing starts Sun 11:15am CT",
         "last_fill": "2026-10-23T17:22:44Z",
-        "lag_note": "Crowd is quiet here (14 traded)."
+        "lag_note": "Crowd is quiet here (6 traded)."
       },
       {
         "side": "ATL by 1-6",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-23T18:55:56Z"
+    "ts": "2026-10-23T18:57:57Z"
   },
   "posts": [
     {
@@ -1622,6 +1622,26 @@
       "text": "Quiet for 15 min. 2,549 resting. Next: Paid balancing starts, Sun 11:15am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792781877216-156a80",
+      "ts": "2026-10-23T18:57:37Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1792781897247-b7b430",
+      "ts": "2026-10-23T18:58:07Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$174 is under -$150. SF by 15+ stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
@@ -1767,6 +1787,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+85 on SF 7-14 @ 0.21 (maker)\nworst outcome now +72\nheld 0/0/0/0/146/247\nIf the game ends... you make\nATL 1-6: +73 (+3.6% of bankroll)\nATL 7-14: +73 (+3.6% of bankroll)\nATL 15+: +73 (+3.6% of bankroll)\nSF 1-6: +73 (+3.6% of bankroll)\nSF 7-14: -73 (-3.6% of bankroll)\nSF 15+: -174 (-8.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792781857681-aa7cc4",
+      "ts": "2026-10-23T18:57:37Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
