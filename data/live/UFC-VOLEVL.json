@@ -1,10 +1,10 @@
 {
   "key": "UFC-VOLEVL",
-  "generated_at": "2026-10-24T19:58:59.895977Z",
+  "generated_at": "2026-10-24T20:00:42.880946Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Full ladder posted",
-    "headline": "Full ladder posted for the fight about 3:20pm CT. Worst line -$14, target -$50.",
+    "phase": "Final tightening",
+    "headline": "Final tightening for the fight about 3:20pm CT. Worst line -$14, target -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
     "checks_every_s": 20,
@@ -16,7 +16,7 @@
         "exposure_text": "-$14",
         "move": "Next batch 165 contracts",
         "when": "next bot check (resting 0 is under 125)",
-        "at": "2026-10-24T19:58:30Z",
+        "at": "2026-10-24T20:00:31Z",
         "stuck": false,
         "last_fill": "2026-10-24T19:54:31Z"
       },
@@ -26,7 +26,7 @@
         "exposure": 47.2,
         "exposure_text": "+$47",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 3:00pm CT",
+        "when": "no move planned until the handoff to the fight at 3:17pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-21T22:00:12Z"
@@ -36,11 +36,11 @@
         "resting": "209 @ 5c",
         "exposure": 49.35,
         "exposure_text": "+$49",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:00pm CT, up to $100 in all",
-        "at": "2026-10-24T20:00:00Z",
+        "move": "Hold price at 5c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 40",
         "last_fill": "2026-10-21T22:14:17Z",
         "lag_note": "Price 5c is at its floor."
       },
@@ -49,11 +49,11 @@
         "resting": "250 @ 32c",
         "exposure": 58.2,
         "exposure_text": "+$58",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:00pm CT, up to $100 in all",
-        "at": "2026-10-24T20:00:00Z",
+        "move": "Step price down 1c (32c to 31c)",
+        "when": "next bot check, if the crowd trades under 32c",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 125",
         "last_fill": "2026-10-21T21:25:28Z",
         "lag_note": "Steps to 31c if the crowd trades lower."
       },
@@ -62,11 +62,11 @@
         "resting": "242 @ 14c",
         "exposure": 58.2,
         "exposure_text": "+$58",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:00pm CT, up to $100 in all",
-        "at": "2026-10-24T20:00:00Z",
+        "move": "Hold price at 14c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 125",
         "last_fill": "2026-10-21T21:25:28Z",
         "lag_note": "Price 14c is at its floor."
       },
@@ -75,11 +75,11 @@
         "resting": "223 @ 7c",
         "exposure": 58.2,
         "exposure_text": "+$58",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:00pm CT, up to $100 in all",
-        "at": "2026-10-24T20:00:00Z",
+        "move": "Hold price at 7c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 125",
         "last_fill": "2026-10-21T21:25:28Z",
         "lag_note": "Price 7c is at its floor."
       },
@@ -88,11 +88,11 @@
         "resting": "250 @ 18c",
         "exposure": 58.2,
         "exposure_text": "+$58",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:00pm CT, up to $100 in all",
-        "at": "2026-10-24T20:00:00Z",
+        "move": "Hold price at 18c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 125",
         "last_fill": "2026-10-21T21:25:28Z",
         "lag_note": "Price 18c is at its floor."
       }
@@ -101,7 +101,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 3:20pm CT. Sold 270, 1,174 resting. Worst line -$14 (target -$50)."
+          "Final tightening, fight about 3:20pm CT. Sold 270, 1,174 resting. Worst line -$14 (target -$50)."
         ]
       },
       {
@@ -125,7 +125,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if a bucket's line falls under -$150.",
-          "Paid balancing starts 3:00pm CT: worst line to -$50, up to $100.",
+          "Paid balancing is open: started at -$14, target -$50, now -$14.",
           "Even-up 2:20pm CT; last-resort take 3:00pm CT; handoff to the fight 3:17pm CT.",
           "The fight start is an estimate and can move."
         ]
@@ -138,16 +138,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-24T20:00:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$50."
-      },
-      {
-        "at": "2026-10-24T20:00:00Z",
-        "label": "Last-resort take window",
-        "detail": "Bot may sell to close the last gaps."
-      },
       {
         "at": "2026-10-24T20:17:00Z",
         "label": "Handoff to the fight",
@@ -213,87 +203,9 @@
       }
     ],
     "book": "UFC-VOLEVL",
-    "ts": "2026-10-24T19:58:30Z"
+    "ts": "2026-10-24T20:00:31Z"
   },
   "posts": [
-    {
-      "id": "1792731814256-7bae63",
-      "ts": "2026-10-23T05:03:34Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792732133359-c702ec",
-      "ts": "2026-10-23T05:08:53Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nVOLKOTKODQ: +116\nVOLSUB: +107\nVOLDEC: -134\nEVLKOTKODQ: +116\nEVLSUB: +116\nEVLDEC: +116\nDRAW: +105\nCollected $116 premium ($0 fees) | Paper margin over fair $53 (not realized until settlement)\nheld / resting\nVOLKOTKODQ: 0 / 250\nVOLSUB: 9 / 237\nVOLDEC: 250 / 0\nEVLKOTKODQ: 0 / 250\nEVLSUB: 0 / 250\nEVLDEC: 0 / 250\nDRAW: 11 / 19\nPosted book 1.00 | Sold avg 1.417 | Worst now -134 | Cash free $500\nAnchor age 50s | Last fill 111296s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792732720902-ddaa5a",
-      "ts": "2026-10-23T05:18:40Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792733627730-b64501",
-      "ts": "2026-10-23T05:33:47Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792734534619-85f34a",
-      "ts": "2026-10-23T05:48:54Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792735441976-33aed3",
-      "ts": "2026-10-23T06:04:01Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792735768846-c4519b",
-      "ts": "2026-10-23T06:09:28Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nVOLKOTKODQ: +116\nVOLSUB: +107\nVOLDEC: -134\nEVLKOTKODQ: +116\nEVLSUB: +116\nEVLDEC: +116\nDRAW: +105\nCollected $116 premium ($0 fees) | Paper margin over fair $53 (not realized until settlement)\nheld / resting\nVOLKOTKODQ: 0 / 250\nVOLSUB: 9 / 237\nVOLDEC: 250 / 0\nEVLKOTKODQ: 0 / 250\nEVLSUB: 0 / 250\nEVLDEC: 0 / 250\nDRAW: 11 / 19\nPosted book 1.00 | Sold avg 1.417 | Worst now -134 | Cash free $500\nAnchor age 97s | Last fill 114932s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792736348615-5fb5a9",
-      "ts": "2026-10-23T06:19:08Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792737255244-a93ab3",
       "ts": "2026-10-23T06:34:15Z",
@@ -3200,6 +3112,85 @@
       "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1792871951099-da892c",
+      "ts": "2026-10-24T19:59:02Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792871971194-8c73ac",
+      "ts": "2026-10-24T19:59:30Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792872011585-1f95dc",
+      "ts": "2026-10-24T19:59:54Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792872019729-1ff5ab",
+      "ts": "2026-10-24T20:00:19Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "ufc_forced_glide",
+      "text": "UFC UFC-VOLEVL at T-20: coverage 0.81, under 1.00. Worst line -14 (VOLDEC). The bot sold the room it could and stepped prices to the crowd; it keeps working until the bell.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792872031782-bd9a01",
+      "ts": "2026-10-24T20:00:19Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$14.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1792872031783-b4a80d",
+      "ts": "2026-10-24T20:00:20Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792872031786-2b77c0",
+      "ts": "2026-10-24T20:00:31Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Full ladder posted to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792872031786-1813d9",
+      "ts": "2026-10-24T20:00:31Z",
+      "book": "UFC-VOLEVL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 3:20pm CT. Worst line -$14, target -$50. Next: Handoff to the fight, 3:17pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
