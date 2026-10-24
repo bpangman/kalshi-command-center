@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T08:43:08.797443Z",
+  "generated_at": "2026-10-24T08:46:23.554129Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 2:30pm CT. Worst line -$629, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 73,
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -29,7 +29,7 @@
         "move": "Next wave up to 1,000 contracts",
         "when": "when 90% of the 1,514 offered has sold (now 61%)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-24T07:13:46Z"
       },
@@ -100,7 +100,7 @@
         "exposure_text": "-$155",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T08:42:18Z",
+        "at": "2026-10-24T08:46:20Z",
         "stuck": false,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -122,14 +122,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 2:30pm CT. Sold 10,781, 22,336 resting. Worst line -$629 (limit now -$250). Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag 2:30pm CT. Sold 10,781, 22,336 resting. Worst line -$629 (limit now -$250)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Jesse Love, Justin Allgaier, Sheldon Creed.",
-          "Jesse Love: 819 behind. Steps to 16c if no fill by 3:46am CT.",
+          "Jesse Love: 819 behind. Steps to 16c at the next check.",
           "Sheldon Creed: 565 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -228,39 +228,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T08:42:18Z"
+    "ts": "2026-10-24T08:46:20Z"
   },
   "posts": [
-    {
-      "id": "1792763012667-467596",
-      "ts": "2026-10-23T13:43:32Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$730, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792763113350-29206b",
-      "ts": "2026-10-23T13:43:00Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 176: Austin Hill x176 at 18c. Worst line -$730.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 176.0,
-        "fills": [
-          {
-            "side": "Austin Hill",
-            "price": 0.18,
-            "qty": 176.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792763113351-6288f8",
       "ts": "2026-10-23T13:44:56Z",
@@ -3584,18 +3554,29 @@
       "text": "Jesse Love price not lowered: a full fill would push the worst line to -$330.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792831520088-04a7b0",
+      "ts": "2026-10-24T08:45:20Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 2:30pm CT. Worst line -$629, final target +$100. Next: Risk glide starts, 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792831560268-df67be",
+      "ts": "2026-10-24T08:45:43Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
+      "severity": "info",
+      "title": "Rate limit"
     }
   ],
   "audits": [
-    {
-      "id": "1792770320871-296fa1",
-      "ts": "2026-10-23T15:45:20Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): 17 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JECL low 1538c, KXNASCARRACE-THEPG26-JUAL low 745c, KXNASCARRACE-THEPG26-RYSI low 835c, KXNASCARRACE-THEPG26-JEBU low 1058c, KXNASCARRACE-THEPG26-BRPO low 1540c, KXNASCARRACE-THEPG26-SHCR low 541c, KXNASCARRACE-THEPG26-KYSI low 1543c, KXNASCARRACE-THEPG26-DETH low 1546c, KXNASCARRACE-THEPG26-SASM low 842c, KXNASCARRACE-THEPG26-LEHO low 1546c, KXNASCARRACE-THEPG26-JELO low 607c, KXNASCARRACE-THEPG26-CODA low 424c, KXNASCARRACE-THEPG26-BRCR low 894c, KXNASCARRACE-THEPG26-JAFI low 1546c, KXNASCARRACE-THEPG26-LEPU low 1540c, KXNASCARRACE-THEPG26-ANAL low 813c, KXNASCARRACE-THEPG26-PARE low 826c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792770320872-f1af59",
       "ts": "2026-10-23T15:45:20Z",
@@ -4486,6 +4467,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -629.16 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792831421959-4341c7",
+      "ts": "2026-10-24T08:43:41Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Anthony Alfredo has had no resting orders for at least 810 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
