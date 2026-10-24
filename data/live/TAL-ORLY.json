@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T02:56:50.082034Z",
+  "generated_at": "2026-10-24T02:59:38.685259Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$630, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -64,7 +64,7 @@
         "exposure_text": "-$253",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (103% of the offered has sold)",
-        "at": "2026-10-24T02:56:36Z",
+        "at": "2026-10-24T02:59:38Z",
         "stuck": false,
         "also": "Also: glide starts Sat 10:30am CT",
         "last_fill": "2026-10-23T18:35:41Z"
@@ -100,7 +100,7 @@
         "exposure_text": "-$157",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T02:56:36Z",
+        "at": "2026-10-24T02:59:38Z",
         "stuck": false,
         "also": "Also: glide starts Sat 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 10,764, 21,976 resting. Worst line -$630 (limit now -$250)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 10,764, 21,976 resting. Worst line -$630 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -228,19 +228,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T02:56:36Z"
+    "ts": "2026-10-24T02:59:38Z"
   },
   "posts": [
-    {
-      "id": "1792742879860-2e3f9d",
-      "ts": "2026-10-23T08:07:59Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$836, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792743110525-aa8734",
       "ts": "2026-10-23T08:11:50Z",
@@ -3645,27 +3635,19 @@
         "contracts": 2092.0,
         "rows": 9
       }
+    },
+    {
+      "id": "1792810657386-08bcfe",
+      "ts": "2026-10-24T02:57:37Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$630, final target +$100. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792743474045-1d1a9e",
-      "ts": "2026-10-23T08:17:54Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): worst -836.05 vs floor -170.08. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792745445346-dbb9da",
-      "ts": "2026-10-23T08:50:45Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): 18 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JECL low 1430c, KXNASCARRACE-THEPG26-JUAL low 819c, KXNASCARRACE-THEPG26-RYSI low 577c, KXNASCARRACE-THEPG26-JEBU low 1438c, KXNASCARRACE-THEPG26-AUHI low 840c, KXNASCARRACE-THEPG26-BRPO low 1431c, KXNASCARRACE-THEPG26-KYSI low 1431c, KXNASCARRACE-THEPG26-TAGR high 1c, KXNASCARRACE-THEPG26-DETH low 1438c, KXNASCARRACE-THEPG26-RACA low 448c, KXNASCARRACE-THEPG26-SASM high 1c, KXNASCARRACE-THEPG26-LEHO low 1438c, KXNASCARRACE-THEPG26-JELO low 1192c, KXNASCARRACE-THEPG26-CODA low 537c, KXNASCARRACE-THEPG26-BRCR low 971c, KXNASCARRACE-THEPG26-JAFI low 1438c, KXNASCARRACE-THEPG26-LEPU low 1431c, KXNASCARRACE-THEPG26-PARE low 1430c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792745445347-9e5b84",
       "ts": "2026-10-23T08:50:45Z",
@@ -4547,6 +4529,24 @@
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
+    },
+    {
+      "id": "1792810643717-517339",
+      "ts": "2026-10-24T02:57:23Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-ORLY): 15 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JECL low 322c, KXNASCARRACE-THEPG26-JUAL low 566c, KXNASCARRACE-THEPG26-JEBU low 414c, KXNASCARRACE-THEPG26-AUHI low 392c, KXNASCARRACE-THEPG26-BRPO low 351c, KXNASCARRACE-THEPG26-SHCR low 575c, KXNASCARRACE-THEPG26-KYSI low 351c, KXNASCARRACE-THEPG26-DETH low 324c, KXNASCARRACE-THEPG26-SASM low 302c, KXNASCARRACE-THEPG26-LEHO low 324c, KXNASCARRACE-THEPG26-JELO low 611c, KXNASCARRACE-THEPG26-CAKV low 316c, KXNASCARRACE-THEPG26-CODA low 439c, KXNASCARRACE-THEPG26-JAFI low 324c, KXNASCARRACE-THEPG26-LEPU low 351c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792810643718-7a4925",
+      "ts": "2026-10-24T02:57:23Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-ORLY): worst -630.47 vs floor -170.08. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
