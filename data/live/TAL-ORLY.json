@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T04:34:46.350162Z",
+  "generated_at": "2026-10-24T04:37:34.622312Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$630, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -100,7 +100,7 @@
         "exposure_text": "-$157",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T04:34:24Z",
+        "at": "2026-10-24T04:37:25Z",
         "stuck": false,
         "also": "Also: glide starts Sat 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 10,764, 22,353 resting. Worst line -$630 (limit now -$250)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 10,764, 22,353 resting. Worst line -$630 (limit now -$250). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -228,18 +228,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T04:34:24Z"
+    "ts": "2026-10-24T04:37:25Z"
   },
   "posts": [
-    {
-      "id": "1792750409876-701262",
-      "ts": "2026-10-23T10:13:29Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBrandon Jones: -834\nCarson Kvapil: -518\nRajah Caruth: -378\nSam Mayer: -334\nTaylor Gray: -333\nSammy Smith: -333\nAnthony Alfredo: -329\nRyan Sieg: -253\nall others (33) >= -61\nCollected $397 premium ($6 fees) | Paper margin over fair $67 (not realized until settlement)\nCore posted book 1.53 | Worst now -834 | Cash free $2678\nAnchor age 264s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792750901259-f50d2b",
       "ts": "2026-10-23T10:21:41Z",
@@ -3643,18 +3634,19 @@
       "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$630, final target +$100. Next: Risk glide starts, Sat 10:30am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792816645656-932abd",
+      "ts": "2026-10-24T04:37:25Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$630, final target +$100. Next: Risk glide starts, Sat 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792753193021-c8ab0f",
-      "ts": "2026-10-23T10:59:53Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): worst -833.57 vs floor -170.08. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792754538293-38715c",
       "ts": "2026-10-23T11:22:18Z",
@@ -4545,6 +4537,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -630.47 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792816623083-b3d935",
+      "ts": "2026-10-24T04:37:03Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Anthony Alfredo has had no resting orders for at least 563 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
