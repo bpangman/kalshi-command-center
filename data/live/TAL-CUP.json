@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-24T17:08:47.624641Z",
+  "generated_at": "2026-10-24T17:11:35.246532Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$857, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 50,
+    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Denny Hamlin",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 33,485, 31,066 resting. Worst line -$857 (limit now -$550). Bot is slow (checks every 50s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 33,485, 31,066 resting. Worst line -$857 (limit now -$550)."
         ]
       },
       {
@@ -212,19 +212,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-24T17:08:11Z"
+    "ts": "2026-10-24T17:11:12Z"
   },
   "posts": [
-    {
-      "id": "1792774682514-9e1c03",
-      "ts": "2026-10-23T16:58:01Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1792775590139-e5bd24",
       "ts": "2026-10-23T17:13:10Z",
@@ -3790,18 +3780,19 @@
       "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$857, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792861872661-1ff7dd",
+      "ts": "2026-10-24T17:11:12Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$857, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792812651272-a2e2fb",
-      "ts": "2026-10-24T03:30:51Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 24 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-CAME low 537c, KXNASCARRACE-YEL26-MIMC low 6c, KXNASCARRACE-YEL26-JOLO low 268c, KXNASCARRACE-YEL26-AUDI low 6c, KXNASCARRACE-YEL26-CHBU low 237c, KXNASCARRACE-YEL26-ROCH low 6c, KXNASCARRACE-YEL26-JOGA low 537c, KXNASCARRACE-YEL26-RYBL low 186c, KXNASCARRACE-YEL26-BUWA low 546c, KXNASCARRACE-YEL26-CHEL low 197c, KXNASCARRACE-YEL26-ERJO low 6c, KXNASCARRACE-YEL26-TYRE low 546c, KXNASCARRACE-YEL26-JONE low 6c, KXNASCARRACE-YEL26-COCU low 6c, KXNASCARRACE-YEL26-GRGA low 537c, KXNASCARRACE-YEL26-COWA low 537c, KXNASCARRACE-YEL26-AUHI low 6c, KXNASCARRACE-YEL26-CHBE low 295c, KXNASCARRACE-YEL26-AUCI low 965c, KXNASCARRACE-YEL26-NOGR low 6c, KXNASCARRACE-YEL26-CHBR low 546c, KXNASCARRACE-YEL26-ZASM low 6c, KXNASCARRACE-YEL26-TYGI low 270c, KXNASCARRACE-YEL26-DADY low 537c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792812651272-2c7b92",
       "ts": "2026-10-24T03:30:51Z",
@@ -4691,6 +4682,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Carson Hocevar has had no resting orders for at least 3146 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792861850930-33ab9b",
+      "ts": "2026-10-24T17:10:50Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Brad Keselowski has had no resting orders for at least 2163 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
