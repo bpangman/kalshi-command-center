@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-24T21:19:07.305714Z",
+  "generated_at": "2026-10-24T21:20:43.909685Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,15 +33,15 @@
       },
       {
         "side": "ATL by 1-6",
-        "resting": "290 @ 19-23c",
+        "resting": "290 @ 18-23c",
         "exposure": 92.35,
         "exposure_text": "+$92",
-        "move": "Hold price at 19c",
+        "move": "Hold price at 18c",
         "when": "crowd pays 18.7c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 11:15am CT",
-        "lag_note": "Price 19c matches the crowd."
+        "lag_note": "Price 18c matches the crowd."
       },
       {
         "side": "ATL by 15+",
@@ -91,7 +91,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): ATL by 1-6, ATL by 7-14, ATL by 15+, SF by 1-6.",
-          "ATL by 1-6: 248 behind. Price 19c matches the crowd.",
+          "ATL by 1-6: 248 behind. Price 18c matches the crowd.",
           "ATL by 7-14: 248 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -188,7 +188,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-24T21:19:06Z"
+    "ts": "2026-10-24T21:20:06Z"
   },
   "posts": [
     {
@@ -3075,6 +3075,15 @@
       "source": "resistance_monitor",
       "text": "W8-SFATL book is churning: 0 cancel-and-repost at the same price and 3 trims of smaller sides in 30 min. Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1792876756866-236e02",
+      "ts": "2026-10-24T21:19:16Z",
+      "book": "W8-SFATL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nATL 1-6: +92 (+4.6% of bankroll)\nATL 7-14: +92 (+4.6% of bankroll)\nATL 15+: +92 (+4.6% of bankroll)\nSF 1-6: +92 (+4.6% of bankroll)\nSF 7-14: -147 (-7.2% of bankroll)\nSF 15+: -156 (-7.7% of bankroll)\nCollected $92 premium ($0 fees) | Paper margin over fair $13 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 290\nATL 7-14: 0 / 265\nATL 15+: 0 / 250\nSF 1-6: 0 / 302\nSF 7-14: 239 / 4\nSF 15+: 248 / 4\nPosted book 1.13 | Sold avg 1.081 | Worst now -9 | Cash free $346\nAnchor age 0s | Last fill 38323s ago",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -3400,6 +3409,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-SFATL): lagging bucket priced over the crowd: SF1TO6 ask 0.26 vs clearing 0.228 for 51 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792876749170-d2991d",
+      "ts": "2026-10-24T21:19:09Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-SFATL): held worst -155.65 (backstop -150) or lagging gap 248 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
