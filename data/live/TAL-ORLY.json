@@ -1,10 +1,10 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T20:25:57.900471Z",
+  "generated_at": "2026-10-24T20:27:40.812568Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$12.",
+    "headline": "In race (Ingame). Worst line unknown.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 22,860, 5,997 resting. Worst line +$12. Race 30% done. Floor protocol off."
+          "In race (Ingame). Sold 22,860, 5,997 resting. Worst line unknown. Race 31% done. Floor protocol off."
         ]
       },
       {
@@ -44,39 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T20:25:42Z"
+    "ts": "2026-10-24T20:26:43Z"
   },
   "posts": [
-    {
-      "id": "1792853565454-8bcce5",
-      "ts": "2026-10-24T14:52:33Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Idle step on Taylor Gray: no fill for 4137 min, lowest row 6c to 5c.",
-      "severity": "info",
-      "title": "Price step"
-    },
-    {
-      "id": "1792854472998-eb5987",
-      "ts": "2026-10-24T15:07:52Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 19,300 resting. Next: Risk glide starts, 10:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792854714950-db8be9",
-      "ts": "2026-10-24T15:11:37Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Idle step on Brennan Poole: no fill for 5382 min, lowest row 3c to 2c.",
-      "severity": "info",
-      "title": "Price step"
-    },
     {
       "id": "1792854936640-c4a3e2",
       "ts": "2026-10-24T15:13:29Z",
@@ -3961,18 +3931,53 @@
       "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-THEPG26-TAGR: gap $1.38 -> max 1 contracts (evenness/favorite gates bypa",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792873603202-18418b",
+      "ts": "2026-10-24T20:26:43Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt KXNASCARRACE-THEPG26-RYEL: hunting rungs decreased 183 -> 0 contracts (room $0.00, floor -145.08)",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792873603206-4d004f",
+      "ts": "2026-10-24T20:24:25Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 110: Harrison Burton x110 at 2c.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 110.0,
+        "fills": [
+          {
+            "side": "Harrison Burton",
+            "price": 0.02,
+            "qty": 110.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792873603206-b9d09d",
+      "ts": "2026-10-24T20:26:07Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 4,004 (race ingame grow): Joey Gase x910 at 15c, Ryan Ellis x910 at 15c, +9 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 4004.0,
+        "rows": 11
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792843339668-da0755",
-      "ts": "2026-10-24T12:02:19Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): worst -541.37 vs floor -170.08. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792843758699-10169d",
       "ts": "2026-10-24T12:09:18Z",
@@ -4862,6 +4867,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+10 on Jake Finch @ 0.04 (maker)\n+3 on Jeb Burton @ 0.04 (maker)\nworst outcome now +9\nIf the race ends... you make\nBrent Crews: +9\nTaylor Gray: +11\nJustin Allgaier: +13\nAustin Hill: +13\nSheldon Creed: +13\nSam Mayer: +13\nSammy Smith: +13\nRajah Caruth: +13\nall others (33) >= +14",
+      "severity": "warn"
+    },
+    {
+      "id": "1792873567316-8a0a9c",
+      "ts": "2026-10-24T20:26:07Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Health: Connor Mosack has room but 0 resting orders for 1670s",
       "severity": "warn"
     }
   ]
