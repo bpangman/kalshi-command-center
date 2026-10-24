@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-24T20:17:49.569326Z",
+  "generated_at": "2026-10-24T20:20:22.758592Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -62,11 +62,11 @@
         "exposure": 22.44,
         "exposure_text": "+$22",
         "move": "Step price down 1c (27c to 26c)",
-        "when": "if no fill by 3:19pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-24T20:19:47Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-24T20:20:20Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Steps to 26c if no fill by 3:19pm CT."
+        "lag_note": "Steps to 26c at the next check."
       },
       {
         "side": "PIT by 7-14",
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-24T20:17:19Z"
+    "ts": "2026-10-24T20:20:20Z"
   },
   "posts": [
     {
@@ -2998,6 +2998,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+132 on PIT 15+ @ 0.17 (maker)\nworst outcome now +97\nheld 0/0/0/0/0/132\nIf the game ends... you make\nNO 1-6: +22 (+0.9% of bankroll)\nNO 7-14: +22 (+0.9% of bankroll)\nNO 15+: +22 (+0.9% of bankroll)\nPIT 1-6: +22 (+0.9% of bankroll)\nPIT 7-14: +22 (+0.9% of bankroll)\nPIT 15+: -110 (-4.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792873138378-c75fcd",
+      "ts": "2026-10-24T20:18:58Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-PITNO): lagging bucket priced over the crowd: PIT1TO6 ask 0.27 vs clearing 0.229 for 52 min. Check the command center.",
       "severity": "warn"
     }
   ]
