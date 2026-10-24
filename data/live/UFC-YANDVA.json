@@ -1,6 +1,6 @@
 {
   "key": "UFC-YANDVA",
-  "generated_at": "2026-10-24T18:44:07.959618Z",
+  "generated_at": "2026-10-24T18:46:01.570075Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
@@ -16,7 +16,7 @@
         "exposure_text": "-$18",
         "move": "Next batch 165 contracts",
         "when": "next bot check (resting 13 is under 82)",
-        "at": "2026-10-24T18:43:56Z",
+        "at": "2026-10-24T18:45:57Z",
         "stuck": false,
         "also": "Also: idle price step",
         "last_fill": "2026-10-24T01:36:22Z"
@@ -27,7 +27,7 @@
         "exposure": 8.15,
         "exposure_text": "+$8",
         "move": "Holding",
-        "when": "no move planned until even-up at 1:45pm CT",
+        "when": "no move planned until paid balancing starts at 2:25pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-21T19:25:20Z"
@@ -37,11 +37,11 @@
         "resting": "120 @ 11-13c",
         "exposure": 8.15,
         "exposure_text": "+$8",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 1:45pm CT",
-        "at": "2026-10-24T18:45:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 2:25pm CT, up to $100 in all",
+        "at": "2026-10-24T19:25:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 2:25pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-21T19:25:20Z",
         "lag_note": "Price 11c is at its floor."
       },
@@ -50,11 +50,11 @@
         "resting": "112 @ 7-8c",
         "exposure": 8.15,
         "exposure_text": "+$8",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 1:45pm CT",
-        "at": "2026-10-24T18:45:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 2:25pm CT, up to $100 in all",
+        "at": "2026-10-24T19:25:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 2:25pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-21T19:25:20Z",
         "lag_note": "Price 7c is at its floor."
       },
@@ -63,11 +63,11 @@
         "resting": "187 @ 39-56c",
         "exposure": 8.15,
         "exposure_text": "+$8",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 1:45pm CT",
-        "at": "2026-10-24T18:45:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 2:25pm CT, up to $100 in all",
+        "at": "2026-10-24T19:25:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 2:25pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-21T19:25:20Z",
         "lag_note": "Steps to 38c if the crowd trades lower."
       },
@@ -76,11 +76,11 @@
         "resting": "137 @ 20-22c",
         "exposure": 8.15,
         "exposure_text": "+$8",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 1:45pm CT",
-        "at": "2026-10-24T18:45:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 2:25pm CT, up to $100 in all",
+        "at": "2026-10-24T19:25:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 2:25pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-21T19:25:20Z",
         "lag_note": "Price 20c is at its floor."
       },
@@ -89,11 +89,11 @@
         "resting": "116 @ 7-8c",
         "exposure": 8.15,
         "exposure_text": "+$8",
-        "move": "Even-up: lowest row moved toward fair",
-        "when": "starts 1:45pm CT",
-        "at": "2026-10-24T18:45:00Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 2:25pm CT, up to $100 in all",
+        "at": "2026-10-24T19:25:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 2:25pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-21T19:25:20Z",
         "lag_note": "Price 7c is at its floor."
       }
@@ -140,11 +140,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-24T18:45:00Z",
-        "label": "Even-up window",
-        "detail": "Lagging buckets repriced toward fair."
-      },
-      {
         "at": "2026-10-24T19:25:00Z",
         "label": "Paid balancing starts",
         "detail": "Worst line to -$50."
@@ -153,6 +148,11 @@
         "at": "2026-10-24T19:25:00Z",
         "label": "Last-resort take window",
         "detail": "Bot may sell to close the last gaps."
+      },
+      {
+        "at": "2026-10-24T19:42:00Z",
+        "label": "Handoff to the fight",
+        "detail": "In-fight engine takes over."
       }
     ],
     "sides": [
@@ -214,28 +214,9 @@
       }
     ],
     "book": "UFC-YANDVA",
-    "ts": "2026-10-24T18:43:56Z"
+    "ts": "2026-10-24T18:45:57Z"
   },
   "posts": [
-    {
-      "id": "1792695480438-2bf551",
-      "ts": "2026-10-22T18:58:00Z",
-      "book": "UFC-YANDVA",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Full ladder posted for the fight about Sat 2:45pm CT. Worst line $0, target -$50. Next: Even-up window, Sat 1:45pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Full ladder posted"
-    },
-    {
-      "id": "1792695943504-0ae6b3",
-      "ts": "2026-10-22T19:05:43Z",
-      "book": "UFC-YANDVA",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nYANKOTKODQ: +0\nYANSUB: +0\nYANDEC: +0\nDVAKOTKODQ: +0\nDVASUB: +0\nDVADEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nYANKOTKODQ: 0 / 250\nYANSUB: 0 / 250\nYANDEC: 0 / 250\nDVAKOTKODQ: 0 / 250\nDVASUB: 0 / 157\nDVADEC: 0 / 250\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $330\nAnchor age 50s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792696386484-4bf54d",
       "ts": "2026-10-22T19:13:06Z",
@@ -3184,6 +3165,25 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Full ladder posted for the fight about 2:45pm CT. Worst line -$18, target -$50. Next: Even-up window, 1:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792867530123-8b0cd0",
+      "ts": "2026-10-24T18:45:30Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "UFC-YANDVA book is not trading: no fills in the last hour while the crowd keeps trading (grew 29694). Check the bot.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792867557286-16276f",
+      "ts": "2026-10-24T18:45:57Z",
+      "book": "UFC-YANDVA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 2:45pm CT. Worst line -$18, target -$50. Next: Paid balancing starts, 2:25pm CT.",
       "severity": "info",
       "title": "Plan updated: Full ladder posted"
     }
