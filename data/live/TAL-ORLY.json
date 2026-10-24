@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T14:26:46.996981Z",
+  "generated_at": "2026-10-24T14:29:44.781327Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -99,12 +99,12 @@
         "exposure": 99.94,
         "exposure_text": "+$100",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-24T14:25:53Z",
+        "when": "if no fill by 9:31am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-24T14:31:46Z",
         "stuck": false,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-24T14:05:53Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 9:31am CT."
       },
       {
         "side": "Sheldon Creed",
@@ -230,19 +230,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 31 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T14:25:53Z"
+    "ts": "2026-10-24T14:28:54Z"
   },
   "posts": [
-    {
-      "id": "1792787236711-195636",
-      "ts": "2026-10-23T20:27:07Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "A wave could not post: Sammy Smith: wave 6 230 @ 0.05 not posted (429 back-off)",
-      "severity": "warn",
-      "title": "Wave blocked"
-    },
     {
       "id": "1792787236712-6601ee",
       "ts": "2026-10-23T20:27:07Z",
@@ -3665,18 +3655,24 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nBrandon Jones: -462\nSam Mayer: -462\nSammy Smith: -461\nCarson Kvapil: -460\nCorey Day: -458\nAustin Hill: -374\nRajah Caruth: -84\nAnthony Alfredo: +12\nall others (33) >= +39\nCollected $775 premium ($12 fees) | Paper margin over fair $109 (not realized until settlement)\nCore posted book 1.28 | Worst now -462 | Cash free $3131\nAnchor age 0s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792852013737-e6f232",
+      "ts": "2026-10-24T14:26:47Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Justin Allgaier: no fill for 21 min, added 21 at 7c (was 8c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Justin Allgaier",
+        "from": 0.08,
+        "to": 0.07
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792802497043-ecadae",
-      "ts": "2026-10-24T00:41:37Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 133 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792803079207-ceda60",
       "ts": "2026-10-24T00:51:19Z",
@@ -4566,6 +4562,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=8217. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792852052829-defdd3",
+      "ts": "2026-10-24T14:27:32Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Sammy Smith has had no resting orders for at least 133 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
