@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-24T20:08:06.250413Z",
+  "generated_at": "2026-10-24T20:10:33.011035Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -61,12 +61,12 @@
         "resting": "489 @ 27-34c",
         "exposure": 22.44,
         "exposure_text": "+$22",
-        "move": "Hold price at 27c",
-        "when": "needs 50+ crowd trades under 27c (now 14)",
-        "at": null,
+        "move": "Step price down 1c (27c to 26c)",
+        "when": "if no fill by 3:19pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-24T20:19:47Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Crowd is quiet here (14 traded)."
+        "lag_note": "Steps to 26c if no fill by 3:19pm CT."
       },
       {
         "side": "PIT by 7-14",
@@ -74,11 +74,11 @@
         "exposure": 22.44,
         "exposure_text": "+$22",
         "move": "Hold price at 23c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 23c (now 5)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (5 traded)."
       }
     ],
     "sections": [
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-24T20:07:14Z"
+    "ts": "2026-10-24T20:10:16Z"
   },
   "posts": [
     {
@@ -2950,6 +2950,16 @@
       "text": "Quiet for 15 min. 2,738 resting. Next: Paid balancing starts, Sun 7:45am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792872595993-e00121",
+      "ts": "2026-10-24T20:09:50Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "PIT by 1-6 price not lowered: a full fill would push the worst line to -$110.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
