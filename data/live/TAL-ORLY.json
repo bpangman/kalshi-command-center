@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T12:57:10.765886Z",
+  "generated_at": "2026-10-24T12:59:59.104957Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 2:30pm CT. Worst line -$488, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -101,7 +101,7 @@
         "exposure_text": "-$14",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T12:56:15Z",
+        "at": "2026-10-24T12:59:17Z",
         "stuck": false,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 2:30pm CT. Sold 12,950, 20,519 resting. Worst line -$488 (limit now -$250)."
+          "Pre-race growth, green flag 2:30pm CT. Sold 12,950, 20,519 resting. Worst line -$488 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -230,19 +230,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T12:56:15Z"
+    "ts": "2026-10-24T12:59:17Z"
   },
   "posts": [
-    {
-      "id": "1792780184134-f7bed6",
-      "ts": "2026-10-23T18:29:44Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$664, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792780587567-19e756",
       "ts": "2026-10-23T18:36:02Z",
@@ -3651,18 +3641,19 @@
         "contracts": 42.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1792846696450-9a8128",
+      "ts": "2026-10-24T12:58:16Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 2:30pm CT. Worst line -$488, final target +$100. Next: Risk glide starts, 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792793579298-21b708",
-      "ts": "2026-10-23T22:12:59Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+0 on Brent Crews @ 0.04 (maker)\nworst outcome now -655\nIf the race ends... you make\nBrandon Jones: -655\nSammy Smith: -353\nCarson Kvapil: -339\nRajah Caruth: -278\nAustin Hill: -219\nAnthony Alfredo: -181\nCorey Day: -174\nSam Mayer: -155\nall others (33) >= -154",
-      "severity": "warn"
-    },
     {
       "id": "1792793676763-656f14",
       "ts": "2026-10-23T22:14:36Z",
@@ -4552,6 +4543,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Sam Mayer (+21%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792846793143-9e3b0d",
+      "ts": "2026-10-24T12:59:53Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 872 min (reason unknown: no reason logged).\n- TAL-ORLY - Sam Mayer has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
