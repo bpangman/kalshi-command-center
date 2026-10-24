@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T04:15:44.180411Z",
+  "generated_at": "2026-10-24T04:19:38.777403Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -63,9 +63,9 @@
         "exposure": -252.98,
         "exposure_text": "-$253",
         "move": "Next wave up to 750 contracts",
-        "when": "next bot check (103% of the offered has sold)",
-        "at": "2026-10-24T04:15:16Z",
-        "stuck": false,
+        "when": "when 90% of the 1,195 offered has sold (now 71%)",
+        "at": null,
+        "stuck": true,
         "also": "Also: glide starts Sat 10:30am CT",
         "last_fill": "2026-10-23T18:35:41Z"
       },
@@ -100,7 +100,7 @@
         "exposure_text": "-$157",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T04:15:16Z",
+        "at": "2026-10-24T04:19:17Z",
         "stuck": false,
         "also": "Also: glide starts Sat 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 2:30pm CT. Sold 10,764, 21,976 resting. Worst line -$630 (limit now -$250)."
+          "Pre-race growth, green flag Sat 2:30pm CT. Sold 10,764, 22,353 resting. Worst line -$630 (limit now -$250)."
         ]
       },
       {
@@ -228,19 +228,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T04:15:16Z"
+    "ts": "2026-10-24T04:19:17Z"
   },
   "posts": [
-    {
-      "id": "1792748442926-8e6893",
-      "ts": "2026-10-23T09:40:42Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$834, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792748503288-7aec61",
       "ts": "2026-10-23T09:41:43Z",
@@ -3640,18 +3630,23 @@
       "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$630, final target +$100. Next: Risk glide starts, Sat 10:30am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792815477417-a1f3b5",
+      "ts": "2026-10-24T04:15:50Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 377 (race glide fill): Rajah Caruth x377 at 5c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 377.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792751352244-670d50",
-      "ts": "2026-10-23T10:29:12Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): 18 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JECL low 1430c, KXNASCARRACE-THEPG26-JUAL low 819c, KXNASCARRACE-THEPG26-RYSI low 577c, KXNASCARRACE-THEPG26-JEBU low 1438c, KXNASCARRACE-THEPG26-AUHI low 840c, KXNASCARRACE-THEPG26-BRPO low 1431c, KXNASCARRACE-THEPG26-KYSI low 1431c, KXNASCARRACE-THEPG26-TAGR high 1c, KXNASCARRACE-THEPG26-DETH low 1438c, KXNASCARRACE-THEPG26-RACA low 448c, KXNASCARRACE-THEPG26-SASM high 1c, KXNASCARRACE-THEPG26-LEHO low 1438c, KXNASCARRACE-THEPG26-JELO low 1192c, KXNASCARRACE-THEPG26-CODA low 537c, KXNASCARRACE-THEPG26-BRCR low 971c, KXNASCARRACE-THEPG26-JAFI low 1438c, KXNASCARRACE-THEPG26-LEPU low 1431c, KXNASCARRACE-THEPG26-PARE low 1430c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792751352245-b3d747",
       "ts": "2026-10-23T10:29:12Z",
@@ -4542,6 +4537,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -630.47 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792815398136-c285ac",
+      "ts": "2026-10-24T04:16:38Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: TAL-ORLY - Rajah Caruth is posting again.",
+      "severity": "warn"
     }
   ]
 }
