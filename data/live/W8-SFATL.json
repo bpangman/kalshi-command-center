@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-24T21:20:43.909685Z",
+  "generated_at": "2026-10-24T21:22:20.439483Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -73,11 +73,11 @@
         "exposure": 92.35,
         "exposure_text": "+$92",
         "move": "Step price down 1c (26c to 25c)",
-        "when": "if no fill by 4:22pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-24T21:22:17Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 11:15am CT",
-        "lag_note": "Steps to 25c if no fill by 4:22pm CT."
+        "lag_note": "Steps to 25c at the next check."
       }
     ],
     "sections": [
@@ -144,7 +144,7 @@
         "resting": 290.0,
         "target": null,
         "status": "lagging",
-        "price": 0.19
+        "price": 0.18
       },
       {
         "label": "ATL by 7-14",
@@ -188,7 +188,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-24T21:20:06Z"
+    "ts": "2026-10-24T21:22:08Z"
   },
   "posts": [
     {
@@ -3084,6 +3084,20 @@
       "source": "bot",
       "text": "If the game ends... you make\nATL 1-6: +92 (+4.6% of bankroll)\nATL 7-14: +92 (+4.6% of bankroll)\nATL 15+: +92 (+4.6% of bankroll)\nSF 1-6: +92 (+4.6% of bankroll)\nSF 7-14: -147 (-7.2% of bankroll)\nSF 15+: -156 (-7.7% of bankroll)\nCollected $92 premium ($0 fees) | Paper margin over fair $13 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 290\nATL 7-14: 0 / 265\nATL 15+: 0 / 250\nSF 1-6: 0 / 302\nSF 7-14: 239 / 4\nSF 15+: 248 / 4\nPosted book 1.13 | Sold avg 1.081 | Worst now -9 | Cash free $346\nAnchor age 0s | Last fill 38323s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792876887692-0bee56",
+      "ts": "2026-10-24T21:20:20Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 103 (ANCHOR step 0.18): ATL by 1-6 x81 at 18c, +1 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 103.0,
+        "rows": 3
+      }
     }
   ],
   "audits": [
