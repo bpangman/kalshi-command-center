@@ -1,10 +1,10 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-24T23:42:25.137603Z",
+  "generated_at": "2026-10-24T23:45:14.499324Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 12:00pm CT. Worst line -$156, goal -$75.",
+    "headline": "Building toward kickoff Sun 12:00pm CT. Worst line -$152, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,10 +12,10 @@
       {
         "side": "SF by 15+",
         "resting": "4 @ 18-25c",
-        "exposure": -155.65,
-        "exposure_text": "-$156",
+        "exposure": -152.2,
+        "exposure_text": "-$152",
         "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$150 (now -$156)",
+        "when": "holding until worst loss is back above -$150 (now -$152)",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-24T04:06:28Z"
@@ -23,8 +23,8 @@
       {
         "side": "SF by 7-14",
         "resting": "4 @ 22-23c",
-        "exposure": -146.65,
-        "exposure_text": "-$147",
+        "exposure": -143.2,
+        "exposure_text": "-$143",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 11:15am CT, up to $50 in all",
         "at": "2026-10-25T16:15:00Z",
@@ -32,10 +32,23 @@
         "last_fill": "2026-10-24T10:40:32Z"
       },
       {
+        "side": "SF by 1-6",
+        "resting": "287 @ 23-26c",
+        "exposure": 80.8,
+        "exposure_text": "+$81",
+        "move": "Hold price at 23c",
+        "when": "crowd pays 23c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Sun 11:15am CT",
+        "last_fill": "2026-10-24T23:42:18Z",
+        "lag_note": "Price 23c matches the crowd."
+      },
+      {
         "side": "ATL by 1-6",
         "resting": "290 @ 18-23c",
-        "exposure": 92.35,
-        "exposure_text": "+$92",
+        "exposure": 95.8,
+        "exposure_text": "+$96",
         "move": "Hold price at 18c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -46,8 +59,8 @@
       {
         "side": "ATL by 15+",
         "resting": "250 @ 10-19c",
-        "exposure": 92.35,
-        "exposure_text": "+$92",
+        "exposure": 95.8,
+        "exposure_text": "+$96",
         "move": "Hold price at 10c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -58,21 +71,9 @@
       {
         "side": "ATL by 7-14",
         "resting": "265 @ 13-17c",
-        "exposure": 92.35,
-        "exposure_text": "+$92",
+        "exposure": 95.8,
+        "exposure_text": "+$96",
         "move": "Hold price at 13c",
-        "when": "no crowd trade data yet",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts Sun 11:15am CT",
-        "lag_note": "No crowd trade data yet."
-      },
-      {
-        "side": "SF by 1-6",
-        "resting": "302 @ 23-26c",
-        "exposure": 92.35,
-        "exposure_text": "+$92",
-        "move": "Hold price at 23c",
         "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
@@ -84,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 12:00pm CT. Sold 487, 1,115 resting. Worst line -$156 (goal -$75)."
+          "Pregame build, kickoff Sun 12:00pm CT. Sold 502, 1,100 resting. Worst line -$152 (goal -$75)."
         ]
       },
       {
@@ -100,14 +101,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$156).",
+          "Gate closed: batches wait for the worst line to reach -$100 (now -$152).",
           "Batches used: none (max 1 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: SF by 15+ stopped adding until worst line is above -$150 (now -$156).",
+          "Backstop ON: SF by 15+ stopped adding until worst line is above -$150 (now -$152).",
           "Paid balancing starts Sun 11:15am CT: worst line to -$75 by Sun 11:50am CT, up to $50.",
           "At Sun 11:30am CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff Sun 12:00pm CT: the in-game engine takes over."
@@ -164,8 +165,8 @@
       },
       {
         "label": "SF by 1-6",
-        "held": 0.0,
-        "resting": 302.0,
+        "held": 15.0,
+        "resting": 287.0,
         "target": null,
         "status": "lagging",
         "price": 0.23
@@ -188,7 +189,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-24T23:42:12Z"
+    "ts": "2026-10-24T23:45:13Z"
   },
   "posts": [
     {
@@ -3603,6 +3604,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-SFATL): held worst -155.65 (backstop -150) or lagging gap 248 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792885462922-da4c9b",
+      "ts": "2026-10-24T23:44:22Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+15 on SF 1-6 @ 0.23 (maker)\nworst outcome now -23\nheld 0/0/0/15/239/248\nIf the game ends... you make\nATL 1-6: +96 (+4.7% of bankroll)\nATL 7-14: +96 (+4.7% of bankroll)\nATL 15+: +96 (+4.7% of bankroll)\nSF 1-6: +81 (+4.0% of bankroll)\nSF 7-14: -143 (-7.1% of bankroll)\nSF 15+: -152 (-7.5% of bankroll)",
       "severity": "warn"
     }
   ]
