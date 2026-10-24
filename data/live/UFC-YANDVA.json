@@ -1,300 +1,52 @@
 {
   "key": "UFC-YANDVA",
-  "generated_at": "2026-10-24T19:29:53.587229Z",
+  "generated_at": "2026-10-24T19:35:07.695012Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Final tightening",
-    "headline": "Final tightening for the fight about 2:45pm CT. Worst line -$18, target -$50.",
+    "phase": "Fight on",
+    "headline": "Fight on. Worst line -$9.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 45,
-    "moves": [
-      {
-        "side": "Dvalishvili by Decision",
-        "resting": "13 @ 33c",
-        "exposure": -18.13,
-        "exposure_text": "-$18",
-        "move": "Next batch 108 contracts",
-        "when": "next bot check (resting 13 is under 82)",
-        "at": "2026-10-24T19:29:17Z",
-        "stuck": false,
-        "also": "Also: idle price step",
-        "last_fill": "2026-10-24T01:36:22Z"
-      },
-      {
-        "side": "Draw / No Contest",
-        "resting": "none",
-        "exposure": 8.15,
-        "exposure_text": "+$8",
-        "move": "Holding",
-        "when": "no move planned until the handoff to the fight at 2:42pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-21T19:25:20Z"
-      },
-      {
-        "side": "Dvalishvili by KO/TKO",
-        "resting": "120 @ 11-13c",
-        "exposure": 8.15,
-        "exposure_text": "+$8",
-        "move": "Hold price at 11c",
-        "when": "already at its floor (fair minus 0c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 82",
-        "last_fill": "2026-10-21T19:25:20Z",
-        "lag_note": "Price 11c is at its floor."
-      },
-      {
-        "side": "Dvalishvili by Submission",
-        "resting": "112 @ 7-8c",
-        "exposure": 8.15,
-        "exposure_text": "+$8",
-        "move": "Hold price at 7c",
-        "when": "already at its floor (fair minus 0c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 40",
-        "last_fill": "2026-10-21T19:25:20Z",
-        "lag_note": "Price 7c is at its floor."
-      },
-      {
-        "side": "Yan by Decision",
-        "resting": "26 @ 38-54c",
-        "exposure": 8.15,
-        "exposure_text": "+$8",
-        "move": "Next batch 108 contracts",
-        "when": "next bot check (resting 26 is under 82)",
-        "at": "2026-10-24T19:29:17Z",
-        "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-10-21T19:25:20Z",
-        "lag_note": "Steps to 37c if the crowd trades lower."
-      },
-      {
-        "side": "Yan by KO/TKO",
-        "resting": "137 @ 20-22c",
-        "exposure": 8.15,
-        "exposure_text": "+$8",
-        "move": "Hold price at 20c",
-        "when": "already at its floor (fair minus 0c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 82",
-        "last_fill": "2026-10-21T19:25:20Z",
-        "lag_note": "Price 20c is at its floor."
-      },
-      {
-        "side": "Yan by Submission",
-        "resting": "116 @ 7-8c",
-        "exposure": 8.15,
-        "exposure_text": "+$8",
-        "move": "Hold price at 7c",
-        "when": "already at its floor (fair minus 0c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 82",
-        "last_fill": "2026-10-21T19:25:20Z",
-        "lag_note": "Price 7c is at its floor."
-      }
-    ],
+    "confidence_note": "During the fight the steps follow the action.",
+    "checks_every_s": 10,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, fight about 2:45pm CT. Sold 26, 524 resting. Worst line -$18 (target -$50). Bot is slow (checks every 45s, set for 20s)."
+          "Fight on. Sold 50. Worst line -$9. Bout in, round 0."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Dvalishvili by KO/TKO, Dvalishvili by Submission, Yan by Decision, Yan by KO/TKO, Yan by Submission.",
-          "Dvalishvili by KO/TKO: 26 behind. Price 11c is at its floor.",
-          "Dvalishvili by Submission: 26 behind. Price 7c is at its floor.",
-          "A price step needs 20 min with no fill and the crowd paying less."
+          "No lag rule in the fight; short-lived rows follow the live price."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate open: worst line -$18 is better than -$100.",
-          "Batches used: 5 (max 3 per bucket)."
+          "Short rungs (about 30s) are priced off the live moneyline, inside the loss floor."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if a bucket's line falls under -$100.",
-          "Paid balancing is open: started at -$18, target -$50, now -$18.",
-          "Even-up 1:45pm CT; last-resort take 2:25pm CT; handoff to the fight 2:42pm CT.",
-          "The fight start is an estimate and can move."
+          "Everything is pulled when the fight ends or the winner's price passes 0.95."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: the full ladder, extra batches, price steps and paid balancing run by rule. The start time can shift."
+          "Yes, it refreshes every 10s and pulls on a finish."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-24T19:42:00Z",
-        "label": "Handoff to the fight",
-        "detail": "In-fight engine takes over."
-      }
-    ],
-    "sides": [
-      {
-        "label": "Dvalishvili by Decision",
-        "held": 26.3,
-        "resting": 13.0,
-        "target": 330.0,
-        "status": "even",
-        "price": 0.33
-      },
-      {
-        "label": "Dvalishvili by KO/TKO",
-        "held": 0.0,
-        "resting": 120.0,
-        "target": 330.0,
-        "status": "lagging",
-        "price": 0.11
-      },
-      {
-        "label": "Dvalishvili by Submission",
-        "held": 0.0,
-        "resting": 112.0,
-        "target": 160.0,
-        "status": "lagging",
-        "price": 0.07
-      },
-      {
-        "label": "Yan by Decision",
-        "held": 0.0,
-        "resting": 26.0,
-        "target": 330.0,
-        "status": "lagging",
-        "price": 0.38
-      },
-      {
-        "label": "Yan by KO/TKO",
-        "held": 0.0,
-        "resting": 137.0,
-        "target": 330.0,
-        "status": "lagging",
-        "price": 0.2
-      },
-      {
-        "label": "Yan by Submission",
-        "held": 0.0,
-        "resting": 116.0,
-        "target": 330.0,
-        "status": "lagging",
-        "price": 0.07
-      },
-      {
-        "label": "Draw / No Contest",
-        "held": 0.0,
-        "resting": 0.0,
-        "target": 30.0,
-        "status": "even",
-        "price": null
-      }
-    ],
+    "next_steps": [],
+    "sides": [],
     "book": "UFC-YANDVA",
-    "ts": "2026-10-24T19:29:17Z"
+    "ts": "2026-10-24T19:34:19Z"
   },
   "posts": [
-    {
-      "id": "1792706836342-326474",
-      "ts": "2026-10-22T22:07:16Z",
-      "book": "UFC-YANDVA",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nYANKOTKODQ: +0\nYANSUB: +0\nYANDEC: +0\nDVAKOTKODQ: +0\nDVASUB: +0\nDVADEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nYANKOTKODQ: 0 / 250\nYANSUB: 0 / 250\nYANDEC: 0 / 250\nDVAKOTKODQ: 0 / 250\nDVASUB: 0 / 157\nDVADEC: 0 / 250\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $330\nAnchor age 99s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792707327566-d0c700",
-      "ts": "2026-10-22T22:15:27Z",
-      "book": "UFC-YANDVA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792708053463-8eaf71",
-      "ts": "2026-10-22T22:27:22Z",
-      "book": "UFC-YANDVA",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot could not read the account balance. It retries next loop.",
-      "severity": "warn",
-      "title": "Read failure"
-    },
-    {
-      "id": "1792708960313-08be49",
-      "ts": "2026-10-22T22:42:40Z",
-      "book": "UFC-YANDVA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792709866136-8cbe5d",
-      "ts": "2026-10-22T22:57:46Z",
-      "book": "UFC-YANDVA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792710349762-472204",
-      "ts": "2026-10-22T23:05:33Z",
-      "book": "UFC-YANDVA",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
-    {
-      "id": "1792710480266-292112",
-      "ts": "2026-10-22T23:08:00Z",
-      "book": "UFC-YANDVA",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nYANKOTKODQ: +0\nYANSUB: +0\nYANDEC: +0\nDVAKOTKODQ: +0\nDVASUB: +0\nDVADEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nYANKOTKODQ: 0 / 250\nYANSUB: 0 / 250\nYANDEC: 0 / 250\nDVAKOTKODQ: 0 / 250\nDVASUB: 0 / 157\nDVADEC: 0 / 250\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $330\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792711015111-4cafcb",
-      "ts": "2026-10-22T23:16:55Z",
-      "book": "UFC-YANDVA",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Full ladder posted for the fight about Sat 2:45pm CT. Worst line $0, target -$50. Next: Even-up window, Sat 1:45pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Full ladder posted"
-    },
-    {
-      "id": "1792711196421-b55efd",
-      "ts": "2026-10-22T23:19:56Z",
-      "book": "UFC-YANDVA",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Full ladder posted for the fight about Sat 2:45pm CT. Worst line $0, target -$50. Next: Even-up window, Sat 1:45pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Full ladder posted"
-    },
     {
       "id": "1792712103519-f5e566",
       "ts": "2026-10-22T23:35:03Z",
@@ -3183,6 +2935,109 @@
       "source": "bot",
       "text": "If the game ends... you make\nYANKOTKODQ: +8\nYANSUB: +8\nYANDEC: +8\nDVAKOTKODQ: +8\nDVASUB: +8\nDVADEC: -18\nDRAW: +8\nCollected $8 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nYANKOTKODQ: 0 / 137\nYANSUB: 0 / 116\nYANDEC: 0 / 26\nDVAKOTKODQ: 0 / 120\nDVASUB: 0 / 112\nDVADEC: 26 / 13\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.067 | Worst now -18 | Cash free $330\nAnchor age 0s | Last fill 64300s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792870217954-120105",
+      "ts": "2026-10-24T19:30:17Z",
+      "book": "UFC-YANDVA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 2:45pm CT. Worst line -$18, target -$50. Next: Handoff to the fight, 2:42pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792870298579-06964f",
+      "ts": "2026-10-24T19:31:23Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: espn-live",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792870298579-52ddab",
+      "ts": "2026-10-24T19:31:27Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.37 winner_mid=0.585",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792870338704-de361d",
+      "ts": "2026-10-24T19:32:18Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to Fight on.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792870338705-6bbbca",
+      "ts": "2026-10-24T19:32:18Z",
+      "book": "UFC-YANDVA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Fight on. Worst line -$18.",
+      "severity": "info",
+      "title": "Plan updated: Fight on"
+    },
+    {
+      "id": "1792870375327-17e65d",
+      "ts": "2026-10-24T19:32:55Z",
+      "book": "UFC-YANDVA",
+      "kind": "text",
+      "source": "bot",
+      "text": "INFIGHT floor elevator: floor raised $-18.13 -> $-9.01 on Petr Yan vs Merab Dvalishvili: Method of Victory",
+      "severity": "info"
+    },
+    {
+      "id": "1792870439397-315dd1",
+      "ts": "2026-10-24T19:33:39Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.37 winner_mid=0.585",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792870439400-08fab9",
+      "ts": "2026-10-24T19:33:39Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 165 (ufc infight elevator): Yan by KO/TKO x23 at 24c, Dvalishvili by KO/TKO x22 at 18c, +9 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 165.0,
+        "rows": 11
+      }
+    },
+    {
+      "id": "1792870499755-e26082",
+      "ts": "2026-10-24T19:32:51Z",
+      "book": "UFC-YANDVA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 24: Yan by Decision x24 at 38c. Worst line -$9.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 24.0,
+        "fills": [
+          {
+            "side": "Yan by Decision",
+            "price": 0.38,
+            "qty": 24.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3211,6 +3066,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+26 on DVADEC @ 0.31 (maker)\nworst outcome now -54\nheld 0/0/0/0/0/26/0",
+      "severity": "warn"
+    },
+    {
+      "id": "1792870283699-519088",
+      "ts": "2026-10-24T19:31:23Z",
+      "book": "UFC-YANDVA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: CUTOVER - espn-live",
+      "severity": "warn"
+    },
+    {
+      "id": "1792870288872-f19807",
+      "ts": "2026-10-24T19:31:28Z",
+      "book": "UFC-YANDVA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "INFIGHT floor elevator: first post on Petr Yan vs Merab Dvalishvili: Method of Victory, floor $-18.13",
       "severity": "warn"
     }
   ]
