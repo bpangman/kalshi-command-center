@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-24T08:58:31.724652Z",
+  "generated_at": "2026-10-24T09:02:22.054523Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$914, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Denny Hamlin",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 32,239, 31,162 resting. Worst line -$914 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 32,239, 31,162 resting. Worst line -$914 (limit now -$550). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -212,19 +212,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-24T08:58:25Z"
+    "ts": "2026-10-24T09:01:26Z"
   },
   "posts": [
-    {
-      "id": "1792740078024-5ea308",
-      "ts": "2026-10-23T07:20:58Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1792740682632-768028",
       "ts": "2026-10-23T07:29:05Z",
@@ -3749,18 +3739,19 @@
       "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1792832365771-ced6a0",
+      "ts": "2026-10-24T08:59:25Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$914, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1792774861391-11d0f1",
-      "ts": "2026-10-23T17:01:01Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -1002.20 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792775767102-2344df",
       "ts": "2026-10-23T17:16:07Z",
@@ -4651,6 +4642,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -913.81 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792832360634-d8e1ea",
+      "ts": "2026-10-24T08:59:20Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Brad Keselowski has had no resting orders for at least 1672 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
