@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T08:04:41.092053Z",
+  "generated_at": "2026-10-24T08:08:03.047252Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 2:30pm CT. Worst line -$629, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -100,7 +100,7 @@
         "exposure_text": "-$155",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T08:04:01Z",
+        "at": "2026-10-24T08:08:03Z",
         "stuck": false,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 2:30pm CT. Sold 10,781, 22,336 resting. Worst line -$629 (limit now -$250)."
+          "Pre-race growth, green flag 2:30pm CT. Sold 10,781, 22,336 resting. Worst line -$629 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -228,38 +228,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T08:04:01Z"
+    "ts": "2026-10-24T08:08:03Z"
   },
   "posts": [
-    {
-      "id": "1792760956466-9d2f58",
-      "ts": "2026-10-23T13:09:16Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$786, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792761017040-7fad88",
-      "ts": "2026-10-23T13:10:17Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$786, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792761312850-c0c0e5",
-      "ts": "2026-10-23T13:15:12Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBrandon Jones: -782\nCarson Kvapil: -466\nRajah Caruth: -327\nSam Mayer: -282\nTaylor Gray: -281\nSammy Smith: -281\nAnthony Alfredo: -277\nRyan Sieg: -201\nall others (33) >= -170\nCollected $450 premium ($7 fees) | Paper margin over fair $67 (not realized until settlement)\nCore posted book 1.53 | Worst now -782 | Cash free $2345\nAnchor age 33s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1792761379895-36ac2f",
       "ts": "2026-10-23T13:16:19Z",
@@ -3623,6 +3594,36 @@
       "text": "Kalshi rate-limited the bot (4 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1792829242665-462ac7",
+      "ts": "2026-10-24T08:07:03Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "A wave could not post: Anthony Alfredo: wave 6 25 @ 0.03 not posted (429 back-off); raised to the min clip 25",
+      "severity": "warn",
+      "title": "Wave blocked"
+    },
+    {
+      "id": "1792829283042-a89cc3",
+      "ts": "2026-10-24T08:07:54Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "A wave could not post: Anthony Alfredo: wave 6 25 @ 0.03 not posted (a post gate: fair floor, glide room or floor invariant); raised ",
+      "severity": "warn",
+      "title": "Wave blocked"
+    },
+    {
+      "id": "1792829283047-0dd93a",
+      "ts": "2026-10-24T08:08:03Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 2:30pm CT. Worst line -$629, final target +$100. Next: Risk glide starts, 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
