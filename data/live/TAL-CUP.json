@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-24T03:17:36.427484Z",
+  "generated_at": "2026-10-24T03:20:25.678663Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -75,7 +75,7 @@
         "exposure": -559.66,
         "exposure_text": "-$560",
         "move": "Next wave up to 1,500 contracts",
-        "when": "when 90% of the 2,923 offered has sold (now 66%)",
+        "when": "when 90% of the 2,800 offered has sold (now 69%)",
         "at": null,
         "stuck": true,
         "also": "Also: glide starts Sun 9:00am CT",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 31,801, 32,829 resting. Worst line -$931 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 31,801, 32,432 resting. Worst line -$931 (limit now -$550)."
         ]
       },
       {
@@ -180,7 +180,7 @@
       {
         "label": "Austin Cindric",
         "held": 1.0,
-        "resting": 2511.0,
+        "resting": 2413.0,
         "target": 2800.0,
         "status": "lagging",
         "price": 0.06
@@ -212,29 +212,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-24T03:16:46Z"
+    "ts": "2026-10-24T03:19:48Z"
   },
   "posts": [
-    {
-      "id": "1792712586777-d21931",
-      "ts": "2026-10-22T23:43:06Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$965, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792712647205-7f074f",
-      "ts": "2026-10-22T23:44:07Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$965, final target $0. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792713070498-9ccc75",
       "ts": "2026-10-22T23:51:10Z",
@@ -3734,18 +3714,32 @@
         "contracts": 2124.0,
         "rows": 4
       }
+    },
+    {
+      "id": "1792811921594-00e923",
+      "ts": "2026-10-24T03:18:41Z",
+      "book": "TAL-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nDenny Hamlin: -931\nRyan Preece: -929\nBrad Keselowski: -822\nCarson Hocevar: -731\nDaniel Suarez: -728\nRicky Stenhouse Jr.: -560\nChristopher Bell: -559\nBubba Wallace: -385\nall others (32) >= -385\nCollected $1388 premium ($23 fees) | Paper margin over fair $220 (not realized until settlement)\nCore posted book 1.20 | Worst now -931 | Cash free $2914\nAnchor age 244s (source: bovada)",
+      "severity": "info"
+    },
+    {
+      "id": "1792812008288-a6f88c",
+      "ts": "2026-10-24T03:17:49Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 531 (race glide step): driver DADY x531 at 1c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 531.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792746193932-216a81",
-      "ts": "2026-10-23T09:03:13Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Carson Hocevar has had no resting orders for at least 1239 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792748048071-5c9f2e",
       "ts": "2026-10-23T09:34:08Z",
@@ -4636,6 +4630,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst-all-resting-filled -790.21 vs hard cap -676.80 (2.0x L_max 338.40). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792811987818-8c4d30",
+      "ts": "2026-10-24T03:19:47Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+468 on Daniel Suarez @ 0.02 (maker)\nworst outcome now -931\nIf the race ends... you make\nDenny Hamlin: -931\nRyan Preece: -929\nBrad Keselowski: -822\nCarson Hocevar: -731\nDaniel Suarez: -728\nRicky Stenhouse Jr.: -560\nChristopher Bell: -559\nBubba Wallace: -385\nall others (32) >= -385",
+      "severity": "warn"
     }
   ]
 }
