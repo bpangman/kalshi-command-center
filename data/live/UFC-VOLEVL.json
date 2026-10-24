@@ -1,19 +1,19 @@
 {
   "key": "UFC-VOLEVL",
-  "generated_at": "2026-10-24T20:59:52.827994Z",
+  "generated_at": "2026-10-24T21:01:32.956066Z",
   "plan": {
     "engine": "ufc",
     "phase": "Fight on",
-    "headline": "Fight on. Worst line +$21.",
+    "headline": "Fight on. Worst line +$24.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "During the fight the steps follow the action.",
     "checks_every_s": 10,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Fight on. Sold 518. Worst line +$21. Bout in, round 1. Bot is slow (checks every 35s, set for 20s)."
+          "Fight on. Sold 545. Worst line +$24. Bout in, round 1."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "UFC-VOLEVL",
-    "ts": "2026-10-24T20:58:57Z"
+    "ts": "2026-10-24T21:00:58Z"
   },
   "posts": [
-    {
-      "id": "1792804612323-6374a8",
-      "ts": "2026-10-24T01:16:52Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792804682895-9d345c",
-      "ts": "2026-10-24T01:18:02Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nVOLKOTKODQ: +116\nVOLSUB: +107\nVOLDEC: -134\nEVLKOTKODQ: +116\nEVLSUB: +116\nEVLDEC: +116\nDRAW: +105\nCollected $116 premium ($0 fees) | Paper margin over fair $52 (not realized until settlement)\nheld / resting\nVOLKOTKODQ: 0 / 250\nVOLSUB: 9 / 237\nVOLDEC: 250 / 0\nEVLKOTKODQ: 0 / 250\nEVLSUB: 0 / 250\nEVLDEC: 0 / 250\nDRAW: 11 / 19\nPosted book 1.00 | Sold avg 1.416 | Worst now -134 | Cash free $500\nAnchor age 0s | Last fill 183845s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792805136274-139dce",
-      "ts": "2026-10-24T01:25:24Z",
-      "book": "UFC-VOLEVL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1792805277230-1af6d2",
       "ts": "2026-10-24T01:25:45Z",
@@ -3144,18 +3115,43 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792875638568-caef48",
+      "ts": "2026-10-24T21:00:03Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 687 (ufc infight elevator): Volkanovski by Submission x82 at 25c, Evloev by KO/TKO x77 at 25c, +19 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 687.0,
+        "rows": 21
+      }
+    },
+    {
+      "id": "1792875658726-29a8b9",
+      "ts": "2026-10-24T21:00:58Z",
+      "book": "UFC-VOLEVL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Fight on. Worst line +$24.",
+      "severity": "info",
+      "title": "Plan updated: Fight on"
+    },
+    {
+      "id": "1792875678766-ee5fa8",
+      "ts": "2026-10-24T21:01:06Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: INFIGHT pacing: loop_interval=10s espn_refresh=10s max_bid=0.33 winner_mid=0.515",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792715494219-13703a",
-      "ts": "2026-10-23T00:31:34Z",
-      "book": "UFC-VOLEVL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (UFC-VOLEVL): worst -133.96 vs floor -125.00 (real L_max 100.00). Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792717437025-0c7229",
       "ts": "2026-10-23T01:03:57Z",
@@ -4045,6 +4041,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+95 on EVLDEC @ 0.32 (maker)\nworst outcome now +42\nheld 0/9/72/0/0/95/11",
+      "severity": "warn"
+    },
+    {
+      "id": "1792875639232-84c15a",
+      "ts": "2026-10-24T21:00:39Z",
+      "book": "UFC-VOLEVL",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- UFC-VOLEVL - Movsar Evloev by Submission has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- UFC-VOLEVL - Alex Volkanovski by KO/TKO/DQ has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
