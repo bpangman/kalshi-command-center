@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T07:49:11.145389Z",
+  "generated_at": "2026-10-24T07:52:06.409905Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 2:30pm CT. Worst line -$629, final target +$100.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "checks_every_s": 53,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -100,7 +100,7 @@
         "exposure_text": "-$155",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T07:48:54Z",
+        "at": "2026-10-24T07:51:55Z",
         "stuck": false,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 2:30pm CT. Sold 10,781, 22,336 resting. Worst line -$629 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag 2:30pm CT. Sold 10,781, 22,336 resting. Worst line -$629 (limit now -$250). Bot is slow (checks every 53s, set for 30s)."
         ]
       },
       {
@@ -228,7 +228,7 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T07:48:54Z"
+    "ts": "2026-10-24T07:51:55Z"
   },
   "posts": [
     {
@@ -3627,15 +3627,6 @@
   ],
   "audits": [
     {
-      "id": "1792768255654-32ba11",
-      "ts": "2026-10-23T15:10:55Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
       "id": "1792768307368-e258c0",
       "ts": "2026-10-23T15:11:47Z",
       "book": "TAL-ORLY",
@@ -4525,6 +4516,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): worst -629.16 vs floor -170.08. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792828319619-747e79",
+      "ts": "2026-10-24T07:51:59Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 564 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
