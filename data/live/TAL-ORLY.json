@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T20:52:45.175958Z",
+  "generated_at": "2026-10-24T20:54:25.625282Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 23,973, 2,687 resting. Worst line +$35. Race 55% done. Floor protocol off."
+          "In race (Ingame). Sold 23,973, 2,387 resting. Worst line +$35. Race 56% done. Floor protocol off."
         ]
       },
       {
@@ -44,28 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T20:51:54Z"
+    "ts": "2026-10-24T20:53:55Z"
   },
   "posts": [
-    {
-      "id": "1792859153743-5482e0",
-      "ts": "2026-10-24T16:25:53Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBrandon Jones: -390\nAustin Hill: -390\nSam Mayer: -390\nSammy Smith: -389\nCarson Kvapil: -388\nCorey Day: -386\nSheldon Creed: -40\nRajah Caruth: -12\nall others (33) >= +84\nCollected $848 premium ($14 fees) | Paper margin over fair $112 (not realized until settlement)\nEvent: Carson Kvapil: pre-race; Jesse Love: pre-race\nCore posted book 0.98 | Worst now -390 | Cash free $3395\nAnchor age 156s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1792859171039-a7aafd",
-      "ts": "2026-10-24T16:25:53Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$170, worst line -$390. post gate Justin Allgaier 168@0.07 -> 0 (race_anchor_peek; a full fill would tak",
-      "severity": "info",
-      "title": "Glide"
-    },
     {
       "id": "1792859271718-0cbd8d",
       "ts": "2026-10-24T16:27:51Z",
@@ -3922,18 +3903,28 @@
         "contracts": 793.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1792875171927-e7f636",
+      "ts": "2026-10-24T20:52:51Z",
+      "book": "TAL-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Cohort shrink on TAL-ORLY: target 11 -> 9\nIf the race ends... you make\nTaylor Gray: +35\nBrent Crews: +37\nJustin Allgaier: +37\nAustin Hill: +37\nSheldon Creed: +37\nSam Mayer: +37\nSammy Smith: +37\nRajah Caruth: +38\nall others (33) >= +38",
+      "severity": "info"
+    },
+    {
+      "id": "1792875174839-75c171",
+      "ts": "2026-10-24T20:52:51Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 shrink: cohort target 11 -> 9 (schedule threshold 0.30)",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792847215504-2f3fcf",
-      "ts": "2026-10-24T13:06:55Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): worst -487.98 vs floor -170.08. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792847852558-325162",
       "ts": "2026-10-24T13:17:32Z",
@@ -4823,6 +4814,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Health: Anthony Alfredo has room but 0 resting orders for 2646s",
+      "severity": "warn"
+    },
+    {
+      "id": "1792875207672-234a67",
+      "ts": "2026-10-24T20:53:27Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-ORLY): bot reports stage3_likely_set, auditor independently recomputed stage2_price_cohort (progress=n/a, live_count>=20%=n/a, max_prob=n/a, feed_source=nascar_live_feed). Check the command center.",
       "severity": "warn"
     }
   ]
