@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-24T22:25:37.240492Z",
+  "generated_at": "2026-10-24T22:28:25.758378Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -26,11 +26,11 @@
         "exposure": 22.44,
         "exposure_text": "+$22",
         "move": "Hold price at 18c",
-        "when": "crowd pays 18c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Price 18c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "NO by 15+",
@@ -63,7 +63,7 @@
         "exposure_text": "+$22",
         "move": "Step price down 1c (27c to 26c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-24T22:25:17Z",
+        "at": "2026-10-24T22:28:18Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
         "lag_note": "Steps to 26c at the next check."
@@ -92,7 +92,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 1-6, PIT by 7-14.",
-          "NO by 1-6: 132 behind. Price 18c matches the crowd.",
+          "NO by 1-6: 132 behind. No crowd trade data yet.",
           "NO by 7-14: 132 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-24T22:25:17Z"
+    "ts": "2026-10-24T22:28:18Z"
   },
   "posts": [
     {
@@ -3077,6 +3077,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nNO 1-6: +22 (+0.9% of bankroll)\nNO 7-14: +22 (+0.9% of bankroll)\nNO 15+: +22 (+0.9% of bankroll)\nPIT 1-6: +22 (+0.9% of bankroll)\nPIT 7-14: +22 (+0.9% of bankroll)\nPIT 15+: -110 (-4.4% of bankroll)\nCollected $22 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 527\nNO 7-14: 0 / 413\nNO 15+: 0 / 474\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 132 / 346\nPosted book 1.24 | Sold avg 1.185 | Worst now +62 | Cash free $386\nAnchor age 0s | Last fill 17862s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792880878526-2f6640",
+      "ts": "2026-10-24T22:27:58Z",
+      "book": "W8-PITNO",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,738 resting. Next: Paid balancing starts, Sun 7:45am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
