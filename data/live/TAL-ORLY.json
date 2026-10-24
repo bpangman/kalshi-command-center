@@ -1,10 +1,10 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T20:45:03.417251Z",
+  "generated_at": "2026-10-24T20:46:44.359726Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$24.",
+    "headline": "In race (Ingame). Worst line +$35.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 23,466, 6,288 resting. Worst line +$24. Race 49% done. Floor protocol off."
+          "In race (Ingame). Sold 23,466, 2,817 resting. Worst line +$35. Race 51% done. Floor protocol off."
         ]
       },
       {
@@ -44,59 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T20:44:51Z"
+    "ts": "2026-10-24T20:45:51Z"
   },
   "posts": [
-    {
-      "id": "1792858324374-186708",
-      "ts": "2026-10-24T16:11:50Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 2 drivers: Carson Kvapil, Corey Day.",
-      "severity": "info",
-      "title": "Price shock"
-    },
-    {
-      "id": "1792858404709-0c49b1",
-      "ts": "2026-10-24T16:13:15Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Idle step on Jake Finch: no fill for 5444 min, lowest row 4c to 3c.",
-      "severity": "info",
-      "title": "Price step"
-    },
-    {
-      "id": "1792858465085-f41a0a",
-      "ts": "2026-10-24T16:14:19Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$185, worst line -$408. post gate Justin Allgaier 168@0.07 -> 0 (race_anchor_peek; a full fill would tak",
-      "severity": "info",
-      "title": "Glide"
-    },
-    {
-      "id": "1792858687103-ee914b",
-      "ts": "2026-10-24T16:16:35Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 324: Jake Finch x324 at 2c. Worst line -$402.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 324.0,
-        "fills": [
-          {
-            "side": "Jake Finch",
-            "price": 0.02,
-            "qty": 324.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792858788007-f36a7f",
       "ts": "2026-10-24T16:19:44Z",
@@ -3935,36 +3885,46 @@
       "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-THEPG26-TAGR: gap $1.38 -> max 1 contracts (evenness/favorite gates bypa",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792874712163-6aad96",
+      "ts": "2026-10-24T20:45:12Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "race-worstline-lift",
+      "text": "TAL-ORLY: buying back 1 Brent Crews at 3c (about $0) (worst case right now $24). Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1792874731485-6bf8fc",
+      "ts": "2026-10-24T20:45:12Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt: 0 drivers laddered, room used $0 of $303",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792874747201-aa7619",
+      "ts": "2026-10-24T20:45:47Z",
+      "book": "TAL-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Stage change on TAL-ORLY: stage 3 (likely set)\nIf the race ends... you make\nBrent Crews: +25\nTaylor Gray: +26\nJustin Allgaier: +28\nAustin Hill: +28\nSheldon Creed: +28\nSam Mayer: +28\nSammy Smith: +28\nRajah Caruth: +28\nall others (33) >= +28",
+      "severity": "info"
+    },
+    {
+      "id": "1792874747204-591ea9",
+      "ts": "2026-10-24T20:45:47Z",
+      "book": "TAL-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "TAL-ORLY: floor protocol ON at 60% (worst +25 on Brent Crews). Hunting stopped; every trade now raises the floor. Switched on via CONTROL.json.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792846489488-9bfa21",
-      "ts": "2026-10-24T12:54:49Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 1 driver(s): Sam Mayer (+21%)",
-      "severity": "warn"
-    },
-    {
-      "id": "1792846793143-9e3b0d",
-      "ts": "2026-10-24T12:59:53Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- TAL-ORLY - Brandon Jones has had no resting orders for at least 872 min (reason unknown: no reason logged).\n- TAL-ORLY - Sam Mayer has had no resting orders for at least 10 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1792847215503-bd0e4d",
-      "ts": "2026-10-24T13:06:55Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): 23 ladder(s) stale 10+ min: KXNASCARRACE-THEPG26-JECL low 349c, KXNASCARRACE-THEPG26-JUAL low 566c, KXNASCARRACE-THEPG26-JOGA low 611c, KXNASCARRACE-THEPG26-JEBU low 414c, KXNASCARRACE-THEPG26-AUHI low 160c, KXNASCARRACE-THEPG26-BRPO low 351c, KXNASCARRACE-THEPG26-GASM low 611c, KXNASCARRACE-THEPG26-SHCR low 575c, KXNASCARRACE-THEPG26-PAEM low 351c, KXNASCARRACE-THEPG26-CABA low 611c, KXNASCARRACE-THEPG26-WIRO low 351c, KXNASCARRACE-THEPG26-CAWA low 611c, KXNASCARRACE-THEPG26-BLPE low 611c, KXNASCARRACE-THEPG26-KYSI low 351c, KXNASCARRACE-THEPG26-TAGR low 500c, KXNASCARRACE-THEPG26-DETH low 352c, KXNASCARRACE-THEPG26-LEHO low 352c, KXNASCARRACE-THEPG26-WISA high 46c, KXNASCARRACE-THEPG26-JELO low 712c, KXNASCARRACE-THEPG26-LASC low 351c, KXNASCARRACE-THEPG26-JAFI low 352c, KXNASCARRACE-THEPG26-LEPU low 351c, KXNASCARRACE-THEPG26-MAMA low 351c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792847215504-2f3fcf",
       "ts": "2026-10-24T13:06:55Z",
@@ -4836,6 +4796,33 @@
       "kind": "audit",
       "source": "bot",
       "text": "+94 on Parker Retzlaff @ 0.03 (maker)\n+421 on Harrison Burton @ 0.02 (maker)\nworst outcome now +24\nIf the race ends... you make\nBrent Crews: +24\nTaylor Gray: +26\nJustin Allgaier: +28\nAustin Hill: +28\nSheldon Creed: +28\nSam Mayer: +28\nSammy Smith: +28\nRajah Caruth: +28\nall others (33) >= +28",
+      "severity": "warn"
+    },
+    {
+      "id": "1792874712504-1823a5",
+      "ts": "2026-10-24T20:45:12Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Worst-line lift Brent Crews: 1 @ 0.03, worst +24 -> +25 (cost $0.04)\nIf the race ends... you make\nBrent Crews: +24\nTaylor Gray: +26\nJustin Allgaier: +28\nAustin Hill: +28\nSheldon Creed: +28\nSam Mayer: +28\nSammy Smith: +28\nRajah Caruth: +28\nall others (33) >= +28",
+      "severity": "warn"
+    },
+    {
+      "id": "1792874747168-6e3cc7",
+      "ts": "2026-10-24T20:45:47Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 6 driver(s): Connor Mosack (+49%), Jake Finch (+43%), Jesse Love (+41%), Brent Crews (+40%), William Sawalich (+36%), Sheldon Creed (+33%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792874798402-fece7e",
+      "ts": "2026-10-24T20:46:38Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Health: Anthony Alfredo has room but 0 resting orders for 2646s",
       "severity": "warn"
     }
   ]
