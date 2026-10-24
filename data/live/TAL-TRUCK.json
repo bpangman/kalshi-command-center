@@ -1,6 +1,6 @@
 {
   "key": "TAL-TRUCK",
-  "generated_at": "2026-10-24T00:11:54.115767Z",
+  "generated_at": "2026-10-24T00:15:05.664933Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-TRUCK",
-    "ts": "2026-10-24T00:11:21Z"
+    "ts": "2026-10-24T00:14:22Z"
   },
   "posts": [
-    {
-      "id": "1792781393968-0a8ba3",
-      "ts": "2026-10-23T18:49:53Z",
-      "book": "TAL-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Risk glide for the green flag 3:00pm CT. Worst line -$143, final target $0. Next: Glide target date, 3:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Risk glide"
-    },
     {
       "id": "1792781454386-9eb36c",
       "ts": "2026-10-23T18:50:54Z",
@@ -4885,18 +4875,18 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nJustin Haley: +41\nTanner Gray: +41\nKaden Honeycutt: +42\nAustin Green: +42\nBrenden Queen: +42\nTyler Ankrum: +55\nLayne Riggs: +56\nBen Rhodes: +103\nall others (30) >= +124\nCollected $2522 premium ($59 fees) | Paper margin over fair $1835 (not realized until settlement)\nEvent: Tyler Ankrum: race finished; Ty Majeski: race finished\nCore posted book 0.00 | Worst now +41 | Cash free $2958\nAnchor age 282s (source: kalshi)",
       "severity": "info"
+    },
+    {
+      "id": "1792800807865-d66d01",
+      "ts": "2026-10-24T00:13:27Z",
+      "book": "TAL-TRUCK",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "Truck book is not trading: no fills in the last hour while the crowd keeps trading (grew 5046). Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
-    {
-      "id": "1792778236604-689baa",
-      "ts": "2026-10-23T17:57:16Z",
-      "book": "TAL-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-TRUCK - Giovanni Ruggiero has had no resting orders for at least 10 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792778438366-dc4f3f",
       "ts": "2026-10-23T18:00:38Z",
@@ -5787,6 +5777,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-TRUCK): 0 resting orders across every market, in-game and open. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792800757282-d49f33",
+      "ts": "2026-10-24T00:12:37Z",
+      "book": "TAL-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-TRUCK): min live outcome (auditor's own read) +41.04 vs bot's ratchet_high +43.40 vs bot's ceiling_now +43.40. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
