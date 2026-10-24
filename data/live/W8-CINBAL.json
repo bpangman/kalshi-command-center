@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-24T22:04:08.942671Z",
+  "generated_at": "2026-10-24T22:06:57.261907Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -49,12 +49,12 @@
         "resting": "197 @ 18-27c",
         "exposure": 8.96,
         "exposure_text": "+$9",
-        "move": "Hold price at 18c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "move": "Step price down 1c (18c to 17c)",
+        "when": "if no fill by 5:15pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-24T22:15:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 11:15am CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Steps to 17c if no fill by 5:15pm CT."
       },
       {
         "side": "CIN by 15+",
@@ -93,7 +93,7 @@
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 7-14, BAL by 15+, CIN by 7-14, CIN by 15+.",
           "BAL by 1-6: 39 behind. No crowd trade data yet.",
-          "BAL by 7-14: 39 behind. No crowd trade data yet.",
+          "BAL by 7-14: 39 behind. Steps to 17c if no fill by 5:15pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-24T22:04:08Z"
+    "ts": "2026-10-24T22:06:09Z"
   },
   "posts": [
     {
@@ -2812,6 +2812,26 @@
       "source": "bot",
       "text": "If the game ends... you make\nBAL 1-6: +9 (+0.4% of bankroll)\nBAL 7-14: +9 (+0.4% of bankroll)\nBAL 15+: +9 (+0.4% of bankroll)\nCIN 1-6: -30 (-1.4% of bankroll)\nCIN 7-14: +9 (+0.4% of bankroll)\nCIN 15+: +9 (+0.4% of bankroll)\nCollected $9 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 162\nBAL 7-14: 0 / 197\nBAL 15+: 0 / 177\nCIN 1-6: 39 / 152\nCIN 7-14: 0 / 104\nCIN 15+: 0 / 177\nPosted book 1.15 | Sold avg 1.130 | Worst now -4 | Cash free $221\nAnchor age 0s | Last fill 8788s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792879508740-4a1896",
+      "ts": "2026-10-24T22:05:08Z",
+      "book": "W8-CINBAL",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 969 resting. Next: Paid balancing starts, Sun 11:15am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792879549068-0e56f5",
+      "ts": "2026-10-24T22:05:47Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "BAL by 7-14 price not lowered: a full fill would push the worst line to -$30.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [

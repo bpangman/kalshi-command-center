@@ -1,6 +1,6 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T22:04:08.942671Z",
+  "generated_at": "2026-10-24T22:06:57.261907Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T22:03:27Z"
+    "ts": "2026-10-24T22:06:29Z"
   },
   "posts": [
-    {
-      "id": "1792861146807-6d176e",
-      "ts": "2026-10-24T16:58:52Z",
-      "book": "TAL-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$120, worst line -$294. post gate Brent Crews 228@0.04 -> 61 (race_anchor_peek; a full fill would take h",
-      "severity": "info",
-      "title": "Glide"
-    },
     {
       "id": "1792861187181-78b84b",
       "ts": "2026-10-24T16:59:44Z",
@@ -3861,18 +3851,18 @@
       "source": "resistance_monitor",
       "text": "O'Reilly book bot looks stuck: no RISK/HEALTH line in 600s. It may be down or frozen. Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1792879519158-61ac7f",
+      "ts": "2026-10-24T22:05:19Z",
+      "book": "TAL-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on TAL-ORLY: 0 orders posted in 10 min while the market traded 58266 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792856697740-29f8b3",
-      "ts": "2026-10-24T15:44:57Z",
-      "book": "TAL-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-ORLY): worst -423.70 vs floor -170.08. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792857247443-5d84ad",
       "ts": "2026-10-24T15:54:07Z",
@@ -4762,6 +4752,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-ORLY): min live outcome (auditor's own read) +40.44 vs bot's ratchet_high +41.06 vs bot's ceiling_now +41.06. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792879602170-342492",
+      "ts": "2026-10-24T22:06:42Z",
+      "book": "TAL-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-ORLY has no resting orders on any side for at least 71 min while it should be posting.",
       "severity": "warn"
     }
   ]
