@@ -1,10 +1,10 @@
 {
   "key": "UFC-KAVTEM",
-  "generated_at": "2026-10-24T18:49:53.123035Z",
+  "generated_at": "2026-10-24T18:51:40.561877Z",
   "plan": {
     "engine": "ufc",
-    "phase": "Full ladder posted",
-    "headline": "Full ladder posted for the fight about 2:10pm CT. Worst line -$18, target -$50.",
+    "phase": "Final tightening",
+    "headline": "Final tightening for the fight about 2:10pm CT. Worst line -$18, target -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
     "checks_every_s": 20,
@@ -39,7 +39,7 @@
         "exposure": -11.33,
         "exposure_text": "-$11",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 1:50pm CT",
+        "when": "no move planned until the handoff to the fight at 2:07pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-24T01:19:41Z"
@@ -49,11 +49,11 @@
         "resting": "80 @ 8c",
         "exposure": 18.67,
         "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:50pm CT, up to $100 in all",
-        "at": "2026-10-24T18:50:00Z",
+        "move": "Hold price at 8c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 62",
         "last_fill": "2026-10-21T19:31:52Z",
         "lag_note": "Price 8c is at its floor."
       },
@@ -62,11 +62,11 @@
         "resting": "149 @ 21-23c",
         "exposure": 18.67,
         "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:50pm CT, up to $100 in all",
-        "at": "2026-10-24T18:50:00Z",
+        "move": "Hold price at 21c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 62",
         "last_fill": "2026-10-21T19:31:52Z",
         "lag_note": "Price 21c is at its floor."
       },
@@ -75,11 +75,11 @@
         "resting": "171 @ 32-34c",
         "exposure": 18.67,
         "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:50pm CT, up to $100 in all",
-        "at": "2026-10-24T18:50:00Z",
+        "move": "Step price down 1c (32c to 31c)",
+        "when": "next bot check, if the crowd trades under 32c",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 62",
         "last_fill": "2026-10-21T19:31:52Z",
         "lag_note": "Steps to 31c if the crowd trades lower."
       },
@@ -88,11 +88,11 @@
         "resting": "80 @ 7c",
         "exposure": 18.67,
         "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:50pm CT, up to $100 in all",
-        "at": "2026-10-24T18:50:00Z",
+        "move": "Hold price at 7c",
+        "when": "already at its floor (fair minus 0c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: next batch if resting drops under 62",
         "last_fill": "2026-10-21T19:31:52Z",
         "lag_note": "Price 7c is at its floor."
       }
@@ -101,7 +101,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 2:10pm CT. Sold 174, 660 resting. Worst line -$18 (target -$50)."
+          "Final tightening, fight about 2:10pm CT. Sold 174, 660 resting. Worst line -$18 (target -$50)."
         ]
       },
       {
@@ -125,7 +125,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if a bucket's line falls under -$100.",
-          "Paid balancing starts 1:50pm CT: worst line to -$50, up to $100.",
+          "Paid balancing is open: started at -$18, target -$50, now -$18.",
           "Even-up 1:10pm CT; last-resort take 1:50pm CT; handoff to the fight 2:07pm CT.",
           "The fight start is an estimate and can move."
         ]
@@ -138,16 +138,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-24T18:50:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$50."
-      },
-      {
-        "at": "2026-10-24T18:50:00Z",
-        "label": "Last-resort take window",
-        "detail": "Bot may sell to close the last gaps."
-      },
       {
         "at": "2026-10-24T19:07:00Z",
         "label": "Handoff to the fight",
@@ -213,48 +203,9 @@
       }
     ],
     "book": "UFC-KAVTEM",
-    "ts": "2026-10-24T18:48:58Z"
+    "ts": "2026-10-24T18:50:59Z"
   },
   "posts": [
-    {
-      "id": "1792686899958-a8ffd7",
-      "ts": "2026-10-22T16:34:59Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792687806981-8a0bb1",
-      "ts": "2026-10-22T16:50:06Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792688712904-cc3cc3",
-      "ts": "2026-10-22T17:05:12Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792688759444-359307",
-      "ts": "2026-10-22T17:05:59Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nKAVKOTKODQ: +0\nKAVSUB: +0\nKAVDEC: +0\nTEMKOTKODQ: +0\nTEMSUB: +0\nTEMDEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nKAVKOTKODQ: 0 / 250\nKAVSUB: 0 / 250\nKAVDEC: 0 / 250\nTEMKOTKODQ: 0 / 250\nTEMSUB: 0 / 250\nTEMDEC: 0 / 250\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $250\nAnchor age 118s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792689618832-ef4124",
       "ts": "2026-10-22T17:20:18Z",
@@ -3237,6 +3188,45 @@
       "source": "resistance_monitor",
       "text": "UFC-KAVTEM book is churning: 0 cancel-and-repost at the same price and 28 trims of smaller sides in 30 min. Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1792867822481-d3ee39",
+      "ts": "2026-10-24T18:50:22Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "ufc_forced_glide",
+      "text": "UFC UFC-KAVTEM at T-20: coverage 0.50, under 1.00. Worst line -18 (KAVKOTKODQ). The bot sold the room it could and stepped prices to the crowd; it keeps working until the bell.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792867839401-9614e8",
+      "ts": "2026-10-24T18:50:22Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$18.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1792867859573-2f8bc4",
+      "ts": "2026-10-24T18:50:59Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Full ladder posted to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792867859573-1b2cb6",
+      "ts": "2026-10-24T18:50:59Z",
+      "book": "UFC-KAVTEM",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 2:10pm CT. Worst line -$18, target -$50. Next: Handoff to the fight, 2:07pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
