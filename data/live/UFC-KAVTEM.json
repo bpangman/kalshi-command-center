@@ -1,6 +1,6 @@
 {
   "key": "UFC-KAVTEM",
-  "generated_at": "2026-10-24T18:57:08.866663Z",
+  "generated_at": "2026-10-24T18:59:00.386701Z",
   "plan": {
     "engine": "ufc",
     "phase": "Final tightening",
@@ -10,40 +10,42 @@
     "checks_every_s": 20,
     "moves": [
       {
-        "side": "Kavanagh by Decision",
-        "resting": "80 @ 29-30c",
-        "exposure": 10.15,
-        "exposure_text": "+$10",
-        "move": "Step price down 1c (29c to 28c)",
-        "when": "if no fill by 2:41pm CT and 500+ crowd contracts trade",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 62",
-        "last_fill": "2026-10-24T18:41:26Z"
-      },
-      {
-        "side": "Kavanagh by KO/TKO",
-        "resting": "85 @ 21-23c",
-        "exposure": 10.15,
-        "exposure_text": "+$10",
-        "move": "Hold price at 21c",
-        "when": "already at fair plus margin (21c)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 62",
-        "last_fill": "2026-10-24T18:41:26Z"
-      },
-      {
         "side": "Temirov by KO/TKO",
         "resting": "82 @ 33-34c",
-        "exposure": 13.06,
-        "exposure_text": "+$13",
+        "exposure": -41.85,
+        "exposure_text": "-$42",
         "move": "Step price down 1c (33c to 32c)",
         "when": "if no fill by 2:56pm CT and 500+ crowd contracts trade",
         "at": null,
         "stuck": false,
         "also": "Also: next batch if resting drops under 62",
-        "last_fill": "2026-10-24T18:56:43Z"
+        "last_fill": "2026-10-24T18:56:49Z"
+      },
+      {
+        "side": "Kavanagh by Decision",
+        "resting": "52 @ 28-30c",
+        "exposure": 10.15,
+        "exposure_text": "+$10",
+        "move": "Next batch 82 contracts",
+        "when": "next bot check (resting 52 is under 62)",
+        "at": "2026-10-24T18:58:02Z",
+        "stuck": false,
+        "also": "Also: price step 2:01pm CT",
+        "last_fill": "2026-10-24T18:41:26Z",
+        "lag_note": "Steps to 27c if no fill by 2:01pm CT."
+      },
+      {
+        "side": "Kavanagh by KO/TKO",
+        "resting": "25 @ 21-22c",
+        "exposure": 10.15,
+        "exposure_text": "+$10",
+        "move": "Next batch 82 contracts",
+        "when": "next bot check (resting 25 is under 62)",
+        "at": "2026-10-24T18:58:02Z",
+        "stuck": false,
+        "also": "Also: price step",
+        "last_fill": "2026-10-24T18:41:26Z",
+        "lag_note": "Price 21c is at its floor."
       },
       {
         "side": "Draw / No Contest",
@@ -58,7 +60,7 @@
       },
       {
         "side": "Kavanagh by Submission",
-        "resting": "80 @ 8c",
+        "resting": "89 @ 8c",
         "exposure": 47.15,
         "exposure_text": "+$47",
         "move": "Hold price at 8c",
@@ -71,20 +73,20 @@
       },
       {
         "side": "Temirov by Decision",
-        "resting": "149 @ 21-23c",
+        "resting": "52 @ 22c",
         "exposure": 47.15,
         "exposure_text": "+$47",
-        "move": "Hold price at 21c",
-        "when": "already at its floor (fair minus 0c)",
-        "at": null,
+        "move": "Next batch 82 contracts",
+        "when": "next bot check (resting 52 is under 62)",
+        "at": "2026-10-24T18:58:02Z",
         "stuck": false,
-        "also": "Also: next batch if resting drops under 62",
+        "also": "Also: price step",
         "last_fill": "2026-10-21T19:31:52Z",
-        "lag_note": "Price 21c is at its floor."
+        "lag_note": "Steps to 21c if the crowd trades lower."
       },
       {
         "side": "Temirov by Submission",
-        "resting": "80 @ 7c",
+        "resting": "89 @ 7c",
         "exposure": 47.15,
         "exposure_text": "+$47",
         "move": "Hold price at 7c",
@@ -100,15 +102,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, fight about 2:10pm CT. Sold 263, 571 resting. Worst line -$42 (target -$50)."
+          "Final tightening, fight about 2:10pm CT. Sold 263, 404 resting. Worst line -$42 (target -$50)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Kavanagh by Submission, Temirov by Decision, Temirov by Submission.",
-          "Kavanagh by Submission: 37 behind. Price 8c is at its floor.",
-          "Temirov by Decision: 37 behind. Price 21c is at its floor.",
+          "Lagging (150+ behind the leader): Kavanagh by Decision, Kavanagh by KO/TKO, Kavanagh by Submission, Temirov by Decision, Temirov by Submission.",
+          "Kavanagh by Submission: 89 behind. Price 8c is at its floor.",
+          "Temirov by Decision: 89 behind. Steps to 21c if the crowd trades lower.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -147,23 +149,23 @@
       {
         "label": "Kavanagh by Decision",
         "held": 37.0,
-        "resting": 80.0,
+        "resting": 52.0,
         "target": 250.0,
-        "status": "even",
-        "price": 0.29
+        "status": "lagging",
+        "price": 0.28
       },
       {
         "label": "Kavanagh by KO/TKO",
         "held": 37.0,
-        "resting": 85.0,
+        "resting": 25.0,
         "target": 250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.21
       },
       {
         "label": "Kavanagh by Submission",
         "held": 0.0,
-        "resting": 80.0,
+        "resting": 89.0,
         "target": 250.0,
         "status": "lagging",
         "price": 0.08
@@ -171,14 +173,14 @@
       {
         "label": "Temirov by Decision",
         "held": 0.0,
-        "resting": 149.0,
+        "resting": 52.0,
         "target": 250.0,
         "status": "lagging",
-        "price": 0.21
+        "price": 0.22
       },
       {
         "label": "Temirov by KO/TKO",
-        "held": 34.1,
+        "held": 89.0,
         "resting": 82.0,
         "target": 250.0,
         "status": "even",
@@ -187,7 +189,7 @@
       {
         "label": "Temirov by Submission",
         "held": 0.0,
-        "resting": 80.0,
+        "resting": 89.0,
         "target": 250.0,
         "status": "lagging",
         "price": 0.07
@@ -202,88 +204,9 @@
       }
     ],
     "book": "UFC-KAVTEM",
-    "ts": "2026-10-24T18:57:02Z"
+    "ts": "2026-10-24T18:58:02Z"
   },
   "posts": [
-    {
-      "id": "1792690223829-0e07b2",
-      "ts": "2026-10-22T17:30:23Z",
-      "book": "UFC-KAVTEM",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Full ladder posted for the fight about Sat 2:10pm CT. Worst line $0, target -$50. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Full ladder posted"
-    },
-    {
-      "id": "1792690344723-0a7e99",
-      "ts": "2026-10-22T17:32:24Z",
-      "book": "UFC-KAVTEM",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Full ladder posted for the fight about Sat 2:10pm CT. Worst line $0, target -$50. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Full ladder posted"
-    },
-    {
-      "id": "1792691250671-4dbac4",
-      "ts": "2026-10-22T17:47:30Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792692156763-1bce72",
-      "ts": "2026-10-22T18:02:36Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792692384184-e72401",
-      "ts": "2026-10-22T18:06:24Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nKAVKOTKODQ: +0\nKAVSUB: +0\nKAVDEC: +0\nTEMKOTKODQ: +0\nTEMSUB: +0\nTEMDEC: +0\nDRAW: +0\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nKAVKOTKODQ: 0 / 250\nKAVSUB: 0 / 250\nKAVDEC: 0 / 250\nTEMKOTKODQ: 0 / 250\nTEMSUB: 0 / 250\nTEMDEC: 0 / 250\nDRAW: 0 / 30\nPosted book 1.00 | Sold avg 1.000 | Worst now +0 | Cash free $250\nAnchor age 98s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792693063277-8cb2ab",
-      "ts": "2026-10-22T18:17:43Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792693970067-f0f2ab",
-      "ts": "2026-10-22T18:32:33Z",
-      "book": "UFC-KAVTEM",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot note: PRINCIPLES: expiry extend order id kept KAVKOTKODQ 0.40: 01a15ff4-8da8-777c-9db3-ec4157cfd3ae",
-      "severity": "info",
-      "title": "Bot note"
-    },
-    {
-      "id": "1792694111289-132b09",
-      "ts": "2026-10-22T18:35:04Z",
-      "book": "UFC-KAVTEM",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot note: PRINCIPLES: expiry extend order id kept KAVKOTKODQ 0.40: 01a15ff5-c628-724f-be6e-5ebb36da828a",
-      "severity": "info",
-      "title": "Bot note"
-    },
     {
       "id": "1792695016881-eda0e2",
       "ts": "2026-10-22T18:50:16Z",
@@ -3220,6 +3143,96 @@
     {
       "id": "1792868222203-6098cb",
       "ts": "2026-10-24T18:57:02Z",
+      "book": "UFC-KAVTEM",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 2:10pm CT. Worst line -$42, target -$50. Next: Handoff to the fight, 2:07pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792868242405-947faf",
+      "ts": "2026-10-24T18:57:02Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Kavanagh by Submission: 89 behind, posted 9 at 9c.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792868242405-e032b0",
+      "ts": "2026-10-24T18:57:02Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Temirov by Submission: 89 behind, posted 9 at 8c.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792868262510-1693bd",
+      "ts": "2026-10-24T18:57:28Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on Kavanagh by KO/TKO: the 20c row sold 55% in 1 min, re-posted.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792868262510-00e72f",
+      "ts": "2026-10-24T18:57:28Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on Temirov by Decision: the 20c row sold 62% in 1 min, re-posted.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792868282698-8678ea",
+      "ts": "2026-10-24T18:57:53Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Kavanagh by KO/TKO: 52 behind, posted 27 at 21c.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792868282699-80fe28",
+      "ts": "2026-10-24T18:57:53Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Catch-up on Temirov by Decision: 89 behind, posted 37 at 21c.",
+      "severity": "info",
+      "title": "New wave"
+    },
+    {
+      "id": "1792868282700-e0fb68",
+      "ts": "2026-10-24T18:56:59Z",
+      "book": "UFC-KAVTEM",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 89: Temirov by KO/TKO x89 at 32c. Worst line -$42.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 89.0,
+        "fills": [
+          {
+            "side": "Temirov by KO/TKO",
+            "price": 0.32,
+            "qty": 89.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792868282702-d70035",
+      "ts": "2026-10-24T18:58:02Z",
       "book": "UFC-KAVTEM",
       "kind": "plan",
       "source": "narrator",
