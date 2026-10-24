@@ -1,10 +1,10 @@
 {
   "key": "UFC-VOLEVL",
-  "generated_at": "2026-10-24T19:51:46.174650Z",
+  "generated_at": "2026-10-24T19:53:30.496771Z",
   "plan": {
     "engine": "ufc",
     "phase": "Full ladder posted",
-    "headline": "Full ladder posted for the fight about 3:20pm CT. Worst line -$100, target -$50.",
+    "headline": "Full ladder posted for the fight about 3:20pm CT. Worst line -$66, target -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
     "checks_every_s": 20,
@@ -12,19 +12,19 @@
       {
         "side": "Volkanovski by Decision",
         "resting": "none",
-        "exposure": -100.21,
-        "exposure_text": "-$100",
+        "exposure": -66.45,
+        "exposure_text": "-$66",
         "move": "Next batch 165 contracts",
-        "when": "waits until worst loss is -$100 or better (now -$100)",
-        "at": null,
+        "when": "next bot check (resting 0 is under 125)",
+        "at": "2026-10-24T19:53:28Z",
         "stuck": false,
-        "last_fill": "2026-10-24T19:50:44Z"
+        "last_fill": "2026-10-24T19:52:00Z"
       },
       {
         "side": "Draw / No Contest",
         "resting": "none",
-        "exposure": 88.79,
-        "exposure_text": "+$89",
+        "exposure": 72.55,
+        "exposure_text": "+$73",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at 3:00pm CT",
         "at": null,
@@ -33,9 +33,9 @@
       },
       {
         "side": "Volkanovski by Submission",
-        "resting": "241 @ 5c",
-        "exposure": 90.94,
-        "exposure_text": "+$91",
+        "resting": "236 @ 5c",
+        "exposure": 74.7,
+        "exposure_text": "+$75",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:00pm CT, up to $100 in all",
         "at": "2026-10-24T20:00:00Z",
@@ -47,8 +47,8 @@
       {
         "side": "Evloev by Decision",
         "resting": "250 @ 32c",
-        "exposure": 99.79,
-        "exposure_text": "+$100",
+        "exposure": 83.55,
+        "exposure_text": "+$84",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:00pm CT, up to $100 in all",
         "at": "2026-10-24T20:00:00Z",
@@ -60,8 +60,8 @@
       {
         "side": "Evloev by KO/TKO",
         "resting": "250 @ 14c",
-        "exposure": 99.79,
-        "exposure_text": "+$100",
+        "exposure": 83.55,
+        "exposure_text": "+$84",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:00pm CT, up to $100 in all",
         "at": "2026-10-24T20:00:00Z",
@@ -73,8 +73,8 @@
       {
         "side": "Evloev by Submission",
         "resting": "250 @ 7c",
-        "exposure": 99.79,
-        "exposure_text": "+$100",
+        "exposure": 83.55,
+        "exposure_text": "+$84",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:00pm CT, up to $100 in all",
         "at": "2026-10-24T20:00:00Z",
@@ -86,8 +86,8 @@
       {
         "side": "Volkanovski by KO/TKO",
         "resting": "250 @ 18c",
-        "exposure": 99.79,
-        "exposure_text": "+$100",
+        "exposure": 83.55,
+        "exposure_text": "+$84",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:00pm CT, up to $100 in all",
         "at": "2026-10-24T20:00:00Z",
@@ -101,15 +101,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Full ladder posted, fight about 3:20pm CT. Sold 270, 1,241 resting. Worst line -$100 (target -$50)."
+          "Full ladder posted, fight about 3:20pm CT. Sold 270, 1,236 resting. Worst line -$66 (target -$50)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Evloev by Decision, Evloev by KO/TKO, Evloev by Submission, Volkanovski by KO/TKO, Volkanovski by Submission.",
-          "Evloev by Decision: 200 behind. Steps to 31c if the crowd trades lower.",
-          "Evloev by KO/TKO: 200 behind. Price 14c is at its floor.",
+          "Evloev by Decision: 150 behind. Steps to 31c if the crowd trades lower.",
+          "Evloev by KO/TKO: 150 behind. Price 14c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
         ]
       },
@@ -117,7 +117,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$100).",
+          "Gate open: worst line -$66 is better than -$100.",
           "Batches used: 5 (max 3 per bucket)."
         ]
       },
@@ -181,7 +181,7 @@
       },
       {
         "label": "Volkanovski by Decision",
-        "held": 200.0,
+        "held": 150.0,
         "resting": 0.0,
         "target": 500.0,
         "status": "even",
@@ -198,7 +198,7 @@
       {
         "label": "Volkanovski by Submission",
         "held": 8.8,
-        "resting": 241.0,
+        "resting": 236.0,
         "target": 160.0,
         "status": "lagging",
         "price": 0.05
@@ -213,78 +213,9 @@
       }
     ],
     "book": "UFC-VOLEVL",
-    "ts": "2026-10-24T19:51:27Z"
+    "ts": "2026-10-24T19:53:28Z"
   },
   "posts": [
-    {
-      "id": "1792716598153-0df411",
-      "ts": "2026-10-23T00:49:58Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792717504520-216ddd",
-      "ts": "2026-10-23T01:05:04Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792717664194-e0099c",
-      "ts": "2026-10-23T01:07:44Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nVOLKOTKODQ: +116\nVOLSUB: +107\nVOLDEC: -134\nEVLKOTKODQ: +116\nEVLSUB: +116\nEVLDEC: +116\nDRAW: +105\nCollected $116 premium ($0 fees) | Paper margin over fair $53 (not realized until settlement)\nheld / resting\nVOLKOTKODQ: 0 / 250\nVOLSUB: 9 / 237\nVOLDEC: 250 / 0\nEVLKOTKODQ: 0 / 250\nEVLSUB: 0 / 250\nEVLDEC: 0 / 250\nDRAW: 11 / 19\nPosted book 1.00 | Sold avg 1.417 | Worst now -134 | Cash free $500\nAnchor age 49s | Last fill 96827s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792718409805-56e248",
-      "ts": "2026-10-23T01:20:09Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792719316421-1cf1a3",
-      "ts": "2026-10-23T01:35:16Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792720223344-d866bd",
-      "ts": "2026-10-23T01:50:23Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792721130725-bfa5ed",
-      "ts": "2026-10-23T02:05:30Z",
-      "book": "UFC-VOLEVL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 2:20pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792721289759-c06dea",
       "ts": "2026-10-23T02:08:09Z",
@@ -3177,6 +3108,86 @@
       "source": "bot",
       "text": "If the game ends... you make\nVOLKOTKODQ: +100\nVOLSUB: +91\nVOLDEC: -100\nEVLKOTKODQ: +100\nEVLSUB: +100\nEVLDEC: +100\nDRAW: +89\nCollected $101 premium ($1 fees) | Paper margin over fair $43 (not realized until settlement)\nheld / resting\nVOLKOTKODQ: 0 / 250\nVOLSUB: 9 / 241\nVOLDEC: 200 / 0\nEVLKOTKODQ: 0 / 250\nEVLSUB: 0 / 250\nEVLDEC: 0 / 250\nDRAW: 11 / 19\nPosted book 1.00 | Sold avg 1.419 | Worst now -100 | Cash free $500\nAnchor age 0s | Last fill 45s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792871507384-aa7dce",
+      "ts": "2026-10-24T19:51:34Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792871527558-876095",
+      "ts": "2026-10-24T19:52:00Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792871547765-77139b",
+      "ts": "2026-10-24T19:52:25Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792871547768-faeb10",
+      "ts": "2026-10-24T19:52:27Z",
+      "book": "UFC-VOLEVL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Full ladder posted for the fight about 3:20pm CT. Worst line -$66, target -$50. Next: Paid balancing starts, 3:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Full ladder posted"
+    },
+    {
+      "id": "1792871588145-9c32f6",
+      "ts": "2026-10-24T19:52:50Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1792871588147-6c8243",
+      "ts": "2026-10-24T19:52:22Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 100: Volkanovski by Decision x100 at 31c. Worst line -$66.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 100.0,
+        "fills": [
+          {
+            "side": "Volkanovski by Decision",
+            "price": 0.31,
+            "qty": 100.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792871608352-38ae19",
+      "ts": "2026-10-24T19:53:15Z",
+      "book": "UFC-VOLEVL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: EVLDEC: new row not posted; nothing decreased",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
