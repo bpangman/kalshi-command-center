@@ -1,13 +1,13 @@
 {
   "key": "TAL-ORLY",
-  "generated_at": "2026-10-24T11:16:09.670088Z",
+  "generated_at": "2026-10-24T11:20:54.706830Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 2:30pm CT. Worst line -$545, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -101,7 +101,7 @@
         "exposure_text": "-$71",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-24T11:15:29Z",
+        "at": "2026-10-24T11:20:31Z",
         "stuck": false,
         "also": "Also: glide starts 10:30am CT",
         "last_fill": "2026-10-23T18:36:34Z"
@@ -123,14 +123,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 2:30pm CT. Sold 12,151, 21,190 resting. Worst line -$545 (limit now -$250)."
+          "Pre-race growth, green flag 2:30pm CT. Sold 12,151, 21,190 resting. Worst line -$545 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Jesse Love, Justin Allgaier, Sam Mayer, Sheldon Creed.",
-          "Jesse Love: 1,006 behind. Steps to 15c at the next check.",
+          "Jesse Love: 1,006 behind. Price 15c matches the crowd.",
           "Sheldon Creed: 752 behind. Price 7c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -200,7 +200,7 @@
         "resting": 737.0,
         "target": 1200.0,
         "status": "lagging",
-        "price": 0.16
+        "price": 0.15
       },
       {
         "label": "Justin Allgaier",
@@ -229,38 +229,9 @@
     ],
     "moves_note": "4 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "TAL-ORLY",
-    "ts": "2026-10-24T11:15:29Z"
+    "ts": "2026-10-24T11:20:31Z"
   },
   "posts": [
-    {
-      "id": "1792771780027-d95722",
-      "ts": "2026-10-23T16:09:40Z",
-      "book": "TAL-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 2:30pm CT. Worst line -$678, final target $0. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792772250353-14fb73",
-      "ts": "2026-10-23T16:17:30Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBrandon Jones: -678\nCarson Kvapil: -362\nSammy Smith: -310\nRajah Caruth: -272\nAustin Hill: -242\nCorey Day: -181\nSam Mayer: -178\nTaylor Gray: -177\nall others (33) >= -173\nCollected $555 premium ($9 fees) | Paper margin over fair $92 (not realized until settlement)\nCore posted book 1.54 | Worst now -678 | Cash free $2476\nAnchor age 201s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1792772687321-f21c30",
-      "ts": "2026-10-23T16:24:47Z",
-      "book": "TAL-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 50,057 resting. Next: Risk glide starts, Sat 10:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792773594290-f92700",
       "ts": "2026-10-23T16:39:54Z",
@@ -3595,6 +3566,45 @@
     {
       "id": "1792840469444-11eac1",
       "ts": "2026-10-24T11:14:29Z",
+      "book": "TAL-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 2:30pm CT. Worst line -$545, final target +$100. Next: Risk glide starts, 10:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792840650558-41f6f6",
+      "ts": "2026-10-24T11:17:23Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Jesse Love: no fill for 710 min, added 300 at 15c (was 16c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Jesse Love",
+        "from": 0.16,
+        "to": 0.15
+      }
+    },
+    {
+      "id": "1792840771469-e37baf",
+      "ts": "2026-10-24T11:17:24Z",
+      "book": "TAL-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 168 (price step): Jesse Love x168 at 15c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 168.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792840831937-4d37f8",
+      "ts": "2026-10-24T11:20:31Z",
       "book": "TAL-ORLY",
       "kind": "plan",
       "source": "narrator",
