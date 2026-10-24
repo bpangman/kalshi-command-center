@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-24T21:12:05.402757Z",
+  "generated_at": "2026-10-24T21:14:14.232657Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -57,10 +57,10 @@
       },
       {
         "side": "ATL by 7-14",
-        "resting": "265 @ 16-24c",
+        "resting": "265 @ 13-17c",
         "exposure": 92.35,
         "exposure_text": "+$92",
-        "move": "Hold price at 16c",
+        "move": "Hold price at 13c",
         "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
@@ -73,11 +73,11 @@
         "exposure": 92.35,
         "exposure_text": "+$92",
         "move": "Step price down 1c (26c to 25c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-24T21:12:03Z",
+        "when": "if no fill by 4:22pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-24T21:22:17Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 11:15am CT",
-        "lag_note": "Steps to 25c at the next check."
+        "lag_note": "Steps to 25c if no fill by 4:22pm CT."
       }
     ],
     "sections": [
@@ -152,7 +152,7 @@
         "resting": 265.0,
         "target": null,
         "status": "lagging",
-        "price": 0.16
+        "price": 0.13
       },
       {
         "label": "ATL by 15+",
@@ -188,7 +188,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-24T21:12:03Z"
+    "ts": "2026-10-24T21:14:04Z"
   },
   "posts": [
     {
@@ -3036,6 +3036,21 @@
       "data": {
         "contracts": 294.0,
         "rows": 3
+      }
+    },
+    {
+      "id": "1792876343420-1c2f86",
+      "ts": "2026-10-24T21:12:22Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on SF by 1-6: no fill for 10 min, added 150 at 25c (was 26c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "SF by 1-6",
+        "from": 0.26,
+        "to": 0.25
       }
     }
   ],
