@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-24T23:18:00.634436Z",
+  "generated_at": "2026-10-24T23:20:39.061608Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -37,11 +37,11 @@
         "exposure": 92.35,
         "exposure_text": "+$92",
         "move": "Hold price at 18c",
-        "when": "crowd pays 18.7c; steps down 1c only if it trades lower",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 11:15am CT",
-        "lag_note": "Price 18c matches the crowd."
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "ATL by 15+",
@@ -91,7 +91,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): ATL by 1-6, ATL by 7-14, ATL by 15+, SF by 1-6.",
-          "ATL by 1-6: 248 behind. Price 18c matches the crowd.",
+          "ATL by 1-6: 248 behind. No crowd trade data yet.",
           "ATL by 7-14: 248 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -188,7 +188,7 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-24T23:17:00Z"
+    "ts": "2026-10-24T23:20:01Z"
   },
   "posts": [
     {
@@ -3205,6 +3205,15 @@
       "text": "Quiet for 15 min. 1,115 resting. Next: Paid balancing starts, Sun 11:15am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792883926366-880e51",
+      "ts": "2026-10-24T23:18:46Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W8-SFATL book is churning: 0 cancel-and-repost at the same price and 6 trims of smaller sides in 30 min. Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
