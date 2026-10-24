@@ -1,10 +1,10 @@
 {
   "key": "UFC-KAVTEM",
-  "generated_at": "2026-10-24T18:55:21.430508Z",
+  "generated_at": "2026-10-24T18:57:08.866663Z",
   "plan": {
     "engine": "ufc",
     "phase": "Final tightening",
-    "headline": "Final tightening for the fight about 2:10pm CT. Worst line -$18, target -$50.",
+    "headline": "Final tightening for the fight about 2:10pm CT. Worst line -$42, target -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. The start time is an estimate.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "Kavanagh by Decision",
         "resting": "80 @ 29-30c",
-        "exposure": -18.33,
-        "exposure_text": "-$18",
+        "exposure": 10.15,
+        "exposure_text": "+$10",
         "move": "Step price down 1c (29c to 28c)",
         "when": "if no fill by 2:41pm CT and 500+ crowd contracts trade",
         "at": null,
@@ -24,8 +24,8 @@
       {
         "side": "Kavanagh by KO/TKO",
         "resting": "85 @ 21-23c",
-        "exposure": -18.33,
-        "exposure_text": "-$18",
+        "exposure": 10.15,
+        "exposure_text": "+$10",
         "move": "Hold price at 21c",
         "when": "already at fair plus margin (21c)",
         "at": null,
@@ -34,10 +34,22 @@
         "last_fill": "2026-10-24T18:41:26Z"
       },
       {
+        "side": "Temirov by KO/TKO",
+        "resting": "82 @ 33-34c",
+        "exposure": 13.06,
+        "exposure_text": "+$13",
+        "move": "Step price down 1c (33c to 32c)",
+        "when": "if no fill by 2:56pm CT and 500+ crowd contracts trade",
+        "at": null,
+        "stuck": false,
+        "also": "Also: next batch if resting drops under 62",
+        "last_fill": "2026-10-24T18:56:43Z"
+      },
+      {
         "side": "Draw / No Contest",
         "resting": "15 @ 3c",
-        "exposure": -11.33,
-        "exposure_text": "-$11",
+        "exposure": 17.15,
+        "exposure_text": "+$17",
         "move": "Holding",
         "when": "no move planned until the handoff to the fight at 2:07pm CT",
         "at": null,
@@ -47,8 +59,8 @@
       {
         "side": "Kavanagh by Submission",
         "resting": "80 @ 8c",
-        "exposure": 18.67,
-        "exposure_text": "+$19",
+        "exposure": 47.15,
+        "exposure_text": "+$47",
         "move": "Hold price at 8c",
         "when": "already at its floor (fair minus 0c)",
         "at": null,
@@ -60,8 +72,8 @@
       {
         "side": "Temirov by Decision",
         "resting": "149 @ 21-23c",
-        "exposure": 18.67,
-        "exposure_text": "+$19",
+        "exposure": 47.15,
+        "exposure_text": "+$47",
         "move": "Hold price at 21c",
         "when": "already at its floor (fair minus 0c)",
         "at": null,
@@ -71,23 +83,10 @@
         "lag_note": "Price 21c is at its floor."
       },
       {
-        "side": "Temirov by KO/TKO",
-        "resting": "171 @ 32-34c",
-        "exposure": 18.67,
-        "exposure_text": "+$19",
-        "move": "Step price down 1c (32c to 31c)",
-        "when": "next bot check, if the crowd trades under 32c",
-        "at": null,
-        "stuck": false,
-        "also": "Also: next batch if resting drops under 62",
-        "last_fill": "2026-10-21T19:31:52Z",
-        "lag_note": "Steps to 31c if the crowd trades lower."
-      },
-      {
         "side": "Temirov by Submission",
         "resting": "80 @ 7c",
-        "exposure": 18.67,
-        "exposure_text": "+$19",
+        "exposure": 47.15,
+        "exposure_text": "+$47",
         "move": "Hold price at 7c",
         "when": "already at its floor (fair minus 0c)",
         "at": null,
@@ -101,13 +100,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, fight about 2:10pm CT. Sold 174, 660 resting. Worst line -$18 (target -$50)."
+          "Final tightening, fight about 2:10pm CT. Sold 263, 571 resting. Worst line -$42 (target -$50)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Kavanagh by Submission, Temirov by Decision, Temirov by KO/TKO, Temirov by Submission.",
+          "Lagging (150+ behind the leader): Kavanagh by Submission, Temirov by Decision, Temirov by Submission.",
           "Kavanagh by Submission: 37 behind. Price 8c is at its floor.",
           "Temirov by Decision: 37 behind. Price 21c is at its floor.",
           "A price step needs 20 min with no fill and the crowd paying less."
@@ -117,7 +116,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A bucket gets a new batch when its resting drops under 25% of its allotment.",
-          "Gate open: worst line -$18 is better than -$100.",
+          "Gate open: worst line -$42 is better than -$100.",
           "Batches used: 7 (max 3 per bucket)."
         ]
       },
@@ -125,7 +124,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if a bucket's line falls under -$100.",
-          "Paid balancing is open: started at -$18, target -$50, now -$18.",
+          "Paid balancing is open: started at -$18, target -$50, now -$42.",
           "Even-up 1:10pm CT; last-resort take 1:50pm CT; handoff to the fight 2:07pm CT.",
           "The fight start is an estimate and can move."
         ]
@@ -179,11 +178,11 @@
       },
       {
         "label": "Temirov by KO/TKO",
-        "held": 0.0,
-        "resting": 171.0,
+        "held": 34.1,
+        "resting": 82.0,
         "target": 250.0,
-        "status": "lagging",
-        "price": 0.32
+        "status": "even",
+        "price": 0.33
       },
       {
         "label": "Temirov by Submission",
@@ -203,19 +202,9 @@
       }
     ],
     "book": "UFC-KAVTEM",
-    "ts": "2026-10-24T18:55:01Z"
+    "ts": "2026-10-24T18:57:02Z"
   },
   "posts": [
-    {
-      "id": "1792689618832-ef4124",
-      "ts": "2026-10-22T17:20:18Z",
-      "book": "UFC-KAVTEM",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. Next: Even-up window, Sat 1:10pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792690223829-0e07b2",
       "ts": "2026-10-22T17:30:23Z",
@@ -3225,6 +3214,16 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Final tightening for the fight about 2:10pm CT. Worst line -$18, target -$50. Next: Handoff to the fight, 2:07pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792868222203-6098cb",
+      "ts": "2026-10-24T18:57:02Z",
+      "book": "UFC-KAVTEM",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening for the fight about 2:10pm CT. Worst line -$42, target -$50. Next: Handoff to the fight, 2:07pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
     }
