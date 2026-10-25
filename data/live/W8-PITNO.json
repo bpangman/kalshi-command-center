@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T04:16:34.623376Z",
+  "generated_at": "2026-10-25T04:19:35.354233Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,16 +22,16 @@
       },
       {
         "side": "NO by 1-6",
-        "resting": "150 @ 19-22c",
+        "resting": "150 @ 17-22c",
         "exposure": -18.25,
         "exposure_text": "-$18",
-        "move": "Hold price at 19c",
-        "when": "needs 50+ crowd trades under 19c (now 1)",
+        "move": "Hold price at 17c",
+        "when": "crowd pays 17c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
         "last_fill": "2026-10-25T02:17:56Z",
-        "lag_note": "Crowd is quiet here (1 traded)."
+        "lag_note": "Price 17c matches the crowd."
       },
       {
         "side": "NO by 15+",
@@ -75,11 +75,11 @@
         "exposure": 30.78,
         "exposure_text": "+$31",
         "move": "Step price down 1c (23c to 22c)",
-        "when": "if no fill by 11:19pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T04:19:31Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Steps to 22c if no fill by 11:19pm CT."
+        "lag_note": "Steps to 22c at the next check."
       }
     ],
     "sections": [
@@ -146,7 +146,7 @@
         "resting": 150.0,
         "target": null,
         "status": "lagging",
-        "price": 0.19
+        "price": 0.17
       },
       {
         "label": "NO by 7-14",
@@ -190,19 +190,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T04:15:58Z"
+    "ts": "2026-10-25T04:18:59Z"
   },
   "posts": [
-    {
-      "id": "1792691250680-ae01db",
-      "ts": "2026-10-22T17:47:30Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:46am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792691703601-f08c8e",
       "ts": "2026-10-22T17:55:03Z",
@@ -3167,6 +3157,20 @@
       "kind": "update",
       "source": "narrator",
       "text": "Posted 82 (FAIR-ROSE rung 6 0.17 -> 0.19 ): NO by 1-6 x82 at 19c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 82.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792901939426-651b43",
+      "ts": "2026-10-25T04:16:53Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 82 (ANCHOR step 0.17): NO by 1-6 x82 at 17c.",
       "severity": "info",
       "title": "Orders posted",
       "data": {
