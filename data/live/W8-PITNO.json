@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T12:24:34.210212Z",
+  "generated_at": "2026-10-25T12:27:14.198777Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,16 +22,16 @@
       },
       {
         "side": "PIT by 1-6",
-        "resting": "296 @ 27-28c",
+        "resting": "296 @ 24-26c",
         "exposure": 36.49,
         "exposure_text": "+$36",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:45am CT, up to $100 in all",
-        "at": "2026-10-25T12:45:00Z",
+        "move": "Step price down 1c (24c to 23c)",
+        "when": "if no fill by 7:33am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T12:33:29Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-25T08:02:45Z",
-        "lag_note": "Crowd is quiet here (26 traded)."
+        "lag_note": "Steps to 23c if no fill by 7:33am CT."
       },
       {
         "side": "NO by 1-6",
@@ -172,7 +172,7 @@
         "resting": 296.0,
         "target": null,
         "status": "lagging",
-        "price": 0.27
+        "price": 0.24
       },
       {
         "label": "PIT by 7-14",
@@ -192,28 +192,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T12:23:38Z"
+    "ts": "2026-10-25T12:26:40Z"
   },
   "posts": [
-    {
-      "id": "1792760801816-61c0ce",
-      "ts": "2026-10-23T13:06:41Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNO 1-6: +0 (+0.0% of bankroll)\nNO 7-14: +0 (+0.0% of bankroll)\nNO 15+: +0 (+0.0% of bankroll)\nPIT 1-6: +0 (+0.0% of bankroll)\nPIT 7-14: +0 (+0.0% of bankroll)\nPIT 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 489\nNO 7-14: 0 / 413\nNO 15+: 0 / 440\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 0 / 440\nPosted book 1.26 | Sold avg 1.262 | Worst now +98 | Cash free $386\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792761238876-d37395",
-      "ts": "2026-10-23T13:13:58Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792762145896-4ec68a",
       "ts": "2026-10-23T13:29:05Z",
@@ -3421,6 +3402,29 @@
         "from": 0.27,
         "to": 0.26
       }
+    },
+    {
+      "id": "1792931180051-4547ec",
+      "ts": "2026-10-25T12:24:20Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 88 (ANCHOR step 0.24): PIT by 1-6 x88 at 24c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 88.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792931223706-52599f",
+      "ts": "2026-10-25T12:27:03Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W8-PITNO book is churning: 0 cancel-and-repost at the same price and 3 trims of smaller sides in 30 min. Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
