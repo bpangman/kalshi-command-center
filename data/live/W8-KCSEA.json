@@ -1,6 +1,6 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T20:39:24.007874Z",
+  "generated_at": "2026-10-25T20:40:46.360325Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,7 +22,7 @@
       },
       {
         "side": "KC by 7-14",
-        "resting": "330 @ 15-19c",
+        "resting": "312 @ 15-19c",
         "exposure": -441.39,
         "exposure_text": "-$441",
         "move": "Hold price at 15c",
@@ -40,7 +40,7 @@
         "exposure_text": "+$225",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T20:38:45Z",
+        "at": "2026-10-25T20:40:46Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:43:00Z",
@@ -66,7 +66,7 @@
         "exposure_text": "+$303",
         "move": "Step price down 1c (24c to 23c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T20:38:45Z",
+        "at": "2026-10-25T20:40:46Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:36:59Z",
@@ -79,7 +79,7 @@
         "exposure_text": "+$311",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T20:38:45Z",
+        "at": "2026-10-25T20:40:46Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "lag_note": "Steps to 21c at the next check."
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,754, 4,533 resting. Worst line -$577 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,754, 4,550 resting. Worst line -$577 (goal -$150)."
         ]
       },
       {
@@ -154,10 +154,10 @@
       {
         "label": "KC by 7-14",
         "held": 752.6,
-        "resting": 295.0,
+        "resting": 312.0,
         "target": null,
         "status": "lagging",
-        "price": 0.17
+        "price": 0.15
       },
       {
         "label": "KC by 15+",
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T20:38:45Z"
+    "ts": "2026-10-25T20:40:46Z"
   },
   "posts": [
-    {
-      "id": "1792776437301-77da25",
-      "ts": "2026-10-23T17:27:17Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,715 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792777344712-0ee719",
       "ts": "2026-10-23T17:42:24Z",
@@ -3434,18 +3424,29 @@
       "source": "resistance_monitor",
       "text": "W8-KCSEA book loss is growing: worst case -582 dollars, past its limit and -107 in 30 min. Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1792960846370-e879ca",
+      "ts": "2026-10-25T20:38:27Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 35: KC by 7-14 x35 at 15c. Worst line -$577.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 35.0,
+        "fills": [
+          {
+            "side": "KC by 7-14",
+            "price": 0.15,
+            "qty": 35.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792898219724-1690ac",
-      "ts": "2026-10-25T03:16:59Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): lagging bucket priced over the crowd: SEA1TO6 ask 0.26 vs clearing 0.210 for 175 min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792898953933-aee613",
       "ts": "2026-10-25T03:29:13Z",
@@ -4336,6 +4337,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-KCSEA): worst -582.37 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792960764545-a1cd8d",
+      "ts": "2026-10-25T20:39:24Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-KCSEA): held worst -577.12 (backstop -300) or lagging gap 888 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
