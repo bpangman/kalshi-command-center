@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T16:27:07.065865Z",
+  "generated_at": "2026-10-25T16:28:39.996226Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame balancing",
@@ -26,7 +26,7 @@
         "exposure": -28.25,
         "exposure_text": "-$28",
         "move": "Hold price at 20c",
-        "when": "crowd pays 20.5c; steps down 1c only if it trades lower",
+        "when": "crowd pays 20.2c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -78,12 +78,12 @@
         "exposure": 36.04,
         "exposure_text": "+$36",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 11:29am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T16:29:06Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-25T16:19:06Z",
-        "lag_note": "Steps to 15c if no fill by 11:29am CT."
+        "lag_note": "Steps to 15c at the next check."
       }
     ],
     "sections": [
@@ -97,7 +97,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 15+, CIN by 1-6, CIN by 7-14, CIN by 15+.",
-          "CIN by 15+: 112 behind. Steps to 15c if no fill by 11:29am CT.",
+          "CIN by 15+: 112 behind. Steps to 15c at the next check.",
           "BAL by 15+: 110 behind. Price 10c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T16:26:30Z"
+    "ts": "2026-10-25T16:28:31Z"
   },
   "posts": [
-    {
-      "id": "1792775227034-9dbc93",
-      "ts": "2026-10-23T17:07:07Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792776134787-ca607d",
       "ts": "2026-10-23T17:22:14Z",
@@ -3406,6 +3396,20 @@
             "qty": 31.0
           }
         ]
+      }
+    },
+    {
+      "id": "1792945651051-ab5f73",
+      "ts": "2026-10-25T16:25:30Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 29 (GLIDE-FILL crowd ask 0.20): CIN by 7-14 x29 at 20c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 29.0,
+        "rows": 1
       }
     }
   ],
