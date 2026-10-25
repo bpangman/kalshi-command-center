@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T05:06:35.686581Z",
+  "generated_at": "2026-10-25T05:09:12.232872Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -69,15 +69,15 @@
       },
       {
         "side": "PIT by 7-14",
-        "resting": "489 @ 23-30c",
+        "resting": "489 @ 21-24c",
         "exposure": 44.72,
         "exposure_text": "+$45",
-        "move": "Step price down 1c (23c to 22c)",
-        "when": "if no fill by 12:13am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-25T05:13:51Z",
+        "move": "Hold price at 21c",
+        "when": "crowd pays 21c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 22c if no fill by 12:13am CT."
+        "lag_note": "Price 21c matches the crowd."
       }
     ],
     "sections": [
@@ -188,7 +188,7 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T05:06:21Z"
+    "ts": "2026-10-25T05:08:21Z"
   },
   "posts": [
     {
@@ -3322,6 +3322,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-PITNO): lagging bucket priced over the crowd: PIT1TO6 ask 0.27 vs clearing 0.228 for 85 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792904904166-0f57dc",
+      "ts": "2026-10-25T05:08:24Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 0.33 over banked margin 0.24",
       "severity": "warn"
     }
   ]
