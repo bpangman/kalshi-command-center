@@ -1,204 +1,109 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-25T16:58:04.041534Z",
+  "generated_at": "2026-10-25T16:59:53.485024Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 12:00pm CT. Worst line -$41.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "ATL by 1-6",
-        "resting": "21 @ 22-23c",
-        "exposure": -40.73,
-        "exposure_text": "-$41",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 12:00pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-25T00:41:37Z"
-      },
-      {
-        "side": "SF by 15+",
-        "resting": "2 @ 20-25c",
-        "exposure": -21.73,
-        "exposure_text": "-$22",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-25T00:38:57Z"
-      },
-      {
-        "side": "SF by 1-6",
-        "resting": "52 @ 28-30c",
-        "exposure": -21.0,
-        "exposure_text": "-$21",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-25T16:48:45Z"
-      },
-      {
-        "side": "SF by 7-14",
-        "resting": "1 @ 23c",
-        "exposure": -20.73,
-        "exposure_text": "-$21",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-10-25T15:21:12Z"
-      },
-      {
-        "side": "ATL by 7-14",
-        "resting": "57 @ 13-17c",
-        "exposure": 20.46,
-        "exposure_text": "+$20",
-        "move": "Hold price at 13c",
-        "when": "no crowd trade data yet",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-25T08:08:29Z",
-        "lag_note": "No crowd trade data yet."
-      },
-      {
-        "side": "ATL by 15+",
-        "resting": "250 @ 10-19c",
-        "exposure": 228.27,
-        "exposure_text": "+$228",
-        "move": "Hold price at 10c",
-        "when": "needs 50+ crowd trades under 10c (now 10)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "lag_note": "Crowd is quiet here (10 traded)."
-      }
-    ],
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$41.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 5,
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 12:00pm CT. Sold 1,225, 383 resting. Worst line -$41 (goal -$75)."
+          "In game (Ingame). Sold 1,225, 564 resting. Worst line -$41. Game 0% done. Bot is slow (checks every 21s, set for 5s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (75+ behind the leader): ATL by 7-14, ATL by 15+.",
-          "ATL by 15+: 269 behind. Crowd is quiet here (10 traded).",
-          "ATL by 7-14: 61 behind. No crowd trade data yet.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$41 is better than -$75.",
-          "Batches used: none (max 1 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$75, worst line -$41; spent $0 of $50.",
-          "Kickoff 12:00pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-10-25T17:00:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "ATL by 1-6",
         "held": 269.0,
-        "resting": 21.0,
+        "resting": 36.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       },
       {
         "label": "ATL by 7-14",
         "held": 207.8,
-        "resting": 57.2,
+        "resting": 45.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.13
+        "status": "even",
+        "price": null
       },
       {
         "label": "ATL by 15+",
         "held": 0.0,
-        "resting": 250.0,
+        "resting": 338.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.1
+        "status": "even",
+        "price": null
       },
       {
         "label": "SF by 1-6",
         "held": 249.3,
-        "resting": 52.0,
+        "resting": 67.0,
         "target": null,
         "status": "even",
-        "price": 0.28
+        "price": null
       },
       {
         "label": "SF by 7-14",
         "held": 249.0,
-        "resting": 1.0,
+        "resting": 31.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": null
       },
       {
         "label": "SF by 15+",
         "held": 250.0,
-        "resting": 2.0,
+        "resting": 47.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-25T16:57:04Z"
+    "ts": "2026-10-25T16:59:05Z"
   },
   "posts": [
-    {
-      "id": "1792775630503-c3b352",
-      "ts": "2026-10-23T17:13:50Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,634 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792776215316-b8f3a5",
-      "ts": "2026-10-23T17:23:33Z",
-      "book": "W8-SFATL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: SF by 7-14 at 21c (146 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
     {
       "id": "1792776336308-296064",
       "ts": "2026-10-23T17:23:33Z",
@@ -3346,6 +3251,26 @@
       "source": "bot",
       "text": "Comeback mode: ATL now 43%",
       "severity": "info"
+    },
+    {
+      "id": "1792947485422-8815c5",
+      "ts": "2026-10-25T16:58:05Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792947485422-e94d57",
+      "ts": "2026-10-25T16:58:05Z",
+      "book": "W8-SFATL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$41.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
