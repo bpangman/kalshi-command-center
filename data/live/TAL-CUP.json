@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T13:36:57.047368Z",
+  "generated_at": "2026-10-25T13:38:29.720713Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 1:00pm CT. Worst line -$648, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Chase Briscoe",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 1:00pm CT. Sold 45,779, 55,890 resting. Worst line -$648 (limit now -$550)."
+          "Pre-race growth, green flag 1:00pm CT. Sold 45,779, 55,890 resting. Worst line -$648 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -213,33 +213,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-25T13:36:31Z"
+    "ts": "2026-10-25T13:37:32Z"
   },
   "posts": [
-    {
-      "id": "1792867557261-9497a4",
-      "ts": "2026-10-24T18:43:46Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 18 (race glide fill): Chris Buescher x18 at 5c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 18.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1792867557267-7f8682",
-      "ts": "2026-10-24T18:45:57Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$739, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1792867718678-a68329",
       "ts": "2026-10-24T18:46:27Z",
@@ -3998,18 +3974,29 @@
         "contracts": 35.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792935452247-d1bb3c",
+      "ts": "2026-10-25T13:37:32Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 1:00pm CT. Worst line -$648, final target +$150. Next: Risk glide starts, 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1792935492559-d2b02a",
+      "ts": "2026-10-25T13:38:00Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Chase Briscoe.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1792881379174-f3fedb",
-      "ts": "2026-10-24T22:36:19Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -672.91 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792882041119-d88d05",
       "ts": "2026-10-24T22:47:21Z",
@@ -4900,6 +4887,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -648.22 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792935480420-8aa205",
+      "ts": "2026-10-25T13:38:00Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Chase Briscoe (+20%)",
+      "severity": "warn"
     }
   ]
 }
