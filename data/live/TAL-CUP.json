@@ -1,10 +1,10 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T20:26:14.302274Z",
+  "generated_at": "2026-10-25T20:27:36.136661Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$50.",
+    "headline": "In race (Ingame). Worst line +$54.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 70,803, 14,127 resting. Worst line +$50. Race 71% done. Floor protocol off."
+          "In race (Ingame). Sold 71,196, 13,734 resting. Worst line +$54. Race 72% done. Floor protocol off."
         ]
       },
       {
@@ -44,34 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T20:25:38Z"
+    "ts": "2026-10-25T20:26:39Z"
   },
   "posts": [
-    {
-      "id": "1792946336773-14191c",
-      "ts": "2026-10-25T16:38:50Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Brad Keselowski: no fill for 108 min, added 204 at 4c (was 5c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Brad Keselowski",
-        "from": 0.05,
-        "to": 0.04
-      }
-    },
-    {
-      "id": "1792946336774-adff58",
-      "ts": "2026-10-25T16:38:50Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Idle step on Denny Hamlin: no fill for 2556 min, lowest row 6c to 5c.",
-      "severity": "info",
-      "title": "Price step"
-    },
     {
       "id": "1792946397094-ce326e",
       "ts": "2026-10-25T16:37:46Z",
@@ -4003,18 +3978,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792959999569-e41630",
+      "ts": "2026-10-25T20:26:30Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: in-race floor anchor +54.14 (worst line +54.14; only moves up)",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792960019766-0ff999",
+      "ts": "2026-10-25T20:26:30Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 405: John Hunter Nemechek x393 at 1c, Cody Ware x12 at 1c. Worst line +$54.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 405.0,
+        "fills": [
+          {
+            "side": "John Hunter Nemechek",
+            "price": 0.01,
+            "qty": 393.0
+          },
+          {
+            "side": "Cody Ware",
+            "price": 0.01,
+            "qty": 12.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792929054015-bf5e83",
-      "ts": "2026-10-25T11:50:54Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 26 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-CAME low 231c, KXNASCARRACE-YEL26-BRKE low 346c, KXNASCARRACE-YEL26-DEHA low 251c, KXNASCARRACE-YEL26-MIMC low 231c, KXNASCARRACE-YEL26-AUDI low 237c, KXNASCARRACE-YEL26-RIST low 237c, KXNASCARRACE-YEL26-CHBU low 236c, KXNASCARRACE-YEL26-ROCH low 237c, KXNASCARRACE-YEL26-JOGA low 231c, KXNASCARRACE-YEL26-BUWA low 237c, KXNASCARRACE-YEL26-KYLA low 517c, KXNASCARRACE-YEL26-CHEL low 372c, KXNASCARRACE-YEL26-ERJO low 237c, KXNASCARRACE-YEL26-TYRE low 532c, KXNASCARRACE-YEL26-JONE low 231c, KXNASCARRACE-YEL26-COCU low 231c, KXNASCARRACE-YEL26-GRGA low 231c, KXNASCARRACE-YEL26-DASU low 361c, KXNASCARRACE-YEL26-COWA low 231c, KXNASCARRACE-YEL26-AUHI low 616c, KXNASCARRACE-YEL26-CHBE low 314c, KXNASCARRACE-YEL26-AUCI low 1228c, KXNASCARRACE-YEL26-NOGR low 231c, KXNASCARRACE-YEL26-ZASM low 231c, KXNASCARRACE-YEL26-CAHO low 176c, KXNASCARRACE-YEL26-DADY low 231c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792929054016-fa8bf2",
       "ts": "2026-10-25T11:50:54Z",
@@ -4904,6 +4905,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 11 driver(s): Ryan Blaney (+91%), Kyle Larson (+77%), Bubba Wallace (+46%), Austin Dillon (+43%), Erik Jones (+43%), Josh Berry (+43%), Ryan Preece (+42%), Chase Briscoe (+34%), Tyler Reddick (+32%), Chase Elliott (+29%) and 1 more",
+      "severity": "warn"
+    },
+    {
+      "id": "1792960037701-639567",
+      "ts": "2026-10-25T20:27:17Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 7 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-AJAL low 1665c, KXNASCARRACE-YEL26-TYDI low 2299c, KXNASCARRACE-YEL26-JONE low 1735c, KXNASCARRACE-YEL26-COCU low 2449c, KXNASCARRACE-YEL26-COWA low 2437c, KXNASCARRACE-YEL26-NOGR low 2135c, KXNASCARRACE-YEL26-ZASM low 1742c. Check the command center.",
       "severity": "warn"
     }
   ]
