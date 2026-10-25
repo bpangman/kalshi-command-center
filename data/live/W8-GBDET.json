@@ -1,6 +1,6 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T23:13:54.258496Z",
+  "generated_at": "2026-10-25T23:15:12.846294Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,906, 157 resting. Worst line +$33. Game 94% done. Floor mode ON: only raising the worst line. Bot is slow (checks every 24s, set for 5s)."
+          "In game (Ingame). Sold 2,906, 157 resting. Worst line +$33. Game 94% done. Floor mode ON: only raising the worst line. Bot is slow (checks every 22s, set for 5s)."
         ]
       },
       {
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T23:13:52Z"
+    "ts": "2026-10-25T23:14:53Z"
   },
   "posts": [
-    {
-      "id": "1792855803694-269c63",
-      "ts": "2026-10-24T15:30:03Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792856339148-b3049c",
       "ts": "2026-10-24T15:38:59Z",
@@ -4189,6 +4179,31 @@
       "source": "bot",
       "text": "Floor mode: guaranteed minimum is +32; from here only trades that raise it",
       "severity": "info"
+    },
+    {
+      "id": "1792970093416-2d03d5",
+      "ts": "2026-10-25T23:12:56Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 2: DET by 7-14 x1 at 10c, DET by 7-14 x1 at 14c. Worst line +$33.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 2.0,
+        "fills": [
+          {
+            "side": "DET by 7-14",
+            "price": 0.1,
+            "qty": 1.0
+          },
+          {
+            "side": "DET by 7-14",
+            "price": 0.14,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4649,6 +4664,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W8-GBDET - Detroit by 7 to 14 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792970050562-e361a2",
+      "ts": "2026-10-25T23:14:10Z",
+      "book": "W8-GBDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+3 on GB 7-14 @ 0.10 (maker)\n+1 on GB 7-14 @ 0.13 (maker)\n+3 on GB 7-14 @ 0.15 (maker)\n+16 on GB 7-14 @ 0.17 (maker)\n+18 on GB 7-14 @ 0.20 (maker)\n+15 on GB 7-14 @ 0.22 (maker)\n+1 on DET 7-14 @ 0.10 (maker)\n+1 on DET 7-14 @ 0.14 (maker)\nworst outcome now +44\nheld 509/499/436/506/484/472\nIf the game ends... you make\nDET 1-6: +33 (+1.6% of bankroll)\nDET 7-14: +43 (+2.1% of bankroll)\nDET 15+: +106 (+5.1% of bankroll)\nGB 1-6: +36 (+1.7% of bankroll)\nGB 7-14: +58 (+2.8% of bankroll)\nGB 15+: +69 (+3.3% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792970079500-51b137",
+      "ts": "2026-10-25T23:14:39Z",
+      "book": "W8-GBDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
