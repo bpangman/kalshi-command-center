@@ -1,10 +1,10 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T19:54:50.719437Z",
+  "generated_at": "2026-10-25T19:56:20.853499Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 3:25pm CT. Worst line -$70, goal -$75.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$70.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -15,7 +15,7 @@
         "exposure": -70.31,
         "exposure_text": "-$70",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 2:55pm CT",
+        "when": "no move planned until kickoff at 3:25pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T19:16:07Z"
@@ -74,25 +74,25 @@
         "exposure": 141.33,
         "exposure_text": "+$141",
         "move": "Hold price at 18c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 18c (now 3)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (3 traded)."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 3:25pm CT. Sold 814, 505 resting. Worst line -$70 (goal -$75)."
+          "Final tightening, kickoff 3:25pm CT. Sold 814, 505 resting. Worst line -$70 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): DET by 1-6, DET by 15+, GB by 15+.",
-          "DET by 15+: 212 behind. No crowd trade data yet.",
+          "DET by 15+: 212 behind. Crowd is quiet here (3 traded).",
           "GB by 15+: 150 behind. Price 8c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -110,7 +110,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
           "Paid balancing is running: plan -$75, worst line -$70; spent $0 of $50.",
-          "At 2:55pm CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -156,7 +155,7 @@
         "resting": 204.0,
         "target": null,
         "status": "lagging",
-        "price": 0.19
+        "price": 0.18
       },
       {
         "label": "GB by 1-6",
@@ -184,48 +183,9 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T19:54:23Z"
+    "ts": "2026-10-25T19:55:24Z"
   },
   "posts": [
-    {
-      "id": "1792801854552-80b938",
-      "ts": "2026-10-24T00:30:54Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +5 (+0.2% of bankroll)\nDET 7-14: +5 (+0.2% of bankroll)\nDET 15+: +5 (+0.2% of bankroll)\nGB 1-6: +5 (+0.2% of bankroll)\nGB 7-14: +5 (+0.2% of bankroll)\nGB 15+: -45 (-2.2% of bankroll)\nCollected $5 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 209\nDET 7-14: 0 / 204\nDET 15+: 0 / 196\nGB 1-6: 0 / 196\nGB 7-14: 0 / 182\nGB 15+: 50 / 118\nPosted book 1.18 | Sold avg 1.177 | Worst now +23 | Cash free $221\nAnchor age 0s | Last fill 31333s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792802112267-10ea8c",
-      "ts": "2026-10-24T00:35:12Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792803020035-f8de8f",
-      "ts": "2026-10-24T00:50:20Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792803927216-45746d",
-      "ts": "2026-10-24T01:05:27Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792804834110-58dbef",
       "ts": "2026-10-24T01:20:34Z",
@@ -3521,6 +3481,46 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792958124450-ed7e52",
+      "ts": "2026-10-25T19:55:10Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line -$70 beats the -$75 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1792958124450-a954e3",
+      "ts": "2026-10-25T19:55:10Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$70. Lagging: DET by 1-6, DET by 15+, GB by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792958124453-b575a0",
+      "ts": "2026-10-25T19:55:24Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792958124453-49e22a",
+      "ts": "2026-10-25T19:55:24Z",
+      "book": "W8-GBDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 3:25pm CT. Worst line -$70. Next: Even-done check, 2:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
