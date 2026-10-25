@@ -1,18 +1,18 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T22:35:45.328053Z",
+  "generated_at": "2026-10-25T22:37:04.488581Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:20pm CT. Worst line -$634, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
+    "checks_every_s": 60,
     "moves": [
       {
         "side": "KC by 1-6",
         "resting": "52 @ 26-28c",
-        "exposure": -633.75,
+        "exposure": -633.73,
         "exposure_text": "-$634",
         "move": "Stops adding (backstop)",
         "when": "holding until worst loss is back above -$300 (now -$634)",
@@ -22,21 +22,21 @@
       },
       {
         "side": "KC by 7-14",
-        "resting": "136 @ 13c",
-        "exposure": -466.0,
+        "resting": "135 @ 13c",
+        "exposure": -466.19,
         "exposure_text": "-$466",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:35pm CT, up to $100 in all",
         "at": "2026-10-25T23:35:00Z",
         "stuck": false,
         "also": "Also: price step",
-        "last_fill": "2026-10-25T22:30:27Z",
+        "last_fill": "2026-10-25T22:35:28Z",
         "lag_note": "Price 13c matches the crowd."
       },
       {
         "side": "SEA by 15+",
         "resting": "1,006 @ 15-20c",
-        "exposure": 267.91,
+        "exposure": 267.93,
         "exposure_text": "+$268",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:35pm CT, up to $100 in all",
@@ -49,7 +49,7 @@
       {
         "side": "SEA by 1-6",
         "resting": "886 @ 21-26c",
-        "exposure": 299.36,
+        "exposure": 299.38,
         "exposure_text": "+$299",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:35pm CT, up to $100 in all",
@@ -62,7 +62,7 @@
       {
         "side": "SEA by 7-14",
         "resting": "1,151 @ 18-23c",
-        "exposure": 363.35,
+        "exposure": 363.37,
         "exposure_text": "+$363",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:35pm CT, up to $100 in all",
@@ -75,7 +75,7 @@
       {
         "side": "KC by 15+",
         "resting": "1,033 @ 10-13c",
-        "exposure": 370.68,
+        "exposure": 370.7,
         "exposure_text": "+$371",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:35pm CT, up to $100 in all",
@@ -154,8 +154,8 @@
       },
       {
         "label": "KC by 7-14",
-        "held": 928.2,
-        "resting": 135.6,
+        "held": 928.5,
+        "resting": 135.4,
         "target": null,
         "status": "lagging",
         "price": 0.13
@@ -194,19 +194,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T22:35:36Z"
+    "ts": "2026-10-25T22:36:37Z"
   },
   "posts": [
-    {
-      "id": "1792801346183-3d4ca6",
-      "ts": "2026-10-24T00:22:26Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:36pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792802253602-b89abc",
       "ts": "2026-10-24T00:37:33Z",
@@ -3639,6 +3629,31 @@
             "side": "KC by 7-14",
             "price": 0.13,
             "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792967797048-acd246",
+      "ts": "2026-10-25T22:35:57Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: KC by 15+ x1 at 10c, KC by 7-14 x0 at 13c. Worst line -$634.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "KC by 15+",
+            "price": 0.1,
+            "qty": 1.0
+          },
+          {
+            "side": "KC by 7-14",
+            "price": 0.13,
+            "qty": 0.0
           }
         ]
       }
