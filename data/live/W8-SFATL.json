@@ -1,10 +1,10 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-25T19:05:40.960237Z",
+  "generated_at": "2026-10-25T19:07:14.084692Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$29.",
+    "headline": "In game (Ingame). Worst line -$4.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 1,752, 48 resting. Worst line -$29. Game 75% done. Bot is slow (checks every 21s, set for 5s)."
+          "In game (Ingame). Sold 2,005, 283 resting. Worst line -$4. Game 75% done. Bot is slow (checks every 19s, set for 5s)."
         ]
       },
       {
@@ -46,23 +46,23 @@
       {
         "label": "ATL by 1-6",
         "held": 360.7,
-        "resting": 0.0,
+        "resting": 59.1,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "ATL by 7-14",
-        "held": 307.8,
-        "resting": 15.0,
+        "held": 308.8,
+        "resting": 75.7,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "ATL by 15+",
-        "held": 0.0,
-        "resting": 2.0,
+        "held": 251.7,
+        "resting": 121.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SF by 7-14",
         "held": 312.0,
-        "resting": 31.0,
+        "resting": 26.9,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-25T19:05:01Z"
+    "ts": "2026-10-25T19:07:02Z"
   },
   "posts": [
-    {
-      "id": "1792796739388-9d0392",
-      "ts": "2026-10-23T23:05:39Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +73 (+3.6% of bankroll)\nATL 7-14: +73 (+3.6% of bankroll)\nATL 15+: +73 (+3.6% of bankroll)\nSF 1-6: +73 (+3.6% of bankroll)\nSF 7-14: -73 (-3.6% of bankroll)\nSF 15+: -174 (-8.6% of bankroll)\nCollected $73 premium ($0 fees) | Paper margin over fair $10 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 290\nATL 7-14: 0 / 265\nATL 15+: 0 / 250\nSF 1-6: 0 / 302\nSF 7-14: 146 / 97\nSF 15+: 247 / 5\nPosted book 1.18 | Sold avg 1.150 | Worst now +10 | Cash free $387\nAnchor age 0s | Last fill 20574s ago",
-      "severity": "info"
-    },
     {
       "id": "1792797314606-adb83d",
       "ts": "2026-10-23T23:15:14Z",
@@ -3586,6 +3577,46 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792955222889-c518c1",
+      "ts": "2026-10-25T19:06:34Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 265: ATL by 15+ x250 at 10c, ATL by 1-6 x12 at 37c, ATL by 7-14 x1 at 33c, +2 more. Worst line -$4.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 265.0,
+        "fills": [
+          {
+            "side": "ATL by 15+",
+            "price": 0.1,
+            "qty": 250.0
+          },
+          {
+            "side": "ATL by 1-6",
+            "price": 0.37,
+            "qty": 12.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.33,
+            "qty": 1.0
+          },
+          {
+            "side": "ATL by 15+",
+            "price": 0.12,
+            "qty": 1.0
+          },
+          {
+            "side": "ATL by 15+",
+            "price": 0.13,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4190,6 +4221,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on SF 1-6 @ 0.36 (maker)\n+12 on ATL 1-6 @ 0.34 (maker)\nworst outcome now -8\nheld 349/268/0/384/312/388\nIf the game ends... you make\nATL 1-6: -5 (-0.3% of bankroll)\nATL 7-14: +75 (+3.7% of bankroll)\nATL 15+: +343 (+16.9% of bankroll)\nSF 1-6: -41 (-2.0% of bankroll)\nSF 7-14: +31 (+1.5% of bankroll)\nSF 15+: -44 (-2.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792955164994-33113c",
+      "ts": "2026-10-25T19:06:04Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (hard clamp (end of Q3))\nIf the game ends... you make\nATL 1-6: -2 (-0.1% of bankroll)\nATL 7-14: +50 (+2.4% of bankroll)\nATL 15+: +358 (+17.7% of bankroll)\nSF 1-6: -26 (-1.3% of bankroll)\nSF 7-14: +46 (+2.3% of bankroll)\nSF 15+: -29 (-1.4% of bankroll)",
       "severity": "warn"
     }
   ]
