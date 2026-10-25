@@ -1,10 +1,10 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T20:18:57.312524Z",
+  "generated_at": "2026-10-25T20:20:19.637466Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$36.",
+    "headline": "In race (Ingame). Worst line +$45.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 69,817, 14,631 resting. Worst line +$36. Race 69% done. Floor protocol off."
+          "In race (Ingame). Sold 70,299, 14,631 resting. Worst line +$45. Race 70% done. Floor protocol off."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T20:18:35Z"
+    "ts": "2026-10-25T20:19:36Z"
   },
   "posts": [
-    {
-      "id": "1792946276293-a0114f",
-      "ts": "2026-10-25T16:37:45Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$92, worst line -$480. post gate Christopher Bell 85@0.05 -> 0 (race_anchor_peek; a full fill would tak",
-      "severity": "info",
-      "title": "Glide"
-    },
     {
       "id": "1792946316589-5cc133",
       "ts": "2026-10-25T16:37:44Z",
@@ -3988,27 +3978,34 @@
       "text": "Bot note: in-race floor anchor +45.28 (worst line +45.28; only moves up)",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792959616486-31a1ca",
+      "ts": "2026-10-25T20:18:46Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 582: Josh Berry x482 at 2c, Erik Jones x100 at 2c. Worst line +$45.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 582.0,
+        "fills": [
+          {
+            "side": "Josh Berry",
+            "price": 0.02,
+            "qty": 482.0
+          },
+          {
+            "side": "Erik Jones",
+            "price": 0.02,
+            "qty": 100.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792927136663-e815dc",
-      "ts": "2026-10-25T11:18:56Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -694.43 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792928436408-df0c26",
-      "ts": "2026-10-25T11:40:36Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Ryan Blaney has had no resting orders for at least 193 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792929054015-bf5e83",
       "ts": "2026-10-25T11:50:54Z",
@@ -4889,6 +4886,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Health: Austin Hill has room but 0 resting orders for 4109s",
+      "severity": "warn"
+    },
+    {
+      "id": "1792959577675-4dd72b",
+      "ts": "2026-10-25T20:19:37Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+82 on Michael McDowell @ 0.01 (taker)\n+100 on Erik Jones @ 0.02 (taker)\n+482 on Josh Berry @ 0.02 (maker)\nworst outcome now +45\nIf the race ends... you make\nDaniel Suarez: +45\nDenny Hamlin: +45\nChris Buescher: +45\nRyan Preece: +45\nAlex Bowman: +45\nKyle Larson: +46\nBrad Keselowski: +46\nJoey Logano: +46\nall others (32) >= +46",
+      "severity": "warn"
+    },
+    {
+      "id": "1792959613675-9d2830",
+      "ts": "2026-10-25T20:20:13Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 11 driver(s): Ryan Blaney (+91%), Kyle Larson (+77%), Bubba Wallace (+46%), Austin Dillon (+43%), Erik Jones (+43%), Josh Berry (+43%), Ryan Preece (+42%), Chase Briscoe (+34%), Tyler Reddick (+32%), Chase Elliott (+29%) and 1 more",
       "severity": "warn"
     }
   ]
