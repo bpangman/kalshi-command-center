@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T08:04:14.211675Z",
+  "generated_at": "2026-10-25T08:06:51.600627Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -75,11 +75,11 @@
         "exposure": 126.18,
         "exposure_text": "+$126",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 3:05am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-25T08:05:28Z",
+        "when": "if no fill by 3:16am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T08:16:23Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 15c if no fill by 3:05am CT."
+        "lag_note": "Steps to 15c if no fill by 3:16am CT."
       }
     ],
     "sections": [
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 15+.",
-          "NO by 7-14: 185 behind. Steps to 15c if no fill by 3:05am CT.",
+          "NO by 7-14: 185 behind. Steps to 15c if no fill by 3:16am CT.",
           "NO by 15+: 185 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -190,19 +190,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T08:03:42Z"
+    "ts": "2026-10-25T08:06:44Z"
   },
   "posts": [
-    {
-      "id": "1792726774737-dc3e18",
-      "ts": "2026-10-23T03:39:34Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792727682201-964f97",
       "ts": "2026-10-23T03:54:42Z",
@@ -3340,6 +3330,26 @@
       "text": "Row sold out: PIT by 1-6 at 23c (23 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1792915523628-9dbf08",
+      "ts": "2026-10-25T08:03:17Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 23: PIT by 1-6 x23 at 23c. Worst line -$59.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 23.0,
+        "fills": [
+          {
+            "side": "PIT by 1-6",
+            "price": 0.23,
+            "qty": 23.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3557,6 +3567,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+56 on PIT 1-6 @ 0.23 (maker)\nworst outcome now -60\nheld 132/0/0/162/185/132\nIf the game ends... you make\nNO 1-6: -11 (-0.4% of bankroll)\nNO 7-14: +121 (+4.8% of bankroll)\nNO 15+: +121 (+4.8% of bankroll)\nPIT 1-6: -41 (-1.6% of bankroll)\nPIT 7-14: -64 (-2.5% of bankroll)\nPIT 15+: -11 (-0.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792915460358-24fd44",
+      "ts": "2026-10-25T08:04:20Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+23 on PIT 1-6 @ 0.23 (maker)\nworst outcome now -60\nheld 132/0/0/185/185/132\nIf the game ends... you make\nNO 1-6: -6 (-0.2% of bankroll)\nNO 7-14: +126 (+5.0% of bankroll)\nNO 15+: +126 (+5.0% of bankroll)\nPIT 1-6: -58 (-2.3% of bankroll)\nPIT 7-14: -59 (-2.3% of bankroll)\nPIT 15+: -6 (-0.2% of bankroll)",
       "severity": "warn"
     }
   ]
