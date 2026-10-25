@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T16:45:01.684768Z",
+  "generated_at": "2026-10-25T16:46:35.675654Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -16,7 +16,7 @@
         "exposure_text": "-$474",
         "move": "Next wave up to 1,500 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-25T16:44:59Z",
+        "at": "2026-10-25T16:45:59Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-25T11:49:02Z"
@@ -40,7 +40,7 @@
         "exposure_text": "-$451",
         "move": "Next wave up to 1,500 contracts",
         "when": "next bot check (142% of the offered has sold)",
-        "at": "2026-10-25T16:44:59Z",
+        "at": "2026-10-25T16:45:59Z",
         "stuck": false,
         "also": "Also: re-post ladder",
         "last_fill": "2026-10-25T14:16:40Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 50,488, 52,782 resting. Worst line -$474 (limit now -$72). Bot is slow (checks every 52s, set for 30s)."
+          "Risk glide, green flag 1:00pm CT. Sold 50,488, 52,782 resting. Worst line -$474 (limit now -$67). Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -132,7 +132,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano, Ty Gibbs, Tyler Reddick.",
           "Austin Cindric: 2,526 behind. Price 5c matches the crowd.",
-          "Brad Keselowski: 310 behind. Steps to 4c at the next check.",
+          "Brad Keselowski: 310 behind. Steps to 4c if no fill by 11:50am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$72, worst line -$474, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$67, worst line -$474, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -214,29 +214,9 @@
     ],
     "moves_note": "8 more drivers with small exposure are not shown. 23 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-25T16:44:59Z"
+    "ts": "2026-10-25T16:45:59Z"
   },
   "posts": [
-    {
-      "id": "1792896033796-ab7edc",
-      "ts": "2026-10-25T02:38:33Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 288: Austin Hill x288 at 3c. Worst line -$590.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 288.0,
-        "fills": [
-          {
-            "side": "Austin Hill",
-            "price": 0.03,
-            "qty": 288.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792896033804-c07971",
       "ts": "2026-10-25T02:40:33Z",
@@ -4036,18 +4016,24 @@
       "text": "Risk glide for the green flag 1:00pm CT. Worst line -$474, final target +$150. Next: Glide target date, 1:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1792946719414-478424",
+      "ts": "2026-10-25T16:45:06Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 115 min, added 204 at 4c (was 5c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.05,
+        "to": 0.04
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792894381874-75c3f3",
-      "ts": "2026-10-25T02:13:01Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+184 on Michael McDowell @ 0.02 (maker)\n+441 on Alex Bowman @ 0.02 (maker)\n+130 on Austin Dillon @ 0.02 (maker)\nworst outcome now -601\nIf the race ends... you make\nJoey Logano: -601\nCarson Hocevar: -593\nDenny Hamlin: -557\nChase Briscoe: -557\nRyan Preece: -555\nConnor Zilisch: -478\nRyan Blaney: -468\nChristopher Bell: -460\nall others (32) >= -448",
-      "severity": "warn"
-    },
     {
       "id": "1792895111801-104018",
       "ts": "2026-10-25T02:25:11Z",
@@ -4938,6 +4924,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): worst -479.86 vs floor -363.40. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792946767112-48cce0",
+      "ts": "2026-10-25T16:46:07Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Ryan Blaney has had no resting orders for at least 499 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
