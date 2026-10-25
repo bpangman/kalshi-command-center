@@ -1,6 +1,6 @@
 {
   "key": "W8-LARLV",
-  "generated_at": "2026-10-25T22:20:39.568743Z",
+  "generated_at": "2026-10-25T22:22:02.329691Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,123, 573 resting. Worst line -$69. Game 58% done. Bot is slow (checks every 27s, set for 5s)."
+          "In game (Ingame). Sold 2,123, 679 resting. Worst line -$69. Game 58% done. Bot is slow (checks every 17s, set for 5s)."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "LAR by 1-6",
         "held": 402.7,
-        "resting": 35.0,
+        "resting": 28.5,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "LV by 1-6",
         "held": 373.9,
-        "resting": 48.9,
+        "resting": 93.6,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "LV by 7-14",
         "held": 227.0,
-        "resting": 209.0,
+        "resting": 242.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "LV by 15+",
         "held": 196.0,
-        "resting": 263.0,
+        "resting": 298.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-LARLV",
-    "ts": "2026-10-25T22:20:29Z"
+    "ts": "2026-10-25T22:21:29Z"
   },
   "posts": [
-    {
-      "id": "1792847482724-8bc5c6",
-      "ts": "2026-10-24T13:11:22Z",
-      "book": "W8-LARLV",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,104 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792848388714-59ea56",
       "ts": "2026-10-24T13:26:28Z",
@@ -3662,6 +3652,26 @@
       "text": "Bot note: endgame: active (favorite LAR 15+ at 0.72); likely ['LAR 15+']; endgame: KXNFLWINMARGIN-26OCT25LARLV-LAR15PLUS",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792966909978-db5781",
+      "ts": "2026-10-25T22:19:45Z",
+      "book": "W8-LARLV",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 42: LAR by 1-6 x42 at 8c. Worst line -$69.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 42.0,
+        "fills": [
+          {
+            "side": "LAR by 1-6",
+            "price": 0.08,
+            "qty": 42.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4059,6 +4069,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792966848936-cd1a68",
+      "ts": "2026-10-25T22:20:48Z",
+      "book": "W8-LARLV",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W8-LARLV - Los Angeles R by 15 or more has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792966868644-71ef1a",
+      "ts": "2026-10-25T22:21:08Z",
+      "book": "W8-LARLV",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+55 on LAR 7-14 @ 0.18 (maker)\n+23 on LV 1-6 @ 0.04 (maker)\n+42 on LAR 1-6 @ 0.08 (maker)\nworst outcome now -24\nheld 374/227/196/403/453/470\nIf the game ends... you make\nLV 1-6: +27 (+1.3% of bankroll)\nLV 7-14: +174 (+8.3% of bankroll)\nLV 15+: +205 (+9.8% of bankroll)\nLAR 1-6: -2 (-0.1% of bankroll)\nLAR 7-14: -52 (-2.5% of bankroll)\nLAR 15+: -69 (-3.3% of bankroll)",
       "severity": "warn"
     }
   ]
