@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T14:18:00.218306Z",
+  "generated_at": "2026-10-25T14:19:32.621641Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -120,7 +120,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 47,234, 54,214 resting. Worst line -$605 (limit now -$500). Bot is slow (checks every 51s, set for 30s)."
+          "Risk glide, green flag 1:00pm CT. Sold 47,234, 54,214 resting. Worst line -$605 (limit now -$497). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -145,7 +145,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Carson Hocevar, Chase Briscoe, Daniel Suarez, Ryan Blaney, Ty Gibbs: lines under -$550, no adding until above -$500.",
-          "Glide is running: limit -$500, worst line -$605, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$497, worst line -$605, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -210,19 +210,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-25T14:17:50Z"
+    "ts": "2026-10-25T14:18:51Z"
   },
   "posts": [
-    {
-      "id": "1792870056485-ec9cd5",
-      "ts": "2026-10-24T19:27:25Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Backstop released on Carson Hocevar: line is back to -$499. It can add again.",
-      "severity": "info",
-      "title": "Backstop"
-    },
     {
       "id": "1792870096867-49fa1b",
       "ts": "2026-10-24T19:28:16Z",
@@ -3960,27 +3950,34 @@
       "text": "Risk glide for the green flag 1:00pm CT. Worst line -$605, final target +$150. Next: Glide selling opens, 11:30am CT.",
       "severity": "info",
       "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1792937931140-cab14c",
+      "ts": "2026-10-25T14:16:40Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,206: Ty Gibbs x1,190 at 3c, Ty Gibbs x16 at 4c. Worst line -$605.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1206.0,
+        "fills": [
+          {
+            "side": "Ty Gibbs",
+            "price": 0.03,
+            "qty": 1190.0
+          },
+          {
+            "side": "Ty Gibbs",
+            "price": 0.04,
+            "qty": 16.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792883696885-039a60",
-      "ts": "2026-10-24T23:14:56Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+196 on Chase Elliott @ 0.05 (maker)\n+42 on Kyle Larson @ 0.05 (maker)\n+6 on Austin Dillon @ 0.02 (maker)\nworst outcome now -670\nIf the race ends... you make\nDenny Hamlin: -670\nChase Briscoe: -670\nRyan Preece: -668\nRyan Blaney: -581\nChristopher Bell: -574\nBrad Keselowski: -561\nCarson Hocevar: -470\nDaniel Suarez: -467\nall others (32) >= -320",
-      "severity": "warn"
-    },
-    {
-      "id": "1792883869944-402fb9",
-      "ts": "2026-10-24T23:17:49Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Brad Keselowski has had no resting orders for at least 2530 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792885332010-ef5781",
       "ts": "2026-10-24T23:42:12Z",
@@ -4861,6 +4858,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- TAL-CUP - Carson Hocevar has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 132 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792937884424-fc8024",
+      "ts": "2026-10-25T14:18:04Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=21549. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792937884425-6e91fc",
+      "ts": "2026-10-25T14:18:04Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=21549. Check the command center.",
       "severity": "warn"
     }
   ]
