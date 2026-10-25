@@ -1,6 +1,6 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T16:59:53.485024Z",
+  "generated_at": "2026-10-25T17:01:34.016942Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -53,7 +53,7 @@
         "exposure_text": "+$190",
         "move": "Step price down 1c (24c to 23c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T16:59:05Z",
+        "at": "2026-10-25T17:01:06Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:36:59Z",
@@ -77,11 +77,11 @@
         "exposure": 198.09,
         "exposure_text": "+$198",
         "move": "Hold price at 22c",
-        "when": "needs 50+ crowd trades under 22c (now 4)",
+        "when": "needs 50+ crowd trades under 22c (now 8)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
-        "lag_note": "Crowd is quiet here (4 traded)."
+        "lag_note": "Crowd is quiet here (8 traded)."
       }
     ],
     "sections": [
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): KC by 7-14, KC by 15+, SEA by 1-6, SEA by 7-14, SEA by 15+.",
-          "SEA by 7-14: 550 behind. Crowd is quiet here (4 traded).",
+          "SEA by 7-14: 550 behind. Crowd is quiet here (8 traded).",
           "SEA by 15+: 550 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T16:59:05Z"
+    "ts": "2026-10-25T17:01:06Z"
   },
   "posts": [
     {
@@ -3300,15 +3300,6 @@
   ],
   "audits": [
     {
-      "id": "1792867592359-7a0c4e",
-      "ts": "2026-10-24T18:46:32Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): worst -420.24 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1792869462119-3dc1d1",
       "ts": "2026-10-24T19:17:42Z",
       "book": "W8-KCSEA",
@@ -4198,6 +4189,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-KCSEA): worst -351.91 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792947682946-9d2805",
+      "ts": "2026-10-25T17:01:22Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-KCSEA): held worst -351.91 (backstop -300) or lagging gap 550 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
