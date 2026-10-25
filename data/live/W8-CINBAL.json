@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T15:30:20.693349Z",
+  "generated_at": "2026-10-25T15:31:57.488158Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -65,12 +65,12 @@
         "exposure": 45.4,
         "exposure_text": "+$45",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 10:31am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T15:31:50Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:15am CT",
         "last_fill": "2026-10-25T13:28:37Z",
-        "lag_note": "Steps to 15c if no fill by 10:31am CT."
+        "lag_note": "Steps to 15c at the next check."
       },
       {
         "side": "BAL by 15+",
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 15+, CIN by 1-6, CIN by 7-14, CIN by 15+.",
           "BAL by 15+: 106 behind. No crowd trade data yet.",
-          "CIN by 15+: 100 behind. Steps to 15c if no fill by 10:31am CT.",
+          "CIN by 15+: 100 behind. Steps to 15c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -193,29 +193,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T15:30:04Z"
+    "ts": "2026-10-25T15:31:04Z"
   },
   "posts": [
-    {
-      "id": "1792763435994-58426f",
-      "ts": "2026-10-23T13:50:35Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792764343747-008ca0",
-      "ts": "2026-10-23T14:05:43Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792765250456-835948",
       "ts": "2026-10-23T14:20:50Z",
@@ -3376,6 +3356,25 @@
         "contracts": 54.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1792942224229-958256",
+      "ts": "2026-10-25T15:30:21Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$55. Lagging: BAL by 1-6, BAL by 15+, CIN by 1-6 +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792942305221-2ede7a",
+      "ts": "2026-10-25T15:31:45Z",
+      "book": "W8-CINBAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBAL 1-6: -1 (-0.0% of bankroll)\nBAL 7-14: -55 (-2.6% of bankroll)\nBAL 15+: +51 (+2.4% of bankroll)\nCIN 1-6: +12 (+0.6% of bankroll)\nCIN 7-14: -39 (-1.9% of bankroll)\nCIN 15+: +45 (+2.2% of bankroll)\nCollected $51 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nEvent: BAL 7-14: BAL 0-0, Q0 0:00; CIN 7-14: CIN 0-0, Q0 0:00\nheld / resting\nBAL 1-6: 52 / 130\nBAL 7-14: 106 / 87\nBAL 15+: 0 / 173\nCIN 1-6: 39 / 143\nCIN 7-14: 90 / 30\nCIN 15+: 6 / 171\nPosted book 1.09 | Sold avg 1.001 | Worst now -14 | Cash free $221\nAnchor age 0s | Last fill 2963s ago",
+      "severity": "info"
     }
   ],
   "audits": [
