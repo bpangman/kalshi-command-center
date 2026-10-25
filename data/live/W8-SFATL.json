@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-25T19:38:34.714485Z",
+  "generated_at": "2026-10-25T19:40:07.491809Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,155, 106 resting. Worst line +$35. Game 84% done. Bot is slow (checks every 21s, set for 5s)."
+          "In game (Ingame). Sold 2,155, 93 resting. Worst line +$35. Game 85% done. Bot is slow (checks every 20s, set for 5s)."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "ATL by 1-6",
         "held": 360.7,
-        "resting": 4.1,
+        "resting": 6.1,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "ATL by 7-14",
         "held": 364.6,
-        "resting": 2.0,
+        "resting": 6.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "ATL by 15+",
         "held": 345.4,
-        "resting": 40.6,
+        "resting": 20.4,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SF by 7-14",
         "held": 312.0,
-        "resting": 59.0,
+        "resting": 60.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-25T19:38:15Z"
+    "ts": "2026-10-25T19:39:16Z"
   },
   "posts": [
-    {
-      "id": "1792803665374-8bdb77",
-      "ts": "2026-10-24T01:01:05Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,209 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792803993822-0ff100",
       "ts": "2026-10-24T01:06:33Z",
@@ -3701,6 +3691,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792957156330-d160cb",
+      "ts": "2026-10-25T19:37:13Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: ATL by 7-14 x1 at 38c. Worst line +$35.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "ATL by 7-14",
+            "price": 0.38,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4359,6 +4369,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1792957134399-c3fae4",
+      "ts": "2026-10-25T19:38:54Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
