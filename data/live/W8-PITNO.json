@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T12:10:22.467409Z",
+  "generated_at": "2026-10-25T12:13:11.026270Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -73,29 +73,29 @@
       },
       {
         "side": "NO by 7-14",
-        "resting": "413 @ 16-23c",
+        "resting": "451 @ 15-18c",
         "exposure": 221.0,
         "exposure_text": "+$221",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:45am CT, up to $100 in all",
-        "at": "2026-10-25T12:45:00Z",
+        "move": "Step price down 1c (15c to 14c)",
+        "when": "if no fill by 7:19am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T12:19:30Z",
         "stuck": false,
-        "also": "Also: price step",
-        "lag_note": "No crowd trade data yet."
+        "also": "Also: paid balancing starts 7:45am CT",
+        "lag_note": "Steps to 14c if no fill by 7:19am CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 8:30am CT. Sold 1,050, 1,674 resting. Worst line -$346 (goal -$75)."
+          "Pregame build, kickoff 8:30am CT. Sold 1,050, 1,712 resting. Worst line -$346 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 1-6, PIT by 15+.",
-          "NO by 7-14: 567 behind. No crowd trade data yet.",
+          "NO by 7-14: 567 behind. Steps to 14c if no fill by 7:19am CT.",
           "NO by 15+: 567 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -153,10 +153,10 @@
       {
         "label": "NO by 7-14",
         "held": 0.0,
-        "resting": 413.0,
+        "resting": 451.0,
         "target": null,
         "status": "lagging",
-        "price": 0.16
+        "price": 0.15
       },
       {
         "label": "NO by 15+",
@@ -192,19 +192,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T12:09:32Z"
+    "ts": "2026-10-25T12:12:33Z"
   },
   "posts": [
-    {
-      "id": "1792758517213-341c5f",
-      "ts": "2026-10-23T12:28:37Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792759424711-a195b5",
       "ts": "2026-10-23T12:43:44Z",
@@ -3406,6 +3396,20 @@
         "side": "NO by 7-14",
         "from": 0.16,
         "to": 0.15
+      }
+    },
+    {
+      "id": "1792930333658-fc0b74",
+      "ts": "2026-10-25T12:09:54Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 38 (rung 3 allotment): NO by 7-14 x38 at 18c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 38.0,
+        "rows": 1
       }
     }
   ],
