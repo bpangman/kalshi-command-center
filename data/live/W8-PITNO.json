@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T04:05:55.155239Z",
+  "generated_at": "2026-10-25T04:08:43.669463Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,7 +22,7 @@
       },
       {
         "side": "NO by 1-6",
-        "resting": "477 @ 19-22c",
+        "resting": "150 @ 19-22c",
         "exposure": -18.25,
         "exposure_text": "-$18",
         "move": "Hold price at 19c",
@@ -75,18 +75,18 @@
         "exposure": 30.78,
         "exposure_text": "+$31",
         "move": "Step price down 1c (23c to 22c)",
-        "when": "if no fill by 11:09pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T04:09:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Steps to 22c if no fill by 11:09pm CT."
+        "lag_note": "Steps to 22c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 181, 2,689 resting. Worst line -$101 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 181, 2,361 resting. Worst line -$101 (goal -$75)."
         ]
       },
       {
@@ -143,10 +143,10 @@
       {
         "label": "NO by 1-6",
         "held": 49.0,
-        "resting": 478.0,
+        "resting": 150.0,
         "target": null,
         "status": "lagging",
-        "price": 0.17
+        "price": 0.19
       },
       {
         "label": "NO by 7-14",
@@ -190,19 +190,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T04:05:53Z"
+    "ts": "2026-10-25T04:07:54Z"
   },
   "posts": [
-    {
-      "id": "1792690344733-db2d0a",
-      "ts": "2026-10-22T17:32:24Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792691250680-ae01db",
       "ts": "2026-10-22T17:47:30Z",
@@ -3169,6 +3159,20 @@
       "text": "PIT by 7-14 price not lowered: a full fill would push the worst line to -$101.",
       "severity": "info",
       "title": "Price hold"
+    },
+    {
+      "id": "1792901233751-203413",
+      "ts": "2026-10-25T04:05:12Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 82 (FAIR-ROSE rung 6 0.17 -> 0.19 ): NO by 1-6 x82 at 19c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 82.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
