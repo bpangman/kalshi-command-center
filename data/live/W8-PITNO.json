@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T04:30:28.607629Z",
+  "generated_at": "2026-10-25T04:33:09.793906Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -63,11 +63,11 @@
         "exposure": 30.78,
         "exposure_text": "+$31",
         "move": "Step price down 1c (27c to 26c)",
-        "when": "if no fill by 11:33pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T04:33:28Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Steps to 26c if no fill by 11:33pm CT."
+        "lag_note": "Steps to 26c at the next check."
       },
       {
         "side": "PIT by 7-14",
@@ -75,11 +75,11 @@
         "exposure": 30.78,
         "exposure_text": "+$31",
         "move": "Step price down 1c (23c to 22c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T04:30:20Z",
+        "when": "if no fill by 11:41pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T04:41:06Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 7:45am CT",
-        "lag_note": "Steps to 22c at the next check."
+        "lag_note": "Steps to 22c if no fill by 11:41pm CT."
       }
     ],
     "sections": [
@@ -190,19 +190,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T04:30:04Z"
+    "ts": "2026-10-25T04:33:05Z"
   },
   "posts": [
-    {
-      "id": "1792692156773-7a9f7e",
-      "ts": "2026-10-22T18:02:36Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792693063288-c8e8fc",
       "ts": "2026-10-22T18:17:43Z",
@@ -3177,6 +3167,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nNO 1-6: -18 (-0.7% of bankroll)\nNO 7-14: +31 (+1.2% of bankroll)\nNO 15+: +31 (+1.2% of bankroll)\nPIT 1-6: +31 (+1.2% of bankroll)\nPIT 7-14: +31 (+1.2% of bankroll)\nPIT 15+: -101 (-4.0% of bankroll)\nCollected $31 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nNO 1-6: 49 / 150\nNO 7-14: 0 / 413\nNO 15+: 0 / 474\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 132 / 346\nPosted book 1.23 | Sold avg 1.151 | Worst now +29 | Cash free $386\nAnchor age 0s | Last fill 7595s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792902725199-56ef9c",
+      "ts": "2026-10-25T04:32:05Z",
+      "book": "W8-PITNO",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,361 resting. Next: Paid balancing starts, Sun 7:45am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
