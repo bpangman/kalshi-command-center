@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T15:45:11.988647Z",
+  "generated_at": "2026-10-25T15:46:45.322064Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 47,812, 53,606 resting. Worst line -$579 (limit now -$246)."
+          "Risk glide, green flag 1:00pm CT. Sold 47,812, 53,606 resting. Worst line -$579 (limit now -$240)."
         ]
       },
       {
@@ -131,7 +131,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Cindric, Brad Keselowski, Joey Logano, Tyler Reddick.",
           "Austin Cindric: 2,526 behind. Price 5c matches the crowd.",
-          "Brad Keselowski: 310 behind. Steps to 4c at the next check.",
+          "Brad Keselowski: 310 behind. Steps to 4c if no fill by 10:50am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -148,7 +148,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Carson Hocevar, Chase Briscoe, Ryan Blaney, Ty Gibbs: lines under -$550, no adding until above -$500.",
-          "Glide is running: limit -$246, worst line -$579, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$240, worst line -$579, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -213,32 +213,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-25T15:44:30Z"
+    "ts": "2026-10-25T15:46:31Z"
   },
   "posts": [
-    {
-      "id": "1792882389933-55e840",
-      "ts": "2026-10-24T22:52:03Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 1,035 (race anchor): Connor Zilisch x646 at 2c, Austin Hill x288 at 3c, +1 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 1035.0,
-        "rows": 3
-      }
-    },
-    {
-      "id": "1792882419069-bf00ef",
-      "ts": "2026-10-24T22:53:39Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "Cup book is churning: 0 cancel-and-repost at the same price and 3 trims of smaller sides in 30 min. Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1792882833465-52bb76",
       "ts": "2026-10-24T22:58:20Z",
@@ -3980,6 +3957,41 @@
       "text": "Risk glide: limit -$250, worst line -$579. post gate Christopher Bell 85@0.05 -> 0 (race_anchor_peek; a full fill would tak",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1792943151481-b8b57a",
+      "ts": "2026-10-25T15:45:49Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on Brad Keselowski: no fill for 55 min, added 204 at 4c (was 5c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "Brad Keselowski",
+        "from": 0.05,
+        "to": 0.04
+      }
+    },
+    {
+      "id": "1792943151483-0fd868",
+      "ts": "2026-10-25T15:43:34Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 36: Zane Smith x36 at 2c. Worst line -$579.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 36.0,
+        "fills": [
+          {
+            "side": "Zane Smith",
+            "price": 0.02,
+            "qty": 36.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
