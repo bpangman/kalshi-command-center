@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T12:51:59.001270Z",
+  "generated_at": "2026-10-25T12:53:30.464109Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame balancing",
@@ -26,12 +26,12 @@
         "exposure": 41.11,
         "exposure_text": "+$41",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 7:53am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T12:53:37Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-25T08:02:45Z",
-        "lag_note": "Steps to 23c if no fill by 7:53am CT."
+        "lag_note": "Steps to 23c at the next check."
       },
       {
         "side": "NO by 1-6",
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$291 (now -$341).",
+          "Gate closed: batches wait for the worst line to reach -$284 (now -$341).",
           "Batches used: 3 (max 3 per side)."
         ]
       },
@@ -113,7 +113,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$291, worst line -$341; spent $3 of $100.",
+          "Paid balancing is running: plan -$284, worst line -$341; spent $3 of $100.",
           "At 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
@@ -188,19 +188,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T12:51:51Z"
+    "ts": "2026-10-25T12:52:51Z"
   },
   "posts": [
-    {
-      "id": "1792770307620-9af7f3",
-      "ts": "2026-10-23T15:45:07Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792771215410-450c3a",
       "ts": "2026-10-23T16:00:15Z",
@@ -3436,6 +3426,31 @@
       "text": "Balancing: sold 50 PIT by 15+ at the bid 13c. Worst line -$344. Cost $1.80.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1792932751660-7fc3f6",
+      "ts": "2026-10-25T12:50:26Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 37: NO by 15+ x36 at 8c, PIT by 15+ x1 at 13c. Worst line -$341.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 37.0,
+        "fills": [
+          {
+            "side": "NO by 15+",
+            "price": 0.08,
+            "qty": 36.0
+          },
+          {
+            "side": "PIT by 15+",
+            "price": 0.13,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
