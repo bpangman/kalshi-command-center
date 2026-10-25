@@ -1,52 +1,56 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T10:06:18.562505Z",
+  "generated_at": "2026-10-25T10:08:51.461467Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 8:30am CT. Worst line -$53, goal -$75.",
+    "headline": "Building toward kickoff 8:30am CT. Worst line -$346, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "PIT by 7-14",
-        "resting": "382 @ 23-25c",
-        "exposure": -53.31,
-        "exposure_text": "-$53",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at 7:45am CT",
+        "resting": "none",
+        "exposure": -346.0,
+        "exposure_text": "-$346",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$150 (now -$346)",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-25T06:32:31Z"
+        "stuck": false,
+        "last_fill": "2026-10-25T10:07:18Z"
       },
       {
         "side": "PIT by 1-6",
         "resting": "296 @ 27-28c",
-        "exposure": -52.82,
-        "exposure_text": "-$53",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:45am CT, up to $100 in all",
-        "at": "2026-10-25T12:45:00Z",
-        "stuck": true,
-        "last_fill": "2026-10-25T08:02:45Z"
+        "exposure": 36.49,
+        "exposure_text": "+$36",
+        "move": "Hold price at 27c",
+        "when": "needs 50+ crowd trades under 27c (now 48)",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 7:45am CT",
+        "last_fill": "2026-10-25T08:02:45Z",
+        "lag_note": "Crowd is quiet here (48 traded)."
       },
       {
         "side": "NO by 1-6",
-        "resting": "46 @ 18-20c",
-        "exposure": -34.84,
-        "exposure_text": "-$35",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:45am CT, up to $100 in all",
-        "at": "2026-10-25T12:45:00Z",
+        "resting": "77 @ 17-20c",
+        "exposure": 54.47,
+        "exposure_text": "+$54",
+        "move": "Hold price at 17c",
+        "when": "needs 50+ crowd trades under 17c (now 0)",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-10-25T10:02:49Z"
+        "also": "Also: paid balancing starts 7:45am CT",
+        "last_fill": "2026-10-25T10:02:49Z",
+        "lag_note": "Crowd is quiet here (0 traded)."
       },
       {
         "side": "PIT by 15+",
         "resting": "378 @ 16-23c",
-        "exposure": -0.31,
-        "exposure_text": "$0",
+        "exposure": 89.0,
+        "exposure_text": "+$89",
         "move": "Hold price at 16c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -58,8 +62,8 @@
       {
         "side": "NO by 15+",
         "resting": "510 @ 10-19c",
-        "exposure": 131.69,
-        "exposure_text": "+$132",
+        "exposure": 221.0,
+        "exposure_text": "+$221",
         "move": "Hold price at 10c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -70,8 +74,8 @@
       {
         "side": "NO by 7-14",
         "resting": "413 @ 16-23c",
-        "exposure": 131.69,
-        "exposure_text": "+$132",
+        "exposure": 221.0,
+        "exposure_text": "+$221",
         "move": "Hold price at 16c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -84,15 +88,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 8:30am CT. Sold 668, 2,025 resting. Worst line -$53 (goal -$75)."
+          "Pregame build, kickoff 8:30am CT. Sold 1,050, 1,674 resting. Worst line -$346 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): NO by 7-14, NO by 15+, PIT by 15+.",
-          "NO by 7-14: 185 behind. No crowd trade data yet.",
-          "NO by 15+: 185 behind. No crowd trade data yet.",
+          "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 1-6, PIT by 15+.",
+          "NO by 7-14: 567 behind. No crowd trade data yet.",
+          "NO by 15+: 567 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -100,14 +104,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$53 is better than -$200.",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$346).",
           "Batches used: 3 (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
+          "Backstop ON: PIT by 7-14 stopped adding until worst line is above -$150 (now -$346).",
           "Paid balancing starts 7:45am CT: worst line to -$75 by 8:20am CT, up to $100.",
           "At 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 8:30am CT: the in-game engine takes over."
@@ -141,10 +145,10 @@
       {
         "label": "NO by 1-6",
         "held": 166.5,
-        "resting": 46.0,
+        "resting": 77.0,
         "target": null,
-        "status": "even",
-        "price": 0.18
+        "status": "lagging",
+        "price": 0.17
       },
       {
         "label": "NO by 7-14",
@@ -167,16 +171,16 @@
         "held": 184.5,
         "resting": 296.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.27
       },
       {
         "label": "PIT by 7-14",
-        "held": 185.0,
-        "resting": 382.0,
+        "held": 567.0,
+        "resting": 0.0,
         "target": null,
-        "status": "even",
-        "price": 0.23
+        "status": "heavy",
+        "price": null
       },
       {
         "label": "PIT by 15+",
@@ -188,58 +192,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T10:05:36Z"
+    "ts": "2026-10-25T10:08:37Z"
   },
   "posts": [
-    {
-      "id": "1792738565967-7d11a6",
-      "ts": "2026-10-23T06:56:05Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792738983050-635a24",
-      "ts": "2026-10-23T07:03:03Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNO 1-6: +0 (+0.0% of bankroll)\nNO 7-14: +0 (+0.0% of bankroll)\nNO 15+: +0 (+0.0% of bankroll)\nPIT 1-6: +0 (+0.0% of bankroll)\nPIT 7-14: +0 (+0.0% of bankroll)\nPIT 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 489\nNO 7-14: 0 / 413\nNO 15+: 0 / 440\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 0 / 440\nPosted book 1.26 | Sold avg 1.262 | Worst now +98 | Cash free $386\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792739472932-1eeaa9",
-      "ts": "2026-10-23T07:11:12Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792740380502-15e38f",
-      "ts": "2026-10-23T07:26:20Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792741287319-35dcfe",
-      "ts": "2026-10-23T07:41:27Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792742194599-4f1851",
       "ts": "2026-10-23T07:56:34Z",
@@ -3370,6 +3325,56 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792922857345-efefd5",
+      "ts": "2026-10-25T10:07:23Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$346 is under -$150. PIT by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792922857346-5c80c7",
+      "ts": "2026-10-25T10:07:24Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: PIT by 7-14 at 23c (275 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792922857346-a0aac8",
+      "ts": "2026-10-25T10:07:24Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: PIT by 7-14 at 24c (69 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792922857346-955c29",
+      "ts": "2026-10-25T10:07:24Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: PIT by 7-14 at 25c (38 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792922857349-4775c0",
+      "ts": "2026-10-25T10:07:37Z",
+      "book": "W8-PITNO",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 8:30am CT. Worst line -$346, goal -$75. Next: Paid balancing starts, 7:45am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
