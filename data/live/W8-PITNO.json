@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T08:56:18.338678Z",
+  "generated_at": "2026-10-25T08:59:19.361665Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -75,11 +75,11 @@
         "exposure": 126.18,
         "exposure_text": "+$126",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 3:59am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T08:59:40Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 15c if no fill by 3:59am CT."
+        "lag_note": "Steps to 15c at the next check."
       }
     ],
     "sections": [
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 15+.",
-          "NO by 7-14: 185 behind. Steps to 15c if no fill by 3:59am CT.",
+          "NO by 7-14: 185 behind. Steps to 15c at the next check.",
           "NO by 15+: 185 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -190,19 +190,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T08:56:07Z"
+    "ts": "2026-10-25T08:59:08Z"
   },
   "posts": [
-    {
-      "id": "1792730403306-17bbf8",
-      "ts": "2026-10-23T04:40:03Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:46am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792731310268-794a0e",
       "ts": "2026-10-23T04:55:10Z",
@@ -3348,6 +3338,16 @@
     {
       "id": "1792917781131-3ddbee",
       "ts": "2026-10-25T08:43:01Z",
+      "book": "W8-PITNO",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,061 resting. Next: Paid balancing starts, 7:45am CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1792918688472-0773df",
+      "ts": "2026-10-25T08:58:08Z",
       "book": "W8-PITNO",
       "kind": "status",
       "source": "narrator",
