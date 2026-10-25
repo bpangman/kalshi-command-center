@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T13:08:56.996290Z",
+  "generated_at": "2026-10-25T13:10:36.580085Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -35,7 +35,7 @@
       },
       {
         "side": "PIT by 1-6",
-        "resting": "76 @ 22-23c",
+        "resting": "48 @ 22-23c",
         "exposure": 42.87,
         "exposure_text": "+$43",
         "move": "Hold price at 22c",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 1,239, 1,312 resting. Worst line -$320 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 1,239, 1,284 resting. Worst line -$320 (goal -$75)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$168 (now -$320).",
+          "Gate closed: batches wait for the worst line to reach -$152 (now -$320).",
           "Batches used: 3 (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$168, worst line -$320; spent $10 of $100.",
+          "Paid balancing is running: plan -$152, worst line -$320; spent $10 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -160,10 +160,10 @@
       {
         "label": "PIT by 1-6",
         "held": 204.5,
-        "resting": 76.0,
+        "resting": 48.0,
         "target": null,
         "status": "lagging",
-        "price": 0.23
+        "price": 0.22
       },
       {
         "label": "PIT by 7-14",
@@ -183,28 +183,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T13:07:58Z"
+    "ts": "2026-10-25T13:09:59Z"
   },
   "posts": [
-    {
-      "id": "1792782098370-11b99a",
-      "ts": "2026-10-23T19:01:38Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792782635894-d751dd",
-      "ts": "2026-10-23T19:10:35Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNO 1-6: +0 (+0.0% of bankroll)\nNO 7-14: +0 (+0.0% of bankroll)\nNO 15+: +0 (+0.0% of bankroll)\nPIT 1-6: +0 (+0.0% of bankroll)\nPIT 7-14: +0 (+0.0% of bankroll)\nPIT 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 489\nNO 7-14: 0 / 413\nNO 15+: 0 / 440\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 0 / 440\nPosted book 1.26 | Sold avg 1.262 | Worst now +98 | Cash free $386\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792783005467-2d4e52",
       "ts": "2026-10-23T19:16:45Z",
@@ -3512,6 +3493,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792933779099-10f508",
+      "ts": "2026-10-25T13:07:36Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 26 (ANCHOR step 0.22): PIT by 1-6 x26 at 22c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 26.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1792933832605-b1e5f4",
+      "ts": "2026-10-25T13:10:32Z",
+      "book": "W8-PITNO",
+      "kind": "text",
+      "source": "bot",
+      "text": "Entering the game -320 on any PIT win; NO buckets +17; no buyback by rule",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -3954,6 +3958,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+7 on NO 15+ @ 0.07 (taker)\nworst outcome now -88\nheld 181/0/43/185/567/133\nIf the game ends... you make\nNO 1-6: +46 (+1.8% of bankroll)\nNO 7-14: +227 (+9.0% of bankroll)\nNO 15+: +183 (+7.3% of bankroll)\nPIT 1-6: +42 (+1.7% of bankroll)\nPIT 7-14: -340 (-13.5% of bankroll)\nPIT 15+: +94 (+3.7% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792933832610-655b33",
+      "ts": "2026-10-25T13:10:32Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: PIT 7-14 worst outcome -141\nIf the game ends... you make\nNO 1-6: +17 (+0.7% of bankroll)\nNO 7-14: +218 (+8.7% of bankroll)\nNO 15+: +204 (+8.1% of bankroll)\nPIT 1-6: +43 (+1.7% of bankroll)\nPIT 7-14: -320 (-12.7% of bankroll)\nPIT 15+: +83 (+3.3% of bankroll)",
       "severity": "warn"
     }
   ]
