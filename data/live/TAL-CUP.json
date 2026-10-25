@@ -1,13 +1,13 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T08:34:01.184829Z",
+  "generated_at": "2026-10-25T08:36:58.728672Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 1:00pm CT. Worst line -$722, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 52,
     "moves": [
       {
         "side": "Ryan Blaney",
@@ -64,7 +64,7 @@
         "exposure_text": "-$490",
         "move": "Next wave up to 1,500 contracts",
         "when": "next bot check (91% of the offered has sold)",
-        "at": "2026-10-25T08:33:16Z",
+        "at": "2026-10-25T08:36:18Z",
         "stuck": false,
         "also": "Also: glide starts 9:00am CT",
         "last_fill": "2026-10-24T18:35:47Z"
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 1:00pm CT. Sold 43,683, 53,762 resting. Worst line -$722 (limit now -$550)."
+          "Pre-race growth, green flag 1:00pm CT. Sold 43,683, 56,078 resting. Worst line -$722 (limit now -$550). Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -212,58 +212,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "TAL-CUP",
-    "ts": "2026-10-25T08:33:16Z"
+    "ts": "2026-10-25T08:36:18Z"
   },
   "posts": [
-    {
-      "id": "1792848181433-ff9469",
-      "ts": "2026-10-24T13:23:01Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nDenny Hamlin: -906\nRyan Preece: -904\nBrad Keselowski: -796\nCarson Hocevar: -705\nDaniel Suarez: -703\nRicky Stenhouse Jr.: -534\nChristopher Bell: -534\nBubba Wallace: -359\nall others (32) >= -359\nCollected $1414 premium ($23 fees) | Paper margin over fair $223 (not realized until settlement)\nCore posted book 1.07 | Worst now -906 | Cash free $3101\nAnchor age 226s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1792848247793-47c156",
-      "ts": "2026-10-24T13:24:07Z",
-      "book": "TAL-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 30,958 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792848449234-435df7",
-      "ts": "2026-10-24T13:27:29Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$906, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792848509642-dbd9a4",
-      "ts": "2026-10-24T13:28:29Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$906, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1792848630515-eed90f",
-      "ts": "2026-10-24T13:30:14Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (5 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1792849516718-a6f50d",
       "ts": "2026-10-24T13:45:16Z",
@@ -4006,6 +3957,58 @@
         "contracts": 2405.0,
         "rows": 31
       }
+    },
+    {
+      "id": "1792917246145-6a8927",
+      "ts": "2026-10-25T08:34:06Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "Cup book is churning: 0 cancel-and-repost at the same price and 5 trims of smaller sides in 30 min. Check the bot.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792917246381-70cfd7",
+      "ts": "2026-10-25T08:34:06Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "Cup book loss is growing: worst case -722 dollars, past its limit and -159 in 30 min. Check the bot.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792917358198-840340",
+      "ts": "2026-10-25T08:34:52Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,280 (race glide fill): John Hunter Nemechek x128 at 2c, AJ Allmendinger x128 at 2c, +8 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1280.0,
+        "rows": 10
+      }
+    },
+    {
+      "id": "1792917378328-5433c8",
+      "ts": "2026-10-25T08:33:59Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Re-posted 1 orders (397 contracts) that vanished: Connor Zilisch x397 at 3c.",
+      "severity": "info",
+      "title": "Re-lay"
+    },
+    {
+      "id": "1792917378335-c4bbb9",
+      "ts": "2026-10-25T08:36:18Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 1:00pm CT. Worst line -$722, final target +$150. Next: Risk glide starts, 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
