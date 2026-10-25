@@ -1,30 +1,30 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-25T00:36:58.299597Z",
+  "generated_at": "2026-10-25T00:39:48.500809Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 12:00pm CT. Worst line -$134, goal -$75.",
+    "headline": "Building toward kickoff Sun 12:00pm CT. Worst line -$88, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "SF by 15+",
-        "resting": "4 @ 18-25c",
-        "exposure": -133.61,
-        "exposure_text": "-$134",
+        "resting": "2 @ 20-25c",
+        "exposure": -87.8,
+        "exposure_text": "-$88",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at Sun 11:15am CT",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-24T04:06:28Z"
+        "stuck": false,
+        "last_fill": "2026-10-25T00:38:57Z"
       },
       {
         "side": "SF by 7-14",
         "resting": "4 @ 22-23c",
-        "exposure": -124.61,
-        "exposure_text": "-$125",
+        "exposure": -76.8,
+        "exposure_text": "-$77",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 11:15am CT, up to $50 in all",
         "at": "2026-10-25T16:15:00Z",
@@ -32,10 +32,21 @@
         "last_fill": "2026-10-24T10:40:32Z"
       },
       {
+        "side": "SF by 1-6",
+        "resting": "80 @ 24-26c",
+        "exposure": -59.07,
+        "exposure_text": "-$59",
+        "move": "Paid balancing (trickle)",
+        "when": "starts Sun 11:15am CT, up to $50 in all",
+        "at": "2026-10-25T16:15:00Z",
+        "stuck": false,
+        "last_fill": "2026-10-25T00:39:17Z"
+      },
+      {
         "side": "ATL by 7-14",
         "resting": "193 @ 13-17c",
-        "exposure": 42.83,
-        "exposure_text": "+$43",
+        "exposure": 90.64,
+        "exposure_text": "+$91",
         "move": "Hold price at 13c",
         "when": "needs 50+ crowd trades under 13c (now 1)",
         "at": null,
@@ -47,8 +58,8 @@
       {
         "side": "ATL by 1-6",
         "resting": "238 @ 18-23c",
-        "exposure": 62.8,
-        "exposure_text": "+$63",
+        "exposure": 110.61,
+        "exposure_text": "+$111",
         "move": "Hold price at 18c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -58,23 +69,10 @@
         "lag_note": "No crowd trade data yet."
       },
       {
-        "side": "SF by 1-6",
-        "resting": "287 @ 23-26c",
-        "exposure": 99.39,
-        "exposure_text": "+$99",
-        "move": "Hold price at 23c",
-        "when": "crowd pays 23c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts Sun 11:15am CT",
-        "last_fill": "2026-10-24T23:42:18Z",
-        "lag_note": "Price 23c matches the crowd."
-      },
-      {
         "side": "ATL by 15+",
         "resting": "250 @ 10-19c",
-        "exposure": 114.39,
-        "exposure_text": "+$114",
+        "exposure": 162.2,
+        "exposure_text": "+$162",
         "move": "Hold price at 10c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -87,15 +85,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 12:00pm CT. Sold 625, 977 resting. Worst line -$134 (goal -$75)."
+          "Pregame build, kickoff Sun 12:00pm CT. Sold 833, 769 resting. Worst line -$88 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (75+ behind the leader): ATL by 1-6, ATL by 7-14, ATL by 15+, SF by 1-6.",
-          "ATL by 15+: 248 behind. No crowd trade data yet.",
-          "SF by 1-6: 233 behind. Price 23c matches the crowd.",
+          "Lagging (75+ behind the leader): ATL by 1-6, ATL by 7-14, ATL by 15+.",
+          "ATL by 15+: 250 behind. No crowd trade data yet.",
+          "ATL by 1-6: 198 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -103,7 +101,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$100 (now -$134).",
+          "Gate open: worst line -$88 is better than -$100.",
           "Batches used: none (max 1 per side)."
         ]
       },
@@ -167,10 +165,10 @@
       },
       {
         "label": "SF by 1-6",
-        "held": 15.0,
-        "resting": 287.0,
+        "held": 221.3,
+        "resting": 80.7,
         "target": null,
-        "status": "lagging",
+        "status": "even",
         "price": 0.23
       },
       {
@@ -183,74 +181,17 @@
       },
       {
         "label": "SF by 15+",
-        "held": 248.0,
-        "resting": 4.0,
+        "held": 250.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.18
+        "price": 0.2
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-25T00:36:37Z"
+    "ts": "2026-10-25T00:39:39Z"
   },
   "posts": [
-    {
-      "id": "1792695460306-05f086",
-      "ts": "2026-10-22T18:55:41Z",
-      "book": "W8-SFATL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 2,734 (launch ladder): ATL by 1-6 x275 at 23c, SF by 1-6 x275 at 26c, +26 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 2734.0,
-        "rows": 28
-      }
-    },
-    {
-      "id": "1792696124671-73ea8f",
-      "ts": "2026-10-22T19:06:32Z",
-      "book": "W8-SFATL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 170 (FIELD far-bucket row (all-fill): ATL by 15+ x147 at 11c, SF by 15+ x23 at 17c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 170.0,
-        "rows": 2
-      }
-    },
-    {
-      "id": "1792696910189-255d53",
-      "ts": "2026-10-22T19:21:50Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,904 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792697815989-eff721",
-      "ts": "2026-10-22T19:36:55Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,904 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792698561882-e3954a",
-      "ts": "2026-10-22T19:49:21Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +0 (+0.0% of bankroll)\nATL 7-14: +0 (+0.0% of bankroll)\nATL 15+: +0 (+0.0% of bankroll)\nSF 1-6: +0 (+0.0% of bankroll)\nSF 7-14: +0 (+0.0% of bankroll)\nSF 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 489\nATL 7-14: 0 / 451\nATL 15+: 0 / 474\nSF 1-6: 0 / 527\nSF 7-14: 0 / 489\nSF 15+: 0 / 474\nPosted book 1.22 | Sold avg 1.223 | Worst now +70 | Cash free $218\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792698722499-ca672c",
       "ts": "2026-10-22T19:52:02Z",
@@ -3307,6 +3248,59 @@
       "text": "Quiet for 15 min. 977 resting. Next: Paid balancing starts, Sun 11:15am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792888779118-5230d6",
+      "ts": "2026-10-25T00:39:29Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SF by 1-6 at 23c (90 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792888779119-7c0e08",
+      "ts": "2026-10-25T00:39:29Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on SF by 1-6: 131 of 158 sold in 10 min, rest re-posted at 24c.",
+      "severity": "info",
+      "title": "Reprice",
+      "data": {
+        "side": "SF by 1-6"
+      }
+    },
+    {
+      "id": "1792888779119-7a9165",
+      "ts": "2026-10-25T00:39:29Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SF by 15+ at 18c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792888779119-96a2b2",
+      "ts": "2026-10-25T00:39:29Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SF by 15+ at 19c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792888779121-1e2a14",
+      "ts": "2026-10-25T00:39:39Z",
+      "book": "W8-SFATL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Sun 12:00pm CT. Worst line -$88, goal -$75. Next: Paid balancing starts, Sun 11:15am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
