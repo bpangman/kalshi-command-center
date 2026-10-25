@@ -1,44 +1,46 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T20:30:39.951831Z",
+  "generated_at": "2026-10-25T20:32:04.690139Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$547, goal -$150.",
+    "headline": "Building toward kickoff 7:20pm CT. Worst line -$582, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "KC by 1-6",
-        "resting": "305 @ 21-28c",
-        "exposure": -546.72,
-        "exposure_text": "-$547",
+        "resting": "260 @ 21-28c",
+        "exposure": -582.37,
+        "exposure_text": "-$582",
         "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$300 (now -$547)",
+        "when": "holding until worst loss is back above -$300 (now -$582)",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-10-25T20:11:50Z"
+        "last_fill": "2026-10-25T20:29:53Z"
       },
       {
         "side": "KC by 7-14",
         "resting": "330 @ 15-19c",
-        "exposure": -421.11,
-        "exposure_text": "-$421",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-25T23:35:00Z",
+        "exposure": -411.64,
+        "exposure_text": "-$412",
+        "move": "Hold price at 15c",
+        "when": "crowd pays 14.9c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-10-25T19:46:18Z"
+        "also": "Also: paid balancing starts 6:35pm CT",
+        "last_fill": "2026-10-25T19:46:18Z",
+        "lag_note": "Price 15c matches the crowd."
       },
       {
         "side": "KC by 15+",
         "resting": "947 @ 11-20c",
-        "exposure": 210.52,
-        "exposure_text": "+$211",
+        "exposure": 219.99,
+        "exposure_text": "+$220",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T20:29:40Z",
+        "at": "2026-10-25T20:31:41Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:43:00Z",
@@ -47,8 +49,8 @@
       {
         "side": "SEA by 15+",
         "resting": "1,014 @ 17-25c",
-        "exposure": 277.65,
-        "exposure_text": "+$278",
+        "exposure": 287.12,
+        "exposure_text": "+$287",
         "move": "Hold price at 17c",
         "when": "needs 50+ crowd trades under 17c (now 20)",
         "at": null,
@@ -60,11 +62,11 @@
       {
         "side": "SEA by 1-6",
         "resting": "1,042 @ 24-28c",
-        "exposure": 288.52,
-        "exposure_text": "+$289",
+        "exposure": 297.99,
+        "exposure_text": "+$298",
         "move": "Step price down 1c (24c to 23c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T20:29:40Z",
+        "at": "2026-10-25T20:31:41Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:36:59Z",
@@ -73,11 +75,11 @@
       {
         "side": "SEA by 7-14",
         "resting": "975 @ 22-29c",
-        "exposure": 296.52,
-        "exposure_text": "+$297",
+        "exposure": 305.99,
+        "exposure_text": "+$306",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T20:29:40Z",
+        "at": "2026-10-25T20:31:41Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "lag_note": "Steps to 21c at the next check."
@@ -87,15 +89,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,674, 4,613 resting. Worst line -$547 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,719, 4,568 resting. Worst line -$582 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): KC by 15+, SEA by 1-6, SEA by 7-14, SEA by 15+.",
-          "SEA by 7-14: 843 behind. Steps to 21c at the next check.",
-          "SEA by 1-6: 835 behind. Steps to 23c at the next check.",
+          "Lagging (150+ behind the leader): KC by 7-14, KC by 15+, SEA by 1-6, SEA by 7-14, SEA by 15+.",
+          "SEA by 7-14: 888 behind. Steps to 21c at the next check.",
+          "SEA by 1-6: 880 behind. Steps to 23c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -103,14 +105,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$547).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$582).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: KC by 1-6 stopped adding until worst line is above -$300 (now -$547).",
+          "Backstop ON: KC by 1-6 stopped adding until worst line is above -$300 (now -$582).",
           "Paid balancing starts 6:35pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
           "At 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
@@ -143,8 +145,8 @@
     "sides": [
       {
         "label": "KC by 1-6",
-        "held": 843.2,
-        "resting": 304.8,
+        "held": 888.4,
+        "resting": 259.6,
         "target": null,
         "status": "heavy",
         "price": 0.21
@@ -154,7 +156,7 @@
         "held": 717.6,
         "resting": 330.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.15
       },
       {
@@ -191,19 +193,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T20:29:40Z"
+    "ts": "2026-10-25T20:31:41Z"
   },
   "posts": [
-    {
-      "id": "1792774622172-a42e4d",
-      "ts": "2026-10-23T16:57:02Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,715 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792774992366-3c4eb7",
       "ts": "2026-10-23T17:03:12Z",
@@ -3422,18 +3414,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nSEA 1-6: +289 (+13.1% of bankroll)\nSEA 7-14: +297 (+13.4% of bankroll)\nSEA 15+: +278 (+12.6% of bankroll)\nKC 1-6: -547 (-24.8% of bankroll)\nKC 7-14: -421 (-19.1% of bankroll)\nKC 15+: +211 (+9.5% of bankroll)\nCollected $297 premium ($0 fees) | Paper margin over fair $30 (not realized until settlement)\nEvent: SEA 7-14: SEA 0-0, Q0 0:00; KC 7-14: KC 0-0, Q0 0:00\nheld / resting\nSEA 1-6: 8 / 1042\nSEA 7-14: 0 / 975\nSEA 15+: 19 / 1014\nKC 1-6: 843 / 305\nKC 7-14: 718 / 330\nKC 15+: 86 / 947\nPosted book 1.21 | Sold avg 1.077 | Worst now +86 | Cash free $1215\nAnchor age 0s | Last fill 1031s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792960241151-877b5e",
+      "ts": "2026-10-25T20:30:41Z",
+      "book": "W8-KCSEA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$582, goal -$150. Next: Paid balancing starts, 6:35pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
-    {
-      "id": "1792897118769-8462c9",
-      "ts": "2026-10-25T02:58:38Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): worst -397.14 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792897302396-6d51e5",
       "ts": "2026-10-25T03:01:42Z",
@@ -4323,6 +4316,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-KCSEA): lagging bucket priced over the crowd: SEA15PLUS ask 0.17 vs clearing 0.137 for 178 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792960269939-5e18da",
+      "ts": "2026-10-25T20:31:09Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+45 on KC 1-6 @ 0.21 (maker)\nworst outcome now +86\nheld 8/0/19/888/718/86\nIf the game ends... you make\nSEA 1-6: +298 (+13.5% of bankroll)\nSEA 7-14: +306 (+13.9% of bankroll)\nSEA 15+: +287 (+13.0% of bankroll)\nKC 1-6: -582 (-26.4% of bankroll)\nKC 7-14: -412 (-18.6% of bankroll)\nKC 15+: +220 (+10.0% of bankroll)",
       "severity": "warn"
     }
   ]
