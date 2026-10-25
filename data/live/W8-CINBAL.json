@@ -1,10 +1,10 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T13:10:36.580085Z",
+  "generated_at": "2026-10-25T13:12:09.722882Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 12:00pm CT. Worst line -$57, goal -$75.",
+    "headline": "Building toward kickoff 12:00pm CT. Worst line -$48, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,19 +12,32 @@
       {
         "side": "CIN by 7-14",
         "resting": "14 @ 22-25c",
-        "exposure": -57.46,
-        "exposure_text": "-$57",
+        "exposure": -48.34,
+        "exposure_text": "-$48",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at 11:15am CT",
         "at": null,
-        "stuck": true,
+        "stuck": false,
         "last_fill": "2026-10-25T02:39:56Z"
+      },
+      {
+        "side": "BAL by 1-6",
+        "resting": "161 @ 18-33c",
+        "exposure": -8.98,
+        "exposure_text": "-$9",
+        "move": "Hold price at 18c",
+        "when": "no crowd trade data yet",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 11:15am CT",
+        "last_fill": "2026-10-25T13:11:07Z",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "BAL by 7-14",
         "resting": "147 @ 14-22c",
-        "exposure": -13.46,
-        "exposure_text": "-$13",
+        "exposure": -4.34,
+        "exposure_text": "-$4",
         "move": "Hold price at 14c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -36,8 +49,8 @@
       {
         "side": "CIN by 1-6",
         "resting": "143 @ 23-32c",
-        "exposure": -6.46,
-        "exposure_text": "-$6",
+        "exposure": 2.66,
+        "exposure_text": "+$3",
         "move": "Hold price at 23c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -47,22 +60,10 @@
         "lag_note": "No crowd trade data yet."
       },
       {
-        "side": "BAL by 1-6",
-        "resting": "162 @ 18-33c",
-        "exposure": 32.54,
-        "exposure_text": "+$33",
-        "move": "Hold price at 18c",
-        "when": "no crowd trade data yet",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts 11:15am CT",
-        "lag_note": "No crowd trade data yet."
-      },
-      {
         "side": "BAL by 15+",
         "resting": "173 @ 10-13c",
-        "exposure": 32.54,
-        "exposure_text": "+$33",
+        "exposure": 41.66,
+        "exposure_text": "+$42",
         "move": "Hold price at 10c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -73,8 +74,8 @@
       {
         "side": "CIN by 15+",
         "resting": "177 @ 14-21c",
-        "exposure": 32.54,
-        "exposure_text": "+$33",
+        "exposure": 41.66,
+        "exposure_text": "+$42",
         "move": "Hold price at 14c",
         "when": "needs 50+ crowd trades under 14c (now 2)",
         "at": null,
@@ -87,15 +88,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 175, 816 resting. Worst line -$57 (goal -$75)."
+          "Pregame build, kickoff 12:00pm CT. Sold 226, 765 resting. Worst line -$48 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 7-14, BAL by 15+, CIN by 1-6, CIN by 15+.",
-          "BAL by 1-6: 90 behind. No crowd trade data yet.",
           "BAL by 15+: 90 behind. No crowd trade data yet.",
+          "CIN by 15+: 90 behind. Crowd is quiet here (2 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -103,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$57 is better than -$100.",
+          "Gate open: worst line -$48 is better than -$100.",
           "Batches used: 1 (max 1 per side)."
         ]
       },
@@ -143,8 +144,8 @@
     "sides": [
       {
         "label": "BAL by 1-6",
-        "held": 0.0,
-        "resting": 162.0,
+        "held": 50.6,
+        "resting": 111.4,
         "target": null,
         "status": "lagging",
         "price": 0.18
@@ -191,19 +192,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T13:09:59Z"
+    "ts": "2026-10-25T13:12:00Z"
   },
   "posts": [
-    {
-      "id": "1792740763037-e6c37f",
-      "ts": "2026-10-23T07:32:43Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792741161890-00621c",
       "ts": "2026-10-23T07:39:21Z",
@@ -3292,6 +3283,16 @@
       "text": "Checkpoint: worst line -$57. Lagging: BAL by 1-6, BAL by 7-14, BAL by 15+ +more.",
       "severity": "info",
       "title": "Checkpoint"
+    },
+    {
+      "id": "1792933880038-ff0e74",
+      "ts": "2026-10-25T13:11:12Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on lagging BAL by 1-6: 51 of 90 sold, re-posted at the same price.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
