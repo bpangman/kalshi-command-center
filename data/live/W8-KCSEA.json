@@ -1,6 +1,6 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T01:42:58.367592Z",
+  "generated_at": "2026-10-25T01:45:46.985140Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -77,7 +77,7 @@
         "exposure_text": "+$130",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T01:42:06Z",
+        "at": "2026-10-25T01:45:08Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 6:35pm CT",
         "lag_note": "Steps to 21c at the next check."
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T01:42:06Z"
+    "ts": "2026-10-25T01:45:08Z"
   },
   "posts": [
     {
@@ -2729,6 +2729,26 @@
       "text": "Quiet for 15 min. 5,167 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792892627610-3a5577",
+      "ts": "2026-10-25T01:41:39Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 5: KC by 7-14 x5 at 14c. Worst line -$420.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 5.0,
+        "fills": [
+          {
+            "side": "KC by 7-14",
+            "price": 0.14,
+            "qty": 5.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3270,6 +3290,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+5 on KC 7-14 @ 0.14 (maker)\nworst outcome now +125\nheld 0/0/0/550/5/73\nIf the game ends... you make\nSEA 1-6: +130 (+5.9% of bankroll)\nSEA 7-14: +130 (+5.9% of bankroll)\nSEA 15+: +130 (+5.9% of bankroll)\nKC 1-6: -420 (-19.0% of bankroll)\nKC 7-14: +125 (+5.7% of bankroll)\nKC 15+: +57 (+2.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792892703050-02b91f",
+      "ts": "2026-10-25T01:45:03Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-KCSEA): lagging bucket priced over the crowd: SEA1TO6 ask 0.26 vs clearing 0.206 for 83 min. Check the command center.",
       "severity": "warn"
     }
   ]
