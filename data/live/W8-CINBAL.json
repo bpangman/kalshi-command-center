@@ -1,13 +1,13 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T14:07:29.716177Z",
+  "generated_at": "2026-10-25T14:09:23.082495Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 12:00pm CT. Worst line -$47, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
+    "checks_every_s": 60,
     "moves": [
       {
         "side": "CIN by 7-14",
@@ -65,12 +65,12 @@
         "exposure": 37.0,
         "exposure_text": "+$37",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "if no fill by 9:09am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-25T14:09:54Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:15am CT",
         "last_fill": "2026-10-25T13:28:37Z",
-        "lag_note": "Steps to 15c if no fill by 9:09am CT."
+        "lag_note": "Steps to 15c at the next check."
       },
       {
         "side": "BAL by 15+",
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 7-14, BAL by 15+, CIN by 1-6, CIN by 15+.",
           "BAL by 15+: 90 behind. No crowd trade data yet.",
-          "CIN by 15+: 84 behind. Steps to 15c if no fill by 9:09am CT.",
+          "CIN by 15+: 84 behind. Steps to 15c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -193,7 +193,7 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T14:07:25Z"
+    "ts": "2026-10-25T14:08:26Z"
   },
   "posts": [
     {
