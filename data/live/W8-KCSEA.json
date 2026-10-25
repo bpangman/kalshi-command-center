@@ -1,6 +1,6 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T18:53:10.648131Z",
+  "generated_at": "2026-10-25T18:54:38.590824Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,7 +38,7 @@
         "exposure_text": "+$156",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T18:52:57Z",
+        "at": "2026-10-25T18:53:57Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:43:00Z",
@@ -50,12 +50,12 @@
         "exposure": 222.67,
         "exposure_text": "+$223",
         "move": "Hold price at 17c",
-        "when": "needs 50+ crowd trades under 17c (now 20)",
+        "when": "needs 50+ crowd trades under 17c (now 26)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T18:44:21Z",
-        "lag_note": "Crowd is quiet here (20 traded)."
+        "lag_note": "Crowd is quiet here (26 traded)."
       },
       {
         "side": "SEA by 1-6",
@@ -64,7 +64,7 @@
         "exposure_text": "+$234",
         "move": "Step price down 1c (24c to 23c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T18:52:57Z",
+        "at": "2026-10-25T18:53:57Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:36:59Z",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T18:52:57Z"
+    "ts": "2026-10-25T18:53:57Z"
   },
   "posts": [
     {
@@ -3368,15 +3368,6 @@
   ],
   "audits": [
     {
-      "id": "1792889770655-725f8e",
-      "ts": "2026-10-25T00:56:10Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): worst -420.24 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1792889953600-23f521",
       "ts": "2026-10-25T00:59:13Z",
       "book": "W8-KCSEA",
@@ -4265,6 +4256,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+6 on SEA 15+ @ 0.17 (maker)\n+13 on SEA 15+ @ 0.16 (maker)\nworst outcome now +123\nheld 8/0/19/634/634/86\nIf the game ends... you make\nSEA 1-6: +234 (+10.6% of bankroll)\nSEA 7-14: +242 (+10.9% of bankroll)\nSEA 15+: +223 (+10.1% of bankroll)\nKC 1-6: -392 (-17.8% of bankroll)\nKC 7-14: -393 (-17.8% of bankroll)\nKC 15+: +156 (+7.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792954393545-ab608b",
+      "ts": "2026-10-25T18:53:13Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-KCSEA): lagging bucket priced over the crowd: SEA15PLUS ask 0.17 vs clearing 0.131 for 84 min. Check the command center.",
       "severity": "warn"
     }
   ]
