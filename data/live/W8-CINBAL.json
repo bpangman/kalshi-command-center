@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T18:43:46.344605Z",
+  "generated_at": "2026-10-25T18:45:33.710532Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 1,188, 197 resting. Worst line -$1. Game 59% done. Bot is slow (checks every 22s, set for 5s)."
+          "In game (Ingame). Sold 1,188, 191 resting. Worst line -$1. Game 59% done. Bot is slow (checks every 23s, set for 5s)."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "label": "BAL by 15+",
         "held": 206.2,
-        "resting": 20.6,
+        "resting": 20.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "CIN by 15+",
         "held": 164.7,
-        "resting": 113.0,
+        "resting": 108.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T18:43:32Z"
+    "ts": "2026-10-25T18:45:33Z"
   },
   "posts": [
-    {
-      "id": "1792810818849-731869",
-      "ts": "2026-10-24T03:00:18Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792811726154-5db0ec",
       "ts": "2026-10-24T03:15:26Z",
@@ -3641,6 +3631,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792953872822-84d010",
+      "ts": "2026-10-25T18:43:01Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 41: BAL by 1-6 x20 at 30c, CIN by 1-6 x20 at 21c, CIN by 1-6 x1 at 27c. Worst line -$1.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 41.0,
+        "fills": [
+          {
+            "side": "BAL by 1-6",
+            "price": 0.3,
+            "qty": 20.0
+          },
+          {
+            "side": "CIN by 1-6",
+            "price": 0.21,
+            "qty": 20.0
+          },
+          {
+            "side": "CIN by 1-6",
+            "price": 0.27,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3885,6 +3905,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792953862928-9eb5e8",
+      "ts": "2026-10-25T18:44:22Z",
+      "book": "W8-CINBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+32 on CIN 1-6 @ 0.17 (maker)\n+15 on BAL 1-6 @ 0.27 (maker)\n+25 on CIN 1-6 @ 0.19 (maker)\n+20 on BAL 1-6 @ 0.30 (maker)\n+20 on CIN 1-6 @ 0.21 (maker)\n+1 on CIN 1-6 @ 0.27 (maker)\nworst outcome now -5\nheld 216/237/206/230/135/165\nIf the game ends... you make\nBAL 1-6: +20 (+1.0% of bankroll)\nBAL 7-14: -1 (-0.0% of bankroll)\nBAL 15+: +30 (+1.4% of bankroll)\nCIN 1-6: +6 (+0.3% of bankroll)\nCIN 7-14: +101 (+4.8% of bankroll)\nCIN 15+: +71 (+3.4% of bankroll)",
       "severity": "warn"
     }
   ]
