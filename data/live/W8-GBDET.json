@@ -1,10 +1,10 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T19:51:50.493715Z",
+  "generated_at": "2026-10-25T19:53:20.951939Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 3:25pm CT. Worst line -$71, goal -$75.",
+    "headline": "Balancing before kickoff 3:25pm CT. Worst line -$70, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "DET by 7-14",
         "resting": "7 @ 24c",
-        "exposure": -70.5,
-        "exposure_text": "-$71",
+        "exposure": -70.31,
+        "exposure_text": "-$70",
         "move": "Holding",
         "when": "no move planned until the even-done check at 2:55pm CT",
         "at": null,
@@ -23,7 +23,7 @@
       {
         "side": "GB by 7-14",
         "resting": "13 @ 17-19c",
-        "exposure": -58.33,
+        "exposure": -58.14,
         "exposure_text": "-$58",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
@@ -33,19 +33,19 @@
       },
       {
         "side": "GB by 1-6",
-        "resting": "42 @ 19-29c",
-        "exposure": -56.87,
-        "exposure_text": "-$57",
+        "resting": "41 @ 20-29c",
+        "exposure": -57.68,
+        "exposure_text": "-$58",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-10-25T19:14:57Z"
+        "last_fill": "2026-10-25T19:51:25Z"
       },
       {
         "side": "DET by 1-6",
         "resting": "86 @ 22-28c",
-        "exposure": -1.15,
+        "exposure": -0.96,
         "exposure_text": "-$1",
         "move": "Hold price at 22c",
         "when": "needs 50+ crowd trades under 22c (now 1)",
@@ -58,7 +58,7 @@
       {
         "side": "GB by 15+",
         "resting": "154 @ 8-12c",
-        "exposure": 79.14,
+        "exposure": 79.33,
         "exposure_text": "+$79",
         "move": "Hold price at 8c",
         "when": "crowd pays 9c; steps down 1c only if it trades lower",
@@ -71,7 +71,7 @@
       {
         "side": "DET by 15+",
         "resting": "204 @ 19-29c",
-        "exposure": 141.14,
+        "exposure": 141.33,
         "exposure_text": "+$141",
         "move": "Hold price at 19c",
         "when": "no crowd trade data yet",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 3:25pm CT. Sold 813, 506 resting. Worst line -$71 (goal -$75)."
+          "Pregame balancing, kickoff 3:25pm CT. Sold 814, 505 resting. Worst line -$70 (goal -$75)."
         ]
       },
       {
@@ -101,7 +101,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$71 is better than -$75.",
+          "Gate open: worst line -$70 is better than -$75.",
           "Batches used: none (max 1 per side)."
         ]
       },
@@ -109,7 +109,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$75, worst line -$71; spent $0 of $50.",
+          "Paid balancing is running: plan -$75, worst line -$70; spent $0 of $50.",
           "At 2:55pm CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
@@ -160,11 +160,11 @@
       },
       {
         "label": "GB by 1-6",
-        "held": 198.0,
-        "resting": 42.0,
+        "held": 199.0,
+        "resting": 41.0,
         "target": null,
         "status": "even",
-        "price": 0.19
+        "price": 0.2
       },
       {
         "label": "GB by 7-14",
@@ -184,7 +184,7 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T19:51:22Z"
+    "ts": "2026-10-25T19:52:22Z"
   },
   "posts": [
     {
@@ -3764,6 +3764,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "House v2 T-60 table\nIf the game ends... you make\nDET 1-6: -1 (-0.1% of bankroll)\nDET 7-14: -71 (-3.4% of bankroll)\nDET 15+: +141 (+6.8% of bankroll)\nGB 1-6: -57 (-2.7% of bankroll)\nGB 7-14: -58 (-2.8% of bankroll)\nGB 15+: +79 (+3.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792957961427-aabd61",
+      "ts": "2026-10-25T19:52:41Z",
+      "book": "W8-GBDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+1 on GB 1-6 @ 0.19 (maker)\nworst outcome now -14\nheld 142/212/0/199/199/62\nIf the game ends... you make\nDET 1-6: -1 (-0.0% of bankroll)\nDET 7-14: -70 (-3.4% of bankroll)\nDET 15+: +141 (+6.8% of bankroll)\nGB 1-6: -58 (-2.8% of bankroll)\nGB 7-14: -58 (-2.8% of bankroll)\nGB 15+: +79 (+3.8% of bankroll)",
       "severity": "warn"
     }
   ]
