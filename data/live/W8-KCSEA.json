@@ -1,6 +1,6 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T14:26:12.648776Z",
+  "generated_at": "2026-10-25T14:27:46.010279Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -27,7 +27,7 @@
         "exposure_text": "-$89",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T14:25:54Z",
+        "at": "2026-10-25T14:26:54Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T06:10:20Z",
@@ -40,7 +40,7 @@
         "exposure_text": "+$83",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T14:25:54Z",
+        "at": "2026-10-25T14:26:54Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:35pm CT",
         "last_fill": "2026-10-25T13:43:00Z",
@@ -192,19 +192,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T14:25:54Z"
+    "ts": "2026-10-25T14:26:54Z"
   },
   "posts": [
-    {
-      "id": "1792733809195-e30175",
-      "ts": "2026-10-23T05:36:49Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,715 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792734716065-2911b4",
       "ts": "2026-10-23T05:51:56Z",
@@ -3252,18 +3242,18 @@
       "text": "Quiet for 15 min. 5,154 resting. Next: Paid balancing starts, 6:35pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792938406722-970550",
+      "ts": "2026-10-25T14:26:46Z",
+      "book": "W8-KCSEA",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nSEA 1-6: +161 (+7.3% of bankroll)\nSEA 7-14: +169 (+7.7% of bankroll)\nSEA 15+: +169 (+7.7% of bankroll)\nKC 1-6: -381 (-17.3% of bankroll)\nKC 7-14: -89 (-4.0% of bankroll)\nKC 15+: +83 (+3.8% of bankroll)\nCollected $169 premium ($0 fees) | Paper margin over fair $25 (not realized until settlement)\nEvent: SEA 7-14: SEA 0-0, Q0 0:00; KC 7-14: KC 0-0, Q0 0:00\nheld / resting\nSEA 1-6: 8 / 1042\nSEA 7-14: 0 / 975\nSEA 15+: 0 / 958\nKC 1-6: 550 / 500\nKC 7-14: 258 / 807\nKC 15+: 86 / 872\nPosted book 1.20 | Sold avg 1.109 | Worst now +134 | Cash free $881\nAnchor age 0s | Last fill 2624s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1792843536121-9a46b1",
-      "ts": "2026-10-24T12:05:36Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): worst -420.24 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792845400606-aa16fe",
       "ts": "2026-10-24T12:36:40Z",
@@ -4154,6 +4144,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-KCSEA): worst -381.01 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1792938388254-f25332",
+      "ts": "2026-10-25T14:26:28Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-KCSEA): held worst -381.01 (backstop -300) or lagging gap 550 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
