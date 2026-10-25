@@ -1,19 +1,19 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T19:53:20.951939Z",
+  "generated_at": "2026-10-25T19:54:50.719437Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$5.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 68,167, 14,656 resting. Worst line +$5. Race 53% done. Floor protocol off. Bot is slow (checks every 50s, set for 30s)."
+          "In race (Ingame). Sold 68,167, 15,492 resting. Worst line +$5. Race 54% done. Floor protocol off."
         ]
       },
       {
@@ -44,34 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T19:52:22Z"
+    "ts": "2026-10-25T19:54:23Z"
   },
   "posts": [
-    {
-      "id": "1792945025758-415745",
-      "ts": "2026-10-25T16:16:59Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Brad Keselowski: no fill for 87 min, added 204 at 4c (was 5c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Brad Keselowski",
-        "from": 0.05,
-        "to": 0.04
-      }
-    },
-    {
-      "id": "1792945066122-c656bc",
-      "ts": "2026-10-25T16:17:46Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Risk glide for the green flag 1:00pm CT. Worst line -$501, final target +$150. Next: Glide selling opens, 11:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Risk glide"
-    },
     {
       "id": "1792945106445-169107",
       "ts": "2026-10-25T16:16:59Z",
@@ -4016,18 +3991,28 @@
       "text": "In race (Ingame). Worst line +$5.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1792958058700-397a9a",
+      "ts": "2026-10-25T19:54:18Z",
+      "book": "TAL-CUP",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on TAL-CUP: 0 orders posted in 10 min while the market traded 157006 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1792958063865-c83576",
+      "ts": "2026-10-25T19:54:23Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$5.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1792921389540-3879e9",
-      "ts": "2026-10-25T09:43:09Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -708.14 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792923298210-b5fa0a",
       "ts": "2026-10-25T10:14:58Z",
@@ -4917,6 +4902,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): min live outcome (auditor's own read) +4.53 vs bot's ratchet_high +4.58 vs bot's ceiling_now +4.58. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792958035731-2d0ca0",
+      "ts": "2026-10-25T19:53:55Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 7 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-AJAL low 1665c, KXNASCARRACE-YEL26-TYDI low 2299c, KXNASCARRACE-YEL26-JONE low 2128c, KXNASCARRACE-YEL26-COCU low 2449c, KXNASCARRACE-YEL26-COWA low 2449c, KXNASCARRACE-YEL26-NOGR low 2135c, KXNASCARRACE-YEL26-ZASM low 1742c. Check the command center.",
       "severity": "warn"
     }
   ]
