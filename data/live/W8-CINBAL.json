@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T13:58:31.899944Z",
+  "generated_at": "2026-10-25T14:00:25.630593Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -65,12 +65,12 @@
         "exposure": 37.0,
         "exposure_text": "+$37",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T13:58:21Z",
+        "when": "if no fill by 9:09am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T14:09:54Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:15am CT",
         "last_fill": "2026-10-25T13:28:37Z",
-        "lag_note": "Steps to 15c at the next check."
+        "lag_note": "Steps to 15c if no fill by 9:09am CT."
       },
       {
         "side": "BAL by 15+",
@@ -97,7 +97,7 @@
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 7-14, BAL by 15+, CIN by 1-6, CIN by 15+.",
           "BAL by 15+: 90 behind. No crowd trade data yet.",
-          "CIN by 15+: 84 behind. Steps to 15c at the next check.",
+          "CIN by 15+: 84 behind. Steps to 15c if no fill by 9:09am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -193,19 +193,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T13:58:21Z"
+    "ts": "2026-10-25T14:00:22Z"
   },
   "posts": [
-    {
-      "id": "1792749833217-156429",
-      "ts": "2026-10-23T10:03:53Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792750740262-95fc37",
       "ts": "2026-10-23T10:19:00Z",
@@ -3338,6 +3328,26 @@
       "text": "Row sold out: BAL by 1-6 at 19c (1 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1792936742038-d6cf7f",
+      "ts": "2026-10-25T13:56:49Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: BAL by 1-6 x1 at 19c. Worst line -$47.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "BAL by 1-6",
+            "price": 0.19,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
