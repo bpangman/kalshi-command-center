@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T06:40:38.315461Z",
+  "generated_at": "2026-10-25T06:43:45.229958Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -52,12 +52,12 @@
         "exposure": 2.61,
         "exposure_text": "+$3",
         "move": "Hold price at 23c",
-        "when": "crowd pays 22.7c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (22.2c)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
         "last_fill": "2026-10-25T06:38:06Z",
-        "lag_note": "Price 23c matches the crowd."
+        "lag_note": "Price 23c is at its floor."
       },
       {
         "side": "NO by 15+",
@@ -77,11 +77,11 @@
         "exposure": 107.74,
         "exposure_text": "+$108",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T06:40:49Z",
+        "when": "if no fill by 1:50am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T06:50:55Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 15c at the next check."
+        "lag_note": "Steps to 15c if no fill by 1:50am CT."
       }
     ],
     "sections": [
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 1-6, PIT by 15+.",
-          "NO by 7-14: 185 behind. Steps to 15c at the next check.",
+          "NO by 7-14: 185 behind. Steps to 15c if no fill by 1:50am CT.",
           "NO by 15+: 185 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -192,29 +192,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T06:40:04Z"
+    "ts": "2026-10-25T06:43:06Z"
   },
   "posts": [
-    {
-      "id": "1792712264809-95c4f1",
-      "ts": "2026-10-22T23:37:44Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792713171314-f0700e",
-      "ts": "2026-10-22T23:52:51Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:46am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792713504605-71575b",
       "ts": "2026-10-22T23:58:24Z",
@@ -3273,6 +3253,40 @@
       "data": {
         "contracts": 179.0,
         "rows": 3
+      }
+    },
+    {
+      "id": "1792910445005-3fb566",
+      "ts": "2026-10-25T06:38:31Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 2: PIT by 1-6 x2 at 23c. Worst line -$77.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 2.0,
+        "fills": [
+          {
+            "side": "PIT by 1-6",
+            "price": 0.23,
+            "qty": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792910445005-a29e76",
+      "ts": "2026-10-25T06:38:32Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 58 (ANCHOR step 0.23): PIT by 1-6 x58 at 23c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 58.0,
+        "rows": 1
       }
     }
   ],
