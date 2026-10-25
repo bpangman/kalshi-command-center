@@ -1,6 +1,6 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T02:18:34.755808Z",
+  "generated_at": "2026-10-25T02:21:14.823546Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -75,11 +75,11 @@
         "exposure": 18.79,
         "exposure_text": "+$19",
         "move": "Step price down 1c (15c to 14c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T02:18:23Z",
+        "when": "if no fill by 9:28pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T02:28:59Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 2:40pm CT",
-        "lag_note": "Steps to 14c at the next check."
+        "lag_note": "Steps to 14c if no fill by 9:28pm CT."
       }
     ],
     "sections": [
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T02:18:23Z"
+    "ts": "2026-10-25T02:20:24Z"
   },
   "posts": [
     {
@@ -3078,6 +3078,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-GBDET): lagging bucket priced over the crowd: GB7TO14 ask 0.15 vs clearing 0.120 for 51 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792894794737-4e474f",
+      "ts": "2026-10-25T02:19:54Z",
+      "book": "W8-GBDET",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-GBDET): lagging bucket priced over the crowd: GB7TO14 ask 0.15 vs clearing 0.120 for 82 min. Check the command center.",
       "severity": "warn"
     }
   ]
