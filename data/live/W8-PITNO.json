@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T16:00:25.263993Z",
+  "generated_at": "2026-10-25T16:02:05.867134Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,255, 727 resting. Worst line -$129. Game 83% done."
+          "In game (Ingame). Sold 2,255, 918 resting. Worst line -$129. Game 84% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "NO by 1-6",
         "held": 466.4,
-        "resting": 88.0,
+        "resting": 5.7,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "NO by 7-14",
         "held": 221.3,
-        "resting": 100.9,
+        "resting": 337.9,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "NO by 15+",
         "held": 43.4,
-        "resting": 505.0,
+        "resting": 510.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "PIT by 1-6",
         "held": 501.4,
-        "resting": 10.9,
+        "resting": 34.3,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "PIT by 15+",
         "held": 455.4,
-        "resting": 22.0,
+        "resting": 30.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T16:00:18Z"
+    "ts": "2026-10-25T16:01:18Z"
   },
   "posts": [
-    {
-      "id": "1792820193660-bbaafa",
-      "ts": "2026-10-24T05:36:33Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792821100049-e9a92b",
       "ts": "2026-10-24T05:51:40Z",
@@ -3768,6 +3758,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nNO 1-6: -28 (-1.1% of bankroll)\nNO 7-14: +217 (+8.6% of bankroll)\nNO 15+: +395 (+15.7% of bankroll)\nPIT 1-6: -64 (-2.5% of bankroll)\nPIT 7-14: -129 (-5.1% of bankroll)\nPIT 15+: -17 (-0.7% of bankroll)\nCollected $442 premium ($4 fees) | Paper margin over fair $79 (not realized until settlement)\nEvent: PIT 7-14: PIT 10-16, Q4 10:15; PIT 1-6: PIT 10-16, Q4 10:15\nheld / resting\nNO 1-6: 466 / 9\nNO 7-14: 221 / 101\nNO 15+: 43 / 492\nPIT 1-6: 501 / 11\nPIT 7-14: 567 / 0\nPIT 15+: 455 / 30\nPosted book 1.41 | Sold avg 1.028 | Worst now -58 | Cash free $523\nAnchor age 1714s | Last fill 157s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792944078650-7bf98f",
+      "ts": "2026-10-25T16:01:03Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite PIT 1-6 at 0.40); likely ['PIT 1-6', 'PIT 7-14']; endgame: KXNFLWINMARGIN-26OCT25PIT",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
@@ -4453,6 +4453,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Endgame mode on: PIT 1-6 at 0.40; likely outcomes: PIT 1-6, PIT 7-14; action: none",
+      "severity": "warn"
+    },
+    {
+      "id": "1792944063475-f52577",
+      "ts": "2026-10-25T16:01:03Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1792944108321-2a458a",
+      "ts": "2026-10-25T16:01:48Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
