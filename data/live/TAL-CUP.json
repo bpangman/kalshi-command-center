@@ -1,6 +1,6 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T18:37:25.123069Z",
+  "generated_at": "2026-10-25T18:38:55.832137Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 59,382, 3,160 resting. Worst line -$155. Race 9% done. Floor protocol off."
+          "In race (Ingame). Sold 59,382, 5,309 resting. Worst line -$155. Race 10% done. Floor protocol off."
         ]
       },
       {
@@ -44,64 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T18:36:49Z"
+    "ts": "2026-10-25T18:38:49Z"
   },
   "posts": [
-    {
-      "id": "1792933154466-c3ec74",
-      "ts": "2026-10-25T12:57:07Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Re-posted 1 orders (814 contracts) that vanished: Daniel Suarez x814 at 3c.",
-      "severity": "info",
-      "title": "Re-lay"
-    },
-    {
-      "id": "1792933376048-493bdd",
-      "ts": "2026-10-25T13:01:29Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 168: Chris Buescher x159 at 5c, Ross Chastain x9 at 4c. Worst line -$674.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 168.0,
-        "fills": [
-          {
-            "side": "Chris Buescher",
-            "price": 0.05,
-            "qty": 159.0
-          },
-          {
-            "side": "Ross Chastain",
-            "price": 0.04,
-            "qty": 9.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1792933678307-dadff4",
-      "ts": "2026-10-25T13:05:39Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 94: Ross Chastain x94 at 4c. Worst line -$670.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 94.0,
-        "fills": [
-          {
-            "side": "Ross Chastain",
-            "price": 0.04,
-            "qty": 94.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792933678308-0e1cb5",
       "ts": "2026-10-25T13:05:39Z",
@@ -4081,18 +4026,43 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nDaniel Suarez: -155\nChris Buescher: -155\nAustin Cindric: -154\nTy Gibbs: -147\nCarson Hocevar: -146\nChase Elliott: -142\nRyan Blaney: -127\nAustin Hill: -118\nall others (32) >= -113\nCollected $2340 premium ($45 fees) | Paper margin over fair $330 (not realized until settlement)\nEvent: Cody Ware: running P1; Ryan Preece: running P2\nCore posted book 1.70 | Worst now -155 | Cash free $4709\nAnchor age 259s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1792953449534-9fe5c5",
+      "ts": "2026-10-25T18:37:14Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-YEL26-AUCI: gap $0.87 -> max 0 contracts (evenness/favorite gates bypass",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792953469653-bf792d",
+      "ts": "2026-10-25T18:37:49Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt: 0 drivers laddered, room used $0 of $465",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792953469654-2ca10c",
+      "ts": "2026-10-25T18:37:15Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 3,049 (race ingame grow): Cody Ware x1,931 at 15c, +4 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 3049.0,
+        "rows": 6
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792907694158-4db200",
-      "ts": "2026-10-25T05:54:54Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- TAL-CUP - Chase Briscoe has had no resting orders for at least 682 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1792907998535-edf7c3",
       "ts": "2026-10-25T05:59:58Z",
@@ -4982,6 +4952,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): min live outcome (auditor's own read) -158.78 vs bot's ratchet_high n/a vs bot's ceiling_now -143.62. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792953503852-54c571",
+      "ts": "2026-10-25T18:38:23Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+74 on Brad Keselowski @ 0.05 (maker)\nworst outcome now -155\nIf the race ends... you make\nDaniel Suarez: -155\nChris Buescher: -155\nAustin Cindric: -154\nTy Gibbs: -147\nCarson Hocevar: -146\nChase Elliott: -142\nRyan Blaney: -127\nAustin Hill: -118\nall others (32) >= -113",
       "severity": "warn"
     }
   ]
