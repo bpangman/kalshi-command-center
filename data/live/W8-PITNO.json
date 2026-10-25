@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T11:59:26.606274Z",
+  "generated_at": "2026-10-25T12:02:15.573352Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -14,8 +14,8 @@
         "resting": "none",
         "exposure": -346.0,
         "exposure_text": "-$346",
-        "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$150 (now -$346)",
+        "move": "Holding",
+        "when": "no move planned until paid balancing starts at 7:45am CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-25T10:07:18Z"
@@ -31,7 +31,7 @@
         "stuck": false,
         "also": "Also: price step",
         "last_fill": "2026-10-25T08:02:45Z",
-        "lag_note": "Crowd is quiet here (1 traded)."
+        "lag_note": "Crowd is quiet here (26 traded)."
       },
       {
         "side": "NO by 1-6",
@@ -111,7 +111,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: PIT by 7-14 stopped adding until worst line is above -$150 (now -$346).",
+          "Backstop off. It trips if the worst line falls under -$150.",
           "Paid balancing starts 7:45am CT: worst line to -$75 by 8:20am CT, up to $100.",
           "At 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 8:30am CT: the in-game engine takes over."
@@ -192,38 +192,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T11:58:27Z"
+    "ts": "2026-10-25T12:01:28Z"
   },
   "posts": [
-    {
-      "id": "1792755795746-ab5f6a",
-      "ts": "2026-10-23T11:43:15Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792756702711-6270f4",
-      "ts": "2026-10-23T11:58:22Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792757159064-9e50f4",
-      "ts": "2026-10-23T12:05:59Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNO 1-6: +0 (+0.0% of bankroll)\nNO 7-14: +0 (+0.0% of bankroll)\nNO 15+: +0 (+0.0% of bankroll)\nPIT 1-6: +0 (+0.0% of bankroll)\nPIT 7-14: +0 (+0.0% of bankroll)\nPIT 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 489\nNO 7-14: 0 / 413\nNO 15+: 0 / 440\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 0 / 440\nPosted book 1.26 | Sold avg 1.262 | Worst now +98 | Cash free $386\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792757610193-ce750d",
       "ts": "2026-10-23T12:13:30Z",
@@ -3401,6 +3372,36 @@
       "source": "bot",
       "text": "If the game ends... you make\nNO 1-6: +54 (+2.2% of bankroll)\nNO 7-14: +221 (+8.8% of bankroll)\nNO 15+: +221 (+8.8% of bankroll)\nPIT 1-6: +36 (+1.4% of bankroll)\nPIT 7-14: -346 (-13.7% of bankroll)\nPIT 15+: +89 (+3.5% of bankroll)\nCollected $221 premium ($0 fees) | Paper margin over fair $15 (not realized until settlement)\nEvent: NO 7-14: NO 0-0, Q0 0:00; PIT 7-14: PIT 0-0, Q0 0:00\nheld / resting\nNO 1-6: 167 / 77\nNO 7-14: 0 / 413\nNO 15+: 0 / 510\nPIT 1-6: 185 / 296\nPIT 7-14: 567 / 0\nPIT 15+: 132 / 378\nPosted book 1.16 | Sold avg 1.083 | Worst now -58 | Cash free $769\nAnchor age 0s | Last fill 6687s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792929648537-4b0940",
+      "ts": "2026-10-25T12:00:30Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop released: worst line is back to -$346. The heavy side can add again.",
+      "severity": "info",
+      "title": "Backstop"
+    },
+    {
+      "id": "1792929648539-a60a08",
+      "ts": "2026-10-25T12:00:30Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$346. Lagging: NO by 1-6, NO by 7-14, NO by 15+ +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792929688898-1cb9ac",
+      "ts": "2026-10-25T12:01:28Z",
+      "book": "W8-PITNO",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 8:30am CT. Worst line -$346, goal -$75. Next: Paid balancing starts, 7:45am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
