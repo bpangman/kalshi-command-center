@@ -1,6 +1,6 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T16:39:16.676785Z",
+  "generated_at": "2026-10-25T16:40:52.017836Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -12,7 +12,7 @@
       {
         "side": "BAL by 7-14",
         "resting": "41 @ 15-22c",
-        "exposure": -70.98,
+        "exposure": -70.58,
         "exposure_text": "-$71",
         "move": "Holding",
         "when": "no move planned until kickoff at 12:00pm CT",
@@ -23,8 +23,8 @@
       {
         "side": "CIN by 7-14",
         "resting": "47 @ 20-21c",
-        "exposure": -23.52,
-        "exposure_text": "-$24",
+        "exposure": -23.12,
+        "exposure_text": "-$23",
         "move": "Hold price at 20c",
         "when": "crowd pays 20.2c; steps down 1c only if it trades lower",
         "at": null,
@@ -36,7 +36,7 @@
       {
         "side": "BAL by 1-6",
         "resting": "104 @ 18-33c",
-        "exposure": -11.42,
+        "exposure": -11.02,
         "exposure_text": "-$11",
         "move": "Hold price at 18c",
         "when": "crowd pays 18.8c; steps down 1c only if it trades lower",
@@ -49,8 +49,8 @@
       {
         "side": "CIN by 1-6",
         "resting": "143 @ 23-32c",
-        "exposure": 27.48,
-        "exposure_text": "+$27",
+        "exposure": 27.88,
+        "exposure_text": "+$28",
         "move": "Hold price at 23c",
         "when": "needs 50+ crowd trades under 23c (now 21)",
         "at": null,
@@ -60,10 +60,23 @@
         "lag_note": "Crowd is quiet here (21 traded)."
       },
       {
+        "side": "CIN by 15+",
+        "resting": "148 @ 16-21c",
+        "exposure": 38.65,
+        "exposure_text": "+$39",
+        "move": "Hold price at 16c",
+        "when": "needs 50+ crowd trades under 16c (now 4)",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-25T16:39:34Z",
+        "lag_note": "Crowd is quiet here (4 traded)."
+      },
+      {
         "side": "BAL by 15+",
         "resting": "146 @ 10-13c",
-        "exposure": 39.26,
-        "exposure_text": "+$39",
+        "exposure": 39.66,
+        "exposure_text": "+$40",
         "move": "Hold price at 10c",
         "when": "crowd pays 10c; steps down 1c only if it trades lower",
         "at": null,
@@ -71,34 +84,21 @@
         "also": "Also: paid balancing",
         "last_fill": "2026-10-25T15:35:10Z",
         "lag_note": "Price 10c matches the crowd."
-      },
-      {
-        "side": "CIN by 15+",
-        "resting": "151 @ 16-21c",
-        "exposure": 40.77,
-        "exposure_text": "+$41",
-        "move": "Hold price at 16c",
-        "when": "needs 50+ crowd trades under 16c (now 4)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-10-25T16:19:06Z",
-        "lag_note": "Crowd is quiet here (4 traded)."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 12:00pm CT. Sold 397, 632 resting. Worst line -$71 (goal -$75)."
+          "Final tightening, kickoff 12:00pm CT. Sold 400, 629 resting. Worst line -$71 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 15+, CIN by 1-6, CIN by 7-14, CIN by 15+.",
-          "CIN by 15+: 112 behind. Crowd is quiet here (4 traded).",
           "BAL by 15+: 110 behind. Price 10c matches the crowd.",
+          "CIN by 15+: 109 behind. Crowd is quiet here (4 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -175,15 +175,15 @@
       },
       {
         "label": "CIN by 15+",
-        "held": 25.7,
-        "resting": 151.0,
+        "held": 28.2,
+        "resting": 148.5,
         "target": null,
         "status": "lagging",
         "price": 0.16
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T16:38:36Z"
+    "ts": "2026-10-25T16:40:37Z"
   },
   "posts": [
     {
@@ -3560,6 +3560,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+26 on BAL 1-6 @ 0.18 (maker)\nworst outcome now -2\nheld 78/137/27/39/90/26\nIf the game ends... you make\nBAL 1-6: -11 (-0.5% of bankroll)\nBAL 7-14: -71 (-3.4% of bankroll)\nBAL 15+: +39 (+1.9% of bankroll)\nCIN 1-6: +27 (+1.3% of bankroll)\nCIN 7-14: -24 (-1.1% of bankroll)\nCIN 15+: +41 (+2.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792946414980-c3a904",
+      "ts": "2026-10-25T16:40:14Z",
+      "book": "W8-CINBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: BAL 7-14 worst outcome -2\nIf the game ends... you make\nBAL 1-6: -11 (-0.5% of bankroll)\nBAL 7-14: -71 (-3.4% of bankroll)\nBAL 15+: +40 (+1.9% of bankroll)\nCIN 1-6: +28 (+1.3% of bankroll)\nCIN 7-14: -23 (-1.1% of bankroll)\nCIN 15+: +39 (+1.9% of bankroll)",
       "severity": "warn"
     }
   ]
