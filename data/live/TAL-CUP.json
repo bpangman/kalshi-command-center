@@ -1,10 +1,10 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T19:13:44.504182Z",
+  "generated_at": "2026-10-25T19:15:12.776826Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$116.",
+    "headline": "In race (Ingame). Worst line -$102.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 60,244, 11,537 resting. Worst line -$116. Race 30% done. Floor protocol off."
+          "In race (Ingame). Sold 60,724, 9,398 resting. Worst line -$102. Race 31% done. Floor protocol off."
         ]
       },
       {
@@ -44,54 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T19:13:05Z"
+    "ts": "2026-10-25T19:15:06Z"
   },
   "posts": [
-    {
-      "id": "1792940712195-b0e89c",
-      "ts": "2026-10-25T15:05:10Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$360, worst line -$584. post gate Joey Logano 78@0.08 -> 0 (race_principles; a full fill would take his ",
-      "severity": "info",
-      "title": "Glide"
-    },
-    {
-      "id": "1792940792950-ffdaa0",
-      "ts": "2026-10-25T15:06:15Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Brad Keselowski: no fill for 16 min, added 204 at 4c (was 5c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Brad Keselowski",
-        "from": 0.05,
-        "to": 0.04
-      }
-    },
-    {
-      "id": "1792940833304-530668",
-      "ts": "2026-10-25T15:05:09Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 51: Kyle Larson x51 at 5c. Worst line -$584.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 51.0,
-        "fills": [
-          {
-            "side": "Kyle Larson",
-            "price": 0.05,
-            "qty": 51.0
-          }
-        ]
-      }
-    },
     {
       "id": "1792941055102-bf5ad0",
       "ts": "2026-10-25T15:10:36Z",
@@ -4070,18 +4025,43 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792955625461-a2286c",
+      "ts": "2026-10-25T19:13:33Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: margin hunt: 0 drivers laddered, room used $0 of $1035",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792955685891-b7b1d0",
+      "ts": "2026-10-25T19:13:33Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,800 (race catchup): Riley Herbst x300 at 15c, Casey Mears x150 at 15c, +9 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1800.0,
+        "rows": 11
+      }
+    },
+    {
+      "id": "1792955706078-e0040d",
+      "ts": "2026-10-25T19:14:49Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-YEL26-TYRE: gap $235.39 -> max 235 contracts (evenness/favorite gates by",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1792912039130-1e7fad",
-      "ts": "2026-10-25T07:07:19Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -563.93 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792913935245-1772f2",
       "ts": "2026-10-25T07:38:55Z",
@@ -4971,6 +4951,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+47 on Kyle Larson @ 0.04 (maker)\n+112 on Ricky Stenhouse Jr. @ 0.02 (maker)\n+37 on Austin Hill @ 0.02 (maker)\n+155 on Christopher Bell @ 0.05 (maker)\nworst outcome now -143\nIf the race ends... you make\nDaniel Suarez: -143\nChris Buescher: -143\nKyle Larson: -142\nAustin Hill: -142\nChristopher Bell: -142\nAustin Cindric: -142\nTy Gibbs: -135\nCarson Hocevar: -133\nall others (32) >= -130",
+      "severity": "warn"
+    },
+    {
+      "id": "1792955669632-0cc7f6",
+      "ts": "2026-10-25T19:14:29Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 8 driver(s): Christopher Bell (+78%), Carson Hocevar (+65%), Austin Dillon (+48%), Brad Keselowski (+32%), Austin Cindric (+30%), Denny Hamlin (+23%), Austin Hill (+22%), Connor Zilisch (+22%)",
       "severity": "warn"
     }
   ]
