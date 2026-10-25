@@ -1,19 +1,19 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T20:58:02.461880Z",
+  "generated_at": "2026-10-25T20:59:27.592285Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$106.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 75,009, 11,770 resting. Worst line +$106. Race 84% done. Floor protocol ON. Bot is slow (checks every 50s, set for 30s)."
+          "In race (Ingame). Sold 75,009, 9,621 resting. Worst line +$106. Race 85% done. Floor protocol ON."
         ]
       },
       {
@@ -44,44 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T20:57:54Z"
+    "ts": "2026-10-25T20:58:54Z"
   },
   "posts": [
-    {
-      "id": "1792947263854-0440f4",
-      "ts": "2026-10-25T16:52:04Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 19: Chris Buescher x19 at 5c. Worst line -$471.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 19.0,
-        "fills": [
-          {
-            "side": "Chris Buescher",
-            "price": 0.05,
-            "qty": 19.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1792947344427-b97b32",
-      "ts": "2026-10-25T16:55:42Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Price step on Brad Keselowski: no fill for 125 min, added 204 at 4c (was 5c).",
-      "severity": "info",
-      "title": "Price step",
-      "data": {
-        "side": "Brad Keselowski",
-        "from": 0.05,
-        "to": 0.04
-      }
-    },
     {
       "id": "1792947404755-c2225c",
       "ts": "2026-10-25T16:55:42Z",
@@ -4032,18 +3997,29 @@
       "text": "In race (Ingame). Worst line +$106.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1792961934752-fa2dea",
+      "ts": "2026-10-25T20:58:39Z",
+      "book": "TAL-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite Kyle Larson at 0.36); likely ['Kyle Larson', 'William Byron']; floor mode: KXNASCARR",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792961934759-7fc8e1",
+      "ts": "2026-10-25T20:58:54Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$106.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1792936630445-a2dbb1",
-      "ts": "2026-10-25T13:57:10Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): worst -646.38 vs floor -363.40. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792936667676-388d3f",
       "ts": "2026-10-25T13:57:47Z",
@@ -4933,6 +4909,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (TAL-CUP): 6 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-AJAL low 1665c, KXNASCARRACE-YEL26-TYDI low 2299c, KXNASCARRACE-YEL26-JONE low 1585c, KXNASCARRACE-YEL26-COWA low 2193c, KXNASCARRACE-YEL26-NOGR low 1985c, KXNASCARRACE-YEL26-ZASM low 1742c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792961919274-4020bd",
+      "ts": "2026-10-25T20:58:39Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Endgame mode on: Kyle Larson at 0.36; likely outcomes: Kyle Larson, William Byron; action: none",
       "severity": "warn"
     }
   ]
