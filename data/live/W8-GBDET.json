@@ -1,6 +1,6 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T00:56:36.831326Z",
+  "generated_at": "2026-10-25T00:59:12.746748Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -63,23 +63,23 @@
         "exposure": 18.79,
         "exposure_text": "+$19",
         "move": "Hold price at 21c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 21c (now 13)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 2:40pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (13 traded)."
       },
       {
         "side": "GB by 7-14",
         "resting": "199 @ 15-22c",
         "exposure": 18.79,
         "exposure_text": "+$19",
-        "move": "Hold price at 15c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "move": "Step price down 1c (15c to 14c)",
+        "when": "if no fill by 8:07pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T01:07:06Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 2:40pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Steps to 14c if no fill by 8:07pm CT."
       }
     ],
     "sections": [
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T00:55:45Z"
+    "ts": "2026-10-25T00:58:46Z"
   },
   "posts": [
     {
@@ -2926,6 +2926,16 @@
       "text": "Quiet for 15 min. 1,088 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792889866483-ce8a84",
+      "ts": "2026-10-25T00:57:27Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "GB by 7-14 price not lowered: a full fill would push the worst line to -$43.",
+      "severity": "info",
+      "title": "Price hold"
     }
   ],
   "audits": [
