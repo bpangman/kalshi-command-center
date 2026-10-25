@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T16:35:19.406885Z",
+  "generated_at": "2026-10-25T16:36:39.381614Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,279, 1,206 resting. Worst line -$152. Game 98% done. Floor mode ON: only raising the worst line."
+          "In game (Ingame). Sold 2,279, 1,106 resting. Worst line -$152. Game 100% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "NO by 7-14",
         "held": 221.3,
-        "resting": 386.0,
+        "resting": 361.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "NO by 15+",
         "held": 43.4,
-        "resting": 612.0,
+        "resting": 537.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T16:34:34Z"
+    "ts": "2026-10-25T16:36:35Z"
   },
   "posts": [
-    {
-      "id": "1792836992448-017641",
-      "ts": "2026-10-24T10:16:32Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNO 1-6: +0 (+0.0% of bankroll)\nNO 7-14: +0 (+0.0% of bankroll)\nNO 15+: +0 (+0.0% of bankroll)\nPIT 1-6: +0 (+0.0% of bankroll)\nPIT 7-14: +0 (+0.0% of bankroll)\nPIT 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 489\nNO 7-14: 0 / 413\nNO 15+: 0 / 440\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 0 / 440\nPosted book 1.26 | Sold avg 1.262 | Worst now +98 | Cash free $386\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792837426152-486740",
       "ts": "2026-10-24T10:23:46Z",
@@ -3822,6 +3813,15 @@
       "source": "bot",
       "text": "Inactivity on W8-PITNO: 0 orders posted in 10 min while the market traded 17207 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1792946137687-040040",
+      "ts": "2026-10-25T16:35:37Z",
+      "book": "W8-PITNO",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W8-PITNO: 0 orders posted in 10 min while the market traded 20893 contracts. Cause: the book is at its own collateral cap.",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4597,6 +4597,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1792946137547-1a466d",
+      "ts": "2026-10-25T16:35:37Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -208.50 past allowed limit -150.00",
       "severity": "warn"
     }
   ]
