@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T13:04:54.922728Z",
+  "generated_at": "2026-10-25T13:06:39.176611Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -35,16 +35,16 @@
       },
       {
         "side": "PIT by 1-6",
-        "resting": "244 @ 24-26c",
+        "resting": "76 @ 23c",
         "exposure": 58.71,
         "exposure_text": "+$59",
-        "move": "Step price down 1c (24c to 23c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T13:03:56Z",
+        "move": "Hold price at 23c",
+        "when": "crowd pays 23c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-25T08:02:45Z",
-        "lag_note": "Steps to 23c at the next check."
+        "lag_note": "Price 23c matches the crowd."
       },
       {
         "side": "PIT by 15+",
@@ -74,7 +74,7 @@
       },
       {
         "side": "NO by 7-14",
-        "resting": "422 @ 13-14c",
+        "resting": "370 @ 13-14c",
         "exposure": 214.22,
         "exposure_text": "+$214",
         "move": "Hold price at 13c",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 1,219, 1,532 resting. Worst line -$324 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 1,219, 1,312 resting. Worst line -$324 (goal -$75)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$199 (now -$324).",
+          "Gate closed: batches wait for the worst line to reach -$183 (now -$324).",
           "Batches used: 3 (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$199, worst line -$324; spent $8 of $100.",
+          "Paid balancing is running: plan -$183, worst line -$324; spent $10 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -144,7 +144,7 @@
       {
         "label": "NO by 7-14",
         "held": 29.0,
-        "resting": 422.0,
+        "resting": 370.0,
         "target": null,
         "status": "lagging",
         "price": 0.13
@@ -160,10 +160,10 @@
       {
         "label": "PIT by 1-6",
         "held": 184.5,
-        "resting": 244.0,
+        "resting": 76.0,
         "target": null,
         "status": "lagging",
-        "price": 0.24
+        "price": 0.23
       },
       {
         "label": "PIT by 7-14",
@@ -183,29 +183,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T13:03:56Z"
+    "ts": "2026-10-25T13:05:57Z"
   },
   "posts": [
-    {
-      "id": "1792779379514-7667c7",
-      "ts": "2026-10-23T18:16:19Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792780284961-c70762",
-      "ts": "2026-10-23T18:31:24Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792781192637-19f20c",
       "ts": "2026-10-23T18:46:32Z",
@@ -3492,6 +3472,36 @@
       "text": "Bot note: COVERAGE-CAP decrease NO7TO14: resting 422 -> 370 (held 29 + resting was over the cap 400 = 1.28x; tighten pha",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792933517017-2ed723",
+      "ts": "2026-10-25T13:03:03Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 29: NO by 7-14 x29 at 13c. Worst line -$324.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 29.0,
+        "fills": [
+          {
+            "side": "NO by 7-14",
+            "price": 0.13,
+            "qty": 29.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792933557355-128b93",
+      "ts": "2026-10-25T13:05:51Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 60 PIT by 1-6 at the bid 22c. Worst line -$324. Cost $1.41.",
+      "severity": "info",
+      "title": "Trickle"
     }
   ],
   "audits": [
