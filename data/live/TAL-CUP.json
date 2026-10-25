@@ -1,19 +1,19 @@
 {
   "key": "TAL-CUP",
-  "generated_at": "2026-10-25T20:56:41.371398Z",
+  "generated_at": "2026-10-25T20:58:02.461880Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$106.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 75,009, 9,921 resting. Worst line +$106. Race 83% done. Floor protocol off."
+          "In race (Ingame). Sold 75,009, 11,770 resting. Worst line +$106. Race 84% done. Floor protocol ON. Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "TAL-CUP",
-    "ts": "2026-10-25T20:55:53Z"
+    "ts": "2026-10-25T20:57:54Z"
   },
   "posts": [
-    {
-      "id": "1792947183211-074776",
-      "ts": "2026-10-25T16:53:03Z",
-      "book": "TAL-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Risk glide for the green flag 1:00pm CT. Worst line -$471, final target +$150. Next: Glide target date, 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Risk glide"
-    },
-    {
-      "id": "1792947263851-6cb35d",
-      "ts": "2026-10-25T16:54:06Z",
-      "book": "TAL-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Risk glide: limit -$43, worst line -$471. post gate Christopher Bell 85@0.05 -> 0 (race_anchor_peek; a full fill would tak",
-      "severity": "info",
-      "title": "Glide"
-    },
     {
       "id": "1792947263854-0440f4",
       "ts": "2026-10-25T16:52:04Z",
@@ -4033,18 +4013,28 @@
       "source": "bot",
       "text": "Inactivity on TAL-CUP: 0 orders posted in 10 min while the market traded 309955 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1792961856981-e217ef",
+      "ts": "2026-10-25T20:57:36Z",
+      "book": "TAL-CUP",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is +106; from here only trades that raise it",
+      "severity": "info"
+    },
+    {
+      "id": "1792961874194-c29b88",
+      "ts": "2026-10-25T20:57:54Z",
+      "book": "TAL-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$106.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1792936630444-dd25a0",
-      "ts": "2026-10-25T13:57:10Z",
-      "book": "TAL-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (TAL-CUP): 28 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-CAME low 237c, KXNASCARRACE-YEL26-BRKE low 198c, KXNASCARRACE-YEL26-DEHA low 304c, KXNASCARRACE-YEL26-MIMC low 193c, KXNASCARRACE-YEL26-JOLO low 282c, KXNASCARRACE-YEL26-AUDI low 193c, KXNASCARRACE-YEL26-RIST low 193c, KXNASCARRACE-YEL26-CHBU low 181c, KXNASCARRACE-YEL26-ROCH low 176c, KXNASCARRACE-YEL26-JOGA low 237c, KXNASCARRACE-YEL26-BUWA low 181c, KXNASCARRACE-YEL26-KYLA low 505c, KXNASCARRACE-YEL26-CHEL low 401c, KXNASCARRACE-YEL26-ERJO low 193c, KXNASCARRACE-YEL26-TYRE low 488c, KXNASCARRACE-YEL26-JONE low 237c, KXNASCARRACE-YEL26-COCU low 237c, KXNASCARRACE-YEL26-GRGA low 237c, KXNASCARRACE-YEL26-DASU low 83c, KXNASCARRACE-YEL26-COWA low 237c, KXNASCARRACE-YEL26-AUHI low 616c, KXNASCARRACE-YEL26-CHBE low 233c, KXNASCARRACE-YEL26-AUCI low 1189c, KXNASCARRACE-YEL26-NOGR low 193c, KXNASCARRACE-YEL26-ZASM low 237c, KXNASCARRACE-YEL26-TYGI low 1377c, KXNASCARRACE-YEL26-DADY low 237c, KXNASCARRACE-YEL26-COZI low 160c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792936630445-a2dbb1",
       "ts": "2026-10-25T13:57:10Z",
@@ -4934,6 +4924,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Shock on Chris Buescher: pulled every in-game order, pausing 120s\nIf the race ends... you make\nDaniel Suarez: +106\nDenny Hamlin: +106\nChris Buescher: +106\nRyan Preece: +106\nAlex Bowman: +106\nKyle Larson: +106\nBrad Keselowski: +106\nJoey Logano: +106\nall others (32) >= +106",
+      "severity": "warn"
+    },
+    {
+      "id": "1792961869191-a0eb61",
+      "ts": "2026-10-25T20:57:49Z",
+      "book": "TAL-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (TAL-CUP): 6 ladder(s) stale 10+ min: KXNASCARRACE-YEL26-AJAL low 1665c, KXNASCARRACE-YEL26-TYDI low 2299c, KXNASCARRACE-YEL26-JONE low 1585c, KXNASCARRACE-YEL26-COWA low 2193c, KXNASCARRACE-YEL26-NOGR low 1985c, KXNASCARRACE-YEL26-ZASM low 1742c. Check the command center.",
       "severity": "warn"
     }
   ]
