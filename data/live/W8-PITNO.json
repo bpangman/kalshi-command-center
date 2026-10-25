@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T12:19:10.850103Z",
+  "generated_at": "2026-10-25T12:21:45.742794Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -73,15 +73,15 @@
       },
       {
         "side": "NO by 7-14",
-        "resting": "451 @ 15-18c",
+        "resting": "451 @ 14-15c",
         "exposure": 221.0,
         "exposure_text": "+$221",
-        "move": "Step price down 1c (15c to 14c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T12:19:30Z",
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "if no fill by 7:29am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T12:29:36Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 14c at the next check."
+        "lag_note": "Steps to 13c if no fill by 7:29am CT."
       }
     ],
     "sections": [
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 1-6, PIT by 15+.",
-          "NO by 7-14: 567 behind. Steps to 14c at the next check.",
+          "NO by 7-14: 567 behind. Steps to 13c if no fill by 7:29am CT.",
           "NO by 15+: 567 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -156,7 +156,7 @@
         "resting": 451.0,
         "target": null,
         "status": "lagging",
-        "price": 0.15
+        "price": 0.14
       },
       {
         "label": "NO by 15+",
@@ -192,19 +192,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T12:18:36Z"
+    "ts": "2026-10-25T12:21:37Z"
   },
   "posts": [
-    {
-      "id": "1792759424711-a195b5",
-      "ts": "2026-10-23T12:43:44Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792760331248-f7dbc8",
       "ts": "2026-10-23T12:58:51Z",
@@ -3410,6 +3400,21 @@
       "data": {
         "contracts": 38.0,
         "rows": 1
+      }
+    },
+    {
+      "id": "1792930777070-5323a1",
+      "ts": "2026-10-25T12:19:36Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Price step on NO by 7-14: no fill for 10 min, added 300 at 14c (was 15c).",
+      "severity": "info",
+      "title": "Price step",
+      "data": {
+        "side": "NO by 7-14",
+        "from": 0.15,
+        "to": 0.14
       }
     }
   ],
