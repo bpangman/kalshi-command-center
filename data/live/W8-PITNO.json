@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T16:20:22.427152Z",
+  "generated_at": "2026-10-25T16:21:55.294835Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,279, 715 resting. Worst line -$152. Game 91% done."
+          "In game (Ingame). Sold 2,279, 1,043 resting. Worst line -$152. Game 94% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "NO by 1-6",
         "held": 489.4,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "NO by 7-14",
         "held": 221.3,
-        "resting": 260.0,
+        "resting": 370.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "NO by 15+",
         "held": 43.4,
-        "resting": 447.0,
+        "resting": 552.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "PIT by 15+",
         "held": 455.4,
-        "resting": 7.0,
+        "resting": 121.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T16:19:26Z"
+    "ts": "2026-10-25T16:21:27Z"
   },
   "posts": [
-    {
-      "id": "1792829729595-39ed7a",
-      "ts": "2026-10-24T08:15:29Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNO 1-6: +0 (+0.0% of bankroll)\nNO 7-14: +0 (+0.0% of bankroll)\nNO 15+: +0 (+0.0% of bankroll)\nPIT 1-6: +0 (+0.0% of bankroll)\nPIT 7-14: +0 (+0.0% of bankroll)\nPIT 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nNO 1-6: 0 / 489\nNO 7-14: 0 / 413\nNO 15+: 0 / 440\nPIT 1-6: 0 / 489\nPIT 7-14: 0 / 489\nPIT 15+: 0 / 440\nPosted book 1.26 | Sold avg 1.262 | Worst now +98 | Cash free $386\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1792830169648-4a396e",
       "ts": "2026-10-24T08:22:49Z",
@@ -3824,6 +3815,15 @@
       "text": "Bot note: endgame: active (favorite PIT 1-6 at 0.45); likely ['PIT 1-6', 'PIT 7-14']; endgame: KXNFLWINMARGIN-26OCT25PIT",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1792945244534-6d54b3",
+      "ts": "2026-10-25T16:20:44Z",
+      "book": "W8-PITNO",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is -152; from here only trades that raise it",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4572,6 +4572,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+47 on PIT 1-6 @ 0.58 (taker)\n+1 on NO 1-6 @ 0.24 (maker)\nworst outcome now -129\nheld 489/221/43/456/567/455\nIf the game ends... you make\nNO 1-6: -74 (-2.9% of bankroll)\nNO 7-14: +194 (+7.7% of bankroll)\nNO 15+: +372 (+14.8% of bankroll)\nPIT 1-6: -41 (-1.6% of bankroll)\nPIT 7-14: -152 (-6.0% of bankroll)\nPIT 15+: -40 (-1.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792945310058-22288c",
+      "ts": "2026-10-25T16:21:50Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -195.96 past allowed limit -150.00",
       "severity": "warn"
     }
   ]
