@@ -1,10 +1,10 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-25T16:30:32.379797Z",
+  "generated_at": "2026-10-25T16:32:04.650023Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 12:00pm CT. Worst line -$41, goal -$75.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 12:00pm CT. Worst line -$41.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -15,7 +15,7 @@
         "exposure": -41.25,
         "exposure_text": "-$41",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 11:30am CT",
+        "when": "no move planned until kickoff at 12:00pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T00:41:37Z"
@@ -83,7 +83,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 12:00pm CT. Sold 1,223, 385 resting. Worst line -$41 (goal -$75)."
+          "Final tightening, kickoff 12:00pm CT. Sold 1,223, 385 resting. Worst line -$41 (goal -$75)."
         ]
       },
       {
@@ -108,7 +108,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
           "Paid balancing is running: plan -$75, worst line -$41; spent $0 of $50.",
-          "At 11:30am CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -120,11 +119,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-25T16:30:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$75 or better."
-      },
       {
         "at": "2026-10-25T17:00:00Z",
         "label": "Kickoff",
@@ -182,48 +176,9 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-25T16:29:52Z"
+    "ts": "2026-10-25T16:31:53Z"
   },
   "posts": [
-    {
-      "id": "1792769057945-c21505",
-      "ts": "2026-10-23T15:24:17Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,649 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792769964962-83679c",
-      "ts": "2026-10-23T15:39:24Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,649 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792770872322-296d03",
-      "ts": "2026-10-23T15:54:32Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,649 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792771211786-55790f",
-      "ts": "2026-10-23T16:00:11Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +55 (+2.7% of bankroll)\nATL 7-14: +55 (+2.7% of bankroll)\nATL 15+: +55 (+2.7% of bankroll)\nSF 1-6: +55 (+2.7% of bankroll)\nSF 7-14: -6 (-0.3% of bankroll)\nSF 15+: -192 (-9.5% of bankroll)\nCollected $55 premium ($0 fees) | Paper margin over fair $8 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 489\nATL 7-14: 0 / 451\nATL 15+: 0 / 474\nSF 1-6: 0 / 527\nSF 7-14: 61 / 466\nSF 15+: 247 / 227\nPosted book 1.23 | Sold avg 1.190 | Worst now +74 | Cash free $427\nAnchor age 0s | Last fill 183s ago",
-      "severity": "info"
-    },
     {
       "id": "1792771215412-5d9e9e",
       "ts": "2026-10-23T15:58:06Z",
@@ -3353,6 +3308,45 @@
       "text": "Balanced enough: worst line -$41 beats the -$75 goal. Paid balancing is off.",
       "severity": "info",
       "title": "Even"
+    },
+    {
+      "id": "1792945832681-ede970",
+      "ts": "2026-10-25T16:30:12Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$41. Lagging: ATL by 7-14, ATL by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1792945852878-296879",
+      "ts": "2026-10-25T16:30:52Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792945852879-701ef2",
+      "ts": "2026-10-25T16:30:52Z",
+      "book": "W8-SFATL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 12:00pm CT. Worst line -$41. Next: Kickoff, 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792945897223-602367",
+      "ts": "2026-10-25T16:31:37Z",
+      "book": "W8-SFATL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nATL 1-6: -41 (-2.0% of bankroll)\nATL 7-14: +20 (+1.0% of bankroll)\nATL 15+: +228 (+11.2% of bankroll)\nSF 1-6: -20 (-1.0% of bankroll)\nSF 7-14: -21 (-1.0% of bankroll)\nSF 15+: -22 (-1.1% of bankroll)\nCollected $228 premium ($0 fees) | Paper margin over fair $10 (not realized until settlement)\nEvent: ATL 7-14: ATL 0-0, Q0 0:00; SF 7-14: SF 0-0, Q0 0:00\nheld / resting\nATL 1-6: 269 / 21\nATL 7-14: 208 / 57\nATL 15+: 0 / 250\nSF 1-6: 247 / 54\nSF 7-14: 249 / 1\nSF 15+: 250 / 2\nPosted book 1.20 | Sold avg 1.023 | Worst now -20 | Cash free $218\nAnchor age 0s | Last fill 4225s ago",
+      "severity": "info"
     }
   ],
   "audits": [

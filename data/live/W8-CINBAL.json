@@ -1,21 +1,21 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T16:30:32.379797Z",
+  "generated_at": "2026-10-25T16:32:04.650023Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame balancing",
-    "headline": "Balancing before kickoff 12:00pm CT. Worst line -$76, goal -$75.",
-    "confidence": "medium",
-    "confidence_note": "Timers are set, but reaching -$75 depends on the crowd.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 12:00pm CT. Worst line -$71.",
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
     "moves": [
       {
         "side": "BAL by 7-14",
         "resting": "41 @ 15-22c",
-        "exposure": -75.71,
-        "exposure_text": "-$76",
+        "exposure": -70.98,
+        "exposure_text": "-$71",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 11:30am CT",
+        "when": "no move planned until kickoff at 12:00pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T16:21:22Z"
@@ -23,8 +23,8 @@
       {
         "side": "CIN by 7-14",
         "resting": "47 @ 20-21c",
-        "exposure": -28.25,
-        "exposure_text": "-$28",
+        "exposure": -23.52,
+        "exposure_text": "-$24",
         "move": "Hold price at 20c",
         "when": "crowd pays 20.2c; steps down 1c only if it trades lower",
         "at": null,
@@ -35,22 +35,22 @@
       },
       {
         "side": "BAL by 1-6",
-        "resting": "130 @ 18-33c",
-        "exposure": 10.11,
-        "exposure_text": "+$10",
+        "resting": "104 @ 18-33c",
+        "exposure": -11.42,
+        "exposure_text": "-$11",
         "move": "Hold price at 18c",
         "when": "crowd pays 18.8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
-        "last_fill": "2026-10-25T13:56:16Z",
+        "last_fill": "2026-10-25T16:31:02Z",
         "lag_note": "Price 18c matches the crowd."
       },
       {
         "side": "CIN by 1-6",
         "resting": "143 @ 23-32c",
-        "exposure": 22.75,
-        "exposure_text": "+$23",
+        "exposure": 27.48,
+        "exposure_text": "+$27",
         "move": "Hold price at 23c",
         "when": "needs 50+ crowd trades under 23c (now 21)",
         "at": null,
@@ -62,8 +62,8 @@
       {
         "side": "BAL by 15+",
         "resting": "146 @ 10-13c",
-        "exposure": 34.53,
-        "exposure_text": "+$35",
+        "exposure": 39.26,
+        "exposure_text": "+$39",
         "move": "Hold price at 10c",
         "when": "crowd pays 10c; steps down 1c only if it trades lower",
         "at": null,
@@ -75,8 +75,8 @@
       {
         "side": "CIN by 15+",
         "resting": "151 @ 16-21c",
-        "exposure": 36.04,
-        "exposure_text": "+$36",
+        "exposure": 40.77,
+        "exposure_text": "+$41",
         "move": "Hold price at 16c",
         "when": "needs 50+ crowd trades under 16c (now 4)",
         "at": null,
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame balancing, kickoff 12:00pm CT. Sold 371, 658 resting. Worst line -$76 (goal -$75)."
+          "Final tightening, kickoff 12:00pm CT. Sold 397, 632 resting. Worst line -$71 (goal -$75)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$75 (now -$76).",
+          "Gate open: worst line -$71 is better than -$75.",
           "Batches used: 1 (max 1 per side)."
         ]
       },
@@ -114,8 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$75, worst line -$76; spent $0 of $50.",
-          "At 11:30am CT, if worst line is -$75 or better, paid balancing stops.",
+          "Paid balancing is running: plan -$75, worst line -$71; spent $0 of $50.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -128,11 +127,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-25T16:30:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$75 or better."
-      },
-      {
         "at": "2026-10-25T17:00:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
@@ -141,8 +135,8 @@
     "sides": [
       {
         "label": "BAL by 1-6",
-        "held": 51.6,
-        "resting": 130.0,
+        "held": 77.9,
+        "resting": 103.7,
         "target": null,
         "status": "lagging",
         "price": 0.18
@@ -189,58 +183,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T16:29:32Z"
+    "ts": "2026-10-25T16:31:33Z"
   },
   "posts": [
-    {
-      "id": "1792777042347-33eefe",
-      "ts": "2026-10-23T17:37:22Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792777574144-95d284",
-      "ts": "2026-10-23T17:46:14Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +0 (+0.0% of bankroll)\nBAL 7-14: +0 (+0.0% of bankroll)\nBAL 15+: +0 (+0.0% of bankroll)\nCIN 1-6: +0 (+0.0% of bankroll)\nCIN 7-14: +0 (+0.0% of bankroll)\nCIN 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 527\nBAL 7-14: 0 / 489\nBAL 15+: 0 / 474\nCIN 1-6: 0 / 527\nCIN 7-14: 0 / 451\nCIN 15+: 0 / 474\nPosted book 1.17 | Sold avg 1.171 | Worst now +51 | Cash free $221\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792777949191-bd370e",
-      "ts": "2026-10-23T17:52:29Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792778855825-f9d8d4",
-      "ts": "2026-10-23T18:07:35Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792779762013-7e4d1c",
-      "ts": "2026-10-23T18:22:42Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792780668357-1476d1",
       "ts": "2026-10-23T18:37:48Z",
@@ -3411,6 +3356,55 @@
       "text": "Checkpoint: worst line -$76. Lagging: BAL by 1-6, BAL by 15+, CIN by 1-6 +more.",
       "severity": "info",
       "title": "Checkpoint"
+    },
+    {
+      "id": "1792945832675-89b4b6",
+      "ts": "2026-10-25T16:30:32Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame balancing to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792945832675-288d45",
+      "ts": "2026-10-25T16:30:32Z",
+      "book": "W8-CINBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 12:00pm CT. Worst line -$76. Next: Kickoff, 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792945873053-1ad477",
+      "ts": "2026-10-25T16:31:08Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line -$71 beats the -$75 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1792945893237-a255be",
+      "ts": "2026-10-25T16:31:33Z",
+      "book": "W8-CINBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 12:00pm CT. Worst line -$71. Next: Kickoff, 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792945909909-545ed9",
+      "ts": "2026-10-25T16:31:49Z",
+      "book": "W8-CINBAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBAL 1-6: -11 (-0.5% of bankroll)\nBAL 7-14: -71 (-3.4% of bankroll)\nBAL 15+: +39 (+1.9% of bankroll)\nCIN 1-6: +27 (+1.3% of bankroll)\nCIN 7-14: -24 (-1.1% of bankroll)\nCIN 15+: +41 (+2.0% of bankroll)\nCollected $66 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nEvent: BAL 7-14: BAL 0-0, Q0 0:00; CIN 7-14: CIN 0-0, Q0 0:00\nheld / resting\nBAL 1-6: 78 / 104\nBAL 7-14: 137 / 41\nBAL 15+: 27 / 146\nCIN 1-6: 39 / 143\nCIN 7-14: 90 / 47\nCIN 15+: 26 / 151\nPosted book 1.10 | Sold avg 1.002 | Worst now -2 | Cash free $221\nAnchor age 0s | Last fill 47s ago",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -3538,6 +3532,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+20 on CIN 15+ @ 0.16 (maker)\nworst outcome now -14\nheld 52/106/27/39/90/26\nIf the game ends... you make\nBAL 1-6: +5 (+0.3% of bankroll)\nBAL 7-14: -49 (-2.3% of bankroll)\nBAL 15+: +30 (+1.4% of bankroll)\nCIN 1-6: +18 (+0.9% of bankroll)\nCIN 7-14: -33 (-1.6% of bankroll)\nCIN 15+: +31 (+1.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792945868202-204731",
+      "ts": "2026-10-25T16:31:08Z",
+      "book": "W8-CINBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 2.32 over banked margin 2.10",
       "severity": "warn"
     }
   ]
