@@ -1,6 +1,6 @@
 {
   "key": "W8-SFATL",
-  "generated_at": "2026-10-25T19:57:52.868151Z",
+  "generated_at": "2026-10-25T19:59:45.742167Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,208, 118 resting. Worst line +$50. Game 96% done. Floor mode ON: only raising the worst line. Bot is slow (checks every 22s, set for 5s)."
+          "In game (Ingame). Sold 2,208, 117 resting. Worst line +$50. Game 96% done. Floor mode ON: only raising the worst line. Bot is slow (checks every 17s, set for 5s)."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "ATL by 1-6",
         "held": 373.4,
-        "resting": 4.0,
+        "resting": 3.1,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W8-SFATL",
-    "ts": "2026-10-25T19:57:25Z"
+    "ts": "2026-10-25T19:59:26Z"
   },
   "posts": [
-    {
-      "id": "1792807648811-3637eb",
-      "ts": "2026-10-24T02:07:28Z",
-      "book": "W8-SFATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +73 (+3.6% of bankroll)\nATL 7-14: +73 (+3.6% of bankroll)\nATL 15+: +73 (+3.6% of bankroll)\nSF 1-6: +73 (+3.6% of bankroll)\nSF 7-14: -73 (-3.6% of bankroll)\nSF 15+: -174 (-8.6% of bankroll)\nCollected $73 premium ($0 fees) | Paper margin over fair $10 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 290\nATL 7-14: 0 / 265\nATL 15+: 0 / 250\nSF 1-6: 0 / 302\nSF 7-14: 146 / 97\nSF 15+: 247 / 5\nPosted book 1.18 | Sold avg 1.150 | Worst now +10 | Cash free $387\nAnchor age 0s | Last fill 31483s ago",
-      "severity": "info"
-    },
     {
       "id": "1792808198980-ab70bc",
       "ts": "2026-10-24T02:16:38Z",
@@ -3776,6 +3767,36 @@
       "source": "bot",
       "text": "Floor mode: guaranteed minimum is +41; from here only trades that raise it",
       "severity": "info"
+    },
+    {
+      "id": "1792958285853-db43cc",
+      "ts": "2026-10-25T19:57:19Z",
+      "book": "W8-SFATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 41: ATL by 15+ x25 at 5c, ATL by 7-14 x10 at 49c, ATL by 7-14 x6 at 38c. Worst line +$50.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 41.0,
+        "fills": [
+          {
+            "side": "ATL by 15+",
+            "price": 0.05,
+            "qty": 25.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.49,
+            "qty": 10.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.38,
+            "qty": 6.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4470,6 +4491,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+0 on ATL 1-6 @ 0.53 (maker)\n+2 on ATL 1-6 @ 0.55 (maker)\nworst outcome now +60\nheld 373/365/345/384/312/388\nIf the game ends... you make\nATL 1-6: +55 (+2.7% of bankroll)\nATL 7-14: +64 (+3.2% of bankroll)\nATL 15+: +83 (+4.1% of bankroll)\nSF 1-6: +44 (+2.2% of bankroll)\nSF 7-14: +117 (+5.8% of bankroll)\nSF 15+: +41 (+2.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792958337468-650a8a",
+      "ts": "2026-10-25T19:58:57Z",
+      "book": "W8-SFATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
