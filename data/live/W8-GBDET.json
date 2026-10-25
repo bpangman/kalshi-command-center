@@ -1,6 +1,6 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T19:56:20.853499Z",
+  "generated_at": "2026-10-25T19:57:52.868151Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -44,16 +44,16 @@
       },
       {
         "side": "DET by 1-6",
-        "resting": "86 @ 22-28c",
+        "resting": "64 @ 21-26c",
         "exposure": -0.96,
         "exposure_text": "-$1",
-        "move": "Hold price at 22c",
-        "when": "needs 50+ crowd trades under 22c (now 1)",
+        "move": "Hold price at 21c",
+        "when": "crowd pays 21c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-25T19:15:04Z",
-        "lag_note": "Crowd is quiet here (1 traded)."
+        "lag_note": "Price 21c matches the crowd."
       },
       {
         "side": "GB by 15+",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 814, 505 resting. Worst line -$70 (goal -$75)."
+          "Final tightening, kickoff 3:25pm CT. Sold 814, 483 resting. Worst line -$70 (goal -$75)."
         ]
       },
       {
@@ -122,11 +122,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-25T19:55:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$75 or better."
-      },
-      {
         "at": "2026-10-25T20:25:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
@@ -136,10 +131,10 @@
       {
         "label": "DET by 1-6",
         "held": 142.3,
-        "resting": 85.7,
+        "resting": 64.0,
         "target": null,
         "status": "lagging",
-        "price": 0.22
+        "price": 0.21
       },
       {
         "label": "DET by 7-14",
@@ -183,38 +178,9 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T19:55:24Z"
+    "ts": "2026-10-25T19:57:25Z"
   },
   "posts": [
-    {
-      "id": "1792804834110-58dbef",
-      "ts": "2026-10-24T01:20:34Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792805485780-42b390",
-      "ts": "2026-10-24T01:31:25Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +5 (+0.2% of bankroll)\nDET 7-14: +5 (+0.2% of bankroll)\nDET 15+: +5 (+0.2% of bankroll)\nGB 1-6: +5 (+0.2% of bankroll)\nGB 7-14: +5 (+0.2% of bankroll)\nGB 15+: -45 (-2.2% of bankroll)\nCollected $5 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 209\nDET 7-14: 0 / 204\nDET 15+: 0 / 196\nGB 1-6: 0 / 196\nGB 7-14: 0 / 182\nGB 15+: 50 / 118\nPosted book 1.18 | Sold avg 1.177 | Worst now +23 | Cash free $221\nAnchor age 0s | Last fill 34981s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792805739928-6f2b66",
-      "ts": "2026-10-24T01:35:39Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792806062388-1b7506",
       "ts": "2026-10-24T01:38:44Z",
@@ -3521,6 +3487,39 @@
       "text": "Final tightening before kickoff 3:25pm CT. Worst line -$70. Next: Even-done check, 2:55pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792958185024-c22b35",
+      "ts": "2026-10-25T19:55:53Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 249 (GLIDE-FILL crowd ask 0.18): DET by 15+ x192 at 18c, +1 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 249.0,
+        "rows": 3
+      }
+    },
+    {
+      "id": "1792958185026-7371f2",
+      "ts": "2026-10-25T19:56:25Z",
+      "book": "W8-GBDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 3:25pm CT. Worst line -$70. Next: Kickoff, 3:25pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1792958195986-ac6a5f",
+      "ts": "2026-10-25T19:56:35Z",
+      "book": "W8-GBDET",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nDET 1-6: -1 (-0.0% of bankroll)\nDET 7-14: -70 (-3.4% of bankroll)\nDET 15+: +141 (+6.8% of bankroll)\nGB 1-6: -58 (-2.8% of bankroll)\nGB 7-14: -58 (-2.8% of bankroll)\nGB 15+: +79 (+3.8% of bankroll)\nCollected $141 premium ($0 fees) | Paper margin over fair $6 (not realized until settlement)\nEvent: DET 7-14: DET 0-0, Q0 0:00; GB 7-14: GB 0-0, Q0 0:00\nheld / resting\nDET 1-6: 142 / 64\nDET 7-14: 212 / 7\nDET 15+: 0 / 204\nGB 1-6: 199 / 41\nGB 7-14: 199 / 13\nGB 15+: 62 / 154\nPosted book 1.12 | Sold avg 1.011 | Worst now -22 | Cash free $221\nAnchor age 0s | Last fill 310s ago",
+      "severity": "info"
     }
   ],
   "audits": [
