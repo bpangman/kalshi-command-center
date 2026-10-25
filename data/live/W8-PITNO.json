@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T07:44:05.729556Z",
+  "generated_at": "2026-10-25T07:46:41.619402Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -77,11 +77,11 @@
         "exposure": 107.93,
         "exposure_text": "+$108",
         "move": "Step price down 1c (16c to 15c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-25T07:43:54Z",
+        "when": "if no fill by 2:54am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T07:54:41Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:45am CT",
-        "lag_note": "Steps to 15c at the next check."
+        "lag_note": "Steps to 15c if no fill by 2:54am CT."
       }
     ],
     "sections": [
@@ -95,7 +95,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NO by 1-6, NO by 7-14, NO by 15+, PIT by 1-6, PIT by 15+.",
-          "NO by 7-14: 185 behind. Steps to 15c at the next check.",
+          "NO by 7-14: 185 behind. Steps to 15c if no fill by 2:54am CT.",
           "NO by 15+: 185 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T07:43:32Z"
+    "ts": "2026-10-25T07:46:34Z"
   },
   "posts": [
     {
@@ -3514,6 +3514,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on NO 1-6 @ 0.17 (maker)\nworst outcome now -57\nheld 132/0/0/105/185/132\nIf the game ends... you make\nNO 1-6: -24 (-1.0% of bankroll)\nNO 7-14: +108 (+4.3% of bankroll)\nNO 15+: +108 (+4.3% of bankroll)\nPIT 1-6: +3 (+0.1% of bankroll)\nPIT 7-14: -77 (-3.1% of bankroll)\nPIT 15+: -24 (-1.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792914375841-2caa65",
+      "ts": "2026-10-25T07:46:15Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-PITNO): lagging bucket priced over the crowd: NO7TO14 ask 0.16 vs clearing 0.122 for 85 min. Check the command center.",
       "severity": "warn"
     }
   ]
