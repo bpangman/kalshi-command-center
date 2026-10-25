@@ -1,6 +1,6 @@
 {
   "key": "W8-PITNO",
-  "generated_at": "2026-10-25T13:22:17.132111Z",
+  "generated_at": "2026-10-25T13:23:52.208530Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -27,7 +27,7 @@
         "exposure_text": "-$66",
         "move": "Catch-up batch",
         "when": "next bot check (lagging with nothing resting)",
-        "at": "2026-10-25T13:22:05Z",
+        "at": "2026-10-25T13:23:05Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-25T13:21:36Z",
@@ -183,19 +183,9 @@
       }
     ],
     "book": "W8-PITNO",
-    "ts": "2026-10-25T13:22:05Z"
+    "ts": "2026-10-25T13:23:05Z"
   },
   "posts": [
-    {
-      "id": "1792790260446-0de02c",
-      "ts": "2026-10-23T21:17:40Z",
-      "book": "W8-PITNO",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,760 resting. Next: Paid balancing starts, Sun 7:45am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792791167148-7e62f1",
       "ts": "2026-10-23T21:32:47Z",
@@ -3571,6 +3561,36 @@
       "text": "Balancing: sold 50 NO by 1-6 at the bid 16c. Worst line -$262. Cost $1.16.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1792934545297-ea953e",
+      "ts": "2026-10-25T13:21:56Z",
+      "book": "W8-PITNO",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 113: PIT by 1-6 x63 at 22c, NO by 1-6 x50 at 17c, PIT by 1-6 x0 at 23c. Worst line -$241.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 113.0,
+        "fills": [
+          {
+            "side": "PIT by 1-6",
+            "price": 0.22,
+            "qty": 63.0
+          },
+          {
+            "side": "NO by 1-6",
+            "price": 0.17,
+            "qty": 50.0
+          },
+          {
+            "side": "PIT by 1-6",
+            "price": 0.23,
+            "qty": 0.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4067,6 +4087,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: PIT 7-14 worst outcome -141\nIf the game ends... you make\nNO 1-6: -35 (-1.4% of bankroll)\nNO 7-14: +263 (+10.5% of bankroll)\nNO 15+: +262 (+10.4% of bankroll)\nPIT 1-6: -24 (-1.0% of bankroll)\nPIT 7-14: -262 (-10.4% of bankroll)\nPIT 15+: +41 (+1.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792934580696-55edca",
+      "ts": "2026-10-25T13:23:00Z",
+      "book": "W8-PITNO",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+63 on PIT 1-6 @ 0.22 (taker)\n+50 on NO 1-6 @ 0.17 (taker)\nworst outcome now -120\nheld 390/42/43/392/567/264\nIf the game ends... you make\nNO 1-6: -64 (-2.5% of bankroll)\nNO 7-14: +284 (+11.3% of bankroll)\nNO 15+: +283 (+11.2% of bankroll)\nPIT 1-6: -66 (-2.6% of bankroll)\nPIT 7-14: -241 (-9.6% of bankroll)\nPIT 15+: +62 (+2.5% of bankroll)",
       "severity": "warn"
     }
   ]
