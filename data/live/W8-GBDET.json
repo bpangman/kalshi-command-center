@@ -1,10 +1,10 @@
 {
   "key": "W8-GBDET",
-  "generated_at": "2026-10-25T19:40:07.491809Z",
+  "generated_at": "2026-10-25T19:41:40.415895Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 3:25pm CT. Worst line -$71, goal -$75.",
+    "phase": "Pregame balancing",
+    "headline": "Balancing before kickoff 3:25pm CT. Worst line -$71, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -15,7 +15,7 @@
         "exposure": -70.5,
         "exposure_text": "-$71",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 2:40pm CT",
+        "when": "no move planned until the even-done check at 2:55pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T19:16:07Z"
@@ -26,9 +26,9 @@
         "exposure": -58.33,
         "exposure_text": "-$58",
         "move": "Paid balancing (trickle)",
-        "when": "starts 2:40pm CT, up to $50 in all",
-        "at": "2026-10-25T19:40:00Z",
-        "stuck": false,
+        "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
+        "at": null,
+        "stuck": true,
         "last_fill": "2026-10-25T16:57:07Z"
       },
       {
@@ -37,8 +37,8 @@
         "exposure": -56.87,
         "exposure_text": "-$57",
         "move": "Paid balancing (trickle)",
-        "when": "starts 2:40pm CT, up to $50 in all",
-        "at": "2026-10-25T19:40:00Z",
+        "when": "every 5 min if worst loss is $12+ behind plan (-$75); up to $50 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T19:14:57Z"
       },
@@ -47,11 +47,11 @@
         "resting": "86 @ 22-28c",
         "exposure": -1.15,
         "exposure_text": "-$1",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 2:40pm CT, up to $50 in all",
-        "at": "2026-10-25T19:40:00Z",
+        "move": "Hold price at 22c",
+        "when": "needs 50+ crowd trades under 22c (now 1)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-25T19:15:04Z",
         "lag_note": "Crowd is quiet here (1 traded)."
       },
@@ -60,11 +60,11 @@
         "resting": "154 @ 8-12c",
         "exposure": 79.14,
         "exposure_text": "+$79",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 2:40pm CT, up to $50 in all",
-        "at": "2026-10-25T19:40:00Z",
+        "move": "Hold price at 8c",
+        "when": "crowd pays 9c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-25T13:44:01Z",
         "lag_note": "Price 8c matches the crowd."
       },
@@ -73,11 +73,11 @@
         "resting": "204 @ 19-29c",
         "exposure": 141.14,
         "exposure_text": "+$141",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 2:40pm CT, up to $50 in all",
-        "at": "2026-10-25T19:40:00Z",
+        "move": "Hold price at 19c",
+        "when": "no crowd trade data yet",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "lag_note": "No crowd trade data yet."
       }
     ],
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 813, 506 resting. Worst line -$71 (goal -$75)."
+          "Pregame balancing, kickoff 3:25pm CT. Sold 813, 506 resting. Worst line -$71 (goal -$75)."
         ]
       },
       {
@@ -101,7 +101,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$71 is better than -$100.",
+          "Gate open: worst line -$71 is better than -$75.",
           "Batches used: none (max 1 per side)."
         ]
       },
@@ -109,7 +109,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing starts 2:40pm CT: worst line to -$75 by 3:15pm CT, up to $50.",
+          "Paid balancing is running: plan -$75, worst line -$71; spent $0 of $50.",
           "At 2:55pm CT, if worst line is -$75 or better, paid balancing stops.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
@@ -122,11 +122,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-25T19:40:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$75 by 3:15pm CT."
-      },
       {
         "at": "2026-10-25T19:55:00Z",
         "label": "Even-done check",
@@ -189,48 +184,9 @@
       }
     ],
     "book": "W8-GBDET",
-    "ts": "2026-10-25T19:39:16Z"
+    "ts": "2026-10-25T19:41:17Z"
   },
   "posts": [
-    {
-      "id": "1792797576789-2e75df",
-      "ts": "2026-10-23T23:19:36Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792798220794-0b3752",
-      "ts": "2026-10-23T23:30:20Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +5 (+0.2% of bankroll)\nDET 7-14: +5 (+0.2% of bankroll)\nDET 15+: +5 (+0.2% of bankroll)\nGB 1-6: +5 (+0.2% of bankroll)\nGB 7-14: +5 (+0.2% of bankroll)\nGB 15+: -45 (-2.2% of bankroll)\nCollected $5 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 209\nDET 7-14: 0 / 204\nDET 15+: 0 / 196\nGB 1-6: 0 / 196\nGB 7-14: 0 / 182\nGB 15+: 50 / 118\nPosted book 1.18 | Sold avg 1.177 | Worst now +23 | Cash free $221\nAnchor age 0s | Last fill 27720s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1792798483709-f997a2",
-      "ts": "2026-10-23T23:34:43Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792799390782-a80b2c",
-      "ts": "2026-10-23T23:49:50Z",
-      "book": "W8-GBDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 2:40pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792800298573-6a7c54",
       "ts": "2026-10-24T00:04:58Z",
@@ -3515,6 +3471,46 @@
       "source": "bot",
       "text": "If the game ends... you make\nDET 1-6: -1 (-0.1% of bankroll)\nDET 7-14: -71 (-3.4% of bankroll)\nDET 15+: +141 (+6.8% of bankroll)\nGB 1-6: -57 (-2.7% of bankroll)\nGB 7-14: -58 (-2.8% of bankroll)\nGB 15+: +79 (+3.8% of bankroll)\nCollected $141 premium ($0 fees) | Paper margin over fair $5 (not realized until settlement)\nEvent: DET 7-14: DET 0-0, Q0 0:00; GB 7-14: GB 0-0, Q0 0:00\nheld / resting\nDET 1-6: 142 / 86\nDET 7-14: 212 / 7\nDET 15+: 0 / 204\nGB 1-6: 198 / 42\nGB 7-14: 199 / 13\nGB 15+: 62 / 154\nPosted book 1.15 | Sold avg 1.020 | Worst now -14 | Cash free $221\nAnchor age 0s | Last fill 586s ago",
       "severity": "info"
+    },
+    {
+      "id": "1792957216790-2b60b4",
+      "ts": "2026-10-25T19:40:06Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$70; goal -$75 by 3:15pm CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1792957216793-f6da6b",
+      "ts": "2026-10-25T19:40:16Z",
+      "book": "W8-GBDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Pregame balancing.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792957216793-be38fb",
+      "ts": "2026-10-25T19:40:16Z",
+      "book": "W8-GBDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Balancing before kickoff 3:25pm CT. Worst line -$71, goal -$75. Next: Paid balancing starts, 2:40pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame balancing"
+    },
+    {
+      "id": "1792957277358-11faef",
+      "ts": "2026-10-25T19:41:17Z",
+      "book": "W8-GBDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Balancing before kickoff 3:25pm CT. Worst line -$71, goal -$75. Next: Even-done check, 2:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame balancing"
     }
   ],
   "audits": [
