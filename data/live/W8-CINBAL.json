@@ -1,10 +1,10 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T19:31:02.340079Z",
+  "generated_at": "2026-10-25T19:32:32.600741Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$32.",
+    "headline": "In game (Ingame). Worst line +$33.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 5,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 1,384, 44 resting. Worst line +$32. Game 84% done. Bot is slow (checks every 18s, set for 5s)."
+          "In game (Ingame). Sold 1,388, 43 resting. Worst line +$33. Game 84% done. Bot is slow (checks every 18s, set for 5s)."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "BAL by 1-6",
         "held": 231.6,
-        "resting": 5.0,
+        "resting": 3.6,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "BAL by 7-14",
         "held": 237.0,
-        "resting": 0.0,
+        "resting": 1.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "BAL by 15+",
         "held": 206.2,
-        "resting": 33.0,
+        "resting": 34.0,
         "target": null,
         "status": "even",
         "price": null
@@ -77,16 +77,16 @@
       },
       {
         "label": "CIN by 7-14",
-        "held": 233.7,
-        "resting": 3.2,
+        "held": 235.0,
+        "resting": 1.9,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "CIN by 15+",
-        "held": 235.9,
-        "resting": 3.0,
+        "held": 238.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T19:30:53Z"
+    "ts": "2026-10-25T19:31:53Z"
   },
   "posts": [
-    {
-      "id": "1792819891233-8536e5",
-      "ts": "2026-10-24T05:31:31Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,105 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792820797691-bbdc8b",
       "ts": "2026-10-24T05:46:37Z",
@@ -3807,6 +3797,15 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792956744748-e6eb52",
+      "ts": "2026-10-25T19:32:24Z",
+      "book": "W8-CINBAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBAL 1-6: +41 (+2.0% of bankroll)\nBAL 7-14: +36 (+1.7% of bankroll)\nBAL 15+: +67 (+3.2% of bankroll)\nCIN 1-6: +33 (+1.6% of bankroll)\nCIN 7-14: +38 (+1.8% of bankroll)\nCIN 15+: +33 (+1.6% of bankroll)\nCollected $273 premium ($0 fees) | Paper margin over fair $95 (not realized until settlement)\nEvent: CIN 7-14: CIN 13-21, Q4 9:19; CIN 1-6: CIN 13-21, Q4 9:19\nheld / resting\nBAL 1-6: 232 / 6\nBAL 7-14: 237 / 3\nBAL 15+: 206 / 37\nCIN 1-6: 240 / 0\nCIN 7-14: 235 / 3\nCIN 15+: 240 / 0\nPosted book 1.56 | Sold avg 1.182 | Worst now +38 | Cash free $221\nAnchor age 1568s | Last fill 7s ago",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4096,6 +4095,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1792956731695-c6ecb6",
+      "ts": "2026-10-25T19:32:11Z",
+      "book": "W8-CINBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+0 on CIN 15+ @ 0.16 (maker)\n+1 on CIN 7-14 @ 0.49 (maker)\n+1 on CIN 15+ @ 0.19 (maker)\n+1 on CIN 15+ @ 0.22 (maker)\n+0 on CIN 15+ @ 0.24 (maker)\nworst outcome now +36\nheld 232/237/206/240/235/238\nIf the game ends... you make\nBAL 1-6: +41 (+2.0% of bankroll)\nBAL 7-14: +36 (+1.7% of bankroll)\nBAL 15+: +66 (+3.2% of bankroll)\nCIN 1-6: +33 (+1.6% of bankroll)\nCIN 7-14: +38 (+1.8% of bankroll)\nCIN 15+: +35 (+1.7% of bankroll)",
       "severity": "warn"
     }
   ]
