@@ -1,21 +1,21 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-25T23:34:16.654328Z",
+  "generated_at": "2026-10-25T23:35:34.547899Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$252, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "Pregame balancing",
+    "headline": "Balancing before kickoff 7:20pm CT. Worst line -$250, goal -$150.",
+    "confidence": "medium",
+    "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
     "checks_every_s": 20,
     "moves": [
       {
         "side": "KC by 1-6",
         "resting": "52 @ 26-28c",
-        "exposure": -251.6,
-        "exposure_text": "-$252",
+        "exposure": -249.72,
+        "exposure_text": "-$250",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 6:35pm CT",
+        "when": "no move planned until the even-done check at 6:50pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T22:10:40Z"
@@ -23,62 +23,62 @@
       {
         "side": "KC by 7-14",
         "resting": "none",
-        "exposure": -219.27,
-        "exposure_text": "-$219",
+        "exposure": -217.39,
+        "exposure_text": "-$217",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-25T23:35:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T23:18:17Z"
       },
       {
         "side": "SEA by 7-14",
         "resting": "220 @ 20-23c",
-        "exposure": -171.44,
-        "exposure_text": "-$171",
+        "exposure": -169.56,
+        "exposure_text": "-$170",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-25T23:35:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-25T23:28:24Z"
       },
       {
         "side": "SEA by 15+",
         "resting": "506 @ 15-20c",
-        "exposure": 151.02,
-        "exposure_text": "+$151",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-25T23:35:00Z",
+        "exposure": 152.9,
+        "exposure_text": "+$153",
+        "move": "Hold price at 15c",
+        "when": "next cent is under the crowd price (14.2c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-25T23:30:01Z",
         "lag_note": "Price 15c is at its floor."
       },
       {
         "side": "SEA by 1-6",
         "resting": "458 @ 22-24c",
-        "exposure": 253.59,
-        "exposure_text": "+$254",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-25T23:35:00Z",
+        "exposure": 255.47,
+        "exposure_text": "+$255",
+        "move": "Hold price at 22c",
+        "when": "crowd pays 21.7c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-25T23:32:20Z",
         "lag_note": "Price 22c matches the crowd."
       },
       {
         "side": "KC by 15+",
-        "resting": "688 @ 9-12c",
-        "exposure": 407.2,
-        "exposure_text": "+$407",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:35pm CT, up to $100 in all",
-        "at": "2026-10-25T23:35:00Z",
+        "resting": "667 @ 9-12c",
+        "exposure": 388.2,
+        "exposure_text": "+$388",
+        "move": "Hold price at 9c",
+        "when": "crowd pays 9c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-10-25T23:33:23Z",
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-25T23:34:53Z",
         "lag_note": "Price 9c matches the crowd."
       }
     ],
@@ -86,14 +86,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 4,897, 1,924 resting. Worst line -$252 (goal -$150)."
+          "Pregame balancing, kickoff 7:20pm CT. Sold 4,918, 1,903 resting. Worst line -$250 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): KC by 15+, SEA by 1-6, SEA by 15+.",
-          "KC by 15+: 659 behind. Price 9c matches the crowd.",
+          "KC by 15+: 638 behind. Price 9c matches the crowd.",
           "SEA by 1-6: 505 behind. Price 22c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -102,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$252).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$250).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -110,7 +110,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 6:35pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
+          "Paid balancing is running: plan unknown, worst line -$250; spent $0 of $100.",
           "At 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
@@ -158,8 +158,8 @@
       },
       {
         "label": "KC by 15+",
-        "held": 437.2,
-        "resting": 687.8,
+        "held": 458.1,
+        "resting": 666.9,
         "target": null,
         "status": "lagging",
         "price": 0.09
@@ -190,49 +190,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-25T23:34:01Z"
+    "ts": "2026-10-25T23:35:02Z"
   },
   "posts": [
-    {
-      "id": "1792826743248-86e72f",
-      "ts": "2026-10-24T07:25:43Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792827650584-4536f0",
-      "ts": "2026-10-24T07:40:50Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792828557487-01e339",
-      "ts": "2026-10-24T07:55:57Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792829464580-e39633",
-      "ts": "2026-10-24T08:11:04Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792829496522-0aa516",
       "ts": "2026-10-24T08:11:36Z",
@@ -3917,6 +3877,61 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792971282110-0e480f",
+      "ts": "2026-10-25T23:33:33Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 69: KC by 15+ x50 at 9c, SEA by 1-6 x19 at 22c. Worst line -$252.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 69.0,
+        "fills": [
+          {
+            "side": "KC by 15+",
+            "price": 0.09,
+            "qty": 50.0
+          },
+          {
+            "side": "SEA by 1-6",
+            "price": 0.22,
+            "qty": 19.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1792971302299-ee2123",
+      "ts": "2026-10-25T23:35:02Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Pregame balancing.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1792971302299-3f56bc",
+      "ts": "2026-10-25T23:35:02Z",
+      "book": "W8-KCSEA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Balancing before kickoff 7:20pm CT. Worst line -$250, goal -$150. Next: Paid balancing starts, 6:35pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame balancing"
+    },
+    {
+      "id": "1792971322405-c82c7c",
+      "ts": "2026-10-25T23:35:20Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$244; goal -$150 by 7:10pm CT.",
+      "severity": "info",
+      "title": "Trickle"
     }
   ],
   "audits": [
