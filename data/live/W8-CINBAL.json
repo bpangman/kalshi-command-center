@@ -1,10 +1,10 @@
 {
   "key": "W8-CINBAL",
-  "generated_at": "2026-10-25T13:28:32.690939Z",
+  "generated_at": "2026-10-25T13:30:19.139890Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 12:00pm CT. Worst line -$48, goal -$75.",
+    "headline": "Building toward kickoff 12:00pm CT. Worst line -$47, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "CIN by 7-14",
         "resting": "14 @ 22-25c",
-        "exposure": -48.34,
-        "exposure_text": "-$48",
+        "exposure": -47.48,
+        "exposure_text": "-$47",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at 11:15am CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "BAL by 1-6",
         "resting": "131 @ 19-33c",
-        "exposure": -8.98,
-        "exposure_text": "-$9",
+        "exposure": -8.12,
+        "exposure_text": "-$8",
         "move": "Hold price at 19c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -36,8 +36,8 @@
       {
         "side": "BAL by 7-14",
         "resting": "147 @ 14-22c",
-        "exposure": -4.34,
-        "exposure_text": "-$4",
+        "exposure": -3.48,
+        "exposure_text": "-$3",
         "move": "Hold price at 14c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -49,8 +49,8 @@
       {
         "side": "CIN by 1-6",
         "resting": "143 @ 25-32c",
-        "exposure": 2.66,
-        "exposure_text": "+$3",
+        "exposure": 3.52,
+        "exposure_text": "+$4",
         "move": "Hold price at 25c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -60,35 +60,36 @@
         "lag_note": "No crowd trade data yet."
       },
       {
+        "side": "CIN by 15+",
+        "resting": "171 @ 16-21c",
+        "exposure": 36.81,
+        "exposure_text": "+$37",
+        "move": "Step price down 1c (16c to 15c)",
+        "when": "if no fill by 8:38am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-25T13:38:37Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts 11:15am CT",
+        "last_fill": "2026-10-25T13:28:37Z",
+        "lag_note": "Steps to 15c if no fill by 8:38am CT."
+      },
+      {
         "side": "BAL by 15+",
         "resting": "173 @ 10-13c",
-        "exposure": 41.66,
-        "exposure_text": "+$42",
+        "exposure": 42.52,
+        "exposure_text": "+$43",
         "move": "Hold price at 10c",
         "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 11:15am CT",
         "lag_note": "No crowd trade data yet."
-      },
-      {
-        "side": "CIN by 15+",
-        "resting": "177 @ 14-21c",
-        "exposure": 41.66,
-        "exposure_text": "+$42",
-        "move": "Hold price at 14c",
-        "when": "needs 50+ crowd trades under 14c (now 2)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts 11:15am CT",
-        "lag_note": "Crowd is quiet here (2 traded)."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 226, 785 resting. Worst line -$48 (goal -$75)."
+          "Pregame build, kickoff 12:00pm CT. Sold 231, 779 resting. Worst line -$47 (goal -$75)."
         ]
       },
       {
@@ -96,7 +97,7 @@
         "lines": [
           "Lagging (75+ behind the leader): BAL by 1-6, BAL by 7-14, BAL by 15+, CIN by 1-6, CIN by 15+.",
           "BAL by 15+: 90 behind. No crowd trade data yet.",
-          "CIN by 15+: 90 behind. Crowd is quiet here (2 traded).",
+          "CIN by 15+: 84 behind. Steps to 15c if no fill by 8:38am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -104,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$48 is better than -$100.",
+          "Gate open: worst line -$47 is better than -$100.",
           "Batches used: 1 (max 1 per side)."
         ]
       },
@@ -184,46 +185,17 @@
       },
       {
         "label": "CIN by 15+",
-        "held": 0.0,
-        "resting": 177.0,
+        "held": 5.7,
+        "resting": 171.3,
         "target": null,
         "status": "lagging",
-        "price": 0.14
+        "price": 0.16
       }
     ],
     "book": "W8-CINBAL",
-    "ts": "2026-10-25T13:28:07Z"
+    "ts": "2026-10-25T13:30:08Z"
   },
   "posts": [
-    {
-      "id": "1792744391151-cad46e",
-      "ts": "2026-10-23T08:33:11Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792744796702-95da0f",
-      "ts": "2026-10-23T08:39:56Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +0 (+0.0% of bankroll)\nBAL 7-14: +0 (+0.0% of bankroll)\nBAL 15+: +0 (+0.0% of bankroll)\nCIN 1-6: +0 (+0.0% of bankroll)\nCIN 7-14: +0 (+0.0% of bankroll)\nCIN 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 527\nBAL 7-14: 0 / 489\nBAL 15+: 0 / 474\nCIN 1-6: 0 / 527\nCIN 7-14: 0 / 451\nCIN 15+: 0 / 474\nPosted book 1.17 | Sold avg 1.171 | Worst now +51 | Cash free $221\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792745297803-b32d12",
-      "ts": "2026-10-23T08:48:17Z",
-      "book": "W8-CINBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,942 resting. Next: Paid balancing starts, Sun 11:15am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792746204697-dfd910",
       "ts": "2026-10-23T09:03:24Z",
@@ -3311,6 +3283,36 @@
         "contracts": 149.0,
         "rows": 4
       }
+    },
+    {
+      "id": "1792934968364-26e0d1",
+      "ts": "2026-10-25T13:29:22Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: CIN by 15+ at 15c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792934968364-60b326",
+      "ts": "2026-10-25T13:29:22Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: CIN by 15+ at 14c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1792934968365-8b2fd1",
+      "ts": "2026-10-25T13:29:22Z",
+      "book": "W8-CINBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: CIN by 15+ at 14c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
