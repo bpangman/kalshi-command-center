@@ -229,6 +229,12 @@ and status, or search), and the record book (by-day table plus recent fills).
 WATCHING means no real orders are being sent. Home also gets a Clinch tile
 (profit and mode). The page re-checks every 30 seconds and shows an amber or
 red banner when the report is old.
+The data file also carries `running` (true while the module is up) and
+`next_start` (ISO time of its next scheduled start). When `running` is false and
+`next_start` is ahead, the tab shows a calm blue "Clinch is idle. Next run
+starts at ..." notice instead of a stale alarm; if the start time passed more
+than 10 minutes ago the red banner says Clinch should have started. A file with
+no `running` field (older data) keeps the age-only behavior.
 
 Data: `data/clinch.json`, copied unchanged by the feed daemon from the
 module's `tools/fleet/state/clinch/dashboard.json` (see

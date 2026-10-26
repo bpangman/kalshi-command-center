@@ -213,6 +213,21 @@
     return isNaN(ms) ? null : (Date.now() - ms) / 1000;
   }
 
+  /* Idle vs running. Newer data files say whether the daemon is up (`running`) and when it starts next (`next_start`).
+     Returns null for older files (keep the age-based behavior), or {kind, ms}:
+       idle   - not running and the next start is still ahead (or only just passed): a calm notice, never an alarm
+       missed - not running and the scheduled start passed more than 10 minutes ago: a real problem */
+  var MISSED_GRACE_S = 10 * 60;
+  function idleState() {
+    var d = C.data;
+    if (!d || d.running !== false) return null;
+    var ms = parseMs(d.next_start);
+    if (isNaN(ms)) return null;
+    var late = (Date.now() - ms) / 1000;
+    if (late > MISSED_GRACE_S) return { kind: "missed", ms: ms };
+    return { kind: "idle", ms: ms, due: late > 0 };
+  }
+
   /* -- data -- */
 
   function fetchData() {
@@ -375,7 +390,15 @@
       msg = null;
     } else if (C.data) {
       var age = ageSeconds();
-      if (age === null) {
+      var idle = idleState();
+      if (idle && idle.kind === "missed") {
+        level = "bad";
+        msg = "Clinch should have started at " + stamp(new Date(idle.ms).toISOString()) + " and has not reported in. Check the Mac.";
+      } else if (idle) {
+        level = "info";
+        msg = idle.due ? "Clinch is about to start (scheduled for " + stamp(new Date(idle.ms).toISOString()) + ")."
+                       : "Clinch is idle. Next run starts at " + stamp(new Date(idle.ms).toISOString()) + ".";
+      } else if (age === null) {
         msg = "This report has no timestamp, so there is no way to tell how fresh it is.";
       } else if (age > STALE_AGE_S) {
         level = "bad";
@@ -824,7 +847,7 @@
     sum.className = "cl-group-sum";
     sum.appendChild(el("span", "cl-group-name", game));
     var first = list[0];
-    sum.appendChild(el("span", "cl-group-time", clock(first.start_time)));
+    sum.appendChild(el("span", "cl-group-time", first.start_time ? "first game " + clock(first.start_time) : ""));
     var meta = el("span", "cl-group-meta");
     meta.appendChild(document.createTextNode(plural(list.length, "target")));
     var got = list.filter(function (t) { return num(t.contracts) > 0; }).length;
@@ -1032,7 +1055,7 @@
     var sub = el("div", "sub");
     sub.appendChild(el("span", "cl-mode cl-mode-" + mode.cls + " cl-mode-mini", mode.label));
     var age = ageSeconds();
-    sub.appendChild(document.createTextNode(" " + (d.mode === "watch" ? "no real orders" : whole(t.contracts) + " contracts") + (age !== null && age > STALE_AGE_S ? " - stale" : "")));
+    sub.appendChild(document.createTextNode(" " + (d.mode === "watch" ? "no real orders" : whole(t.contracts) + " contracts") + (age !== null && age > STALE_AGE_S && !idleState() ? " - stale" : "")));
     a.appendChild(sub);
     host.appendChild(a);
     host.classList.add("has-clinch");
