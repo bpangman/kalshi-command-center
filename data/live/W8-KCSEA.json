@@ -1,10 +1,10 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-26T01:44:09.420813Z",
+  "generated_at": "2026-10-26T01:45:20.476628Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$48.",
+    "headline": "In game (Ingame). Worst line -$47.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,782, 688 resting. Worst line -$48. Game 50% done."
+          "In game (Ingame). Sold 6,795, 669 resting. Worst line -$47. Game 50% done."
         ]
       },
       {
@@ -46,15 +46,15 @@
       {
         "label": "KC by 1-6",
         "held": 1213.1,
-        "resting": 16.0,
+        "resting": 32.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "KC by 7-14",
-        "held": 1081.7,
-        "resting": 171.8,
+        "held": 1093.7,
+        "resting": 140.8,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "KC by 15+",
         "held": 787.0,
-        "resting": 497.0,
+        "resting": 496.0,
         "target": null,
         "status": "even",
         "price": null
@@ -85,8 +85,8 @@
       },
       {
         "label": "SEA by 15+",
-        "held": 1225.5,
-        "resting": 3.0,
+        "held": 1226.5,
+        "resting": 0.2,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-26T01:43:56Z"
+    "ts": "2026-10-26T01:44:56Z"
   },
   "posts": [
-    {
-      "id": "1792873905248-9f4189",
-      "ts": "2026-10-24T20:31:45Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792874812073-6a0233",
       "ts": "2026-10-24T20:46:52Z",
@@ -4311,18 +4301,54 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792979096868-0d13b4",
+      "ts": "2026-10-26T01:44:03Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 24: KC by 7-14 x12 at 7c, SEA by 1-6 x4 at 23c, SEA by 7-14 x3 at 31c, +3 more. Worst line -$47.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 24.0,
+        "fills": [
+          {
+            "side": "KC by 7-14",
+            "price": 0.07,
+            "qty": 12.0
+          },
+          {
+            "side": "SEA by 1-6",
+            "price": 0.23,
+            "qty": 4.0
+          },
+          {
+            "side": "SEA by 7-14",
+            "price": 0.31,
+            "qty": 3.0
+          },
+          {
+            "side": "SEA by 1-6",
+            "price": 0.21,
+            "qty": 2.0
+          },
+          {
+            "side": "KC by 1-6",
+            "price": 0.15,
+            "qty": 2.0
+          },
+          {
+            "side": "SEA by 15+",
+            "price": 0.28,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792929056507-5117ea",
-      "ts": "2026-10-25T11:50:56Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): held worst -384.12 (backstop -300) or lagging gap 550 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1792930767417-233da7",
       "ts": "2026-10-25T12:19:27Z",
@@ -5212,6 +5238,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W8-KCSEA - Seattle by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792979108387-ed124c",
+      "ts": "2026-10-26T01:45:08Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (floor -11.9% of slice, no cushion to spend)\nIf the game ends... you make\nSEA 1-6: -47 (-2.1% of bankroll)\nSEA 7-14: -35 (-1.6% of bankroll)\nSEA 15+: -31 (-1.4% of bankroll)\nKC 1-6: -17 (-0.8% of bankroll)\nKC 7-14: +102 (+4.6% of bankroll)\nKC 15+: +409 (+18.5% of bankroll)",
       "severity": "warn"
     }
   ]
