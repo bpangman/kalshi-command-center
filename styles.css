@@ -1009,7 +1009,8 @@ tfoot td {
 
 .book-tile-outcome-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) 0.6fr 0.6fr 0.9fr 0.6fr;
+  /* 2026-10-26 (Blake): sixth cell, "crowd / mine" (.oc), to the right of the price */
+  grid-template-columns: minmax(0, 1.4fr) 0.6fr 0.6fr 0.9fr 0.6fr 0.95fr;
   gap: 4px;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -1023,9 +1024,19 @@ tfoot td {
 .book-tile-outcome-row .or,
 .book-tile-outcome-row .oh,
 .book-tile-outcome-row .oo,
-.book-tile-outcome-row .op {
+.book-tile-outcome-row .op,
+.book-tile-outcome-row .oc {
   text-align: right;
 }
+
+/* "crowd / mine" (Blake 2026-10-26): crowd in white, slash muted, mine
+   green when it is a planned ladder rung, red when it is a catch-up row
+   dropped to the crowd's rate, plain when the ladder state is unknown. */
+.book-tile-outcome-row .oc .oc-crowd { color: #fff; }
+.book-tile-outcome-row .oc .oc-slash { color: var(--muted, #888); padding: 0 1px; }
+.book-tile-outcome-row .oc .oc-mine { color: var(--text, inherit); }
+.book-tile-outcome-row .oc .oc-mine.planned { color: var(--green); font-weight: 600; }
+.book-tile-outcome-row .oc .oc-mine.dropped { color: var(--red); font-weight: 600; }
 
 .book-tile-row4 {
   display: flex;
