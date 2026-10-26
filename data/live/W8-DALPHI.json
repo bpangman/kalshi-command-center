@@ -1,6 +1,6 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T21:57:52.241352Z",
+  "generated_at": "2026-10-26T21:59:38.726293Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -178,38 +178,9 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T21:57:37Z"
+    "ts": "2026-10-26T21:58:38Z"
   },
   "posts": [
-    {
-      "id": "1792864573493-c7d257",
-      "ts": "2026-10-24T17:56:13Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792864838882-493779",
-      "ts": "2026-10-24T18:00:38Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nPHI 1-6: +0 (+0.0% of bankroll)\nPHI 7-14: +0 (+0.0% of bankroll)\nPHI 15+: +0 (+0.0% of bankroll)\nDAL 1-6: +0 (+0.0% of bankroll)\nDAL 7-14: +0 (+0.0% of bankroll)\nDAL 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nPHI 1-6: 0 / 975\nPHI 7-14: 0 / 825\nPHI 15+: 0 / 875\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 975\nDAL 15+: 0 / 877\nPosted book 1.26 | Sold avg 1.259 | Worst now +193 | Cash free $1039\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792865481003-cc1cda",
-      "ts": "2026-10-24T18:11:21Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792866388297-c44bf7",
       "ts": "2026-10-24T18:26:28Z",
@@ -3345,6 +3316,35 @@
       "text": "Quiet for 15 min. 4,869 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793051898137-68508e",
+      "ts": "2026-10-26T21:58:06Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1793051919624-00ecb8",
+      "ts": "2026-10-26T21:58:39Z",
+      "book": "W8-DALPHI",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W8-DALPHI: 0 orders posted in 10 min while the market traded 980 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1793051938501-9a4b51",
+      "ts": "2026-10-26T21:58:38Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$650 is under -$300. DAL by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
@@ -3922,6 +3922,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-DALPHI): held worst -650.30 (backstop -300) or lagging gap 919 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793051886866-ec1765",
+      "ts": "2026-10-26T21:58:06Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
