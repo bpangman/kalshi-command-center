@@ -1866,7 +1866,56 @@ function buildTileOutcomeRow(o, deciCent) {
   price.textContent = (o.market_yes_price !== null && o.market_yes_price !== undefined) ? fmtCents(o.market_yes_price, deciCent) : "-";
   row.appendChild(price);
 
+  row.appendChild(buildCrowdMineCell(o, deciCent));
+
   return row;
+}
+
+/* -- "crowd / mine" (Blake 2026-10-26) ----------------------------------
+   One more cell on every tile outcome row: the crowd's best ask on that
+   outcome with our own orders taken out of the book, a slash, then OUR
+   lowest resting ask. "Mine" is green when that lowest row is one of the
+   ladder's planned rungs, red when it is a catch-up row the bot dropped to
+   the crowd's rate below the plan, plain when the bot's ladder state is not
+   on disk. Both numbers come straight from the feed (crowd_ask, our_ask,
+   our_ask_state, our_planned_ask: tools/feed/crowd_mine.py), never
+   re-derived here. A dash where a side is missing. */
+function fmtCentsBare(p, deciCent) {
+  if (p === null || p === undefined || Number.isNaN(Number(p))) return "-";
+  if (deciCent) return (Math.round(Number(p) * 1000) / 10).toFixed(1);
+  return String(Math.round(Number(p) * 100));
+}
+
+function buildCrowdMineCell(o, deciCent) {
+  var cell = document.createElement("span");
+  cell.className = "oc";
+  var hasCrowd = o.crowd_ask !== null && o.crowd_ask !== undefined;
+  var hasMine = o.our_ask !== null && o.our_ask !== undefined;
+  var crowd = document.createElement("span");
+  crowd.className = "oc-crowd";
+  crowd.textContent = hasCrowd ? fmtCentsBare(o.crowd_ask, deciCent) : "-";
+  cell.appendChild(crowd);
+  var slash = document.createElement("span");
+  slash.className = "oc-slash";
+  slash.textContent = "/";
+  cell.appendChild(slash);
+  var mine = document.createElement("span");
+  var st = o.our_ask_state;
+  mine.className = "oc-mine" + (hasMine && st === "planned" ? " planned" : "") + (hasMine && st === "dropped" ? " dropped" : "");
+  mine.textContent = hasMine ? fmtCentsBare(o.our_ask, deciCent) : "-";
+  cell.appendChild(mine);
+  var tip = "Crowd / mine: the crowd's best ask (our own orders removed) / our lowest resting ask.";
+  if (hasMine && st === "dropped") {
+    tip += " Red: our lowest row is a catch-up row at the crowd's rate" +
+      ((o.our_planned_ask !== null && o.our_planned_ask !== undefined) ? ", under our planned " + fmtCents(o.our_planned_ask, deciCent) : "") + ".";
+  } else if (hasMine && st === "planned") {
+    tip += " Green: our lowest row is a planned ladder rung.";
+  } else if (hasMine) {
+    tip += " No ladder state on disk for this book, so the row is not colored.";
+  }
+  if (!hasCrowd) tip += " No crowd ask: nobody but us is offering on this outcome.";
+  cell.title = tip;
+  return cell;
 }
 
 function buildBookTile(b, opts) {
