@@ -1,39 +1,19 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T02:14:13.926653Z",
+  "generated_at": "2026-10-26T02:15:24.837337Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Mon 7:15pm CT. Worst line $0, goal -$150.",
+    "headline": "Building toward kickoff Mon 7:15pm CT. Worst line -$21, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "DAL by 1-6",
-        "resting": "975 @ 25-32c",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
-        "side": "DAL by 15+",
-        "resting": "945 @ 24-32c",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
-        "at": null,
-        "stuck": false
-      },
-      {
         "side": "DAL by 7-14",
-        "resting": "1,050 @ 22-26c",
-        "exposure": 0.0,
-        "exposure_text": "$0",
+        "resting": "1,024 @ 22-26c",
+        "exposure": -20.62,
+        "exposure_text": "-$21",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
         "at": null,
@@ -41,54 +21,87 @@
         "last_fill": "2026-10-26T02:13:23Z"
       },
       {
+        "side": "DAL by 1-6",
+        "resting": "975 @ 25-32c",
+        "exposure": 5.81,
+        "exposure_text": "+$6",
+        "move": "Hold price at 25c",
+        "when": "needs 50+ crowd trades under 25c (now 44)",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "lag_note": "Crowd is quiet here (44 traded)."
+      },
+      {
+        "side": "DAL by 15+",
+        "resting": "945 @ 24-32c",
+        "exposure": 5.81,
+        "exposure_text": "+$6",
+        "move": "Hold price at 24c",
+        "when": "needs 50+ crowd trades under 24c (now 13)",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "lag_note": "Crowd is quiet here (13 traded)."
+      },
+      {
         "side": "PHI by 1-6",
         "resting": "975 @ 21-28c",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
+        "exposure": 5.81,
+        "exposure_text": "+$6",
+        "move": "Hold price at 21c",
+        "when": "needs 50+ crowd trades under 21c (now 13)",
         "at": null,
-        "stuck": false
+        "stuck": false,
+        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "lag_note": "Crowd is quiet here (13 traded)."
       },
       {
         "side": "PHI by 15+",
         "resting": "945 @ 9-18c",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
+        "exposure": 5.81,
+        "exposure_text": "+$6",
+        "move": "Hold price at 9c",
+        "when": "no crowd trade data yet",
         "at": null,
-        "stuck": false
+        "stuck": false,
+        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "PHI by 7-14",
         "resting": "825 @ 14-21c",
-        "exposure": 0.0,
-        "exposure_text": "$0",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
+        "exposure": 5.81,
+        "exposure_text": "+$6",
+        "move": "Hold price at 14c",
+        "when": "needs 50+ crowd trades under 14c (now 22)",
         "at": null,
-        "stuck": false
+        "stuck": false,
+        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "lag_note": "Crowd is quiet here (22 traded)."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Mon 7:15pm CT. Sold 0, 5,715 resting. Worst line $0 (goal -$150)."
+          "Pregame build, kickoff Mon 7:15pm CT. Sold 26, 5,689 resting. Worst line -$21 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): DAL by 1-6, DAL by 15+, PHI by 1-6, PHI by 7-14, PHI by 15+.",
+          "DAL by 1-6: 26 behind. Crowd is quiet here (44 traded).",
+          "DAL by 15+: 26 behind. Crowd is quiet here (13 traded).",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line $0 is better than -$200.",
+          "Gate open: worst line -$21 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -131,13 +144,13 @@
         "held": 0.0,
         "resting": 975.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.25
       },
       {
         "label": "DAL by 7-14",
-        "held": 0.0,
-        "resting": 1050.0,
+        "held": 26.4,
+        "resting": 1023.6,
         "target": null,
         "status": "even",
         "price": 0.22
@@ -147,7 +160,7 @@
         "held": 0.0,
         "resting": 945.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.24
       },
       {
@@ -155,7 +168,7 @@
         "held": 0.0,
         "resting": 975.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.21
       },
       {
@@ -163,7 +176,7 @@
         "held": 0.0,
         "resting": 825.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
@@ -171,12 +184,12 @@
         "held": 0.0,
         "resting": 945.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.09
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T02:14:11Z"
+    "ts": "2026-10-26T02:15:11Z"
   },
   "posts": [
     {
@@ -2639,6 +2652,16 @@
       "text": "Quiet for 15 min. 5,715 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1792980911730-0c972a",
+      "ts": "2026-10-26T02:15:11Z",
+      "book": "W8-DALPHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Mon 7:15pm CT. Worst line -$21, goal -$150. Next: Paid balancing starts, Mon 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
