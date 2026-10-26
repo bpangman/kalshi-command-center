@@ -1,10 +1,10 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-26T01:36:39.286508Z",
+  "generated_at": "2026-10-26T01:37:53.410451Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$52.",
+    "headline": "In game (Ingame). Worst line -$50.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,740, 647 resting. Worst line -$52. Game 48% done."
+          "In game (Ingame). Sold 6,754, 653 resting. Worst line -$50. Game 48% done."
         ]
       },
       {
@@ -62,22 +62,22 @@
       {
         "label": "KC by 15+",
         "held": 787.0,
-        "resting": 485.5,
+        "resting": 488.5,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SEA by 1-6",
-        "held": 1233.7,
-        "resting": 0.0,
+        "held": 1236.7,
+        "resting": 3.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SEA by 7-14",
-        "held": 1216.7,
+        "held": 1226.7,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -85,7 +85,7 @@
       },
       {
         "label": "SEA by 15+",
-        "held": 1213.5,
+        "held": 1214.5,
         "resting": 2.0,
         "target": null,
         "status": "even",
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-26T01:35:53Z"
+    "ts": "2026-10-26T01:36:53Z"
   },
   "posts": [
-    {
-      "id": "1792870278407-b829aa",
-      "ts": "2026-10-24T19:31:18Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792871184861-132379",
-      "ts": "2026-10-24T19:46:24Z",
-      "book": "W8-KCSEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,092 resting. Next: Paid balancing starts, Sun 6:35pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792872092229-a24e8f",
       "ts": "2026-10-24T20:01:32Z",
@@ -4245,18 +4225,59 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792978653876-63cbc1",
+      "ts": "2026-10-26T01:37:16Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26OCT25KCSEA-SEA1TO6: held floor -53, resting 4 -> cap 3, trimmed 1 highest-pri",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1792978653879-facd16",
+      "ts": "2026-10-26T01:36:33Z",
+      "book": "W8-KCSEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 19: SEA by 7-14 x7 at 30c, SEA by 15+ x5 at 34c, SEA by 1-6 x3 at 21c, +2 more. Worst line -$50.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 19.0,
+        "fills": [
+          {
+            "side": "SEA by 7-14",
+            "price": 0.3,
+            "qty": 7.0
+          },
+          {
+            "side": "SEA by 15+",
+            "price": 0.34,
+            "qty": 5.0
+          },
+          {
+            "side": "SEA by 1-6",
+            "price": 0.21,
+            "qty": 3.0
+          },
+          {
+            "side": "SEA by 7-14",
+            "price": 0.33,
+            "qty": 3.0
+          },
+          {
+            "side": "SEA by 15+",
+            "price": 0.37,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1792926998411-5dcf43",
-      "ts": "2026-10-25T11:16:38Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): worst -384.12 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1792927181883-bd0f02",
       "ts": "2026-10-25T11:19:41Z",
@@ -5146,6 +5167,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: in-game ladder shrink on SEA 15+ failed - order(s) rejected: [{'code': 'invalid_order', 'details': 'post only cross', 'message': 'invalid order'}]\nIf the game ends... you make\nSEA 1-6: -76 (-3.4% of bankroll)\nSEA 7-14: -20 (-0.9% of bankroll)\nSEA 15+: -9 (-0.4% of bankroll)\nKC 1-6: -47 (-2.1% of bankroll)\nKC 7-14: +76 (+3.4% of bankroll)\nKC 15+: +371 (+16.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792978613864-f56d35",
+      "ts": "2026-10-26T01:36:53Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+12 on SEA 15+ @ 0.28 (maker)\n+1 on SEA 15+ @ 0.30 (maker)\n+5 on SEA 7-14 @ 0.32 (maker)\n+19 on SEA 7-14 @ 0.34 (maker)\n+5 on SEA 15+ @ 0.34 (maker)\n+7 on SEA 7-14 @ 0.30 (maker)\n+3 on SEA 1-6 @ 0.21 (maker)\n+1 on SEA 15+ @ 0.37 (maker)\n+3 on SEA 7-14 @ 0.33 (maker)\nworst outcome now -34\nheld 1237/1227/1215/1207/1082/787\nIf the game ends... you make\nSEA 1-6: -50 (-2.3% of bankroll)\nSEA 7-14: -40 (-1.8% of bankroll)\nSEA 15+: -28 (-1.3% of bankroll)\nKC 1-6: -21 (-0.9% of bankroll)\nKC 7-14: +105 (+4.7% of bankroll)\nKC 15+: +399 (+18.1% of bankroll)",
       "severity": "warn"
     }
   ]
