@@ -1861,11 +1861,8 @@ function buildTileOutcomeRow(o, deciCent) {
   outcomeNow.textContent = fmtMoney(o.outcome_now);
   row.appendChild(outcomeNow);
 
-  var price = document.createElement("span");
-  price.className = "op";
-  price.textContent = (o.market_yes_price !== null && o.market_yes_price !== undefined) ? fmtCents(o.market_yes_price, deciCent) : "-";
-  row.appendChild(price);
-
+  // 2026-10-26 (Blake): the old raw "price" cell (Kalshi's best ask including our own rows and
+  // dust) is gone; "crowd / mine" below carries the price now and is not duplicated.
   row.appendChild(buildCrowdMineCell(o, deciCent));
 
   return row;
@@ -2033,7 +2030,9 @@ function buildBookTile(b, opts) {
   // shows both what the book is filling at and the vig the crowd is offering.
   var hasCov = (b.coverage_ratio !== null && b.coverage_ratio !== undefined && isFinite(b.coverage_ratio));
   var hasSum = (b.posted_book_sum !== null && b.posted_book_sum !== undefined && isFinite(b.posted_book_sum));
-  if (hasCov || hasSum) {
+  var hasAnyVig = hasSum || (b.crowd_book_sum !== null && b.crowd_book_sum !== undefined && isFinite(b.crowd_book_sum)) ||
+    (b.my_book_sum !== null && b.my_book_sum !== undefined && isFinite(b.my_book_sum));
+  if (hasCov || hasAnyVig) {
     var covWrap = document.createElement("span");
     covWrap.className = "book-tile-coverage-wrap";
     var covSpan = document.createElement("span");
@@ -2046,21 +2045,44 @@ function buildBookTile(b, opts) {
       covSpan.className = "book-tile-coverage none";
       covSpan.textContent = "\u2013";
     }
-    covSpan.title = "Filling at (coverage ratio): 1.00 or more means every outcome is positive";
+    covSpan.title = "Coverage margin (filling at): net premium over the most contracts held on one outcome; 1.00 or more means every outcome is positive";
     covWrap.appendChild(covSpan);
-    if (hasSum) {
+    // 2026-10-26 (Blake): "coverage / crowd vig / my vig", aligned with the per-outcome
+    // "crowd / mine". Crowd vig = the crowd's real asks (our rows removed, dust ignored)
+    // added up over the field; my vig = our lowest resting ask added up (the crowd standing
+    // in where nothing of ours rests). Both come from the feed (crowd_book_sum, my_book_sum,
+    // tools/feed/crowd_mine.py book_sums) on every pass, never re-derived here. Older feed
+    // data without them falls back to the single posted book sum.
+    var hasCrowdVig = (b.crowd_book_sum !== null && b.crowd_book_sum !== undefined && isFinite(b.crowd_book_sum));
+    var hasMyVig = (b.my_book_sum !== null && b.my_book_sum !== undefined && isFinite(b.my_book_sum));
+    var nAll = b.posted_book_sum_outcomes;
+    function vigSpan(val, cls, title) {
       var slash = document.createElement("span");
       slash.className = "book-tile-booksum-slash";
       slash.textContent = " / ";
       covWrap.appendChild(slash);
-      var sumSpan = document.createElement("span");
-      sumSpan.className = "book-tile-booksum";
-      sumSpan.textContent = Number(b.posted_book_sum).toFixed(2);
-      var nRest = b.posted_book_sum_resting_outcomes, nAll = b.posted_book_sum_outcomes;
-      sumSpan.title = "Posted book sum: our lowest resting ask on every outcome added up" +
+      var sp = document.createElement("span");
+      sp.className = "book-tile-booksum " + cls;
+      sp.textContent = Number(val).toFixed(2);
+      sp.title = title;
+      covWrap.appendChild(sp);
+    }
+    if (hasCrowdVig || hasMyVig) {
+      if (hasCrowdVig) {
+        vigSpan(b.crowd_book_sum, "crowd-vig", "Crowd vig: the crowd's best ask on every outcome (our own orders taken out, tiny orders ignored) added up" +
+          ((b.crowd_book_sum_outcomes !== undefined && nAll !== undefined) ? " (" + b.crowd_book_sum_outcomes + " of " + nAll + " outcomes have a crowd ask; our ask stands in on the rest)" : "") +
+          ". Over 1.00 = the crowd is charging a vig.");
+      }
+      if (hasMyVig) {
+        vigSpan(b.my_book_sum, "my-vig", "My vig: our lowest resting ask on every outcome added up" +
+          ((b.my_book_sum_outcomes !== undefined && nAll !== undefined) ? " (" + b.my_book_sum_outcomes + " of " + nAll + " outcomes from our own asks; the crowd's ask stands in on the rest)" : "") +
+          ". Over 1.00 = the crowd pays a vig at our prices.");
+      }
+    } else if (hasSum) {
+      var nRest = b.posted_book_sum_resting_outcomes;
+      vigSpan(b.posted_book_sum, "my-vig", "Posted book sum: our lowest resting ask on every outcome added up" +
         ((nRest !== undefined && nAll !== undefined) ? " (" + nRest + " of " + nAll + " outcomes from our own asks, the rest from the crowd's best ask)" : "") +
-        ". Over 1.00 = the crowd is paying a vig at these prices.";
-      covWrap.appendChild(sumSpan);
+        ". Over 1.00 = the crowd is paying a vig at these prices.");
     }
     row4.appendChild(covWrap);
   }

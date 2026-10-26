@@ -1009,8 +1009,8 @@ tfoot td {
 
 .book-tile-outcome-row {
   display: grid;
-  /* 2026-10-26 (Blake): sixth cell, "crowd / mine" (.oc), to the right of the price */
-  grid-template-columns: minmax(0, 1.4fr) 0.6fr 0.6fr 0.9fr 0.6fr 0.95fr;
+  /* 2026-10-26 (Blake): "crowd / mine" (.oc) replaced the old raw price cell; five cells */
+  grid-template-columns: minmax(0, 1.4fr) 0.6fr 0.6fr 0.9fr 1.0fr;
   gap: 4px;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -1067,6 +1067,10 @@ tfoot td {
 /* Blake 2026-10-19: posted book sum (sum of our asks over every outcome), white */
 .book-tile-row4 .book-tile-booksum-slash { color: var(--muted, #888); font-weight: 400; }
 .book-tile-row4 .book-tile-booksum { color: #fff; }
+/* 2026-10-26 (Blake): "coverage / crowd vig / my vig": crowd in white like the per-outcome crowd
+   price, mine slightly dimmer so the three numbers read as one line of the same shape */
+.book-tile-row4 .book-tile-booksum.crowd-vig { color: #fff; }
+.book-tile-row4 .book-tile-booksum.my-vig { color: var(--text, #ddd); }
 
 .book-tile-row4 .floor-mode-tag {
   background: rgba(63, 185, 80, 0.15);
