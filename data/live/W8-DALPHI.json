@@ -1,6 +1,6 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T03:09:04.826464Z",
+  "generated_at": "2026-10-26T03:10:18.978210Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -62,11 +62,11 @@
         "exposure": 5.81,
         "exposure_text": "+$6",
         "move": "Hold price at 9c",
-        "when": "no crowd trade data yet",
+        "when": "needs 50+ crowd trades under 9c (now 25)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
-        "lag_note": "No crowd trade data yet."
+        "lag_note": "Crowd is quiet here (25 traded)."
       },
       {
         "side": "PHI by 7-14",
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T03:08:33Z"
+    "ts": "2026-10-26T03:09:33Z"
   },
   "posts": [
     {
@@ -2730,6 +2730,16 @@
       "text": "Bot warning: PHI1TO6 ask 0.21 vs clearing 0.140 for 45 min",
       "severity": "warn",
       "title": "Lag alert"
+    },
+    {
+      "id": "1792984193451-522315",
+      "ts": "2026-10-26T03:09:47Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
@@ -2767,6 +2777,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-DALPHI): lagging bucket priced over the crowd: DAL1TO6 ask 0.25 vs clearing 0.200 for 52 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792984187952-bca96a",
+      "ts": "2026-10-26T03:09:47Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792984200848-257110",
+      "ts": "2026-10-26T03:10:00Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 0.03 over banked margin 0.00",
       "severity": "warn"
     }
   ]
