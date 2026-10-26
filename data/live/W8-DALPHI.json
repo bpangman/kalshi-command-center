@@ -1,10 +1,10 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T05:02:01.193738Z",
+  "generated_at": "2026-10-26T05:03:10.658312Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$102, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$100, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "DAL by 7-14",
         "resting": "758 @ 24-26c",
-        "exposure": -101.54,
-        "exposure_text": "-$102",
+        "exposure": -99.71,
+        "exposure_text": "-$100",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at 6:30pm CT",
         "at": null,
@@ -22,20 +22,20 @@
       },
       {
         "side": "DAL by 15+",
-        "resting": "873 @ 24-27c",
-        "exposure": -39.94,
-        "exposure_text": "-$40",
+        "resting": "866 @ 24-27c",
+        "exposure": -45.76,
+        "exposure_text": "-$46",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-26T23:30:00Z",
         "stuck": false,
-        "last_fill": "2026-10-26T05:00:40Z"
+        "last_fill": "2026-10-26T05:01:03Z"
       },
       {
         "side": "PHI by 15+",
         "resting": "940 @ 9-18c",
-        "exposure": 55.3,
-        "exposure_text": "+$55",
+        "exposure": 57.13,
+        "exposure_text": "+$57",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-26T23:30:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "DAL by 1-6",
         "resting": "975 @ 25-32c",
-        "exposure": 59.89,
-        "exposure_text": "+$60",
+        "exposure": 61.72,
+        "exposure_text": "+$62",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-26T23:30:00Z",
@@ -55,8 +55,8 @@
       {
         "side": "PHI by 1-6",
         "resting": "975 @ 21-28c",
-        "exposure": 59.89,
-        "exposure_text": "+$60",
+        "exposure": 61.72,
+        "exposure_text": "+$62",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-26T23:30:00Z",
@@ -65,8 +65,8 @@
       {
         "side": "PHI by 7-14",
         "resting": "825 @ 14-21c",
-        "exposure": 59.89,
-        "exposure_text": "+$60",
+        "exposure": 61.72,
+        "exposure_text": "+$62",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:30pm CT, up to $100 in all",
         "at": "2026-10-26T23:30:00Z",
@@ -77,7 +77,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 266, 5,347 resting. Worst line -$102 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 274, 5,339 resting. Worst line -$100 (goal -$150)."
         ]
       },
       {
@@ -90,7 +90,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$102 is better than -$200.",
+          "Gate open: worst line -$100 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -146,8 +146,8 @@
       },
       {
         "label": "DAL by 15+",
-        "held": 99.8,
-        "resting": 873.2,
+        "held": 107.5,
+        "resting": 865.5,
         "target": null,
         "status": "even",
         "price": 0.24
@@ -178,7 +178,7 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T05:01:18Z"
+    "ts": "2026-10-26T05:02:19Z"
   },
   "posts": [
     {
@@ -2988,6 +2988,26 @@
       "text": "Building toward kickoff Mon 7:16pm CT. Worst line -$102, goal -$150. Next: Paid balancing starts, Mon 6:31pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1792990979436-69ba7b",
+      "ts": "2026-10-26T05:02:01Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 12: DAL by 15+ x12 at 24c. Worst line -$100.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 12.0,
+        "fills": [
+          {
+            "side": "DAL by 15+",
+            "price": 0.24,
+            "qty": 12.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3115,6 +3135,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1792990921824-bb2aef",
+      "ts": "2026-10-26T05:02:01Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+11 on DAL 15+ @ 0.24 (maker)\nworst outcome now +192\nheld 0/0/5/0/161/107\nIf the game ends... you make\nPHI 1-6: +62 (+2.2% of bankroll)\nPHI 7-14: +62 (+2.2% of bankroll)\nPHI 15+: +57 (+2.1% of bankroll)\nDAL 1-6: +62 (+2.2% of bankroll)\nDAL 7-14: -100 (-3.6% of bankroll)\nDAL 15+: -46 (-1.7% of bankroll)",
       "severity": "warn"
     }
   ]
