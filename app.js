@@ -8,7 +8,7 @@
    em/en dashes, anywhere in this file including comments and strings. */
 
 var SPORTS = ["NFL", "NASCAR", "F1", "Golf", "UFC"];
-var ROUTES = ["home", "live", "nfl", "nascar", "f1", "golf", "ufc", "calendar"];
+var ROUTES = ["home", "live", "clinch", "nfl", "nascar", "f1", "golf", "ufc", "calendar"];
 var ROUTE_TO_SPORT = {};
 SPORTS.forEach(function (s) { ROUTE_TO_SPORT[s.toLowerCase()] = s; });
 
@@ -485,6 +485,7 @@ function applyRoute(route) {
     }
   });
   if (window.LiveTab) window.LiveTab.setActive(route === "live"); // LIVE tab (live.js) polls only while it is open
+  if (window.ClinchTab) window.ClinchTab.setActive(route === "clinch"); // Clinch tab (clinch.js) polls only while it is open
   // Every page (Home included, 2026-10-02) gets the wider wrapper so a
   // live-book tile grid has room for 4 across.
   var wrapEl = document.querySelector(".wrap");
@@ -506,6 +507,8 @@ function renderForRoute(route) {
     renderAwaitingBlock(document.getElementById("awaiting-block"), awaitingBooks());
   } else if (route === "live") {
     if (window.LiveTab) window.LiveTab.render(); // live.js owns this page's DOM and its own 30s polling
+  } else if (route === "clinch") {
+    if (window.ClinchTab) window.ClinchTab.render(); // clinch.js owns this page's DOM and its own 30s polling
   } else if (route === "calendar") {
     renderCalendarPage();
   } else {
@@ -591,6 +594,8 @@ function renderHomeTiles() {
   if (allocNote) {
     allocNote.hidden = !f.allocation_target;
   }
+
+  if (window.ClinchTab) window.ClinchTab.homeHook(); // Clinch tile (profit + mode) after the four above; clinch.js fetches its own file
 }
 
 /* -- chart tooltip dismissal (touch devices stick the tooltip open with
