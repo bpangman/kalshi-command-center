@@ -1,6 +1,6 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T04:35:51.397304Z",
+  "generated_at": "2026-10-26T04:37:59.888924Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -53,7 +53,7 @@
         "exposure_text": "+$59",
         "move": "Step price down 1c (25c to 24c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-26T04:35:08Z",
+        "at": "2026-10-26T04:37:08Z",
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
         "lag_note": "Steps to 24c at the next check."
@@ -65,7 +65,7 @@
         "exposure_text": "+$59",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-26T04:35:08Z",
+        "at": "2026-10-26T04:37:08Z",
         "stuck": false,
         "also": "Also: paid balancing starts Mon 6:30pm CT",
         "lag_note": "Steps to 20c at the next check."
@@ -163,7 +163,7 @@
         "resting": 877.0,
         "target": null,
         "status": "lagging",
-        "price": 0.25
+        "price": 0.24
       },
       {
         "label": "PHI by 1-6",
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T04:35:08Z"
+    "ts": "2026-10-26T04:37:08Z"
   },
   "posts": [
     {
@@ -2967,6 +2967,20 @@
           }
         ]
       }
+    },
+    {
+      "id": "1792989368636-4c0c75",
+      "ts": "2026-10-26T04:34:08Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 81 (ANCHOR step 0.24): DAL by 15+ x81 at 24c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 81.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -3076,6 +3090,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+67 on DAL 15+ @ 0.24 (maker)\nworst outcome now +198\nheld 0/0/5/0/161/96\nIf the game ends... you make\nPHI 1-6: +59 (+2.1% of bankroll)\nPHI 7-14: +59 (+2.1% of bankroll)\nPHI 15+: +54 (+2.0% of bankroll)\nDAL 1-6: +59 (+2.1% of bankroll)\nDAL 7-14: -102 (-3.7% of bankroll)\nDAL 15+: -37 (-1.3% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792989460950-3f2e35",
+      "ts": "2026-10-26T04:37:40Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-DALPHI): lagging bucket priced over the crowd: DAL1TO6 ask 0.25 vs clearing 0.209 for 143 min. Check the command center.",
       "severity": "warn"
     }
   ]
