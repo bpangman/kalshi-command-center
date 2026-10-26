@@ -1,10 +1,10 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T23:29:11.648354Z",
+  "generated_at": "2026-10-26T23:30:29.949576Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$448, goal -$150.",
+    "phase": "Pregame balancing",
+    "headline": "Balancing before kickoff 7:15pm CT. Worst line -$448, goal -$150.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 79,
@@ -15,7 +15,7 @@
         "exposure": -448.05,
         "exposure_text": "-$448",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 6:30pm CT",
+        "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-26T15:27:26Z"
@@ -26,8 +26,8 @@
         "exposure": -78.25,
         "exposure_text": "-$78",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-26T23:30:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-26T22:45:30Z"
       },
@@ -37,8 +37,8 @@
         "exposure": 141.38,
         "exposure_text": "+$141",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-26T23:30:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false
       },
       {
@@ -47,8 +47,8 @@
         "exposure": 246.82,
         "exposure_text": "+$247",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-26T23:30:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-26T22:15:12Z"
       },
@@ -58,8 +58,8 @@
         "exposure": 466.79,
         "exposure_text": "+$467",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-26T23:30:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-10-26T03:40:46Z"
       },
@@ -69,8 +69,8 @@
         "exposure": 471.38,
         "exposure_text": "+$471",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:30pm CT, up to $100 in all",
-        "at": "2026-10-26T23:30:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false
       }
     ],
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 2,028, 5,856 resting. Worst line -$448 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
+          "Pregame balancing, kickoff 7:15pm CT. Sold 2,028, 5,856 resting. Worst line -$448 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
@@ -99,7 +99,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 6:30pm CT: worst line to -$150 by 7:05pm CT, up to $100.",
+          "Paid balancing is running: plan unknown, worst line -$448; spent $0 of $100.",
           "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
@@ -179,29 +179,9 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T23:28:14Z"
+    "ts": "2026-10-26T23:30:15Z"
   },
   "posts": [
-    {
-      "id": "1792884525914-ad1d8e",
-      "ts": "2026-10-24T23:28:45Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792885433222-94bed2",
-      "ts": "2026-10-24T23:43:53Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792886340236-6707af",
       "ts": "2026-10-24T23:59:00Z",
@@ -3394,6 +3374,26 @@
       "text": "Building toward kickoff 7:15pm CT. Worst line -$448, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1793057415174-782558",
+      "ts": "2026-10-26T23:30:15Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Pregame balancing.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793057415174-118c8c",
+      "ts": "2026-10-26T23:30:15Z",
+      "book": "W8-DALPHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Balancing before kickoff 7:15pm CT. Worst line -$448, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame balancing"
     }
   ],
   "audits": [
