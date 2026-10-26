@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T03:16:16.720668Z",
+  "generated_at": "2026-10-26T03:19:09.862363Z",
   "cash_free": 6086.98,
   "locked_collateral": 78.32,
   "books": [
@@ -14,13 +14,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-10-24T00:52:32.329048Z",
-      "start_time": "2026-10-27T00:15:02.296274Z",
+      "start_time": "2026-10-27T00:15:02.294619Z",
       "ends_by_time": "2026-10-27T03:15:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-10-26T03:15:14Z",
+      "heartbeat_ts": "2026-10-26T03:18:22Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 55.6,
+      "heartbeat_age_s": 42.8,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 1039.0,
@@ -43,11 +43,11 @@
       "worst_now": -21.4,
       "best_now": 6.03,
       "worst_all_resting": 145.13,
-      "market_implied_outcome_now": -0.52,
-      "market_implied_trend_15m": 0.05,
+      "market_implied_outcome_now": -0.48,
+      "market_implied_trend_15m": 0.09,
       "break_glass": {
-        "locked_floor": -77.0,
-        "cost": 68.97
+        "locked_floor": -18.51,
+        "cost": 20.55
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -58,7 +58,7 @@
           "resting": 1022.57,
           "avg_sale_price": 0.22,
           "market_yes_price": 0.22,
-          "implied_prob": 0.2316,
+          "implied_prob": 0.2292,
           "outcome_now": -21.4,
           "win_pct": 21.5,
           "win_src": "mid",
@@ -71,7 +71,7 @@
           "resting": 975.0,
           "avg_sale_price": null,
           "market_yes_price": 0.13,
-          "implied_prob": 0.1368,
+          "implied_prob": 0.1354,
           "outcome_now": 6.03,
           "win_pct": 12.0,
           "win_src": "mid",
@@ -83,10 +83,10 @@
           "held": 0.0,
           "resting": 825.0,
           "avg_sale_price": null,
-          "market_yes_price": 0.11,
-          "implied_prob": 0.1158,
+          "market_yes_price": 0.12,
+          "implied_prob": 0.125,
           "outcome_now": 6.03,
-          "win_pct": 9.5,
+          "win_pct": 10.0,
           "win_src": "mid",
           "settled": null
         },
@@ -97,7 +97,7 @@
           "resting": 945.0,
           "avg_sale_price": null,
           "market_yes_price": 0.08,
-          "implied_prob": 0.0842,
+          "implied_prob": 0.0833,
           "outcome_now": 6.03,
           "win_pct": 7.5,
           "win_src": "mid",
@@ -110,7 +110,7 @@
           "resting": 975.0,
           "avg_sale_price": null,
           "market_yes_price": 0.19,
-          "implied_prob": 0.2,
+          "implied_prob": 0.1979,
           "outcome_now": 6.03,
           "win_pct": 18.5,
           "win_src": "mid",
@@ -123,7 +123,7 @@
           "resting": 945.0,
           "avg_sale_price": null,
           "market_yes_price": 0.22,
-          "implied_prob": 0.2316,
+          "implied_prob": 0.2292,
           "outcome_now": 6.03,
           "win_pct": 21.0,
           "win_src": "mid",
@@ -228,12 +228,12 @@
             "p_home": 0.331,
             "spread_home": 4.5,
             "total": 44.0,
-            "ts": 1792984449.199819
+            "ts": 1792984699.7053812
           },
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 324,
+            "unchanged_s": 512,
             "need_s": 900.0,
             "moved": {
               "bovada": 0.0,
@@ -250,27 +250,35 @@
         "inactives_checkpoints_done": []
       },
       "game_clock": null
-    },
+    }
+  ],
+  "awaiting": [
     {
       "key": "W8-KCSEA",
       "sport": "NFL",
       "event_ticker": "KXNFLWINMARGIN-26OCT25KCSEA",
       "title": "Kansas City Chiefs at Seattle Seahawks",
       "subtitle": null,
-      "phase": "In play",
-      "liveness": "live",
-      "liveness_reason": "trading",
-      "awaiting_info": null,
+      "phase": "Awaiting settlement",
+      "liveness": "awaiting_settlement",
+      "liveness_reason": "the event is over per the bot's own live feed; waiting for Kalshi to settle",
+      "awaiting_info": {
+        "likely_winner": "Seattle Seahawks wins by 15+",
+        "likely_win_pct": 99.5,
+        "result_if_likely_wins": -75.36,
+        "floor": -90.16,
+        "best": 366.17
+      },
       "first_posted_time": "2026-10-23T00:54:17.519449Z",
-      "start_time": "2026-10-26T00:19:59.769698Z",
+      "start_time": "2026-10-26T00:20:01.096282Z",
       "ends_by_time": "2026-10-26T03:20:00Z",
       "ends_by_time_approx": true,
-      "in_play": true,
-      "heartbeat_ts": "2026-10-26T03:16:09Z",
+      "in_play": false,
+      "heartbeat_ts": "2026-10-26T03:18:57Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 0.6,
+      "heartbeat_age_s": 7.8,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 7000.2,
+      "anchor_age_s": 7166.8,
       "allocation_dollars": 881.0,
       "allocation_note": "allocator: W8-KCSEA fixed at 881.00 (ALLOC_FIXED.json), granted c_max $396.45",
       "starting_bankroll": 2208.35,
@@ -291,12 +299,9 @@
       "worst_now": -90.16,
       "best_now": 366.17,
       "worst_all_resting": -66.94,
-      "market_implied_outcome_now": -75.36,
-      "market_implied_trend_15m": -32.2,
-      "break_glass": {
-        "locked_floor": -122.91,
-        "cost": 47.55
-      },
+      "market_implied_outcome_now": -72.4,
+      "market_implied_trend_15m": -29.24,
+      "break_glass": null,
       "is_deci_cent": false,
       "outcomes": [
         {
@@ -306,10 +311,10 @@
           "resting": 0.0,
           "avg_sale_price": 0.2144,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0087,
+          "implied_prob": 0.0095,
           "outcome_now": -90.16,
           "win_pct": 0.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null
         },
         {
@@ -318,11 +323,11 @@
           "held": 1243.07,
           "resting": 0.0,
           "avg_sale_price": 0.2233,
-          "market_yes_price": 0.07,
-          "implied_prob": 0.0609,
+          "market_yes_price": 0.01,
+          "implied_prob": 0.0095,
           "outcome_now": -89.9,
-          "win_pct": 2.5,
-          "win_src": "bot",
+          "win_pct": 0.5,
+          "win_src": "mid",
           "settled": null
         },
         {
@@ -332,10 +337,10 @@
           "resting": 0.0,
           "avg_sale_price": 0.1576,
           "market_yes_price": 1.0,
-          "implied_prob": 0.8696,
+          "implied_prob": 0.9524,
           "outcome_now": -75.36,
           "win_pct": 99.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null
         },
         {
@@ -344,11 +349,11 @@
           "held": 1153.16,
           "resting": 0.0,
           "avg_sale_price": 0.1907,
-          "market_yes_price": 0.05,
-          "implied_prob": 0.0435,
+          "market_yes_price": 0.01,
+          "implied_prob": 0.0095,
           "outcome_now": 0.01,
-          "win_pct": 1.5,
-          "win_src": "bot",
+          "win_pct": 0.5,
+          "win_src": "mid",
           "settled": null
         },
         {
@@ -358,10 +363,10 @@
           "resting": 154.0,
           "avg_sale_price": 0.138,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0087,
+          "implied_prob": 0.0095,
           "outcome_now": 41.49,
           "win_pct": 0.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null
         },
         {
@@ -371,10 +376,10 @@
           "resting": 533.0,
           "avg_sale_price": 0.0957,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0087,
+          "implied_prob": 0.0095,
           "outcome_now": 366.17,
           "win_pct": 0.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null
         }
       ],
@@ -384,12 +389,12 @@
           "win_pct": 99.5
         },
         {
-          "label": "Seattle Seahawks wins by 1-6",
-          "win_pct": 2.5
+          "label": "Kansas City Chiefs wins by 1-6",
+          "win_pct": 0.5
         },
         {
-          "label": "Seattle Seahawks wins by 7-14",
-          "win_pct": 1.5
+          "label": "Seattle Seahawks wins by 1-6",
+          "win_pct": 0.5
         }
       ],
       "last_fill_ts": "2026-10-26T02:56:33.576339Z",
@@ -493,156 +498,6 @@
           "fair": 0.1991,
           "fair_source": "event_state",
           "margin_cents": -7.91
-        },
-        {
-          "ts": "2026-10-26T02:47:09.47769Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 20.0,
-          "price": 0.14,
-          "fair": 0.0274,
-          "fair_source": "event_state",
-          "margin_cents": 11.26
-        },
-        {
-          "ts": "2026-10-26T02:44:48.062674Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 1.99,
-          "price": 0.14,
-          "fair": 0.039,
-          "fair_source": "event_state",
-          "margin_cents": 10.1
-        },
-        {
-          "ts": "2026-10-26T02:41:52.71801Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 0.01,
-          "price": 0.14,
-          "fair": 0.0488,
-          "fair_source": "event_state",
-          "margin_cents": 9.12
-        },
-        {
-          "ts": "2026-10-26T02:38:31.511652Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 3.0,
-          "price": 0.12,
-          "fair": 0.0543,
-          "fair_source": "event_state",
-          "margin_cents": 6.57
-        },
-        {
-          "ts": "2026-10-26T02:25:07.036435Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 2.0,
-          "price": 0.14,
-          "fair": 0.033,
-          "fair_source": "event_state",
-          "margin_cents": 10.7
-        },
-        {
-          "ts": "2026-10-26T02:20:45.29101Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 1.19,
-          "price": 0.14,
-          "fair": 0.0402,
-          "fair_source": "event_state",
-          "margin_cents": 9.98
-        },
-        {
-          "ts": "2026-10-26T02:14:35.179675Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 0.05,
-          "price": 0.14,
-          "fair": 0.0478,
-          "fair_source": "event_state",
-          "margin_cents": 9.22
-        },
-        {
-          "ts": "2026-10-26T02:13:32.600124Z",
-          "label": "Kansas City Chiefs wins by 7-14",
-          "side": "sell",
-          "count": 18.0,
-          "price": 0.05,
-          "fair": 0.0117,
-          "fair_source": "event_state",
-          "margin_cents": 3.83
-        },
-        {
-          "ts": "2026-10-26T02:11:15.763269Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 2.0,
-          "price": 0.12,
-          "fair": 0.0858,
-          "fair_source": "event_state",
-          "margin_cents": 3.42
-        },
-        {
-          "ts": "2026-10-26T01:43:47.089537Z",
-          "label": "Kansas City Chiefs wins by 7-14",
-          "side": "sell",
-          "count": 12.0,
-          "price": 0.07,
-          "fair": 0.0412,
-          "fair_source": "event_state",
-          "margin_cents": 2.88
-        },
-        {
-          "ts": "2026-10-26T01:43:43.558853Z",
-          "label": "Seattle Seahawks wins by 15+",
-          "side": "sell",
-          "count": 1.0,
-          "price": 0.28,
-          "fair": 0.3248,
-          "fair_source": "event_state",
-          "margin_cents": -4.48
-        },
-        {
-          "ts": "2026-10-26T01:43:13.34698Z",
-          "label": "Kansas City Chiefs wins by 1-6",
-          "side": "sell",
-          "count": 2.0,
-          "price": 0.15,
-          "fair": 0.0967,
-          "fair_source": "event_state",
-          "margin_cents": 5.33
-        },
-        {
-          "ts": "2026-10-26T01:42:54.947857Z",
-          "label": "Seattle Seahawks wins by 7-14",
-          "side": "sell",
-          "count": 3.0,
-          "price": 0.31,
-          "fair": 0.3134,
-          "fair_source": "event_state",
-          "margin_cents": -0.34
-        },
-        {
-          "ts": "2026-10-26T01:42:54.947000Z",
-          "label": "Seattle Seahawks wins by 7-14",
-          "side": "buyback",
-          "count": 3.0,
-          "price": 0.31,
-          "fair": 0.3129,
-          "fair_source": "event_state",
-          "margin_cents": 0.29
-        },
-        {
-          "ts": "2026-10-26T01:42:27.503756Z",
-          "label": "Seattle Seahawks wins by 1-6",
-          "side": "sell",
-          "count": 2.34,
-          "price": 0.21,
-          "fair": 0.193,
-          "fair_source": "event_state",
-          "margin_cents": 1.7
         }
       ],
       "fills_summary": {
@@ -652,9 +507,9 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 34187.579999999994,
+        "market_volume_last_30m": 33250.9,
         "posts_last_10m": 0,
-        "fills_last_30m": 80.0,
+        "fills_last_30m": 78.0,
         "resting_contracts": 687.0,
         "inactive": true,
         "cause": "unknown",
@@ -683,7 +538,7 @@
         "cap_phase": "tighten",
         "cap_mult": 1.0
       },
-      "posted_book_sum": 0.26,
+      "posted_book_sum": 0.16,
       "posted_book_sum_outcomes": 6,
       "posted_book_sum_resting_outcomes": 2,
       "livefair": {
@@ -732,27 +587,9 @@
           "90"
         ]
       },
-      "game_clock": {
-        "period": 4,
-        "clock": "0:38",
-        "time_remaining_s": 38.0,
-        "laps_remaining": null,
-        "laps_total": null,
-        "round": null,
-        "holes_left": null,
-        "tournament_progress": null,
-        "progress": 0.9894444444444445,
-        "home_score": 20,
-        "away_score": 3,
-        "home_code": "SEA",
-        "away_code": "KC",
-        "possession_code": "SEA",
-        "final": false,
-        "stale": false
-      }
+      "game_clock": null
     }
   ],
-  "awaiting": [],
   "results_summary": {
     "total_realized": 2093.04,
     "by_sport": {
