@@ -1,10 +1,10 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T04:44:42.531765Z",
+  "generated_at": "2026-10-26T04:47:57.460318Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Mon 7:15pm CT. Worst line -$102, goal -$150.",
+    "headline": "Building toward kickoff Mon 7:16pm CT. Worst line -$102, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -15,7 +15,7 @@
         "exposure": -102.46,
         "exposure_text": "-$102",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at Mon 6:30pm CT",
+        "when": "no move planned until paid balancing starts at Mon 6:31pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-26T03:30:46Z"
@@ -29,7 +29,7 @@
         "when": "crowd pays 24c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "also": "Also: paid balancing starts Mon 6:31pm CT",
         "last_fill": "2026-10-26T04:32:57Z",
         "lag_note": "Price 24c matches the crowd."
       },
@@ -42,7 +42,7 @@
         "when": "needs 50+ crowd trades under 9c (now 26)",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "also": "Also: paid balancing starts Mon 6:31pm CT",
         "last_fill": "2026-10-26T03:40:46Z",
         "lag_note": "Crowd is quiet here (26 traded)."
       },
@@ -53,9 +53,9 @@
         "exposure_text": "+$59",
         "move": "Step price down 1c (25c to 24c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-26T04:44:11Z",
+        "at": "2026-10-26T04:47:12Z",
         "stuck": false,
-        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "also": "Also: paid balancing starts Mon 6:31pm CT",
         "lag_note": "Steps to 24c at the next check."
       },
       {
@@ -65,9 +65,9 @@
         "exposure_text": "+$59",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-26T04:44:11Z",
+        "at": "2026-10-26T04:47:12Z",
         "stuck": false,
-        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "also": "Also: paid balancing starts Mon 6:31pm CT",
         "lag_note": "Steps to 20c at the next check."
       },
       {
@@ -79,7 +79,7 @@
         "when": "needs 50+ crowd trades under 14c (now 9)",
         "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts Mon 6:30pm CT",
+        "also": "Also: paid balancing starts Mon 6:31pm CT",
         "lag_note": "Crowd is quiet here (9 traded)."
       }
     ],
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Mon 7:15pm CT. Sold 262, 5,350 resting. Worst line -$102 (goal -$150)."
+          "Pregame build, kickoff Mon 7:16pm CT. Sold 262, 5,350 resting. Worst line -$102 (goal -$150)."
         ]
       },
       {
@@ -111,9 +111,9 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts Mon 6:30pm CT: worst line to -$150 by Mon 7:05pm CT, up to $100.",
-          "At Mon 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
-          "Kickoff Mon 7:15pm CT: the in-game engine takes over."
+          "Paid balancing starts Mon 6:31pm CT: worst line to -$150 by Mon 7:06pm CT, up to $100.",
+          "At Mon 6:46pm CT, if worst line is -$150 or better, paid balancing stops.",
+          "Kickoff Mon 7:16pm CT: the in-game engine takes over."
         ]
       },
       {
@@ -125,17 +125,17 @@
     ],
     "next_steps": [
       {
-        "at": "2026-10-26T23:30:00Z",
+        "at": "2026-10-26T23:31:00Z",
         "label": "Paid balancing starts",
-        "detail": "Worst line to -$150 by Mon 7:05pm CT."
+        "detail": "Worst line to -$150 by Mon 7:06pm CT."
       },
       {
-        "at": "2026-10-26T23:45:00Z",
+        "at": "2026-10-26T23:46:00Z",
         "label": "Even-done check",
         "detail": "Paid balancing stops if worst line is -$150 or better."
       },
       {
-        "at": "2026-10-27T00:15:00Z",
+        "at": "2026-10-27T00:16:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
       }
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T04:44:11Z"
+    "ts": "2026-10-26T04:47:12Z"
   },
   "posts": [
     {
@@ -3099,6 +3099,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-DALPHI): lagging bucket priced over the crowd: DAL1TO6 ask 0.25 vs clearing 0.209 for 143 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792990074915-892026",
+      "ts": "2026-10-26T04:47:54Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
