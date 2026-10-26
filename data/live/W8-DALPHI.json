@@ -1,12 +1,12 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-26T22:54:50.078986Z",
+  "generated_at": "2026-10-26T22:56:34.421403Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$507, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "confidence": "low",
+    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
     "checks_every_s": 20,
     "moves": [
       {
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,698, 6,186 resting. Worst line -$507 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 1,698, 6,186 resting. Worst line -$507 (goal -$150). Bot heartbeat is 6m old: it may be down."
         ]
       },
       {
@@ -179,29 +179,9 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-26T22:54:01Z"
+    "ts": "2026-10-26T22:56:02Z"
   },
   "posts": [
-    {
-      "id": "1792879992070-8e0b61",
-      "ts": "2026-10-24T22:13:12Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792880898636-db7cf3",
-      "ts": "2026-10-24T22:28:18Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792881805566-091d86",
       "ts": "2026-10-24T22:43:25Z",
@@ -3393,6 +3373,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793055302218-a2cf82",
+      "ts": "2026-10-26T22:55:02Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 5m old (normal is under 5m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
+    },
+    {
+      "id": "1793055302220-3030d9",
+      "ts": "2026-10-26T22:55:02Z",
+      "book": "W8-DALPHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$507, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4051,6 +4051,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+363 on DAL 1-6 @ 0.25 (maker)\nworst outcome now +81\nheld 0/0/5/550/919/225\nIf the game ends... you make\nPHI 1-6: +412 (+14.9% of bankroll)\nPHI 7-14: +412 (+14.9% of bankroll)\nPHI 15+: +407 (+14.7% of bankroll)\nDAL 1-6: -138 (-5.0% of bankroll)\nDAL 7-14: -507 (-18.4% of bankroll)\nDAL 15+: +187 (+6.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793055374783-8da8e2",
+      "ts": "2026-10-26T22:56:14Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W8-DALPHI): held worst -507.45 (backstop -300) or lagging gap 919 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
