@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T17:54:59Z",
-  "mode": "armed",
+  "generated_at": "2026-10-26T17:56:30Z",
+  "mode": "live",
   "terms": "Live terms: no night ceiling, full slate, $300 cap per market, stops for the night on the first loss of any size (and texts). Also rests one 99 cent buy per decided market (up to 300 contracts).",
   "days": [
     {
@@ -36503,10 +36503,10 @@
           "start_time": "2026-10-26T16:30:00Z",
           "market_type": "set_winner",
           "condition": "when set 2 ends: Jakub Mensik won it -> YES, otherwise NO",
-          "certain_side": "depends",
+          "certain_side": "yes",
           "safe_class": "safe",
           "est_lock_time": "2026-10-26T18:10:00Z",
-          "status": "watching",
+          "status": "skipped",
           "outcome_key": null,
           "cash_plan": 300.0,
           "contracts": null,
@@ -36515,7 +36515,7 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
+          "lock_ts": "2026-10-26T17:55:20Z",
           "fire_ts": null,
           "latency_ms": null
         },
@@ -36527,10 +36527,10 @@
           "start_time": "2026-10-26T16:30:00Z",
           "market_type": "set_winner",
           "condition": "when set 2 ends: Lukas Neumayer won it -> YES, otherwise NO",
-          "certain_side": "depends",
+          "certain_side": "no",
           "safe_class": "safe",
           "est_lock_time": "2026-10-26T18:10:00Z",
-          "status": "watching",
+          "status": "skipped",
           "outcome_key": null,
           "cash_plan": 300.0,
           "contracts": null,
@@ -36539,7 +36539,7 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
+          "lock_ts": "2026-10-26T17:55:20Z",
           "fire_ts": null,
           "latency_ms": null
         },
@@ -37607,10 +37607,10 @@
           "start_time": "2026-10-26T16:30:00Z",
           "market_type": "total_over",
           "condition": "completed games >= 17 -> YES certain (NO is never fired: only known at match end)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "2026-10-26T17:37:30Z",
-          "status": "watching",
+          "status": "skipped",
           "outcome_key": null,
           "cash_plan": 300.0,
           "contracts": null,
@@ -37619,7 +37619,7 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
+          "lock_ts": "2026-10-26T17:55:29Z",
           "fire_ts": null,
           "latency_ms": null
         },
@@ -37631,10 +37631,10 @@
           "start_time": "2026-10-26T16:30:00Z",
           "market_type": "total_over",
           "condition": "completed games >= 22 -> YES certain (NO is never fired: only known at match end)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "2026-10-26T18:07:30Z",
-          "status": "watching",
+          "status": "skipped",
           "outcome_key": null,
           "cash_plan": 300.0,
           "contracts": null,
@@ -37643,7 +37643,7 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
+          "lock_ts": "2026-10-26T17:55:29Z",
           "fire_ts": null,
           "latency_ms": null
         },
@@ -37655,10 +37655,10 @@
           "start_time": "2026-10-26T16:30:00Z",
           "market_type": "total_over",
           "condition": "completed games >= 27 -> YES certain (NO is never fired: only known at match end)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "2026-10-26T18:37:30Z",
-          "status": "watching",
+          "status": "skipped",
           "outcome_key": null,
           "cash_plan": 300.0,
           "contracts": null,
@@ -37667,7 +37667,7 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
+          "lock_ts": "2026-10-26T17:55:29Z",
           "fire_ts": null,
           "latency_ms": null
         },
@@ -106554,14 +106554,14 @@
         "profit": 0.0,
         "avg_price": 0.0,
         "fills": 0,
-        "targets_fired": 2
+        "targets_fired": 6
       }
     ],
     "cumulative": [],
     "recent_fills": [],
     "rest": {
-      "placed": 2,
-      "open": 0,
+      "placed": 6,
+      "open": 4,
       "filled": 0,
       "cancelled": 2,
       "contracts": 0.0,
@@ -106577,22 +106577,22 @@
       {
         "name": "espn",
         "sport": "ATP",
-        "last_update": "2026-10-26T17:54:57Z",
-        "lag_s": 1.61,
+        "last_update": "2026-10-26T17:56:30Z",
+        "lag_s": 0.03,
         "ok": true
       },
       {
         "name": "mlb_statsapi",
         "sport": "MLB",
-        "last_update": "2026-10-26T17:54:58Z",
-        "lag_s": 1.06,
+        "last_update": "2026-10-26T17:56:29Z",
+        "lag_s": 1.01,
         "ok": true
       },
       {
         "name": "espn",
         "sport": "MLB",
-        "last_update": "2026-10-26T17:54:57Z",
-        "lag_s": 1.75,
+        "last_update": "2026-10-26T17:56:29Z",
+        "lag_s": 0.08,
         "ok": true
       },
       {
@@ -106605,8 +106605,8 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-10-26T17:54:58Z",
-        "lag_s": 1.01,
+        "last_update": "2026-10-26T17:56:28Z",
+        "lag_s": 1.22,
         "ok": true
       },
       {
@@ -106619,8 +106619,8 @@
       {
         "name": "espn",
         "sport": "NFL",
-        "last_update": "2026-10-26T17:54:59Z",
-        "lag_s": 0.52,
+        "last_update": "2026-10-26T17:56:29Z",
+        "lag_s": 0.37,
         "ok": true
       },
       {
@@ -106633,22 +106633,22 @@
       {
         "name": "nhl_api",
         "sport": "NHL",
-        "last_update": "2026-10-26T17:54:59Z",
-        "lag_s": 0.59,
+        "last_update": "2026-10-26T17:56:28Z",
+        "lag_s": 1.24,
         "ok": true
       },
       {
         "name": "espn",
         "sport": "NHL",
-        "last_update": "2026-10-26T17:54:58Z",
-        "lag_s": 1.06,
+        "last_update": "2026-10-26T17:56:29Z",
+        "lag_s": 0.85,
         "ok": true
       },
       {
         "name": "espn",
         "sport": "SOCCER",
-        "last_update": "2026-10-26T17:54:58Z",
-        "lag_s": 0.75,
+        "last_update": "2026-10-26T17:56:27Z",
+        "lag_s": 2.32,
         "ok": true
       },
       {
@@ -106661,8 +106661,8 @@
       {
         "name": "espn",
         "sport": "SOCCER",
-        "last_update": "2026-10-26T17:54:58Z",
-        "lag_s": 0.62,
+        "last_update": "2026-10-26T17:56:29Z",
+        "lag_s": 0.43,
         "ok": true
       },
       {
@@ -106675,12 +106675,12 @@
       {
         "name": "espn",
         "sport": "WTA",
-        "last_update": "2026-10-26T17:54:57Z",
-        "lag_s": 1.89,
+        "last_update": "2026-10-26T17:56:29Z",
+        "lag_s": 0.61,
         "ok": true
       }
     ],
-    "ws_age_s": 3.4821600914001465,
+    "ws_age_s": 19.73057198524475,
     "cash_free": 2602.07,
     "cash_tied": 0.0,
     "kill": false,
