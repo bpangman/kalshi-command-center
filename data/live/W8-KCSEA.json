@@ -1,10 +1,10 @@
 {
   "key": "W8-KCSEA",
-  "generated_at": "2026-10-26T01:17:38.086128Z",
+  "generated_at": "2026-10-26T01:18:49.466676Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$80.",
+    "headline": "In game (Ingame). Worst line -$76.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,626, 621 resting. Worst line -$80. Game 41% done."
+          "In game (Ingame). Sold 6,652, 605 resting. Worst line -$76. Game 43% done."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "KC by 7-14",
         "held": 1081.7,
-        "resting": 120.6,
+        "resting": 136.6,
         "target": null,
         "status": "even",
         "price": null
@@ -78,15 +78,15 @@
       {
         "label": "SEA by 7-14",
         "held": 1178.0,
-        "resting": 4.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "SEA by 15+",
-        "held": 1141.0,
-        "resting": 49.0,
+        "held": 1166.7,
+        "resting": 20.9,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W8-KCSEA",
-    "ts": "2026-10-26T01:16:45Z"
+    "ts": "2026-10-26T01:18:45Z"
   },
   "posts": [
     {
@@ -4179,33 +4179,6 @@
   ],
   "audits": [
     {
-      "id": "1792925143049-ca6bfa",
-      "ts": "2026-10-25T10:45:43Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): worst -384.12 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1792925326383-c088c3",
-      "ts": "2026-10-25T10:48:46Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): held worst -384.12 (backstop -300) or lagging gap 550 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1792926631555-7af72d",
-      "ts": "2026-10-25T11:10:31Z",
-      "book": "W8-KCSEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-KCSEA): lagging bucket priced over the crowd: SEA1TO6 ask 0.26 vs clearing 0.210 for 239 min. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1792926998411-5dcf43",
       "ts": "2026-10-25T11:16:38Z",
       "book": "W8-KCSEA",
@@ -5076,6 +5049,33 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- W8-KCSEA - Kansas City by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W8-KCSEA - Seattle by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1792977504863-723775",
+      "ts": "2026-10-26T01:18:24Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+2 on SEA 7-14 @ 0.32 (maker)\n+35 on SEA 15+ @ 0.17 (maker)\nworst outcome now +6\nheld 1234/1178/1167/1205/1082/787\nIf the game ends... you make\nSEA 1-6: -76 (-3.4% of bankroll)\nSEA 7-14: -20 (-0.9% of bankroll)\nSEA 15+: -9 (-0.4% of bankroll)\nKC 1-6: -47 (-2.1% of bankroll)\nKC 7-14: +76 (+3.4% of bankroll)\nKC 15+: +371 (+16.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1792977507624-a41386",
+      "ts": "2026-10-26T01:18:27Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W8-KCSEA - Kansas City by 1 to 6 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1792977526552-158ab0",
+      "ts": "2026-10-26T01:18:46Z",
+      "book": "W8-KCSEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: in-game ladder shrink on SEA 15+ failed - order(s) rejected: [{'code': 'invalid_order', 'details': 'post only cross', 'message': 'invalid order'}]\nIf the game ends... you make\nSEA 1-6: -76 (-3.4% of bankroll)\nSEA 7-14: -20 (-0.9% of bankroll)\nSEA 15+: -9 (-0.4% of bankroll)\nKC 1-6: -47 (-2.1% of bankroll)\nKC 7-14: +76 (+3.4% of bankroll)\nKC 15+: +371 (+16.8% of bankroll)",
       "severity": "warn"
     }
   ]
