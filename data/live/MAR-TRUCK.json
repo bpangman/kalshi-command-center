@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-26T23:43:56.607968Z",
+  "generated_at": "2026-10-26T23:45:14.630954Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "MAR-TRUCK",
-    "ts": "2026-10-26T23:43:19Z"
+    "ts": "2026-10-26T23:44:20Z"
   },
   "posts": [
     {
@@ -293,6 +293,16 @@
       "text": "Kalshi rate-limited the bot (4 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793058260044-8d1f0f",
+      "ts": "2026-10-26T23:44:08Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
@@ -429,6 +439,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 27 driver(s): Tristan McKee (+52%), Grant Enfinger (+46%), Daniel Hemric (+46%), Ben Rhodes (+46%), Stewart Friesen (+46%), Ty Majeski (+46%), Christian Eckes (+46%), Tyler Ankrum (+46%), Chandler Smith (+46%), Jake Garcia (+46%) and 17 more",
+      "severity": "warn"
+    },
+    {
+      "id": "1793058261408-1f8a4f",
+      "ts": "2026-10-26T23:44:21Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1793058293589-f66a32",
+      "ts": "2026-10-26T23:44:53Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
