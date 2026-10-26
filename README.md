@@ -217,6 +217,26 @@ The calendar reads `data/calendar.json`; each row carries `posted_iso` and
 `event_iso`. Settled events carry their `first_posted_time` in
 `data/results.json`.
 
+## The Clinch tab
+
+Clinch is a separate module that buys the side of a market that is already
+certain (a game that is decided but whose price has not reached 100c yet).
+The tab (`clinch.js`, route `#clinch`) shows, top to bottom: a header strip
+(mode badge WATCHING / ARMED / LIVE, report age, free vs tied-up cash, score
+feed health dots, kill switch), a profit chart (running total or by day), six
+scoreboard tiles, the targets for each day grouped by game (filter by league
+and status, or search), and the record book (by-day table plus recent fills).
+WATCHING means no real orders are being sent. Home also gets a Clinch tile
+(profit and mode). The page re-checks every 30 seconds and shows an amber or
+red banner when the report is old.
+
+Data: `data/clinch.json`, copied unchanged by the feed daemon from the
+module's `tools/fleet/state/clinch/dashboard.json` (see
+`publish_clinch_dashboard` in `tools/feed/publish.py`). Until the module
+writes it, the tab says Clinch has not reported in. To preview the layout
+with made-up numbers, open `index.html?clinch=sample#clinch`, which reads
+`data/clinch.sample.json` instead.
+
 ## Adding a new sport or a new book
 
 Nothing on this site needs to change for a new event of a sport it already
