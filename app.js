@@ -1206,8 +1206,17 @@ function buildCollectedBlock(b) {
 
   var main = document.createElement("div");
   main.className = "collected-main " + moneyClass(b.net_collected_dollars);
-  main.textContent = "Collected " + fmtCollectedDollars(b.premium_collected_dollars) + " premium, "
-    + fmtCollectedDollars(b.fees_dollars) + " fees, " + fmtCollectedDollars(b.net_collected_dollars) + " net";
+  var buybackSpend = Number(b.buyback_spend_dollars);
+  var hasBuyback = isFinite(buybackSpend) && buybackSpend > 0 && b.gross_sales_dollars !== null && b.gross_sales_dollars !== undefined;
+  if (hasBuyback) {
+    /* 2026-10-26 (Blake): the premium figure is already net of buybacks; show the buyback as money. */
+    main.textContent = "Sold " + fmtCollectedDollars(b.gross_sales_dollars) + " gross, bought back -"
+      + fmtCollectedDollars(buybackSpend) + ", fees -" + fmtCollectedDollars(Math.abs(Number(b.fees_dollars) || 0))
+      + " = " + fmtCollectedDollars(b.net_collected_dollars) + " net";
+  } else {
+    main.textContent = "Collected " + fmtCollectedDollars(b.premium_collected_dollars) + " premium, "
+      + fmtCollectedDollars(b.fees_dollars) + " fees, " + fmtCollectedDollars(b.net_collected_dollars) + " net";
+  }
   wrap.appendChild(main);
 
   var margin = document.createElement("div");
@@ -1229,6 +1238,13 @@ function buildCollectedBlock(b) {
   contracts.className = "collected-contracts";
   contracts.textContent = fmtNum(b.contracts_sold_total) + " sold, " + fmtNum(b.contracts_bought_back_total) + " bought back";
   wrap.appendChild(contracts);
+
+  if (hasBuyback) {
+    var note = document.createElement("div");
+    note.className = "collected-contracts";
+    note.textContent = "Buybacks are already subtracted; the per-outcome lines below show what you make if that outcome wins.";
+    wrap.appendChild(note);
+  }
 
   return wrap;
 }
@@ -1647,6 +1663,9 @@ function buildSettledModalHeader(r) {
   statRow.appendChild(statMoneyEl("Fees", r.fees));
   statRow.appendChild(statEl("Contracts sold", r.contracts_sold !== null && r.contracts_sold !== undefined ? fmtNum(r.contracts_sold) : "-"));
   statRow.appendChild(statEl("Bought back", r.contracts_bought_back !== null && r.contracts_bought_back !== undefined ? fmtNum(r.contracts_bought_back) : "-"));
+  if (r.buyback_spend_dollars !== null && r.buyback_spend_dollars !== undefined && Number(r.buyback_spend_dollars) > 0) {
+    statRow.appendChild(statMoneyEl("Buyback cost", -Number(r.buyback_spend_dollars)));
+  }
   wrap.appendChild(statRow);
 
   return wrap;
