@@ -1,13 +1,13 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-27T00:12:04.664703Z",
+  "generated_at": "2026-10-27T00:13:09.729658Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
     "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$151.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 103,
+    "checks_every_s": 120,
     "moves": [
       {
         "side": "DAL by 7-14",
@@ -17,61 +17,71 @@
         "move": "Holding",
         "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-26T15:27:26Z"
+        "stuck": false,
+        "last_fill": "2026-10-27T00:05:21Z"
       },
       {
         "side": "DAL by 1-6",
-        "resting": "788 @ 26-32c",
+        "resting": "366 @ 26-32c",
         "exposure": -125.0,
         "exposure_text": "-$125",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-26T22:45:30Z"
       },
       {
         "side": "PHI by 1-6",
-        "resting": "1,500 @ 18-28c",
+        "resting": "782 @ 18-21c",
         "exposure": -10.37,
         "exposure_text": "-$10",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "move": "Hold price at 18c",
+        "when": "crowd pays 18.9c; steps down 1c only if it trades lower",
         "at": null,
-        "stuck": false
+        "stuck": false,
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-26T23:48:35Z",
+        "lag_note": "Price 18c matches the crowd."
       },
       {
         "side": "PHI by 7-14",
-        "resting": "1,275 @ 12-21c",
+        "resting": "702 @ 14-16c",
         "exposure": 199.63,
         "exposure_text": "+$200",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
-        "at": null,
-        "stuck": false
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-27T00:12:30Z",
+        "stuck": false,
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-26T23:28:52Z",
+        "lag_note": "Steps to 13c at the next check."
       },
       {
         "side": "DAL by 15+",
         "resting": "1,275 @ 23-27c",
         "exposure": 200.07,
         "exposure_text": "+$200",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
-        "at": null,
+        "move": "Step price down 1c (23c to 22c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-27T00:12:30Z",
         "stuck": false,
-        "last_fill": "2026-10-26T22:15:12Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-26T22:15:12Z",
+        "lag_note": "Steps to 22c at the next check."
       },
       {
         "side": "PHI by 15+",
         "resting": "1,348 @ 8-18c",
         "exposure": 420.04,
         "exposure_text": "+$420",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
-        "at": null,
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-27T00:12:30Z",
         "stuck": false,
-        "last_fill": "2026-10-26T03:40:46Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-26T03:40:46Z",
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
@@ -84,14 +94,17 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): DAL by 15+, PHI by 1-6, PHI by 7-14, PHI by 15+.",
+          "PHI by 15+: 571 behind. Steps to 7c at the next check.",
+          "DAL by 15+: 351 behind. Steps to 22c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$151 is better than -$200.",
+          "Gate closed: batches wait for the worst line to reach -$150 (now -$151).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -99,7 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan unknown, worst line -$151; spent $0 of $100.",
+          "Paid balancing is running: plan -$150, worst line -$151; spent $0 of $100.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -139,7 +152,7 @@
         "held": 224.6,
         "resting": 1275.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.23
       },
       {
@@ -147,128 +160,30 @@
         "held": 435.0,
         "resting": 1170.0,
         "target": null,
-        "status": "even",
-        "price": 0.18
+        "status": "lagging",
+        "price": 0.21
       },
       {
         "label": "PHI by 7-14",
         "held": 225.0,
         "resting": 1369.0,
         "target": null,
-        "status": "even",
-        "price": 0.12
+        "status": "lagging",
+        "price": 0.1
       },
       {
         "label": "PHI by 15+",
         "held": 4.6,
         "resting": 1585.4,
         "target": null,
-        "status": "even",
-        "price": 0.08
+        "status": "lagging",
+        "price": 0.06
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-27T00:11:30Z"
+    "ts": "2026-10-27T00:12:30Z"
   },
   "posts": [
-    {
-      "id": "1792890293419-3cf1f0",
-      "ts": "2026-10-25T01:04:53Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nPHI 1-6: +0 (+0.0% of bankroll)\nPHI 7-14: +0 (+0.0% of bankroll)\nPHI 15+: +0 (+0.0% of bankroll)\nDAL 1-6: +0 (+0.0% of bankroll)\nDAL 7-14: +0 (+0.0% of bankroll)\nDAL 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nPHI 1-6: 0 / 975\nPHI 7-14: 0 / 825\nPHI 15+: 0 / 875\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 975\nDAL 15+: 0 / 877\nPosted book 1.26 | Sold avg 1.259 | Worst now +193 | Cash free $1039\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792890874386-a94d13",
-      "ts": "2026-10-25T01:14:34Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792891781453-960e66",
-      "ts": "2026-10-25T01:29:41Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792892688171-443ba0",
-      "ts": "2026-10-25T01:44:48Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792893595410-3b3666",
-      "ts": "2026-10-25T01:59:55Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792893899512-99df5f",
-      "ts": "2026-10-25T02:04:59Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nPHI 1-6: +0 (+0.0% of bankroll)\nPHI 7-14: +0 (+0.0% of bankroll)\nPHI 15+: +0 (+0.0% of bankroll)\nDAL 1-6: +0 (+0.0% of bankroll)\nDAL 7-14: +0 (+0.0% of bankroll)\nDAL 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nPHI 1-6: 0 / 975\nPHI 7-14: 0 / 825\nPHI 15+: 0 / 875\nDAL 1-6: 0 / 975\nDAL 7-14: 0 / 975\nDAL 15+: 0 / 877\nPosted book 1.26 | Sold avg 1.259 | Worst now +193 | Cash free $1039\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
-    {
-      "id": "1792894502219-3ca009",
-      "ts": "2026-10-25T02:15:02Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792895409365-117ac0",
-      "ts": "2026-10-25T02:30:09Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792896316026-5cfc39",
-      "ts": "2026-10-25T02:45:16Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792897223097-626b2e",
-      "ts": "2026-10-25T03:00:23Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792897556809-0d2dfd",
       "ts": "2026-10-25T03:05:56Z",
@@ -3384,6 +3299,102 @@
       "text": "Final tightening before kickoff 7:15pm CT. Worst line -$190. Next: Kickoff, 7:15pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1793059928866-c4cd31",
+      "ts": "2026-10-27T00:12:08Z",
+      "book": "W8-DALPHI",
+      "kind": "text",
+      "source": "bot",
+      "text": "Entering the game -151 on any DAL win; PHI buckets -10; no buyback by rule",
+      "severity": "info"
+    },
+    {
+      "id": "1793059929104-4b463f",
+      "ts": "2026-10-27T00:12:09Z",
+      "book": "W8-DALPHI",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nPHI 1-6: -10 (-0.4% of bankroll)\nPHI 7-14: +200 (+7.2% of bankroll)\nPHI 15+: +420 (+15.2% of bankroll)\nDAL 1-6: -125 (-4.5% of bankroll)\nDAL 7-14: -151 (-5.5% of bankroll)\nDAL 15+: +200 (+7.2% of bankroll)\nCollected $429 premium ($4 fees) | Paper margin over fair $43 (not realized until settlement)\nEvent: PHI 7-14: PHI 0-0, Q0 0:00; DAL 7-14: DAL 0-0, Q0 0:00\nheld / resting\nPHI 1-6: 435 / 1170\nPHI 7-14: 225 / 1369\nPHI 15+: 5 / 1585\nDAL 1-6: 550 / 788\nDAL 7-14: 575 / 0\nDAL 15+: 225 / 1275\nPosted book 1.22 | Sold avg 1.100 | Worst now -47 | Cash free $1039\nAnchor age 0s | Last fill 396s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1793059930299-b1ade5",
+      "ts": "2026-10-27T00:11:56Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1793059930301-8edcfb",
+      "ts": "2026-10-27T00:12:09Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$151; goal -$150 by 7:05pm CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1793059930302-769379",
+      "ts": "2026-10-27T00:12:09Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease PHI1TO6: resting 1170 -> 452 (held 435 + resting was over the cap 888 = 1.03x; tighten p",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1793059931503-1d808f",
+      "ts": "2026-10-27T00:12:11Z",
+      "book": "W8-DALPHI",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W8-DALPHI: 0 orders posted in 10 min while the market traded 11233 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1793059950480-9440a3",
+      "ts": "2026-10-27T00:12:11Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$151. Lagging: PHI by 1-6, PHI by 7-14, PHI by 15+ +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1793059950482-1da60d",
+      "ts": "2026-10-27T00:12:30Z",
+      "book": "W8-DALPHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line -$151. Next: Kickoff, 7:15pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1793059970631-4b0b22",
+      "ts": "2026-10-27T00:12:31Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -150.80, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793059976275-921ce3",
+      "ts": "2026-10-27T00:12:56Z",
+      "book": "W8-DALPHI",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W8-DALPHI: 0 orders posted in 10 min while the market traded 11155 contracts. Cause: the book is at its own collateral cap.",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4159,6 +4170,42 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1793059929105-381767",
+      "ts": "2026-10-27T00:12:09Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: DAL 7-14 worst outcome -47\nIf the game ends... you make\nPHI 1-6: -10 (-0.4% of bankroll)\nPHI 7-14: +200 (+7.2% of bankroll)\nPHI 15+: +420 (+15.2% of bankroll)\nDAL 1-6: -125 (-4.5% of bankroll)\nDAL 7-14: -151 (-5.5% of bankroll)\nDAL 15+: +200 (+7.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793059931501-b38ecc",
+      "ts": "2026-10-27T00:12:11Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 T-60 table\nIf the game ends... you make\nPHI 1-6: -10 (-0.4% of bankroll)\nPHI 7-14: +200 (+7.2% of bankroll)\nPHI 15+: +420 (+15.2% of bankroll)\nDAL 1-6: -125 (-4.5% of bankroll)\nDAL 7-14: -151 (-5.5% of bankroll)\nDAL 15+: +200 (+7.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793059951763-b1a39c",
+      "ts": "2026-10-27T00:12:31Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nPHI 1-6: -10 (-0.4% of bankroll)\nPHI 7-14: +200 (+7.2% of bankroll)\nPHI 15+: +420 (+15.2% of bankroll)\nDAL 1-6: -125 (-4.5% of bankroll)\nDAL 7-14: -151 (-5.5% of bankroll)\nDAL 15+: +200 (+7.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793059972288-8822c2",
+      "ts": "2026-10-27T00:12:52Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -526.90 past allowed limit -300.00",
       "severity": "warn"
     }
   ]
