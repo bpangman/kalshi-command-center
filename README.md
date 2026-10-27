@@ -12,6 +12,9 @@ https://bpangman.github.io/kalshi-command-center/
    open right now.
 2. **Purse over time** - the running total of banked profit. The line has
    one dot for every day (Central time) that had at least one settled event.
+   The line includes the Clinch module's settled wins and losses (a whole
+   Clinch night counts as one event for dot size), so its end point matches
+   the "Profit since 9/15" tile.
    A bigger dot means more events settled that day (4 sizes: 1, 2, 3, 4 or
    more). Green dot = that day made money, red dot = it lost money. Tap or
    hover a dot to see only that day's dollars, like `+$42` or `-$9`. No event

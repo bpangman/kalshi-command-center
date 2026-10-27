@@ -570,8 +570,9 @@ function renderHomeTiles() {
   /* "Profit since 9/15" = house books (results_summary, from results.json)
      PLUS the Clinch module's settled wins and losses after fees
      (feed.clinch_summary, read by the feed daemon straight from the clinch
-     ledger, added 2026-10-26). results_summary itself stays house-only so
-     the purse chart below is unchanged. When the daemon has not published a
+     ledger, added 2026-10-26). results_summary itself stays house-only; the
+     purse chart below merges the same clinch_summary.settled rows in, so
+     the chart end point matches this tile. When the daemon has not published a
      clinch figure yet the tile falls back to the house number alone. */
   var houseRealized = f.results_summary ? f.results_summary.total_realized : null;
   var clinchRealized = (f.clinch_summary && typeof f.clinch_summary.total_realized === "number") ? f.clinch_summary.total_realized : null;
@@ -812,6 +813,17 @@ function buildPurseSeries() {
   /* One point per Central-time day that had at least one settled event; the
      line is the running total after that day. */
   var results = state.results.filter(function (r) { return r.settled_time; });
+  /* Merge the Clinch module's settled rows (feed.clinch_summary.settled).
+     Each acts like a result with realized_pnl = profit; _clinch marks them
+     so a whole night of them counts as ONE dot-size event. */
+  var cs = state.feed && state.feed.clinch_summary;
+  if (cs && Array.isArray(cs.settled)) {
+    cs.settled.forEach(function (c) {
+      if (c && c.settled_time && typeof c.profit === "number") {
+        results.push({ settled_time: c.settled_time, realized_pnl: c.profit, _clinch: true });
+      }
+    });
+  }
   results = results.slice().sort(function (a, b) { return new Date(a.settled_time) - new Date(b.settled_time); });
   var days = [];
   var byKey = {};
@@ -823,7 +835,11 @@ function buildPurseSeries() {
       days.push(byKey[key]);
     }
     byKey[key].total += (r.realized_pnl || 0);
-    byKey[key].count += 1;
+    if (r._clinch) {
+      if (!byKey[key].clinchCounted) { byKey[key].count += 1; byKey[key].clinchCounted = true; }
+    } else {
+      byKey[key].count += 1;
+    }
   });
   var cum = 0;
   var solidPoints = days.map(function (d) {
