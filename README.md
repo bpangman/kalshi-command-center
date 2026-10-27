@@ -7,7 +7,7 @@ https://bpangman.github.io/kalshi-command-center/
 ## What the site shows, top to bottom
 
 1. **Header strip** - four numbers: cash sitting free, cash locked up as
-   collateral in open books, total profit banked since go-live (9/15), and
+   collateral in open books, total profit banked since go-live (9/15) - house books plus the Clinch module's settled wins and losses after fees, read from its ledger (a sub-line shows the split), and
    the worst-to-best range (plus expected value) across every book that is
    open right now.
 2. **Purse over time** - the running total of banked profit. The line has

@@ -567,8 +567,23 @@ function renderHomeTiles() {
   tiles.innerHTML = "";
   tiles.appendChild(tile("Cash free", moneySpan(f.cash_free)));
   tiles.appendChild(tile("Locked in open books", moneySpan(f.locked_collateral)));
-  var totalRealized = f.results_summary ? f.results_summary.total_realized : null;
-  tiles.appendChild(tile("Profit since 9/15", moneySpan(totalRealized)));
+  /* "Profit since 9/15" = house books (results_summary, from results.json)
+     PLUS the Clinch module's settled wins and losses after fees
+     (feed.clinch_summary, read by the feed daemon straight from the clinch
+     ledger, added 2026-10-26). results_summary itself stays house-only so
+     the purse chart below is unchanged. When the daemon has not published a
+     clinch figure yet the tile falls back to the house number alone. */
+  var houseRealized = f.results_summary ? f.results_summary.total_realized : null;
+  var clinchRealized = (f.clinch_summary && typeof f.clinch_summary.total_realized === "number") ? f.clinch_summary.total_realized : null;
+  var totalRealized = houseRealized;
+  var profitSub = "";
+  if (houseRealized !== null && clinchRealized !== null) {
+    totalRealized = round2(houseRealized + clinchRealized);
+    profitSub = "House books " + fmtMoney(houseRealized) + ", Clinch " + fmtMoney(clinchRealized);
+  }
+  var profitTile = tile("Profit since 9/15", moneySpan(totalRealized), profitSub);
+  profitTile.title = "Everything settled since go-live: the house books (NFL, NASCAR, F1, Golf, UFC, Politics) plus the Clinch module's settled wins and losses after fees, taken from its own ledger.";
+  tiles.appendChild(profitTile);
 
   var books = f.books || [];
   var worstSum = sumBy(books, "worst_now");
