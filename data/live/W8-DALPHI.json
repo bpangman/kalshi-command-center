@@ -1,10 +1,10 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-27T00:17:03.996625Z",
+  "generated_at": "2026-10-27T00:18:22.332453Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$124.",
+    "headline": "In game (Ingame). Worst line -$116.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 2,482, 822 resting. Worst line -$124. Game 0% done."
+          "In game (Ingame). Sold 2,513, 958 resting. Worst line -$116. Game 0% done."
         ]
       },
       {
@@ -45,7 +45,7 @@
     "sides": [
       {
         "label": "DAL by 1-6",
-        "held": 549.6,
+        "held": 559.6,
         "resting": 15.0,
         "target": null,
         "status": "even",
@@ -69,8 +69,8 @@
       },
       {
         "label": "PHI by 1-6",
-        "held": 476.0,
-        "resting": 37.0,
+        "held": 497.0,
+        "resting": 62.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "PHI by 7-14",
         "held": 225.0,
-        "resting": 238.5,
+        "resting": 350.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-27T00:16:32Z"
+    "ts": "2026-10-27T00:17:32Z"
   },
   "posts": [
-    {
-      "id": "1792901758099-409e4d",
-      "ts": "2026-10-25T04:15:58Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1792902664710-465463",
-      "ts": "2026-10-25T04:31:04Z",
-      "book": "W8-DALPHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,502 resting. Next: Paid balancing starts, Mon 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1792903571599-bf8712",
       "ts": "2026-10-25T04:46:11Z",
@@ -3341,6 +3321,45 @@
       "text": "In game (Ingame). Worst line -$151.",
       "severity": "info",
       "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1793060292805-7f3bea",
+      "ts": "2026-10-27T00:16:50Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 155: DAL by 15+ x83 at 22c, PHI by 1-6 x62 at 22c, DAL by 1-6 x10 at 25c. Worst line -$116.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 155.0,
+        "fills": [
+          {
+            "side": "DAL by 15+",
+            "price": 0.22,
+            "qty": 83.0
+          },
+          {
+            "side": "PHI by 1-6",
+            "price": 0.22,
+            "qty": 62.0
+          },
+          {
+            "side": "DAL by 1-6",
+            "price": 0.25,
+            "qty": 10.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793060294368-fbd02a",
+      "ts": "2026-10-27T00:18:14Z",
+      "book": "W8-DALPHI",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W8-DALPHI book re-posted at the same price: 0 cancel-then-post at the same price and 35 caught by the guard in the last hour. That is the queue-loss bug; check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
@@ -4161,6 +4180,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: in-game ladder post on PHI 15+ failed - order(s) rejected: [{'code': 'same_price_repost_blocked', 'message': 'same-price re-post blocked: KXNFLWINMARGIN-26OCT26DALPHI-PHI15PLUS 171.00@0.0900'}]\nIf the game ends... you make\nPHI 1-6: -10 (-0.4% of bankroll)\nPHI 7-14: +200 (+7.2% of bankroll)\nPHI 15+: +420 (+15.2% of bankroll)\nDAL 1-6: -125 (-4.5% of bankroll)\nDAL 7-14: -151 (-5.5% of bankroll)\nDAL 15+: +200 (+7.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793060231330-809290",
+      "ts": "2026-10-27T00:17:11Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+344 on DAL 7-14 @ 0.24 (taker)\n+105 on PHI 1-6 @ 0.19 (maker)\n+225 on PHI 7-14 @ 0.09 (maker)\n+330 on PHI 1-6 @ 0.18 (maker)\n+83 on DAL 15+ @ 0.22 (maker)\n+62 on PHI 1-6 @ 0.22 (maker)\n+10 on DAL 1-6 @ 0.25 (maker)\nworst outcome now +54\nheld 497/225/5/560/575/308\nIf the game ends... you make\nPHI 1-6: -38 (-1.4% of bankroll)\nPHI 7-14: +234 (+8.5% of bankroll)\nPHI 15+: +454 (+16.4% of bankroll)\nDAL 1-6: -101 (-3.6% of bankroll)\nDAL 7-14: -116 (-4.2% of bankroll)\nDAL 15+: +151 (+5.5% of bankroll)",
       "severity": "warn"
     }
   ]
