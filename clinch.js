@@ -798,7 +798,8 @@
     tr.appendChild(c);
 
     c = td("Market", "cl-c-market");
-    c.appendChild(el("div", "cl-market-title", t.title || t.ticker || "-"));
+    var pl = (t.player && t.stat_word && num(t.line) !== null) ? t.player + " - " + t.stat_word + " " + t.line + "+" : null;
+    c.appendChild(el("div", "cl-market-title", pl || t.title || t.ticker || "-"));
     if (t.condition) {
       var why = el("div", "cl-sub-txt");
       why.appendChild(el("span", "cl-why", "Certain because: "));
@@ -808,7 +809,8 @@
     tr.appendChild(c);
 
     c = td("We buy", "cl-c-side");
-    if (t.certain_side) c.appendChild(chip("cl-side cl-side-" + String(t.certain_side).toLowerCase(), String(t.certain_side).toUpperCase(), "The side Clinch buys"));
+    if (t.side_word) c.appendChild(chip("cl-side cl-side-" + String(t.side_word).toLowerCase(), String(t.side_word).toUpperCase(), "The side Clinch buys"));
+    else if (t.certain_side) c.appendChild(chip("cl-side cl-side-" + String(t.certain_side).toLowerCase(), String(t.certain_side).toUpperCase(), "The side Clinch buys"));
     else c.textContent = "-";
     tr.appendChild(c);
 
@@ -830,8 +832,18 @@
     else c.textContent = "-";
     tr.appendChild(c);
 
+    c = td("Now", "cl-c-now");
+    c.textContent = num(t.stat_now) !== null ? t.stat_now + (t.stat_word ? " " + t.stat_word : "") : "-";
+    c.title = "The bot's latest reading of this stat";
+    tr.appendChild(c);
+
     c = td("Cost", "cl-c-cost");
     c.textContent = got ? usd(t.cost, 2) : "-";
+    tr.appendChild(c);
+
+    c = td("To win", "cl-c-towin");
+    c.textContent = (num(t.to_win) !== null && num(t.profit) === null) ? usd(t.to_win, 2) : "-";
+    c.title = "Profit when this line clears, after fees";
     tr.appendChild(c);
 
     c = td("Profit", "cl-c-profit");
@@ -954,7 +966,7 @@
     var table = el("table", "cl-table");
     var thead = document.createElement("thead");
     var hr = document.createElement("tr");
-    ["Game time", "League", "Market", "We buy", "Safety", "Status", "Bought", "Cost", "Profit", "Speed"].forEach(function (h) {
+    ["Game time", "League", "Market", "We buy", "Safety", "Status", "Bought", "Now", "Cost", "To win", "Profit", "Speed"].forEach(function (h) {
       hr.appendChild(el("th", null, h));
     });
     thead.appendChild(hr);
@@ -983,7 +995,7 @@
     var hidden = events.length - kept.length;
     var shown = kept.filter(eventMatches);
     var sig = JSON.stringify([C.day, C.league, C.status, C.q, day && day.summary, hidden, shown.map(function (ev) {
-      return [ev.game, ev.status, ev.monitored, ev.pending, ev.profit, ev.secured.map(function (t) { return [t.ticker, t.status, t.contracts, t.avg_price, t.cost, t.profit]; })];
+      return [ev.game, ev.status, ev.monitored, ev.pending, ev.profit, ev.secured.map(function (t) { return [t.ticker, t.status, t.contracts, t.avg_price, t.cost, t.profit, t.stat_now, t.to_win]; })];
     })]);
     if (sig === C.sig.groups) return;
     C.sig.groups = sig;

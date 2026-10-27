@@ -2663,6 +2663,8 @@ body.on-clinch .fills-toggle { display: none; }
 .cl-bad { background: rgba(248, 81, 73, 0.16); color: var(--red); border-color: rgba(248, 81, 73, 0.5); }
 .cl-safe-unsafe { background: rgba(139, 148, 158, 0.14); color: var(--muted); border-color: rgba(139, 148, 158, 0.4); }
 .cl-side-yes { color: var(--green); border-color: rgba(63, 185, 80, 0.4); }
+.cl-side-over { color: var(--green); border-color: rgba(63, 185, 80, 0.4); }
+.cl-side-under { color: var(--red); border-color: rgba(248, 81, 73, 0.4); }
 .cl-side-no { color: var(--red); border-color: rgba(248, 81, 73, 0.4); }
 .cl-st-planned { color: var(--muted); }
 .cl-st-watching { background: rgba(88, 166, 255, 0.15); color: var(--accent); border-color: rgba(88, 166, 255, 0.45); }
@@ -2777,8 +2779,10 @@ body.on-clinch .fills-toggle { display: none; }
   .cl-table:not(.cl-plain) td.cl-c-league { order: 6; }
   .cl-table:not(.cl-plain) td.cl-c-speed { order: 7; }
   .cl-table:not(.cl-plain) td.cl-c-bought { order: 8; }
-  .cl-table:not(.cl-plain) td.cl-c-cost { order: 9; }
-  .cl-table:not(.cl-plain) td.cl-c-profit { order: 10; }
+  .cl-table:not(.cl-plain) td.cl-c-now { order: 9; }
+  .cl-table:not(.cl-plain) td.cl-c-cost { order: 10; }
+  .cl-table:not(.cl-plain) td.cl-c-towin { order: 11; }
+  .cl-table:not(.cl-plain) td.cl-c-profit { order: 12; }
   .cl-plain { font-size: 0.74rem; }
   .cl-plain thead th, .cl-plain tbody td, .cl-plain tfoot td { padding: 6px 4px; }
   .cl-plain thead th { font-size: 0.62rem; letter-spacing: 0; white-space: normal; }
