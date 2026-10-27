@@ -10,8 +10,11 @@
    Clinch buys the side of a market that is already certain (a game that is
    decided but the price has not reached 100c yet), in small safe amounts.
    Everything on this page is a straight read of the module's file; nothing
-   is re-derived here except sums over what the file lists. Plain hyphens
-   only, no em/en dashes, anywhere in this file. */
+   is re-derived here except sums over what the file lists and, since
+   2026-10-26, the per-event grouping in groupEvents (one count of sides
+   still watched per event, only secured sides listed, finished events kept
+   only when something was secured in them). Plain hyphens only, no em/en
+   dashes, anywhere in this file. */
 
 (function () {
   var POLL_MS = 30000;
@@ -36,8 +39,28 @@
     unconfirmed: { label: "Unconfirmed", tip: "An order went out but Kalshi has not confirmed it yet. Worth a look." },
     settled_win: { label: "Won", tip: "Settled in our favor." },
     settled_loss: { label: "Lost", tip: "Settled against us." },
+    sold: { label: "Sold", tip: "We had a fill here, then sold the position back before it settled." },
+    missed: { label: "Missed", tip: "The order went out but nothing filled; someone else got there first. Never retried." },
+    unmapped: { label: "Unmapped", tip: "Clinch could not match this game to a score feed, so it will not buy here." },
   };
-  var STATUS_ORDER = ["planned", "watching", "fired", "filled", "partial", "unconfirmed", "skipped", "settled_win", "settled_loss"];
+  var STATUS_ORDER = ["planned", "watching", "fired", "filled", "partial", "unconfirmed", "skipped", "missed", "unmapped", "sold", "settled_win", "settled_loss"];
+
+  /* Per-side classification (2026-10-26, Blake: "I only need to see what is secured, not every dud side... just tell me
+     a number of how many sides are being monitored / potentially grabbed for each event").
+     SECURED  - we got a fill on it, however it ended up: filled, part filled, sold back, settled either way; or the file
+                shows contracts > 0 under any status (a resting bid can fill after the sweep was skipped).
+     MONITORED - still on the board and could still be grabbed: planned, watching, unconfirmed (still watching after a
+                one-feed wait ran out) and fired (order out, fill not heard yet). This is the one number shown per event.
+     DEAD     - skipped, missed, unmapped: Clinch will never buy these, so they are neither counted nor listed. */
+  var SECURED_STATUS = { filled: 1, partial: 1, sold: 1, settled_win: 1, settled_loss: 1 };
+  var MONITORED_STATUS = { planned: 1, watching: 1, unconfirmed: 1, fired: 1 };
+  var GAME_MAX_MS = 8 * 3600 * 1000; // nothing Clinch trades runs this long: past it a game is finished whatever its rows still say
+
+  var EVENT_STATUS = {
+    upcoming: { label: "Upcoming", tip: "Has not started yet." },
+    live: { label: "Live", tip: "Started, and Clinch is still watching sides in it." },
+    finished: { label: "Finished", tip: "Over, or nothing left in it that Clinch could still buy." },
+  };
 
   var SAFE = {
     safe: { label: "Safe", tip: "Certain, with plenty of room. Clinch will buy." },
@@ -717,17 +740,6 @@
     return bits.join(" - ");
   }
 
-  function targetMatches(t) {
-    if (C.league && t.league !== C.league) return false;
-    if (C.status && t.status !== C.status) return false;
-    var q = C.q.trim().toLowerCase();
-    if (q) {
-      var hay = [t.title, t.game, t.league, t.ticker, t.condition, t.certain_side, t.market_type].join(" ").toLowerCase();
-      if (hay.indexOf(q) < 0) return false;
-    }
-    return true;
-  }
-
   function syncFilterOptions(day) {
     var r = C.r;
     var leagues = {};
@@ -813,6 +825,7 @@
     var got = contracts !== null && contracts > 0;
     c = td("Bought", "cl-c-bought");
     if (got) c.textContent = whole(contracts) + " at " + fmtC(t.avg_price);
+    else if (t.status === "sold") c.textContent = "sold back";
     else if (num(t.cash_plan) > 0) { c.appendChild(el("span", "cl-muted", "plan " + usd(t.cash_plan, 0))); }
     else c.textContent = "-";
     tr.appendChild(c);
@@ -822,7 +835,9 @@
     tr.appendChild(c);
 
     c = td("Profit", "cl-c-profit");
-    if (num(t.profit) !== null) c.appendChild(moneyEl(t.profit, 2)); else c.textContent = "-";
+    if (num(t.profit) !== null) c.appendChild(moneyEl(t.profit, 2));
+    else if (got && t.status !== "sold") c.appendChild(el("span", "cl-muted", "pending")); // holding it, game not settled yet
+    else c.textContent = "-";
     tr.appendChild(c);
 
     c = td("Speed", "cl-c-speed");
@@ -835,28 +850,105 @@
     return tr;
   }
 
-  function buildGroup(dayDate, game, list, forceOpen) {
-    var key = dayDate + "|" + game;
-    var det = document.createElement("details");
-    det.className = "cl-group";
-    var openDefault = window.matchMedia ? window.matchMedia("(min-width: 701px)").matches : true;
-    det.open = forceOpen || (key in C.openGroups ? C.openGroups[key] : openDefault);
-    det.addEventListener("toggle", function () { if (!forceOpen) C.openGroups[key] = det.open; });
+  function isSecured(t) { return !!SECURED_STATUS[t.status] || num(t.contracts) > 0; }
+  function isMonitored(t) { return !!MONITORED_STATUS[t.status] && !isSecured(t); }
 
-    var sum = document.createElement("summary");
+  /* Group one day's targets by event (the `game` field). Pure (no DOM), so it can be run in node against the real
+     file. Returns events in start order, each: {game, league, start, startMs, targets, secured, monitored, pending,
+     profit, hasProfit, status}. status is one of
+       upcoming - the start time is still ahead
+       live     - started, and at least one side is still monitored (and it started less than GAME_MAX_MS ago)
+       finished - nothing left to monitor, or it started more than GAME_MAX_MS ago
+     With no start time at all, a lock time or a monitored side decides it. */
+  function groupEvents(targets, nowMs) {
+    var by = {}, order = [];
+    arr(targets).forEach(function (t) {
+      var g = t.game || "Other";
+      if (!by[g]) { by[g] = { game: g, league: t.league || "", start: null, startMs: NaN, targets: [] }; order.push(g); }
+      var ev = by[g];
+      ev.targets.push(t);
+      var ms = parseMs(t.start_time);
+      if (!isNaN(ms) && (isNaN(ev.startMs) || ms < ev.startMs)) { ev.startMs = ms; ev.start = t.start_time; }
+    });
+    var out = order.map(function (g) {
+      var ev = by[g];
+      ev.secured = ev.targets.filter(isSecured).sort(function (a, b) {
+        return (parseMs(a.lock_ts) || parseMs(a.fire_ts) || 0) - (parseMs(b.lock_ts) || parseMs(b.fire_ts) || 0)
+          || String(a.ticker).localeCompare(String(b.ticker));
+      });
+      ev.monitored = ev.targets.filter(isMonitored).length;
+      ev.profit = 0; ev.hasProfit = false; ev.pending = 0;
+      ev.secured.forEach(function (t) {
+        if (num(t.profit) !== null) { ev.profit += num(t.profit); ev.hasProfit = true; }
+        else if (num(t.contracts) > 0 && t.status !== "sold") ev.pending += 1;
+      });
+      var anyLock = ev.targets.some(function (t) { return !isNaN(parseMs(t.lock_ts)); });
+      if (!isNaN(ev.startMs)) {
+        if (nowMs < ev.startMs) ev.status = "upcoming";
+        else if (ev.monitored > 0 && nowMs - ev.startMs < GAME_MAX_MS) ev.status = "live";
+        else ev.status = "finished";
+      } else if (ev.monitored > 0) {
+        ev.status = anyLock ? "live" : "upcoming";
+      } else {
+        ev.status = "finished";
+      }
+      return ev;
+    });
+    out.sort(function (a, b) {
+      var x = isNaN(a.startMs) ? Infinity : a.startMs, y = isNaN(b.startMs) ? Infinity : b.startMs;
+      return x - y || a.game.localeCompare(b.game);
+    });
+    return out;
+  }
+
+  /* Blake's rule (2026-10-26): once an event is over it stays on the page only if we secured something in it. */
+  function eventVisible(ev) { return ev.status !== "finished" || ev.secured.length > 0; }
+
+  function eventMatches(ev) {
+    if (C.league && !ev.targets.some(function (t) { return t.league === C.league; })) return false;
+    if (C.status && !ev.targets.some(function (t) { return t.status === C.status; })) return false;
+    var q = C.q.trim().toLowerCase();
+    if (q) {
+      var hay = [ev.game, ev.league].concat(ev.targets.map(function (t) { return [t.title, t.ticker, t.condition, t.market_type].join(" "); })).join(" ").toLowerCase();
+      if (hay.indexOf(q) < 0) return false;
+    }
+    return true;
+  }
+
+  function monitoredText(ev) {
+    if (ev.monitored > 0) return plural(ev.monitored, "side") + " watched";
+    return ev.status === "finished" ? "nothing left to grab" : "no sides watched";
+  }
+
+  /* One event: a header line (name, league, start, status, the monitored count, what was secured) and, only when
+     something was secured in it, a table of just those rows. Unsecured sides are never listed. */
+  function buildEvent(dayDate, ev, forceOpen) {
+    var key = dayDate + "|" + ev.game;
+    var hasRows = ev.secured.length > 0;
+    var det = document.createElement(hasRows ? "details" : "div");
+    det.className = "cl-group" + (hasRows ? "" : " cl-group-flat");
+    if (hasRows) {
+      det.open = forceOpen || (key in C.openGroups ? C.openGroups[key] : true);
+      det.addEventListener("toggle", function () { if (!forceOpen) C.openGroups[key] = det.open; });
+    }
+
+    var sum = document.createElement(hasRows ? "summary" : "div");
     sum.className = "cl-group-sum";
-    sum.appendChild(el("span", "cl-group-name", game));
-    var first = list[0];
-    sum.appendChild(el("span", "cl-group-time", first.start_time ? "first game " + clock(first.start_time) : ""));
+    sum.appendChild(el("span", "cl-group-name", ev.game));
+    if (ev.league) sum.appendChild(el("span", "cl-league cl-league-" + String(ev.league).toLowerCase().replace(/[^a-z0-9]/g, ""), ev.league));
+    if (ev.start) sum.appendChild(el("span", "cl-group-time", (ev.status === "upcoming" ? "starts " : "started ") + clock(ev.start)));
+    var es = EVENT_STATUS[ev.status];
+    sum.appendChild(chip("cl-ev cl-ev-" + ev.status, es.label, es.tip));
     var meta = el("span", "cl-group-meta");
-    meta.appendChild(document.createTextNode(plural(list.length, "target")));
-    var got = list.filter(function (t) { return num(t.contracts) > 0; }).length;
-    if (got) meta.appendChild(document.createTextNode(" - " + got + " bought"));
-    var prof = 0, any = false;
-    list.forEach(function (t) { if (num(t.profit) !== null) { prof += num(t.profit); any = true; } });
-    if (any) { meta.appendChild(document.createTextNode(" - ")); meta.appendChild(moneyEl(prof, 2)); }
+    var cnt = el("span", "cl-ev-count", monitoredText(ev));
+    cnt.title = "Sides Clinch is still watching and could still buy. Skipped, missed and unmapped sides are not counted.";
+    meta.appendChild(cnt);
+    if (hasRows) meta.appendChild(document.createTextNode(" - " + plural(ev.secured.length, "side") + " secured"));
+    if (ev.hasProfit) { meta.appendChild(document.createTextNode(" - ")); meta.appendChild(moneyEl(ev.profit, 2)); }
+    if (ev.pending) meta.appendChild(document.createTextNode(" - " + plural(ev.pending, "side") + " pending"));
     sum.appendChild(meta);
     det.appendChild(sum);
+    if (!hasRows) return det;
 
     var wrap = el("div", "table-scroll");
     var table = el("table", "cl-table");
@@ -868,7 +960,7 @@
     thead.appendChild(hr);
     table.appendChild(thead);
     var tb = document.createElement("tbody");
-    list.forEach(function (t) { tb.appendChild(buildRow(t)); });
+    ev.secured.forEach(function (t) { tb.appendChild(buildRow(t)); });
     table.appendChild(tb);
     wrap.appendChild(table);
     det.appendChild(wrap);
@@ -885,8 +977,14 @@
     syncFilterOptions(day);
 
     var all = arr(day && day.targets);
-    var shown = all.filter(targetMatches);
-    var sig = JSON.stringify([C.day, C.league, C.status, C.q, day && day.summary, shown]);
+    var now = Date.now();
+    var events = groupEvents(all, now);
+    var kept = events.filter(eventVisible);
+    var hidden = events.length - kept.length;
+    var shown = kept.filter(eventMatches);
+    var sig = JSON.stringify([C.day, C.league, C.status, C.q, day && day.summary, hidden, shown.map(function (ev) {
+      return [ev.game, ev.status, ev.monitored, ev.pending, ev.profit, ev.secured.map(function (t) { return [t.ticker, t.status, t.contracts, t.avg_price, t.cost, t.profit]; })];
+    })]);
     if (sig === C.sig.groups) return;
     C.sig.groups = sig;
 
@@ -906,24 +1004,17 @@
       r.groups.appendChild(el("p", "cl-empty", "No targets yet for this day."));
       return;
     }
-    if (!shown.length) {
+    if (!kept.length) {
+      r.groups.appendChild(el("p", "cl-empty", "Every game this day is over and nothing was secured in any of them."));
+    } else if (!shown.length) {
       r.groups.appendChild(el("p", "cl-empty", "Nothing matches these filters."));
-      return;
+    } else {
+      var searching = C.q.trim() !== "";
+      shown.forEach(function (ev) { r.groups.appendChild(buildEvent(C.day, ev, searching)); });
     }
-    var by = {}, order = [];
-    shown.forEach(function (t) {
-      var g = t.game || "Other";
-      if (!by[g]) { by[g] = []; order.push(g); }
-      by[g].push(t);
-    });
-    order.forEach(function (g) {
-      by[g].sort(function (a, b) {
-        return (parseMs(a.start_time) || 0) - (parseMs(b.start_time) || 0) || String(a.ticker).localeCompare(String(b.ticker));
-      });
-    });
-    order.sort(function (a, b) { return (parseMs(by[a][0].start_time) || 0) - (parseMs(by[b][0].start_time) || 0); });
-    var searching = C.q.trim() !== "";
-    order.forEach(function (g) { r.groups.appendChild(buildGroup(C.day, g, by[g], searching)); });
+    if (hidden > 0) {
+      r.groups.appendChild(el("p", "cl-hidden-note", plural(hidden, "finished game") + " with nothing secured " + (hidden === 1 ? "is" : "are") + " not shown."));
+    }
   }
 
   /* -- record book -- */
@@ -1107,6 +1198,6 @@
     render: function () { if (C.active) render(); },
     setActive: setActive,
     homeHook: homeHook,
-    _test: { state: C, cents: cents, daySummaryText: daySummaryText },
+    _test: { state: C, cents: cents, daySummaryText: daySummaryText, groupEvents: groupEvents, eventVisible: eventVisible, isSecured: isSecured, isMonitored: isMonitored },
   };
 })();
