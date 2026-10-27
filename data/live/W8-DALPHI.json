@@ -1,6 +1,6 @@
 {
   "key": "W8-DALPHI",
-  "generated_at": "2026-10-27T02:48:11.755400Z",
+  "generated_at": "2026-10-27T02:49:33.732278Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 3,606, 187 resting. Worst line +$46. Game 83% done."
+          "In game (Ingame). Sold 3,606, 176 resting. Worst line +$46. Game 85% done."
         ]
       },
       {
@@ -86,7 +86,7 @@
       {
         "label": "PHI by 15+",
         "held": 387.6,
-        "resting": 187.0,
+        "resting": 176.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W8-DALPHI",
-    "ts": "2026-10-27T02:47:22Z"
+    "ts": "2026-10-27T02:49:23Z"
   },
   "posts": [
     {
@@ -3579,24 +3579,6 @@
   ],
   "audits": [
     {
-      "id": "1792989247932-cf3f40",
-      "ts": "2026-10-26T04:34:07Z",
-      "book": "W8-DALPHI",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+67 on DAL 15+ @ 0.24 (maker)\nworst outcome now +198\nheld 0/0/5/0/161/96\nIf the game ends... you make\nPHI 1-6: +59 (+2.1% of bankroll)\nPHI 7-14: +59 (+2.1% of bankroll)\nPHI 15+: +54 (+2.0% of bankroll)\nDAL 1-6: +59 (+2.1% of bankroll)\nDAL 7-14: -102 (-3.7% of bankroll)\nDAL 15+: -37 (-1.3% of bankroll)",
-      "severity": "warn"
-    },
-    {
-      "id": "1792989460950-3f2e35",
-      "ts": "2026-10-26T04:37:40Z",
-      "book": "W8-DALPHI",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W8-DALPHI): lagging bucket priced over the crowd: DAL1TO6 ask 0.25 vs clearing 0.209 for 143 min. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1792990074915-892026",
       "ts": "2026-10-26T04:47:54Z",
       "book": "W8-DALPHI",
@@ -4476,6 +4458,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W8-DALPHI): inactive, cause=price_above_crowd, remedy=join_crowd_ask, posts_last_10m=0, market_volume_last_30m=23184. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793069312122-99ff98",
+      "ts": "2026-10-27T02:48:32Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1793069334484-a40129",
+      "ts": "2026-10-27T02:48:54Z",
+      "book": "W8-DALPHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: in-game ladder grow on PHI 15+ failed - order(s) rejected: [{'code': 'same_price_repost_blocked', 'message': 'same-price re-post blocked: KXNFLWINMARGIN-26OCT26DALPHI-PHI15PLUS 34.00@0.1500'}]\nIf the game ends... you make\nPHI 1-6: +47 (+1.7% of bankroll)\nPHI 7-14: +47 (+1.7% of bankroll)\nPHI 15+: +234 (+8.5% of bankroll)\nDAL 1-6: +47 (+1.7% of bankroll)\nDAL 7-14: +46 (+1.7% of bankroll)\nDAL 15+: +46 (+1.7% of bankroll)",
       "severity": "warn"
     }
   ]
