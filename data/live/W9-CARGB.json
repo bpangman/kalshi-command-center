@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-27T13:28:56.840608Z",
+  "generated_at": "2026-10-27T13:30:58.763018Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -75,7 +75,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 5, 8,845 resting. Worst line -$5 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 5, 0 resting. Worst line -$5 (goal -$150)."
         ]
       },
       {
@@ -129,54 +129,54 @@
       {
         "label": "CAR by 1-6",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": null
       },
       {
         "label": "CAR by 7-14",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.13
+        "price": null
       },
       {
         "label": "CAR by 15+",
         "held": 5.0,
-        "resting": 1345.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.09
+        "price": null
       },
       {
         "label": "GB by 1-6",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "GB by 7-14",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": null
       },
       {
         "label": "GB by 15+",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-27T13:28:51Z"
+    "ts": "2026-10-27T13:30:52Z"
   },
   "posts": [
     {
@@ -1016,6 +1016,46 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1793107792081-25d0aa",
+      "ts": "2026-10-27T13:29:52Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 6m old (normal is under 6m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
+    },
+    {
+      "id": "1793107792083-ee53cb",
+      "ts": "2026-10-27T13:29:52Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Thu 7:15pm CT. Worst line -$5, goal -$150. Next: Paid balancing starts, Thu 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1793107812263-e0cd9d",
+      "ts": "2026-10-27T13:30:12Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is back to normal.",
+      "severity": "info",
+      "title": "Heartbeat back"
+    },
+    {
+      "id": "1793107852590-4351f8",
+      "ts": "2026-10-27T13:30:52Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Thu 7:15pm CT. Worst line -$5, goal -$150. Next: Paid balancing starts, Thu 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -1044,6 +1084,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+5 on CAR 15+ @ 0.09 (maker)\nworst outcome now +424\nheld 0/0/0/0/0/5\nIf the game ends... you make\nGB 1-6: +0 (+0.0% of bankroll)\nGB 7-14: +0 (+0.0% of bankroll)\nGB 15+: +0 (+0.0% of bankroll)\nCAR 1-6: +0 (+0.0% of bankroll)\nCAR 7-14: +0 (+0.0% of bankroll)\nCAR 15+: -5 (-0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793107783632-ddd16e",
+      "ts": "2026-10-27T13:29:43Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]

@@ -1,19 +1,19 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-27T13:28:56.840608Z",
+  "generated_at": "2026-10-27T13:30:58.763018Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line $0, final target +$100.",
-    "confidence": "low",
-    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
+    "confidence": "medium",
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 3:00pm CT. Sold 0, 0 resting. Worst line $0. Bot heartbeat is 6m old: it may be down."
+          "Pre-race growth, green flag Sat 3:00pm CT. Sold 0, 0 resting. Worst line $0."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "MAR-ORLY",
-    "ts": "2026-10-27T13:28:51Z"
+    "ts": "2026-10-27T13:30:52Z"
   },
   "posts": [
     {
@@ -1508,6 +1508,46 @@
       "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line $0, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793107792075-b37b4d",
+      "ts": "2026-10-27T13:29:39Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1793107812260-9b3144",
+      "ts": "2026-10-27T13:30:12Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
+      "severity": "warn",
+      "title": "Pricing source"
+    },
+    {
+      "id": "1793107812261-d8b083",
+      "ts": "2026-10-27T13:30:12Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is back to normal.",
+      "severity": "info",
+      "title": "Heartbeat back"
+    },
+    {
+      "id": "1793107852584-d7060a",
+      "ts": "2026-10-27T13:30:52Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line $0, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -1743,6 +1783,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Taylor Gray (+132%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793107812138-07fba7",
+      "ts": "2026-10-27T13:30:12Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1793107844267-e4c535",
+      "ts": "2026-10-27T13:30:44Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
