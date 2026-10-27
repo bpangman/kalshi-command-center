@@ -1,19 +1,19 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-27T13:30:58.763018Z",
+  "generated_at": "2026-10-27T13:32:49.931095Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line $0, final target +$100.",
-    "confidence": "low",
-    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
-    "checks_every_s": 48,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 52,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 5:00pm CT. Sold 0, 0 resting. Worst line $0. Bot heartbeat is 8m old: it may be down."
+          "Pre-race growth, green flag Fri 5:00pm CT. Sold 0, 0 resting. Worst line $0. Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "MAR-TRUCK",
-    "ts": "2026-10-27T13:30:52Z"
+    "ts": "2026-10-27T13:31:53Z"
   },
   "posts": [
     {
@@ -1418,6 +1418,36 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1793107892953-0bcae0",
+      "ts": "2026-10-27T13:31:13Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 2 drivers: driver GIRU, driver SASM.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1793107892954-e822ec",
+      "ts": "2026-10-27T13:31:32Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is back to normal.",
+      "severity": "info",
+      "title": "Heartbeat back"
+    },
+    {
+      "id": "1793107913056-35ac4a",
+      "ts": "2026-10-27T13:31:53Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line $0, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -1671,6 +1701,33 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Sammy Smith (+42%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793107873078-b8fd09",
+      "ts": "2026-10-27T13:31:13Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
+      "severity": "warn"
+    },
+    {
+      "id": "1793107873079-e17604",
+      "ts": "2026-10-27T13:31:13Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 2 driver(s): Giovanni Ruggiero (+89%), Sammy Smith (+65%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793107904683-2609d8",
+      "ts": "2026-10-27T13:31:44Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
