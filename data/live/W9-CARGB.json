@@ -1,30 +1,41 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-28T16:40:49.374578Z",
+  "generated_at": "2026-10-28T16:42:43.226643Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$105, goal -$150.",
+    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$235, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "CAR by 1-6",
-        "resting": "888 @ 18-27c",
-        "exposure": -104.57,
-        "exposure_text": "-$105",
+        "side": "CAR by 15+",
+        "resting": "997 @ 8-18c",
+        "exposure": -235.1,
+        "exposure_text": "-$235",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at Thu 6:30pm CT",
         "at": null,
+        "stuck": false,
+        "last_fill": "2026-10-28T16:40:55Z"
+      },
+      {
+        "side": "CAR by 1-6",
+        "resting": "888 @ 18-27c",
+        "exposure": -79.61,
+        "exposure_text": "-$80",
+        "move": "Paid balancing (trickle)",
+        "when": "starts Thu 6:30pm CT, up to $100 in all",
+        "at": "2026-10-29T23:30:00Z",
         "stuck": false,
         "last_fill": "2026-10-28T16:10:05Z"
       },
       {
         "side": "GB by 7-14",
         "resting": "943 @ 22-31c",
-        "exposure": -49.96,
-        "exposure_text": "-$50",
+        "exposure": -25.0,
+        "exposure_text": "-$25",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -34,8 +45,8 @@
       {
         "side": "CAR by 7-14",
         "resting": "870 @ 13-23c",
-        "exposure": 26.94,
-        "exposure_text": "+$27",
+        "exposure": 51.9,
+        "exposure_text": "+$52",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -43,21 +54,10 @@
         "last_fill": "2026-10-28T05:19:49Z"
       },
       {
-        "side": "CAR by 15+",
-        "resting": "1,309 @ 8-18c",
-        "exposure": 51.94,
-        "exposure_text": "+$52",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Thu 6:30pm CT, up to $100 in all",
-        "at": "2026-10-29T23:30:00Z",
-        "stuck": false,
-        "last_fill": "2026-10-27T13:13:54Z"
-      },
-      {
         "side": "GB by 1-6",
         "resting": "1,050 @ 24-33c",
-        "exposure": 56.94,
-        "exposure_text": "+$57",
+        "exposure": 81.9,
+        "exposure_text": "+$82",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -66,8 +66,8 @@
       {
         "side": "GB by 15+",
         "resting": "1,500 @ 21-31c",
-        "exposure": 56.94,
-        "exposure_text": "+$57",
+        "exposure": 81.9,
+        "exposure_text": "+$82",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 303, 6,561 resting. Worst line -$105 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 615, 6,249 resting. Worst line -$235 (goal -$150)."
         ]
       },
       {
@@ -91,7 +91,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$105 is better than -$200.",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$235).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -147,10 +147,10 @@
       },
       {
         "label": "CAR by 15+",
-        "held": 5.0,
-        "resting": 1309.0,
+        "held": 317.0,
+        "resting": 997.0,
         "target": null,
-        "status": "even",
+        "status": "heavy",
         "price": 0.08
       },
       {
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-28T16:40:40Z"
+    "ts": "2026-10-28T16:42:41Z"
   },
   "posts": [
     {
@@ -2636,6 +2636,26 @@
       "text": "Quiet for 15 min. 6,561 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793205701042-184338",
+      "ts": "2026-10-28T16:41:37Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: CAR by 15+ at 8c (300 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1793205701044-d9ae7f",
+      "ts": "2026-10-28T16:41:41Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Thu 7:15pm CT. Worst line -$235, goal -$150. Next: Paid balancing starts, Thu 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -2772,6 +2792,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+49 on CAR 1-6 @ 0.18 (maker)\nworst outcome now -185\nheld 0/107/0/162/30/5\nIf the game ends... you make\nGB 1-6: +57 (+1.3% of bankroll)\nGB 7-14: -50 (-1.1% of bankroll)\nGB 15+: +57 (+1.3% of bankroll)\nCAR 1-6: -105 (-2.4% of bankroll)\nCAR 7-14: +27 (+0.6% of bankroll)\nCAR 15+: +52 (+1.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793205758805-510516",
+      "ts": "2026-10-28T16:42:38Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+312 on CAR 15+ @ 0.08 (maker)\nworst outcome now -185\nheld 0/107/0/162/30/317\nIf the game ends... you make\nGB 1-6: +82 (+1.9% of bankroll)\nGB 7-14: -25 (-0.6% of bankroll)\nGB 15+: +82 (+1.9% of bankroll)\nCAR 1-6: -80 (-1.8% of bankroll)\nCAR 7-14: +52 (+1.2% of bankroll)\nCAR 15+: -235 (-5.4% of bankroll)",
       "severity": "warn"
     }
   ]
