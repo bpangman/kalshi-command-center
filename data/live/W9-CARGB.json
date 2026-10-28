@@ -1,30 +1,30 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-28T21:44:21.898263Z",
+  "generated_at": "2026-10-28T21:45:55.384297Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$261, goal -$150.",
+    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$456, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "CAR by 15+",
-        "resting": "887 @ 9-18c",
-        "exposure": -260.67,
-        "exposure_text": "-$261",
-        "move": "Holding",
-        "when": "no move planned until paid balancing starts at Thu 6:30pm CT",
+        "resting": "672 @ 9-18c",
+        "exposure": -455.9,
+        "exposure_text": "-$456",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$300 (now -$456)",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-10-28T18:34:43Z"
+        "stuck": false,
+        "last_fill": "2026-10-28T21:44:23Z"
       },
       {
         "side": "GB by 7-14",
         "resting": "384 @ 23-31c",
-        "exposure": -241.19,
-        "exposure_text": "-$241",
+        "exposure": -221.88,
+        "exposure_text": "-$222",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "CAR by 1-6",
         "resting": "888 @ 18-27c",
-        "exposure": 4.82,
-        "exposure_text": "+$5",
+        "exposure": 24.13,
+        "exposure_text": "+$24",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "CAR by 7-14",
         "resting": "1,089 @ 12-23c",
-        "exposure": 68.33,
-        "exposure_text": "+$68",
+        "exposure": 87.64,
+        "exposure_text": "+$88",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -56,8 +56,8 @@
       {
         "side": "GB by 1-6",
         "resting": "1,050 @ 24-33c",
-        "exposure": 166.33,
-        "exposure_text": "+$166",
+        "exposure": 185.64,
+        "exposure_text": "+$186",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -66,8 +66,8 @@
       {
         "side": "GB by 15+",
         "resting": "1,500 @ 21-31c",
-        "exposure": 166.33,
-        "exposure_text": "+$166",
+        "exposure": 185.64,
+        "exposure_text": "+$186",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:30pm CT, up to $100 in all",
         "at": "2026-10-29T23:30:00Z",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,094, 5,798 resting. Worst line -$261 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,309, 5,584 resting. Worst line -$456 (goal -$150)."
         ]
       },
       {
@@ -91,14 +91,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$261).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$456).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
+          "Backstop ON: CAR by 15+ stopped adding until worst line is above -$300 (now -$456).",
           "Paid balancing starts Thu 6:30pm CT: worst line to -$150 by Thu 7:05pm CT, up to $100.",
           "At Thu 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Thu 7:15pm CT: the in-game engine takes over."
@@ -147,10 +147,10 @@
       },
       {
         "label": "CAR by 15+",
-        "held": 427.0,
-        "resting": 887.0,
+        "held": 641.5,
+        "resting": 672.5,
         "target": null,
-        "status": "even",
+        "status": "heavy",
         "price": 0.09
       },
       {
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-28T21:43:50Z"
+    "ts": "2026-10-28T21:45:50Z"
   },
   "posts": [
     {
@@ -3104,6 +3104,35 @@
       "text": "Quiet for 15 min. 5,798 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793223950895-2ee083",
+      "ts": "2026-10-28T21:45:44Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$456 is under -$300. CAR by 15+ stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1793223950896-07eb75",
+      "ts": "2026-10-28T21:45:50Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Thu 7:15pm CT. Worst line -$456, goal -$150. Next: Paid balancing starts, Thu 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1793223954580-7c5ea9",
+      "ts": "2026-10-28T21:45:54Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W9-CARGB book loss is growing: worst case -456 dollars, past its limit and -195 in 30 min. Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
