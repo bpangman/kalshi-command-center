@@ -1,13 +1,13 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-10-28T21:17:47.419684Z",
+  "generated_at": "2026-10-28T21:19:18.598745Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$540, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Ty Gibbs",
@@ -119,7 +119,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 7,392, 38,794 resting. Worst line -$540."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 7,392, 38,794 resting. Worst line -$540. Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -246,19 +246,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-10-28T21:17:38Z"
+    "ts": "2026-10-28T21:18:38Z"
   },
   "posts": [
-    {
-      "id": "1793098852327-48be5b",
-      "ts": "2026-10-27T11:00:52Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$548, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793098912672-f701a3",
       "ts": "2026-10-27T11:01:52Z",
@@ -3388,18 +3378,19 @@
         "contracts": 130.0,
         "rows": 5
       }
+    },
+    {
+      "id": "1793222318986-a657cb",
+      "ts": "2026-10-28T21:18:38Z",
+      "book": "MAR-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$540, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793151241058-a5b0e3",
-      "ts": "2026-10-28T01:34:01Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -605.56 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793153206543-c75af0",
       "ts": "2026-10-28T02:06:46Z",
@@ -4290,6 +4281,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-CUP): worst -551.66 vs floor -369.16. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793222320580-a3756f",
+      "ts": "2026-10-28T21:18:40Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: MAR-CUP - Bubba Wallace is posting again.",
+      "severity": "warn"
     }
   ]
 }
