@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T00:53:53Z",
+  "generated_at": "2026-10-29T00:55:07Z",
   "mode": "live",
   "terms": "Live terms (v2 props): NBA points / threes / rebounds and NFL receptions / yards / touchdowns only, rebounds / threes buy once both ESPN feeds agree, points after the next stoppage + 3 s of clock, NFL 3 s after the next play, $300 cap per market, no per-game cap, cash floor $500, buys walk the book from the cheapest ask up to 0.99, night pauses after 2 settled losses (every loss texts), no resting bids.",
   "days": [
@@ -226599,27 +226599,27 @@
           "certain_side": "yes",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "watching",
+          "status": "filled",
           "outcome_key": "KXNBA3PT-26OCT28CHADET-DETDROBINSON55-2",
           "cash_plan": 300.0,
-          "contracts": null,
-          "avg_price": null,
-          "cost": null,
+          "contracts": 300.0,
+          "avg_price": 0.99,
+          "cost": 297.0,
           "payout": null,
-          "fee": null,
+          "fee": 0.2079,
           "profit": null,
-          "lock_ts": null,
-          "fire_ts": null,
-          "latency_ms": null,
+          "lock_ts": "2026-10-29T00:54:35Z",
+          "fire_ts": "2026-10-29T00:54:36Z",
+          "latency_ms": 609.3,
           "player": "Duncan Robinson",
           "stat": "threes",
-          "stat_word": null,
+          "stat_word": "threes",
           "line": 2,
-          "side_word": null,
-          "stat_at_buy": null,
-          "stat_now": null,
-          "to_win": null,
-          "secured_ts": null
+          "side_word": "over",
+          "stat_at_buy": 3.0,
+          "stat_now": 3.0,
+          "to_win": 2.79,
+          "secured_ts": "2026-10-29T00:54:36Z"
         },
         {
           "ticker": "KXNBA3PT-26OCT28CHADET-DETDROBINSON55-3",
@@ -234744,15 +234744,15 @@
   ],
   "results": {
     "totals": {
-      "contracts": 4200.0,
-      "cost": 4150.68,
+      "contracts": 4500.0,
+      "cost": 4447.68,
       "payout": 3900.0,
-      "fees": 2.47,
+      "fees": 2.68,
       "profit": -253.18,
       "wins": 15,
       "losses": 1,
-      "avg_price": 0.9883,
-      "fill_rate": 0.5308
+      "avg_price": 0.9884,
+      "fill_rate": 0.5479
     },
     "by_day": [
       {
@@ -234775,12 +234775,12 @@
       },
       {
         "date": "2026-10-28",
-        "contracts": 300.0,
-        "cost": 297.0,
+        "contracts": 600.0,
+        "cost": 594.0,
         "profit": 2.79,
         "avg_price": 0.99,
-        "fills": 1,
-        "targets_fired": 1
+        "fills": 2,
+        "targets_fired": 2
       }
     ],
     "cumulative": [
@@ -235179,6 +235179,16 @@
         "price": 0.99,
         "cost": 297.0,
         "kind": "sweep"
+      },
+      {
+        "ts": "2026-10-29T00:54:36Z",
+        "ticker": "KXNBA3PT-26OCT28CHADET-DETDROBINSON55-2",
+        "title": "Duncan Robinson: 2+ threes",
+        "side": "yes",
+        "contracts": 300.0,
+        "price": 0.99,
+        "cost": 297.0,
+        "kind": "sweep"
       }
     ],
     "rest": {
@@ -235190,7 +235200,7 @@
       "cost": 1335.5,
       "fees": 0.0,
       "profit": -286.51,
-      "sweep_contracts": 5148.01,
+      "sweep_contracts": 5448.01,
       "sweep_profit": 36.2
     }
   },
@@ -235206,28 +235216,28 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-10-29T00:53:52Z",
-        "lag_s": 0.44,
+        "last_update": "2026-10-29T00:55:05Z",
+        "lag_s": 2.15,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-10-29T00:53:49Z",
-        "lag_s": 3.72,
+        "last_update": "2026-10-29T00:55:05Z",
+        "lag_s": 2.2,
         "ok": true
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-10-29T00:53:51Z",
-        "lag_s": 1.59,
+        "last_update": "2026-10-29T00:55:04Z",
+        "lag_s": 2.78,
         "ok": true
       }
     ],
-    "ws_age_s": 0.00012063980102539062,
+    "ws_age_s": 0.00010991096496582031,
     "cash_free": 78.6,
-    "cash_tied": 0.0,
+    "cash_tied": 297.21,
     "kill": false,
     "armed": true
   },
@@ -235240,7 +235250,7 @@
     "pending_dollars": 0.0,
     "saved_reversals": 0,
     "saved_dollars": 0.0,
-    "raw_calls": 2,
+    "raw_calls": 3,
     "delayed": 0,
     "blocked": 0,
     "by_rule": {}
