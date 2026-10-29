@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-29T22:17:39.290375Z",
+  "generated_at": "2026-10-29T22:19:12.404432Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 53,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -117,7 +117,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 3:00pm CT. Sold 624, 12,583 resting. Worst line -$215."
+          "Pre-race growth, green flag Sat 3:00pm CT. Sold 624, 12,583 resting. Worst line -$215. Bot is slow (checks every 53s, set for 30s)."
         ]
       },
       {
@@ -243,19 +243,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-29T22:17:11Z"
+    "ts": "2026-10-29T22:18:12Z"
   },
   "posts": [
-    {
-      "id": "1793164117030-da4294",
-      "ts": "2026-10-28T05:08:37Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 9,955 resting. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793164682345-c7f51d",
       "ts": "2026-10-28T05:18:02Z",
@@ -3261,18 +3251,19 @@
       "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793312292185-604399",
+      "ts": "2026-10-29T22:18:12Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793229365045-d36e7b",
-      "ts": "2026-10-28T23:16:05Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 21 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 252c, KXNASCARRACE-NATI26-JOGA low 252c, KXNASCARRACE-NATI26-JEBU low 252c, KXNASCARRACE-NATI26-RYEL low 252c, KXNASCARRACE-NATI26-AUHI high 268c, KXNASCARRACE-NATI26-BRPO low 252c, KXNASCARRACE-NATI26-GASM low 252c, KXNASCARRACE-NATI26-JOBI low 252c, KXNASCARRACE-NATI26-PAEM low 252c, KXNASCARRACE-NATI26-DACR low 252c, KXNASCARRACE-NATI26-CAWA low 252c, KXNASCARRACE-NATI26-BLPE low 252c, KXNASCARRACE-NATI26-KYSI low 252c, KXNASCARRACE-NATI26-PARE low 257c, KXNASCARRACE-NATI26-MAMA low 252c, KXNASCARRACE-NATI26-DADY low 252c, KXNASCARRACE-NATI26-JELO high 271c, KXNASCARRACE-NATI26-BALE low 252c, KXNASCARRACE-NATI26-PAST low 252c, KXNASCARRACE-NATI26-LASC low 252c, KXNASCARRACE-NATI26-LEPU high 271c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793231133401-c3af49",
       "ts": "2026-10-28T23:45:33Z",
@@ -4163,6 +4154,15 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 1109 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1793312293941-0d5bd8",
+      "ts": "2026-10-29T22:18:13Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): worst -215.27 vs floor -172.42. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
