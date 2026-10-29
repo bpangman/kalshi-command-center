@@ -1,13 +1,13 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T21:55:09.381900Z",
+  "generated_at": "2026-10-29T21:56:30.804695Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$520, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 62,
     "moves": [
       {
         "side": "CAR by 1-6",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,908, 4,747 resting. Worst line -$520 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,908, 4,747 resting. Worst line -$520 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
@@ -189,29 +189,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T21:55:01Z"
+    "ts": "2026-10-29T21:56:02Z"
   },
   "posts": [
-    {
-      "id": "1793164922378-71adaf",
-      "ts": "2026-10-28T05:20:00Z",
-      "book": "W9-CARGB",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 30: CAR by 7-14 x30 at 13c. Worst line -$57.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 30.0,
-        "fills": [
-          {
-            "side": "CAR by 7-14",
-            "price": 0.13,
-            "qty": 30.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793165203853-32bb2a",
       "ts": "2026-10-28T05:24:30Z",
@@ -3672,18 +3652,19 @@
         "contracts": 96.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1793310962287-559ef6",
+      "ts": "2026-10-29T21:56:02Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$520, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
-    {
-      "id": "1793244476563-e95598",
-      "ts": "2026-10-29T03:27:56Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -370.79 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793246155958-933eac",
       "ts": "2026-10-29T03:55:55Z",
@@ -4574,6 +4555,15 @@
       "source": "bot",
       "text": "+134 on CAR 7-14 @ 0.10 (maker)\nworst outcome now -509\nheld 1425/689/0/1425/384/889\nIf the game ends... you make\nGB 1-6: -530 (-12.1% of bankroll)\nGB 7-14: +206 (+4.7% of bankroll)\nGB 15+: +895 (+20.5% of bankroll)\nCAR 1-6: -530 (-12.1% of bankroll)\nCAR 7-14: +511 (+11.7% of bankroll)\nCAR 15+: +7 (+0.1% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1793310910464-fa999e",
+      "ts": "2026-10-29T21:55:10Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): 4 order(s) with an unsafe price. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
