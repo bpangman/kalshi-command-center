@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T16:40:14.065924Z",
+  "generated_at": "2026-10-29T16:41:40.733709Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,7 +22,7 @@
       },
       {
         "side": "CAR by 1-6",
-        "resting": "277 @ 18-27c",
+        "resting": "250 @ 18-27c",
         "exposure": -566.89,
         "exposure_text": "-$567",
         "move": "Paid balancing (trickle)",
@@ -180,19 +180,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T16:39:43Z"
+    "ts": "2026-10-29T16:40:43Z"
   },
   "posts": [
-    {
-      "id": "1793117722767-1a5a4b",
-      "ts": "2026-10-27T16:15:22Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,859 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793118488382-42f3ce",
       "ts": "2026-10-27T16:25:50Z",
@@ -3553,18 +3543,29 @@
       "text": "Quiet for 15 min. 3,832 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793292083997-e3be5c",
+      "ts": "2026-10-29T16:39:09Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 202: CAR by 1-6 x202 at 18c. Worst line -$642.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 202.0,
+        "fills": [
+          {
+            "side": "CAR by 1-6",
+            "price": 0.18,
+            "qty": 202.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793125998439-0f4c58",
-      "ts": "2026-10-27T18:33:18Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+21 on CAR 1-6 @ 0.18 (maker)\nworst outcome now -185\nheld 0/0/0/47/0/5\nIf the game ends... you make\nGB 1-6: +9 (+0.2% of bankroll)\nGB 7-14: +9 (+0.2% of bankroll)\nGB 15+: +9 (+0.2% of bankroll)\nCAR 1-6: -38 (-0.9% of bankroll)\nCAR 7-14: +9 (+0.2% of bankroll)\nCAR 15+: +4 (+0.1% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1793128915545-bf7454",
       "ts": "2026-10-27T19:21:55Z",
@@ -4455,6 +4456,15 @@
       "source": "bot",
       "text": "+202 on CAR 1-6 @ 0.18 (maker)\nworst outcome now -48\nheld 1425/506/0/1350/98/642\nIf the game ends... you make\nGB 1-6: -642 (-14.7% of bankroll)\nGB 7-14: +277 (+6.3% of bankroll)\nGB 15+: +783 (+17.9% of bankroll)\nCAR 1-6: -567 (-13.0% of bankroll)\nCAR 7-14: +685 (+15.7% of bankroll)\nCAR 15+: +142 (+3.2% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1793292059940-8984c4",
+      "ts": "2026-10-29T16:40:59Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): worst -641.89 vs floor -325.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
