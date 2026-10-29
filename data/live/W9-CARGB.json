@@ -1,13 +1,13 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T21:16:36.307782Z",
+  "generated_at": "2026-10-29T21:18:21.783728Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$543, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "checks_every_s": 20,
     "moves": [
       {
         "side": "CAR by 1-6",
@@ -47,45 +47,54 @@
         "resting": "275 @ 24-31c",
         "exposure": 192.41,
         "exposure_text": "+$192",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-10-29T23:55:00Z",
+        "move": "Hold price at 24c",
+        "when": "next cent is under the crowd price (23.2c)",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-10-29T21:05:18Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-10-29T21:05:18Z",
+        "lag_note": "Price 24c is at its floor."
       },
       {
         "side": "CAR by 7-14",
-        "resting": "937 @ 13-23c",
+        "resting": "1,237 @ 10-23c",
         "exposure": 631.86,
         "exposure_text": "+$632",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-10-29T23:55:00Z",
+        "move": "Hold price at 10c",
+        "when": "crowd pays 10c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-10-29T18:27:18Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-10-29T18:27:18Z",
+        "lag_note": "Price 10c matches the crowd."
       },
       {
         "side": "GB by 15+",
-        "resting": "1,720 @ 20-31c",
+        "resting": "2,020 @ 17-31c",
         "exposure": 881.75,
         "exposure_text": "+$882",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-10-29T23:55:00Z",
-        "stuck": false
+        "move": "Step price down 1c (17c to 16c)",
+        "when": "if no fill by 4:25pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-29T21:25:39Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "lag_note": "Steps to 16c if no fill by 4:25pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,678, 3,322 resting. Worst line -$543 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,678, 3,922 resting. Worst line -$543 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): CAR by 7-14, GB by 7-14, GB by 15+.",
+          "GB by 15+: 1,425 behind. Steps to 16c if no fill by 4:25pm CT.",
+          "CAR by 7-14: 1,175 behind. Price 10c matches the crowd.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -141,10 +150,10 @@
       {
         "label": "CAR by 7-14",
         "held": 249.9,
-        "resting": 937.0,
+        "resting": 1237.0,
         "target": null,
-        "status": "even",
-        "price": 0.13
+        "status": "lagging",
+        "price": 0.1
       },
       {
         "label": "CAR by 15+",
@@ -167,41 +176,22 @@
         "held": 689.3,
         "resting": 275.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.24
       },
       {
         "label": "GB by 15+",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 1800.0,
         "target": null,
-        "status": "even",
-        "price": 0.2
+        "status": "lagging",
+        "price": 0.17
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T21:15:43Z"
+    "ts": "2026-10-29T21:17:44Z"
   },
   "posts": [
-    {
-      "id": "1793156120201-bb414f",
-      "ts": "2026-10-28T02:55:20Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,673 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793156715411-f18273",
-      "ts": "2026-10-28T03:05:15Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +38 (+0.9% of bankroll)\nGB 7-14: -61 (-1.4% of bankroll)\nGB 15+: +38 (+0.9% of bankroll)\nCAR 1-6: -49 (-1.1% of bankroll)\nCAR 7-14: +38 (+0.9% of bankroll)\nCAR 15+: +33 (+0.7% of bankroll)\nCollected $38 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nGB 1-6: 0 / 1050\nGB 7-14: 98 / 952\nGB 15+: 0 / 1500\nCAR 1-6: 87 / 963\nCAR 7-14: 0 / 900\nCAR 15+: 5 / 1309\nPosted book 1.15 | Sold avg 1.117 | Worst now -185 | Cash free $1523\nAnchor age 0s | Last fill 6076s ago",
-      "severity": "info"
-    },
     {
       "id": "1793157026723-a298f0",
       "ts": "2026-10-28T03:10:26Z",
@@ -3625,6 +3615,26 @@
       "text": "Checkpoint: worst line -$543. Lagging: GB by 7-14, GB by 15+, CAR by 7-14.",
       "severity": "info",
       "title": "Checkpoint"
+    },
+    {
+      "id": "1793308603936-b10ffc",
+      "ts": "2026-10-29T21:16:43Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$543, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1793308664489-d2a766",
+      "ts": "2026-10-29T21:17:44Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$543, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
