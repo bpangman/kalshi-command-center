@@ -1071,6 +1071,10 @@ tfoot td {
    price, mine slightly dimmer so the three numbers read as one line of the same shape */
 .book-tile-row4 .book-tile-booksum.crowd-vig { color: #fff; }
 .book-tile-row4 .book-tile-booksum.my-vig { color: var(--text, #ddd); }
+/* 2026-10-29 (Blake): my vig green when it is on this sport's vig glide schedule, red when it is
+   behind the glide; plain (above) when the feed has no verdict (in play, no clock, nothing listed) */
+.book-tile-row4 .book-tile-booksum.my-vig.on-schedule { color: var(--green); }
+.book-tile-row4 .book-tile-booksum.my-vig.off-schedule { color: var(--red); }
 
 .book-tile-row4 .floor-mode-tag {
   background: rgba(63, 185, 80, 0.15);

@@ -2124,9 +2124,24 @@ function buildBookTile(b, opts) {
           ". Over 1.00 = the crowd is charging a vig.");
       }
       if (hasMyVig) {
-        vigSpan(b.my_book_sum, "my-vig", "My vig: our lowest resting ask on every outcome added up" +
+        // 2026-10-29 (Blake): green when my vig is on this sport's vig glide schedule (at or under
+        // the vig the glide says we should be charging at this point of the crowd clock), red when
+        // it is behind the glide (still above it). Plain when the feed has no verdict (no crowd
+        // clock yet, the event is in play, nothing listed by the sportsbook). The verdict and the
+        // scheduled figure come from the feed (my_vig_on_schedule, my_vig_scheduled_sum,
+        // vig_clock_f; tools/feed/crowd_mine.py vig_schedule), never re-derived here.
+        var schedCls = (b.my_vig_on_schedule === true) ? " on-schedule" : (b.my_vig_on_schedule === false) ? " off-schedule" : "";
+        var schedNote = "";
+        if (b.my_vig_on_schedule === true || b.my_vig_on_schedule === false) {
+          schedNote = " " + (b.my_vig_on_schedule ? "ON SCHEDULE (green)" : "BEHIND SCHEDULE (red)") +
+            ": this sport's vig glide says our vig should be " +
+            ((b.my_vig_scheduled_sum !== null && b.my_vig_scheduled_sum !== undefined) ? Number(b.my_vig_scheduled_sum).toFixed(2) : "?") +
+            " or less at this point of the crowd clock" +
+            ((b.vig_clock_f !== null && b.vig_clock_f !== undefined) ? " (" + Math.round(Number(b.vig_clock_f) * 100) + "% of the crowd's money is in)" : "") + ".";
+        }
+        vigSpan(b.my_book_sum, "my-vig" + schedCls, "My vig: our lowest resting ask on every outcome added up" +
           ((b.my_book_sum_outcomes !== undefined && nAll !== undefined) ? " (" + b.my_book_sum_outcomes + " of " + nAll + " outcomes from our own asks; the crowd's ask stands in on the rest)" : "") +
-          ". Over 1.00 = the crowd pays a vig at our prices.");
+          ". Over 1.00 = the crowd pays a vig at our prices." + schedNote);
       }
     } else if (hasSum) {
       var nRest = b.posted_book_sum_resting_outcomes;
