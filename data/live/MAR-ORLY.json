@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-29T17:41:14.328955Z",
+  "generated_at": "2026-10-29T17:42:35.460487Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -117,7 +117,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 3:00pm CT. Sold 624, 12,583 resting. Worst line -$215."
+          "Pre-race growth, green flag Sat 3:00pm CT. Sold 624, 12,583 resting. Worst line -$215. Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -243,29 +243,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-29T17:41:08Z"
+    "ts": "2026-10-29T17:42:09Z"
   },
   "posts": [
-    {
-      "id": "1793141500729-3489e7",
-      "ts": "2026-10-27T22:51:40Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 3 drivers: Jesse Love, driver ALLA, driver JUCA.",
-      "severity": "info",
-      "title": "Price shock"
-    },
-    {
-      "id": "1793141883909-9e5fb3",
-      "ts": "2026-10-27T22:58:03Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line $0, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793141944350-a87af0",
       "ts": "2026-10-27T22:59:04Z",
@@ -3260,6 +3240,25 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nJustin Allgaier: -215\nTaylor Gray: -77\nCorey Day: +15\nSammy Smith: +41\nJeremy Clements: +97\nRyan Sieg: +97\nJoey Gase: +97\nJeb Burton: +97\nall others (30) >= +97\nCollected $98 premium ($1 fees) | Paper margin over fair $26 (not realized until settlement)\nCore posted book 1.28 | Worst now -215 | Cash free $3957\nAnchor age 63s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1793295729504-aeb9ca",
+      "ts": "2026-10-29T17:42:09Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793295749350-0386c0",
+      "ts": "2026-10-29T17:42:29Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "MAR-ORLY book is not trading: no fills in the last hour while the crowd keeps trading (grew 2124). Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
