@@ -1,13 +1,13 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T21:44:47.071761Z",
+  "generated_at": "2026-10-29T21:46:08.030390Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$543, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "checks_every_s": 20,
     "moves": [
       {
         "side": "CAR by 1-6",
@@ -70,7 +70,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "2,020 @ 17-31c",
+        "resting": "2,470 @ 17-31c",
         "exposure": 881.75,
         "exposure_text": "+$882",
         "move": "Hold price at 17c",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,678, 4,192 resting. Worst line -$543 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,678, 4,642 resting. Worst line -$543 (goal -$150)."
         ]
       },
       {
@@ -182,25 +182,16 @@
       {
         "label": "GB by 15+",
         "held": 0.0,
-        "resting": 1800.0,
+        "resting": 2250.0,
         "target": null,
         "status": "lagging",
         "price": 0.17
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T21:43:56Z"
+    "ts": "2026-10-29T21:45:57Z"
   },
   "posts": [
-    {
-      "id": "1793160392306-53455a",
-      "ts": "2026-10-28T04:06:32Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +38 (+0.9% of bankroll)\nGB 7-14: -61 (-1.4% of bankroll)\nGB 15+: +38 (+0.9% of bankroll)\nCAR 1-6: -49 (-1.1% of bankroll)\nCAR 7-14: +38 (+0.9% of bankroll)\nCAR 15+: +33 (+0.7% of bankroll)\nCollected $38 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nGB 1-6: 0 / 1050\nGB 7-14: 98 / 952\nGB 15+: 0 / 1500\nCAR 1-6: 87 / 963\nCAR 7-14: 0 / 900\nCAR 15+: 5 / 1309\nPosted book 1.15 | Sold avg 1.117 | Worst now -185 | Cash free $1523\nAnchor age 0s | Last fill 9734s ago",
-      "severity": "info"
-    },
     {
       "id": "1793160652350-837a9e",
       "ts": "2026-10-28T04:10:52Z",
@@ -3639,18 +3630,18 @@
       "text": "Quiet for 15 min. 4,192 resting. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793310366407-600fa5",
+      "ts": "2026-10-29T21:46:06Z",
+      "book": "W9-CARGB",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nGB 1-6: -543 (-12.4% of bankroll)\nGB 7-14: +192 (+4.4% of bankroll)\nGB 15+: +882 (+20.1% of bankroll)\nCAR 1-6: -543 (-12.4% of bankroll)\nCAR 7-14: +632 (+14.4% of bankroll)\nCAR 15+: -7 (-0.2% of bankroll)\nCollected $882 premium ($0 fees) | Paper margin over fair $70 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; CAR 7-14: CAR 0-0, Q0 0:00\nheld / resting\nGB 1-6: 1425 / 75\nGB 7-14: 689 / 275\nGB 15+: 0 / 2250\nCAR 1-6: 1425 / 75\nCAR 7-14: 250 / 1237\nCAR 15+: 889 / 730\nPosted book 1.32 | Sold avg 1.079 | Worst now -532 | Cash free $1523\nAnchor age 43s | Last fill 2448s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793242640134-e2b686",
-      "ts": "2026-10-29T02:57:20Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -370.79 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793244295043-2647ad",
       "ts": "2026-10-29T03:24:55Z",
@@ -4541,6 +4532,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CARGB): held worst -543.25 (backstop -300) or lagging gap 1425 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1793310345565-3ffecf",
+      "ts": "2026-10-29T21:45:45Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): worst -543.25 vs floor -325.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
