@@ -1,13 +1,13 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T22:13:10.385491Z",
+  "generated_at": "2026-10-29T22:14:29.714508Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$458, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 20,
+    "checks_every_s": 60,
     "moves": [
       {
         "side": "CAR by 1-6",
@@ -51,7 +51,9 @@
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-10-29T23:55:00Z",
         "stuck": false,
-        "last_fill": "2026-10-29T21:05:18Z"
+        "also": "Also: price step",
+        "last_fill": "2026-10-29T21:05:18Z",
+        "lag_note": "Price 24c matches the crowd."
       },
       {
         "side": "CAR by 7-14",
@@ -62,18 +64,22 @@
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-10-29T23:55:00Z",
         "stuck": false,
-        "last_fill": "2026-10-29T22:00:02Z"
+        "also": "Also: price step",
+        "last_fill": "2026-10-29T22:00:02Z",
+        "lag_note": "Price 10c matches the crowd."
       },
       {
         "side": "GB by 15+",
         "resting": "2,170 @ 19-31c",
         "exposure": 666.98,
         "exposure_text": "+$667",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-10-29T23:55:00Z",
+        "move": "Step price down 1c (19c to 18c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-29T22:14:10Z",
         "stuck": false,
-        "last_fill": "2026-10-29T21:56:37Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-10-29T21:56:37Z",
+        "lag_note": "Steps to 18c at the next check."
       }
     ],
     "sections": [
@@ -86,7 +92,10 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): CAR by 7-14, GB by 7-14, GB by 15+.",
+          "GB by 15+: 1,125 behind. Steps to 18c at the next check.",
+          "CAR by 7-14: 833 behind. Price 10c matches the crowd.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -144,7 +153,7 @@
         "held": 592.2,
         "resting": 1124.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -168,7 +177,7 @@
         "held": 689.3,
         "resting": 275.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.24
       },
       {
@@ -176,34 +185,14 @@
         "held": 300.0,
         "resting": 1950.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.19
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T22:13:09Z"
+    "ts": "2026-10-29T22:14:10Z"
   },
   "posts": [
-    {
-      "id": "1793169856731-81b25e",
-      "ts": "2026-10-28T06:44:16Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,620 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793170763716-009b39",
-      "ts": "2026-10-28T06:59:23Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,620 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793171224159-ac6fb1",
       "ts": "2026-10-28T07:07:04Z",
@@ -3667,18 +3656,28 @@
         "contracts": 91.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1793311994624-b0ee11",
+      "ts": "2026-10-29T22:13:14Z",
+      "book": "W9-CARGB",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W9-CARGB: 0 orders posted in 10 min while the market traded 8001 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1793312050159-872e7a",
+      "ts": "2026-10-29T22:14:10Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$458, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
-    {
-      "id": "1793246337594-83cbfa",
-      "ts": "2026-10-29T03:58:57Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -370.79 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793247995690-b7c9c4",
       "ts": "2026-10-29T04:26:35Z",
@@ -4568,6 +4567,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+42 on CAR 7-14 @ 0.10 (maker)\nworst outcome now -499\nheld 1425/689/300/1425/592/889\nIf the game ends... you make\nGB 1-6: -458 (-10.5% of bankroll)\nGB 7-14: +278 (+6.3% of bankroll)\nGB 15+: +667 (+15.2% of bankroll)\nCAR 1-6: -458 (-10.5% of bankroll)\nCAR 7-14: +375 (+8.6% of bankroll)\nCAR 15+: +78 (+1.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793312020519-57608c",
+      "ts": "2026-10-29T22:13:40Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): held worst -458.02 (backstop -300) or lagging gap 1125 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
