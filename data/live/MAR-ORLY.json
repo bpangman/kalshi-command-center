@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-29T07:27:55.526019Z",
+  "generated_at": "2026-10-29T07:29:17.282859Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -243,29 +243,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-29T07:27:42Z"
+    "ts": "2026-10-29T07:28:42Z"
   },
   "posts": [
-    {
-      "id": "1793111540936-6bfc3f",
-      "ts": "2026-10-27T14:32:10Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
-    {
-      "id": "1793112385733-b4ccc9",
-      "ts": "2026-10-27T14:46:25Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line $0, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793112446224-45633b",
       "ts": "2026-10-27T14:47:26Z",
@@ -3266,18 +3246,28 @@
       "source": "resistance_monitor",
       "text": "MAR-ORLY book bot looks stuck: no RISK/HEALTH line in 600s. It may be down or frozen. Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1793258882454-1db093",
+      "ts": "2026-10-29T07:00:04Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi paused trading. The bot waits, then re-posts anything the pause wipes.",
+      "severity": "warn",
+      "title": "Kalshi pause"
+    },
+    {
+      "id": "1793258916942-87c3a3",
+      "ts": "2026-10-29T07:28:36Z",
+      "book": "MAR-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJustin Allgaier: -215\nTaylor Gray: -77\nCorey Day: +15\nSammy Smith: +41\nJeremy Clements: +97\nRyan Sieg: +97\nJoey Gase: +97\nJeb Burton: +97\nall others (30) >= +97\nCollected $98 premium ($1 fees) | Paper margin over fair $26 (not realized until settlement)\nCore posted book 1.28 | Worst now -215 | Cash free $4062\nAnchor age 278s (source: bovada)\nKalshi trading paused (exchange-wide, trading_active=false) for 28 min; idling, no new posts/cancels.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793110674260-7718c1",
-      "ts": "2026-10-27T14:17:54Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Carroll has had no resting orders for at least 10 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793110977001-113250",
       "ts": "2026-10-27T14:22:57Z",
@@ -4168,6 +4158,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-ORLY): 22 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 329c, KXNASCARRACE-NATI26-JOGA low 329c, KXNASCARRACE-NATI26-JEBU low 329c, KXNASCARRACE-NATI26-RYEL low 329c, KXNASCARRACE-NATI26-BRJO high 385c, KXNASCARRACE-NATI26-AUHI high 372c, KXNASCARRACE-NATI26-BRPO low 329c, KXNASCARRACE-NATI26-GASM low 329c, KXNASCARRACE-NATI26-JOBI low 329c, KXNASCARRACE-NATI26-PAEM low 329c, KXNASCARRACE-NATI26-DACR low 329c, KXNASCARRACE-NATI26-CAWA low 329c, KXNASCARRACE-NATI26-BLPE low 329c, KXNASCARRACE-NATI26-KYSI low 329c, KXNASCARRACE-NATI26-PARE low 336c, KXNASCARRACE-NATI26-MAMA low 329c, KXNASCARRACE-NATI26-DADY low 329c, KXNASCARRACE-NATI26-JELO high 389c, KXNASCARRACE-NATI26-BALE low 329c, KXNASCARRACE-NATI26-PAST low 329c, KXNASCARRACE-NATI26-LASC low 329c, KXNASCARRACE-NATI26-LEPU high 376c. Check the command center.",
       "severity": "warn"
+    },
+    {
+      "id": "1793258895632-053d64",
+      "ts": "2026-10-29T07:28:15Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): worst -215.27 vs floor -172.42. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
