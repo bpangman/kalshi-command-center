@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T21:49:42.323737Z",
+  "generated_at": "2026-10-29T21:51:04.011709Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,812, 4,613 resting. Worst line -$530 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,812, 4,747 resting. Worst line -$530 (goal -$150)."
         ]
       },
       {
@@ -150,7 +150,7 @@
       {
         "label": "CAR by 7-14",
         "held": 384.2,
-        "resting": 1102.7,
+        "resting": 1236.7,
         "target": null,
         "status": "lagging",
         "price": 0.1
@@ -189,29 +189,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T21:48:58Z"
+    "ts": "2026-10-29T21:50:59Z"
   },
   "posts": [
-    {
-      "id": "1793162465123-74c3c5",
-      "ts": "2026-10-28T04:41:05Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,673 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793163371363-fa586f",
-      "ts": "2026-10-28T04:56:11Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,673 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793164001323-907ce3",
       "ts": "2026-10-28T05:06:41Z",
@@ -3643,18 +3623,43 @@
       "text": "Fast fill on lagging CAR by 7-14: 134 of 300 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1793310639627-b80f33",
+      "ts": "2026-10-29T21:48:45Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 239 (same-price reload): CAR by 7-14 x134 at 10c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 239.0,
+        "rows": 2
+      }
+    },
+    {
+      "id": "1793310659817-8085a2",
+      "ts": "2026-10-29T21:48:44Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 134: CAR by 7-14 x134 at 10c. Worst line -$530.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 134.0,
+        "fills": [
+          {
+            "side": "CAR by 7-14",
+            "price": 0.1,
+            "qty": 134.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793244295043-2647ad",
-      "ts": "2026-10-29T03:24:55Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): held worst -370.79 (backstop -300) or lagging gap 642 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793244476563-e95598",
       "ts": "2026-10-29T03:27:56Z",
@@ -4545,6 +4550,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CARGB): worst -543.25 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793310588315-21a3a5",
+      "ts": "2026-10-29T21:49:48Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+134 on CAR 7-14 @ 0.10 (maker)\nworst outcome now -509\nheld 1425/689/0/1425/384/889\nIf the game ends... you make\nGB 1-6: -530 (-12.1% of bankroll)\nGB 7-14: +206 (+4.7% of bankroll)\nGB 15+: +895 (+20.5% of bankroll)\nCAR 1-6: -530 (-12.1% of bankroll)\nCAR 7-14: +511 (+11.7% of bankroll)\nCAR 15+: +7 (+0.1% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
