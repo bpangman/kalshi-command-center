@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T23:52:06.970993Z",
+  "generated_at": "2026-10-29T23:53:40.957125Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,7 +38,7 @@
         "exposure_text": "+$127",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-29T23:51:53Z",
+        "at": "2026-10-29T23:52:54Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:55pm CT",
         "last_fill": "2026-10-29T18:24:51Z",
@@ -59,7 +59,7 @@
       },
       {
         "side": "CAR by 7-14",
-        "resting": "1,028 @ 11-23c",
+        "resting": "974 @ 11-23c",
         "exposure": 240.05,
         "exposure_text": "+$240",
         "move": "Paid balancing (trickle)",
@@ -77,7 +77,7 @@
         "exposure_text": "+$715",
         "move": "Step price down 1c (19c to 18c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-29T23:51:53Z",
+        "at": "2026-10-29T23:52:54Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:55pm CT",
         "last_fill": "2026-10-29T21:56:37Z",
@@ -186,19 +186,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T23:51:53Z"
+    "ts": "2026-10-29T23:52:54Z"
   },
   "posts": [
-    {
-      "id": "1793193492198-4818df",
-      "ts": "2026-10-28T13:18:12Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793194398703-ae10a3",
       "ts": "2026-10-28T13:33:18Z",
@@ -3715,18 +3705,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nGB 1-6: -410 (-9.4% of bankroll)\nGB 7-14: +201 (+4.6% of bankroll)\nGB 15+: +715 (+16.3% of bankroll)\nCAR 1-6: -410 (-9.4% of bankroll)\nCAR 7-14: +240 (+5.5% of bankroll)\nCAR 15+: +127 (+2.9% of bankroll)\nCollected $1015 premium ($0 fees) | Paper margin over fair $78 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; CAR 7-14: CAR 0-0, Q0 0:00\nheld / resting\nGB 1-6: 1425 / 75\nGB 7-14: 814 / 174\nGB 15+: 300 / 2543\nCAR 1-6: 1425 / 75\nCAR 7-14: 775 / 1028\nCAR 15+: 889 / 835\nPosted book 1.36 | Sold avg 1.026 | Worst now -905 | Cash free $1523\nAnchor age 0s | Last fill 3397s ago",
       "severity": "info"
+    },
+    {
+      "id": "1793317974475-b4d8d9",
+      "ts": "2026-10-29T23:52:46Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease CAR7TO14: resting 1028 -> 974 (held 775 + resting was over the cap 1750 = 1.25x; tighten",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1793259143632-3e34fe",
-      "ts": "2026-10-29T07:32:23Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793260779093-5b8e6f",
       "ts": "2026-10-29T07:59:39Z",
@@ -4617,6 +4608,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CARGB): worst -409.72 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793317932943-8da02f",
+      "ts": "2026-10-29T23:52:12Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=6636. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
