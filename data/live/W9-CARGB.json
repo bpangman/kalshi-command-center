@@ -1,12 +1,12 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T09:00:19.863518Z",
+  "generated_at": "2026-10-29T09:01:42.428425Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$506, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
@@ -22,7 +22,7 @@
       },
       {
         "side": "GB by 1-6",
-        "resting": "630 @ 25-33c",
+        "resting": "725 @ 24-33c",
         "exposure": -215.37,
         "exposure_text": "-$215",
         "move": "Paid balancing (trickle)",
@@ -44,7 +44,7 @@
       },
       {
         "side": "GB by 7-14",
-        "resting": "342 @ 23-31c",
+        "resting": "366 @ 22-31c",
         "exposure": 86.11,
         "exposure_text": "+$86",
         "move": "Paid balancing (trickle)",
@@ -79,7 +79,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,054, 4,108 resting. Worst line -$506 (goal -$150). Kalshi trading is paused."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,054, 4,227 resting. Worst line -$506 (goal -$150)."
         ]
       },
       {
@@ -157,18 +157,18 @@
       {
         "label": "GB by 1-6",
         "held": 775.0,
-        "resting": 630.0,
+        "resting": 725.0,
         "target": null,
         "status": "even",
-        "price": 0.25
+        "price": 0.24
       },
       {
         "label": "GB by 7-14",
         "held": 473.5,
-        "resting": 342.0,
+        "resting": 366.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": 0.22
       },
       {
         "label": "GB by 15+",
@@ -180,29 +180,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T08:59:23Z"
+    "ts": "2026-10-29T09:01:23Z"
   },
   "posts": [
-    {
-      "id": "1793089648124-f3a02a",
-      "ts": "2026-10-27T08:27:28Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 8,850 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793090554393-39c372",
-      "ts": "2026-10-27T08:42:34Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 8,850 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793091422970-5950db",
       "ts": "2026-10-27T08:57:02Z",
@@ -3477,6 +3457,26 @@
       "text": "Quiet for 15 min. 4,108 resting. Next: Paid balancing starts, 6:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793264423599-2a297f",
+      "ts": "2026-10-29T09:00:06Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi trading is back after 1h 59m. The bot is posting again.",
+      "severity": "info",
+      "title": "Kalshi pause over"
+    },
+    {
+      "id": "1793264423602-9957e8",
+      "ts": "2026-10-29T09:00:23Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$506, goal -$150. Next: Paid balancing starts, 6:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4100,6 +4100,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793264452060-7e6c65",
+      "ts": "2026-10-29T09:00:52Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): held worst -506.37 (backstop -300) or lagging gap 1066 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
