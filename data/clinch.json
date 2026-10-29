@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T00:00:01Z",
-  "mode": "armed",
+  "generated_at": "2026-10-29T00:01:26Z",
+  "mode": "live",
   "terms": "Live terms (v2 props): NBA points / threes / rebounds and NFL receptions / yards / touchdowns only, rebounds / threes buy once both ESPN feeds agree, points after the next stoppage + 3 s of clock, NFL 3 s after the next play, $300 cap per market, no per-game cap, cash floor $500, buys walk the book from the cheapest ask up to 0.99, night pauses after 2 settled losses (every loss texts), no resting bids.",
   "days": [
     {
@@ -190233,27 +190233,27 @@
           "certain_side": "yes",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "watching",
+          "status": "filled",
           "outcome_key": "KXNBAREB-26OCT28MIAATL-MIAGANTETOKOUNMPO7-8",
           "cash_plan": 300.0,
-          "contracts": null,
-          "avg_price": null,
-          "cost": null,
+          "contracts": 300.0,
+          "avg_price": 0.99,
+          "cost": 297.0,
           "payout": null,
-          "fee": null,
+          "fee": 0.2079,
           "profit": null,
-          "lock_ts": null,
-          "fire_ts": null,
-          "latency_ms": null,
+          "lock_ts": "2026-10-29T00:01:25Z",
+          "fire_ts": "2026-10-29T00:01:25Z",
+          "latency_ms": 284.3,
           "player": "Giannis Antetokounmpo",
           "stat": "reb",
-          "stat_word": null,
+          "stat_word": "rebounds",
           "line": 8,
-          "side_word": null,
-          "stat_at_buy": null,
-          "stat_now": null,
-          "to_win": null,
-          "secured_ts": null
+          "side_word": "over",
+          "stat_at_buy": 9.0,
+          "stat_now": 9.0,
+          "to_win": 2.79,
+          "secured_ts": "2026-10-29T00:01:25Z"
         },
         {
           "ticker": "KXNBAREB-26OCT28MIAATL-MIAGANTETOKOUNMPO7-10",
@@ -233952,15 +233952,15 @@
   ],
   "results": {
     "totals": {
-      "contracts": 3900.0,
-      "cost": 3853.68,
+      "contracts": 4200.0,
+      "cost": 4150.68,
       "payout": 3600.0,
-      "fees": 2.27,
+      "fees": 2.47,
       "profit": -255.97,
       "wins": 14,
       "losses": 1,
-      "avg_price": 0.9881,
-      "fill_rate": 0.5123
+      "avg_price": 0.9883,
+      "fill_rate": 0.5308
     },
     "by_day": [
       {
@@ -233980,6 +233980,15 @@
         "avg_price": 0.9893,
         "fills": 5,
         "targets_fired": 6
+      },
+      {
+        "date": "2026-10-28",
+        "contracts": 300.0,
+        "cost": 297.0,
+        "profit": 0.0,
+        "avg_price": 0.99,
+        "fills": 1,
+        "targets_fired": 1
       }
     ],
     "cumulative": [
@@ -234364,6 +234373,16 @@
         "price": 0.99,
         "cost": 297.0,
         "kind": "sweep"
+      },
+      {
+        "ts": "2026-10-29T00:01:25Z",
+        "ticker": "KXNBAREB-26OCT28MIAATL-MIAGANTETOKOUNMPO7-8",
+        "title": "Giannis Antetokounmpo: 8+ rebounds",
+        "side": "yes",
+        "contracts": 300.0,
+        "price": 0.99,
+        "cost": 297.0,
+        "kind": "sweep"
       }
     ],
     "rest": {
@@ -234375,7 +234394,7 @@
       "cost": 1335.5,
       "fees": 0.0,
       "profit": -286.51,
-      "sweep_contracts": 4848.01,
+      "sweep_contracts": 5148.01,
       "sweep_profit": 33.41
     }
   },
@@ -234391,28 +234410,28 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-10-29T00:00:00Z",
-        "lag_s": 0.55,
+        "last_update": "2026-10-29T00:01:24Z",
+        "lag_s": 2.26,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-10-28T23:59:58Z",
-        "lag_s": 2.7,
+        "last_update": "2026-10-29T00:01:26Z",
+        "lag_s": 0.51,
         "ok": true
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-10-28T23:59:56Z",
-        "lag_s": 4.93,
+        "last_update": "2026-10-29T00:01:26Z",
+        "lag_s": 0.53,
         "ok": true
       }
     ],
-    "ws_age_s": 7.009506225585938e-05,
+    "ws_age_s": 0.0002307891845703125,
     "cash_free": 8.67,
-    "cash_tied": 0.0,
+    "cash_tied": 297.21,
     "kill": false,
     "armed": true
   },
@@ -234425,7 +234444,7 @@
     "pending_dollars": 0.0,
     "saved_reversals": 0,
     "saved_dollars": 0.0,
-    "raw_calls": 0,
+    "raw_calls": 1,
     "delayed": 0,
     "blocked": 0,
     "by_rule": {}
