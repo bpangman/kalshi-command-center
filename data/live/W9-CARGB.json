@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T14:44:04.041888Z",
+  "generated_at": "2026-10-29T14:45:27.946945Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -180,19 +180,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T14:43:51Z"
+    "ts": "2026-10-29T14:44:52Z"
   },
   "posts": [
-    {
-      "id": "1793107812263-e0cd9d",
-      "ts": "2026-10-27T13:30:12Z",
-      "book": "W9-CARGB",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot heartbeat is back to normal.",
-      "severity": "info",
-      "title": "Heartbeat back"
-    },
     {
       "id": "1793107852590-4351f8",
       "ts": "2026-10-27T13:30:52Z",
@@ -3476,6 +3466,26 @@
       "text": "Row sold out: GB by 7-14 at 22c (24 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1793285112171-5a03d8",
+      "ts": "2026-10-29T14:43:06Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 24: GB by 7-14 x24 at 22c. Worst line -$501.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 24.0,
+        "fills": [
+          {
+            "side": "GB by 7-14",
+            "price": 0.22,
+            "qty": 24.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4315,6 +4325,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793285049489-fdb07a",
+      "ts": "2026-10-29T14:44:09Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+24 on GB 7-14 @ 0.22 (maker)\nworst outcome now -99\nheld 775/498/0/1066/98/642\nIf the game ends... you make\nGB 1-6: -210 (-4.8% of bankroll)\nGB 7-14: +67 (+1.5% of bankroll)\nGB 15+: +565 (+12.9% of bankroll)\nCAR 1-6: -501 (-11.4% of bankroll)\nCAR 7-14: +467 (+10.7% of bankroll)\nCAR 15+: -77 (-1.8% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
