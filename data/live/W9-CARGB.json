@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T23:45:12.042167Z",
+  "generated_at": "2026-10-29T23:46:33.307472Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -409.72,
         "exposure_text": "-$410",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
+        "when": "no move planned until paid balancing starts at 6:55pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-29T17:46:17Z"
@@ -26,7 +26,7 @@
         "exposure": -409.72,
         "exposure_text": "-$410",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
+        "when": "no move planned until paid balancing starts at 6:55pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-29T16:18:46Z"
@@ -38,7 +38,7 @@
         "exposure_text": "+$127",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-29T23:44:50Z",
+        "at": "2026-10-29T23:45:51Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:55pm CT",
         "last_fill": "2026-10-29T18:24:51Z",
@@ -77,7 +77,7 @@
         "exposure_text": "+$715",
         "move": "Step price down 1c (19c to 18c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-29T23:44:50Z",
+        "at": "2026-10-29T23:45:51Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:55pm CT",
         "last_fill": "2026-10-29T21:56:37Z",
@@ -113,7 +113,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -125,11 +124,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-29T23:45:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-10-29T23:55:00Z",
         "label": "Paid balancing starts",
@@ -192,29 +186,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T23:44:50Z"
+    "ts": "2026-10-29T23:45:51Z"
   },
   "posts": [
-    {
-      "id": "1793191678760-174cfe",
-      "ts": "2026-10-28T12:47:58Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793192585001-dc6824",
-      "ts": "2026-10-28T13:03:04Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793193062512-544759",
       "ts": "2026-10-28T13:11:02Z",
@@ -3721,18 +3695,29 @@
       "text": "Quiet for 15 min. 4,730 resting. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793317530921-353a0e",
+      "ts": "2026-10-29T23:45:21Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$410. Lagging: GB by 7-14, GB by 15+, CAR by 7-14 +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1793317551117-fe5ced",
+      "ts": "2026-10-29T23:45:51Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$410, goal -$150. Next: Paid balancing starts, 6:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
-    {
-      "id": "1793257326891-f7fc3d",
-      "ts": "2026-10-29T07:02:06Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793258961963-a188b9",
       "ts": "2026-10-29T07:29:21Z",
@@ -4622,6 +4607,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CARGB): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=4099. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793317569587-2a87c2",
+      "ts": "2026-10-29T23:46:09Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-CARGB): held worst -409.72 (backstop -300) or lagging gap 1125 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
