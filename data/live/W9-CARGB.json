@@ -1,21 +1,21 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T23:55:27.564656Z",
+  "generated_at": "2026-10-29T23:56:48.732167Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$410, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$370.",
+    "confidence": "medium",
+    "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
     "checks_every_s": 20,
     "moves": [
       {
         "side": "CAR by 1-6",
         "resting": "75 @ 27c",
-        "exposure": -409.72,
-        "exposure_text": "-$410",
+        "exposure": -369.87,
+        "exposure_text": "-$370",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 6:55pm CT",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-29T17:46:17Z"
@@ -23,80 +23,80 @@
       {
         "side": "GB by 1-6",
         "resting": "525 @ 24-33c",
-        "exposure": -409.72,
-        "exposure_text": "-$410",
+        "exposure": -369.87,
+        "exposure_text": "-$370",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 6:55pm CT",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-29T16:18:46Z"
       },
       {
+        "side": "CAR by 7-14",
+        "resting": "839 @ 13-23c",
+        "exposure": 142.9,
+        "exposure_text": "+$143",
+        "move": "Step price down 1c (13c to 12c)",
+        "when": "if no fill by 7:05pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T00:05:22Z",
+        "stuck": false,
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-29T23:55:22Z",
+        "lag_note": "Steps to 12c if no fill by 7:05pm CT."
+      },
+      {
         "side": "CAR by 15+",
         "resting": "835 @ 9-18c",
-        "exposure": 126.61,
-        "exposure_text": "+$127",
+        "exposure": 166.46,
+        "exposure_text": "+$166",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-29T23:54:55Z",
+        "at": "2026-10-29T23:55:55Z",
         "stuck": false,
-        "also": "Also: paid balancing starts at the next check",
+        "also": "Also: paid balancing",
         "last_fill": "2026-10-29T18:24:51Z",
         "lag_note": "Steps to 8c at the next check."
       },
       {
         "side": "GB by 7-14",
         "resting": "174 @ 24-31c",
-        "exposure": 200.94,
-        "exposure_text": "+$201",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-10-29T23:55:00Z",
+        "exposure": 190.79,
+        "exposure_text": "+$191",
+        "move": "Hold price at 24c",
+        "when": "next cent is under the crowd price (23.2c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-10-29T22:50:29Z",
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-29T23:55:22Z",
         "lag_note": "Price 24c is at its floor."
-      },
-      {
-        "side": "CAR by 7-14",
-        "resting": "974 @ 11-23c",
-        "exposure": 240.05,
-        "exposure_text": "+$240",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-10-29T23:55:00Z",
-        "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-10-29T22:29:42Z",
-        "lag_note": "Price 11c is at its floor."
       },
       {
         "side": "GB by 15+",
         "resting": "2,763 @ 19-31c",
-        "exposure": 715.28,
-        "exposure_text": "+$715",
+        "exposure": 655.13,
+        "exposure_text": "+$655",
         "move": "Step price down 1c (19c to 18c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-29T23:54:55Z",
+        "when": "if no fill by 7:05pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T00:05:22Z",
         "stuck": false,
-        "also": "Also: paid balancing starts at the next check",
-        "last_fill": "2026-10-29T21:56:37Z",
-        "lag_note": "Steps to 18c at the next check."
+        "also": "Also: paid balancing",
+        "last_fill": "2026-10-29T23:55:22Z",
+        "lag_note": "Steps to 18c if no fill by 7:05pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 5,628, 4,676 resting. Worst line -$410 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 5,915, 4,639 resting. Worst line -$370 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): CAR by 7-14, CAR by 15+, GB by 7-14, GB by 15+.",
-          "GB by 15+: 1,125 behind. Steps to 18c at the next check.",
-          "CAR by 7-14: 650 behind. Price 11c is at its floor.",
+          "GB by 15+: 1,025 behind. Steps to 18c if no fill by 7:05pm CT.",
+          "GB by 7-14: 561 behind. Price 24c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -104,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$410).",
+          "Gate open: worst line -$370 is better than -$390.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -112,7 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
+          "Paid balancing is running: plan -$390, worst line -$370; spent $6 of $100.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -124,11 +124,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-10-29T23:55:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$150 by 7:10pm CT."
-      },
       {
         "at": "2026-10-30T00:15:00Z",
         "label": "Kickoff",
@@ -146,11 +141,11 @@
       },
       {
         "label": "CAR by 7-14",
-        "held": 775.2,
-        "resting": 974.0,
+        "held": 912.2,
+        "resting": 937.0,
         "target": null,
         "status": "lagging",
-        "price": 0.11
+        "price": 0.13
       },
       {
         "label": "CAR by 15+",
@@ -170,7 +165,7 @@
       },
       {
         "label": "GB by 7-14",
-        "held": 814.3,
+        "held": 864.3,
         "resting": 174.0,
         "target": null,
         "status": "lagging",
@@ -178,7 +173,7 @@
       },
       {
         "label": "GB by 15+",
-        "held": 300.0,
+        "held": 400.0,
         "resting": 2543.0,
         "target": null,
         "status": "lagging",
@@ -186,78 +181,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T23:54:55Z"
+    "ts": "2026-10-29T23:55:55Z"
   },
   "posts": [
-    {
-      "id": "1793197119909-f0b6e1",
-      "ts": "2026-10-28T14:18:39Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793198026634-ddf19d",
-      "ts": "2026-10-28T14:33:46Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793198933395-fead50",
-      "ts": "2026-10-28T14:48:53Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793199839699-91f61d",
-      "ts": "2026-10-28T15:03:59Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793200267823-4b1c54",
-      "ts": "2026-10-28T15:11:07Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +48 (+1.1% of bankroll)\nGB 7-14: -59 (-1.3% of bankroll)\nGB 15+: +48 (+1.1% of bankroll)\nCAR 1-6: -65 (-1.5% of bankroll)\nCAR 7-14: +18 (+0.4% of bankroll)\nCAR 15+: +43 (+1.0% of bankroll)\nCollected $48 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nGB 1-6: 0 / 1050\nGB 7-14: 107 / 943\nGB 15+: 0 / 1500\nCAR 1-6: 113 / 937\nCAR 7-14: 30 / 870\nCAR 15+: 5 / 1309\nPosted book 1.16 | Sold avg 1.100 | Worst now -185 | Cash free $1523\nAnchor age 0s | Last fill 13137s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1793200746445-44cc2e",
-      "ts": "2026-10-28T15:19:06Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793201652021-81218c",
-      "ts": "2026-10-28T15:34:12Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,609 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793202558099-9cc9ca",
       "ts": "2026-10-28T15:49:18Z",
@@ -3713,18 +3639,79 @@
       "source": "trickle",
       "text": "W9-CARGB: selling 100 GB 15+ at 17c into the crowd's bid (about $3) (worst case right now -$406), a paid sale under fair value. Reply in Claude if you want it stopped.",
       "severity": "critical"
+    },
+    {
+      "id": "1793318135595-d07fe5",
+      "ts": "2026-10-29T23:55:21Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$406; goal -$150 by 7:10pm CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1793318135596-465ea5",
+      "ts": "2026-10-29T23:55:22Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 100 GB by 15+ at the bid 17c. Worst line -$406. Cost $3.11.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1793318135596-29a231",
+      "ts": "2026-10-29T23:55:22Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 100 CAR by 7-14 at the bid 10c. Worst line -$406. Cost $2.49.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1793318135597-3d3f55",
+      "ts": "2026-10-29T23:55:22Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 50 GB by 7-14 at the bid 22c. Worst line -$406. Cost $0.61.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1793318155789-5528de",
+      "ts": "2026-10-29T23:55:43Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease CAR7TO14: resting 937 -> 839 (held 912 + resting was over the cap 1752 = 1.21x; tighten ",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1793318155791-c990b5",
+      "ts": "2026-10-29T23:55:55Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793318155792-bf1f5d",
+      "ts": "2026-10-29T23:55:55Z",
+      "book": "W9-CARGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line -$370. Next: Kickoff, 7:15pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
-    {
-      "id": "1793260960642-0cb82c",
-      "ts": "2026-10-29T08:02:40Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793262615607-82c10a",
       "ts": "2026-10-29T08:30:15Z",
@@ -4614,6 +4601,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: GB 1-6 worst outcome -911\nIf the game ends... you make\nGB 1-6: -406 (-9.3% of bankroll)\nGB 7-14: +205 (+4.7% of bankroll)\nGB 15+: +719 (+16.4% of bankroll)\nCAR 1-6: -406 (-9.3% of bankroll)\nCAR 7-14: +207 (+4.7% of bankroll)\nCAR 15+: +131 (+3.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793318143335-50590c",
+      "ts": "2026-10-29T23:55:43Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+37 on CAR 7-14 @ 0.11 (maker)\n+100 on GB 15+ @ 0.17 (taker)\n+100 on CAR 7-14 @ 0.10 (taker)\n+50 on GB 7-14 @ 0.22 (taker)\nworst outcome now -976\nheld 1425/864/400/1425/912/889\nIf the game ends... you make\nGB 1-6: -370 (-8.5% of bankroll)\nGB 7-14: +191 (+4.4% of bankroll)\nGB 15+: +655 (+15.0% of bankroll)\nCAR 1-6: -370 (-8.5% of bankroll)\nCAR 7-14: +143 (+3.3% of bankroll)\nCAR 15+: +166 (+3.8% of bankroll)",
       "severity": "warn"
     }
   ]
