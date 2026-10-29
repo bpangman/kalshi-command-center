@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-29T21:53:46.156728Z",
+  "generated_at": "2026-10-29T21:55:09.381900Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -47,11 +47,11 @@
         "resting": "275 @ 24-31c",
         "exposure": 215.43,
         "exposure_text": "+$215",
-        "move": "Hold price at 24c",
-        "when": "crowd pays 24c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-10-29T23:55:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:55pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-29T21:05:18Z",
         "lag_note": "Price 24c matches the crowd."
       },
@@ -60,11 +60,11 @@
         "resting": "1,237 @ 10-23c",
         "exposure": 424.6,
         "exposure_text": "+$425",
-        "move": "Hold price at 10c",
-        "when": "crowd pays 10c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-10-29T23:55:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:55pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-29T21:51:57Z",
         "lag_note": "Price 10c matches the crowd."
       },
@@ -73,11 +73,11 @@
         "resting": "2,470 @ 17-31c",
         "exposure": 904.77,
         "exposure_text": "+$905",
-        "move": "Hold price at 17c",
-        "when": "next cent is under the crowd price (16.5c)",
-        "at": null,
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-10-29T23:55:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:55pm CT",
+        "also": "Also: price step",
         "lag_note": "Price 17c is at its floor."
       }
     ],
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,908, 4,651 resting. Worst line -$520 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,908, 4,747 resting. Worst line -$520 (goal -$150)."
         ]
       },
       {
@@ -150,7 +150,7 @@
       {
         "label": "CAR by 7-14",
         "held": 480.2,
-        "resting": 1140.7,
+        "resting": 1236.7,
         "target": null,
         "status": "lagging",
         "price": 0.1
@@ -189,28 +189,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-29T21:53:00Z"
+    "ts": "2026-10-29T21:55:01Z"
   },
   "posts": [
-    {
-      "id": "1793164001323-907ce3",
-      "ts": "2026-10-28T05:06:41Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +38 (+0.9% of bankroll)\nGB 7-14: -61 (-1.4% of bankroll)\nGB 15+: +38 (+0.9% of bankroll)\nCAR 1-6: -49 (-1.1% of bankroll)\nCAR 7-14: +38 (+0.9% of bankroll)\nCAR 15+: +33 (+0.7% of bankroll)\nCollected $38 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nGB 1-6: 0 / 1050\nGB 7-14: 98 / 952\nGB 15+: 0 / 1500\nCAR 1-6: 87 / 963\nCAR 7-14: 0 / 900\nCAR 15+: 5 / 1309\nPosted book 1.15 | Sold avg 1.117 | Worst now -185 | Cash free $1523\nAnchor age 0s | Last fill 13363s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1793164277940-919f36",
-      "ts": "2026-10-28T05:11:17Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,673 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793164922378-71adaf",
       "ts": "2026-10-28T05:20:00Z",
@@ -3656,6 +3637,40 @@
             "qty": 134.0
           }
         ]
+      }
+    },
+    {
+      "id": "1793310901742-e1f5b6",
+      "ts": "2026-10-29T21:52:57Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 96: CAR by 7-14 x96 at 10c. Worst line -$520.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 96.0,
+        "fills": [
+          {
+            "side": "CAR by 7-14",
+            "price": 0.1,
+            "qty": 96.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793310901742-ff413a",
+      "ts": "2026-10-29T21:52:58Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 96 (same-price reload): CAR by 7-14 x96 at 10c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 96.0,
+        "rows": 1
       }
     }
   ],
