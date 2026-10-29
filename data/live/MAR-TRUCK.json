@@ -1,13 +1,13 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-29T20:17:50.039752Z",
+  "generated_at": "2026-10-29T20:19:30.108116Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -26,68 +26,76 @@
         "resting": "332 @ 15c",
         "exposure": 32.89,
         "exposure_text": "+$33",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
+        "move": "Hold price at 15c",
+        "when": "needs 50+ crowd trades under 15c (now 33)",
         "at": null,
         "stuck": false,
-        "also": "Also: glide starts Fri 1:00pm CT"
+        "also": "Also: glide starts Fri 1:00pm CT; even-up Fri 5:00pm CT",
+        "lag_note": "Crowd is quiet here (33 traded)."
       },
       {
         "side": "Christian Eckes",
         "resting": "332 @ 15c",
         "exposure": 32.89,
         "exposure_text": "+$33",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
-        "at": null,
+        "move": "Step price down 1c (15c to 14c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-29T20:19:17Z",
         "stuck": false,
-        "also": "Also: glide starts Fri 1:00pm CT"
+        "also": "Also: glide starts Fri 1:00pm CT",
+        "lag_note": "Steps to 14c at the next check."
       },
       {
         "side": "Layne Riggs",
         "resting": "377 @ 25c",
         "exposure": 32.89,
         "exposure_text": "+$33",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
-        "at": null,
+        "move": "Step price down 1c (25c to 24c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-29T20:19:17Z",
         "stuck": false,
-        "also": "Also: glide starts Fri 1:00pm CT"
+        "also": "Also: glide starts Fri 1:00pm CT",
+        "lag_note": "Steps to 24c at the next check."
       },
       {
         "side": "Sammy Smith",
         "resting": "314 @ 10c",
         "exposure": 32.89,
         "exposure_text": "+$33",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
-        "at": null,
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-29T20:19:17Z",
         "stuck": false,
-        "also": "Also: glide starts Fri 1:00pm CT"
+        "also": "Also: glide starts Fri 1:00pm CT",
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Ty Majeski",
         "resting": "321 @ 12c",
         "exposure": 32.89,
         "exposure_text": "+$33",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
-        "at": null,
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-29T20:19:17Z",
         "stuck": false,
-        "also": "Also: glide starts Fri 1:00pm CT"
+        "also": "Also: glide starts Fri 1:00pm CT",
+        "lag_note": "Steps to 11c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 5:00pm CT. Sold 145, 10,535 resting. Worst line -$112. Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Fri 5:00pm CT. Sold 145, 10,535 resting. Worst line -$112."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No contender is lagging."
+          "Lagging (150+ behind the leader): Chandler Smith, Christian Eckes, Layne Riggs, Sammy Smith, Ty Majeski, William Sawalich.",
+          "Layne Riggs: 145 behind. Steps to 24c at the next check.",
+          "Christian Eckes: 145 behind. Steps to 14c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -137,7 +145,7 @@
         "held": 0.0,
         "resting": 332.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.15
       },
       {
@@ -145,7 +153,7 @@
         "held": 0.0,
         "resting": 332.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.15
       },
       {
@@ -161,7 +169,7 @@
         "held": 0.0,
         "resting": 377.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.25
       },
       {
@@ -169,7 +177,7 @@
         "held": 0.0,
         "resting": 314.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -177,35 +185,15 @@
         "held": 0.0,
         "resting": 321.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       }
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-29T20:17:16Z"
+    "ts": "2026-10-29T20:19:17Z"
   },
   "posts": [
-    {
-      "id": "1793150644435-6508f4",
-      "ts": "2026-10-28T01:24:04Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793151550182-716426",
-      "ts": "2026-10-28T01:39:10Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793152455921-306f98",
       "ts": "2026-10-28T01:54:15Z",
@@ -3134,6 +3122,26 @@
     {
       "id": "1793304976014-3d519c",
       "ts": "2026-10-29T20:16:16Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793305097055-7473a7",
+      "ts": "2026-10-29T20:18:17Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793305157476-a4eabc",
+      "ts": "2026-10-29T20:19:17Z",
       "book": "MAR-TRUCK",
       "kind": "plan",
       "source": "narrator",
