@@ -1,13 +1,13 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T03:57:37.730998Z",
+  "generated_at": "2026-10-30T03:58:54.067100Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$250, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Kaden Honeycutt",
@@ -52,7 +52,7 @@
         "exposure_text": "+$74",
         "move": "Step price down 1c (25c to 24c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T03:57:19Z",
+        "at": "2026-10-30T03:58:19Z",
         "stuck": false,
         "also": "Also: glide starts Fri 1:00pm CT",
         "lag_note": "Steps to 24c at the next check."
@@ -64,7 +64,7 @@
         "exposure_text": "+$74",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T03:57:19Z",
+        "at": "2026-10-30T03:58:19Z",
         "stuck": false,
         "also": "Also: glide starts Fri 1:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 5:00pm CT. Sold 324, 11,576 resting. Worst line -$250 (limit now -$250)."
+          "Pre-race growth, green flag Fri 5:00pm CT. Sold 324, 11,576 resting. Worst line -$250 (limit now -$250). Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -191,19 +191,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T03:57:19Z"
+    "ts": "2026-10-30T03:58:19Z"
   },
   "posts": [
-    {
-      "id": "1793190349151-cb68f4",
-      "ts": "2026-10-28T12:25:49Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793191255774-395064",
       "ts": "2026-10-28T12:40:55Z",
@@ -3186,18 +3176,19 @@
       "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793332699908-62da96",
+      "ts": "2026-10-30T03:58:19Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793160044127-e3acdd",
-      "ts": "2026-10-28T04:00:44Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): 17 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 285c, KXNASCARRACE-BLAC26-JORE low 285c, KXNASCARRACE-BLAC26-BERH low 291c, KXNASCARRACE-BLAC26-SPBO low 285c, KXNASCARRACE-BLAC26-TYAN low 291c, KXNASCARRACE-BLAC26-CHSM high 332c, KXNASCARRACE-BLAC26-TAGR low 288c, KXNASCARRACE-BLAC26-KRWR low 285c, KXNASCARRACE-BLAC26-JUCA low 285c, KXNASCARRACE-BLAC26-SASM high 314c, KXNASCARRACE-BLAC26-WISA high 304c, KXNASCARRACE-BLAC26-FRMU low 285c, KXNASCARRACE-BLAC26-BRQU low 288c, KXNASCARRACE-BLAC26-ANPE low 285c, KXNASCARRACE-BLAC26-TYTO low 285c, KXNASCARRACE-BLAC26-GABO low 288c, KXNASCARRACE-BLAC26-MOTI low 285c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793161861330-5fe19b",
       "ts": "2026-10-28T04:31:01Z",
@@ -4087,6 +4078,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1793332710730-9268cd",
+      "ts": "2026-10-30T03:58:30Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Kaden Honeycutt has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
