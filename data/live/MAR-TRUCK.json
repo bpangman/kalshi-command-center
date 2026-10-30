@@ -1,13 +1,13 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T20:54:35.942112Z",
+  "generated_at": "2026-10-30T20:56:18.158793Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
     "headline": "Risk glide for the green flag 5:00pm CT. Worst line -$281, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 48,
     "moves": [
       {
         "side": "Christian Eckes",
@@ -78,12 +78,12 @@
         "exposure": 140.89,
         "exposure_text": "+$141",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 3:56pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T20:56:07Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T20:15:52Z",
-        "lag_note": "Steps to 20c if no fill by 3:56pm CT."
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "Sammy Smith",
@@ -103,7 +103,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 6,087, 23,418 resting. Worst line -$281 (limit now +$3)."
+          "Risk glide, green flag 5:00pm CT. Sold 6,087, 25,806 resting. Worst line -$281 (limit now +$6). Bot is slow (checks every 48s, set for 30s)."
         ]
       },
       {
@@ -111,7 +111,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Kaden Honeycutt, Layne Riggs, Sammy Smith, Ty Majeski.",
           "Sammy Smith: 711 behind. Steps to 6c if no fill by 3:58pm CT.",
-          "Kaden Honeycutt: 422 behind. Steps to 20c if no fill by 3:56pm CT.",
+          "Kaden Honeycutt: 422 behind. Steps to 20c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -128,7 +128,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Christian Eckes: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit +$3, worst line -$281, final +$100 at 5:00pm CT.",
+          "Glide is running: limit +$6, worst line -$281, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -209,49 +209,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T20:53:38Z"
+    "ts": "2026-10-30T20:55:39Z"
   },
   "posts": [
-    {
-      "id": "1793314871017-c5cb68",
-      "ts": "2026-10-29T23:01:11Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793315778193-cee0d6",
-      "ts": "2026-10-29T23:16:18Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793315999728-ae792f",
-      "ts": "2026-10-29T23:19:39Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (4 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793316160802-bda198",
-      "ts": "2026-10-29T23:22:40Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793316281716-52dd34",
       "ts": "2026-10-29T23:24:41Z",
@@ -3736,18 +3696,62 @@
       "text": "Risk glide: limit +$4, worst line -$281. post gate Layne Riggs 41@0.23 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793393678948-ab9b3c",
+      "ts": "2026-10-30T20:54:38Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 5:00pm CT. Worst line -$281, final target +$100. Next: Glide target date, 5:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1793393719305-b3007c",
+      "ts": "2026-10-30T20:53:17Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 524: Christian Eckes x524 at 12c. Worst line -$281.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 524.0,
+        "fills": [
+          {
+            "side": "Christian Eckes",
+            "price": 0.12,
+            "qty": 524.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793393719306-0bf58e",
+      "ts": "2026-10-30T20:55:03Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,388 (race expand): Tyler Ankrum x84 at 2c, Landen Lewis x84 at 2c, +22 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2388.0,
+        "rows": 24
+      }
+    },
+    {
+      "id": "1793393746462-6af6e3",
+      "ts": "2026-10-30T20:55:46Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "MAR-TRUCK book loss is growing: worst case -281 dollars, past its limit and -203 in 30 min. Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
-    {
-      "id": "1793345293631-2f509c",
-      "ts": "2026-10-30T07:28:13Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 319c, KXNASCARRACE-BLAC26-JORE low 319c, KXNASCARRACE-BLAC26-SPBO low 319c, KXNASCARRACE-BLAC26-CHEC low 369c, KXNASCARRACE-BLAC26-CHSM low 369c, KXNASCARRACE-BLAC26-TAGR low 322c, KXNASCARRACE-BLAC26-KRWR low 319c, KXNASCARRACE-BLAC26-JUCA low 319c, KXNASCARRACE-BLAC26-SASM high 351c, KXNASCARRACE-BLAC26-WISA high 339c, KXNASCARRACE-BLAC26-FRMU low 319c, KXNASCARRACE-BLAC26-BRQU low 322c, KXNASCARRACE-BLAC26-ANPE low 319c, KXNASCARRACE-BLAC26-TYTO low 319c, KXNASCARRACE-BLAC26-MOTI low 319c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793346316936-0ee081",
       "ts": "2026-10-30T07:45:16Z",
@@ -4637,6 +4641,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Ty Majeski (+22%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793393745892-d9da19",
+      "ts": "2026-10-30T20:55:45Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: MAR-TRUCK - Ben Rhodes is posting again.\nBack: MAR-TRUCK - Layne Riggs is posting again.\nBack: MAR-TRUCK - Ty Majeski is posting again.",
       "severity": "warn"
     }
   ]
