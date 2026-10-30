@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T22:18:40.112480Z",
+  "generated_at": "2026-10-30T22:20:03.140480Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
@@ -71,7 +71,7 @@
         "exposure_text": "+$43",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T22:18:13Z",
+        "at": "2026-10-30T22:19:13Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-30T22:00:07Z",
@@ -185,18 +185,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T22:18:13Z"
+    "ts": "2026-10-30T22:19:13Z"
   },
   "posts": [
-    {
-      "id": "1793349293046-6052b9",
-      "ts": "2026-10-30T08:34:53Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nKaden Honeycutt: -250\nGrant Enfinger: +74\nTimmy Hill: +74\nCorey LaJoie: +74\nJosh Reaume: +74\nDaniel Hemric: +74\nBen Rhodes: +74\nJustin Haley: +74\nall others (28) >= +74\nCollected $75 premium ($1 fees) | Paper margin over fair $18 (not realized until settlement)\nCore posted book 1.24 | Worst now -250 | Cash free $4083\nAnchor age 269s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1793349439050-c5a237",
       "ts": "2026-10-30T08:37:19Z",
@@ -3844,18 +3835,29 @@
       "text": "Kalshi rate-limited the bot (19 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793398753840-86487e",
+      "ts": "2026-10-30T22:17:00Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 62: Tristan McKee x62 at 11c. Worst line -$71.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 62.0,
+        "fills": [
+          {
+            "side": "Tristan McKee",
+            "price": 0.11,
+            "qty": 62.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793355743948-305676",
-      "ts": "2026-10-30T10:22:23Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): worst -246.48 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793356763237-836529",
       "ts": "2026-10-30T10:39:23Z",
@@ -4745,6 +4747,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Ben Rhodes has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793398752165-18724d",
+      "ts": "2026-10-30T22:19:12Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): 16 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 498c, KXNASCARRACE-BLAC26-JORE low 498c, KXNASCARRACE-BLAC26-SPBO low 498c, KXNASCARRACE-BLAC26-STFR low 472c, KXNASCARRACE-BLAC26-TYAN low 491c, KXNASCARRACE-BLAC26-TAGR low 264c, KXNASCARRACE-BLAC26-KRWR low 498c, KXNASCARRACE-BLAC26-JAGA low 302c, KXNASCARRACE-BLAC26-JUCA low 498c, KXNASCARRACE-BLAC26-LALE low 491c, KXNASCARRACE-BLAC26-FRMU low 498c, KXNASCARRACE-BLAC26-BRQU low 265c, KXNASCARRACE-BLAC26-ANPE low 268c, KXNASCARRACE-BLAC26-TYTO low 498c, KXNASCARRACE-BLAC26-GIRU low 516c, KXNASCARRACE-BLAC26-MOTI low 498c. Check the command center.",
       "severity": "warn"
     }
   ]
