@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T21:07:01.420560Z",
+  "generated_at": "2026-10-30T21:08:35.894815Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -40,7 +40,7 @@
         "exposure": -5.11,
         "exposure_text": "-$5",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$21",
+        "when": "each bot check while his line is under +$23",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-30T20:28:00Z"
@@ -77,12 +77,12 @@
         "exposure": 140.89,
         "exposure_text": "+$141",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T21:06:43Z",
+        "when": "if no fill by 4:11pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T21:11:26Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T20:15:52Z",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Steps to 20c if no fill by 4:11pm CT."
       },
       {
         "side": "Sammy Smith",
@@ -90,27 +90,27 @@
         "exposure": 429.61,
         "exposure_text": "+$430",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 4:08pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T21:08:42Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Steps to 6c if no fill by 4:08pm CT."
+        "lag_note": "Steps to 6c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$21)."
+          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$23)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Kaden Honeycutt, Layne Riggs, Sammy Smith, Ty Majeski.",
-          "Sammy Smith: 711 behind. Steps to 6c if no fill by 4:08pm CT.",
-          "Kaden Honeycutt: 422 behind. Steps to 20c at the next check.",
+          "Sammy Smith: 711 behind. Steps to 6c at the next check.",
+          "Kaden Honeycutt: 422 behind. Steps to 20c if no fill by 4:11pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -127,7 +127,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Christian Eckes: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit +$21, worst line -$281, final +$100 at 5:00pm CT.",
+          "Glide is running: limit +$23, worst line -$281, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -208,19 +208,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T21:06:43Z"
+    "ts": "2026-10-30T21:07:43Z"
   },
   "posts": [
-    {
-      "id": "1793318760042-a163b2",
-      "ts": "2026-10-30T00:06:00Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793319242699-825884",
       "ts": "2026-10-30T00:14:02Z",
@@ -3753,6 +3743,16 @@
       "text": "Risk glide: limit +$19, worst line -$281. post gate Layne Riggs 41@0.23 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793394463966-12e213",
+      "ts": "2026-10-30T21:07:25Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even-up: Chandler Smith 34% behind the leader (held 627 vs 946); lowest rung 0.15 -> 0.14, queue ahead 5711 (",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
