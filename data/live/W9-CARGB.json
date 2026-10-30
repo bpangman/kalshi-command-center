@@ -1,10 +1,10 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-30T01:43:59.206131Z",
+  "generated_at": "2026-10-30T01:45:22.261253Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$30.",
+    "headline": "In game (Ingame). Worst line -$29.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,196, 744 resting. Worst line -$30. Game 48% done."
+          "In game (Ingame). Sold 9,202, 702 resting. Worst line -$29. Game 49% done."
         ]
       },
       {
@@ -62,15 +62,15 @@
       {
         "label": "CAR by 15+",
         "held": 1370.7,
-        "resting": 306.0,
+        "resting": 304.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "GB by 1-6",
-        "held": 1588.0,
-        "resting": 55.0,
+        "held": 1594.0,
+        "resting": 15.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,23 +101,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-30T01:43:31Z"
+    "ts": "2026-10-30T01:44:31Z"
   },
   "posts": [
-    {
-      "id": "1793225139736-47faa9",
-      "ts": "2026-10-28T22:03:27Z",
-      "book": "W9-CARGB",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 24 (fast-fill reload): GB by 7-14 x24 at 24c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 24.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1793225139736-19cf6f",
       "ts": "2026-10-28T22:03:27Z",
@@ -3994,18 +3980,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793324651843-523995",
+      "ts": "2026-10-30T01:42:51Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 8: GB by 15+ x6 at 37c, GB by 7-14 x2 at 32c. Worst line -$30.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 8.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.37,
+            "qty": 6.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.32,
+            "qty": 2.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793281112044-9af2fd",
-      "ts": "2026-10-29T13:38:32Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793282746875-95b3bc",
       "ts": "2026-10-29T14:05:46Z",
@@ -4895,6 +4897,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+8 on GB 7-14 @ 0.28 (maker)\n+23 on GB 15+ @ 0.22 (maker)\n+29 on GB 15+ @ 0.25 (maker)\n+9 on GB 15+ @ 0.27 (maker)\n+19 on GB 15+ @ 0.31 (maker)\n+32 on GB 7-14 @ 0.30 (maker)\n+12 on GB 1-6 @ 0.23 (maker)\nworst outcome now +7\nheld 1540/1565/1584/1511/1467/1371\nIf the game ends... you make\nGB 1-6: +15 (+0.3% of bankroll)\nGB 7-14: -10 (-0.2% of bankroll)\nGB 15+: -29 (-0.7% of bankroll)\nCAR 1-6: +45 (+1.0% of bankroll)\nCAR 7-14: +88 (+2.0% of bankroll)\nCAR 15+: +185 (+4.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793324698052-78dba8",
+      "ts": "2026-10-30T01:44:58Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: in-game ladder grow on CAR 15+ failed - order(s) rejected: [{'code': 'same_price_repost_blocked', 'message': 'same-price re-post blocked: KXNFLWINMARGIN-26OCT29CARGB-CAR15PLUS 2.00@0.0500'}]\nIf the game ends... you make\nGB 1-6: +11 (+0.2% of bankroll)\nGB 7-14: -21 (-0.5% of bankroll)\nGB 15+: -29 (-0.7% of bankroll)\nCAR 1-6: +94 (+2.1% of bankroll)\nCAR 7-14: +138 (+3.1% of bankroll)\nCAR 15+: +234 (+5.3% of bankroll)",
       "severity": "warn"
     }
   ]
