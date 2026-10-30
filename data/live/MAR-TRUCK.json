@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T20:48:44.545212Z",
+  "generated_at": "2026-10-30T20:50:06.276263Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -75,12 +75,12 @@
         "exposure": 78.98,
         "exposure_text": "+$79",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 3:50pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T20:50:42Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T20:15:52Z",
-        "lag_note": "Steps to 20c if no fill by 3:50pm CT."
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "Christian Eckes",
@@ -89,7 +89,7 @@
         "exposure_text": "+$181",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T20:48:36Z",
+        "at": "2026-10-30T20:49:36Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -102,7 +102,7 @@
         "exposure_text": "+$368",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T20:48:36Z",
+        "at": "2026-10-30T20:49:36Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -113,7 +113,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 5,563, 23,942 resting. Worst line -$68 (limit now -$5)."
+          "Risk glide, green flag 5:00pm CT. Sold 5,563, 23,942 resting. Worst line -$68 (limit now -$3)."
         ]
       },
       {
@@ -138,7 +138,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$5, worst line -$68, final +$100 at 5:00pm CT.",
+          "Glide is running: limit -$3, worst line -$68, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -219,19 +219,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T20:48:36Z"
+    "ts": "2026-10-30T20:49:36Z"
   },
   "posts": [
-    {
-      "id": "1793312654805-5cef66",
-      "ts": "2026-10-29T22:24:14Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793312970680-bc0352",
       "ts": "2026-10-29T22:29:30Z",
@@ -3745,18 +3735,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793393336324-b769f2",
+      "ts": "2026-10-30T20:48:39Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$4, worst line -$68. post gate Layne Riggs 41@0.23 -> 0 (race_principles; a full fill would take his ",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793344383395-0e90c1",
-      "ts": "2026-10-30T07:13:03Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): worst -250.48 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793345293631-2f509c",
       "ts": "2026-10-30T07:28:13Z",
@@ -4646,6 +4637,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=6656. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793393369263-58c189",
+      "ts": "2026-10-30T20:49:29Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Ty Majeski (+22%)",
       "severity": "warn"
     }
   ]
