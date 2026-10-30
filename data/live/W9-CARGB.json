@@ -1,10 +1,10 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-30T01:30:58.305144Z",
+  "generated_at": "2026-10-30T01:32:45.403468Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$8.",
+    "headline": "In game (Ingame). Worst line -$30.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 8,907, 619 resting. Worst line -$8. Game 47% done."
+          "In game (Ingame). Sold 8,968, 478 resting. Worst line -$30. Game 47% done."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "CAR by 7-14",
         "held": 1467.2,
-        "resting": 106.0,
+        "resting": 55.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,23 +70,23 @@
       {
         "label": "GB by 1-6",
         "held": 1528.0,
-        "resting": 66.0,
+        "resting": 67.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "GB by 7-14",
-        "held": 1525.3,
-        "resting": 73.0,
+        "held": 1526.4,
+        "resting": 62.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "GB by 15+",
-        "held": 1504.7,
-        "resting": 94.7,
+        "held": 1565.3,
+        "resting": 15.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-30T01:30:27Z"
+    "ts": "2026-10-30T01:32:27Z"
   },
   "posts": [
     {
@@ -3895,15 +3895,6 @@
   ],
   "audits": [
     {
-      "id": "1793279295391-c8f7a9",
-      "ts": "2026-10-29T13:08:15Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): worst -506.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1793280930269-05e5f9",
       "ts": "2026-10-29T13:35:30Z",
       "book": "W9-CARGB",
@@ -4792,6 +4783,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: in-game ladder post on GB 15+ failed - order(s) rejected: [{'code': 'same_price_repost_blocked', 'message': 'same-price re-post blocked: KXNFLWINMARGIN-26OCT29CARGB-GB15PLUS 48.00@0.2400'}]\nIf the game ends... you make\nGB 1-6: -64 (-1.5% of bankroll)\nGB 7-14: -9 (-0.2% of bankroll)\nGB 15+: +139 (+3.2% of bankroll)\nCAR 1-6: -7 (-0.2% of bankroll)\nCAR 7-14: -3 (-0.1% of bankroll)\nCAR 15+: +93 (+2.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793323957333-34d536",
+      "ts": "2026-10-30T01:32:37Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: in-game ladder post on CAR 7-14 failed - order(s) rejected: [{'code': 'same_price_repost_blocked', 'message': 'same-price re-post blocked: KXNFLWINMARGIN-26OCT29CARGB-CAR7TO14 76.00@0.1100'}]\nIf the game ends... you make\nGB 1-6: +9 (+0.2% of bankroll)\nGB 7-14: +5 (+0.1% of bankroll)\nGB 15+: -29 (-0.7% of bankroll)\nCAR 1-6: +26 (+0.6% of bankroll)\nCAR 7-14: +69 (+1.6% of bankroll)\nCAR 15+: +166 (+3.8% of bankroll)",
       "severity": "warn"
     }
   ]
