@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T19:51:34.529932Z",
+  "generated_at": "2026-10-30T19:53:07.514567Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -71,12 +71,12 @@
         "exposure": 76.5,
         "exposure_text": "+$77",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 2:53pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T19:53:31Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Steps to 11c if no fill by 2:53pm CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "Kaden Honeycutt",
@@ -97,26 +97,26 @@
         "exposure": 263.22,
         "exposure_text": "+$263",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 2:53pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T19:53:31Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Steps to 6c if no fill by 2:53pm CT."
+        "lag_note": "Steps to 6c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 4,260, 19,994 resting. Worst line -$129 (limit now -$88)."
+          "Risk glide, green flag 5:00pm CT. Sold 4,260, 20,665 resting. Worst line -$129 (limit now -$87)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Christian Eckes, Kaden Honeycutt, Sammy Smith.",
-          "Sammy Smith: 392 behind. Steps to 6c if no fill by 2:53pm CT.",
+          "Sammy Smith: 392 behind. Steps to 6c at the next check.",
           "Kaden Honeycutt: 304 behind. Steps to 20c if no fill by 2:55pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -134,7 +134,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$88, worst line -$129, final +$100 at 5:00pm CT.",
+          "Glide is running: limit -$87, worst line -$129, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -215,19 +215,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T19:51:12Z"
+    "ts": "2026-10-30T19:52:13Z"
   },
   "posts": [
-    {
-      "id": "1793296011617-f35d9b",
-      "ts": "2026-10-29T17:46:51Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793296917953-93c9f7",
       "ts": "2026-10-29T18:01:57Z",
@@ -3572,6 +3562,31 @@
       "text": "Risk glide for the green flag 5:00pm CT. Worst line -$129, final target +$100. Next: Glide selling opens, 3:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1793389913005-7913b5",
+      "ts": "2026-10-30T19:50:22Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 333: Layne Riggs x269 at 25c, Tanner Gray x64 at 2c. Worst line -$129.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 333.0,
+        "fills": [
+          {
+            "side": "Layne Riggs",
+            "price": 0.25,
+            "qty": 269.0
+          },
+          {
+            "side": "Tanner Gray",
+            "price": 0.02,
+            "qty": 64.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
