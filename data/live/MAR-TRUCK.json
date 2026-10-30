@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T22:09:21.161941Z",
+  "generated_at": "2026-10-30T22:10:43.515817Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
@@ -60,7 +60,7 @@
         "exposure_text": "+$29",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T22:10:07Z",
+        "at": "2026-10-30T22:10:09Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-30T22:00:07Z",
@@ -174,39 +174,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T22:09:09Z"
+    "ts": "2026-10-30T22:10:09Z"
   },
   "posts": [
-    {
-      "id": "1793346579276-4f140b",
-      "ts": "2026-10-30T07:49:24Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (12 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793347384901-865b6c",
-      "ts": "2026-10-30T08:03:04Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 5:00pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793347445457-c41671",
-      "ts": "2026-10-30T08:04:05Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 5:00pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793347808343-87cfae",
       "ts": "2026-10-30T08:10:08Z",
@@ -3814,18 +3784,49 @@
       "text": "Green flag handoff for the green flag 5:00pm CT. Worst line -$70, final target +$100.",
       "severity": "info",
       "title": "Plan updated: Green flag handoff"
+    },
+    {
+      "id": "1793398209908-818553",
+      "ts": "2026-10-30T22:10:04Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Ty Majeski.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1793398209909-8cb653",
+      "ts": "2026-10-30T22:10:04Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fair value rose on Ty Majeski: lowest row 12c to 13c.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1793398230019-88d8e5",
+      "ts": "2026-10-30T22:08:12Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 124: William Sawalich x124 at 3c. Worst line -$66.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 124.0,
+        "fills": [
+          {
+            "side": "William Sawalich",
+            "price": 0.03,
+            "qty": 124.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793353902979-032c5f",
-      "ts": "2026-10-30T09:51:42Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): worst -250.48 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793354676550-dc8395",
       "ts": "2026-10-30T10:04:36Z",
@@ -4715,6 +4716,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Layne Riggs has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793398204967-614326",
+      "ts": "2026-10-30T22:10:04Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Ty Majeski (+41%)",
       "severity": "warn"
     }
   ]
