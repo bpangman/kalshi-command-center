@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T19:39:14.515457Z",
+  "generated_at": "2026-10-30T19:40:36.812628Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -86,12 +86,12 @@
         "exposure": 102.71,
         "exposure_text": "+$103",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T19:39:12Z",
+        "when": "if no fill by 2:44pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T19:44:56Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T02:49:13Z",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Steps to 20c if no fill by 2:44pm CT."
       },
       {
         "side": "Sammy Smith",
@@ -111,7 +111,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 3,858, 19,547 resting. Worst line -$143 (limit now -$107)."
+          "Risk glide, green flag 5:00pm CT. Sold 3,858, 19,547 resting. Worst line -$143 (limit now -$104)."
         ]
       },
       {
@@ -119,7 +119,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Christian Eckes, Kaden Honeycutt, Layne Riggs, Sammy Smith.",
           "Sammy Smith: 335 behind. Steps to 6c if no fill by 2:43pm CT.",
-          "Kaden Honeycutt: 246 behind. Steps to 20c at the next check.",
+          "Kaden Honeycutt: 246 behind. Steps to 20c if no fill by 2:44pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -136,7 +136,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$107, worst line -$143, final +$100 at 5:00pm CT.",
+          "Glide is running: limit -$104, worst line -$143, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -217,28 +217,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T19:39:07Z"
+    "ts": "2026-10-30T19:40:07Z"
   },
   "posts": [
-    {
-      "id": "1793290593032-da3f25",
-      "ts": "2026-10-29T16:16:33Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793291284198-70ba8d",
-      "ts": "2026-10-29T16:28:04Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nKaden Honeycutt: -112\nGrant Enfinger: +33\nTimmy Hill: +33\nCorey LaJoie: +33\nJosh Reaume: +33\nDaniel Hemric: +33\nBen Rhodes: +33\nJustin Haley: +33\nall others (28) >= +33\nCollected $33 premium ($0 fees) | Paper margin over fair $6 (not realized until settlement)\nCore posted book 1.48 | Worst now -112 | Cash free $3897\nAnchor age 64s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1793291499646-138985",
       "ts": "2026-10-29T16:31:39Z",
@@ -3559,18 +3540,28 @@
         "contracts": 208.0,
         "rows": 4
       }
+    },
+    {
+      "id": "1793389165150-c87685",
+      "ts": "2026-10-30T19:39:25Z",
+      "book": "MAR-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nChandler Smith: -143\nTy Majeski: -81\nTristan McKee: -81\nBen Rhodes: -74\nChristian Eckes: +5\nLayne Riggs: +69\nKaden Honeycutt: +103\nBrenden Queen: +172\nall others (28) >= +191\nCollected $433 premium ($6 fees) | Paper margin over fair $93 (not realized until settlement)\nCore posted book 1.34 | Worst now -143 | Cash free $4096\nAnchor age 290s (source: bovada)",
+      "severity": "info"
+    },
+    {
+      "id": "1793389167780-470017",
+      "ts": "2026-10-30T19:39:25Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$106, worst line -$143. post gate Layne Riggs 59@0.23 -> 0 (race_principles; a full fill would take his ",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793335709989-3139b8",
-      "ts": "2026-10-30T04:48:29Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 319c, KXNASCARRACE-BLAC26-JORE low 319c, KXNASCARRACE-BLAC26-SPBO low 319c, KXNASCARRACE-BLAC26-CHEC low 369c, KXNASCARRACE-BLAC26-CHSM low 369c, KXNASCARRACE-BLAC26-TAGR low 322c, KXNASCARRACE-BLAC26-KRWR low 319c, KXNASCARRACE-BLAC26-JUCA low 319c, KXNASCARRACE-BLAC26-SASM high 351c, KXNASCARRACE-BLAC26-WISA high 339c, KXNASCARRACE-BLAC26-FRMU low 319c, KXNASCARRACE-BLAC26-BRQU low 322c, KXNASCARRACE-BLAC26-ANPE low 319c, KXNASCARRACE-BLAC26-TYTO low 319c, KXNASCARRACE-BLAC26-MOTI low 319c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793336361620-3d898e",
       "ts": "2026-10-30T04:59:21Z",
@@ -4460,6 +4451,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: MAR-TRUCK - Ben Rhodes is posting again.\nBack: MAR-TRUCK - Tristan McKee is posting again.\nBack: MAR-TRUCK - Ty Majeski is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793389212868-b6feba",
+      "ts": "2026-10-30T19:40:12Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 398c, KXNASCARRACE-BLAC26-JORE low 398c, KXNASCARRACE-BLAC26-BERH low 69c, KXNASCARRACE-BLAC26-SPBO low 398c, KXNASCARRACE-BLAC26-TAGR low 361c, KXNASCARRACE-BLAC26-KRWR low 398c, KXNASCARRACE-BLAC26-JUCA low 398c, KXNASCARRACE-BLAC26-KAHO low 341c, KXNASCARRACE-BLAC26-FRMU low 398c, KXNASCARRACE-BLAC26-BRQU low 362c, KXNASCARRACE-BLAC26-ANPE low 364c, KXNASCARRACE-BLAC26-TYTO low 398c, KXNASCARRACE-BLAC26-MOTI low 398c. Check the command center.",
       "severity": "warn"
     }
   ]
