@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-30T00:10:13.613060Z",
+  "generated_at": "2026-10-30T00:11:36.782780Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -33,7 +33,7 @@
       },
       {
         "side": "CAR by 7-14",
-        "resting": "637 @ 13-15c",
+        "resting": "584 @ 13-14c",
         "exposure": 111.62,
         "exposure_text": "+$112",
         "move": "Step price down 1c (13c to 12c)",
@@ -59,16 +59,16 @@
       },
       {
         "side": "GB by 7-14",
-        "resting": "174 @ 24-31c",
+        "resting": "474 @ 23-31c",
         "exposure": 159.51,
         "exposure_text": "+$160",
-        "move": "Step price down 1c (24c to 23c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T00:10:39Z",
+        "move": "Hold price at 23c",
+        "when": "crowd pays 22.7c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-30T00:00:39Z",
-        "lag_note": "Steps to 23c at the next check."
+        "lag_note": "Price 23c matches the crowd."
       },
       {
         "side": "GB by 15+",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 6,415, 4,339 resting. Worst line -$301 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 6,415, 4,286 resting. Worst line -$301 (goal -$150)."
         ]
       },
       {
@@ -96,7 +96,7 @@
         "lines": [
           "Lagging (150+ behind the leader): CAR by 7-14, CAR by 15+, GB by 7-14, GB by 15+.",
           "GB by 15+: 825 behind. Steps to 18c if no fill by 7:16pm CT.",
-          "GB by 7-14: 461 behind. Steps to 23c at the next check.",
+          "GB by 7-14: 461 behind. Price 23c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -142,7 +142,7 @@
       {
         "label": "CAR by 7-14",
         "held": 1012.2,
-        "resting": 637.0,
+        "resting": 584.0,
         "target": null,
         "status": "lagging",
         "price": 0.13
@@ -181,18 +181,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-30T00:10:01Z"
+    "ts": "2026-10-30T00:11:01Z"
   },
   "posts": [
-    {
-      "id": "1793207515435-613228",
-      "ts": "2026-10-28T17:11:55Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +84 (+1.9% of bankroll)\nGB 7-14: -34 (-0.8% of bankroll)\nGB 15+: +84 (+1.9% of bankroll)\nCAR 1-6: -77 (-1.8% of bankroll)\nCAR 7-14: +54 (+1.2% of bankroll)\nCAR 15+: -233 (-5.3% of bankroll)\nCollected $84 premium ($0 fees) | Paper margin over fair $5 (not realized until settlement)\nheld / resting\nGB 1-6: 0 / 1050\nGB 7-14: 118 / 932\nGB 15+: 0 / 1500\nCAR 1-6: 162 / 888\nCAR 7-14: 30 / 870\nCAR 15+: 317 / 997\nPosted book 1.16 | Sold avg 1.091 | Worst now -185 | Cash free $1523\nAnchor age 0s | Last fill 716s ago",
-      "severity": "info"
-    },
     {
       "id": "1793207716670-74af8b",
       "ts": "2026-10-28T17:15:16Z",
@@ -3745,6 +3736,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793319021386-986860",
+      "ts": "2026-10-30T00:10:17Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease CAR7TO14: resting 637 -> 584 (held 1012 + resting was over the cap 1596 = 1.06x; tighten",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
