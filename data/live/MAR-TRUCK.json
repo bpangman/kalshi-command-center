@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T21:04:06.285111Z",
+  "generated_at": "2026-10-30T21:05:28.656123Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -40,7 +40,7 @@
         "exposure": -5.11,
         "exposure_text": "-$5",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$17",
+        "when": "each bot check while his line is under +$18",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-30T20:28:00Z"
@@ -90,26 +90,26 @@
         "exposure": 429.61,
         "exposure_text": "+$430",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T21:03:42Z",
+        "when": "if no fill by 4:08pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T21:08:42Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Steps to 6c at the next check."
+        "lag_note": "Steps to 6c if no fill by 4:08pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$17)."
+          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$18)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Kaden Honeycutt, Layne Riggs, Sammy Smith, Ty Majeski.",
-          "Sammy Smith: 711 behind. Steps to 6c at the next check.",
+          "Sammy Smith: 711 behind. Steps to 6c if no fill by 4:08pm CT.",
           "Kaden Honeycutt: 422 behind. Steps to 20c if no fill by 4:06pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -127,7 +127,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Christian Eckes: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit +$17, worst line -$281, final +$100 at 5:00pm CT.",
+          "Glide is running: limit +$18, worst line -$281, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -208,19 +208,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T21:03:42Z"
+    "ts": "2026-10-30T21:04:42Z"
   },
   "posts": [
-    {
-      "id": "1793317853427-3f0add",
-      "ts": "2026-10-29T23:50:48Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (18 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793318760042-a163b2",
       "ts": "2026-10-30T00:06:00Z",
@@ -3753,6 +3743,16 @@
       "text": "Glide check: limit +$14, worst line -$281.",
       "severity": "info",
       "title": "Checkpoint"
+    },
+    {
+      "id": "1793394303161-4b3bc5",
+      "ts": "2026-10-30T21:04:51Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit +$19, worst line -$281. post gate Layne Riggs 41@0.23 -> 0 (race_principles; a full fill would take his ",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
