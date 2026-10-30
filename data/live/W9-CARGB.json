@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-30T00:02:34.216001Z",
+  "generated_at": "2026-10-30T00:04:07.458059Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -63,12 +63,12 @@
         "exposure": 182.03,
         "exposure_text": "+$182",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 7:05pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T00:05:22Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-29T23:55:22Z",
-        "lag_note": "Steps to 12c if no fill by 7:05pm CT."
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "GB by 15+",
@@ -96,7 +96,7 @@
         "lines": [
           "Lagging (150+ behind the leader): CAR by 7-14, CAR by 15+, GB by 7-14, GB by 15+.",
           "GB by 15+: 925 behind. Steps to 18c if no fill by 7:10pm CT.",
-          "CAR by 7-14: 513 behind. Steps to 12c if no fill by 7:05pm CT.",
+          "CAR by 7-14: 513 behind. Steps to 12c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -104,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$287 (now -$331).",
+          "Gate closed: batches wait for the worst line to reach -$253 (now -$331).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -112,7 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$287, worst line -$331; spent $11 of $100.",
+          "Paid balancing is running: plan -$253, worst line -$331; spent $11 of $100.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -181,19 +181,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-30T00:01:58Z"
+    "ts": "2026-10-30T00:03:59Z"
   },
   "posts": [
-    {
-      "id": "1793205640583-3052bb",
-      "ts": "2026-10-28T16:40:40Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 6,561 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793205701042-184338",
       "ts": "2026-10-28T16:41:37Z",
@@ -3725,6 +3715,36 @@
       "text": "Balancing: sold 50 CAR by 15+ at the bid 7c. Worst line -$370. Cost $0.73.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1793318598798-981847",
+      "ts": "2026-10-30T00:01:00Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 250: GB by 15+ x100 at 17c, GB by 7-14 x100 at 21c, CAR by 15+ x50 at 7c. Worst line -$331.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 250.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.17,
+            "qty": 100.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.21,
+            "qty": 100.0
+          },
+          {
+            "side": "CAR by 15+",
+            "price": 0.07,
+            "qty": 50.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
