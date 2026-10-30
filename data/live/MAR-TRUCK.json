@@ -1,10 +1,10 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T22:22:57.061068Z",
+  "generated_at": "2026-10-30T22:24:43.594574Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$71.",
+    "headline": "In race (Ingame). Worst line unknown.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 7,813, 22,758 resting. Worst line -$71. Race 2% done. Floor protocol off."
+          "In race (Ingame). Sold 7,852, 15,821 resting. Worst line unknown. Race 3% done. Floor protocol off."
         ]
       },
       {
@@ -44,39 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T22:22:15Z"
+    "ts": "2026-10-30T22:24:16Z"
   },
   "posts": [
-    {
-      "id": "1793355503632-d91cab",
-      "ts": "2026-10-30T10:16:11Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 37: Christian Eckes x37 at 11c. Worst line -$246.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 37.0,
-        "fills": [
-          {
-            "side": "Christian Eckes",
-            "price": 0.11,
-            "qty": 37.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1793356228529-248d40",
-      "ts": "2026-10-30T10:30:28Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (19 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793356558404-20134b",
       "ts": "2026-10-30T10:35:58Z",
@@ -3713,18 +3683,29 @@
       "text": "Kalshi refused a post on Tyler Ankrum: order(s) rejected: [{'code': 'same_price_repost_blocked', 'm.",
       "severity": "warn",
       "title": "Post refused"
+    },
+    {
+      "id": "1793399036053-f793a9",
+      "ts": "2026-10-30T22:23:54Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 floor-rule sizing KXNASCARRACE-BLAC26-BERH: gap $0.58 -> max 0 contracts (evenness/favorite gates bypas",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1793399076438-54f2d1",
+      "ts": "2026-10-30T22:24:32Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on Tristan McKee: order(s) rejected: [{'code': 'same_price_repost_blocked', 'm.",
+      "severity": "warn",
+      "title": "Post refused"
     }
   ],
   "audits": [
-    {
-      "id": "1793358327105-877f55",
-      "ts": "2026-10-30T11:05:27Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Kaden Honeycutt has had no resting orders for at least 498 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793358746849-ddea28",
       "ts": "2026-10-30T11:12:26Z",
@@ -4614,6 +4595,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "House21 race T-3 table\nIf the race ends... you make\nBen Rhodes: -71\nLayne Riggs: -52\nTy Majeski: -52\nKaden Honeycutt: -6\nChandler Smith: +29\nSammy Smith: +43\nWilliam Sawalich: +49\nChristian Eckes: +53\nall others (28) >= +229",
+      "severity": "warn"
+    },
+    {
+      "id": "1793398981311-4c6c3e",
+      "ts": "2026-10-30T22:23:01Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Worst-line lift Ben Rhodes: 19 @ 0.06, worst -71 -> -54 (cost $1.22)\nIf the race ends... you make\nBen Rhodes: -71\nLayne Riggs: -52\nTy Majeski: -52\nKaden Honeycutt: -6\nChandler Smith: +29\nSammy Smith: +43\nWilliam Sawalich: +49\nChristian Eckes: +53\nall others (28) >= +229",
       "severity": "warn"
     }
   ]
