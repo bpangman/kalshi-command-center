@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T21:35:15.814093Z",
+  "generated_at": "2026-10-30T21:36:58.289062Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -15,7 +15,7 @@
         "exposure": -130.01,
         "exposure_text": "-$130",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$61",
+        "when": "each bot check while his line is under +$66",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-30T21:14:37Z"
@@ -26,7 +26,7 @@
         "exposure": -106.01,
         "exposure_text": "-$106",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$61",
+        "when": "each bot check while his line is under +$66",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-30T21:15:49Z"
@@ -76,12 +76,12 @@
         "exposure": 115.99,
         "exposure_text": "+$116",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 4:37pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T21:37:57Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T20:15:52Z",
-        "lag_note": "Steps to 20c if no fill by 4:37pm CT."
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "Sammy Smith",
@@ -90,7 +90,7 @@
         "exposure_text": "+$405",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T21:34:54Z",
+        "at": "2026-10-30T21:36:55Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -101,7 +101,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 6,187, 25,651 resting. Worst line -$130 (limit now +$61)."
+          "Risk glide, green flag 5:00pm CT. Sold 6,187, 25,651 resting. Worst line -$130 (limit now +$66)."
         ]
       },
       {
@@ -109,7 +109,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Kaden Honeycutt, Layne Riggs, Sammy Smith, Ty Majeski.",
           "Sammy Smith: 511 behind. Steps to 6c at the next check.",
-          "Kaden Honeycutt: 222 behind. Steps to 20c if no fill by 4:37pm CT.",
+          "Kaden Honeycutt: 222 behind. Steps to 20c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -126,7 +126,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit +$61, worst line -$130, final +$100 at 5:00pm CT.",
+          "Glide is running: limit +$66, worst line -$130, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -207,7 +207,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T21:34:54Z"
+    "ts": "2026-10-30T21:36:55Z"
   },
   "posts": [
     {
@@ -3765,15 +3765,6 @@
   ],
   "audits": [
     {
-      "id": "1793351025513-e796b7",
-      "ts": "2026-10-30T09:03:45Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Kaden Honeycutt has had no resting orders for at least 376 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
       "id": "1793351031717-1c5913",
       "ts": "2026-10-30T09:03:51Z",
       "book": "MAR-TRUCK",
@@ -4662,6 +4653,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-TRUCK): 19 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 545c, KXNASCARRACE-BLAC26-JORE low 545c, KXNASCARRACE-BLAC26-BERH low 100c, KXNASCARRACE-BLAC26-SPBO low 545c, KXNASCARRACE-BLAC26-STFR low 522c, KXNASCARRACE-BLAC26-TYMA low 276c, KXNASCARRACE-BLAC26-TYAN low 524c, KXNASCARRACE-BLAC26-CHSM low 319c, KXNASCARRACE-BLAC26-TAGR low 237c, KXNASCARRACE-BLAC26-KRWR low 545c, KXNASCARRACE-BLAC26-JAGA low 302c, KXNASCARRACE-BLAC26-JUCA low 545c, KXNASCARRACE-BLAC26-SASM low 710c, KXNASCARRACE-BLAC26-LALE low 522c, KXNASCARRACE-BLAC26-FRMU low 545c, KXNASCARRACE-BLAC26-BRQU low 238c, KXNASCARRACE-BLAC26-ANPE low 241c, KXNASCARRACE-BLAC26-TYTO low 545c, KXNASCARRACE-BLAC26-MOTI low 545c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793396121400-6a0365",
+      "ts": "2026-10-30T21:35:21Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=11151. Check the command center.",
       "severity": "warn"
     }
   ]
