@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-30T18:16:47.576482Z",
+  "generated_at": "2026-10-30T18:18:21.747993Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -38,76 +38,87 @@
         "resting": "261 @ 10c",
         "exposure": -15.35,
         "exposure_text": "-$15",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 10%)",
-        "at": null,
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-30T18:17:35Z",
         "stuck": false,
         "also": "Also: glide starts Sat 11:00am CT",
-        "last_fill": "2026-10-30T14:29:43Z"
+        "last_fill": "2026-10-30T14:29:43Z",
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Corey Day",
         "resting": "303 @ 10c",
         "exposure": 26.97,
         "exposure_text": "+$27",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 7%)",
-        "at": null,
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-30T18:17:35Z",
         "stuck": false,
         "also": "Also: glide starts Sat 11:00am CT",
-        "last_fill": "2026-10-28T12:54:49Z"
+        "last_fill": "2026-10-28T12:54:49Z",
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Sammy Smith",
         "resting": "338 @ 12c",
         "exposure": 53.01,
         "exposure_text": "+$53",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 4%)",
+        "move": "Hold price at 12c",
+        "when": "no crowd trade data yet",
         "at": null,
         "stuck": false,
-        "also": "Also: glide starts Sat 11:00am CT",
-        "last_fill": "2026-10-29T01:16:08Z"
+        "also": "Also: glide starts Sat 11:00am CT; even-up Sat 3:00pm CT",
+        "last_fill": "2026-10-29T01:16:08Z",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Brandon Jones",
         "resting": "385 @ 10c",
         "exposure": 108.97,
         "exposure_text": "+$109",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
+        "move": "Hold price at 10c",
+        "when": "no crowd trade data yet",
         "at": null,
-        "stuck": false
+        "stuck": false,
+        "also": "Also: even-up Sat 3:00pm CT",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Carson Kvapil",
         "resting": "407 @ 15c",
         "exposure": 108.97,
         "exposure_text": "+$109",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
-        "at": null,
-        "stuck": false
+        "move": "Step price down 1c (15c to 14c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-30T18:17:35Z",
+        "stuck": false,
+        "also": "Also: even-up Sat 3:00pm CT",
+        "lag_note": "Steps to 14c at the next check."
       },
       {
         "side": "Lee Pulliam",
         "resting": "376 @ 8c",
         "exposure": 108.97,
         "exposure_text": "+$109",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
+        "move": "Hold price at 8c",
+        "when": "no crowd trade data yet",
         "at": null,
-        "stuck": false
+        "stuck": false,
+        "also": "Also: even-up Sat 3:00pm CT",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Sheldon Creed",
         "resting": "385 @ 10c",
         "exposure": 108.97,
         "exposure_text": "+$109",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,250 offered has sold (now 0%)",
-        "at": null,
-        "stuck": false
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-30T18:17:35Z",
+        "stuck": false,
+        "also": "Also: even-up Sat 3:00pm CT",
+        "lag_note": "Steps to 9c at the next check."
       }
     ],
     "sections": [
@@ -120,7 +131,10 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "No contender is lagging."
+          "Lagging (150+ behind the leader): Austin Hill, Brandon Jones, Brent Crews, Carson Kvapil, Corey Day, Lee Pulliam, Sam Mayer, Sammy Smith, Sheldon Creed.",
+          "Carson Kvapil: 312 behind. Steps to 14c at the next check.",
+          "Brandon Jones: 312 behind. No crowd trade data yet.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -170,7 +184,7 @@
         "held": 124.3,
         "resting": 260.7,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -178,7 +192,7 @@
         "held": 0.0,
         "resting": 385.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -186,7 +200,7 @@
         "held": 0.0,
         "resting": 407.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.15
       },
       {
@@ -194,7 +208,7 @@
         "held": 82.0,
         "resting": 303.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -210,7 +224,7 @@
         "held": 0.0,
         "resting": 376.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       },
       {
@@ -218,7 +232,7 @@
         "held": 56.0,
         "resting": 338.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       },
       {
@@ -226,7 +240,7 @@
         "held": 0.0,
         "resting": 385.0,
         "target": 1250.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -240,29 +254,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-30T18:16:34Z"
+    "ts": "2026-10-30T18:17:35Z"
   },
   "posts": [
-    {
-      "id": "1793245184587-5d5069",
-      "ts": "2026-10-29T03:37:33Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 104: Justin Allgaier x104 at 20c. Worst line -$215.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 104.0,
-        "fills": [
-          {
-            "side": "Justin Allgaier",
-            "price": 0.2,
-            "qty": 104.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793245184587-7686e9",
       "ts": "2026-10-29T03:37:37Z",
@@ -3238,6 +3232,16 @@
       "text": "Kalshi rate-limited the bot (8 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793384255317-e5c0d7",
+      "ts": "2026-10-30T18:17:35Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$203, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
