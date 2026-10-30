@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T19:29:01.343223Z",
+  "generated_at": "2026-10-30T19:30:23.281399Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -59,13 +59,13 @@
         "resting": "98 @ 12c",
         "exposure": -14.39,
         "exposure_text": "-$14",
-        "move": "Hold price at 12c",
-        "when": "next cent is under the crowd price (7.8c)",
-        "at": null,
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "if no fill by 2:32pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T19:32:21Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Price 12c is at its floor."
+        "lag_note": "Steps to 11c if no fill by 2:32pm CT."
       },
       {
         "side": "Kaden Honeycutt",
@@ -73,12 +73,12 @@
         "exposure": 83.61,
         "exposure_text": "+$84",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T19:28:03Z",
+        "when": "if no fill by 2:33pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T19:33:32Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T02:49:13Z",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Steps to 20c if no fill by 2:33pm CT."
       },
       {
         "side": "Layne Riggs",
@@ -98,27 +98,27 @@
         "resting": "268 @ 7c",
         "exposure": 172.33,
         "exposure_text": "+$172",
-        "move": "Hold price at 7c",
-        "when": "next cent is under the crowd price (3.5c)",
-        "at": null,
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "if no fill by 2:32pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T19:32:21Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Price 7c is at its floor."
+        "lag_note": "Steps to 6c if no fill by 2:32pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 3,770, 19,377 resting. Worst line -$162 (limit now -$123)."
+          "Risk glide, green flag 5:00pm CT. Sold 3,770, 19,377 resting. Worst line -$162 (limit now -$119)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Christian Eckes, Kaden Honeycutt, Layne Riggs, Sammy Smith, William Sawalich.",
-          "Sammy Smith: 335 behind. Price 7c is at its floor.",
+          "Lagging (150+ behind the leader): Christian Eckes, Kaden Honeycutt, Layne Riggs, Sammy Smith.",
+          "Sammy Smith: 335 behind. Steps to 6c if no fill by 2:32pm CT.",
           "Layne Riggs: 300 behind. Steps to 24c if no fill by 2:32pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -136,7 +136,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$123, worst line -$162, final +$100 at 5:00pm CT.",
+          "Glide is running: limit -$119, worst line -$162, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -217,18 +217,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T19:28:03Z"
+    "ts": "2026-10-30T19:30:04Z"
   },
   "posts": [
-    {
-      "id": "1793287681146-004517",
-      "ts": "2026-10-29T15:28:01Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nKaden Honeycutt: -112\nGrant Enfinger: +33\nTimmy Hill: +33\nCorey LaJoie: +33\nJosh Reaume: +33\nDaniel Hemric: +33\nBen Rhodes: +33\nJustin Haley: +33\nall others (28) >= +33\nCollected $33 premium ($0 fees) | Paper margin over fair $6 (not realized until settlement)\nCore posted book 1.48 | Worst now -112 | Cash free $3934\nAnchor age 32s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1793287872927-dd2096",
       "ts": "2026-10-29T15:31:12Z",
@@ -3529,6 +3520,16 @@
       "text": "Risk glide: limit -$123, worst line -$162. post gate Layne Riggs 59@0.22 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793388544068-69aec2",
+      "ts": "2026-10-30T19:29:04Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 5:00pm CT. Worst line -$162, final target +$100. Next: Glide selling opens, 3:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
