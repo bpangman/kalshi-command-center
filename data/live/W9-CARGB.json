@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-30T02:32:53.651805Z",
+  "generated_at": "2026-10-30T02:34:18.762854Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,246, 552 resting. Worst line -$18. Game 74% done."
+          "In game (Ingame). Sold 9,246, 550 resting. Worst line -$18. Game 75% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "CAR by 1-6",
         "held": 1510.9,
-        "resting": 123.0,
+        "resting": 122.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "CAR by 15+",
         "held": 1370.7,
-        "resting": 263.0,
+        "resting": 262.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,38 +101,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-30T02:32:48Z"
+    "ts": "2026-10-30T02:33:48Z"
   },
   "posts": [
-    {
-      "id": "1793229419570-30661a",
-      "ts": "2026-10-28T23:16:59Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nGB 1-6: +201 (+4.6% of bankroll)\nGB 7-14: -273 (-6.2% of bankroll)\nGB 15+: +201 (+4.6% of bankroll)\nCAR 1-6: +39 (+0.9% of bankroll)\nCAR 7-14: +103 (+2.3% of bankroll)\nCAR 15+: -441 (-10.1% of bankroll)\nCollected $201 premium ($0 fees) | Paper margin over fair $15 (not realized until settlement)\nheld / resting\nGB 1-6: 0 / 1050\nGB 7-14: 474 / 342\nGB 15+: 0 / 1350\nCAR 1-6: 162 / 888\nCAR 7-14: 98 / 1089\nCAR 15+: 642 / 0\nPosted book 1.18 | Sold avg 1.091 | Worst now -159 | Cash free $1523\nAnchor age 0s | Last fill 4445s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1793229451310-866f27",
-      "ts": "2026-10-28T23:17:31Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,719 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793230356855-5fb7c7",
-      "ts": "2026-10-28T23:32:36Z",
-      "book": "W9-CARGB",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,719 resting. Next: Paid balancing starts, Thu 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793231262733-35af93",
       "ts": "2026-10-28T23:47:42Z",
@@ -4026,18 +3997,37 @@
       "text": "Quiet for 15 min. 574 resting.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793327581989-fefdb8",
+      "ts": "2026-10-30T02:33:01Z",
+      "book": "W9-CARGB",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is -18; from here only trades that raise it",
+      "severity": "info"
+    },
+    {
+      "id": "1793327603477-b886b2",
+      "ts": "2026-10-30T02:33:23Z",
+      "book": "W9-CARGB",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W9-CARGB: 5 orders posted in 10 min while the market traded 10924 contracts. Cause: our prices were 1-3c above the crowd on most buckets. Remedy: joined the crowd on those buckets for 15 min.",
+      "severity": "info"
+    },
+    {
+      "id": "1793327628782-60b45a",
+      "ts": "2026-10-30T02:33:48Z",
+      "book": "W9-CARGB",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 550 resting.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1793290054642-10a37c",
-      "ts": "2026-10-29T16:07:34Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): held worst -624.33 (backstop -300) or lagging gap 1350 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793290240374-972cb9",
       "ts": "2026-10-29T16:10:40Z",
@@ -4927,6 +4917,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: in-game ladder grow on CAR 15+ failed - order(s) rejected: [{'code': 'same_price_repost_blocked', 'message': 'same-price re-post blocked: KXNFLWINMARGIN-26OCT29CARGB-CAR15PLUS 2.00@0.1500'}]\nIf the game ends... you make\nGB 1-6: -15 (-0.4% of bankroll)\nGB 7-14: -17 (-0.4% of bankroll)\nGB 15+: -18 (-0.4% of bankroll)\nCAR 1-6: +105 (+2.4% of bankroll)\nCAR 7-14: +148 (+3.4% of bankroll)\nCAR 15+: +245 (+5.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793327581988-0c70aa",
+      "ts": "2026-10-30T02:33:01Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
