@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T19:08:31.891083Z",
+  "generated_at": "2026-10-30T19:09:54.870073Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -205,29 +205,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T19:07:55Z"
+    "ts": "2026-10-30T19:08:56Z"
   },
   "posts": [
-    {
-      "id": "1793279170076-c56865",
-      "ts": "2026-10-29T13:06:10Z",
-      "book": "MAR-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,535 resting. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793279593381-af3d0f",
-      "ts": "2026-10-29T13:13:13Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793279835034-3426b9",
       "ts": "2026-10-29T13:17:15Z",
@@ -3489,18 +3469,43 @@
       "text": "Kalshi rate-limited the bot (5 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793387316184-6f391c",
+      "ts": "2026-10-30T19:06:25Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 270: Layne Riggs x192 at 25c, Layne Riggs x78 at 21c. Worst line -$164.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 270.0,
+        "fills": [
+          {
+            "side": "Layne Riggs",
+            "price": 0.25,
+            "qty": 192.0
+          },
+          {
+            "side": "Layne Riggs",
+            "price": 0.21,
+            "qty": 78.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793387326274-02bdb9",
+      "ts": "2026-10-30T19:08:46Z",
+      "book": "MAR-TRUCK",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nChandler Smith: -164\nTy Majeski: -102\nTristan McKee: -102\nBen Rhodes: -95\nChristian Eckes: -16\nKaden Honeycutt: +82\nLayne Riggs: +136\nBrenden Queen: +151\nall others (28) >= +188\nCollected $412 premium ($6 fees) | Paper margin over fair $112 (not realized until settlement)\nCore posted book 1.28 | Worst now -164 | Cash free $4188\nAnchor age 127s (source: kalshi)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793332870598-a68079",
-      "ts": "2026-10-30T04:01:10Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): worst -250.48 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793333801838-cf646c",
       "ts": "2026-10-30T04:16:41Z",
@@ -4390,6 +4395,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=5955. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793387333020-cc5288",
+      "ts": "2026-10-30T19:08:53Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Tristan McKee has had no resting orders for at least 132 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
