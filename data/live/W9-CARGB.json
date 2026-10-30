@@ -1,6 +1,6 @@
 {
   "key": "W9-CARGB",
-  "generated_at": "2026-10-30T00:04:07.458059Z",
+  "generated_at": "2026-10-30T00:06:10.241724Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -36,13 +36,13 @@
         "resting": "174 @ 24-31c",
         "exposure": 129.92,
         "exposure_text": "+$130",
-        "move": "Hold price at 24c",
-        "when": "next cent is under the crowd price (23.1c)",
-        "at": null,
+        "move": "Step price down 1c (24c to 23c)",
+        "when": "if no fill by 7:10pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T00:10:39Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-30T00:00:39Z",
-        "lag_note": "Price 24c is at its floor."
+        "lag_note": "Steps to 23c if no fill by 7:10pm CT."
       },
       {
         "side": "CAR by 15+",
@@ -59,12 +59,12 @@
       },
       {
         "side": "CAR by 7-14",
-        "resting": "788 @ 13-18c",
+        "resting": "736 @ 13-18c",
         "exposure": 182.03,
         "exposure_text": "+$182",
         "move": "Step price down 1c (13c to 12c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T00:05:22Z",
+        "at": "2026-10-30T00:06:00Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-10-29T23:55:22Z",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 6,165, 4,490 resting. Worst line -$331 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 6,165, 4,438 resting. Worst line -$331 (goal -$150)."
         ]
       },
       {
@@ -104,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$253 (now -$331).",
+          "Gate closed: batches wait for the worst line to reach -$218 (now -$331).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -112,7 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$253, worst line -$331; spent $11 of $100.",
+          "Paid balancing is running: plan -$218, worst line -$331; spent $11 of $100.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -142,7 +142,7 @@
       {
         "label": "CAR by 7-14",
         "held": 912.2,
-        "resting": 788.0,
+        "resting": 736.0,
         "target": null,
         "status": "lagging",
         "price": 0.13
@@ -181,19 +181,9 @@
       }
     ],
     "book": "W9-CARGB",
-    "ts": "2026-10-30T00:03:59Z"
+    "ts": "2026-10-30T00:06:00Z"
   },
   "posts": [
-    {
-      "id": "1793205701042-184338",
-      "ts": "2026-10-28T16:41:37Z",
-      "book": "W9-CARGB",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: CAR by 15+ at 8c (300 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
     {
       "id": "1793205701044-d9ae7f",
       "ts": "2026-10-28T16:41:41Z",
@@ -3745,18 +3735,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793318699646-240a73",
+      "ts": "2026-10-30T00:04:52Z",
+      "book": "W9-CARGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease CAR7TO14: resting 788 -> 736 (held 912 + resting was over the cap 1649 = 1.11x; tighten ",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1793262615607-82c10a",
-      "ts": "2026-10-29T08:30:15Z",
-      "book": "W9-CARGB",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CARGB): held worst -506.37 (backstop -300) or lagging gap 1066 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793262797205-8cf01f",
       "ts": "2026-10-29T08:33:17Z",
@@ -4646,6 +4637,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+37 on CAR 7-14 @ 0.11 (maker)\n+100 on GB 15+ @ 0.17 (taker)\n+100 on CAR 7-14 @ 0.10 (taker)\n+50 on GB 7-14 @ 0.22 (taker)\nworst outcome now -976\nheld 1425/864/400/1425/912/889\nIf the game ends... you make\nGB 1-6: -370 (-8.5% of bankroll)\nGB 7-14: +191 (+4.4% of bankroll)\nGB 15+: +655 (+15.0% of bankroll)\nCAR 1-6: -370 (-8.5% of bankroll)\nCAR 7-14: +143 (+3.3% of bankroll)\nCAR 15+: +166 (+3.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793318743968-3375c9",
+      "ts": "2026-10-30T00:05:43Z",
+      "book": "W9-CARGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: GB 1-6 worst outcome -1073\nIf the game ends... you make\nGB 1-6: -331 (-7.6% of bankroll)\nGB 7-14: +130 (+3.0% of bankroll)\nGB 15+: +594 (+13.6% of bankroll)\nCAR 1-6: -331 (-7.6% of bankroll)\nCAR 7-14: +182 (+4.2% of bankroll)\nCAR 15+: +156 (+3.6% of bankroll)",
       "severity": "warn"
     }
   ]
