@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T21:05:28.656123Z",
+  "generated_at": "2026-10-30T21:07:01.420560Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -40,7 +40,7 @@
         "exposure": -5.11,
         "exposure_text": "-$5",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$18",
+        "when": "each bot check while his line is under +$21",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-30T20:28:00Z"
@@ -77,12 +77,12 @@
         "exposure": 140.89,
         "exposure_text": "+$141",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 4:06pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-30T21:06:17Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-30T21:06:43Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T20:15:52Z",
-        "lag_note": "Steps to 20c if no fill by 4:06pm CT."
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "Sammy Smith",
@@ -102,7 +102,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$18)."
+          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$21)."
         ]
       },
       {
@@ -110,7 +110,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Kaden Honeycutt, Layne Riggs, Sammy Smith, Ty Majeski.",
           "Sammy Smith: 711 behind. Steps to 6c if no fill by 4:08pm CT.",
-          "Kaden Honeycutt: 422 behind. Steps to 20c if no fill by 4:06pm CT.",
+          "Kaden Honeycutt: 422 behind. Steps to 20c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -127,7 +127,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Christian Eckes: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit +$18, worst line -$281, final +$100 at 5:00pm CT.",
+          "Glide is running: limit +$21, worst line -$281, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -208,7 +208,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T21:04:42Z"
+    "ts": "2026-10-30T21:06:43Z"
   },
   "posts": [
     {
@@ -3757,15 +3757,6 @@
   ],
   "audits": [
     {
-      "id": "1793347374657-27e58a",
-      "ts": "2026-10-30T08:02:54Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Kaden Honeycutt has had no resting orders for at least 315 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
       "id": "1793348159464-9fd07c",
       "ts": "2026-10-30T08:15:59Z",
       "book": "MAR-TRUCK",
@@ -4654,6 +4645,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Christian Eckes has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793394355664-821665",
+      "ts": "2026-10-30T21:05:55Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Christian Eckes (+29%)",
       "severity": "warn"
     }
   ]
