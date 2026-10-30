@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-10-30T04:12:52.289556Z",
+  "generated_at": "2026-10-30T04:14:44.786900Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -75,7 +75,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 7:20pm CT. Sold 450, 8,375 resting. Worst line -$338 (goal -$150)."
+          "Pregame build, kickoff Sun 7:20pm CT. Sold 450, 9,740 resting. Worst line -$338 (goal -$150)."
         ]
       },
       {
@@ -137,15 +137,15 @@
       {
         "label": "PHI by 7-14",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 1950.0,
         "target": null,
         "status": "even",
-        "price": 0.12
+        "price": 0.11
       },
       {
         "label": "PHI by 15+",
         "held": 0.0,
-        "resting": 875.0,
+        "resting": 1175.0,
         "target": null,
         "status": "even",
         "price": 0.08
@@ -169,14 +169,14 @@
       {
         "label": "WAS by 15+",
         "held": 0.0,
-        "resting": 1500.0,
+        "resting": 2115.0,
         "target": null,
         "status": "even",
-        "price": 0.28
+        "price": 0.27
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-10-30T04:12:05Z"
+    "ts": "2026-10-30T04:14:05Z"
   },
   "posts": [
     {
@@ -767,6 +767,26 @@
         "contracts": 8000.0,
         "rows": 32
       }
+    },
+    {
+      "id": "1793333625733-b509d9",
+      "ts": "2026-10-30T04:11:39Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 450: WAS by 7-14 x450 at 25c. Worst line -$338.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 450.0,
+        "fills": [
+          {
+            "side": "WAS by 7-14",
+            "price": 0.25,
+            "qty": 450.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -796,6 +816,24 @@
       "source": "bot",
       "text": "+450 on WAS 7-14 @ 0.25 (maker)\nworst outcome now +120\nheld 0/450/0/0/0/0\nIf the game ends... you make\nWAS 1-6: +112 (+2.7% of bankroll)\nWAS 7-14: -338 (-8.0% of bankroll)\nWAS 15+: +112 (+2.7% of bankroll)\nPHI 1-6: +112 (+2.7% of bankroll)\nPHI 7-14: +112 (+2.7% of bankroll)\nPHI 15+: +112 (+2.7% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1793333623434-79f8c6",
+      "ts": "2026-10-30T04:13:43Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W9-PHIWAS - Philadelphia by 15 or more is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793333645276-20d008",
+      "ts": "2026-10-30T04:14:05Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "coordinator_sweep",
+      "text": "W9-PHIWAS repeated insufficient_balance (7 since 21:35, every 5 min, last 23:05) on WAS1TO6 re-post while worst_held -337.50 is past backstop -300; cash is ample so likely resting-order buying-power hold. Needs a look.",
+      "severity": "critical"
     }
   ]
 }
