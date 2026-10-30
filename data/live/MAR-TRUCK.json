@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T19:59:23.945685Z",
+  "generated_at": "2026-10-30T20:00:45.284307Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -61,11 +61,11 @@
         "resting": "98 @ 12c",
         "exposure": 97.52,
         "exposure_text": "+$98",
-        "move": "Hold price at 12c",
-        "when": "next cent is under the crowd price (9c)",
-        "at": null,
+        "move": "Even-up: lowest row moved toward fair",
+        "when": "starts 5:00pm CT",
+        "at": "2026-10-30T22:00:00Z",
         "stuck": false,
-        "also": "Also: even-up 5:00pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-30T19:22:21Z",
         "lag_note": "Price 12c is at its floor."
       },
@@ -75,12 +75,12 @@
         "exposure": 195.52,
         "exposure_text": "+$196",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 3:00pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T20:00:48Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T02:49:13Z",
-        "lag_note": "Steps to 20c if no fill by 3:00pm CT."
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "Sammy Smith",
@@ -89,7 +89,7 @@
         "exposure_text": "+$284",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T19:59:15Z",
+        "at": "2026-10-30T20:00:16Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -108,7 +108,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Christian Eckes, Kaden Honeycutt, Sammy Smith.",
           "Sammy Smith: 392 behind. Steps to 6c at the next check.",
-          "Kaden Honeycutt: 304 behind. Steps to 20c if no fill by 3:00pm CT.",
+          "Kaden Honeycutt: 304 behind. Steps to 20c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -206,29 +206,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T19:59:15Z"
+    "ts": "2026-10-30T20:00:16Z"
   },
   "posts": [
-    {
-      "id": "1793299656538-af992f",
-      "ts": "2026-10-29T18:47:36Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793299837738-4ad054",
-      "ts": "2026-10-29T18:50:37Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793299898265-045af9",
       "ts": "2026-10-29T18:51:38Z",
@@ -3612,18 +3592,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793390416302-9666ea",
+      "ts": "2026-10-30T19:58:03Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 6: Jake Garcia x6 at 2c. Worst line -$108.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 6.0,
+        "fills": [
+          {
+            "side": "Jake Garcia",
+            "price": 0.02,
+            "qty": 6.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793390436481-e39021",
+      "ts": "2026-10-30T20:00:25Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$76, worst line -$108. post gate Christian Eckes 49@0.10 -> 0 (race_fillfair; a full fill would take hi",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793337565084-952ed7",
-      "ts": "2026-10-30T05:19:25Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 319c, KXNASCARRACE-BLAC26-JORE low 319c, KXNASCARRACE-BLAC26-SPBO low 319c, KXNASCARRACE-BLAC26-CHEC low 369c, KXNASCARRACE-BLAC26-CHSM low 369c, KXNASCARRACE-BLAC26-TAGR low 322c, KXNASCARRACE-BLAC26-KRWR low 319c, KXNASCARRACE-BLAC26-JUCA low 319c, KXNASCARRACE-BLAC26-SASM high 351c, KXNASCARRACE-BLAC26-WISA high 339c, KXNASCARRACE-BLAC26-FRMU low 319c, KXNASCARRACE-BLAC26-BRQU low 322c, KXNASCARRACE-BLAC26-ANPE low 319c, KXNASCARRACE-BLAC26-TYTO low 319c, KXNASCARRACE-BLAC26-MOTI low 319c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793338769389-50931e",
       "ts": "2026-10-30T05:39:29Z",
@@ -4513,6 +4514,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Ben Rhodes has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793390393326-435828",
+      "ts": "2026-10-30T19:59:53Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Layne Riggs has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
