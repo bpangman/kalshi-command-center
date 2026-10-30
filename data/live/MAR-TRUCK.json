@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T20:37:34.402576Z",
+  "generated_at": "2026-10-30T20:39:16.432576Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -87,7 +87,7 @@
         "exposure_text": "+$179",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T20:37:31Z",
+        "at": "2026-10-30T20:38:31Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -109,7 +109,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 5,479, 24,026 resting. Worst line -$69 (limit now -$21)."
+          "Risk glide, green flag 5:00pm CT. Sold 5,479, 24,026 resting. Worst line -$69 (limit now -$20)."
         ]
       },
       {
@@ -133,7 +133,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$21, worst line -$69, final +$100 at 5:00pm CT.",
+          "Glide is running: limit -$20, worst line -$69, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -214,29 +214,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T20:37:31Z"
+    "ts": "2026-10-30T20:38:31Z"
   },
   "posts": [
-    {
-      "id": "1793310055379-e21bb0",
-      "ts": "2026-10-29T21:40:55Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793310115797-1288b4",
-      "ts": "2026-10-29T21:41:55Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793310156120-c280ec",
       "ts": "2026-10-29T21:42:16Z",
@@ -3732,18 +3712,29 @@
         "contracts": 304.0,
         "rows": 6
       }
+    },
+    {
+      "id": "1793392691694-4cb39a",
+      "ts": "2026-10-30T20:38:07Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$20, worst line -$69. post gate Layne Riggs 41@0.23 -> 0 (race_principles; a full fill would take his ",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1793392732048-644613",
+      "ts": "2026-10-30T20:38:39Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Ben Rhodes.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1793341495197-bdd462",
-      "ts": "2026-10-30T06:24:55Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 319c, KXNASCARRACE-BLAC26-JORE low 319c, KXNASCARRACE-BLAC26-SPBO low 319c, KXNASCARRACE-BLAC26-CHEC low 369c, KXNASCARRACE-BLAC26-CHSM low 369c, KXNASCARRACE-BLAC26-TAGR low 322c, KXNASCARRACE-BLAC26-KRWR low 319c, KXNASCARRACE-BLAC26-JUCA low 319c, KXNASCARRACE-BLAC26-SASM high 351c, KXNASCARRACE-BLAC26-WISA high 339c, KXNASCARRACE-BLAC26-FRMU low 319c, KXNASCARRACE-BLAC26-BRQU low 322c, KXNASCARRACE-BLAC26-ANPE low 319c, KXNASCARRACE-BLAC26-TYTO low 319c, KXNASCARRACE-BLAC26-MOTI low 319c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793342568303-ca198e",
       "ts": "2026-10-30T06:42:48Z",
@@ -4633,6 +4624,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- MAR-TRUCK - Ben Rhodes has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-TRUCK - Ty Majeski has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793392719525-414e27",
+      "ts": "2026-10-30T20:38:39Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Ben Rhodes (+38%)",
       "severity": "warn"
     }
   ]
