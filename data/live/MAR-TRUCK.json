@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T20:46:56.644889Z",
+  "generated_at": "2026-10-30T20:48:44.545212Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -89,7 +89,7 @@
         "exposure_text": "+$181",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T20:46:35Z",
+        "at": "2026-10-30T20:48:36Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -102,7 +102,7 @@
         "exposure_text": "+$368",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T20:46:35Z",
+        "at": "2026-10-30T20:48:36Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
@@ -113,7 +113,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 5,563, 23,942 resting. Worst line -$68 (limit now -$8)."
+          "Risk glide, green flag 5:00pm CT. Sold 5,563, 23,942 resting. Worst line -$68 (limit now -$5)."
         ]
       },
       {
@@ -138,7 +138,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$8, worst line -$68, final +$100 at 5:00pm CT.",
+          "Glide is running: limit -$5, worst line -$68, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -219,19 +219,9 @@
     ],
     "moves_note": "28 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T20:46:35Z"
+    "ts": "2026-10-30T20:48:36Z"
   },
   "posts": [
-    {
-      "id": "1793312594474-8b3c73",
-      "ts": "2026-10-29T22:23:14Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793312654805-5cef66",
       "ts": "2026-10-29T22:24:14Z",
@@ -3735,27 +3725,29 @@
       "text": "Risk glide for the green flag 5:00pm CT. Worst line -$68, final target +$100. Next: Glide target date, 5:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1793393275905-d62ea9",
+      "ts": "2026-10-30T20:45:42Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 84: Tanner Gray x84 at 2c. Worst line -$68.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 84.0,
+        "fills": [
+          {
+            "side": "Tanner Gray",
+            "price": 0.02,
+            "qty": 84.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793343490378-a9e8e7",
-      "ts": "2026-10-30T06:58:10Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): 15 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 319c, KXNASCARRACE-BLAC26-JORE low 319c, KXNASCARRACE-BLAC26-SPBO low 319c, KXNASCARRACE-BLAC26-CHEC low 369c, KXNASCARRACE-BLAC26-CHSM low 369c, KXNASCARRACE-BLAC26-TAGR low 322c, KXNASCARRACE-BLAC26-KRWR low 319c, KXNASCARRACE-BLAC26-JUCA low 319c, KXNASCARRACE-BLAC26-SASM high 351c, KXNASCARRACE-BLAC26-WISA high 339c, KXNASCARRACE-BLAC26-FRMU low 319c, KXNASCARRACE-BLAC26-BRQU low 322c, KXNASCARRACE-BLAC26-ANPE low 319c, KXNASCARRACE-BLAC26-TYTO low 319c, KXNASCARRACE-BLAC26-MOTI low 319c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1793343703698-20571d",
-      "ts": "2026-10-30T07:01:43Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Kaden Honeycutt has had no resting orders for at least 254 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793344383395-0e90c1",
       "ts": "2026-10-30T07:13:03Z",
@@ -4636,6 +4628,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-TRUCK): 16 ladder(s) stale 10+ min: KXNASCARRACE-BLAC26-TIHI low 523c, KXNASCARRACE-BLAC26-JORE low 523c, KXNASCARRACE-BLAC26-SPBO low 480c, KXNASCARRACE-BLAC26-STFR low 466c, KXNASCARRACE-BLAC26-TYAN low 468c, KXNASCARRACE-BLAC26-TAGR low 264c, KXNASCARRACE-BLAC26-KRWR low 480c, KXNASCARRACE-BLAC26-JAGA low 330c, KXNASCARRACE-BLAC26-JUCA low 523c, KXNASCARRACE-BLAC26-SASM high 660c, KXNASCARRACE-BLAC26-LALE low 466c, KXNASCARRACE-BLAC26-FRMU low 523c, KXNASCARRACE-BLAC26-BRQU low 265c, KXNASCARRACE-BLAC26-ANPE low 268c, KXNASCARRACE-BLAC26-TYTO low 461c, KXNASCARRACE-BLAC26-MOTI low 523c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793393303673-72e95f",
+      "ts": "2026-10-30T20:48:23Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=6656. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793393303673-2a7f39",
+      "ts": "2026-10-30T20:48:23Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=6656. Check the command center.",
       "severity": "warn"
     }
   ]
