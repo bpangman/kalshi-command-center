@@ -1,13 +1,13 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T20:56:18.158793Z",
+  "generated_at": "2026-10-30T20:58:11.330394Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
     "headline": "Risk glide for the green flag 5:00pm CT. Worst line -$281, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 48,
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Christian Eckes",
@@ -78,12 +78,12 @@
         "exposure": 140.89,
         "exposure_text": "+$141",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-30T20:56:07Z",
+        "when": "if no fill by 4:01pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-30T21:01:08Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T20:15:52Z",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Steps to 20c if no fill by 4:01pm CT."
       },
       {
         "side": "Sammy Smith",
@@ -91,27 +91,27 @@
         "exposure": 429.61,
         "exposure_text": "+$430",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 3:58pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-30T20:58:17Z",
         "stuck": false,
         "also": "Also: even-up 5:00pm CT",
         "last_fill": "2026-10-30T19:22:21Z",
-        "lag_note": "Steps to 6c if no fill by 3:58pm CT."
+        "lag_note": "Steps to 6c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 5:00pm CT. Sold 6,087, 25,806 resting. Worst line -$281 (limit now +$6). Bot is slow (checks every 48s, set for 30s)."
+          "Risk glide, green flag 5:00pm CT. Sold 6,087, 26,226 resting. Worst line -$281 (limit now +$8)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Chandler Smith, Kaden Honeycutt, Layne Riggs, Sammy Smith, Ty Majeski.",
-          "Sammy Smith: 711 behind. Steps to 6c if no fill by 3:58pm CT.",
-          "Kaden Honeycutt: 422 behind. Steps to 20c at the next check.",
+          "Sammy Smith: 711 behind. Steps to 6c at the next check.",
+          "Kaden Honeycutt: 422 behind. Steps to 20c if no fill by 4:01pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -128,7 +128,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Christian Eckes: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit +$6, worst line -$281, final +$100 at 5:00pm CT.",
+          "Glide is running: limit +$8, worst line -$281, final +$100 at 5:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 3:30pm CT.",
           "Even-up from 5:00pm CT, last-resort take from 4:40pm CT, green flag 5:00pm CT."
         ]
@@ -209,29 +209,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T20:55:39Z"
+    "ts": "2026-10-30T20:57:40Z"
   },
   "posts": [
-    {
-      "id": "1793316281716-52dd34",
-      "ts": "2026-10-29T23:24:41Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793316342254-49fdc3",
-      "ts": "2026-10-29T23:25:42Z",
-      "book": "MAR-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 5:00pm CT. Worst line -$112, final target +$100. Next: Risk glide starts, Fri 1:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793316402675-f817d1",
       "ts": "2026-10-29T23:26:42Z",
@@ -3749,6 +3729,30 @@
       "source": "resistance_monitor",
       "text": "MAR-TRUCK book loss is growing: worst case -281 dollars, past its limit and -203 in 30 min. Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1793393860239-2c1bdc",
+      "ts": "2026-10-30T20:55:36Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 420 (race expand): Monty Tipton x84 at 2c, Timmy Hill x84 at 2c, +3 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 420.0,
+        "rows": 5
+      }
+    },
+    {
+      "id": "1793393860241-593a83",
+      "ts": "2026-10-30T20:57:40Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 5:00pm CT. Worst line -$281, final target +$100. Next: Glide target date, 5:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
