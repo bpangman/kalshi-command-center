@@ -1,19 +1,19 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-30T23:46:55.467934Z",
+  "generated_at": "2026-10-30T23:48:54.015348Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$32.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 8,572, 0 resting. Worst line -$32. Race 72% done. Floor protocol off."
+          "In race (Ingame). Sold 8,572, 92 resting. Worst line -$32. Race 74% done. Floor protocol off. Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-TRUCK",
-    "ts": "2026-10-30T23:46:50Z"
+    "ts": "2026-10-30T23:48:50Z"
   },
   "posts": [
-    {
-      "id": "1793388161589-0a13cd",
-      "ts": "2026-10-30T19:22:22Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sportsbook prices are back (Bovada).",
-      "severity": "info",
-      "title": "Price source"
-    },
-    {
-      "id": "1793388161589-f04a8d",
-      "ts": "2026-10-30T19:22:22Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 12 drivers: Giovanni Ruggiero, Grant Enfinger, William Sawalich.",
-      "severity": "info",
-      "title": "Price shock"
-    },
     {
       "id": "1793388161590-c061dd",
       "ts": "2026-10-30T19:22:22Z",
@@ -3538,27 +3518,33 @@
         "contracts": 985.0,
         "rows": 3
       }
+    },
+    {
+      "id": "1793404130766-bc13b4",
+      "ts": "2026-10-30T23:48:24Z",
+      "book": "MAR-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,009 (race room hunt): Giovanni Ruggiero x1,702 at 2c, William Sawalich x202 at 2c, +4 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2009.0,
+        "rows": 6
+      }
+    },
+    {
+      "id": "1793404130767-bdabdb",
+      "ts": "2026-10-30T23:48:50Z",
+      "book": "MAR-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$32.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1793376805600-471b49",
-      "ts": "2026-10-30T16:13:25Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-TRUCK): worst -242.30 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1793376924238-52dbfa",
-      "ts": "2026-10-30T16:15:24Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+332 on Christian Eckes @ 0.15 (maker)\n+65 on Sammy Smith @ 0.06 (maker)\n+397 on Tristan McKee @ 0.05 (maker)\n+27 on Christian Eckes @ 0.13 (maker)\nworst outcome now -242\nIf the race ends... you make\nTristan McKee: -242\nChristian Eckes: -241\nKaden Honeycutt: -169\nSammy Smith: +90\nTanner Gray: +94\nGrant Enfinger: +155\nTimmy Hill: +155\nCorey LaJoie: +155\nall others (28) >= +155",
-      "severity": "warn"
-    },
     {
       "id": "1793377192814-6229f4",
       "ts": "2026-10-30T16:19:52Z",
@@ -4439,6 +4425,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-TRUCK): bot reports stage3_likely_set, auditor independently recomputed stage2_price_cohort (progress=n/a, live_count>=20%=n/a, max_prob=n/a, feed_source=nascar_live_feed). Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793404086765-67df7c",
+      "ts": "2026-10-30T23:48:06Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): inactive, cause=unknown, remedy=none, posts_last_10m=17, market_volume_last_30m=46333. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793404100801-497f33",
+      "ts": "2026-10-30T23:48:20Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Ben Rhodes has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
