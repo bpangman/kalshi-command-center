@@ -1948,11 +1948,30 @@ function buildCrowdMineCell(o, deciCent) {
   cell.appendChild(slash);
   var mine = document.createElement("span");
   var st = o.our_ask_state;
-  mine.className = "oc-mine" + (hasMine && st === "planned" ? " planned" : "") + (hasMine && st === "dropped" ? " dropped" : "");
+  // 2026-10-29 evening (Blake): before the event, our lowest ask is GREEN at the sportsbook line (or
+  // above it), YELLOW after a minor price decrease under the line (still above the crowd), RED when it
+  // dropped down to the crowd to catch up. The state and the line come from the feed
+  // (our_ask_rate_state, sportsbook_line; tools/feed/crowd_mine.py rate_fields). Without one (in
+  // play, no sportsbook line): the older green planned rung / red catch-up row colors.
+  var rs = o.our_ask_rate_state;
+  var hasRate = hasMine && (rs === "line" || rs === "between" || rs === "crowd");
+  var hasLine = o.sportsbook_line !== null && o.sportsbook_line !== undefined;
+  if (hasRate) {
+    mine.className = "oc-mine rate-" + rs;
+  } else {
+    mine.className = "oc-mine" + (hasMine && st === "planned" ? " planned" : "") + (hasMine && st === "dropped" ? " dropped" : "");
+  }
   mine.textContent = hasMine ? fmtCentsBare(o.our_ask, deciCent) : "-";
   cell.appendChild(mine);
   var tip = "Crowd / mine: the crowd's best ask (our own orders removed) / our lowest resting ask.";
-  if (hasMine && st === "dropped") {
+  var lineTxt = hasLine ? " (sportsbook line " + fmtCents(o.sportsbook_line, deciCent) + ")" : "";
+  if (hasRate && rs === "line") {
+    tip += " Green: our lowest row is at the sportsbook line or better" + lineTxt + ".";
+  } else if (hasRate && rs === "between") {
+    tip += " Yellow: our lowest row is a minor price decrease, a little under the sportsbook line" + lineTxt + ", still above the crowd's ask.";
+  } else if (hasRate && rs === "crowd") {
+    tip += " Red: our lowest row is down at the crowd's price, not the sportsbook line" + lineTxt + ".";
+  } else if (hasMine && st === "dropped") {
     tip += " Red: our lowest row is a catch-up row at the crowd's rate" +
       ((o.our_planned_ask !== null && o.our_planned_ask !== undefined) ? ", under our planned " + fmtCents(o.our_planned_ask, deciCent) : "") + ".";
   } else if (hasMine && st === "planned") {
@@ -2086,16 +2105,33 @@ function buildBookTile(b, opts) {
     var covWrap = document.createElement("span");
     covWrap.className = "book-tile-coverage-wrap";
     var covSpan = document.createElement("span");
+    // 2026-10-29 evening (Blake): before the event the coverage number is GREEN when it is on or
+    // ahead of the manufactured coverage glide at the bot's own crowd clock and RED when it is
+    // behind it. The verdict and the glide's target come from the feed (coverage_on_glide,
+    // coverage_glide_floor, coverage_glide_f; tools/feed/crowd_mine.py coverage_glide), never
+    // re-derived here. In play, or with no verdict: the old rule, green at 1.00 or more.
+    var onGlide = (b.coverage_on_glide === true || b.coverage_on_glide === false) ? b.coverage_on_glide : null;
+    var covNote = "";
     if (hasCov) {
       var covText = Number(b.coverage_ratio).toFixed(2);
-      // color follows the rounded number shown, so "1.00" is never red
-      covSpan.className = "book-tile-coverage " + (Number(covText) >= 1 ? "pos" : "neg");
+      // without a glide verdict the color follows the rounded number shown, so "1.00" is never red
+      var covPos = (onGlide !== null) ? onGlide : (Number(covText) >= 1);
+      covSpan.className = "book-tile-coverage " + (covPos ? "pos" : "neg");
       covSpan.textContent = covText.replace(/^0\./, ".");
+      if (onGlide !== null) {
+        covNote = " " + (onGlide ? "ON OR AHEAD OF THE GLIDE (green)" : "BEHIND THE GLIDE (red)") +
+          ": the manufactured coverage glide wants " +
+          ((b.coverage_glide_floor !== null && b.coverage_glide_floor !== undefined) ? Number(b.coverage_glide_floor).toFixed(2) : "?") +
+          " or more at this point of the crowd clock" +
+          ((b.coverage_glide_f !== null && b.coverage_glide_f !== undefined) ? " (" + Math.round(Number(b.coverage_glide_f) * 100) + "% of the crowd's money is in)" : "") + ".";
+      } else {
+        covNote = " Green at 1.00 or more (in play, or no glide reading from the bot).";
+      }
     } else {
       covSpan.className = "book-tile-coverage none";
       covSpan.textContent = "\u2013";
     }
-    covSpan.title = "Coverage margin (filling at): net premium over the most contracts held on one outcome; 1.00 or more means every outcome is positive";
+    covSpan.title = "Coverage margin (filling at): net premium over the most contracts held on one outcome; 1.00 or more means every outcome is positive." + covNote;
     covWrap.appendChild(covSpan);
     // 2026-10-26 (Blake): "coverage / crowd vig / my vig", aligned with the per-outcome
     // "crowd / mine". Crowd vig = the crowd's real asks (our rows removed, dust ignored)
@@ -2124,24 +2160,9 @@ function buildBookTile(b, opts) {
           ". Over 1.00 = the crowd is charging a vig.");
       }
       if (hasMyVig) {
-        // 2026-10-29 (Blake): green when my vig is on this sport's vig glide schedule (at or under
-        // the vig the glide says we should be charging at this point of the crowd clock), red when
-        // it is behind the glide (still above it). Plain when the feed has no verdict (no crowd
-        // clock yet, the event is in play, nothing listed by the sportsbook). The verdict and the
-        // scheduled figure come from the feed (my_vig_on_schedule, my_vig_scheduled_sum,
-        // vig_clock_f; tools/feed/crowd_mine.py vig_schedule), never re-derived here.
-        var schedCls = (b.my_vig_on_schedule === true) ? " on-schedule" : (b.my_vig_on_schedule === false) ? " off-schedule" : "";
-        var schedNote = "";
-        if (b.my_vig_on_schedule === true || b.my_vig_on_schedule === false) {
-          schedNote = " " + (b.my_vig_on_schedule ? "ON SCHEDULE (green)" : "BEHIND SCHEDULE (red)") +
-            ": this sport's vig glide says our vig should be " +
-            ((b.my_vig_scheduled_sum !== null && b.my_vig_scheduled_sum !== undefined) ? Number(b.my_vig_scheduled_sum).toFixed(2) : "?") +
-            " or less at this point of the crowd clock" +
-            ((b.vig_clock_f !== null && b.vig_clock_f !== undefined) ? " (" + Math.round(Number(b.vig_clock_f) * 100) + "% of the crowd's money is in)" : "") + ".";
-        }
-        vigSpan(b.my_book_sum, "my-vig" + schedCls, "My vig: our lowest resting ask on every outcome added up" +
+        vigSpan(b.my_book_sum, "my-vig", "My vig: our lowest resting ask on every outcome added up" +
           ((b.my_book_sum_outcomes !== undefined && nAll !== undefined) ? " (" + b.my_book_sum_outcomes + " of " + nAll + " outcomes from our own asks; the crowd's ask stands in on the rest)" : "") +
-          ". Over 1.00 = the crowd pays a vig at our prices." + schedNote);
+          ". Over 1.00 = the crowd pays a vig at our prices.");
       }
     } else if (hasSum) {
       var nRest = b.posted_book_sum_resting_outcomes;

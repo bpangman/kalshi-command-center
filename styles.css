@@ -9,6 +9,7 @@
   --green: #3fb950;
   --red: #f85149;
   --amber: #d29922;
+  --yellow: #e3b341;
   color-scheme: dark;
 }
 
@@ -1037,6 +1038,11 @@ tfoot td {
 .book-tile-outcome-row .oc .oc-mine { color: var(--text, inherit); }
 .book-tile-outcome-row .oc .oc-mine.planned { color: var(--green); font-weight: 600; }
 .book-tile-outcome-row .oc .oc-mine.dropped { color: var(--red); font-weight: 600; }
+/* 2026-10-29 evening (Blake): our lowest ask before the event: green at the sportsbook line, yellow
+   after a minor decrease under it (still above the crowd), red when it dropped to the crowd */
+.book-tile-outcome-row .oc .oc-mine.rate-line { color: var(--green); font-weight: 600; }
+.book-tile-outcome-row .oc .oc-mine.rate-between { color: var(--yellow, #e3b341); font-weight: 600; }
+.book-tile-outcome-row .oc .oc-mine.rate-crowd { color: var(--red); font-weight: 600; }
 
 .book-tile-row4 {
   display: flex;
@@ -1071,10 +1077,6 @@ tfoot td {
    price, mine slightly dimmer so the three numbers read as one line of the same shape */
 .book-tile-row4 .book-tile-booksum.crowd-vig { color: #fff; }
 .book-tile-row4 .book-tile-booksum.my-vig { color: var(--text, #ddd); }
-/* 2026-10-29 (Blake): my vig green when it is on this sport's vig glide schedule, red when it is
-   behind the glide; plain (above) when the feed has no verdict (in play, no clock, nothing listed) */
-.book-tile-row4 .book-tile-booksum.my-vig.on-schedule { color: var(--green); }
-.book-tile-row4 .book-tile-booksum.my-vig.off-schedule { color: var(--red); }
 
 .book-tile-row4 .floor-mode-tag {
   background: rgba(63, 185, 80, 0.15);
