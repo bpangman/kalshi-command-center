@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T21:28:20Z",
+  "generated_at": "2026-10-31T21:29:29Z",
   "mode": "live",
   "terms": "Live terms (v2 props): NBA points / threes / rebounds / assists and NFL receptions / yards / touchdowns and quarterback passing touchdowns / interceptions / completions only, rebounds / threes / assists buy once ESPN and Sleeper agree (ESPN's two views whenever Sleeper has no fresh reading), points after the next stoppage + 3 s of clock, NFL 3 s after the next real snap (not a timeout, flag or the same play posting late), NBA rebounds up to $1,000 per market (never more than $500 of it at 99c), NBA threes $500, NBA assists $250 ($500 from 2026-11-14 if no assists bet has lost; any assists loss turns assists off), NBA points $300, every NFL stat $300; rebounds and threes take 98c-or-better stock first and re-fire while it keeps coming back, everything else walks the book from the cheapest ask up to 0.99; crowd must bid 80c or better; a cash shortage never stops the night, clinch waits and fires when money returns; no per-game cap, cash floor $500, night pauses after 2 settled losses (every loss texts), no resting bids.",
   "days": [
@@ -329037,10 +329037,10 @@
           "start_time": "2026-10-31T19:30:00Z",
           "market_type": "player_stat",
           "condition": "Lauri Markkanen reb >= 8 -> YES certain (NO only once the game is final below it)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "watching",
+          "status": "skipped",
           "outcome_key": "KXNBAREB-26OCT31PORUTA-UTALMARKKANEN23-8",
           "cash_plan": 300.0,
           "contracts": null,
@@ -329049,14 +329049,14 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
+          "lock_ts": "2026-10-31T21:28:42Z",
           "fire_ts": null,
           "latency_ms": null,
           "player": "Lauri Markkanen",
           "stat": "reb",
-          "stat_word": null,
+          "stat_word": "rebounds",
           "line": 8,
-          "side_word": null,
+          "side_word": "under",
           "stat_at_buy": null,
           "stat_now": null,
           "to_win": null,
@@ -351048,10 +351048,10 @@
           "start_time": "2026-10-31T19:30:00Z",
           "market_type": "player_stat",
           "condition": "Donovan Clingan ast >= 6 -> YES certain (NO only once the game is final below it)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "watching",
+          "status": "missed",
           "outcome_key": "KXNBAAST-26OCT31PORUTA-PORDCLINGAN23-6",
           "cash_plan": 300.0,
           "contracts": null,
@@ -351060,15 +351060,15 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
-          "fire_ts": null,
-          "latency_ms": null,
+          "lock_ts": "2026-10-31T21:28:59Z",
+          "fire_ts": "2026-10-31T21:28:59Z",
+          "latency_ms": 97.3,
           "player": "Donovan Clingan",
           "stat": "ast",
-          "stat_word": null,
+          "stat_word": "assists",
           "line": 6,
-          "side_word": null,
-          "stat_at_buy": null,
+          "side_word": "under",
+          "stat_at_buy": 0.0,
           "stat_now": null,
           "to_win": null,
           "secured_ts": null
@@ -360986,7 +360986,7 @@
       "wins": 38,
       "losses": 1,
       "avg_price": 0.9889,
-      "fill_rate": 0.7252
+      "fill_rate": 0.7135
     },
     "by_day": [
       {
@@ -361041,7 +361041,7 @@
         "profit": 4.7,
         "avg_price": 0.99,
         "fills": 1,
-        "targets_fired": 1
+        "targets_fired": 2
       }
     ],
     "cumulative": [
@@ -361729,33 +361729,33 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-10-31T21:28:19Z",
-        "lag_s": 1.48,
+        "last_update": "2026-10-31T21:29:27Z",
+        "lag_s": 2.16,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-10-31T21:28:18Z",
-        "lag_s": 2.36,
+        "last_update": "2026-10-31T21:29:28Z",
+        "lag_s": 1.21,
         "ok": true
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-10-31T21:28:18Z",
-        "lag_s": 2.15,
+        "last_update": "2026-10-31T21:29:29Z",
+        "lag_s": 0.49,
         "ok": true
       },
       {
         "name": "sleeper",
         "sport": "NBA",
         "last_update": "2026-10-31T21:27:26Z",
-        "lag_s": 54.19,
+        "lag_s": 123.0,
         "ok": false
       }
     ],
-    "ws_age_s": 0.0005440711975097656,
+    "ws_age_s": 0.030846118927001953,
     "cash_free": 1122.39,
     "cash_tied": 0.0,
     "kill": false,
@@ -361770,7 +361770,7 @@
     "pending_dollars": 0.0,
     "saved_reversals": 0,
     "saved_dollars": 0.0,
-    "raw_calls": 1,
+    "raw_calls": 3,
     "delayed": 0,
     "blocked": 0,
     "by_rule": {}
