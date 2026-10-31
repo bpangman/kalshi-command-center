@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T13:59:58.318107Z",
+  "generated_at": "2026-10-31T14:01:20.506518Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -17,7 +17,7 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$200 (now -$338)",
         "at": null,
-        "stuck": true,
+        "stuck": false,
         "also": "Also: glide starts 11:00am CT",
         "last_fill": "2026-10-31T10:20:12Z"
       },
@@ -26,11 +26,11 @@
         "resting": "138 @ 15-17c",
         "exposure": -235.96,
         "exposure_text": "-$236",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,311 offered has sold (now 57%)",
-        "at": null,
+        "move": "Glide starts: cheap buybacks, trims rows",
+        "when": "11:00am CT (limit slides to +$100 by 3:00pm CT)",
+        "at": "2026-10-31T16:00:00Z",
         "stuck": false,
-        "also": "Also: glide starts 11:00am CT",
+        "also": "Also: next wave at 90% sold (now 57%)",
         "last_fill": "2026-10-31T13:25:43Z"
       },
       {
@@ -38,11 +38,11 @@
         "resting": "287 @ 12-13c",
         "exposure": -63.23,
         "exposure_text": "-$63",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,268 offered has sold (now 45%)",
-        "at": null,
+        "move": "Glide starts: cheap buybacks, trims rows",
+        "when": "11:00am CT (limit slides to +$100 by 3:00pm CT)",
+        "at": "2026-10-31T16:00:00Z",
         "stuck": false,
-        "also": "Also: glide starts 11:00am CT",
+        "also": "Also: next wave at 90% sold (now 45%)",
         "last_fill": "2026-10-31T04:59:08Z"
       },
       {
@@ -50,11 +50,11 @@
         "resting": "349 @ 12-14c",
         "exposure": 3.77,
         "exposure_text": "+$4",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,325 offered has sold (now 38%)",
-        "at": null,
+        "move": "Glide starts: cheap buybacks, trims rows",
+        "when": "11:00am CT (limit slides to +$100 by 3:00pm CT)",
+        "at": "2026-10-31T16:00:00Z",
         "stuck": false,
-        "also": "Also: glide starts 11:00am CT",
+        "also": "Also: next wave at 90% sold (now 38%)",
         "last_fill": "2026-10-31T01:38:08Z"
       },
       {
@@ -64,7 +64,7 @@
         "exposure_text": "+$170",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T13:59:52Z",
+        "at": "2026-10-31T14:00:52Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T13:01:49Z",
@@ -77,7 +77,7 @@
         "exposure_text": "+$184",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T13:59:52Z",
+        "at": "2026-10-31T14:00:52Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -90,7 +90,7 @@
         "exposure_text": "+$416",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T13:59:52Z",
+        "at": "2026-10-31T14:00:52Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T01:38:08Z",
@@ -253,29 +253,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T13:59:52Z"
+    "ts": "2026-10-31T14:00:52Z"
   },
   "posts": [
-    {
-      "id": "1793354254482-d094fe",
-      "ts": "2026-10-30T09:57:34Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 13,102 resting. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793354335070-4f3273",
-      "ts": "2026-10-30T09:58:53Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (21 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793354939957-2a1c4b",
       "ts": "2026-10-30T10:08:59Z",
@@ -3780,27 +3760,28 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nJustin Allgaier: -338\nCarson Kvapil: -236\nTaylor Gray: -63\nSammy Smith: +4\nWilliam Sawalich: +51\nRajah Caruth: +147\nCorey Day: +170\nBrent Crews: +184\nall others (30) >= +416\nCollected $516 premium ($8 fees) | Paper margin over fair $114 (not realized until settlement)\nCore posted book 1.29 | Worst now -338 | Cash free $4072\nAnchor age 256s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1793455250134-672dd0",
+      "ts": "2026-10-31T14:00:50Z",
+      "book": "MAR-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on MAR-ORLY: 0 orders posted in 10 min while the market traded 2410 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1793455252624-ae2e68",
+      "ts": "2026-10-31T14:00:52Z",
+      "book": "MAR-ORLY",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 25,842 resting. Next: Risk glide starts, 11:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1793394325785-0b5491",
-      "ts": "2026-10-30T21:05:25Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+374 on Sammy Smith @ 0.12 (maker)\n+98 on Carson Kvapil @ 0.12 (maker)\n+52 on Taylor Gray @ 0.09 (maker)\n+39 on Taylor Gray @ 0.12 (maker)\n+407 on Carson Kvapil @ 0.15 (maker)\nworst outcome now -182\nIf the race ends... you make\nJustin Allgaier: -182\nSammy Smith: -182\nCarson Kvapil: -182\nWilliam Sawalich: -135\nBrent Crews: -1\nTaylor Gray: +35\nCorey Day: +241\nJeremy Clements: +323\nall others (30) >= +323",
-      "severity": "warn"
-    },
-    {
-      "id": "1793394660310-5c70aa",
-      "ts": "2026-10-30T21:11:00Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- MAR-ORLY - Carson Kvapil has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - Sammy Smith has had no resting orders for at least 71 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793395106778-408aad",
       "ts": "2026-10-30T21:18:26Z",
@@ -4682,6 +4663,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 194 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1793455224180-6eedb2",
+      "ts": "2026-10-31T14:00:24Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): 26 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 324c, KXNASCARRACE-NATI26-JOGA low 324c, KXNASCARRACE-NATI26-JEBU low 324c, KXNASCARRACE-NATI26-RYEL low 324c, KXNASCARRACE-NATI26-BRJO low 342c, KXNASCARRACE-NATI26-AUHI low 342c, KXNASCARRACE-NATI26-BRPO low 324c, KXNASCARRACE-NATI26-GASM low 324c, KXNASCARRACE-NATI26-JOBI low 324c, KXNASCARRACE-NATI26-PAEM low 324c, KXNASCARRACE-NATI26-DACR low 324c, KXNASCARRACE-NATI26-ANAL low 328c, KXNASCARRACE-NATI26-SAMA low 342c, KXNASCARRACE-NATI26-CAWA low 324c, KXNASCARRACE-NATI26-BLPE low 324c, KXNASCARRACE-NATI26-KYSI low 324c, KXNASCARRACE-NATI26-RACA low 362c, KXNASCARRACE-NATI26-MAMA low 324c, KXNASCARRACE-NATI26-DADY low 324c, KXNASCARRACE-NATI26-WISA low 320c, KXNASCARRACE-NATI26-JELO low 269c, KXNASCARRACE-NATI26-BALE low 324c, KXNASCARRACE-NATI26-BRCR high 363c, KXNASCARRACE-NATI26-PAST low 324c, KXNASCARRACE-NATI26-LASC low 324c, KXNASCARRACE-NATI26-LEPU low 299c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793455224181-1ea6e0",
+      "ts": "2026-10-31T14:00:24Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): worst -338.23 vs floor -172.42. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
