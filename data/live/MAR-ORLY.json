@@ -1,19 +1,19 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T20:57:44.411792Z",
+  "generated_at": "2026-10-31T20:59:05.677054Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$6.",
+    "headline": "In race (Ingame). Worst line +$21.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 15,464, 35,447 resting. Worst line +$6. Race 23% done. Floor protocol off."
+          "In race (Ingame). Sold 15,543, 34,561 resting. Worst line +$21. Race 23% done. Floor protocol off. Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -44,49 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T20:57:04Z"
+    "ts": "2026-10-31T20:59:05Z"
   },
   "posts": [
-    {
-      "id": "1793453681533-a3e8eb",
-      "ts": "2026-10-31T13:34:41Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$338, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793453762231-a2f789",
-      "ts": "2026-10-31T13:35:52Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (21 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793454104550-e37793",
-      "ts": "2026-10-31T13:41:44Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$338, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793454346317-35bd36",
-      "ts": "2026-10-31T13:45:46Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$338, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793454677919-a3f8b8",
       "ts": "2026-10-31T13:51:17Z",
@@ -4134,27 +4094,62 @@
         "contracts": 713.0,
         "rows": 28
       }
+    },
+    {
+      "id": "1793480277802-39e096",
+      "ts": "2026-10-31T20:57:57Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "race-worstline-lift",
+      "text": "MAR-ORLY: buying back 12 Rajah Caruth at 6c (about $1) (worst case right now $10). Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793480285096-b13007",
+      "ts": "2026-10-31T20:55:54Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 26: Sheldon Creed x26 at 10c. Worst line +$10.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 26.0,
+        "fills": [
+          {
+            "side": "Sheldon Creed",
+            "price": 0.1,
+            "qty": 26.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793480285096-2abfcf",
+      "ts": "2026-10-31T20:57:23Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 851 (race floor first): Sammy Smith x526 at 3c, Jesse Love x325 at 5c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 851.0,
+        "rows": 2
+      }
+    },
+    {
+      "id": "1793480345551-70984e",
+      "ts": "2026-10-31T20:59:05Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$21.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1793439186201-81f22d",
-      "ts": "2026-10-31T09:33:06Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+11 on Justin Allgaier @ 0.22 (maker)\nworst outcome now -334\nIf the race ends... you make\nJustin Allgaier: -334\nCarson Kvapil: -164\nTaylor Gray: -89\nSammy Smith: -22\nWilliam Sawalich: +25\nRajah Caruth: +122\nBrent Crews: +159\nCorey Day: +211\nall others (30) >= +391",
-      "severity": "warn"
-    },
-    {
-      "id": "1793439597431-1bf541",
-      "ts": "2026-10-31T09:39:57Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 28 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 355c, KXNASCARRACE-NATI26-JUAL low 29c, KXNASCARRACE-NATI26-JOGA low 357c, KXNASCARRACE-NATI26-JEBU low 355c, KXNASCARRACE-NATI26-RYEL low 355c, KXNASCARRACE-NATI26-BRJO low 334c, KXNASCARRACE-NATI26-AUHI low 410c, KXNASCARRACE-NATI26-BRPO low 357c, KXNASCARRACE-NATI26-GASM low 357c, KXNASCARRACE-NATI26-SHCR low 339c, KXNASCARRACE-NATI26-JOBI low 357c, KXNASCARRACE-NATI26-PAEM low 357c, KXNASCARRACE-NATI26-DACR low 357c, KXNASCARRACE-NATI26-ANAL low 360c, KXNASCARRACE-NATI26-SAMA low 349c, KXNASCARRACE-NATI26-CAWA low 357c, KXNASCARRACE-NATI26-BLPE low 357c, KXNASCARRACE-NATI26-KYSI low 357c, KXNASCARRACE-NATI26-MAMA low 357c, KXNASCARRACE-NATI26-DADY low 355c, KXNASCARRACE-NATI26-WISA low 290c, KXNASCARRACE-NATI26-JELO low 308c, KXNASCARRACE-NATI26-BALE low 357c, KXNASCARRACE-NATI26-CODA low 208c, KXNASCARRACE-NATI26-BRCR low 380c, KXNASCARRACE-NATI26-PAST low 357c, KXNASCARRACE-NATI26-LASC low 357c, KXNASCARRACE-NATI26-LEPU low 369c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793439923357-643c04",
       "ts": "2026-10-31T09:45:23Z",
@@ -5035,6 +5030,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-ORLY): 26 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 1353c, KXNASCARRACE-NATI26-RYSI low 1353c, KXNASCARRACE-NATI26-JOGA low 1353c, KXNASCARRACE-NATI26-JEBU low 1353c, KXNASCARRACE-NATI26-RYEL low 1353c, KXNASCARRACE-NATI26-AUHI low 828c, KXNASCARRACE-NATI26-BRPO low 1353c, KXNASCARRACE-NATI26-GASM low 1353c, KXNASCARRACE-NATI26-HABU low 1321c, KXNASCARRACE-NATI26-JOBI low 1353c, KXNASCARRACE-NATI26-PAEM low 1353c, KXNASCARRACE-NATI26-DACR low 1353c, KXNASCARRACE-NATI26-ANAL low 1366c, KXNASCARRACE-NATI26-CAWA low 1353c, KXNASCARRACE-NATI26-BLPE low 1353c, KXNASCARRACE-NATI26-KYSI low 1353c, KXNASCARRACE-NATI26-DETH low 1353c, KXNASCARRACE-NATI26-PARE low 1366c, KXNASCARRACE-NATI26-MAMA low 1353c, KXNASCARRACE-NATI26-DADY low 1353c, KXNASCARRACE-NATI26-BALE low 1353c, KXNASCARRACE-NATI26-PAST low 1337c, KXNASCARRACE-NATI26-LASC low 1337c, KXNASCARRACE-NATI26-LEPU low 1353c, KXNASCARRACE-NATI26-ALLA low 1353c, KXNASCARRACE-NATI26-JUCA low 1353c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793480277760-a0e3a6",
+      "ts": "2026-10-31T20:57:57Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+315 on Rajah Caruth @ 0.05 (maker)\n+26 on Sheldon Creed @ 0.10 (maker)\n+78 on Jesse Love @ 0.05 (maker)\nworst outcome now +10\nIf the race ends... you make\nRajah Caruth: +10\nBrandon Jones: +22\nWilliam Sawalich: +50\nSam Mayer: +57\nBrent Crews: +60\nCarson Kvapil: +63\nJustin Allgaier: +63\nCorey Day: +96\nall others (30) >= +99",
+      "severity": "warn"
+    },
+    {
+      "id": "1793480278189-9f5818",
+      "ts": "2026-10-31T20:57:58Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Worst-line lift Rajah Caruth: 12 @ 0.06, worst +10 -> +21 (cost $0.77)\nIf the race ends... you make\nRajah Caruth: +10\nBrandon Jones: +22\nWilliam Sawalich: +50\nSam Mayer: +57\nBrent Crews: +60\nCarson Kvapil: +63\nJustin Allgaier: +63\nCorey Day: +96\nall others (30) >= +99",
       "severity": "warn"
     }
   ]
