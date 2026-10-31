@@ -1,13 +1,13 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-10-31T16:18:23.898294Z",
+  "generated_at": "2026-10-31T16:19:54.067775Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$712, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Ryan Blaney",
@@ -47,7 +47,7 @@
       },
       {
         "side": "Bubba Wallace",
-        "resting": "133 @ 5c",
+        "resting": "160 @ 5c",
         "exposure": -410.32,
         "exposure_text": "-$410",
         "move": "Next wave up to 1,500 contracts",
@@ -59,7 +59,7 @@
       },
       {
         "side": "Josh Berry",
-        "resting": "60 @ 4c",
+        "resting": "88 @ 4c",
         "exposure": -404.32,
         "exposure_text": "-$404",
         "move": "Next wave up to 1,500 contracts",
@@ -112,20 +112,20 @@
         "resting": "1,337 @ 10-11c",
         "exposure": 625.39,
         "exposure_text": "+$625",
-        "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 11:27am CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-31T16:27:18Z",
+        "move": "Hold price at 10c",
+        "when": "next cent is under the crowd price (9.1c)",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up Sun 1:00pm CT",
         "last_fill": "2026-10-31T16:17:18Z",
-        "lag_note": "Steps to 9c if no fill by 11:27am CT."
+        "lag_note": "Price 10c is at its floor."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 8,037, 40,669 resting. Worst line -$712 (limit now -$550)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 8,037, 41,499 resting. Worst line -$712 (limit now -$550). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -255,39 +255,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-10-31T16:17:49Z"
+    "ts": "2026-10-31T16:19:50Z"
   },
   "posts": [
-    {
-      "id": "1793344644873-e5b17e",
-      "ts": "2026-10-30T07:17:23Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (12 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793344846236-e55620",
-      "ts": "2026-10-30T07:20:46Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$563, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793344906581-ed5bed",
-      "ts": "2026-10-30T07:21:46Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$563, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793344967094-53c043",
       "ts": "2026-10-30T07:22:47Z",
@@ -3254,6 +3224,55 @@
       "text": "Quiet for 15 min. 40,768 resting. Next: Risk glide starts, Sun 9:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793463529843-81f14e",
+      "ts": "2026-10-31T16:18:49Z",
+      "book": "MAR-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$712, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793463569904-ef984a",
+      "ts": "2026-10-31T16:17:18Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 99: Chase Elliott x95 at 9c, Chase Elliott x4 at 10c. Worst line -$712.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 99.0,
+        "fills": [
+          {
+            "side": "Chase Elliott",
+            "price": 0.09,
+            "qty": 95.0
+          },
+          {
+            "side": "Chase Elliott",
+            "price": 0.1,
+            "qty": 4.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793463569905-ac12d7",
+      "ts": "2026-10-31T16:18:15Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 830 (launch ladder): Denny Hamlin x32 at 18c, Kyle Larson x30 at 11c, +29 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 830.0,
+        "rows": 31
+      }
     }
   ],
   "audits": [
