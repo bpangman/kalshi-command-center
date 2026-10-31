@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:18:25.892156Z",
+  "generated_at": "2026-10-31T18:19:48.468557Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$179",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (95% of the offered has sold)",
-        "at": "2026-10-31T18:17:41Z",
+        "at": "2026-10-31T18:19:42Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T18:17:11Z"
@@ -40,7 +40,7 @@
         "exposure_text": "-$177",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:17:41Z",
+        "at": "2026-10-31T18:19:42Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -59,7 +59,7 @@
       },
       {
         "side": "Sam Mayer",
-        "resting": "none",
+        "resting": "60 @ 8c",
         "exposure": -119.43,
         "exposure_text": "-$119",
         "move": "Next wave up to 750 contracts",
@@ -99,12 +99,12 @@
         "exposure": 274.13,
         "exposure_text": "+$274",
         "move": "Step price down 1c (11c to 10c)",
-        "when": "if no fill by 1:20pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T18:20:19Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:59:08Z",
-        "lag_note": "Steps to 10c if no fill by 1:20pm CT."
+        "lag_note": "Steps to 10c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -113,7 +113,7 @@
         "exposure_text": "+$501",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:17:41Z",
+        "at": "2026-10-31T18:19:42Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,545, 32,605 resting. Worst line -$180 (limit now -$50)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,545, 32,605 resting. Worst line -$180 (limit now -$46)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$50, worst line -$180, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$46, worst line -$180, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -254,19 +254,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:17:41Z"
+    "ts": "2026-10-31T18:19:42Z"
   },
   "posts": [
-    {
-      "id": "1793409862722-b0f2a1",
-      "ts": "2026-10-31T01:24:22Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 14,316 resting. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793410708130-3f8416",
       "ts": "2026-10-31T01:38:09Z",
@@ -4186,6 +4176,26 @@
       "text": "Fair value rose on Sam Mayer: lowest row 5c to 6c.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1793470762421-ad7d03",
+      "ts": "2026-10-31T18:17:12Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 93: Rajah Caruth x93 at 8c. Worst line -$180.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 93.0,
+        "fills": [
+          {
+            "side": "Rajah Caruth",
+            "price": 0.08,
+            "qty": 93.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
