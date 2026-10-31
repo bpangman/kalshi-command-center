@@ -1,6 +1,6 @@
 {
   "key": "MAR-TRUCK",
-  "generated_at": "2026-10-31T00:05:40.012999Z",
+  "generated_at": "2026-10-31T00:07:01.020291Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 8,572, 0 resting. Worst line -$32. Race 84% done. Floor protocol off."
+          "In race (Ingame). Sold 8,572, 0 resting. Worst line -$32. Race 86% done. Floor protocol ON."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-TRUCK",
-    "ts": "2026-10-31T00:04:55Z"
+    "ts": "2026-10-31T00:06:56Z"
   },
   "posts": [
-    {
-      "id": "1793388331587-04a6fb",
-      "ts": "2026-10-30T19:25:31Z",
-      "book": "MAR-TRUCK",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "MAR-TRUCK book re-posted at the same price: 4 cancel-then-post at the same price and 0 caught by the guard in the last hour. That is the queue-loss bug; check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1793388483675-7e8ca9",
       "ts": "2026-10-30T19:28:01Z",
@@ -3557,18 +3548,18 @@
         "contracts": 1904.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1793405164709-732c5e",
+      "ts": "2026-10-31T00:06:04Z",
+      "book": "MAR-TRUCK",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is -32; from here only trades that raise it",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793379081846-e13a6e",
-      "ts": "2026-10-30T16:51:21Z",
-      "book": "MAR-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK - Ty Majeski has had no resting orders for at least 10 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793379660406-217ab6",
       "ts": "2026-10-30T17:01:00Z",
@@ -4459,6 +4450,15 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-TRUCK has no resting orders on any side for at least 10 min while it should be posting.",
       "severity": "warn"
+    },
+    {
+      "id": "1793405212020-f91e77",
+      "ts": "2026-10-31T00:06:52Z",
+      "book": "MAR-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-TRUCK): 0 resting orders across every market, in-game and open. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
