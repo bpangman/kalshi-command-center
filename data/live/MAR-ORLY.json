@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T06:05:42.981737Z",
+  "generated_at": "2026-10-31T06:07:05.294261Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 3:00pm CT. Worst line -$264, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -64,7 +64,7 @@
         "exposure_text": "+$137",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T06:05:11Z",
+        "at": "2026-10-31T06:06:12Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -77,7 +77,7 @@
         "exposure_text": "+$217",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T06:05:11Z",
+        "at": "2026-10-31T06:06:12Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:30:58Z",
@@ -103,7 +103,7 @@
         "exposure_text": "+$462",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T06:05:11Z",
+        "at": "2026-10-31T06:06:12Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "lag_note": "Steps to 8c at the next check."
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 3:00pm CT. Sold 4,016, 23,641 resting. Worst line -$264 (limit now -$250)."
+          "Pre-race growth, green flag 3:00pm CT. Sold 4,016, 23,641 resting. Worst line -$264 (limit now -$250). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -253,19 +253,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T06:05:11Z"
+    "ts": "2026-10-31T06:06:12Z"
   },
   "posts": [
-    {
-      "id": "1793311949424-8fe482",
-      "ts": "2026-10-29T22:12:18Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (4 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793312171179-8da125",
       "ts": "2026-10-29T22:16:11Z",
@@ -3616,18 +3606,19 @@
       "text": "Kalshi rate-limited the bot (11 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793426772412-8d623b",
+      "ts": "2026-10-31T06:06:12Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$264, final target +$100. Next: Risk glide starts, 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793368788170-4df4d8",
-      "ts": "2026-10-30T13:59:48Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): worst -214.31 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793369912019-6e0f76",
       "ts": "2026-10-30T14:18:32Z",
@@ -4518,6 +4509,15 @@
       "source": "bot",
       "text": "+32 on Taylor Gray @ 0.11 (maker)\n+85 on Jesse Love @ 0.10 (maker)\nworst outcome now -264\nIf the race ends... you make\nJustin Allgaier: -264\nCarson Kvapil: -185\nTaylor Gray: -110\nSammy Smith: -43\nWilliam Sawalich: +4\nRajah Caruth: +100\nBrent Crews: +137\nCorey Day: +217\nall others (30) >= +369",
       "severity": "warn"
+    },
+    {
+      "id": "1793426805701-473d5a",
+      "ts": "2026-10-31T06:06:45Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): worst -264.18 vs floor -172.42. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
