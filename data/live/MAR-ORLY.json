@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:22:42.876735Z",
+  "generated_at": "2026-10-31T18:24:06.431642Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$179",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (95% of the offered has sold)",
-        "at": "2026-10-31T18:21:43Z",
+        "at": "2026-10-31T18:23:44Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T18:17:11Z"
@@ -40,7 +40,7 @@
         "exposure_text": "-$177",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:21:43Z",
+        "at": "2026-10-31T18:23:44Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -59,7 +59,7 @@
       },
       {
         "side": "Sam Mayer",
-        "resting": "60 @ 8c",
+        "resting": "none",
         "exposure": -119.43,
         "exposure_text": "-$119",
         "move": "Next wave up to 750 contracts",
@@ -86,12 +86,12 @@
         "exposure": 83.68,
         "exposure_text": "+$84",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 1:24pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T18:24:47Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T18:14:47Z",
-        "lag_note": "Steps to 9c if no fill by 1:24pm CT."
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Taylor Gray",
@@ -113,7 +113,7 @@
         "exposure_text": "+$501",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:21:43Z",
+        "at": "2026-10-31T18:23:44Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,545, 32,605 resting. Worst line -$180 (limit now -$45)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,545, 32,605 resting. Worst line -$180 (limit now -$42)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$45, worst line -$180, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$42, worst line -$180, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -254,19 +254,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:21:43Z"
+    "ts": "2026-10-31T18:23:44Z"
   },
   "posts": [
-    {
-      "id": "1793410708130-4cd252",
-      "ts": "2026-10-31T01:38:09Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 10 drivers: Rajah Caruth, Austin Hill, Parker Retzlaff.",
-      "severity": "info",
-      "title": "Price shock"
-    },
     {
       "id": "1793410708130-631e61",
       "ts": "2026-10-31T01:38:10Z",
@@ -4196,6 +4186,15 @@
       "text": "Risk glide: limit -$43, worst line -$180. post gate Taylor Gray 18@0.11 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793471026932-0cb926",
+      "ts": "2026-10-31T18:23:46Z",
+      "book": "MAR-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJustin Allgaier: -180\nRajah Caruth: -179\nWilliam Sawalich: -177\nCarson Kvapil: -174\nSam Mayer: -119\nSammy Smith: +36\nCorey Day: +84\nTaylor Gray: +274\nall others (30) >= +326\nCollected $859 premium ($13 fees) | Paper margin over fair $174 (not realized until settlement)\nCore posted book 1.03 | Worst now -180 | Cash free $4414\nAnchor age 50s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
