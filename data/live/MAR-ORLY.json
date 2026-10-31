@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T19:23:53.848903Z",
+  "generated_at": "2026-10-31T19:25:33.959442Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
     "headline": "Risk glide for the green flag 3:00pm CT. Worst line -$131, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -15,7 +15,7 @@
         "exposure": -130.51,
         "exposure_text": "-$131",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$46",
+        "when": "each bot check while his line is under +$49",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-31T15:58:40Z"
@@ -26,7 +26,7 @@
         "exposure": -129.52,
         "exposure_text": "-$130",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$46",
+        "when": "each bot check while his line is under +$49",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-31T18:17:11Z"
@@ -37,7 +37,7 @@
         "exposure": -127.52,
         "exposure_text": "-$128",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$46",
+        "when": "each bot check while his line is under +$49",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-31T17:31:41Z"
@@ -48,7 +48,7 @@
         "exposure": -124.52,
         "exposure_text": "-$125",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$46",
+        "when": "each bot check while his line is under +$49",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-31T16:08:17Z"
@@ -59,7 +59,7 @@
         "exposure": -111.08,
         "exposure_text": "-$111",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$46",
+        "when": "each bot check while his line is under +$49",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-31T18:30:42Z"
@@ -97,7 +97,7 @@
         "exposure_text": "+$323",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T19:23:15Z",
+        "at": "2026-10-31T19:25:16Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:59:08Z",
@@ -121,7 +121,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 9,072, 33,527 resting. Worst line -$131 (limit now +$46). Bot is slow (checks every 51s, set for 30s)."
+          "Risk glide, green flag 3:00pm CT. Sold 9,072, 33,527 resting. Worst line -$131 (limit now +$49)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit +$46, worst line -$131, final +$100 at 3:00pm CT.",
+          "Glide is running: limit +$49, worst line -$131, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -251,33 +251,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T19:23:15Z"
+    "ts": "2026-10-31T19:25:16Z"
   },
   "posts": [
-    {
-      "id": "1793418701180-8abe03",
-      "ts": "2026-10-31T03:51:38Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (13 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793418741482-513848",
-      "ts": "2026-10-31T03:51:06Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 806 (launch ladder): Carson Kvapil x52 at 15c, Taylor Gray x50 at 12c, +18 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 806.0,
-        "rows": 20
-      }
-    },
     {
       "id": "1793418942702-d9aacc",
       "ts": "2026-10-31T03:55:25Z",
@@ -4150,6 +4126,25 @@
     {
       "id": "1793474474772-b2884b",
       "ts": "2026-10-31T19:21:14Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 3:00pm CT. Worst line -$131, final target +$100. Next: Glide target date, 3:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1793474645873-d6187b",
+      "ts": "2026-10-31T19:24:05Z",
+      "book": "MAR-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJustin Allgaier: -131\nRajah Caruth: -130\nWilliam Sawalich: -128\nCarson Kvapil: -125\nSam Mayer: -111\nCorey Day: +76\nSammy Smith: +85\nJesse Love: +163\nall others (30) >= +323\nCollected $909 premium ($14 fees) | Paper margin over fair $190 (not realized until settlement)\nCore posted book 1.04 | Worst now -131 | Cash free $4316\nAnchor age 33s (source: bovada)",
+      "severity": "info"
+    },
+    {
+      "id": "1793474716484-93ead1",
+      "ts": "2026-10-31T19:25:16Z",
       "book": "MAR-ORLY",
       "kind": "plan",
       "source": "narrator",
