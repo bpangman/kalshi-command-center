@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T04:32:04.818790Z",
+  "generated_at": "2026-10-31T04:33:24.961325Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -76,7 +76,7 @@
         "exposure_text": "+$125",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T04:31:35Z",
+        "at": "2026-10-31T04:32:35Z",
         "stuck": false,
         "also": "Also: even-up Sat 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -115,7 +115,7 @@
         "exposure_text": "+$450",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T04:31:35Z",
+        "at": "2026-10-31T04:32:35Z",
         "stuck": false,
         "also": "Also: even-up Sat 3:00pm CT",
         "lag_note": "Steps to 8c at the next check."
@@ -255,19 +255,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T04:31:35Z"
+    "ts": "2026-10-31T04:32:35Z"
   },
   "posts": [
-    {
-      "id": "1793306064781-d2bb62",
-      "ts": "2026-10-29T20:34:24Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793306125190-a21308",
       "ts": "2026-10-29T20:35:25Z",
@@ -3585,18 +3575,29 @@
       "text": "Kalshi rate-limited the bot (8 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793421196065-06ba47",
+      "ts": "2026-10-31T04:30:59Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 163: Corey Day x163 at 5c. Worst line -$276.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 163.0,
+        "fills": [
+          {
+            "side": "Corey Day",
+            "price": 0.05,
+            "qty": 163.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793360755360-00a451",
-      "ts": "2026-10-30T11:45:55Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 21 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 351c, KXNASCARRACE-NATI26-JOGA low 351c, KXNASCARRACE-NATI26-JEBU low 351c, KXNASCARRACE-NATI26-RYEL low 351c, KXNASCARRACE-NATI26-BRJO high 385c, KXNASCARRACE-NATI26-AUHI high 372c, KXNASCARRACE-NATI26-BRPO low 351c, KXNASCARRACE-NATI26-GASM low 351c, KXNASCARRACE-NATI26-JOBI low 351c, KXNASCARRACE-NATI26-PAEM low 351c, KXNASCARRACE-NATI26-DACR low 351c, KXNASCARRACE-NATI26-CAWA low 351c, KXNASCARRACE-NATI26-BLPE low 351c, KXNASCARRACE-NATI26-KYSI low 351c, KXNASCARRACE-NATI26-MAMA low 351c, KXNASCARRACE-NATI26-DADY low 351c, KXNASCARRACE-NATI26-JELO high 389c, KXNASCARRACE-NATI26-BALE low 351c, KXNASCARRACE-NATI26-PAST low 351c, KXNASCARRACE-NATI26-LASC low 351c, KXNASCARRACE-NATI26-LEPU high 376c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793361305271-69c9a2",
       "ts": "2026-10-30T11:55:05Z",
@@ -4486,6 +4487,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-ORLY): worst -284.03 vs floor -172.42. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793421162459-4a32e8",
+      "ts": "2026-10-31T04:32:42Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): loop_exceptions=2. Check the command center.",
       "severity": "critical"
     }
   ]
