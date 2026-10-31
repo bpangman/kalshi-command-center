@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T20:09:41.237078Z",
+  "generated_at": "2026-10-31T20:11:04.691967Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
@@ -48,12 +48,12 @@
         "exposure": 87.82,
         "exposure_text": "+$88",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T20:09:39Z",
+        "when": "if no fill by 3:14pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T20:14:27Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T19:43:42Z",
-        "lag_note": "Steps to 8c at the next check."
+        "lag_note": "Steps to 8c if no fill by 3:14pm CT."
       },
       {
         "side": "Taylor Gray",
@@ -61,11 +61,11 @@
         "exposure": 103.88,
         "exposure_text": "+$104",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T20:11:07Z",
+        "when": "if no fill by 3:15pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T20:15:18Z",
         "stuck": false,
         "last_fill": "2026-10-31T20:01:07Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Steps to 11c if no fill by 3:15pm CT."
       },
       {
         "side": "Sammy Smith",
@@ -232,78 +232,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T20:09:39Z"
+    "ts": "2026-10-31T20:10:40Z"
   },
   "posts": [
-    {
-      "id": "1793436315856-68f614",
-      "ts": "2026-10-31T08:45:15Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$334, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793436514723-c84bf9",
-      "ts": "2026-10-31T08:48:34Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJustin Allgaier: -334\nCarson Kvapil: -164\nTaylor Gray: -89\nSammy Smith: -22\nWilliam Sawalich: +25\nRajah Caruth: +122\nBrent Crews: +159\nCorey Day: +211\nall others (30) >= +391\nCollected $491 premium ($7 fees) | Paper margin over fair $108 (not realized until settlement)\nCore posted book 1.51 | Worst now -334 | Cash free $4076\nAnchor age 0s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1793436617783-06d121",
-      "ts": "2026-10-31T08:50:17Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$334, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793436678063-16d5cd",
-      "ts": "2026-10-31T08:51:18Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$334, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793437584022-cbbd41",
-      "ts": "2026-10-31T09:06:24Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 25,057 resting. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793438147789-f51109",
-      "ts": "2026-10-31T09:15:31Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (11 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793439033670-75676a",
-      "ts": "2026-10-31T09:30:33Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 25,057 resting. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793439939215-f39a09",
       "ts": "2026-10-31T09:45:39Z",
@@ -4216,6 +4147,84 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793477399882-81a884",
+      "ts": "2026-10-31T20:09:46Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit +$100, worst line -$41. post gate Sammy Smith 183@0.12 -> 0 (race_principles; a full fill would take his",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1793477399896-80eae0",
+      "ts": "2026-10-31T20:07:52Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 61: Corey Day x61 at 10c. Worst line -$41.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 61.0,
+        "fills": [
+          {
+            "side": "Corey Day",
+            "price": 0.1,
+            "qty": 61.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793477451528-7412c5",
+      "ts": "2026-10-31T20:10:51Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "race_glide_buyback",
+      "text": "MAR-ORLY: buying back 85 Sheldon Creed at 15c (about $14) to cut the worst case from -$171 to -$100. Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793477451887-089ad5",
+      "ts": "2026-10-31T20:10:51Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "race-take",
+      "text": "MAR-ORLY: selling 100 Taylor Gray at 8c into the crowd's bid (about $1) (worst case right now -$100), a paid sale under fair value. Plus 13 more paid sells, $8 total since 2:40pm. Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793477460766-9ca695",
+      "ts": "2026-10-31T20:10:52Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Take: sold 100 Taylor Gray at the bid 8c. Cost $0.52.",
+      "severity": "info",
+      "title": "Take"
+    },
+    {
+      "id": "1793477460766-8bb1ea",
+      "ts": "2026-10-31T20:10:52Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Take: sold 53 Brent Crews at the bid 4c. Cost $0.14.",
+      "severity": "info",
+      "title": "Take"
+    },
+    {
+      "id": "1793477460767-222271",
+      "ts": "2026-10-31T20:10:52Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Take: sold 78 Corey Day at the bid 5c. Cost $0.26.",
+      "severity": "info",
+      "title": "Take"
     }
   ],
   "audits": [
