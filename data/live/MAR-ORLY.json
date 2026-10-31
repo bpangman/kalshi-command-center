@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T15:24:48.856936Z",
+  "generated_at": "2026-10-31T15:26:12.615452Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -100,12 +100,12 @@
         "exposure": 236.77,
         "exposure_text": "+$237",
         "move": "Hold price at 7c",
-        "when": "crowd pays 7.4c; steps down 1c only if it trades lower",
+        "when": "next cent is under the crowd price (6.4c)",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T15:24:00Z",
-        "lag_note": "Price 7c matches the crowd."
+        "lag_note": "Price 7c is at its floor."
       },
       {
         "side": "Brent Crews",
@@ -114,7 +114,7 @@
         "exposure_text": "+$294",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T15:24:27Z",
+        "at": "2026-10-31T15:25:28Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -255,29 +255,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T15:24:27Z"
+    "ts": "2026-10-31T15:25:28Z"
   },
   "posts": [
-    {
-      "id": "1793365515286-7ab273",
-      "ts": "2026-10-30T13:05:15Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 13,102 resting. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793366422744-80a93f",
-      "ts": "2026-10-30T13:20:22Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 13,102 resting. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793366543775-70c287",
       "ts": "2026-10-30T13:22:23Z",
@@ -3896,6 +3876,40 @@
       "data": {
         "contracts": 148.0,
         "rows": 4
+      }
+    },
+    {
+      "id": "1793460348219-4da4ee",
+      "ts": "2026-10-31T15:23:30Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 29 (race split): Jesse Love x29 at 9c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 29.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1793460368394-ab37d3",
+      "ts": "2026-10-31T15:24:01Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 43: Corey Day x43 at 7c. Worst line -$228.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 43.0,
+        "fills": [
+          {
+            "side": "Corey Day",
+            "price": 0.07,
+            "qty": 43.0
+          }
+        ]
       }
     }
   ],
