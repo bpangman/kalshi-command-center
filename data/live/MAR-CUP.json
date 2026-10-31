@@ -1,13 +1,13 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-10-31T17:12:25.088716Z",
+  "generated_at": "2026-10-31T17:13:59.056018Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$667, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 47,
+    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Chase Elliott",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 9,514, 45,358 resting. Worst line -$667 (limit now -$550). Bot is slow (checks every 47s, set for 30s)."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 9,514, 45,358 resting. Worst line -$667 (limit now -$550)."
         ]
       },
       {
@@ -254,19 +254,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-10-31T17:12:11Z"
+    "ts": "2026-10-31T17:13:11Z"
   },
   "posts": [
-    {
-      "id": "1793351977536-9d590b",
-      "ts": "2026-10-30T09:19:37Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$563, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793352098336-ec4a75",
       "ts": "2026-10-30T09:21:38Z",
@@ -3327,18 +3317,19 @@
         "contracts": 999.0,
         "rows": 36
       }
+    },
+    {
+      "id": "1793466791862-44d39e",
+      "ts": "2026-10-31T17:13:11Z",
+      "book": "MAR-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$667, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793394809737-908a4a",
-      "ts": "2026-10-30T21:13:29Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -563.44 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793395270262-1232f7",
       "ts": "2026-10-30T21:21:10Z",
@@ -4229,6 +4220,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-CUP): worst -703.76 vs floor -369.16. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793466772124-aa0842",
+      "ts": "2026-10-31T17:12:52Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Ryan Blaney has had no resting orders for at least 132 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
