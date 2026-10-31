@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T21:09:38.419335Z",
+  "generated_at": "2026-10-31T21:11:01.186462Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 15,776, 32,125 resting. Worst line +$30. Race 29% done. Floor protocol off."
+          "In race (Ingame). Sold 16,292, 31,609 resting. Worst line +$30. Race 30% done. Floor protocol off."
         ]
       },
       {
@@ -44,39 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T21:09:09Z"
+    "ts": "2026-10-31T21:10:09Z"
   },
   "posts": [
-    {
-      "id": "1793458374568-cdd029",
-      "ts": "2026-10-31T14:52:53Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (3 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793458616166-b417ee",
-      "ts": "2026-10-31T14:54:45Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 247: Sammy Smith x247 at 12c. Worst line -$283.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 247.0,
-        "fills": [
-          {
-            "side": "Sammy Smith",
-            "price": 0.12,
-            "qty": 247.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793458616167-d1ac75",
       "ts": "2026-10-31T14:56:31Z",
@@ -4169,18 +4139,28 @@
         "contracts": 7794.0,
         "rows": 23
       }
+    },
+    {
+      "id": "1793481036352-7c206d",
+      "ts": "2026-10-31T21:10:36Z",
+      "book": "MAR-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Cohort shrink on MAR-ORLY: target 12 -> 9\nIf the race ends... you make\nSammy Smith: +30\nJesse Love: +45\nBrandon Jones: +47\nRajah Caruth: +47\nWilliam Sawalich: +75\nSam Mayer: +83\nBrent Crews: +85\nCarson Kvapil: +88\nall others (30) >= +88",
+      "severity": "info"
+    },
+    {
+      "id": "1793481050245-22a3c5",
+      "ts": "2026-10-31T21:10:36Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 shrink: cohort target 12 -> 9 (schedule threshold 0.30)",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1793442612206-807103",
-      "ts": "2026-10-31T10:30:12Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 10 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793443487603-c61ddc",
       "ts": "2026-10-31T10:44:47Z",
@@ -5070,6 +5050,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 11 driver(s): Sheldon Creed (+141%), Sammy Smith (+85%), Austin Hill (+75%), Brandon Jones (+70%), Sam Mayer (+62%), Taylor Gray (+61%), Parker Retzlaff (+56%), Lee Pulliam (+47%), Rajah Caruth (+40%), William Sawalich (+38%) and 1 more",
+      "severity": "warn"
+    },
+    {
+      "id": "1793481036446-522a1b",
+      "ts": "2026-10-31T21:10:36Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Worst-line lift Sammy Smith: 1 @ 0.06, worst +30 -> +31 (cost $0.07)\nIf the race ends... you make\nSammy Smith: +30\nJesse Love: +45\nBrandon Jones: +47\nRajah Caruth: +47\nWilliam Sawalich: +75\nSam Mayer: +83\nBrent Crews: +85\nCarson Kvapil: +88\nall others (30) >= +88",
       "severity": "warn"
     }
   ]
