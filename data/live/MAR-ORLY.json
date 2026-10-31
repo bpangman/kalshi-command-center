@@ -1,10 +1,10 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T20:39:58.009774Z",
+  "generated_at": "2026-10-31T20:41:42.378971Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$5.",
+    "headline": "In race (Ingame). Worst line $0.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 15,081, 35,630 resting. Worst line -$5. Race 13% done. Floor protocol off."
+          "In race (Ingame). Sold 15,124, 0 resting. Worst line $0. Race 13% done. Floor protocol off."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T20:39:55Z"
+    "ts": "2026-10-31T20:40:55Z"
   },
   "posts": [
-    {
-      "id": "1793451663441-401164",
-      "ts": "2026-10-31T13:01:03Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$340, final target +$100. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793451727600-f7d641",
       "ts": "2026-10-31T13:00:04Z",
@@ -4129,18 +4119,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793479255955-6c0004",
+      "ts": "2026-10-31T20:39:51Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 123: Taylor Gray x123 at 11c. Worst line $0.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 123.0,
+        "fills": [
+          {
+            "side": "Taylor Gray",
+            "price": 0.11,
+            "qty": 123.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793434184556-17bf38",
-      "ts": "2026-10-31T08:09:44Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): worst -325.96 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793435821302-b5f7ea",
       "ts": "2026-10-31T08:37:01Z",
@@ -5030,6 +5031,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 7 unexplained\n- MAR-ORLY - Brent Crews has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - Carson Kvapil has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - Corey Day has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - Sam Mayer has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - Sheldon Creed has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- MAR-ORLY - William Sawalich has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793479231843-913b56",
+      "ts": "2026-10-31T20:40:31Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Shock on Brent Crews: pulled every in-game order, pausing 120s\nIf the race ends... you make\nBrandon Jones: +0\nWilliam Sawalich: +28\nSam Mayer: +36\nBrent Crews: +38\nCarson Kvapil: +41\nJustin Allgaier: +41\nCorey Day: +75\nTaylor Gray: +77\nall others (30) >= +126",
       "severity": "warn"
     }
   ]
