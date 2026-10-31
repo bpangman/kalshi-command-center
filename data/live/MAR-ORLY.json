@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T20:06:37.309544Z",
+  "generated_at": "2026-10-31T20:08:14.367845Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
@@ -59,12 +59,12 @@
         "exposure": 81.85,
         "exposure_text": "+$82",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "if no fill by 3:09pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T20:09:03Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T19:43:42Z",
-        "lag_note": "Steps to 8c if no fill by 3:09pm CT."
+        "lag_note": "Steps to 8c at the next check."
       },
       {
         "side": "Taylor Gray",
@@ -97,11 +97,11 @@
         "exposure": 719.1,
         "exposure_text": "+$719",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 3:14pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-31T20:14:54Z",
+        "when": "if no fill by 3:15pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T20:15:25Z",
         "stuck": false,
-        "last_fill": "2026-10-31T20:04:54Z",
-        "lag_note": "Steps to 6c if no fill by 3:14pm CT."
+        "last_fill": "2026-10-31T20:05:25Z",
+        "lag_note": "Steps to 6c if no fill by 3:15pm CT."
       },
       {
         "side": "Brandon Jones",
@@ -120,7 +120,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Green flag handoff, green flag 3:00pm CT. Sold 10,974, 34,964 resting. Worst line -$47 (limit now +$100)."
+          "Green flag handoff, green flag 3:00pm CT. Sold 11,020, 34,964 resting. Worst line -$47 (limit now +$100)."
         ]
       },
       {
@@ -128,7 +128,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brandon Jones, Brent Crews, Sammy Smith, Sheldon Creed, Taylor Gray.",
           "Brandon Jones: 938 behind. Price 7c matches the crowd.",
-          "Sheldon Creed: 812 behind. Steps to 6c if no fill by 3:14pm CT.",
+          "Sheldon Creed: 766 behind. Steps to 6c if no fill by 3:15pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -217,7 +217,7 @@
       },
       {
         "label": "Sheldon Creed",
-        "held": 261.8,
+        "held": 307.8,
         "resting": 774.0,
         "target": 1250.0,
         "status": "lagging",
@@ -234,19 +234,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 28 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T20:05:38Z"
+    "ts": "2026-10-31T20:07:38Z"
   },
   "posts": [
-    {
-      "id": "1793436255554-0d637a",
-      "ts": "2026-10-31T08:44:06Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (15 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793436315856-68f614",
       "ts": "2026-10-31T08:45:15Z",
@@ -4203,6 +4193,31 @@
       "text": "Take: sold 46 Sheldon Creed at the bid 2c. Cost $0.97.",
       "severity": "info",
       "title": "Take"
+    },
+    {
+      "id": "1793477218495-b2ec64",
+      "ts": "2026-10-31T20:05:56Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 155: Sheldon Creed x146 at 2c, Sammy Smith x9 at 11c. Worst line -$47.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 155.0,
+        "fills": [
+          {
+            "side": "Sheldon Creed",
+            "price": 0.02,
+            "qty": 146.0
+          },
+          {
+            "side": "Sammy Smith",
+            "price": 0.11,
+            "qty": 9.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
