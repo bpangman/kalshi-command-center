@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:50:58.030767Z",
+  "generated_at": "2026-10-31T18:52:21.669365Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$155",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (95% of the offered has sold)",
-        "at": "2026-10-31T18:49:59Z",
+        "at": "2026-10-31T18:52:00Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T18:17:11Z"
@@ -40,7 +40,7 @@
         "exposure_text": "-$153",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:49:59Z",
+        "at": "2026-10-31T18:52:00Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -64,7 +64,7 @@
         "exposure_text": "-$136",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (92% of the offered has sold)",
-        "at": "2026-10-31T18:49:59Z",
+        "at": "2026-10-31T18:52:00Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T18:30:42Z"
@@ -75,12 +75,12 @@
         "exposure": 60.18,
         "exposure_text": "+$60",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:50:16Z",
+        "when": "if no fill by 1:55pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T18:55:37Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:30:35Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Steps to 11c if no fill by 1:55pm CT."
       },
       {
         "side": "Corey Day",
@@ -88,12 +88,12 @@
         "exposure": 77.73,
         "exposure_text": "+$78",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:50:16Z",
+        "when": "if no fill by 1:55pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T18:55:37Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T18:29:38Z",
-        "lag_note": "Steps to 9c at the next check."
+        "lag_note": "Steps to 9c if no fill by 1:55pm CT."
       },
       {
         "side": "Taylor Gray",
@@ -101,12 +101,12 @@
         "exposure": 298.18,
         "exposure_text": "+$298",
         "move": "Step price down 1c (11c to 10c)",
-        "when": "if no fill by 1:52pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T18:52:41Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:59:08Z",
-        "lag_note": "Steps to 10c if no fill by 1:52pm CT."
+        "lag_note": "Steps to 10c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -114,19 +114,19 @@
         "exposure": 525.12,
         "exposure_text": "+$525",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:50:16Z",
+        "when": "if no fill by 1:55pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T18:55:37Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
-        "lag_note": "Steps to 7c at the next check."
+        "lag_note": "Steps to 7c if no fill by 1:55pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,831, 33,345 resting. Worst line -$156 (limit now -$3)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,831, 33,345 resting. Worst line -$156 (limit now $0)."
         ]
       },
       {
@@ -151,7 +151,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$3, worst line -$156, final +$100 at 3:00pm CT.",
+          "Glide is running: limit $0, worst line -$156, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -256,33 +256,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:49:59Z"
+    "ts": "2026-10-31T18:52:00Z"
   },
   "posts": [
-    {
-      "id": "1793412461570-853606",
-      "ts": "2026-10-31T02:05:24Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 26 (launch ladder): Carson Kvapil x26 at 17c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 26.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1793412803531-d2fbde",
-      "ts": "2026-10-31T02:13:15Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (12 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793413064953-62d547",
       "ts": "2026-10-31T02:16:46Z",
@@ -4193,18 +4169,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793472659776-c1c0f3",
+      "ts": "2026-10-31T18:50:59Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 3:00pm CT. Worst line -$156, final target +$100. Next: Glide target date, 3:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1793472720252-00ec41",
+      "ts": "2026-10-31T18:52:00Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 3:00pm CT. Worst line -$156, final target +$100. Next: Glide target date, 3:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793422340381-3cfd65",
-      "ts": "2026-10-31T04:52:20Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 24 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 348c, KXNASCARRACE-NATI26-JOGA low 348c, KXNASCARRACE-NATI26-JEBU low 348c, KXNASCARRACE-NATI26-RYEL low 348c, KXNASCARRACE-NATI26-AUHI low 362c, KXNASCARRACE-NATI26-BRPO low 348c, KXNASCARRACE-NATI26-GASM low 348c, KXNASCARRACE-NATI26-JOBI low 348c, KXNASCARRACE-NATI26-PAEM low 348c, KXNASCARRACE-NATI26-DACR low 370c, KXNASCARRACE-NATI26-ANAL low 354c, KXNASCARRACE-NATI26-SAMA low 366c, KXNASCARRACE-NATI26-CAWA low 370c, KXNASCARRACE-NATI26-BLPE low 348c, KXNASCARRACE-NATI26-KYSI low 348c, KXNASCARRACE-NATI26-TAGR low 240c, KXNASCARRACE-NATI26-MAMA low 370c, KXNASCARRACE-NATI26-DADY low 348c, KXNASCARRACE-NATI26-WISA low 265c, KXNASCARRACE-NATI26-JELO low 387c, KXNASCARRACE-NATI26-BALE low 370c, KXNASCARRACE-NATI26-PAST low 348c, KXNASCARRACE-NATI26-LASC low 370c, KXNASCARRACE-NATI26-LEPU low 363c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793423001045-d8d14a",
       "ts": "2026-10-31T05:03:21Z",
@@ -5094,6 +5081,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-ORLY): 4 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-BRJO low 145c, KXNASCARRACE-NATI26-HABU low 300c, KXNASCARRACE-NATI26-SHCR low 163c, KXNASCARRACE-NATI26-ANAL low 300c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793472720184-79ff52",
+      "ts": "2026-10-31T18:52:00Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=13796. Check the command center.",
       "severity": "warn"
     }
   ]
