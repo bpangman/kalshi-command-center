@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:14:03.448164Z",
+  "generated_at": "2026-10-31T18:15:28.891078Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
     "headline": "Risk glide for the green flag 3:00pm CT. Worst line -$190, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 52,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -28,7 +28,7 @@
         "exposure_text": "-$187",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:13:40Z",
+        "at": "2026-10-31T18:14:40Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -113,7 +113,7 @@
         "exposure_text": "+$491",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:13:40Z",
+        "at": "2026-10-31T18:14:40Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,420, 32,430 resting. Worst line -$190 (limit now -$56)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,420, 32,430 resting. Worst line -$190 (limit now -$55). Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$56, worst line -$190, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$55, worst line -$190, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -254,19 +254,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:13:40Z"
+    "ts": "2026-10-31T18:14:40Z"
   },
   "posts": [
-    {
-      "id": "1793406986710-fbd835",
-      "ts": "2026-10-31T00:36:22Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (9 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793407425048-76b5f2",
       "ts": "2026-10-31T00:43:45Z",
@@ -4181,6 +4171,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793470480616-46d094",
+      "ts": "2026-10-31T18:14:40Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 3:00pm CT. Worst line -$190, final target +$100. Next: Glide selling opens, 1:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
