@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T19:21:07.483727Z",
+  "generated_at": "2026-10-31T19:22:31.023093Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
     "headline": "Risk glide for the green flag 3:00pm CT. Worst line -$131, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -15,7 +15,7 @@
         "exposure": -130.51,
         "exposure_text": "-$131",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$41",
+        "when": "each bot check while his line is under +$44",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-31T15:58:40Z"
@@ -26,7 +26,7 @@
         "exposure": -129.52,
         "exposure_text": "-$130",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$41",
+        "when": "each bot check while his line is under +$44",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-31T18:17:11Z"
@@ -37,7 +37,7 @@
         "exposure": -127.52,
         "exposure_text": "-$128",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$41",
+        "when": "each bot check while his line is under +$44",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-31T17:31:41Z"
@@ -48,7 +48,7 @@
         "exposure": -124.52,
         "exposure_text": "-$125",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$41",
+        "when": "each bot check while his line is under +$44",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-31T16:08:17Z"
@@ -59,7 +59,7 @@
         "exposure": -111.08,
         "exposure_text": "-$111",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$41",
+        "when": "each bot check while his line is under +$44",
         "at": null,
         "stuck": false,
         "last_fill": "2026-10-31T18:30:42Z"
@@ -70,12 +70,12 @@
         "exposure": 76.03,
         "exposure_text": "+$76",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 2:22pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-31T19:22:00Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-31T19:22:15Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T19:06:45Z",
-        "lag_note": "Steps to 9c if no fill by 2:22pm CT."
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Sammy Smith",
@@ -83,12 +83,12 @@
         "exposure": 85.48,
         "exposure_text": "+$85",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 2:22pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T19:22:49Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:30:35Z",
-        "lag_note": "Steps to 11c if no fill by 2:22pm CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "Taylor Gray",
@@ -97,7 +97,7 @@
         "exposure_text": "+$323",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T19:20:14Z",
+        "at": "2026-10-31T19:22:15Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:59:08Z",
@@ -109,19 +109,19 @@
         "exposure": 550.42,
         "exposure_text": "+$550",
         "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 2:22pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T19:22:49Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
-        "lag_note": "Steps to 7c if no fill by 2:22pm CT."
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 9,072, 33,527 resting. Worst line -$131 (limit now +$41)."
+          "Risk glide, green flag 3:00pm CT. Sold 9,072, 33,527 resting. Worst line -$131 (limit now +$44). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit +$41, worst line -$131, final +$100 at 3:00pm CT.",
+          "Glide is running: limit +$44, worst line -$131, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -251,39 +251,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T19:20:14Z"
+    "ts": "2026-10-31T19:22:15Z"
   },
   "posts": [
-    {
-      "id": "1793418620630-7d5f7d",
-      "ts": "2026-10-31T03:50:20Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$284, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793418681021-bf0d1c",
-      "ts": "2026-10-31T03:49:02Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 133: Justin Allgaier x133 at 22c. Worst line -$284.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 133.0,
-        "fills": [
-          {
-            "side": "Justin Allgaier",
-            "price": 0.22,
-            "qty": 133.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793418701180-8abe03",
       "ts": "2026-10-31T03:51:38Z",
@@ -4166,18 +4136,29 @@
       "text": "Risk glide: limit +$36, worst line -$131. post gate Taylor Gray 18@0.11 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793474474766-2d8d50",
+      "ts": "2026-10-31T19:20:58Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit +$43, worst line -$131. post gate Taylor Gray 18@0.11 -> 0 (race_principles; a full fill would take his ",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1793474474772-b2884b",
+      "ts": "2026-10-31T19:21:14Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 3:00pm CT. Worst line -$131, final target +$100. Next: Glide target date, 3:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793423001046-aeb950",
-      "ts": "2026-10-31T05:03:21Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): worst -272.55 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793424102223-a43b74",
       "ts": "2026-10-31T05:21:42Z",
@@ -5067,6 +5048,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 195 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793474469451-77cb4c",
+      "ts": "2026-10-31T19:21:09Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): 4 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-BRJO low 145c, KXNASCARRACE-NATI26-HABU low 300c, KXNASCARRACE-NATI26-SHCR low 163c, KXNASCARRACE-NATI26-ANAL low 300c. Check the command center.",
       "severity": "warn"
     }
   ]
