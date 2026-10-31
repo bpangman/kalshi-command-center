@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:11:05.630053Z",
+  "generated_at": "2026-10-31T18:12:39.837137Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$187",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:10:38Z",
+        "at": "2026-10-31T18:12:39Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -113,7 +113,7 @@
         "exposure_text": "+$491",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:10:38Z",
+        "at": "2026-10-31T18:12:39Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,420, 32,430 resting. Worst line -$190 (limit now -$60)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,420, 32,430 resting. Worst line -$190 (limit now -$57)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$60, worst line -$190, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$57, worst line -$190, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -254,19 +254,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:10:38Z"
+    "ts": "2026-10-31T18:12:39Z"
   },
   "posts": [
-    {
-      "id": "1793406906254-26af01",
-      "ts": "2026-10-31T00:35:01Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
     {
       "id": "1793406986710-fbd835",
       "ts": "2026-10-31T00:36:22Z",
@@ -4171,27 +4161,29 @@
       "text": "Risk glide: limit -$60, worst line -$190. post gate Taylor Gray 18@0.11 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793470319479-015596",
+      "ts": "2026-10-31T18:09:57Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 4: Rajah Caruth x4 at 8c. Worst line -$190.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 4.0,
+        "fills": [
+          {
+            "side": "Rajah Caruth",
+            "price": 0.08,
+            "qty": 4.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793416376418-36432c",
-      "ts": "2026-10-31T03:12:56Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 25 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 321c, KXNASCARRACE-NATI26-JOGA low 348c, KXNASCARRACE-NATI26-JEBU low 321c, KXNASCARRACE-NATI26-RYEL low 321c, KXNASCARRACE-NATI26-AUHI low 353c, KXNASCARRACE-NATI26-BRPO low 321c, KXNASCARRACE-NATI26-GASM low 348c, KXNASCARRACE-NATI26-JOBI low 348c, KXNASCARRACE-NATI26-PAEM low 348c, KXNASCARRACE-NATI26-DACR low 348c, KXNASCARRACE-NATI26-ANAL low 331c, KXNASCARRACE-NATI26-SAMA low 357c, KXNASCARRACE-NATI26-CAWA low 348c, KXNASCARRACE-NATI26-BLPE low 321c, KXNASCARRACE-NATI26-KYSI low 321c, KXNASCARRACE-NATI26-TAGR low 190c, KXNASCARRACE-NATI26-MAMA low 348c, KXNASCARRACE-NATI26-DADY low 321c, KXNASCARRACE-NATI26-WISA low 223c, KXNASCARRACE-NATI26-JELO low 378c, KXNASCARRACE-NATI26-BALE low 348c, KXNASCARRACE-NATI26-CODA low 359c, KXNASCARRACE-NATI26-PAST low 321c, KXNASCARRACE-NATI26-LASC low 348c, KXNASCARRACE-NATI26-LEPU low 354c. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1793417272732-f3f89f",
-      "ts": "2026-10-31T03:27:52Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): worst -234.17 vs floor -172.42. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793417535620-33d37f",
       "ts": "2026-10-31T03:32:15Z",
@@ -5072,6 +5064,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 133 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793470324396-7503e7",
+      "ts": "2026-10-31T18:12:04Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=14745. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793470324397-55ecb2",
+      "ts": "2026-10-31T18:12:04Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=14745. Check the command center.",
       "severity": "warn"
     }
   ]
