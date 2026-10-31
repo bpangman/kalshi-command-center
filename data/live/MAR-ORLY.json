@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T15:08:30.037564Z",
+  "generated_at": "2026-10-31T15:09:54.498979Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -87,12 +87,12 @@
         "exposure": 240.86,
         "exposure_text": "+$241",
         "move": "Hold price at 7c",
-        "when": "next cent is under the crowd price (6.4c)",
+        "when": "crowd pays 7.4c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T13:01:49Z",
-        "lag_note": "Price 7c is at its floor."
+        "lag_note": "Price 7c matches the crowd."
       },
       {
         "side": "Brent Crews",
@@ -101,7 +101,7 @@
         "exposure_text": "+$255",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T15:08:21Z",
+        "at": "2026-10-31T15:09:21Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -114,7 +114,7 @@
         "exposure_text": "+$487",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T15:08:21Z",
+        "at": "2026-10-31T15:09:21Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T01:38:08Z",
@@ -255,19 +255,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T15:08:21Z"
+    "ts": "2026-10-31T15:09:21Z"
   },
   "posts": [
-    {
-      "id": "1793360740636-287295",
-      "ts": "2026-10-30T11:45:36Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (22 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793361647717-e54fb4",
       "ts": "2026-10-30T12:00:47Z",
@@ -3855,6 +3845,15 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793459386608-a60742",
+      "ts": "2026-10-31T15:09:46Z",
+      "book": "MAR-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on MAR-ORLY: 0 orders posted in 10 min while the market traded 30091 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
