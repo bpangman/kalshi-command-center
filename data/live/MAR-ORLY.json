@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:08:20.194151Z",
+  "generated_at": "2026-10-31T18:09:42.734193Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$187",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:07:37Z",
+        "at": "2026-10-31T18:09:38Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -86,12 +86,12 @@
         "exposure": 105.22,
         "exposure_text": "+$105",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 1:09pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-31T18:09:34Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-31T18:09:38Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:43:06Z",
-        "lag_note": "Steps to 9c if no fill by 1:09pm CT."
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Taylor Gray",
@@ -99,12 +99,12 @@
         "exposure": 263.67,
         "exposure_text": "+$264",
         "move": "Step price down 1c (11c to 10c)",
-        "when": "if no fill by 1:09pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-31T18:09:34Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-31T18:09:38Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:59:08Z",
-        "lag_note": "Steps to 10c if no fill by 1:09pm CT."
+        "lag_note": "Steps to 10c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -113,7 +113,7 @@
         "exposure_text": "+$491",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:07:37Z",
+        "at": "2026-10-31T18:09:38Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,416, 32,434 resting. Worst line -$190 (limit now -$64)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,416, 32,434 resting. Worst line -$190 (limit now -$62)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$64, worst line -$190, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$62, worst line -$190, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -254,7 +254,7 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:07:37Z"
+    "ts": "2026-10-31T18:09:38Z"
   },
   "posts": [
     {
@@ -4175,15 +4175,6 @@
   ],
   "audits": [
     {
-      "id": "1793415691255-b0b4e8",
-      "ts": "2026-10-31T03:01:31Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): loop_exceptions=2. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1793416376418-36432c",
       "ts": "2026-10-31T03:12:56Z",
       "book": "MAR-ORLY",
@@ -5072,6 +5063,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Corey Day (+34%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793470154544-0e8060",
+      "ts": "2026-10-31T18:09:14Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Justin Allgaier has had no resting orders for at least 133 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
