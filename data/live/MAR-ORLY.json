@@ -1,19 +1,19 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T20:41:42.378971Z",
+  "generated_at": "2026-10-31T20:43:18.695030Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line $0.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 15,124, 0 resting. Worst line $0. Race 13% done. Floor protocol off."
+          "In race (Ingame). Sold 15,124, 0 resting. Worst line $0. Race 15% done. Floor protocol off. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T20:40:55Z"
+    "ts": "2026-10-31T20:42:56Z"
   },
   "posts": [
-    {
-      "id": "1793451727600-f7d641",
-      "ts": "2026-10-31T13:00:04Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 11: Carson Kvapil x11 at 15c. Worst line -$340.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 11.0,
-        "fills": [
-          {
-            "side": "Carson Kvapil",
-            "price": 0.15,
-            "qty": 11.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793451727604-0372a4",
       "ts": "2026-10-31T13:02:07Z",
@@ -4139,18 +4119,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793479316314-4e0988",
+      "ts": "2026-10-31T20:41:56Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line $0.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1793435821302-b5f7ea",
-      "ts": "2026-10-31T08:37:01Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 27 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 355c, KXNASCARRACE-NATI26-JOGA low 357c, KXNASCARRACE-NATI26-JEBU low 355c, KXNASCARRACE-NATI26-RYEL low 355c, KXNASCARRACE-NATI26-BRJO low 334c, KXNASCARRACE-NATI26-AUHI low 410c, KXNASCARRACE-NATI26-BRPO low 357c, KXNASCARRACE-NATI26-GASM low 357c, KXNASCARRACE-NATI26-SHCR low 339c, KXNASCARRACE-NATI26-JOBI low 357c, KXNASCARRACE-NATI26-PAEM low 357c, KXNASCARRACE-NATI26-DACR low 357c, KXNASCARRACE-NATI26-ANAL low 360c, KXNASCARRACE-NATI26-SAMA low 349c, KXNASCARRACE-NATI26-CAWA low 357c, KXNASCARRACE-NATI26-BLPE low 357c, KXNASCARRACE-NATI26-KYSI low 357c, KXNASCARRACE-NATI26-MAMA low 357c, KXNASCARRACE-NATI26-DADY low 355c, KXNASCARRACE-NATI26-WISA low 290c, KXNASCARRACE-NATI26-JELO low 308c, KXNASCARRACE-NATI26-BALE low 357c, KXNASCARRACE-NATI26-CODA low 208c, KXNASCARRACE-NATI26-BRCR low 380c, KXNASCARRACE-NATI26-PAST low 357c, KXNASCARRACE-NATI26-LASC low 357c, KXNASCARRACE-NATI26-LEPU low 369c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793435963312-116294",
       "ts": "2026-10-31T08:39:23Z",
@@ -5040,6 +5021,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Shock on Brent Crews: pulled every in-game order, pausing 120s\nIf the race ends... you make\nBrandon Jones: +0\nWilliam Sawalich: +28\nSam Mayer: +36\nBrent Crews: +38\nCarson Kvapil: +41\nJustin Allgaier: +41\nCorey Day: +75\nTaylor Gray: +77\nall others (30) >= +126",
+      "severity": "warn"
+    },
+    {
+      "id": "1793479383096-98b756",
+      "ts": "2026-10-31T20:43:03Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Brandon Jones has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: MAR-ORLY - Brent Crews is posting again.\nBack: MAR-ORLY - Corey Day is posting again.",
       "severity": "warn"
     }
   ]
