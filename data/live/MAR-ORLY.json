@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T16:39:21.292197Z",
+  "generated_at": "2026-10-31T16:40:43.395169Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -99,7 +99,7 @@
         "exposure_text": "+$416",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T16:38:57Z",
+        "at": "2026-10-31T16:39:57Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 7,168, 30,910 resting. Worst line -$286 (limit now -$194)."
+          "Risk glide, green flag 3:00pm CT. Sold 7,168, 30,910 resting. Worst line -$286 (limit now -$192)."
         ]
       },
       {
@@ -148,7 +148,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Carson Kvapil, Justin Allgaier: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit -$194, worst line -$286, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$192, worst line -$286, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -253,43 +253,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 27 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T16:38:57Z"
+    "ts": "2026-10-31T16:39:57Z"
   },
   "posts": [
-    {
-      "id": "1793386390244-10036d",
-      "ts": "2026-10-30T18:50:52Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 200: Brent Crews x200 at 10c. Worst line -$196.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 200.0,
-        "fills": [
-          {
-            "side": "Brent Crews",
-            "price": 0.1,
-            "qty": 200.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1793386390244-303cde",
-      "ts": "2026-10-30T18:50:57Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 1,170 (launch ladder): Jesse Love x36 at 11c, Taylor Gray x36 at 12c, +34 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 1170.0,
-        "rows": 36
-      }
-    },
     {
       "id": "1793386551464-bf6382",
       "ts": "2026-10-30T18:55:35Z",
@@ -4081,27 +4047,43 @@
       "text": "Risk glide: limit -$193, worst line -$286. post gate Sammy Smith 183@0.12 -> 0 (race_principles; a full fill would take his",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793464797856-61576a",
+      "ts": "2026-10-31T16:37:55Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 134: Sam Mayer x134 at 7c. Worst line -$286.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 134.0,
+        "fills": [
+          {
+            "side": "Sam Mayer",
+            "price": 0.07,
+            "qty": 134.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793464797856-0b5393",
+      "ts": "2026-10-31T16:37:57Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 370 (race expand): Daniel Dye x53 at 2c, Ryan Ellis x53 at 2c, +6 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 370.0,
+        "rows": 8
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793407773952-4563f4",
-      "ts": "2026-10-31T00:49:33Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
-      "id": "1793408780325-9582e4",
-      "ts": "2026-10-31T01:06:20Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 22 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 440c, KXNASCARRACE-NATI26-JOGA low 440c, KXNASCARRACE-NATI26-JEBU low 440c, KXNASCARRACE-NATI26-RYEL low 440c, KXNASCARRACE-NATI26-AUHI high 505c, KXNASCARRACE-NATI26-BRPO low 440c, KXNASCARRACE-NATI26-GASM low 440c, KXNASCARRACE-NATI26-SHCR low 412c, KXNASCARRACE-NATI26-JOBI low 440c, KXNASCARRACE-NATI26-PAEM low 440c, KXNASCARRACE-NATI26-DACR low 440c, KXNASCARRACE-NATI26-CAWA low 440c, KXNASCARRACE-NATI26-BLPE low 440c, KXNASCARRACE-NATI26-KYSI low 440c, KXNASCARRACE-NATI26-RACA low 210c, KXNASCARRACE-NATI26-MAMA low 440c, KXNASCARRACE-NATI26-DADY low 440c, KXNASCARRACE-NATI26-BALE low 440c, KXNASCARRACE-NATI26-CODA high 423c, KXNASCARRACE-NATI26-PAST low 440c, KXNASCARRACE-NATI26-LASC low 440c, KXNASCARRACE-NATI26-LEPU high 505c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793409270056-7d3120",
       "ts": "2026-10-31T01:14:30Z",
@@ -4983,6 +4965,24 @@
       "source": "bot",
       "text": "+29 on Sammy Smith @ 0.12 (maker)\n+159 on Carson Kvapil @ 0.15 (maker)\n+90 on Carson Kvapil @ 0.16 (maker)\n+104 on William Sawalich @ 0.06 (maker)\n+179 on Justin Allgaier @ 0.22 (maker)\n+26 on Carson Kvapil @ 0.17 (maker)\n+99 on Sam Mayer @ 0.07 (maker)\n+145 on Austin Hill @ 0.02 (maker)\n+187 on Austin Hill @ 0.04 (maker)\n+98 on Austin Hill @ 0.05 (maker)\nworst outcome now -295\nIf the race ends... you make\nJustin Allgaier: -295\nCarson Kvapil: -289\nWilliam Sawalich: -151\nSammy Smith: -54\nSam Mayer: -15\nRajah Caruth: +43\nTaylor Gray: +159\nAustin Hill: +301\nall others (30) >= +349",
       "severity": "warn"
+    },
+    {
+      "id": "1793464777856-af3588",
+      "ts": "2026-10-31T16:39:37Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): 10 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-BRJO low 216c, KXNASCARRACE-NATI26-HABU low 201c, KXNASCARRACE-NATI26-SHCR low 205c, KXNASCARRACE-NATI26-ANAL low 202c, KXNASCARRACE-NATI26-SAMA low 62c, KXNASCARRACE-NATI26-RACA low 183c, KXNASCARRACE-NATI26-SASM low 141c, KXNASCARRACE-NATI26-JELO low 195c, KXNASCARRACE-NATI26-CODA low 160c, KXNASCARRACE-NATI26-BRCR low 210c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793464777857-315b42",
+      "ts": "2026-10-31T16:39:37Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): worst -285.64 vs floor -172.42. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
