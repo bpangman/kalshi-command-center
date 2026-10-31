@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T20:23:41.729810Z",
+  "generated_at": "2026-10-31T20:25:06.894798Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
@@ -48,12 +48,12 @@
         "exposure": 63.87,
         "exposure_text": "+$64",
         "move": "Step price down 1c (9c to 8c)",
-        "when": "if no fill by 3:25pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T20:25:40Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T20:12:52Z",
-        "lag_note": "Steps to 8c if no fill by 3:25pm CT."
+        "lag_note": "Steps to 8c at the next check."
       },
       {
         "side": "Corey Day",
@@ -74,12 +74,12 @@
         "exposure": 92.93,
         "exposure_text": "+$93",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 3:25pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T20:25:40Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T20:12:52Z",
-        "lag_note": "Steps to 11c if no fill by 3:25pm CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "Sammy Smith",
@@ -87,11 +87,11 @@
         "exposure": 392.93,
         "exposure_text": "+$393",
         "move": "Step price down 1c (12c to 11c)",
-        "when": "if no fill by 3:25pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T20:25:40Z",
         "stuck": false,
         "last_fill": "2026-10-31T20:04:35Z",
-        "lag_note": "Steps to 11c if no fill by 3:25pm CT."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "Brandon Jones",
@@ -99,11 +99,11 @@
         "exposure": 1085.93,
         "exposure_text": "+$1,086",
         "move": "Step price down 1c (7c to 6c)",
-        "when": "if no fill by 3:24pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-10-31T20:24:38Z",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-31T20:24:48Z",
         "stuck": false,
         "last_fill": "2026-10-31T19:40:37Z",
-        "lag_note": "Steps to 6c if no fill by 3:24pm CT."
+        "lag_note": "Steps to 6c at the next check."
       },
       {
         "side": "Lee Pulliam",
@@ -127,8 +127,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Brandon Jones, Brent Crews, Corey Day, Sam Mayer, Sammy Smith, Taylor Gray.",
-          "Brandon Jones: 1,151 behind. Steps to 6c if no fill by 3:24pm CT.",
-          "Sammy Smith: 458 behind. Steps to 11c if no fill by 3:25pm CT.",
+          "Brandon Jones: 1,151 behind. Steps to 6c at the next check.",
+          "Sammy Smith: 458 behind. Steps to 11c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -234,33 +234,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T20:22:47Z"
+    "ts": "2026-10-31T20:24:48Z"
   },
   "posts": [
-    {
-      "id": "1793442658083-afb385",
-      "ts": "2026-10-31T10:28:47Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 90 (race glide fill): Brent Crews x15 at 8c, Corey Day x15 at 7c, +4 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 90.0,
-        "rows": 6
-      }
-    },
-    {
-      "id": "1793443443756-da09a2",
-      "ts": "2026-10-31T10:44:03Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 25,181 resting. Next: Risk glide starts, 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793443844324-320e9f",
       "ts": "2026-10-31T10:50:44Z",
@@ -4279,18 +4255,32 @@
       "text": "Risk glide: limit +$100, worst line -$65. post gate Sammy Smith 183@0.12 -> 0 (race_principles; a full fill would take his",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793478228512-4ad091",
+      "ts": "2026-10-31T20:21:31Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 85 (race glide fill): Corey Day x85 at 7c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 85.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1793478268729-10f6bc",
+      "ts": "2026-10-31T20:24:28Z",
+      "book": "MAR-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nCarson Kvapil: -65\nJustin Allgaier: -65\nSheldon Creed: +20\nBrent Crews: +64\nCorey Day: +71\nTaylor Gray: +93\nJesse Love: +195\nRajah Caruth: +197\nall others (30) >= +199\nCollected $1248 premium ($26 fees) | Paper margin over fair $283 (not realized until settlement)\nEvent: Carson Kvapil: pre-race; Rajah Caruth: pre-race\nCore posted book 0.91 | Worst now -65 | Cash free $4382\nAnchor age 82s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793430020087-8e8351",
-      "ts": "2026-10-31T07:00:20Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 27 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 355c, KXNASCARRACE-NATI26-JOGA low 357c, KXNASCARRACE-NATI26-JEBU low 355c, KXNASCARRACE-NATI26-RYEL low 355c, KXNASCARRACE-NATI26-BRJO low 387c, KXNASCARRACE-NATI26-AUHI low 400c, KXNASCARRACE-NATI26-BRPO low 357c, KXNASCARRACE-NATI26-GASM low 357c, KXNASCARRACE-NATI26-SHCR low 329c, KXNASCARRACE-NATI26-JOBI low 357c, KXNASCARRACE-NATI26-PAEM low 357c, KXNASCARRACE-NATI26-DACR low 357c, KXNASCARRACE-NATI26-ANAL low 360c, KXNASCARRACE-NATI26-SAMA low 400c, KXNASCARRACE-NATI26-CAWA low 388c, KXNASCARRACE-NATI26-BLPE low 357c, KXNASCARRACE-NATI26-KYSI low 357c, KXNASCARRACE-NATI26-MAMA low 388c, KXNASCARRACE-NATI26-DADY low 355c, KXNASCARRACE-NATI26-WISA low 290c, KXNASCARRACE-NATI26-JELO low 308c, KXNASCARRACE-NATI26-BALE low 388c, KXNASCARRACE-NATI26-CODA low 198c, KXNASCARRACE-NATI26-BRCR low 422c, KXNASCARRACE-NATI26-PAST low 357c, KXNASCARRACE-NATI26-LASC low 388c, KXNASCARRACE-NATI26-LEPU low 369c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793430565585-5a96ef",
       "ts": "2026-10-31T07:09:25Z",
@@ -5180,6 +5170,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - Sheldon Creed has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793478256584-4da130",
+      "ts": "2026-10-31T20:24:16Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-ORLY): 4 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-AUHI high 130c, KXNASCARRACE-NATI26-HABU low 391c, KXNASCARRACE-NATI26-ANAL low 347c, KXNASCARRACE-NATI26-SAMA low 261c. Check the command center.",
       "severity": "warn"
     }
   ]
