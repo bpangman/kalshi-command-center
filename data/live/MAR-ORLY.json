@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T17:59:30.571925Z",
+  "generated_at": "2026-10-31T18:01:01.711416Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$188",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T17:58:31Z",
+        "at": "2026-10-31T18:00:34Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -86,25 +86,25 @@
         "exposure": 104.52,
         "exposure_text": "+$105",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T17:58:50Z",
+        "when": "if no fill by 1:04pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T18:04:03Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:43:06Z",
-        "lag_note": "Steps to 9c at the next check."
+        "lag_note": "Steps to 9c if no fill by 1:04pm CT."
       },
       {
         "side": "Taylor Gray",
         "resting": "488 @ 11-13c",
         "exposure": 262.97,
         "exposure_text": "+$263",
-        "move": "Hold price at 11c",
-        "when": "crowd pays 10.6c; steps down 1c only if it trades lower",
-        "at": null,
+        "move": "Even-up: lowest row moved toward fair",
+        "when": "starts 3:00pm CT",
+        "at": "2026-10-31T20:00:00Z",
         "stuck": false,
-        "also": "Also: even-up 3:00pm CT",
+        "also": "Also: price step",
         "last_fill": "2026-10-31T04:59:08Z",
-        "lag_note": "Price 11c matches the crowd."
+        "lag_note": "Price 11c is at its floor."
       },
       {
         "side": "Brent Crews",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,406, 32,502 resting. Worst line -$191 (limit now -$77)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,406, 32,502 resting. Worst line -$191 (limit now -$76)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$77, worst line -$191, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$76, worst line -$191, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -254,39 +254,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T17:58:31Z"
+    "ts": "2026-10-31T18:00:34Z"
   },
   "posts": [
-    {
-      "id": "1793403909698-226764",
-      "ts": "2026-10-30T23:42:51Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 2: Rajah Caruth x2 at 4c. Worst line -$145.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 2.0,
-        "fills": [
-          {
-            "side": "Rajah Caruth",
-            "price": 0.04,
-            "qty": 2.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1793404191034-7eff4b",
-      "ts": "2026-10-30T23:49:51Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$145, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793404251249-28559a",
       "ts": "2026-10-30T23:50:51Z",
@@ -4172,6 +4142,26 @@
         "contracts": 100.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1793469594312-45d75e",
+      "ts": "2026-10-31T17:59:54Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$76, worst line -$191. post gate Carson Kvapil 179@0.15 -> 0 (race_principles; a full fill would take h",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1793469654881-f8872d",
+      "ts": "2026-10-31T18:00:44Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$191. Lagging: Taylor Gray, Brandon Jones, Sheldon Creed +more.",
+      "severity": "info",
+      "title": "Checkpoint"
     }
   ],
   "audits": [
