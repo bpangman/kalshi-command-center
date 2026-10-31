@@ -1,12 +1,12 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T05:37:47.410123Z",
+  "generated_at": "2026-10-31T05:39:08.611218Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 3:00pm CT. Worst line -$264, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
     "checks_every_s": 30,
     "moves": [
       {
@@ -64,7 +64,7 @@
         "exposure_text": "+$137",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T05:37:00Z",
+        "at": "2026-10-31T05:39:01Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -103,7 +103,7 @@
         "exposure_text": "+$462",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T05:37:00Z",
+        "at": "2026-10-31T05:39:01Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "lag_note": "Steps to 8c at the next check."
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 3:00pm CT. Sold 4,016, 23,641 resting. Worst line -$264 (limit now -$250). Bot logged 2 loop errors."
+          "Pre-race growth, green flag 3:00pm CT. Sold 4,016, 23,641 resting. Worst line -$264 (limit now -$250)."
         ]
       },
       {
@@ -253,19 +253,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T05:37:00Z"
+    "ts": "2026-10-31T05:39:01Z"
   },
   "posts": [
-    {
-      "id": "1793309874149-2cfd10",
-      "ts": "2026-10-29T21:37:54Z",
-      "book": "MAR-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 3:00pm CT. Worst line -$215, final target +$100. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793309934555-ce957d",
       "ts": "2026-10-29T21:38:54Z",
@@ -3617,18 +3607,19 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1793425081236-670dc5",
+      "ts": "2026-10-31T05:38:01Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$264, final target +$100. Next: Risk glide starts, 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793366487953-ac4324",
-      "ts": "2026-10-30T13:21:27Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 21 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 351c, KXNASCARRACE-NATI26-JOGA low 351c, KXNASCARRACE-NATI26-JEBU low 351c, KXNASCARRACE-NATI26-RYEL low 351c, KXNASCARRACE-NATI26-BRJO high 385c, KXNASCARRACE-NATI26-AUHI high 372c, KXNASCARRACE-NATI26-BRPO low 351c, KXNASCARRACE-NATI26-GASM low 351c, KXNASCARRACE-NATI26-JOBI low 351c, KXNASCARRACE-NATI26-PAEM low 351c, KXNASCARRACE-NATI26-DACR low 351c, KXNASCARRACE-NATI26-CAWA low 351c, KXNASCARRACE-NATI26-BLPE low 351c, KXNASCARRACE-NATI26-KYSI low 351c, KXNASCARRACE-NATI26-MAMA low 351c, KXNASCARRACE-NATI26-DADY low 351c, KXNASCARRACE-NATI26-JELO high 389c, KXNASCARRACE-NATI26-BALE low 351c, KXNASCARRACE-NATI26-PAST low 351c, KXNASCARRACE-NATI26-LASC low 351c, KXNASCARRACE-NATI26-LEPU high 376c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793366874867-484539",
       "ts": "2026-10-30T13:27:54Z",
@@ -4519,6 +4510,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-ORLY): worst -264.18 vs floor -172.42. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793425071708-a672a3",
+      "ts": "2026-10-31T05:37:51Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
