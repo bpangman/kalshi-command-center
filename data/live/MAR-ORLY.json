@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T18:40:09.259283Z",
+  "generated_at": "2026-10-31T18:41:34.838031Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$160",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (95% of the offered has sold)",
-        "at": "2026-10-31T18:39:53Z",
+        "at": "2026-10-31T18:40:53Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T18:17:11Z"
@@ -40,7 +40,7 @@
         "exposure_text": "-$158",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T18:39:53Z",
+        "at": "2026-10-31T18:40:53Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -64,7 +64,7 @@
         "exposure_text": "-$142",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (92% of the offered has sold)",
-        "at": "2026-10-31T18:39:53Z",
+        "at": "2026-10-31T18:40:53Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T18:30:42Z"
@@ -97,12 +97,12 @@
         "exposure": 292.67,
         "exposure_text": "+$293",
         "move": "Step price down 1c (11c to 10c)",
-        "when": "if no fill by 1:41pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T18:41:45Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T04:59:08Z",
-        "lag_note": "Steps to 10c if no fill by 1:41pm CT."
+        "lag_note": "Steps to 10c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -111,7 +111,7 @@
         "exposure_text": "+$520",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T18:39:53Z",
+        "at": "2026-10-31T18:40:53Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:52:20Z",
@@ -122,7 +122,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,751, 33,425 resting. Worst line -$161 (limit now -$18)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,751, 33,425 resting. Worst line -$161 (limit now -$16)."
         ]
       },
       {
@@ -147,7 +147,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$18, worst line -$161, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$16, worst line -$161, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -252,7 +252,7 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T18:39:53Z"
+    "ts": "2026-10-31T18:40:53Z"
   },
   "posts": [
     {
@@ -4208,15 +4208,6 @@
   ],
   "audits": [
     {
-      "id": "1793421162459-4a32e8",
-      "ts": "2026-10-31T04:32:42Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): loop_exceptions=2. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1793422151782-5d70b6",
       "ts": "2026-10-31T04:49:11Z",
       "book": "MAR-ORLY",
@@ -5105,6 +5096,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+55 on Corey Day @ 0.08 (maker)\n+152 on Corey Day @ 0.09 (maker)\n+36 on Sam Mayer @ 0.04 (maker)\n+14 on Sam Mayer @ 0.07 (maker)\n+224 on Jesse Love @ 0.10 (maker)\n+40 on Corey Day @ 0.10 (maker)\n+27 on Austin Hill @ 0.04 (maker)\n+63 on Austin Hill @ 0.07 (maker)\n+21 on Brent Crews @ 0.07 (maker)\n+10 on Rajah Caruth @ 0.07 (maker)\n+97 on Rajah Caruth @ 0.08 (maker)\n+41 on Sam Mayer @ 0.08 (maker)\n+36 on Jesse Love @ 0.09 (maker)\nworst outcome now -161\nIf the race ends... you make\nJustin Allgaier: -161\nRajah Caruth: -160\nWilliam Sawalich: -158\nCarson Kvapil: -155\nSam Mayer: -142\nSammy Smith: +55\nCorey Day: +72\nTaylor Gray: +293\nall others (30) >= +345",
+      "severity": "warn"
+    },
+    {
+      "id": "1793472014784-74fc94",
+      "ts": "2026-10-31T18:40:14Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-ORLY - William Sawalich has had no resting orders for at least 72 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
