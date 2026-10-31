@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T17:53:41.935989Z",
+  "generated_at": "2026-10-31T17:55:03.949450Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$188",
         "move": "Next wave up to 750 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-10-31T17:53:28Z",
+        "at": "2026-10-31T17:54:29Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-10-31T17:31:41Z"
@@ -85,12 +85,12 @@
         "exposure": 104.52,
         "exposure_text": "+$105",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T17:53:28Z",
+        "when": "if no fill by 12:58pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-10-31T17:58:50Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T17:43:06Z",
-        "lag_note": "Steps to 9c at the next check."
+        "lag_note": "Steps to 9c if no fill by 12:58pm CT."
       },
       {
         "side": "Taylor Gray",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 3:00pm CT. Sold 8,406, 32,502 resting. Worst line -$191 (limit now -$85)."
+          "Risk glide, green flag 3:00pm CT. Sold 8,406, 32,502 resting. Worst line -$191 (limit now -$83)."
         ]
       },
       {
@@ -148,7 +148,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit -$85, worst line -$191, final +$100 at 3:00pm CT.",
+          "Glide is running: limit -$83, worst line -$191, final +$100 at 3:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 1:30pm CT.",
           "Even-up from 3:00pm CT, last-resort take from 2:40pm CT, green flag 3:00pm CT."
         ]
@@ -253,38 +253,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T17:53:28Z"
+    "ts": "2026-10-31T17:54:29Z"
   },
   "posts": [
-    {
-      "id": "1793403144556-5963b3",
-      "ts": "2026-10-30T23:32:05Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (24 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793403205054-c01ed8",
-      "ts": "2026-10-30T23:33:09Z",
-      "book": "MAR-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Pricing note: no sportsbook anchor (source=kalshi); laying nothing new until Bovada/FanDuel is back, resting left alone",
-      "severity": "warn",
-      "title": "Pricing source"
-    },
-    {
-      "id": "1793403822002-f1009a",
-      "ts": "2026-10-30T23:43:42Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJustin Allgaier: -145\nTaylor Gray: -145\nSammy Smith: -145\nCarson Kvapil: -145\nWilliam Sawalich: -98\nBrent Crews: +36\nRajah Caruth: +233\nSheldon Creed: +267\nall others (30) >= +278\nCollected $366 premium ($5 fees) | Paper margin over fair $107 (not realized until settlement)\nCore posted book 1.02 | Worst now -145 | Cash free $4354\nAnchor age 209s (source: kalshi)",
-      "severity": "info"
-    },
     {
       "id": "1793403909698-226764",
       "ts": "2026-10-30T23:42:51Z",
@@ -4151,6 +4122,55 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nJustin Allgaier: -191\nWilliam Sawalich: -188\nCarson Kvapil: -185\nSam Mayer: -131\nRajah Caruth: -83\nSammy Smith: +25\nCorey Day: +105\nTaylor Gray: +263\nall others (30) >= +315\nCollected $848 premium ($13 fees) | Paper margin over fair $200 (not realized until settlement)\nCore posted book 1.11 | Worst now -191 | Cash free $4348\nAnchor age 147s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1793469269327-e324e3",
+      "ts": "2026-10-31T17:54:22Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$83, worst line -$191. post gate Carson Kvapil 179@0.15 -> 0 (race_principles; a full fill would take h",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1793469269329-aee6f6",
+      "ts": "2026-10-31T17:52:20Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 52: Jesse Love x31 at 10c, Brent Crews x21 at 7c. Worst line -$191.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 52.0,
+        "fills": [
+          {
+            "side": "Jesse Love",
+            "price": 0.1,
+            "qty": 31.0
+          },
+          {
+            "side": "Brent Crews",
+            "price": 0.07,
+            "qty": 21.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793469269329-1cff7f",
+      "ts": "2026-10-31T17:52:21Z",
+      "book": "MAR-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 100 (race clip): Jesse Love x100 at 10c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 100.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
