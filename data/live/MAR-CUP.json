@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-10-31T16:27:48.194555Z",
+  "generated_at": "2026-10-31T16:29:13.144709Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -100,12 +100,12 @@
         "exposure": 546.95,
         "exposure_text": "+$547",
         "move": "Step price down 1c (10c to 9c)",
-        "when": "if no fill by 11:30am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-10-31T16:30:09Z",
         "stuck": false,
         "also": "Also: even-up Sun 1:00pm CT",
         "last_fill": "2026-10-31T16:20:09Z",
-        "lag_note": "Steps to 9c if no fill by 11:30am CT."
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "Christopher Bell",
@@ -255,7 +255,7 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 25 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-10-31T16:26:52Z"
+    "ts": "2026-10-31T16:28:53Z"
   },
   "posts": [
     {
@@ -3287,24 +3287,6 @@
   ],
   "audits": [
     {
-      "id": "1793391010195-7131b9",
-      "ts": "2026-10-30T20:10:10Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -563.44 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1793392986859-6a316d",
-      "ts": "2026-10-30T20:43:06Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): 21 ladder(s) stale 10+ min: KXNASCARRACE-XFIN26-AJAL low 1222c, KXNASCARRACE-XFIN26-MIMC low 1222c, KXNASCARRACE-XFIN26-AUDI low 1222c, KXNASCARRACE-XFIN26-RIST low 1222c, KXNASCARRACE-XFIN26-TYDI low 1222c, KXNASCARRACE-XFIN26-ERJO low 1222c, KXNASCARRACE-XFIN26-TYRE high 226c, KXNASCARRACE-XFIN26-RYPR low 1246c, KXNASCARRACE-XFIN26-JONE low 1222c, KXNASCARRACE-XFIN26-COCU low 1222c, KXNASCARRACE-XFIN26-DASU low 1222c, KXNASCARRACE-XFIN26-JOBE low 129c, KXNASCARRACE-XFIN26-COWA low 1222c, KXNASCARRACE-XFIN26-AUHI low 1222c, KXNASCARRACE-XFIN26-AUCI low 246c, KXNASCARRACE-XFIN26-JOBI low 1401c, KXNASCARRACE-XFIN26-NOGR low 1222c, KXNASCARRACE-XFIN26-TOGI low 1222c, KXNASCARRACE-XFIN26-RIHE low 1222c, KXNASCARRACE-XFIN26-ZASM low 1222c, KXNASCARRACE-XFIN26-COZI low 1120c. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1793392986860-050f3f",
       "ts": "2026-10-30T20:43:06Z",
       "book": "MAR-CUP",
@@ -4185,6 +4167,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Ryan Blaney has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1793464076899-b74c13",
+      "ts": "2026-10-31T16:27:56Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-CUP): 27 ladder(s) stale 10+ min: KXNASCARRACE-XFIN26-AJAL low 187c, KXNASCARRACE-XFIN26-DEHA low 187c, KXNASCARRACE-XFIN26-MIMC low 187c, KXNASCARRACE-XFIN26-AUDI low 187c, KXNASCARRACE-XFIN26-RIST low 187c, KXNASCARRACE-XFIN26-TYDI low 187c, KXNASCARRACE-XFIN26-CHEL low 129c, KXNASCARRACE-XFIN26-ERJO low 187c, KXNASCARRACE-XFIN26-TYRE high 197c, KXNASCARRACE-XFIN26-RYPR low 191c, KXNASCARRACE-XFIN26-JONE low 187c, KXNASCARRACE-XFIN26-COCU low 187c, KXNASCARRACE-XFIN26-DASU low 187c, KXNASCARRACE-XFIN26-JOBE low 143c, KXNASCARRACE-XFIN26-COWA low 187c, KXNASCARRACE-XFIN26-AUHI low 187c, KXNASCARRACE-XFIN26-CHBE low 238c, KXNASCARRACE-XFIN26-AUCI low 191c, KXNASCARRACE-XFIN26-WIBY low 225c, KXNASCARRACE-XFIN26-JOBI high 188c, KXNASCARRACE-XFIN26-NOGR low 187c, KXNASCARRACE-XFIN26-CHBR low 238c, KXNASCARRACE-XFIN26-TOGI low 187c, KXNASCARRACE-XFIN26-RIHE low 187c, KXNASCARRACE-XFIN26-ZASM low 187c, KXNASCARRACE-XFIN26-TYGI low 116c, KXNASCARRACE-XFIN26-COZI low 187c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793464076899-37dbe0",
+      "ts": "2026-10-31T16:27:56Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-CUP): worst -703.76 vs floor -369.16. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
