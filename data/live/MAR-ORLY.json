@@ -1,13 +1,13 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T07:44:13.170579Z",
+  "generated_at": "2026-10-31T07:46:03.257502Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 3:00pm CT. Worst line -$326, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 52,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -77,7 +77,7 @@
         "exposure_text": "+$209",
         "move": "Step price down 1c (9c to 8c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T07:43:50Z",
+        "at": "2026-10-31T07:45:51Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T06:14:11Z",
@@ -88,13 +88,13 @@
         "resting": "638 @ 7-10c",
         "exposure": 388.23,
         "exposure_text": "+$388",
-        "move": "Hold price at 7c",
-        "when": "needs 50+ crowd trades under 7c (now 39)",
-        "at": null,
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-10-31T07:45:51Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T01:38:08Z",
-        "lag_note": "Crowd is quiet here (39 traded)."
+        "lag_note": "Steps to 6c at the next check."
       },
       {
         "side": "Brandon Jones",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 3:00pm CT. Sold 4,125, 24,982 resting. Worst line -$326 (limit now -$250)."
+          "Pre-race growth, green flag 3:00pm CT. Sold 4,125, 24,982 resting. Worst line -$326 (limit now -$250). Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -131,7 +131,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Austin Hill, Brandon Jones, Brent Crews, Corey Day, Sam Mayer, Sheldon Creed.",
           "Brandon Jones: 807 behind. No crowd trade data yet.",
-          "Sheldon Creed: 714 behind. Crowd is quiet here (39 traded).",
+          "Sheldon Creed: 714 behind. Steps to 6c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -253,19 +253,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T07:43:50Z"
+    "ts": "2026-10-31T07:45:51Z"
   },
   "posts": [
-    {
-      "id": "1793319484207-b2030b",
-      "ts": "2026-10-30T00:18:04Z",
-      "book": "MAR-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 12,583 resting. Next: Risk glide starts, Sat 11:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793319846401-e98a41",
       "ts": "2026-10-30T00:23:54Z",
@@ -3649,6 +3639,16 @@
       "text": "Kalshi rate-limited the bot (5 errors). It retries next loop.",
       "severity": "info",
       "title": "Rate limit"
+    },
+    {
+      "id": "1793432751782-4ec853",
+      "ts": "2026-10-31T07:45:51Z",
+      "book": "MAR-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 3:00pm CT. Worst line -$326, final target +$100. Next: Risk glide starts, 11:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
