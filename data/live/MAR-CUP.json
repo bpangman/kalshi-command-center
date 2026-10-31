@@ -1,13 +1,13 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-10-31T17:50:27.649113Z",
+  "generated_at": "2026-10-31T17:52:18.219769Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$499, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 48,
     "moves": [
       {
         "side": "Chase Elliott",
@@ -120,7 +120,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 1:00pm CT. Sold 13,529, 46,892 resting. Worst line -$499."
+          "Pre-race growth, green flag Sun 1:00pm CT. Sold 13,529, 46,892 resting. Worst line -$499. Bot is slow (checks every 48s, set for 30s)."
         ]
       },
       {
@@ -247,29 +247,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-10-31T17:50:27Z"
+    "ts": "2026-10-31T17:51:27Z"
   },
   "posts": [
-    {
-      "id": "1793361889645-368488",
-      "ts": "2026-10-30T12:04:49Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 39,259 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793362010461-135b52",
-      "ts": "2026-10-30T12:06:47Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (8 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
     {
       "id": "1793362916717-3f0e51",
       "ts": "2026-10-30T12:21:56Z",
@@ -3416,18 +3396,49 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793469067856-16583e",
+      "ts": "2026-10-31T17:50:22Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 292: Josh Berry x149 at 4c, Josh Berry x112 at 5c, Denny Hamlin x31 at 18c. Worst line -$499.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 292.0,
+        "fills": [
+          {
+            "side": "Josh Berry",
+            "price": 0.04,
+            "qty": 149.0
+          },
+          {
+            "side": "Josh Berry",
+            "price": 0.05,
+            "qty": 112.0
+          },
+          {
+            "side": "Denny Hamlin",
+            "price": 0.18,
+            "qty": 31.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793469087970-df6ca1",
+      "ts": "2026-10-31T17:51:27Z",
+      "book": "MAR-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$499, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793400748361-3d5f69",
-      "ts": "2026-10-30T22:52:28Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): 21 ladder(s) stale 10+ min: KXNASCARRACE-XFIN26-AJAL low 1222c, KXNASCARRACE-XFIN26-MIMC low 1222c, KXNASCARRACE-XFIN26-AUDI low 1222c, KXNASCARRACE-XFIN26-RIST low 1222c, KXNASCARRACE-XFIN26-TYDI low 1222c, KXNASCARRACE-XFIN26-ERJO low 1222c, KXNASCARRACE-XFIN26-TYRE high 226c, KXNASCARRACE-XFIN26-RYPR low 1246c, KXNASCARRACE-XFIN26-JONE low 1222c, KXNASCARRACE-XFIN26-COCU low 1222c, KXNASCARRACE-XFIN26-DASU low 1222c, KXNASCARRACE-XFIN26-JOBE low 129c, KXNASCARRACE-XFIN26-COWA low 1222c, KXNASCARRACE-XFIN26-AUHI low 1222c, KXNASCARRACE-XFIN26-AUCI low 246c, KXNASCARRACE-XFIN26-JOBI low 1401c, KXNASCARRACE-XFIN26-NOGR low 1222c, KXNASCARRACE-XFIN26-TOGI low 1222c, KXNASCARRACE-XFIN26-RIHE low 1222c, KXNASCARRACE-XFIN26-ZASM low 1222c, KXNASCARRACE-XFIN26-COZI low 1120c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793400748362-408f72",
       "ts": "2026-10-30T22:52:28Z",
@@ -4317,6 +4328,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Austin Cindric has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793469078024-70ba48",
+      "ts": "2026-10-31T17:51:18Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Carson Hocevar (+25%)",
       "severity": "warn"
     }
   ]
