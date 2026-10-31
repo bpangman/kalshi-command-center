@@ -1,6 +1,6 @@
 {
   "key": "MAR-ORLY",
-  "generated_at": "2026-10-31T15:26:12.615452Z",
+  "generated_at": "2026-10-31T15:27:33.502612Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -100,12 +100,12 @@
         "exposure": 236.77,
         "exposure_text": "+$237",
         "move": "Hold price at 7c",
-        "when": "next cent is under the crowd price (6.4c)",
+        "when": "crowd pays 7.1c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-31T15:24:00Z",
-        "lag_note": "Price 7c is at its floor."
+        "lag_note": "Price 7c matches the crowd."
       },
       {
         "side": "Brent Crews",
@@ -114,7 +114,7 @@
         "exposure_text": "+$294",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-10-31T15:25:28Z",
+        "at": "2026-10-31T15:27:28Z",
         "stuck": false,
         "also": "Also: even-up 3:00pm CT",
         "last_fill": "2026-10-30T18:50:51Z",
@@ -255,7 +255,7 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 26 other drivers: nothing sold, no exposure.",
     "book": "MAR-ORLY",
-    "ts": "2026-10-31T15:25:28Z"
+    "ts": "2026-10-31T15:27:28Z"
   },
   "posts": [
     {
@@ -3915,15 +3915,6 @@
   ],
   "audits": [
     {
-      "id": "1793400879338-8ce7f3",
-      "ts": "2026-10-30T22:54:39Z",
-      "book": "MAR-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-ORLY): 21 ladder(s) stale 10+ min: KXNASCARRACE-NATI26-JECL low 440c, KXNASCARRACE-NATI26-JOGA low 440c, KXNASCARRACE-NATI26-JEBU low 440c, KXNASCARRACE-NATI26-RYEL low 440c, KXNASCARRACE-NATI26-AUHI high 505c, KXNASCARRACE-NATI26-BRPO low 440c, KXNASCARRACE-NATI26-GASM low 440c, KXNASCARRACE-NATI26-SHCR low 412c, KXNASCARRACE-NATI26-JOBI low 440c, KXNASCARRACE-NATI26-PAEM low 440c, KXNASCARRACE-NATI26-DACR low 440c, KXNASCARRACE-NATI26-CAWA low 440c, KXNASCARRACE-NATI26-BLPE low 440c, KXNASCARRACE-NATI26-KYSI low 440c, KXNASCARRACE-NATI26-MAMA low 440c, KXNASCARRACE-NATI26-DADY low 440c, KXNASCARRACE-NATI26-BALE low 440c, KXNASCARRACE-NATI26-CODA high 423c, KXNASCARRACE-NATI26-PAST low 440c, KXNASCARRACE-NATI26-LASC low 440c, KXNASCARRACE-NATI26-LEPU high 505c. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1793401971580-dafc31",
       "ts": "2026-10-30T23:12:51Z",
       "book": "MAR-ORLY",
@@ -4812,6 +4803,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Brent Crews (+27%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793460406939-80c78a",
+      "ts": "2026-10-31T15:26:46Z",
+      "book": "MAR-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+327 on Rajah Caruth @ 0.08 (maker)\n+251 on Sammy Smith @ 0.12 (maker)\n+320 on William Sawalich @ 0.05 (maker)\n+259 on Sam Mayer @ 0.04 (maker)\n+98 on Sam Mayer @ 0.06 (maker)\n+290 on Sam Mayer @ 0.07 (maker)\n+43 on Corey Day @ 0.07 (maker)\nworst outcome now -228\nIf the race ends... you make\nJustin Allgaier: -228\nWilliam Sawalich: -159\nSammy Smith: -137\nCarson Kvapil: -126\nRajah Caruth: -69\nSam Mayer: -28\nTaylor Gray: +47\nCorey Day: +237\nall others (30) >= +294",
       "severity": "warn"
     }
   ]
