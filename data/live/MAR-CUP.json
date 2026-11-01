@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T21:53:02.563067Z",
+  "generated_at": "2026-11-01T21:54:17.055663Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 36,952, 38,771 resting. Worst line +$49. Race 78% done. Floor protocol off."
+          "In race (Ingame). Sold 36,952, 38,771 resting. Worst line +$49. Race 79% done. Floor protocol off."
         ]
       },
       {
@@ -44,28 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-CUP",
-    "ts": "2026-11-01T21:52:27Z"
+    "ts": "2026-11-01T21:53:28Z"
   },
   "posts": [
-    {
-      "id": "1793517015977-7ba134",
-      "ts": "2026-11-01T07:10:15Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "MAR-CUP book bot looks stuck: heartbeat 3613s old; no RISK/HEALTH line in 600s. It may be down or frozen. Check the bot.",
-      "severity": "warn"
-    },
-    {
-      "id": "1793517379991-db1730",
-      "ts": "2026-11-01T07:16:19Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 54,121 resting. Next: Risk glide starts, 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793518245705-19fc66",
       "ts": "2026-11-01T07:30:45Z",
@@ -3663,18 +3644,28 @@
         "contracts": 11832.0,
         "rows": 17
       }
+    },
+    {
+      "id": "1793570006670-a23c41",
+      "ts": "2026-11-01T21:53:26Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "MAR-CUP book is not trading: no fills in the last hour while the crowd keeps trading (grew 66401). Check the bot.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793570008308-9ac458",
+      "ts": "2026-11-01T21:53:27Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 5 drivers: Chase Elliott, Kyle Larson, Bubba Wallace.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1793549458555-c17ee8",
-      "ts": "2026-11-01T16:10:58Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -500.32 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793549756170-1525c8",
       "ts": "2026-11-01T16:15:56Z",
@@ -4564,6 +4555,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Kyle Larson has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: MAR-CUP - Bubba Wallace is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793570007504-98025e",
+      "ts": "2026-11-01T21:53:27Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 5 driver(s): Chase Elliott (+46%), Kyle Larson (+40%), Bubba Wallace (+29%), Christopher Bell (+27%), Ty Gibbs (+23%)",
       "severity": "warn"
     }
   ]
