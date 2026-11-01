@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T17:17:57.992877Z",
+  "generated_at": "2026-11-01T17:19:17.190355Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -98,12 +98,12 @@
         "exposure": -46.29,
         "exposure_text": "-$46",
         "move": "Step price down 1c (17c to 16c)",
-        "when": "if no fill by 11:19am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-01T17:19:43Z",
         "stuck": false,
         "also": "Also: even-up 1:00pm CT",
         "last_fill": "2026-11-01T06:32:09Z",
-        "lag_note": "Steps to 16c if no fill by 11:19am CT."
+        "lag_note": "Steps to 16c at the next check."
       },
       {
         "side": "Ryan Preece",
@@ -121,7 +121,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$150)."
+          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$147)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$150, worst line -$471, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$147, worst line -$471, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -251,7 +251,7 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 22 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T17:17:36Z"
+    "ts": "2026-11-01T17:18:36Z"
   },
   "posts": [
     {
@@ -3840,15 +3840,6 @@
   ],
   "audits": [
     {
-      "id": "1793498294139-6f4af6",
-      "ts": "2026-11-01T01:58:14Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): 27 ladder(s) stale 10+ min: KXNASCARRACE-XFIN26-BRKE low 565c, KXNASCARRACE-XFIN26-AJAL low 684c, KXNASCARRACE-XFIN26-MIMC low 684c, KXNASCARRACE-XFIN26-AUDI low 560c, KXNASCARRACE-XFIN26-RIST low 684c, KXNASCARRACE-XFIN26-ROCH low 565c, KXNASCARRACE-XFIN26-TYDI low 684c, KXNASCARRACE-XFIN26-RYBL low 855c, KXNASCARRACE-XFIN26-KYLA low 564c, KXNASCARRACE-XFIN26-ERJO low 684c, KXNASCARRACE-XFIN26-TYRE low 580c, KXNASCARRACE-XFIN26-RYPR low 385c, KXNASCARRACE-XFIN26-JONE low 684c, KXNASCARRACE-XFIN26-COCU low 684c, KXNASCARRACE-XFIN26-DASU low 560c, KXNASCARRACE-XFIN26-COWA low 684c, KXNASCARRACE-XFIN26-AUHI low 684c, KXNASCARRACE-XFIN26-CHBE low 596c, KXNASCARRACE-XFIN26-AUCI low 385c, KXNASCARRACE-XFIN26-JOBI high 794c, KXNASCARRACE-XFIN26-NOGR low 684c, KXNASCARRACE-XFIN26-CHBR high 221c, KXNASCARRACE-XFIN26-TOGI low 684c, KXNASCARRACE-XFIN26-RIHE low 684c, KXNASCARRACE-XFIN26-ZASM low 684c, KXNASCARRACE-XFIN26-CAHO low 370c, KXNASCARRACE-XFIN26-COZI low 560c. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1793498294140-b14955",
       "ts": "2026-11-01T01:58:14Z",
       "book": "MAR-CUP",
@@ -4737,6 +4728,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Austin Cindric has had no resting orders for at least 133 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793553542420-274ee2",
+      "ts": "2026-11-01T17:19:02Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-CUP): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=71321. Check the command center.",
       "severity": "warn"
     }
   ]
