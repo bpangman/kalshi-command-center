@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T22:36:33.824028Z",
+  "generated_at": "2026-11-01T22:37:51.351468Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 38,102, 0 resting. Worst line +$60. Race 100% done. Floor protocol ON. Bot is slow (checks every 53s, set for 30s)."
+          "In race (Ingame). Sold 38,102, 0 resting. Worst line +$60. Race 100% done. Floor protocol ON. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-CUP",
-    "ts": "2026-11-01T22:35:45Z"
+    "ts": "2026-11-01T22:37:46Z"
   },
   "posts": [
-    {
-      "id": "1793523483210-8f597e",
-      "ts": "2026-11-01T08:58:03Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 1:00pm CT. Worst line -$518, final target +$150. Next: Risk glide starts, 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793523604098-0ed4b3",
-      "ts": "2026-11-01T09:00:04Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag 1:00pm CT. Worst line -$518, final target +$150. Next: Risk glide starts, 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793524511210-75f6fb",
       "ts": "2026-11-01T09:15:11Z",
@@ -3698,18 +3678,27 @@
         "contracts": 8000.0,
         "rows": 16
       }
+    },
+    {
+      "id": "1793572594783-b6ed69",
+      "ts": "2026-11-01T22:36:34Z",
+      "book": "MAR-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nBubba Wallace: +60\nChase Elliott: +61\nTyler Reddick: +62\nRyan Preece: +70\nDenny Hamlin: +70\nChristopher Bell: +87\nRyan Blaney: +88\nAlex Bowman: +88\nall others (29) >= +98\nCollected $2281 premium ($44 fees) | Paper margin over fair $1897 (not realized until settlement)\nEvent: William Byron: race finished; Chase Elliott: race finished\nCore posted book 0.00 | Worst now +60 | Cash free $5356\nAnchor age 163s (source: kalshi)",
+      "severity": "info"
+    },
+    {
+      "id": "1793572594784-a08008",
+      "ts": "2026-11-01T22:36:34Z",
+      "book": "MAR-CUP",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on MAR-CUP: 52 orders posted in 10 min while the market traded 161069 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793555880988-f257c0",
-      "ts": "2026-11-01T17:58:00Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Josh Berry has had no resting orders for at least 133 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793556437768-7fc6ef",
       "ts": "2026-11-01T18:07:17Z",
@@ -4599,6 +4588,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: MAR-CUP - Chase Elliott is posting again.\nBack: MAR-CUP - Denny Hamlin is posting again.\nBack: MAR-CUP - Ty Gibbs is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793572606997-de03ce",
+      "ts": "2026-11-01T22:36:46Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-CUP has no resting orders on any side for at least 10 min while it should be posting.",
       "severity": "warn"
     }
   ]
