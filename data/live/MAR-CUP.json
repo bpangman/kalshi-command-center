@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T17:57:50.547180Z",
+  "generated_at": "2026-11-01T17:59:07.992810Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -100,7 +100,7 @@
         "exposure_text": "$0",
         "move": "Step price down 1c (17c to 16c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-01T17:56:52Z",
+        "at": "2026-11-01T17:58:53Z",
         "stuck": false,
         "also": "Also: even-up 1:00pm CT",
         "last_fill": "2026-11-01T06:32:09Z",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 23,808, 55,795 resting. Worst line -$425 (limit now -$36)."
+          "Risk glide, green flag 1:00pm CT. Sold 23,808, 55,995 resting. Worst line -$425 (limit now -$31)."
         ]
       },
       {
@@ -149,7 +149,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$36, worst line -$425, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$31, worst line -$425, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -246,7 +246,7 @@
       {
         "label": "William Byron",
         "held": 420.0,
-        "resting": 1641.0,
+        "resting": 1841.0,
         "target": 2850.0,
         "status": "lagging",
         "price": 0.06
@@ -254,18 +254,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 23 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T17:56:52Z"
+    "ts": "2026-11-01T17:58:53Z"
   },
   "posts": [
-    {
-      "id": "1793459181020-51d490",
-      "ts": "2026-10-31T15:06:21Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "MAR-CUP book loss is growing: worst case -738 dollars, past its limit and -161 in 30 min. Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1793459865004-bd9b6c",
       "ts": "2026-10-31T15:17:45Z",
@@ -3844,18 +3835,19 @@
       "text": "Bot note: COVER cap Josh Bilicki: 55@0.15 -> 0 (race_principles; held 0 + resting 2493 against the cap 2507 = 1.13 x pro",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1793555892961-18fac1",
+      "ts": "2026-11-01T17:58:04Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVER cap Josh Bilicki: 55@0.15 -> 0 (race_principles; held 0 + resting 2493 against the cap 2500 = 1.13 x pro",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1793503851347-608e93",
-      "ts": "2026-11-01T03:30:51Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -498.15 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793505894836-181073",
       "ts": "2026-11-01T04:04:54Z",
@@ -4745,6 +4737,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1793555880988-f257c0",
+      "ts": "2026-11-01T17:58:00Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Josh Berry has had no resting orders for at least 133 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
