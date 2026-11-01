@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T16:29:30.253685Z",
+  "generated_at": "2026-11-01T16:30:50.028322Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -98,12 +98,12 @@
         "exposure": -70.05,
         "exposure_text": "-$70",
         "move": "Step price down 1c (17c to 16c)",
-        "when": "if no fill by 10:31am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-01T16:31:13Z",
         "stuck": false,
         "also": "Also: even-up 1:00pm CT",
         "last_fill": "2026-11-01T06:32:09Z",
-        "lag_note": "Steps to 16c if no fill by 10:31am CT."
+        "lag_note": "Steps to 16c at the next check."
       },
       {
         "side": "Ryan Preece",
@@ -121,7 +121,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 22,547, 55,868 resting. Worst line -$495 (limit now -$290)."
+          "Risk glide, green flag 1:00pm CT. Sold 22,547, 55,868 resting. Worst line -$495 (limit now -$288)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$290, worst line -$495, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$288, worst line -$495, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -251,19 +251,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 22 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T16:29:18Z"
+    "ts": "2026-11-01T16:30:18Z"
   },
   "posts": [
-    {
-      "id": "1793451119710-4b8b6c",
-      "ts": "2026-10-31T12:51:59Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793451174497-53285d",
       "ts": "2026-10-31T12:52:54Z",
@@ -3818,6 +3808,15 @@
         "contracts": 1145.0,
         "rows": 24
       }
+    },
+    {
+      "id": "1793550603693-16231a",
+      "ts": "2026-11-01T16:30:03Z",
+      "book": "MAR-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nAustin Cindric: -495\nJosh Berry: -490\nJoey Logano: -459\nCarson Hocevar: -413\nRoss Chastain: -393\nDenny Hamlin: -341\nTy Gibbs: -161\nRyan Blaney: -70\nall others (29) >= -43\nCollected $1597 premium ($25 fees) | Paper margin over fair $304 (not realized until settlement)\nCore posted book 1.45 | Worst now -495 | Cash free $4661\nAnchor age 145s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
