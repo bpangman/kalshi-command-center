@@ -1,19 +1,19 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T20:45:01.079888Z",
+  "generated_at": "2026-11-01T20:46:16.780012Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$42.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 36,324, 0 resting. Worst line +$42. Race 45% done. Floor protocol off. Bot is slow (checks every 51s, set for 30s)."
+          "In race (Ingame). Sold 36,324, 18,634 resting. Worst line +$42. Race 46% done. Floor protocol off."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-CUP",
-    "ts": "2026-11-01T20:45:00Z"
+    "ts": "2026-11-01T20:46:00Z"
   },
   "posts": [
-    {
-      "id": "1793505400822-afd596",
-      "ts": "2026-11-01T03:56:40Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRoss Chastain: -534\nDenny Hamlin: -482\nTy Gibbs: -235\nJosh Berry: -202\nRyan Preece: -184\nAustin Cindric: -184\nCarson Hocevar: -184\nChase Elliott: -110\nall others (29) >= -110\nCollected $1453 premium ($23 fees) | Paper margin over fair $342 (not realized until settlement)\nCore posted book 1.51 | Worst now -534 | Cash free $4617\nAnchor age 0s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1793505499157-75e294",
-      "ts": "2026-11-01T03:56:04Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 25: Kyle Larson x25 at 7c. Worst line -$534.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 25.0,
-        "fills": [
-          {
-            "side": "Kyle Larson",
-            "price": 0.07,
-            "qty": 25.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793505499157-0b96f6",
       "ts": "2026-11-01T03:56:06Z",
@@ -3657,18 +3628,39 @@
       "text": "In race (Ingame). Worst line +$42.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1793565920198-e72649",
+      "ts": "2026-11-01T20:43:03Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,498: Tyler Reddick x1,498 at 1c. Worst line +$42.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1498.0,
+        "fills": [
+          {
+            "side": "Tyler Reddick",
+            "price": 0.01,
+            "qty": 1498.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793565960527-72c70a",
+      "ts": "2026-11-01T20:46:00Z",
+      "book": "MAR-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$42.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1793539676707-66f2cf",
-      "ts": "2026-11-01T13:27:56Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Back: MAR-CUP - Josh Berry is posting again.",
-      "severity": "warn"
-    },
     {
       "id": "1793539685104-de66a2",
       "ts": "2026-11-01T13:28:05Z",
@@ -4558,6 +4550,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Shock on Ryan Preece: pulled every in-game order, pausing 120s\nIf the race ends... you make\nBubba Wallace: +28\nChase Elliott: +28\nRyan Preece: +38\nDenny Hamlin: +38\nChristopher Bell: +55\nRyan Blaney: +55\nAlex Bowman: +56\nWilliam Byron: +66\nall others (29) >= +84",
+      "severity": "warn"
+    },
+    {
+      "id": "1793565925643-88f07a",
+      "ts": "2026-11-01T20:45:25Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-CUP - William Byron has had no resting orders for at least 71 min (reason unknown: no reason logged).\nBack: MAR-CUP - Ryan Preece is posting again.",
       "severity": "warn"
     }
   ]
