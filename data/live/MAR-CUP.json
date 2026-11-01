@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T17:25:58.614283Z",
+  "generated_at": "2026-11-01T17:27:16.502954Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 23,318, 55,244 resting. Worst line -$449 (limit now -$126)."
+          "Risk glide, green flag 1:00pm CT. Sold 23,318, 55,244 resting. Worst line -$449 (limit now -$125)."
         ]
       },
       {
@@ -148,7 +148,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$126, worst line -$449, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$125, worst line -$449, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -253,29 +253,9 @@
     ],
     "moves_note": "5 more drivers with small exposure are not shown. 23 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T17:25:39Z"
+    "ts": "2026-11-01T17:26:40Z"
   },
   "posts": [
-    {
-      "id": "1793456279797-d7cef4",
-      "ts": "2026-10-31T14:17:59Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793456340194-840fbb",
-      "ts": "2026-10-31T14:19:00Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793456521417-c2919b",
       "ts": "2026-10-31T14:22:01Z",
@@ -3838,18 +3818,39 @@
       "text": "Risk glide: limit -$140, worst line -$471. post gate Ryan Blaney 81@0.16 -> 0 (race_principles; a full fill would take his ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793553980171-452fc1",
+      "ts": "2026-11-01T17:24:09Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 383: Christopher Bell x383 at 6c. Worst line -$449.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 383.0,
+        "fills": [
+          {
+            "side": "Christopher Bell",
+            "price": 0.06,
+            "qty": 383.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793554000355-fab83c",
+      "ts": "2026-11-01T17:26:23Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$125, worst line -$449. post gate Ryan Blaney 81@0.16 -> 0 (race_principles; a full fill would take his ",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793500113042-910747",
-      "ts": "2026-11-01T02:28:33Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -507.31 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793500718740-a67e1d",
       "ts": "2026-11-01T02:38:38Z",
@@ -4739,6 +4740,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-CUP): lagging contender priced over the crowd: Kyle Larson ask 0.11 vs clearing 0.070 for 81 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793554015578-7c32fc",
+      "ts": "2026-11-01T17:26:55Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+67 on Ty Gibbs @ 0.08 (maker)\n+300 on Chase Briscoe @ 0.06 (maker)\n+88 on Chase Briscoe @ 0.07 (maker)\n+383 on Christopher Bell @ 0.06 (maker)\nworst outcome now -449\nIf the race ends... you make\nAustin Cindric: -449\nJosh Berry: -444\nJoey Logano: -413\nCarson Hocevar: -367\nRoss Chastain: -347\nDenny Hamlin: -294\nTy Gibbs: -115\nRyan Blaney: -24\nall others (29) >= +3",
       "severity": "warn"
     }
   ]
