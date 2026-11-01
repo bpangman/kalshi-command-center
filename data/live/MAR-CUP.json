@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T16:37:20.918848Z",
+  "generated_at": "2026-11-01T16:38:38.401808Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -17,7 +17,7 @@
         "move": "Next wave up to 1,500 contracts",
         "when": "when 90% of the 4,235 offered has sold (now 49%)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide buybacks",
         "last_fill": "2026-11-01T15:07:56Z"
       },
@@ -98,12 +98,12 @@
         "exposure": -46.29,
         "exposure_text": "-$46",
         "move": "Step price down 1c (17c to 16c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-01T16:36:38Z",
+        "when": "if no fill by 10:41am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-01T16:41:40Z",
         "stuck": false,
         "also": "Also: even-up 1:00pm CT",
         "last_fill": "2026-11-01T06:32:09Z",
-        "lag_note": "Steps to 16c at the next check."
+        "lag_note": "Steps to 16c if no fill by 10:41am CT."
       },
       {
         "side": "Ryan Preece",
@@ -121,7 +121,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$270)."
+          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$265)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$270, worst line -$471, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$265, worst line -$471, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -251,19 +251,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 22 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T16:36:21Z"
+    "ts": "2026-11-01T16:38:21Z"
   },
   "posts": [
-    {
-      "id": "1793451240176-e343ed",
-      "ts": "2026-10-31T12:54:00Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793452157940-122fef",
       "ts": "2026-10-31T13:09:17Z",
@@ -3837,6 +3827,16 @@
         "contracts": 147.0,
         "rows": 3
       }
+    },
+    {
+      "id": "1793551081647-dfa580",
+      "ts": "2026-11-01T16:37:53Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$265, worst line -$471. post gate Christopher Bell 52@0.05 -> 0 (race_fillfair; a full fill would take h",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
