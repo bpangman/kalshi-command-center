@@ -1,10 +1,10 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T19:13:33.757810Z",
+  "generated_at": "2026-11-01T19:14:52.165752Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$56.",
+    "headline": "In race (Ingame). Worst line -$44.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 30,714, 47,900 resting. Worst line -$56. Race 1% done. Floor protocol off."
+          "In race (Ingame). Sold 30,962, 48,536 resting. Worst line -$44. Race 1% done. Floor protocol off."
         ]
       },
       {
@@ -44,48 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-CUP",
-    "ts": "2026-11-01T19:13:22Z"
+    "ts": "2026-11-01T19:14:22Z"
   },
   "posts": [
-    {
-      "id": "1793487351245-756a77",
-      "ts": "2026-10-31T22:55:51Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nDenny Hamlin: -536\nTy Gibbs: -290\nJosh Berry: -257\nRyan Preece: -239\nAustin Cindric: -239\nCarson Hocevar: -239\nChase Elliott: -165\nJoey Logano: -165\nall others (29) >= -64\nCollected $1398 premium ($22 fees) | Paper margin over fair $312 (not realized until settlement)\nCore posted book 1.47 | Worst now -536 | Cash free $4528\nAnchor age 264s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1793487838947-bb2131",
-      "ts": "2026-10-31T23:03:58Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 55,580 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793488744336-293bf1",
-      "ts": "2026-10-31T23:19:04Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 55,580 resting. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793488865433-89edda",
-      "ts": "2026-10-31T23:21:05Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$536, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793488925795-0a2a65",
       "ts": "2026-10-31T23:22:05Z",
@@ -3577,18 +3538,72 @@
       "source": "resistance_monitor",
       "text": "MAR-CUP book re-posted at the same price: 1 cancel-then-post at the same price and 0 caught by the guard in the last hour. That is the queue-loss bug; check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1793560442564-373a0d",
+      "ts": "2026-11-01T19:13:14Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 230: Ryan Preece x137 at 5c, Chase Elliott x52 at 9c, Ryan Blaney x41 at 14c. Worst line -$56.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 230.0,
+        "fills": [
+          {
+            "side": "Ryan Preece",
+            "price": 0.05,
+            "qty": 137.0
+          },
+          {
+            "side": "Chase Elliott",
+            "price": 0.09,
+            "qty": 52.0
+          },
+          {
+            "side": "Ryan Blaney",
+            "price": 0.14,
+            "qty": 41.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793560462620-dbce6e",
+      "ts": "2026-11-01T19:14:06Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 2,398 (race floor first): Josh Bilicki x1,500 at 1c, Tyler Reddick x898 at 2c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 2398.0,
+        "rows": 2
+      }
+    },
+    {
+      "id": "1793560478563-b17a69",
+      "ts": "2026-11-01T19:14:38Z",
+      "book": "MAR-CUP",
+      "kind": "text",
+      "source": "bot",
+      "text": "Cohort shrink on MAR-CUP: target 16 -> 12\nIf the race ends... you make\nDenny Hamlin: -44\nRyan Blaney: -26\nChase Briscoe: +14\nKyle Larson: +15\nTy Gibbs: +15\nAustin Cindric: +56\nChristopher Bell: +58\nJosh Berry: +61\nall others (29) >= +72",
+      "severity": "info"
+    },
+    {
+      "id": "1793560482790-761358",
+      "ts": "2026-11-01T19:14:38Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: stage2 shrink: cohort target 16 -> 12 (schedule threshold 0.00)",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1793517205558-ebf678",
-      "ts": "2026-11-01T07:13:25Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -517.64 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793517450296-399b38",
       "ts": "2026-11-01T07:17:30Z",
@@ -4478,6 +4493,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+88 on Ty Gibbs @ 0.08 (maker)\n+307 on Ryan Blaney @ 0.14 (maker)\n+287 on Ty Gibbs @ 0.09 (maker)\n+100 on Denny Hamlin @ 0.27 (maker)\n+31 on William Byron @ 0.06 (maker)\n+73 on Chase Elliott @ 0.09 (maker)\nworst outcome now -63\nIf the race ends... you make\nDenny Hamlin: -63\nRyan Blaney: -45\nChase Briscoe: -5\nKyle Larson: -4\nTy Gibbs: -3\nAustin Cindric: +37\nChristopher Bell: +39\nJosh Berry: +42\nall others (29) >= +53",
+      "severity": "warn"
+    },
+    {
+      "id": "1793560468376-06e6b2",
+      "ts": "2026-11-01T19:14:28Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: MAR-CUP - Chase Briscoe is posting again.\nBack: MAR-CUP - Kyle Larson is posting again.\nBack: MAR-CUP - Ty Gibbs is posting again.",
       "severity": "warn"
     }
   ]
