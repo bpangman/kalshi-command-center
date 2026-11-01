@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T15:16:03.026633Z",
+  "generated_at": "2026-11-01T15:17:19.886248Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -18,6 +18,7 @@
         "when": "when 90% of the 4,235 offered has sold (now 49%)",
         "at": null,
         "stuck": false,
+        "also": "Also: glide buybacks",
         "last_fill": "2026-11-01T15:07:56Z"
       },
       {
@@ -113,7 +114,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 22,418, 55,607 resting. Worst line -$503."
+          "Risk glide, green flag 1:00pm CT. Sold 22,418, 55,607 resting. Worst line -$503 (limit now -$503)."
         ]
       },
       {
@@ -138,7 +139,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$504, worst line -$503, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$503, worst line -$503, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -243,29 +244,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 22 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T15:15:45Z"
+    "ts": "2026-11-01T15:16:45Z"
   },
   "posts": [
-    {
-      "id": "1793438550799-7d8cdc",
-      "ts": "2026-10-31T09:22:30Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793438671419-f66b41",
-      "ts": "2026-10-31T09:24:31Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793439476372-4f692e",
       "ts": "2026-10-31T09:37:43Z",
@@ -3782,18 +3763,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793546205606-9c365a",
+      "ts": "2026-11-01T15:16:31Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit -$503, worst line -$503. engaged (worst held line under target); no post whose full fill takes a driver u",
+      "severity": "info",
+      "title": "Glide"
+    },
+    {
+      "id": "1793546205614-3c5ab7",
+      "ts": "2026-11-01T15:16:45Z",
+      "book": "MAR-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 1:00pm CT. Worst line -$503, final target +$150. Next: Glide selling opens, 11:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
-    {
-      "id": "1793482902927-7d7fcd",
-      "ts": "2026-10-31T21:41:42Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 8 driver(s): Denny Hamlin (+107%), Ty Gibbs (+75%), Brad Keselowski (+67%), Chase Briscoe (+45%), Ryan Preece (+45%), Chase Elliott (+38%), Austin Cindric (+29%), Carson Hocevar (+27%)",
-      "severity": "warn"
-    },
     {
       "id": "1793483140939-19d8c1",
       "ts": "2026-10-31T21:45:40Z",
@@ -4683,6 +4675,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Austin Cindric has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793546193927-2ab169",
+      "ts": "2026-11-01T15:16:33Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (MAR-CUP): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=26643. Check the command center.",
       "severity": "warn"
     }
   ]
