@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T22:30:23.007377Z",
+  "generated_at": "2026-11-01T22:32:15.196249Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 38,102, 33,439 resting. Worst line +$60. Race 99% done. Floor protocol ON. Bot is slow (checks every 51s, set for 30s)."
+          "In race (Ingame). Sold 38,102, 0 resting. Worst line +$60. Race 100% done. Floor protocol ON. Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-CUP",
-    "ts": "2026-11-01T22:29:43Z"
+    "ts": "2026-11-01T22:31:44Z"
   },
   "posts": [
-    {
-      "id": "1793523483011-4dcc8b",
-      "ts": "2026-11-01T08:58:03Z",
-      "book": "MAR-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nJosh Berry: -518\nRoss Chastain: -483\nDenny Hamlin: -430\nTy Gibbs: -184\nRyan Blaney: -160\nRyan Preece: -133\nAustin Cindric: -133\nCarson Hocevar: -133\nall others (29) >= -59\nCollected $1506 premium ($23 fees) | Paper margin over fair $315 (not realized until settlement)\nCore posted book 1.49 | Worst now -518 | Cash free $4638\nAnchor age 165s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1793523483210-8f597e",
       "ts": "2026-11-01T08:58:03Z",
@@ -3693,27 +3684,23 @@
       "text": "In race (Ingame). Worst line +$60.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1793572264035-7a31cc",
+      "ts": "2026-11-01T22:28:50Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 8,000 (race floor first): AJ Allmendinger x500 at 1c, Michael McDowell x500 at 1c, +14 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 8000.0,
+        "rows": 16
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793555532693-b5a154",
-      "ts": "2026-11-01T17:52:12Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): lagging contender priced over the crowd: Kyle Larson ask 0.11 vs clearing 0.070 for 111 min. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1793555602386-7ba2c4",
-      "ts": "2026-11-01T17:53:22Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1793555880988-f257c0",
       "ts": "2026-11-01T17:58:00Z",
@@ -4594,6 +4581,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-CUP): min live outcome (auditor's own read) +59.84 vs bot's ratchet_high +60.68 vs bot's ceiling_now +60.68. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793572292038-e5858e",
+      "ts": "2026-11-01T22:31:32Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Checkered flag at 4:30 PM CT. All resting orders pulled. Worst outcome +59.84. Waiting for Kalshi to settle.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793572304359-20f151",
+      "ts": "2026-11-01T22:31:44Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: MAR-CUP - Chase Elliott is posting again.\nBack: MAR-CUP - Denny Hamlin is posting again.\nBack: MAR-CUP - Ty Gibbs is posting again.",
       "severity": "warn"
     }
   ]
