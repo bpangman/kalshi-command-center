@@ -1,10 +1,10 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-01T22:02:04.322716Z",
+  "generated_at": "2026-11-01T22:03:20.683944Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$329, goal -$150.",
+    "headline": "Building toward kickoff 7:20pm CT. Worst line -$237, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,19 +12,30 @@
       {
         "side": "WAS by 7-14",
         "resting": "1,600 @ 25-34c",
-        "exposure": -329.08,
-        "exposure_text": "-$329",
-        "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$300 (now -$329)",
+        "exposure": -236.85,
+        "exposure_text": "-$237",
+        "move": "Holding",
+        "when": "no move planned until the even-done check at 6:50pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-10-30T04:10:34Z"
       },
       {
+        "side": "WAS by 1-6",
+        "resting": "1,187 @ 23-33c",
+        "exposure": -200.22,
+        "exposure_text": "-$200",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:00pm CT, up to $100 in all",
+        "at": "2026-11-02T01:00:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-01T22:00:40Z"
+      },
+      {
         "side": "PHI by 15+",
         "resting": "3,057 @ 6-16c",
-        "exposure": 28.05,
-        "exposure_text": "+$28",
+        "exposure": 120.28,
+        "exposure_text": "+$120",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -32,21 +43,10 @@
         "last_fill": "2026-11-01T21:45:13Z"
       },
       {
-        "side": "WAS by 1-6",
-        "resting": "1,588 @ 23-33c",
-        "exposure": 108.55,
-        "exposure_text": "+$109",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-02T01:00:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-01T21:55:53Z"
-      },
-      {
         "side": "PHI by 1-6",
         "resting": "2,300 @ 15-26c",
-        "exposure": 120.92,
-        "exposure_text": "+$121",
+        "exposure": 213.15,
+        "exposure_text": "+$213",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -55,8 +55,8 @@
       {
         "side": "PHI by 7-14",
         "resting": "1,950 @ 11-19c",
-        "exposure": 120.92,
-        "exposure_text": "+$121",
+        "exposure": 213.15,
+        "exposure_text": "+$213",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -65,8 +65,8 @@
       {
         "side": "WAS by 15+",
         "resting": "2,302 @ 27-35c",
-        "exposure": 120.92,
-        "exposure_text": "+$121",
+        "exposure": 213.15,
+        "exposure_text": "+$213",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -77,7 +77,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 555, 10,985 resting. Worst line -$329 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 956, 10,584 resting. Worst line -$237 (goal -$150)."
         ]
       },
       {
@@ -90,14 +90,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$329).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$237).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: WAS by 7-14 stopped adding until worst line is above -$300 (now -$329).",
+          "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 7:00pm CT: worst line to -$150 by 7:15pm CT, up to $100.",
           "At 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
@@ -154,8 +154,8 @@
       },
       {
         "label": "WAS by 1-6",
-        "held": 12.4,
-        "resting": 1587.6,
+        "held": 413.4,
+        "resting": 1186.6,
         "target": null,
         "status": "even",
         "price": 0.23
@@ -165,7 +165,7 @@
         "held": 450.0,
         "resting": 1050.0,
         "target": null,
-        "status": "heavy",
+        "status": "even",
         "price": 0.29
       },
       {
@@ -178,19 +178,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-01T22:01:11Z"
+    "ts": "2026-11-01T22:03:12Z"
   },
   "posts": [
-    {
-      "id": "1793363561487-9a1097",
-      "ts": "2026-10-30T12:32:41Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793364467995-ccfcef",
       "ts": "2026-10-30T12:47:47Z",
@@ -3144,6 +3134,16 @@
       "text": "Backstop released: worst line is back to -$237. The heavy side can add again.",
       "severity": "info",
       "title": "Backstop"
+    },
+    {
+      "id": "1793570531978-2bee15",
+      "ts": "2026-11-01T22:02:11Z",
+      "book": "W9-PHIWAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$237, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
