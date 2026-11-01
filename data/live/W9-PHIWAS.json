@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-01T23:14:34.060354Z",
+  "generated_at": "2026-11-01T23:15:51.331136Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -63,7 +63,7 @@
         "exposure_text": "+$230",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-01T23:13:41Z",
+        "at": "2026-11-01T23:15:42Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "lag_note": "Steps to 10c at the next check."
@@ -75,7 +75,7 @@
         "exposure_text": "+$230",
         "move": "Step price down 1c (27c to 26c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-01T23:13:41Z",
+        "at": "2026-11-01T23:15:42Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "lag_note": "Steps to 26c at the next check."
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-01T23:13:41Z"
+    "ts": "2026-11-01T23:15:42Z"
   },
   "posts": [
-    {
-      "id": "1793375351069-32fe1a",
-      "ts": "2026-10-30T15:49:11Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793376033331-da728f",
       "ts": "2026-10-30T16:00:33Z",
@@ -3189,18 +3179,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793574942220-96a960",
+      "ts": "2026-11-01T23:13:37Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 7: WAS by 7-14 x7 at 25c. Worst line -$228.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 7.0,
+        "fills": [
+          {
+            "side": "WAS by 7-14",
+            "price": 0.25,
+            "qty": 7.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793477026787-2f23e4",
-      "ts": "2026-10-31T20:03:46Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): worst -337.50 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793478852770-8f092e",
       "ts": "2026-10-31T20:34:12Z",
@@ -4090,6 +4091,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+79 on PHI 15+ @ 0.06 (maker)\nworst outcome now +66\nheld 457/450/0/0/0/172\nIf the game ends... you make\nWAS 1-6: -229 (-5.4% of bankroll)\nWAS 7-14: -222 (-5.2% of bankroll)\nWAS 15+: +228 (+5.4% of bankroll)\nPHI 1-6: +228 (+5.4% of bankroll)\nPHI 7-14: +228 (+5.4% of bankroll)\nPHI 15+: +56 (+1.3% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793574887961-49462f",
+      "ts": "2026-11-01T23:14:47Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W9-PHIWAS): lagging bucket priced over the crowd: WAS15PLUS ask 0.27 vs clearing 0.235 for 54 min. Check the command center.",
       "severity": "warn"
     }
   ]
