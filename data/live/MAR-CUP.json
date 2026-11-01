@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T19:39:04.495605Z",
+  "generated_at": "2026-11-01T19:40:24.584776Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 31,514, 49,128 resting. Worst line -$13. Race 15% done. Floor protocol off."
+          "In race (Ingame). Sold 31,514, 49,128 resting. Worst line -$13. Race 16% done. Floor protocol off."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "MAR-CUP",
-    "ts": "2026-11-01T19:38:32Z"
+    "ts": "2026-11-01T19:39:33Z"
   },
   "posts": [
-    {
-      "id": "1793491661493-9739d2",
-      "ts": "2026-11-01T00:07:25Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sharp price move on 2 drivers: Ryan Preece, Chase Briscoe.",
-      "severity": "info",
-      "title": "Price shock"
-    },
     {
       "id": "1793492547532-e6cbe7",
       "ts": "2026-11-01T00:22:27Z",
@@ -3625,18 +3615,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793562013246-c34f66",
+      "ts": "2026-11-01T19:38:07Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 47: William Byron x47 at 7c. Worst line -$13.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 47.0,
+        "fills": [
+          {
+            "side": "William Byron",
+            "price": 0.07,
+            "qty": 47.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793520931865-0a1baf",
-      "ts": "2026-11-01T08:15:31Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -517.64 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793521100602-713cbd",
       "ts": "2026-11-01T08:18:20Z",
@@ -4526,6 +4527,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-CUP): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=168872. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793561989095-9590f6",
+      "ts": "2026-11-01T19:39:49Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Joey Logano has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
