@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T17:16:40.178053Z",
+  "generated_at": "2026-11-01T17:17:57.992877Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -29,7 +29,7 @@
         "move": "Next wave up to 1,500 contracts",
         "when": "when 90% of the 3,525 offered has sold (now 58%)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide buybacks",
         "last_fill": "2026-11-01T15:47:32Z"
       },
@@ -121,7 +121,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$154)."
+          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$150)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$154, worst line -$471, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$150, worst line -$471, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -251,7 +251,7 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 22 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T17:16:36Z"
+    "ts": "2026-11-01T17:17:36Z"
   },
   "posts": [
     {
@@ -3840,15 +3840,6 @@
   ],
   "audits": [
     {
-      "id": "1793496310975-5a172a",
-      "ts": "2026-11-01T01:25:10Z",
-      "book": "MAR-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (MAR-CUP): worst -508.88 vs floor -369.16. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1793498294139-6f4af6",
       "ts": "2026-11-01T01:58:14Z",
       "book": "MAR-CUP",
@@ -4738,6 +4729,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (MAR-CUP): worst -471.29 vs floor -369.16. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793553447037-168ef5",
+      "ts": "2026-11-01T17:17:27Z",
+      "book": "MAR-CUP",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- MAR-CUP - Austin Cindric has had no resting orders for at least 133 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
