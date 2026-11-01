@@ -1,6 +1,6 @@
 {
   "key": "MAR-CUP",
-  "generated_at": "2026-11-01T16:34:42.950048Z",
+  "generated_at": "2026-11-01T16:36:03.353031Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -98,12 +98,12 @@
         "exposure": -46.29,
         "exposure_text": "-$46",
         "move": "Step price down 1c (17c to 16c)",
-        "when": "if no fill by 10:36am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-01T16:36:38Z",
         "stuck": false,
         "also": "Also: even-up 1:00pm CT",
         "last_fill": "2026-11-01T06:32:09Z",
-        "lag_note": "Steps to 16c if no fill by 10:36am CT."
+        "lag_note": "Steps to 16c at the next check."
       },
       {
         "side": "Ryan Preece",
@@ -121,7 +121,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$276)."
+          "Risk glide, green flag 1:00pm CT. Sold 22,935, 55,627 resting. Worst line -$471 (limit now -$275)."
         ]
       },
       {
@@ -146,7 +146,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$550.",
-          "Glide is running: limit -$276, worst line -$471, final +$150 at 1:00pm CT.",
+          "Glide is running: limit -$275, worst line -$471, final +$150 at 1:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 11:30am CT.",
           "Even-up from 1:00pm CT, last-resort take from 12:40pm CT, green flag 1:00pm CT."
         ]
@@ -251,29 +251,9 @@
     ],
     "moves_note": "6 more drivers with small exposure are not shown. 22 other drivers: nothing sold, no exposure.",
     "book": "MAR-CUP",
-    "ts": "2026-11-01T16:34:20Z"
+    "ts": "2026-11-01T16:35:20Z"
   },
   "posts": [
-    {
-      "id": "1793451179883-1c5fe2",
-      "ts": "2026-10-31T12:52:54Z",
-      "book": "MAR-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Kalshi rate-limited the bot (25 errors). It retries next loop.",
-      "severity": "info",
-      "title": "Rate limit"
-    },
-    {
-      "id": "1793451179886-97a9f8",
-      "ts": "2026-10-31T12:52:59Z",
-      "book": "MAR-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 1:00pm CT. Worst line -$580, final target +$150. Next: Risk glide starts, Sun 9:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793451240176-e343ed",
       "ts": "2026-10-31T12:54:00Z",
@@ -3818,6 +3798,45 @@
       "text": "Risk glide: limit -$281, worst line -$477. post gate Christopher Bell 45@0.05 -> 0 (race_fillfair; a full fill would take h",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1793550900706-a586de",
+      "ts": "2026-11-01T16:33:22Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 388: Chase Briscoe x300 at 6c, Chase Briscoe x88 at 7c. Worst line -$471.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 388.0,
+        "fills": [
+          {
+            "side": "Chase Briscoe",
+            "price": 0.06,
+            "qty": 300.0
+          },
+          {
+            "side": "Chase Briscoe",
+            "price": 0.07,
+            "qty": 88.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793550900706-392977",
+      "ts": "2026-11-01T16:33:23Z",
+      "book": "MAR-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 147 (launch ladder): Josh Bilicki x53 at 15c, Tyler Reddick x50 at 6c, +1 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 147.0,
+        "rows": 3
+      }
     }
   ],
   "audits": [
