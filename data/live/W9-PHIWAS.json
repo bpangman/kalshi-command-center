@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-01T23:46:54.230044Z",
+  "generated_at": "2026-11-01T23:48:49.267159Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -63,7 +63,7 @@
         "exposure_text": "+$256",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-01T23:45:54Z",
+        "at": "2026-11-01T23:47:55Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-01T23:45:54Z"
+    "ts": "2026-11-01T23:47:55Z"
   },
   "posts": [
-    {
-      "id": "1793385322721-52dd3e",
-      "ts": "2026-10-30T18:35:22Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793386229260-4d7baf",
       "ts": "2026-10-30T18:50:29Z",
@@ -3255,18 +3245,19 @@
         "contracts": 300.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1793576916077-8f37ec",
+      "ts": "2026-11-01T23:48:34Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1793482535359-4542f4",
-      "ts": "2026-10-31T21:35:35Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): worst -337.50 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793484403301-f6fb04",
       "ts": "2026-10-31T22:06:43Z",
@@ -4156,6 +4147,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on WAS 7-14 @ 0.25 (maker)\nworst outcome now -403\nheld 550/477/0/0/0/172\nIf the game ends... you make\nWAS 1-6: -294 (-6.9% of bankroll)\nWAS 7-14: -221 (-5.2% of bankroll)\nWAS 15+: +256 (+6.0% of bankroll)\nPHI 1-6: +256 (+6.0% of bankroll)\nPHI 7-14: +256 (+6.0% of bankroll)\nPHI 15+: +84 (+2.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793576914393-1cf36c",
+      "ts": "2026-11-01T23:48:34Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
