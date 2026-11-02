@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T00:08:25.212154Z",
+  "generated_at": "2026-11-02T00:10:04.485917Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -36,13 +36,13 @@
         "resting": "3,057 @ 6-16c",
         "exposure": 102.32,
         "exposure_text": "+$102",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-02T01:00:00Z",
+        "move": "Step price down 1c (6c to 5c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-02T00:09:04Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-01T23:06:39Z",
-        "lag_note": "Price 6c is at its floor."
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "PHI by 1-6",
@@ -189,18 +189,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T00:08:04Z"
+    "ts": "2026-11-02T00:09:04Z"
   },
   "posts": [
-    {
-      "id": "1793390527778-0ae903",
-      "ts": "2026-10-30T20:02:07Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nWAS 1-6: +112 (+2.7% of bankroll)\nWAS 7-14: -338 (-8.0% of bankroll)\nWAS 15+: +112 (+2.7% of bankroll)\nPHI 1-6: +112 (+2.7% of bankroll)\nPHI 7-14: +112 (+2.7% of bankroll)\nPHI 15+: +112 (+2.7% of bankroll)\nCollected $112 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nWAS 1-6: 0 / 1600\nWAS 7-14: 450 / 1050\nWAS 15+: 0 / 2115\nPHI 1-6: 0 / 1850\nPHI 7-14: 0 / 1950\nPHI 15+: 0 / 2075\nPosted book 1.29 | Sold avg 1.241 | Worst now +182 | Cash free $1473\nAnchor age 0s | Last fill 57092s ago",
-      "severity": "info"
-    },
     {
       "id": "1793390758607-c7ed98",
       "ts": "2026-10-30T20:05:58Z",
@@ -3273,6 +3264,15 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793578129913-08ce04",
+      "ts": "2026-11-02T00:08:49Z",
+      "book": "W9-PHIWAS",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W9-PHIWAS: 0 orders posted in 10 min while the market traded 1099 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
