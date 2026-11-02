@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T01:14:16.953845Z",
+  "generated_at": "2026-11-02T01:15:29.680362Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -27,7 +27,7 @@
         "exposure_text": "-$100",
         "move": "Step price down 1c (31c to 30c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T01:13:31Z",
+        "at": "2026-11-02T01:14:31Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-01T23:27:06Z",
@@ -40,7 +40,7 @@
         "exposure_text": "-$100",
         "move": "Step price down 1c (29c to 28c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T01:13:31Z",
+        "at": "2026-11-02T01:14:31Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-02T00:05:14Z",
@@ -48,7 +48,7 @@
       },
       {
         "side": "PHI by 1-6",
-        "resting": "733 @ 16-23c",
+        "resting": "680 @ 16-23c",
         "exposure": 85.81,
         "exposure_text": "+$86",
         "move": "Hold price at 16c",
@@ -77,27 +77,27 @@
         "resting": "2,051 @ 25-30c",
         "exposure": 215.97,
         "exposure_text": "+$216",
-        "move": "Hold price at 25c",
-        "when": "next cent is under the crowd price (24c)",
-        "at": null,
+        "move": "Step price down 1c (25c to 24c)",
+        "when": "if no fill by 7:20pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-02T01:20:43Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-02T01:10:43Z",
-        "lag_note": "Price 25c is at its floor."
+        "lag_note": "Steps to 24c if no fill by 7:20pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 2,899, 5,542 resting. Worst line -$450 (goal -$150)."
+          "Final tightening, kickoff 7:20pm CT. Sold 2,899, 5,489 resting. Worst line -$450 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): PHI by 1-6, PHI by 7-14, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 666 behind. Price 25c is at its floor.",
+          "WAS by 15+: 666 behind. Steps to 24c if no fill by 7:20pm CT.",
           "PHI by 7-14: 600 behind. Price 10c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$188 (now -$450).",
+          "Gate closed: batches wait for the worst line to reach -$162 (now -$450).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$188, worst line -$450; spent $15 of $100.",
+          "Paid balancing is running: plan -$162, worst line -$450; spent $15 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -136,7 +136,7 @@
       {
         "label": "PHI by 1-6",
         "held": 364.7,
-        "resting": 708.0,
+        "resting": 655.0,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -183,7 +183,7 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T01:13:31Z"
+    "ts": "2026-11-02T01:14:31Z"
   },
   "posts": [
     {
