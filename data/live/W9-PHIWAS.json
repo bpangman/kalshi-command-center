@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T01:11:51.454555Z",
+  "generated_at": "2026-11-02T01:13:03.187069Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -27,7 +27,7 @@
         "exposure_text": "-$100",
         "move": "Step price down 1c (31c to 30c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T01:11:30Z",
+        "at": "2026-11-02T01:12:30Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-01T23:27:06Z",
@@ -40,7 +40,7 @@
         "exposure_text": "-$100",
         "move": "Step price down 1c (29c to 28c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T01:11:30Z",
+        "at": "2026-11-02T01:12:30Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-02T00:05:14Z",
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$240 (now -$450).",
+          "Gate closed: batches wait for the worst line to reach -$214 (now -$450).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$240, worst line -$450; spent $15 of $100.",
+          "Paid balancing is running: plan -$214, worst line -$450; spent $15 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -183,7 +183,7 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T01:11:30Z"
+    "ts": "2026-11-02T01:12:30Z"
   },
   "posts": [
     {
@@ -3373,15 +3373,6 @@
   ],
   "audits": [
     {
-      "id": "1793499210950-77db41",
-      "ts": "2026-11-01T02:13:30Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): worst -337.50 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1793500146305-579caf",
       "ts": "2026-11-01T02:29:06Z",
       "book": "W9-PHIWAS",
@@ -4270,6 +4261,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: PHI 15+ worst outcome -603\nIf the game ends... you make\nWAS 1-6: -134 (-3.2% of bankroll)\nWAS 7-14: -134 (-3.2% of bankroll)\nWAS 15+: +281 (+6.6% of bankroll)\nPHI 1-6: +101 (+2.4% of bankroll)\nPHI 7-14: +216 (+5.1% of bankroll)\nPHI 15+: -484 (-11.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793581927226-60b65f",
+      "ts": "2026-11-02T01:12:07Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+100 on WAS 15+ @ 0.22 (taker)\n+100 on PHI 7-14 @ 0.08 (taker)\n+50 on PHI 1-6 @ 0.14 (taker)\nworst outcome now -668\nheld 550/550/235/365/300/900\nIf the game ends... you make\nWAS 1-6: -100 (-2.3% of bankroll)\nWAS 7-14: -100 (-2.3% of bankroll)\nWAS 15+: +216 (+5.1% of bankroll)\nPHI 1-6: +86 (+2.0% of bankroll)\nPHI 7-14: +150 (+3.5% of bankroll)\nPHI 15+: -450 (-10.6% of bankroll)",
       "severity": "warn"
     }
   ]
