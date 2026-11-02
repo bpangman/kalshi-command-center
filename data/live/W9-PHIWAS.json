@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T00:07:08.347473Z",
+  "generated_at": "2026-11-02T00:08:25.212154Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -61,12 +61,12 @@
         "resting": "619 @ 10-12c",
         "exposure": 274.32,
         "exposure_text": "+$274",
-        "move": "Step price down 1c (10c to 9c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T00:07:03Z",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:00pm CT, up to $100 in all",
+        "at": "2026-11-02T01:00:00Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 7:00pm CT",
-        "lag_note": "Steps to 9c at the next check."
+        "also": "Also: price step",
+        "lag_note": "Price 10c is at its floor."
       },
       {
         "side": "WAS by 15+",
@@ -93,7 +93,7 @@
         "lines": [
           "Lagging (150+ behind the leader): PHI by 1-6, PHI by 7-14, PHI by 15+, WAS by 15+.",
           "PHI by 1-6: 550 behind. Price 15c is at its floor.",
-          "PHI by 7-14: 550 behind. Steps to 9c at the next check.",
+          "PHI by 7-14: 550 behind. Price 10c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T00:07:03Z"
+    "ts": "2026-11-02T00:08:04Z"
   },
   "posts": [
-    {
-      "id": "1793389852474-c0aa9f",
-      "ts": "2026-10-30T19:50:52Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793390527778-0ae903",
       "ts": "2026-10-30T20:02:07Z",
@@ -3263,6 +3253,26 @@
       "text": "Row sold out: WAS by 7-14 at 25c (73 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1793578043874-854b11",
+      "ts": "2026-11-02T00:05:17Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 73: WAS by 7-14 x73 at 25c. Worst line -$276.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 73.0,
+        "fills": [
+          {
+            "side": "WAS by 7-14",
+            "price": 0.25,
+            "qty": 73.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
