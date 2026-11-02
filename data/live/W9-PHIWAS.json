@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T00:35:03.431187Z",
+  "generated_at": "2026-11-02T00:36:24.833738Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "WAS by 1-6",
-        "resting": "1,050 @ 27-33c",
+        "resting": "913 @ 31-33c",
         "exposure": -247.23,
         "exposure_text": "-$247",
         "move": "Holding",
@@ -22,7 +22,7 @@
       },
       {
         "side": "WAS by 7-14",
-        "resting": "1,050 @ 29-34c",
+        "resting": "924 @ 29-31c",
         "exposure": -247.23,
         "exposure_text": "-$247",
         "move": "Holding",
@@ -33,16 +33,16 @@
       },
       {
         "side": "PHI by 1-6",
-        "resting": "2,110 @ 15-26c",
+        "resting": "1,250 @ 16-24c",
         "exposure": 113.1,
         "exposure_text": "+$113",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-02T01:00:00Z",
+        "move": "Step price down 1c (16c to 15c)",
+        "when": "if no fill by 6:43pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-02T00:43:41Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-02T00:33:41Z",
-        "lag_note": "Price 15c matches the crowd."
+        "lag_note": "Steps to 15c if no fill by 6:43pm CT."
       },
       {
         "side": "PHI by 15+",
@@ -51,7 +51,7 @@
         "exposure_text": "+$131",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T00:34:15Z",
+        "at": "2026-11-02T00:36:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-01T23:06:39Z",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,462, 8,802 resting. Worst line -$247 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,462, 7,679 resting. Worst line -$247 (goal -$150)."
         ]
       },
       {
@@ -143,10 +143,10 @@
       {
         "label": "PHI by 1-6",
         "held": 189.7,
-        "resting": 2110.3,
+        "resting": 1250.0,
         "target": null,
         "status": "lagging",
-        "price": 0.15
+        "price": 0.16
       },
       {
         "label": "PHI by 7-14",
@@ -167,15 +167,15 @@
       {
         "label": "WAS by 1-6",
         "held": 550.0,
-        "resting": 1050.0,
+        "resting": 913.0,
         "target": null,
         "status": "even",
-        "price": 0.27
+        "price": 0.31
       },
       {
         "label": "WAS by 7-14",
         "held": 550.0,
-        "resting": 1050.0,
+        "resting": 924.0,
         "target": null,
         "status": "even",
         "price": 0.29
@@ -190,28 +190,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T00:34:15Z"
+    "ts": "2026-11-02T00:36:16Z"
   },
   "posts": [
-    {
-      "id": "1793393477292-102c50",
-      "ts": "2026-10-30T20:51:17Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793394171788-576b7a",
-      "ts": "2026-10-30T21:02:51Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nWAS 1-6: +112 (+2.7% of bankroll)\nWAS 7-14: -338 (-8.0% of bankroll)\nWAS 15+: +112 (+2.7% of bankroll)\nPHI 1-6: +112 (+2.7% of bankroll)\nPHI 7-14: +112 (+2.7% of bankroll)\nPHI 15+: +112 (+2.7% of bankroll)\nCollected $112 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nWAS 1-6: 0 / 1600\nWAS 7-14: 450 / 1050\nWAS 15+: 0 / 2115\nPHI 1-6: 0 / 1850\nPHI 7-14: 0 / 1950\nPHI 15+: 0 / 2075\nPosted book 1.29 | Sold avg 1.241 | Worst now +182 | Cash free $1473\nAnchor age 0s | Last fill 60736s ago",
-      "severity": "info"
-    },
     {
       "id": "1793394383476-f0f8a0",
       "ts": "2026-10-30T21:06:23Z",
@@ -3280,6 +3261,36 @@
             "side": "PHI by 1-6",
             "price": 0.15,
             "qty": 32.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793579715623-71bdda",
+      "ts": "2026-11-02T00:35:07Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease PHI1TO6: resting 2110 -> 1319 (held 190 + resting was over the cap 1509 = 1.50x; tighten",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1793579776004-6f6aa1",
+      "ts": "2026-11-02T00:34:04Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 157: PHI by 1-6 x157 at 15c. Worst line -$247.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 157.0,
+        "fills": [
+          {
+            "side": "PHI by 1-6",
+            "price": 0.15,
+            "qty": 157.0
           }
         ]
       }
