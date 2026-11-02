@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T04:23:50.535617Z",
+  "generated_at": "2026-11-02T04:24:56.317192Z",
   "cash_free": 5776.72,
   "cash_by_shard": {
     "0": 4726.72,
@@ -20,13 +20,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-10-31T00:51:19.040312Z",
-      "start_time": "2026-11-03T01:15:01.774920Z",
+      "start_time": "2026-11-03T01:15:01.874612Z",
       "ends_by_time": "2026-11-03T04:15:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-02T04:23:11Z",
+      "heartbeat_ts": "2026-11-02T04:24:14Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 33.1,
+      "heartbeat_age_s": 36.8,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 1457.56,
@@ -54,8 +54,8 @@
       "market_implied_outcome_now": 2.1,
       "market_implied_trend_15m": -0.0,
       "break_glass": {
-        "locked_floor": -850.23,
-        "cost": 877.17
+        "locked_floor": -8.69,
+        "cost": 40.63
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -319,7 +319,7 @@
             "spread_home": -3.0,
             "total": 46.5,
             "injury_rows": 10,
-            "ts": 1793593139.1616158
+            "ts": 1793593452.1253881
           },
           "bovada": {
             "p_home": 0.5991,
@@ -330,7 +330,7 @@
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 16333,
+            "unchanged_s": 16396,
             "need_s": 900.0,
             "moved": {
               "bovada": -0.0076,
@@ -347,27 +347,35 @@
         "inactives_checkpoints_done": []
       },
       "game_clock": null
-    },
+    }
+  ],
+  "awaiting": [
     {
       "key": "W9-PHIWAS",
       "sport": "NFL",
       "event_ticker": "KXNFLWINMARGIN-26NOV01PHIWAS",
       "title": "Philadelphia Eagles at Washington Commanders",
       "subtitle": null,
-      "phase": "In play",
-      "liveness": "live",
-      "liveness_reason": "trading",
-      "awaiting_info": null,
+      "phase": "Awaiting settlement",
+      "liveness": "awaiting_settlement",
+      "liveness_reason": "the event is over per the bot's own live feed; waiting for Kalshi to settle",
+      "awaiting_info": {
+        "likely_winner": "Washington Commanders wins by 15+",
+        "likely_win_pct": 96.5,
+        "result_if_likely_wins": -133.29,
+        "floor": -137.67,
+        "best": 494.63
+      },
       "first_posted_time": "2026-10-30T00:51:44.441557Z",
-      "start_time": "2026-11-02T01:20:00.184197Z",
+      "start_time": "2026-11-02T01:20:01.433301Z",
       "ends_by_time": "2026-11-02T04:20:00Z",
       "ends_by_time_approx": true,
-      "in_play": true,
-      "heartbeat_ts": "2026-11-02T04:23:24Z",
+      "in_play": false,
+      "heartbeat_ts": "2026-11-02T04:24:48Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 20.1,
+      "heartbeat_age_s": 2.8,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 4161.7,
+      "anchor_age_s": 4244.5,
       "allocation_dollars": 1472.3,
       "allocation_note": "allocator: W9-PHIWAS fixed at 1473.00 (ALLOC_FIXED.json), granted c_max $662.54",
       "starting_bankroll": 4240.35,
@@ -390,12 +398,9 @@
       "worst_now": -137.67,
       "best_now": 494.63,
       "worst_all_resting": -100.43,
-      "market_implied_outcome_now": -133.09,
-      "market_implied_trend_15m": -4.13,
-      "break_glass": {
-        "locked_floor": -664.24,
-        "cost": 615.47
-      },
+      "market_implied_outcome_now": -129.24,
+      "market_implied_trend_15m": -0.33,
+      "break_glass": null,
       "is_deci_cent": false,
       "outcomes": [
         {
@@ -405,16 +410,16 @@
           "resting": 0.0,
           "avg_sale_price": 0.2354,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0089,
+          "implied_prob": 0.0085,
           "outcome_now": -137.67,
           "win_pct": 0.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null,
           "crowd_ask": 0.01,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
-          "sportsbook_line": null,
+          "sportsbook_line": 0.01,
           "our_ask_rate_state": null
         },
         {
@@ -423,13 +428,13 @@
           "held": 1992.94,
           "resting": 0.0,
           "avg_sale_price": 0.1523,
-          "market_yes_price": 0.99,
-          "implied_prob": 0.8839,
+          "market_yes_price": 1.0,
+          "implied_prob": 0.8547,
           "outcome_now": -133.29,
-          "win_pct": 90.6,
-          "win_src": "bot",
+          "win_pct": 96.5,
+          "win_src": "mid",
           "settled": null,
-          "crowd_ask": 0.99,
+          "crowd_ask": null,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
@@ -443,16 +448,16 @@
           "resting": 0.0,
           "avg_sale_price": 0.1757,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0089,
+          "implied_prob": 0.0085,
           "outcome_now": -130.49,
           "win_pct": 0.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null,
           "crowd_ask": 0.01,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
-          "sportsbook_line": null,
+          "sportsbook_line": 0.01,
           "our_ask_rate_state": null
         },
         {
@@ -461,17 +466,17 @@
           "held": 1985.42,
           "resting": 0.0,
           "avg_sale_price": 0.2009,
-          "market_yes_price": 0.09,
-          "implied_prob": 0.0804,
+          "market_yes_price": 0.13,
+          "implied_prob": 0.1111,
           "outcome_now": -125.77,
-          "win_pct": 8.9,
-          "win_src": "bot",
+          "win_pct": 1.0,
+          "win_src": "last",
           "settled": null,
-          "crowd_ask": 0.09,
+          "crowd_ask": 0.01,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
-          "sportsbook_line": null,
+          "sportsbook_line": 0.02,
           "our_ask_rate_state": null
         },
         {
@@ -481,17 +486,17 @@
           "resting": 161.09,
           "avg_sale_price": 0.129,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0089,
+          "implied_prob": 0.0085,
           "outcome_now": -7.26,
-          "win_pct": 1.5,
-          "win_src": "bot",
+          "win_pct": 0.5,
+          "win_src": "mid",
           "settled": null,
           "crowd_ask": 0.01,
           "our_ask": 0.23,
           "our_ask_state": "planned",
           "our_planned_ask": null,
-          "sportsbook_line": null,
-          "our_ask_rate_state": null
+          "sportsbook_line": 0.02,
+          "our_ask_rate_state": "line"
         },
         {
           "ticker": "KXNFLWINMARGIN-26NOV01PHIWAS-PHI15PLUS",
@@ -500,31 +505,31 @@
           "resting": 707.0,
           "avg_sale_price": 0.0758,
           "market_yes_price": 0.01,
-          "implied_prob": 0.0089,
+          "implied_prob": 0.0085,
           "outcome_now": 494.63,
           "win_pct": 0.5,
-          "win_src": "bot",
+          "win_src": "mid",
           "settled": null,
           "crowd_ask": 0.01,
           "our_ask": 0.02,
           "our_ask_state": "dropped",
           "our_planned_ask": null,
-          "sportsbook_line": null,
-          "our_ask_rate_state": null
+          "sportsbook_line": 0.01,
+          "our_ask_rate_state": "line"
         }
       ],
       "leaders": [
         {
           "label": "Washington Commanders wins by 15+",
-          "win_pct": 90.6
+          "win_pct": 96.5
         },
         {
           "label": "Washington Commanders wins by 7-14",
-          "win_pct": 8.9
+          "win_pct": 1.0
         },
         {
-          "label": "Philadelphia Eagles wins by 7-14",
-          "win_pct": 1.5
+          "label": "Washington Commanders wins by 1-6",
+          "win_pct": 0.5
         }
       ],
       "last_fill_ts": "2026-11-02T03:39:26.367156Z",
@@ -628,156 +633,6 @@
           "fair": 0.2366,
           "fair_source": "event_state",
           "margin_cents": 7.34
-        },
-        {
-          "ts": "2026-11-02T02:55:49.215195Z",
-          "label": "Washington Commanders wins by 7-14",
-          "side": "sell",
-          "count": 17.0,
-          "price": 0.28,
-          "fair": 0.2386,
-          "fair_source": "event_state",
-          "margin_cents": 4.14
-        },
-        {
-          "ts": "2026-11-02T02:49:28.821135Z",
-          "label": "Washington Commanders wins by 15+",
-          "side": "sell",
-          "count": 1.0,
-          "price": 0.11,
-          "fair": 0.0755,
-          "fair_source": "event_state",
-          "margin_cents": 3.45
-        },
-        {
-          "ts": "2026-11-02T02:49:28.817263Z",
-          "label": "Washington Commanders wins by 15+",
-          "side": "sell",
-          "count": 13.0,
-          "price": 0.11,
-          "fair": 0.0755,
-          "fair_source": "event_state",
-          "margin_cents": 3.45
-        },
-        {
-          "ts": "2026-11-02T02:49:28.817263Z",
-          "label": "Washington Commanders wins by 15+",
-          "side": "sell",
-          "count": 36.0,
-          "price": 0.11,
-          "fair": 0.0755,
-          "fair_source": "event_state",
-          "margin_cents": 3.45
-        },
-        {
-          "ts": "2026-11-02T02:49:22.879243Z",
-          "label": "Philadelphia Eagles wins by 1-6",
-          "side": "sell",
-          "count": 37.8,
-          "price": 0.25,
-          "fair": 0.2204,
-          "fair_source": "event_state",
-          "margin_cents": 2.96
-        },
-        {
-          "ts": "2026-11-02T02:49:11.732308Z",
-          "label": "Philadelphia Eagles wins by 1-6",
-          "side": "sell",
-          "count": 53.2,
-          "price": 0.25,
-          "fair": 0.2204,
-          "fair_source": "event_state",
-          "margin_cents": 2.96
-        },
-        {
-          "ts": "2026-11-02T02:45:55.871546Z",
-          "label": "Philadelphia Eagles wins by 15+",
-          "side": "sell",
-          "count": 88.76,
-          "price": 0.05,
-          "fair": 0.0769,
-          "fair_source": "event_state",
-          "margin_cents": -2.69
-        },
-        {
-          "ts": "2026-11-02T02:39:19.271236Z",
-          "label": "Philadelphia Eagles wins by 1-6",
-          "side": "sell",
-          "count": 0.22,
-          "price": 0.24,
-          "fair": 0.2165,
-          "fair_source": "event_state",
-          "margin_cents": 2.35
-        },
-        {
-          "ts": "2026-11-02T02:37:09.496004Z",
-          "label": "Philadelphia Eagles wins by 1-6",
-          "side": "sell",
-          "count": 19.78,
-          "price": 0.24,
-          "fair": 0.2165,
-          "fair_source": "event_state",
-          "margin_cents": 2.35
-        },
-        {
-          "ts": "2026-11-02T02:34:56.942792Z",
-          "label": "Philadelphia Eagles wins by 7-14",
-          "side": "sell",
-          "count": 28.0,
-          "price": 0.22,
-          "fair": 0.1844,
-          "fair_source": "event_state",
-          "margin_cents": 3.56
-        },
-        {
-          "ts": "2026-11-02T02:34:56.942792Z",
-          "label": "Philadelphia Eagles wins by 7-14",
-          "side": "sell",
-          "count": 14.32,
-          "price": 0.23,
-          "fair": 0.1844,
-          "fair_source": "event_state",
-          "margin_cents": 4.56
-        },
-        {
-          "ts": "2026-11-02T02:34:35.725852Z",
-          "label": "Washington Commanders wins by 7-14",
-          "side": "sell",
-          "count": 47.14,
-          "price": 0.24,
-          "fair": 0.1844,
-          "fair_source": "event_state",
-          "margin_cents": 5.56
-        },
-        {
-          "ts": "2026-11-02T02:34:35.702868Z",
-          "label": "Washington Commanders wins by 7-14",
-          "side": "sell",
-          "count": 8.86,
-          "price": 0.24,
-          "fair": 0.1844,
-          "fair_source": "event_state",
-          "margin_cents": 5.56
-        },
-        {
-          "ts": "2026-11-02T02:32:13.291212Z",
-          "label": "Philadelphia Eagles wins by 7-14",
-          "side": "sell",
-          "count": 285.0,
-          "price": 0.15,
-          "fair": 0.1841,
-          "fair_source": "event_state",
-          "margin_cents": -3.41
-        },
-        {
-          "ts": "2026-11-02T02:32:07.709265Z",
-          "label": "Philadelphia Eagles wins by 1-6",
-          "side": "sell",
-          "count": 19.0,
-          "price": 0.25,
-          "fair": 0.2101,
-          "fair_source": "event_state",
-          "margin_cents": 3.99
         }
       ],
       "fills_summary": {
@@ -787,7 +642,7 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 31824.58,
+        "market_volume_last_30m": 36723.450000000004,
         "posts_last_10m": 0,
         "fills_last_30m": 0.0,
         "resting_contracts": 868.09,
@@ -824,12 +679,12 @@
       "coverage_glide_floor": null,
       "coverage_on_glide": null,
       "coverage_glide_f": null,
-      "posted_book_sum": 1.35,
+      "posted_book_sum": 0.4,
       "posted_book_sum_outcomes": 6,
       "posted_book_sum_resting_outcomes": 2,
-      "crowd_book_sum": 1.12,
-      "crowd_book_sum_outcomes": 6,
-      "my_book_sum": 1.35,
+      "crowd_book_sum": 0.05,
+      "crowd_book_sum_outcomes": 5,
+      "my_book_sum": 0.28,
       "my_book_sum_outcomes": 2,
       "my_vig_on_schedule": null,
       "my_vig_scheduled_sum": null,
@@ -880,27 +735,9 @@
           "90"
         ]
       },
-      "game_clock": {
-        "period": 4,
-        "clock": "0:31",
-        "time_remaining_s": 31.0,
-        "laps_remaining": null,
-        "laps_total": null,
-        "round": null,
-        "holes_left": null,
-        "tournament_progress": null,
-        "progress": 0.9913888888888889,
-        "home_score": 27,
-        "away_score": 10,
-        "home_code": "WAS",
-        "away_code": "PHI",
-        "possession_code": "PHI",
-        "final": false,
-        "stale": false
-      }
+      "game_clock": null
     }
   ],
-  "awaiting": [],
   "results_summary": {
     "total_realized": 2291.12,
     "by_sport": {
@@ -1570,7 +1407,7 @@
         "source": "ledger"
       }
     ],
-    "as_of": "2026-11-02T04:23:03Z",
+    "as_of": "2026-11-02T04:24:03Z",
     "source": "ledger+exchange"
   },
   "allocation_target": null
