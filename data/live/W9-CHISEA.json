@@ -1,30 +1,41 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-02T06:31:14.114278Z",
+  "generated_at": "2026-11-02T06:32:23.075029Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$297, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$411, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
+        "side": "SEA by 7-14",
+        "resting": "649 @ 21-31c",
+        "exposure": -410.73,
+        "exposure_text": "-$411",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$300 (now -$411)",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-02T06:30:15Z"
+      },
+      {
         "side": "CHI by 1-6",
         "resting": "876 @ 19-29c",
-        "exposure": -296.9,
-        "exposure_text": "-$297",
-        "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
-        "at": null,
+        "exposure": -175.9,
+        "exposure_text": "-$176",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-11-03T00:55:00Z",
         "stuck": false,
         "last_fill": "2026-11-02T06:29:26Z"
       },
       {
         "side": "CHI by 7-14",
-        "resting": "711 @ 14-23c",
-        "exposure": -46.49,
-        "exposure_text": "-$46",
+        "resting": "686 @ 14-23c",
+        "exposure": 74.51,
+        "exposure_text": "+$75",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-03T00:55:00Z",
@@ -34,8 +45,8 @@
       {
         "side": "CHI by 15+",
         "resting": "953 @ 8-18c",
-        "exposure": -7.98,
-        "exposure_text": "-$8",
+        "exposure": 113.02,
+        "exposure_text": "+$113",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-03T00:55:00Z",
@@ -43,21 +54,10 @@
         "last_fill": "2026-11-02T05:20:31Z"
       },
       {
-        "side": "SEA by 7-14",
-        "resting": "1,199 @ 21-31c",
-        "exposure": 18.27,
-        "exposure_text": "+$18",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-03T00:55:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-02T05:47:30Z"
-      },
-      {
         "side": "SEA by 1-6",
         "resting": "1,199 @ 23-33c",
-        "exposure": 167.27,
-        "exposure_text": "+$167",
+        "exposure": 288.27,
+        "exposure_text": "+$288",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-03T00:55:00Z",
@@ -66,8 +66,8 @@
       {
         "side": "SEA by 15+",
         "resting": "1,079 @ 19-28c",
-        "exposure": 167.27,
-        "exposure_text": "+$167",
+        "exposure": 288.27,
+        "exposure_text": "+$288",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-03T00:55:00Z",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,002, 5,452 resting. Worst line -$297 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 1,552, 5,152 resting. Worst line -$411 (goal -$150)."
         ]
       },
       {
@@ -91,14 +91,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$297).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$411).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
+          "Backstop ON: SEA by 7-14 stopped adding until worst line is above -$300 (now -$411).",
           "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
           "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
@@ -134,16 +134,16 @@
         "held": 464.2,
         "resting": 734.8,
         "target": null,
-        "status": "heavy",
+        "status": "even",
         "price": 0.2
       },
       {
         "label": "CHI by 7-14",
         "held": 213.8,
-        "resting": 436.2,
+        "resting": 686.2,
         "target": null,
         "status": "even",
-        "price": 0.15
+        "price": 0.14
       },
       {
         "label": "CHI by 15+",
@@ -163,11 +163,11 @@
       },
       {
         "label": "SEA by 7-14",
-        "held": 149.0,
-        "resting": 1050.0,
+        "held": 699.0,
+        "resting": 500.0,
         "target": null,
-        "status": "even",
-        "price": 0.22
+        "status": "heavy",
+        "price": 0.23
       },
       {
         "label": "SEA by 15+",
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-02T06:30:20Z"
+    "ts": "2026-11-02T06:32:21Z"
   },
   "posts": [
     {
@@ -3129,6 +3129,80 @@
       "text": "Building toward kickoff 7:15pm CT. Worst line -$297, goal -$150. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1793601080983-388871",
+      "ts": "2026-11-02T06:31:08Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$411 is under -$300. SEA by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1793601080984-621e99",
+      "ts": "2026-11-02T06:31:08Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SEA by 7-14 at 22c (550 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1793601080987-12d6c5",
+      "ts": "2026-11-02T06:31:20Z",
+      "book": "W9-CHISEA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$411, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1793601141470-962783",
+      "ts": "2026-11-02T06:31:08Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,006: SEA by 7-14 x550 at 22c, CHI by 1-6 x315 at 20c, CHI by 1-6 x141 at 19c. Worst line -$411.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1006.0,
+        "fills": [
+          {
+            "side": "SEA by 7-14",
+            "price": 0.22,
+            "qty": 550.0
+          },
+          {
+            "side": "CHI by 1-6",
+            "price": 0.2,
+            "qty": 315.0
+          },
+          {
+            "side": "CHI by 1-6",
+            "price": 0.19,
+            "qty": 141.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793601141470-218466",
+      "ts": "2026-11-02T06:30:05Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 250 (re-posted): CHI by 7-14 x250 at 14c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 250.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
