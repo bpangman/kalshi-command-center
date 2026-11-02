@@ -1,10 +1,10 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T00:05:51.201753Z",
+  "generated_at": "2026-11-02T00:07:08.347473Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$294, goal -$150.",
+    "headline": "Building toward kickoff 7:20pm CT. Worst line -$276, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "WAS by 1-6",
         "resting": "1,050 @ 27-33c",
-        "exposure": -293.93,
-        "exposure_text": "-$294",
+        "exposure": -275.68,
+        "exposure_text": "-$276",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:50pm CT",
         "at": null,
@@ -22,20 +22,20 @@
       },
       {
         "side": "WAS by 7-14",
-        "resting": "1,123 @ 25-34c",
-        "exposure": -220.93,
-        "exposure_text": "-$221",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-02T01:00:00Z",
+        "resting": "1,050 @ 29-34c",
+        "exposure": -275.68,
+        "exposure_text": "-$276",
+        "move": "Holding",
+        "when": "no move planned until the even-done check at 6:50pm CT",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-01T23:34:56Z"
+        "last_fill": "2026-11-02T00:05:14Z"
       },
       {
         "side": "PHI by 15+",
         "resting": "3,057 @ 6-16c",
-        "exposure": 84.07,
-        "exposure_text": "+$84",
+        "exposure": 102.32,
+        "exposure_text": "+$102",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -47,8 +47,8 @@
       {
         "side": "PHI by 1-6",
         "resting": "2,300 @ 15-26c",
-        "exposure": 256.07,
-        "exposure_text": "+$256",
+        "exposure": 274.32,
+        "exposure_text": "+$274",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -59,11 +59,11 @@
       {
         "side": "PHI by 7-14",
         "resting": "619 @ 10-12c",
-        "exposure": 256.07,
-        "exposure_text": "+$256",
+        "exposure": 274.32,
+        "exposure_text": "+$274",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T00:05:02Z",
+        "at": "2026-11-02T00:07:03Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "lag_note": "Steps to 9c at the next check."
@@ -71,8 +71,8 @@
       {
         "side": "WAS by 15+",
         "resting": "2,070 @ 24-30c",
-        "exposure": 256.07,
-        "exposure_text": "+$256",
+        "exposure": 274.32,
+        "exposure_text": "+$274",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-02T01:00:00Z",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,199, 9,065 resting. Worst line -$294 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,272, 8,992 resting. Worst line -$276 (goal -$150)."
         ]
       },
       {
@@ -101,7 +101,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$294).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$276).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -173,11 +173,11 @@
       },
       {
         "label": "WAS by 7-14",
-        "held": 477.0,
-        "resting": 1123.0,
+        "held": 550.0,
+        "resting": 1050.0,
         "target": null,
         "status": "even",
-        "price": 0.25
+        "price": 0.29
       },
       {
         "label": "WAS by 15+",
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T00:05:02Z"
+    "ts": "2026-11-02T00:07:03Z"
   },
   "posts": [
     {
@@ -3267,15 +3267,6 @@
   ],
   "audits": [
     {
-      "id": "1793484403301-f6fb04",
-      "ts": "2026-10-31T22:06:43Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): worst -337.50 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1793486229522-9a7f38",
       "ts": "2026-10-31T22:37:09Z",
       "book": "W9-PHIWAS",
@@ -4164,6 +4155,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1793577980953-df8862",
+      "ts": "2026-11-02T00:06:20Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+73 on WAS 7-14 @ 0.25 (maker)\nworst outcome now -178\nheld 550/550/0/0/0/172\nIf the game ends... you make\nWAS 1-6: -276 (-6.5% of bankroll)\nWAS 7-14: -276 (-6.5% of bankroll)\nWAS 15+: +274 (+6.5% of bankroll)\nPHI 1-6: +274 (+6.5% of bankroll)\nPHI 7-14: +274 (+6.5% of bankroll)\nPHI 15+: +102 (+2.4% of bankroll)",
       "severity": "warn"
     }
   ]
