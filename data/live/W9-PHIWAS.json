@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T01:07:02.620814Z",
+  "generated_at": "2026-11-02T01:08:14.968783Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -27,7 +27,7 @@
         "exposure_text": "-$134",
         "move": "Step price down 1c (31c to 30c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T01:06:28Z",
+        "at": "2026-11-02T01:07:28Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-01T23:27:06Z",
@@ -40,7 +40,7 @@
         "exposure_text": "-$134",
         "move": "Step price down 1c (29c to 28c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T01:06:28Z",
+        "at": "2026-11-02T01:07:28Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-02T00:05:14Z",
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$370 (now -$484).",
+          "Gate closed: batches wait for the worst line to reach -$344 (now -$484).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$370, worst line -$484; spent $9 of $100.",
+          "Paid balancing is running: plan -$344, worst line -$484; spent $9 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -183,19 +183,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T01:06:28Z"
+    "ts": "2026-11-02T01:07:28Z"
   },
   "posts": [
-    {
-      "id": "1793415924919-b1efad",
-      "ts": "2026-10-31T03:05:24Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793416830473-c4ca37",
       "ts": "2026-10-31T03:20:30Z",
@@ -3349,6 +3339,36 @@
       "text": "Bot note: COVERAGE-CAP decrease PHI1TO6: resting 849 -> 768 (held 315 + resting was over the cap 1083 = 1.16x; tighten p",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1793581689017-f9c94b",
+      "ts": "2026-11-02T01:05:57Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 166: PHI by 7-14 x100 at 8c, PHI by 1-6 x50 at 14c, WAS by 15+ x16 at 23c. Worst line -$484.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 166.0,
+        "fills": [
+          {
+            "side": "PHI by 7-14",
+            "price": 0.08,
+            "qty": 100.0
+          },
+          {
+            "side": "PHI by 1-6",
+            "price": 0.14,
+            "qty": 50.0
+          },
+          {
+            "side": "WAS by 15+",
+            "price": 0.23,
+            "qty": 16.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
