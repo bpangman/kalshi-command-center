@@ -1,221 +1,109 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T01:16:41.882623Z",
+  "generated_at": "2026-11-02T01:17:56.114340Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$431.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$431.",
     "confidence": "medium",
-    "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "PHI by 15+",
-        "resting": "2,329 @ 6-16c",
-        "exposure": -430.73,
-        "exposure_text": "-$431",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-02T00:57:18Z"
-      },
-      {
-        "side": "WAS by 7-14",
-        "resting": "436 @ 29c",
-        "exposure": -100.73,
-        "exposure_text": "-$101",
-        "move": "Step price down 1c (29c to 28c)",
-        "when": "if no fill by 7:25pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-11-02T01:25:59Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-02T01:15:59Z",
-        "lag_note": "Steps to 28c if no fill by 7:25pm CT."
-      },
-      {
-        "side": "WAS by 1-6",
-        "resting": "443 @ 31-32c",
-        "exposure": -85.73,
-        "exposure_text": "-$86",
-        "move": "Step price down 1c (31c to 30c)",
-        "when": "if no fill by 7:25pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-11-02T01:25:59Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-02T01:15:59Z",
-        "lag_note": "Steps to 30c if no fill by 7:25pm CT."
-      },
-      {
-        "side": "PHI by 1-6",
-        "resting": "565 @ 16-22c",
-        "exposure": 4.6,
-        "exposure_text": "+$5",
-        "move": "Hold price at 16c",
-        "when": "crowd pays 15.6c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-02T01:15:58Z",
-        "lag_note": "Price 16c matches the crowd."
-      },
-      {
-        "side": "PHI by 7-14",
-        "resting": "619 @ 10-12c",
-        "exposure": 169.27,
-        "exposure_text": "+$169",
-        "move": "Hold price at 10c",
-        "when": "crowd pays 9.7c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-02T01:10:43Z",
-        "lag_note": "Price 10c matches the crowd."
-      },
-      {
-        "side": "WAS by 15+",
-        "resting": "2,051 @ 25-30c",
-        "exposure": 234.76,
-        "exposure_text": "+$235",
-        "move": "Step price down 1c (25c to 24c)",
-        "when": "if no fill by 7:20pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-11-02T01:20:43Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-02T01:10:43Z",
-        "lag_note": "Steps to 24c if no fill by 7:20pm CT."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 3,024, 5,435 resting. Worst line -$431 (goal -$150)."
+          "In game (Ingame). Sold 3,024, 5,264 resting. Worst line -$431. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): PHI by 1-6, PHI by 7-14, WAS by 1-6, WAS by 7-14, WAS by 15+.",
-          "WAS by 15+: 666 behind. Steps to 24c if no fill by 7:20pm CT.",
-          "PHI by 7-14: 600 behind. Price 10c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$150 (now -$431).",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$431; spent $19 of $100.",
-          "Kickoff 7:20pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-02T01:20:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "PHI by 1-6",
         "held": 464.7,
-        "resting": 655.0,
+        "resting": 540.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.22
+        "status": "even",
+        "price": null
       },
       {
         "label": "PHI by 7-14",
         "held": 300.0,
         "resting": 619.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.1
+        "status": "even",
+        "price": null
       },
       {
         "label": "PHI by 15+",
         "held": 900.0,
         "resting": 1175.0,
         "target": null,
-        "status": "heavy",
-        "price": 0.08
+        "status": "even",
+        "price": null
       },
       {
         "label": "WAS by 1-6",
         "held": 555.0,
         "resting": 443.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.31
+        "status": "even",
+        "price": null
       },
       {
         "label": "WAS by 7-14",
         "held": 570.0,
-        "resting": 492.0,
+        "resting": 436.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.29
+        "status": "even",
+        "price": null
       },
       {
         "label": "WAS by 15+",
         "held": 234.5,
         "resting": 2051.4,
         "target": null,
-        "status": "lagging",
-        "price": 0.25
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T01:16:32Z"
+    "ts": "2026-11-02T01:17:33Z"
   },
   "posts": [
-    {
-      "id": "1793424980585-49d338",
-      "ts": "2026-10-31T05:36:20Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793425886484-85166b",
-      "ts": "2026-10-31T05:51:26Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793426792598-3ec237",
-      "ts": "2026-10-31T06:06:32Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793426803620-ed28f1",
       "ts": "2026-10-31T06:06:43Z",
@@ -3390,27 +3278,39 @@
       "text": "Balancing: sold 50 WAS by 1-6 at the bid 23c. Worst line -$450. Cost $0.62.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1793582232867-b84c13",
+      "ts": "2026-11-02T01:17:02Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: worst held -430.73 under -L_max 300.00, keeping orders anyway (cutover_always_keep), light sides repair in-gam",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793582253046-c65172",
+      "ts": "2026-11-02T01:17:33Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793582253046-15b62b",
+      "ts": "2026-11-02T01:17:33Z",
+      "book": "W9-PHIWAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$431.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1793500146305-579caf",
-      "ts": "2026-11-01T02:29:06Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): held worst -337.50 (backstop -300) or lagging gap 450 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1793501061562-8ef7a9",
-      "ts": "2026-11-01T02:44:21Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): worst -337.50 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793501976816-4797fb",
       "ts": "2026-11-01T02:59:36Z",
@@ -4291,6 +4191,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+100 on WAS 15+ @ 0.22 (taker)\n+100 on PHI 7-14 @ 0.08 (taker)\n+50 on PHI 1-6 @ 0.14 (taker)\nworst outcome now -668\nheld 550/550/235/365/300/900\nIf the game ends... you make\nWAS 1-6: -100 (-2.3% of bankroll)\nWAS 7-14: -100 (-2.3% of bankroll)\nWAS 15+: +216 (+5.1% of bankroll)\nPHI 1-6: +86 (+2.0% of bankroll)\nPHI 7-14: +150 (+3.5% of bankroll)\nPHI 15+: -450 (-10.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793582222499-7138b6",
+      "ts": "2026-11-02T01:17:02Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nWAS 1-6: -86 (-2.0% of bankroll)\nWAS 7-14: -101 (-2.4% of bankroll)\nWAS 15+: +235 (+5.5% of bankroll)\nPHI 1-6: +5 (+0.1% of bankroll)\nPHI 7-14: +169 (+4.0% of bankroll)\nPHI 15+: -431 (-10.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793582243665-93c464",
+      "ts": "2026-11-02T01:17:23Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -820.50 past hard cap -600.00 (2.0x L_max); worst-all-resting -820.50 past allowed limit -300.00",
       "severity": "warn"
     }
   ]
