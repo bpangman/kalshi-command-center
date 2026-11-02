@@ -1,6 +1,6 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T00:20:02.979810Z",
+  "generated_at": "2026-11-02T00:21:20.290368Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,7 +38,7 @@
         "exposure_text": "+$102",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-02T00:19:09Z",
+        "at": "2026-11-02T00:21:09Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-01T23:06:39Z",
@@ -189,29 +189,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T00:19:09Z"
+    "ts": "2026-11-02T00:21:09Z"
   },
   "posts": [
-    {
-      "id": "1793390758607-c7ed98",
-      "ts": "2026-10-30T20:05:58Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793391664709-7c2085",
-      "ts": "2026-10-30T20:21:04Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 10,640 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793392570841-7a22c6",
       "ts": "2026-10-30T20:36:10Z",
@@ -3273,18 +3253,28 @@
       "source": "bot",
       "text": "Inactivity on W9-PHIWAS: 0 orders posted in 10 min while the market traded 1099 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1793578829633-321c8d",
+      "ts": "2026-11-02T00:20:20Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$276. Lagging: WAS by 15+, PHI by 1-6, PHI by 7-14 +more.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1793578841656-8642de",
+      "ts": "2026-11-02T00:20:41Z",
+      "book": "W9-PHIWAS",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nWAS 1-6: -276 (-6.5% of bankroll)\nWAS 7-14: -276 (-6.5% of bankroll)\nWAS 15+: +274 (+6.5% of bankroll)\nPHI 1-6: +274 (+6.5% of bankroll)\nPHI 7-14: +274 (+6.5% of bankroll)\nPHI 15+: +102 (+2.4% of bankroll)\nCollected $274 premium ($0 fees) | Paper margin over fair $18 (not realized until settlement)\nEvent: WAS 7-14: WAS 0-0, Q0 0:00; PHI 7-14: PHI 0-0, Q0 0:00\nheld / resting\nWAS 1-6: 550 / 1050\nWAS 7-14: 550 / 1050\nWAS 15+: 0 / 2070\nPHI 1-6: 0 / 2300\nPHI 7-14: 0 / 619\nPHI 15+: 172 / 1903\nPosted book 1.26 | Sold avg 1.104 | Worst now -178 | Cash free $1472\nAnchor age 0s | Last fill 926s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793488081062-35f30a",
-      "ts": "2026-10-31T23:08:01Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): worst -337.50 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793489951868-ba5a57",
       "ts": "2026-10-31T23:39:11Z",
@@ -4174,6 +4164,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-PHIWAS): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=1082. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793578820179-cbbd42",
+      "ts": "2026-11-02T00:20:20Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 T-60 table\nIf the game ends... you make\nWAS 1-6: -276 (-6.5% of bankroll)\nWAS 7-14: -276 (-6.5% of bankroll)\nWAS 15+: +274 (+6.5% of bankroll)\nPHI 1-6: +274 (+6.5% of bankroll)\nPHI 7-14: +274 (+6.5% of bankroll)\nPHI 15+: +102 (+2.4% of bankroll)",
       "severity": "warn"
     }
   ]
