@@ -1,10 +1,10 @@
 {
   "key": "W9-PHIWAS",
-  "generated_at": "2026-11-02T02:57:02.071936Z",
+  "generated_at": "2026-11-02T02:58:13.828905Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$149.",
+    "headline": "In game (Ingame). Worst line -$148.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 11,035, 908 resting. Worst line -$149. Game 49% done."
+          "In game (Ingame). Sold 11,073, 870 resting. Worst line -$148. Game 49% done."
         ]
       },
       {
@@ -69,8 +69,8 @@
       },
       {
         "label": "WAS by 1-6",
-        "held": 1939.3,
-        "resting": 38.0,
+        "held": 1977.3,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W9-PHIWAS",
-    "ts": "2026-11-02T02:56:13Z"
+    "ts": "2026-11-02T02:57:14Z"
   },
   "posts": [
-    {
-      "id": "1793448647223-356513",
-      "ts": "2026-10-31T12:10:47Z",
-      "book": "W9-PHIWAS",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nWAS 1-6: +112 (+2.7% of bankroll)\nWAS 7-14: -338 (-8.0% of bankroll)\nWAS 15+: +112 (+2.7% of bankroll)\nPHI 1-6: +112 (+2.7% of bankroll)\nPHI 7-14: +112 (+2.7% of bankroll)\nPHI 15+: +112 (+2.7% of bankroll)\nCollected $112 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nheld / resting\nWAS 1-6: 0 / 1600\nWAS 7-14: 450 / 1050\nWAS 15+: 0 / 2115\nPHI 1-6: 0 / 1850\nPHI 7-14: 0 / 1950\nPHI 15+: 0 / 2075\nPosted book 1.29 | Sold avg 1.241 | Worst now +182 | Cash free $1448\nAnchor age 0s | Last fill 115211s ago",
-      "severity": "info"
-    },
     {
       "id": "1793448682994-67ba71",
       "ts": "2026-10-31T12:11:22Z",
@@ -3789,18 +3780,39 @@
       "source": "bot",
       "text": "If the game ends... you make\nWAS 1-6: -127 (-3.0% of bankroll)\nWAS 7-14: -124 (-2.9% of bankroll)\nWAS 15+: -131 (-3.1% of bankroll)\nPHI 1-6: -153 (-3.6% of bankroll)\nPHI 7-14: -54 (-1.3% of bankroll)\nPHI 15+: +448 (+10.6% of bankroll)\nCollected $1819 premium ($7 fees) | Paper margin over fair $149 (not realized until settlement)\nEvent: WAS 1-6: WAS 10-10, Q2 0:50; PHI 1-6: PHI 10-10, Q2 0:50\nheld / resting\nWAS 1-6: 1939 / 38\nWAS 7-14: 1936 / 22\nWAS 15+: 1944 / 26\nPHI 1-6: 1966 / 0\nPHI 7-14: 1867 / 161\nPHI 15+: 1365 / 682\nPosted book 1.23 | Sold avg 0.963 | Worst now -110 | Cash free $1472\nAnchor age 43s | Last fill 135s ago",
       "severity": "info"
+    },
+    {
+      "id": "1793588274496-0da117",
+      "ts": "2026-11-02T02:57:26Z",
+      "book": "W9-PHIWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 87: WAS by 1-6 x38 at 31c, WAS by 7-14 x27 at 32c, WAS by 7-14 x22 at 28c. Worst line -$146.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 87.0,
+        "fills": [
+          {
+            "side": "WAS by 1-6",
+            "price": 0.31,
+            "qty": 38.0
+          },
+          {
+            "side": "WAS by 7-14",
+            "price": 0.32,
+            "qty": 27.0
+          },
+          {
+            "side": "WAS by 7-14",
+            "price": 0.28,
+            "qty": 22.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793516769350-408b0e",
-      "ts": "2026-11-01T07:06:09Z",
-      "book": "W9-PHIWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-PHIWAS): held worst -337.50 (backstop -300) or lagging gap 450 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793516952423-287c3a",
       "ts": "2026-11-01T07:09:12Z",
@@ -4690,6 +4702,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W9-PHIWAS - Washington by 1 to 6 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793588246182-91bcc0",
+      "ts": "2026-11-02T02:57:26Z",
+      "book": "W9-PHIWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (floor -22.0% of slice, no cushion to spend)\nIf the game ends... you make\nWAS 1-6: -138 (-3.3% of bankroll)\nWAS 7-14: -146 (-3.4% of bankroll)\nWAS 15+: -105 (-2.5% of bankroll)\nPHI 1-6: -127 (-3.0% of bankroll)\nPHI 7-14: -28 (-0.7% of bankroll)\nPHI 15+: +474 (+11.2% of bankroll)",
       "severity": "warn"
     }
   ]
