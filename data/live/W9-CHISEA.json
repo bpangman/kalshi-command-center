@@ -1,6 +1,6 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-03T01:46:28.510527Z",
+  "generated_at": "2026-11-03T01:48:01.643229Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 8,952, 104 resting. Worst line -$49. Game 22% done."
+          "In game (Ingame). Sold 8,952, 52 resting. Worst line -$49. Game 22% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "CHI by 1-6",
         "held": 1497.0,
-        "resting": 52.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-03T01:46:12Z"
+    "ts": "2026-11-03T01:47:12Z"
   },
   "posts": [
-    {
-      "id": "1793536437662-670e1a",
-      "ts": "2026-11-01T12:33:57Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793537343519-863198",
-      "ts": "2026-11-01T12:49:03Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793538249939-224060",
       "ts": "2026-11-01T13:04:09Z",
@@ -3949,18 +3929,38 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793670392619-b45d1c",
+      "ts": "2026-11-03T01:44:35Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 77: SEA by 15+ x77 at 7c. Worst line -$49.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 77.0,
+        "fills": [
+          {
+            "side": "SEA by 15+",
+            "price": 0.07,
+            "qty": 77.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793670421400-ecbd84",
+      "ts": "2026-11-03T01:47:01Z",
+      "book": "W9-CHISEA",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nSEA 1-6: -11 (-0.3% of bankroll)\nSEA 7-14: +42 (+1.0% of bankroll)\nSEA 15+: -10 (-0.2% of bankroll)\nCHI 1-6: -21 (-0.5% of bankroll)\nCHI 7-14: -49 (-1.2% of bankroll)\nCHI 15+: -48 (-1.1% of bankroll)\nCollected $1496 premium ($20 fees) | Paper margin over fair $288 (not realized until settlement)\nEvent: CHI 15+: CHI 0-7, Q1 1:41; CHI 7-14: CHI 0-7, Q1 1:41\nheld / resting\nSEA 1-6: 1487 / 52\nSEA 7-14: 1434 / 0\nSEA 15+: 1486 / 0\nCHI 1-6: 1497 / 0\nCHI 7-14: 1525 / 0\nCHI 15+: 1523 / 0\nPosted book 1.13 | Sold avg 1.007 | Worst now -50 | Cash free $1458\nAnchor age 22s | Last fill 156s ago",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793597960711-1727ff",
-      "ts": "2026-11-02T05:39:20Z",
-      "book": "W9-CHISEA",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+8 on CHI 1-6 @ 0.19 (maker)\nworst outcome now +77\nheld 0/0/0/8/214/175\nIf the game ends... you make\nSEA 1-6: +46 (+1.1% of bankroll)\nSEA 7-14: +46 (+1.1% of bankroll)\nSEA 15+: +46 (+1.1% of bankroll)\nCHI 1-6: +38 (+0.9% of bankroll)\nCHI 7-14: -168 (-4.0% of bankroll)\nCHI 15+: -129 (-3.1% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1793601068258-b10884",
       "ts": "2026-11-02T06:31:08Z",
@@ -4850,6 +4850,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W9-CHISEA - Chicago by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793670441451-94bb17",
+      "ts": "2026-11-03T01:47:21Z",
+      "book": "W9-CHISEA",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W9-CHISEA - Seattle by 1 to 6 is posting again.",
       "severity": "warn"
     }
   ]
