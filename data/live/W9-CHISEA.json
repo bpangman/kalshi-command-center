@@ -1,128 +1,47 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-03T01:12:10.171790Z",
+  "generated_at": "2026-11-03T01:13:30.385182Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$84.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$84.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "SEA by 1-6",
-        "resting": "88 @ 22-23c",
-        "exposure": -84.17,
-        "exposure_text": "-$84",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-02T23:08:12Z"
-      },
-      {
-        "side": "CHI by 7-14",
-        "resting": "44 @ 13-23c",
-        "exposure": -81.16,
-        "exposure_text": "-$81",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-03T00:59:20Z"
-      },
-      {
-        "side": "CHI by 1-6",
-        "resting": "239 @ 19-29c",
-        "exposure": -34.17,
-        "exposure_text": "-$34",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-03T00:49:37Z"
-      },
-      {
-        "side": "SEA by 15+",
-        "resting": "50 @ 18-28c",
-        "exposure": -34.17,
-        "exposure_text": "-$34",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-03T00:49:37Z"
-      },
-      {
-        "side": "CHI by 15+",
-        "resting": "128 @ 7-18c",
-        "exposure": -33.42,
-        "exposure_text": "-$33",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-03T00:49:37Z"
-      },
-      {
-        "side": "SEA by 7-14",
-        "resting": "240 @ 21-31c",
-        "exposure": 155.83,
-        "exposure_text": "+$156",
-        "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-03T01:11:59Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-03T00:51:29Z",
-        "lag_note": "Steps to 20c at the next check."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 7,904, 393 resting. Worst line -$84 (goal -$150)."
+          "In game (Ingame). Sold 7,904, 393 resting. Worst line -$84. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): SEA by 7-14.",
-          "SEA by 7-14: 240 behind. Steps to 20c at the next check.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$84 is better than -$150.",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$84; spent $0 of $100.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-03T01:15:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "CHI by 1-6",
@@ -130,7 +49,7 @@
         "resting": 50.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       },
       {
         "label": "CHI by 7-14",
@@ -138,7 +57,7 @@
         "resting": 3.0,
         "target": null,
         "status": "even",
-        "price": 0.16
+        "price": null
       },
       {
         "label": "CHI by 15+",
@@ -146,7 +65,7 @@
         "resting": 50.0,
         "target": null,
         "status": "even",
-        "price": 0.09
+        "price": null
       },
       {
         "label": "SEA by 1-6",
@@ -161,8 +80,8 @@
         "held": 1143.0,
         "resting": 240.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.21
+        "status": "even",
+        "price": null
       },
       {
         "label": "SEA by 15+",
@@ -170,62 +89,21 @@
         "resting": 50.0,
         "target": null,
         "status": "even",
-        "price": 0.18
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-03T01:11:59Z"
+    "ts": "2026-11-03T01:13:00Z"
   },
   "posts": [
-    {
-      "id": "1793524652319-90018b",
-      "ts": "2026-11-01T09:17:32Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793525558831-1e36fc",
-      "ts": "2026-11-01T09:32:38Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793526464891-82ea7e",
-      "ts": "2026-11-01T09:47:44Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793527371971-6bf69e",
-      "ts": "2026-11-01T10:02:51Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793527732611-e17870",
-      "ts": "2026-11-01T10:08:52Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSEA 1-6: +21 (+0.5% of bankroll)\nSEA 7-14: +21 (+0.5% of bankroll)\nSEA 15+: +21 (+0.5% of bankroll)\nCHI 1-6: +21 (+0.5% of bankroll)\nCHI 7-14: -129 (-3.1% of bankroll)\nCHI 15+: +17 (+0.4% of bankroll)\nCollected $21 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nSEA 1-6: 0 / 1050\nSEA 7-14: 0 / 1050\nSEA 15+: 0 / 945\nCHI 1-6: 0 / 1050\nCHI 7-14: 150 / 450\nCHI 15+: 4 / 941\nPosted book 1.19 | Sold avg 1.159 | Worst now +84 | Cash free $1452\nAnchor age 0s | Last fill 105191s ago",
-      "severity": "info"
-    },
     {
       "id": "1793528278755-7c60b8",
       "ts": "2026-11-01T10:17:58Z",
@@ -3837,18 +3715,57 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793668341145-6a0ab5",
+      "ts": "2026-11-03T01:12:21Z",
+      "book": "W9-CHISEA",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W9-CHISEA: 0 orders posted in 10 min while the market traded 14506 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1793668380324-a0858b",
+      "ts": "2026-11-03T01:12:41Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -84.17, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793668380326-0d2e43",
+      "ts": "2026-11-03T01:13:00Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793668380326-4b41db",
+      "ts": "2026-11-03T01:13:00Z",
+      "book": "W9-CHISEA",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$84.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1793668404733-cffba0",
+      "ts": "2026-11-03T01:13:24Z",
+      "book": "W9-CHISEA",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: CHI now 43%",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793451063721-fb0a1b",
-      "ts": "2026-10-31T12:51:03Z",
-      "book": "W9-CHISEA",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1793516848615-8ea6f5",
       "ts": "2026-11-01T07:07:28Z",
@@ -4738,6 +4655,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CHISEA): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=14204. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793668361371-f3f808",
+      "ts": "2026-11-03T01:12:41Z",
+      "book": "W9-CHISEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nSEA 1-6: -84 (-2.0% of bankroll)\nSEA 7-14: +156 (+3.7% of bankroll)\nSEA 15+: -34 (-0.8% of bankroll)\nCHI 1-6: -34 (-0.8% of bankroll)\nCHI 7-14: -81 (-2.0% of bankroll)\nCHI 15+: -33 (-0.8% of bankroll)",
       "severity": "warn"
     }
   ]
