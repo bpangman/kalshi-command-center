@@ -1,6 +1,6 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-03T02:07:07.820917Z",
+  "generated_at": "2026-11-03T02:08:28.571304Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 9,360, 48 resting. Worst line -$77. Game 34% done."
+          "In game (Ingame). Sold 9,360, 324 resting. Worst line -$77. Game 34% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "CHI by 1-6",
         "held": 1507.0,
-        "resting": 0.0,
+        "resting": 54.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "CHI by 7-14",
         "held": 1629.0,
-        "resting": 0.0,
+        "resting": 54.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "CHI by 15+",
         "held": 1574.2,
-        "resting": 0.0,
+        "resting": 54.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "SEA by 1-6",
         "held": 1631.8,
-        "resting": 48.2,
+        "resting": 54.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "SEA by 7-14",
         "held": 1482.8,
-        "resting": 0.0,
+        "resting": 54.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1535.0,
-        "resting": 0.0,
+        "resting": 54.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-03T02:06:20Z"
+    "ts": "2026-11-03T02:08:20Z"
   },
   "posts": [
-    {
-      "id": "1793541874656-f18915",
-      "ts": "2026-11-01T14:04:34Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793542315321-400d9f",
       "ts": "2026-11-01T14:11:55Z",
@@ -4054,18 +4044,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793671660797-ef8f2a",
+      "ts": "2026-11-03T02:05:31Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 44: CHI by 7-14 x44 at 22c. Worst line -$77.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 44.0,
+        "fills": [
+          {
+            "side": "CHI by 7-14",
+            "price": 0.22,
+            "qty": 44.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793604568672-4f92cd",
-      "ts": "2026-11-02T07:29:28Z",
-      "book": "W9-CHISEA",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+1 on SEA 1-6 @ 0.23 (maker)\nworst outcome now +112\nheld 128/699/0/464/214/175\nIf the game ends... you make\nSEA 1-6: +190 (+4.6% of bankroll)\nSEA 7-14: -381 (-9.2% of bankroll)\nSEA 15+: +318 (+7.6% of bankroll)\nCHI 1-6: -146 (-3.5% of bankroll)\nCHI 7-14: +104 (+2.5% of bankroll)\nCHI 15+: +142 (+3.4% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1793605104188-a2f749",
       "ts": "2026-11-02T07:38:24Z",
@@ -4955,6 +4956,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+55 on CHI 7-14 @ 0.22 (maker)\n+7 on SEA 1-6 @ 0.28 (maker)\nworst outcome now -112\nheld 1632/1483/1535/1507/1629/1574\nIf the game ends... you make\nSEA 1-6: -77 (-1.9% of bankroll)\nSEA 7-14: +72 (+1.7% of bankroll)\nSEA 15+: +20 (+0.5% of bankroll)\nCHI 1-6: +48 (+1.1% of bankroll)\nCHI 7-14: -74 (-1.8% of bankroll)\nCHI 15+: -20 (-0.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793671654969-6d3003",
+      "ts": "2026-11-03T02:07:34Z",
+      "book": "W9-CHISEA",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W9-CHISEA - Seattle by 15 or more has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
