@@ -1,6 +1,6 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-03T01:26:00.742092Z",
+  "generated_at": "2026-11-03T01:27:21.261611Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 8,552, 31 resting. Worst line -$74. Game 7% done."
+          "In game (Ingame). Sold 8,552, 0 resting. Worst line -$74. Game 9% done."
         ]
       },
       {
@@ -86,7 +86,7 @@
       {
         "label": "SEA by 15+",
         "held": 1384.0,
-        "resting": 31.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-03T01:25:04Z"
+    "ts": "2026-11-03T01:27:05Z"
   },
   "posts": [
     {
@@ -3882,15 +3882,6 @@
   ],
   "audits": [
     {
-      "id": "1793577076099-b32887",
-      "ts": "2026-11-01T23:51:16Z",
-      "book": "W9-CHISEA",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
       "id": "1793582134656-0cf2ec",
       "ts": "2026-11-02T01:15:34Z",
       "book": "W9-CHISEA",
@@ -4780,6 +4771,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W9-CHISEA): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793669228029-e9ab17",
+      "ts": "2026-11-03T01:27:08Z",
+      "book": "W9-CHISEA",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- W9-CHISEA - Chicago by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W9-CHISEA - Seattle by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
