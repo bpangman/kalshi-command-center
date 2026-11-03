@@ -1,6 +1,6 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-03T00:47:36.920617Z",
+  "generated_at": "2026-11-03T00:48:59.109311Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -57,7 +57,7 @@
       },
       {
         "side": "CHI by 7-14",
-        "resting": "315 @ 15-23c",
+        "resting": "644 @ 13-23c",
         "exposure": 238.41,
         "exposure_text": "+$238",
         "move": "Paid balancing (trickle)",
@@ -66,7 +66,7 @@
         "stuck": false,
         "also": "Also: price step",
         "last_fill": "2026-11-03T00:46:33Z",
-        "lag_note": "Price 15c matches the crowd."
+        "lag_note": "Price 13c matches the crowd."
       },
       {
         "side": "SEA by 15+",
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 5,280, 2,624 resting. Worst line -$406 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 5,280, 3,018 resting. Worst line -$406 (goal -$150)."
         ]
       },
       {
@@ -93,7 +93,7 @@
         "lines": [
           "Lagging (150+ behind the leader): CHI by 7-14, CHI by 15+, SEA by 15+.",
           "SEA by 15+: 1,383 behind. Price 17c matches the crowd.",
-          "CHI by 7-14: 644 behind. Price 15c matches the crowd.",
+          "CHI by 7-14: 644 behind. Price 13c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -144,10 +144,10 @@
       {
         "label": "CHI by 7-14",
         "held": 739.0,
-        "resting": 250.0,
+        "resting": 644.0,
         "target": null,
         "status": "lagging",
-        "price": 0.16
+        "price": 0.13
       },
       {
         "label": "CHI by 15+",
@@ -183,18 +183,9 @@
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-03T00:46:51Z"
+    "ts": "2026-11-03T00:48:51Z"
   },
   "posts": [
-    {
-      "id": "1793517016169-3ec67a",
-      "ts": "2026-11-01T07:10:16Z",
-      "book": "W9-CHISEA",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "W9-CHISEA book bot looks stuck: heartbeat 3653s old; no RISK/HEALTH line in 600s. It may be down or frozen. Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1793517339704-d76c81",
       "ts": "2026-11-01T07:15:39Z",
@@ -3766,18 +3757,29 @@
       "source": "bot",
       "text": "If the game ends... you make\nSEA 1-6: -415 (-10.0% of bankroll)\nSEA 7-14: -70 (-1.7% of bankroll)\nSEA 15+: +968 (+23.3% of bankroll)\nCHI 1-6: -332 (-8.0% of bankroll)\nCHI 7-14: +294 (+7.1% of bankroll)\nCHI 15+: +147 (+3.5% of bankroll)\nCollected $968 premium ($0 fees) | Paper margin over fair $60 (not realized until settlement)\nEvent: SEA 7-14: SEA 0-0, Q0 0:00; CHI 7-14: CHI 0-0, Q0 0:00\nheld / resting\nSEA 1-6: 1383 / 0\nSEA 7-14: 1038 / 345\nSEA 15+: 0 / 1383\nCHI 1-6: 1300 / 83\nCHI 7-14: 674 / 315\nCHI 15+: 820 / 563\nPosted book 1.17 | Sold avg 1.054 | Worst now +53 | Cash free $1458\nAnchor age 0s | Last fill 410s ago",
       "severity": "info"
+    },
+    {
+      "id": "1793666931910-4460d0",
+      "ts": "2026-11-03T00:46:50Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 65: CHI by 7-14 x65 at 15c. Worst line -$406.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 65.0,
+        "fills": [
+          {
+            "side": "CHI by 7-14",
+            "price": 0.15,
+            "qty": 65.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793411155307-0f3aa1",
-      "ts": "2026-10-31T01:45:55Z",
-      "book": "W9-CHISEA",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: loop exception (process continues) - OSError: [Errno 28] No space left on device: '/Users/jarvis/kalshi/tools/fleet/state/W9-CHISEA/volume_profile.json.tmp'",
-      "severity": "warn"
-    },
     {
       "id": "1793411343446-4ad954",
       "ts": "2026-10-31T01:49:03Z",
@@ -4667,6 +4669,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+34 on SEA 7-14 @ 0.19 (maker)\nworst outcome now +53\nheld 1383/733/0/1300/674/820\nIf the game ends... you make\nSEA 1-6: -473 (-11.4% of bankroll)\nSEA 7-14: +177 (+4.2% of bankroll)\nSEA 15+: +910 (+21.9% of bankroll)\nCHI 1-6: -390 (-9.4% of bankroll)\nCHI 7-14: +236 (+5.7% of bankroll)\nCHI 15+: +89 (+2.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793666873746-c608fc",
+      "ts": "2026-11-03T00:47:53Z",
+      "book": "W9-CHISEA",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+65 on CHI 7-14 @ 0.15 (maker)\nworst outcome now +108\nheld 1383/1038/0/1300/739/820\nIf the game ends... you make\nSEA 1-6: -406 (-9.8% of bankroll)\nSEA 7-14: -61 (-1.5% of bankroll)\nSEA 15+: +977 (+23.5% of bankroll)\nCHI 1-6: -323 (-7.8% of bankroll)\nCHI 7-14: +238 (+5.7% of bankroll)\nCHI 15+: +157 (+3.8% of bankroll)",
       "severity": "warn"
     }
   ]
