@@ -1,6 +1,6 @@
 {
   "key": "W9-CHISEA",
-  "generated_at": "2026-11-03T02:37:18.981842Z",
+  "generated_at": "2026-11-03T02:38:39.068642Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W9-CHISEA",
-    "ts": "2026-11-03T02:36:31Z"
+    "ts": "2026-11-03T02:38:32Z"
   },
   "posts": [
-    {
-      "id": "1793547313368-7c9f55",
-      "ts": "2026-11-01T15:35:13Z",
-      "book": "W9-CHISEA",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,486 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793548219482-b55066",
       "ts": "2026-11-01T15:50:19Z",
@@ -4155,18 +4145,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793673512336-696920",
+      "ts": "2026-11-03T02:36:20Z",
+      "book": "W9-CHISEA",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 317: SEA by 7-14 x269 at 9c, SEA by 15+ x48 at 4c. Worst line -$76.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 317.0,
+        "fills": [
+          {
+            "side": "SEA by 7-14",
+            "price": 0.09,
+            "qty": 269.0
+          },
+          {
+            "side": "SEA by 15+",
+            "price": 0.04,
+            "qty": 48.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793608778410-d269e9",
-      "ts": "2026-11-02T08:39:38Z",
-      "book": "W9-CHISEA",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W9-CHISEA): worst -376.68 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793608778411-753c2e",
       "ts": "2026-11-02T08:39:38Z",
@@ -5056,6 +5062,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+2 on SEA 7-14 @ 0.10 (maker)\n+48 on CHI 1-6 @ 0.28 (maker)\n+48 on CHI 7-14 @ 0.30 (maker)\nworst outcome now -76\nheld 1686/1485/1580/1654/1731/1673\nIf the game ends... you make\nSEA 1-6: -34 (-0.8% of bankroll)\nSEA 7-14: +167 (+4.0% of bankroll)\nSEA 15+: +72 (+1.7% of bankroll)\nCHI 1-6: -2 (-0.0% of bankroll)\nCHI 7-14: -79 (-1.9% of bankroll)\nCHI 15+: -21 (-0.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793673475553-5e6f54",
+      "ts": "2026-11-03T02:37:55Z",
+      "book": "W9-CHISEA",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W9-CHISEA - Seattle by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
