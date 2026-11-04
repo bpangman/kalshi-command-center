@@ -1,13 +1,13 @@
 {
   "key": "HOM-TRUCK",
-  "generated_at": "2026-11-04T08:36:10.407664Z",
+  "generated_at": "2026-11-04T08:37:31.986963Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Nick Sanchez",
@@ -81,7 +81,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 6:30pm CT. Sold 260, 7,702 resting. Worst line -$250."
+          "Pre-race growth, green flag Fri 6:30pm CT. Sold 260, 7,702 resting. Worst line -$250. Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -174,7 +174,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "HOM-TRUCK",
-    "ts": "2026-11-04T08:35:50Z"
+    "ts": "2026-11-04T08:36:51Z"
   },
   "posts": [
     {
@@ -2589,6 +2589,16 @@
       "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793781411065-059685",
+      "ts": "2026-11-04T08:36:51Z",
+      "book": "HOM-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -3427,6 +3437,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-TRUCK): worst-all-resting-filled -2457.47 vs hard cap -278.28 (2.0x L_max 139.14). Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793781434314-3c391f",
+      "ts": "2026-11-04T08:37:14Z",
+      "book": "HOM-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-TRUCK): 25 ladder(s) stale 10+ min: KXNASCARRACE-NASCA26-PAKL low 255c, KXNASCARRACE-NASCA26-COLA low 252c, KXNASCARRACE-NASCA26-JORE low 252c, KXNASCARRACE-NASCA26-DAHE low 255c, KXNASCARRACE-NASCA26-BERH low 257c, KXNASCARRACE-NASCA26-JUHA low 252c, KXNASCARRACE-NASCA26-SPBO low 252c, KXNASCARRACE-NASCA26-STFR low 255c, KXNASCARRACE-NASCA26-SPDA low 252c, KXNASCARRACE-NASCA26-CHEC high 271c, KXNASCARRACE-NASCA26-TYAN low 257c, KXNASCARRACE-NASCA26-CHSM high 115c, KXNASCARRACE-NASCA26-MAMA low 252c, KXNASCARRACE-NASCA26-TAGR low 255c, KXNASCARRACE-NASCA26-KRWR low 252c, KXNASCARRACE-NASCA26-JAGA low 255c, KXNASCARRACE-NASCA26-LEHO low 252c, KXNASCARRACE-NASCA26-LALE low 255c, KXNASCARRACE-NASCA26-FRMU low 252c, KXNASCARRACE-NASCA26-BRQU low 252c, KXNASCARRACE-NASCA26-CLGR low 252c, KXNASCARRACE-NASCA26-ANPE low 252c, KXNASCARRACE-NASCA26-COBU low 252c, KXNASCARRACE-NASCA26-MITY low 252c, KXNASCARRACE-NASCA26-MACR low 2755c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793781434314-ca9bcd",
+      "ts": "2026-11-04T08:37:14Z",
+      "book": "HOM-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-TRUCK): worst -249.77 vs floor -164.14. Check the command center.",
       "severity": "critical"
     }
   ]
