@@ -1,13 +1,13 @@
 {
   "key": "HOM-TRUCK",
-  "generated_at": "2026-11-04T00:28:14.537411Z",
+  "generated_at": "2026-11-04T00:29:33.077972Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Nick Sanchez",
@@ -81,7 +81,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 6:30pm CT. Sold 260, 7,702 resting. Worst line -$250."
+          "Pre-race growth, green flag Fri 6:30pm CT. Sold 260, 7,702 resting. Worst line -$250. Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -174,7 +174,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "HOM-TRUCK",
-    "ts": "2026-11-04T00:27:25Z"
+    "ts": "2026-11-04T00:29:26Z"
   },
   "posts": [
     {
@@ -2057,6 +2057,26 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nNick Sanchez: -250\nParker Kligerman: +10\nGrant Enfinger: +10\nCorey LaJoie: +10\nJosh Reaume: +10\nDaniel Hemric: +10\nBen Rhodes: +10\nJustin Haley: +10\nall others (27) >= +10\nCollected $10 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nCore posted book 1.43 | Worst now -250 | Cash free $4839\nAnchor age 243s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1793752126374-2052a5",
+      "ts": "2026-11-04T00:28:46Z",
+      "book": "HOM-TRUCK",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 7,702 resting. Next: Risk glide starts, Fri 2:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1793752166733-d6e2ac",
+      "ts": "2026-11-04T00:29:26Z",
+      "book": "HOM-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
@@ -2410,6 +2430,15 @@
       "source": "bot",
       "text": "+260 on Nick Sanchez @ 0.04 (maker)\nworst outcome now -250\nIf the race ends... you make\nNick Sanchez: -250\nParker Kligerman: +10\nGrant Enfinger: +10\nCorey LaJoie: +10\nJosh Reaume: +10\nDaniel Hemric: +10\nBen Rhodes: +10\nJustin Haley: +10\nall others (27) >= +10",
       "severity": "warn"
+    },
+    {
+      "id": "1793752125508-1788bb",
+      "ts": "2026-11-04T00:28:45Z",
+      "book": "HOM-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-TRUCK): worst-all-resting-filled -2457.47 vs hard cap -278.28 (2.0x L_max 139.14). Check the command center.",
+      "severity": "critical"
     }
   ]
 }
