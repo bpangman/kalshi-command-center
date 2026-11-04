@@ -1,13 +1,13 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-04T01:25:27.392831Z",
+  "generated_at": "2026-11-04T01:26:45.348826Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$622, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Bubba Wallace",
@@ -17,7 +17,7 @@
         "move": "Stops adding (backstop)",
         "when": "holding until his loss is back above -$550 (now -$622)",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "also": "Also: glide starts Sun 10:00am CT",
         "last_fill": "2026-11-03T23:55:34Z"
       },
@@ -116,7 +116,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 3,856, 29,142 resting. Worst line -$622 (limit now -$600). Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 3,856, 29,142 resting. Worst line -$622 (limit now -$600)."
         ]
       },
       {
@@ -241,7 +241,7 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "HOM-CUP",
-    "ts": "2026-11-04T01:24:30Z"
+    "ts": "2026-11-04T01:26:31Z"
   },
   "posts": [
     {
@@ -3348,27 +3348,19 @@
       "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$622, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793755531051-ccb12e",
+      "ts": "2026-11-04T01:25:31Z",
+      "book": "HOM-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$622, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793672904602-2ace1c",
-      "ts": "2026-11-03T02:28:24Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Cash line: trimmed 777 contracts off the back of Alex Bowman, Austin Cindric, Brad Keselowski, Carson Hocevar, Chris Buescher, Josh Berry, Kyle Larson, Ross Chastain, Ryan Preece, Tyler Reddick, William Byron so Kalshi would not pull the whole set (usable cash $-206). No row cancelled; the front rows kept their place in line.",
-      "severity": "warn"
-    },
-    {
-      "id": "1793673304449-3d2633",
-      "ts": "2026-11-03T02:35:04Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+59 on Tyler Reddick @ 0.11 (maker)\nworst outcome now -569\nIf the race ends... you make\nKyle Larson: -569\nBubba Wallace: -547\nCarson Hocevar: -498\nTyler Reddick: -349\nWilliam Byron: -114\nChase Briscoe: +47\nCasey Mears: +242\nJ.J. Yeley: +242\nall others (32) >= +242",
-      "severity": "warn"
-    },
     {
       "id": "1793673503571-bb6290",
       "ts": "2026-11-03T02:38:23Z",
@@ -4250,6 +4242,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- HOM-CUP - Bubba Wallace has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1793755568175-b13960",
+      "ts": "2026-11-04T01:26:08Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-CUP): 26 ladder(s) stale 10+ min: KXNASCARRACE-NASC26-CAME low 258c, KXNASCARRACE-NASC26-JJYE low 260c, KXNASCARRACE-NASC26-AJAL low 200c, KXNASCARRACE-NASC26-MIMC low 200c, KXNASCARRACE-NASC26-JOLO high 228c, KXNASCARRACE-NASC26-AUDI low 200c, KXNASCARRACE-NASC26-RIST low 200c, KXNASCARRACE-NASC26-SHVA low 200c, KXNASCARRACE-NASC26-CHBU low 205c, KXNASCARRACE-NASC26-ROCH low 205c, KXNASCARRACE-NASC26-TYDI low 200c, KXNASCARRACE-NASC26-CHEL high 216c, KXNASCARRACE-NASC26-ERJO low 200c, KXNASCARRACE-NASC26-JONE low 200c, KXNASCARRACE-NASC26-COCU low 258c, KXNASCARRACE-NASC26-DASU low 200c, KXNASCARRACE-NASC26-COWA low 258c, KXNASCARRACE-NASC26-AUHI low 200c, KXNASCARRACE-NASC26-AUCI low 207c, KXNASCARRACE-NASC26-NOGR low 200c, KXNASCARRACE-NASC26-TOGI low 200c, KXNASCARRACE-NASC26-CHFI low 260c, KXNASCARRACE-NASC26-RIHE low 200c, KXNASCARRACE-NASC26-ZASM low 260c, KXNASCARRACE-NASC26-CAHO high 151c, KXNASCARRACE-NASC26-COZI low 200c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793755568176-02b760",
+      "ts": "2026-11-04T01:26:08Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-CUP): worst -621.78 vs floor -396.34. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
