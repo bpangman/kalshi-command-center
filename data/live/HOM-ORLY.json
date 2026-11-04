@@ -1,13 +1,13 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-04T08:34:48.552529Z",
+  "generated_at": "2026-11-04T08:36:10.407664Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$81, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 51,
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Justin Allgaier",
@@ -92,7 +92,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 4:00pm CT. Sold 105, 8,467 resting. Worst line -$81. Bot is slow (checks every 51s, set for 30s)."
+          "Pre-race growth, green flag Sat 4:00pm CT. Sold 105, 8,467 resting. Worst line -$81."
         ]
       },
       {
@@ -201,7 +201,7 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-04T08:34:09Z"
+    "ts": "2026-11-04T08:35:10Z"
   },
   "posts": [
     {
@@ -2974,18 +2974,19 @@
       "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$81, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793781310421-c37e46",
+      "ts": "2026-11-04T08:35:10Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$81, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793657706720-584b28",
-      "ts": "2026-11-02T22:15:06Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 37 unexplained\n- HOM-ORLY - Andrew Patterson has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Austin Hill has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Blaine Perkins has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Brent Crews has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Brandon Jones has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Brad Perez has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Brennan Poole has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Carson Kvapil has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- plus 29 more (fleet/state/empty_side_sentinel.json)",
-      "severity": "warn"
-    },
     {
       "id": "1793658308099-2fb905",
       "ts": "2026-11-02T22:25:08Z",
@@ -3876,6 +3877,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): worst-all-resting-filled -2316.12 vs hard cap -318.24 (2.0x L_max 159.12). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793781370321-c58363",
+      "ts": "2026-11-04T08:36:10Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+9 on Justin Allgaier @ 0.23 (maker)\nworst outcome now -81\nIf the race ends... you make\nJustin Allgaier: -81\nJeremy Clements: +24\nRyan Sieg: +24\nJoey Gase: +24\nJeb Burton: +24\nRyan Ellis: +24\nBrandon Jones: +24\nJosh Williams: +24\nall others (30) >= +24",
+      "severity": "warn"
     }
   ]
 }
