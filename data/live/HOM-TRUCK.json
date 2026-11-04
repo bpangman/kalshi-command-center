@@ -1,13 +1,13 @@
 {
   "key": "HOM-TRUCK",
-  "generated_at": "2026-11-04T10:34:19.618794Z",
+  "generated_at": "2026-11-04T10:36:13.072828Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 63,
     "moves": [
       {
         "side": "Nick Sanchez",
@@ -81,7 +81,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Fri 6:30pm CT. Sold 260, 7,702 resting. Worst line -$250."
+          "Pre-race growth, green flag Fri 6:30pm CT. Sold 260, 7,702 resting. Worst line -$250. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -174,7 +174,7 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "HOM-TRUCK",
-    "ts": "2026-11-04T10:33:39Z"
+    "ts": "2026-11-04T10:35:40Z"
   },
   "posts": [
     {
@@ -2777,18 +2777,19 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nNick Sanchez: -250\nParker Kligerman: +10\nGrant Enfinger: +10\nCorey LaJoie: +10\nJosh Reaume: +10\nDaniel Hemric: +10\nBen Rhodes: +10\nJustin Haley: +10\nall others (27) >= +10\nCollected $10 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nCore posted book 1.43 | Worst now -250 | Cash free $4713\nAnchor age 0s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1793788540395-dbf6fc",
+      "ts": "2026-11-04T10:35:40Z",
+      "book": "HOM-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$250, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793668896835-55e9f3",
-      "ts": "2026-11-03T01:21:36Z",
-      "book": "HOM-TRUCK",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 1 driver(s): Chandler Smith (+64%)",
-      "severity": "warn"
-    },
     {
       "id": "1793670195301-95b514",
       "ts": "2026-11-03T01:43:15Z",
@@ -3678,6 +3679,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-TRUCK): worst -249.77 vs floor -164.14. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793788463012-206f02",
+      "ts": "2026-11-04T10:34:23Z",
+      "book": "HOM-TRUCK",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-TRUCK): worst-all-resting-filled -2457.47 vs hard cap -278.28 (2.0x L_max 139.14). Check the command center.",
       "severity": "critical"
     }
   ]
