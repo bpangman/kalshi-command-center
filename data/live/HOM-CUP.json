@@ -1,12 +1,12 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-04T17:18:02.582080Z",
+  "generated_at": "2026-11-04T17:19:25.226670Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$667, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [
       {
@@ -116,7 +116,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 4,086, 31,059 resting. Worst line -$667 (limit now -$600)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 4,086, 31,059 resting. Worst line -$667 (limit now -$600). Live feed is down; the bot is polling, so numbers may lag."
         ]
       },
       {
@@ -241,19 +241,9 @@
     ],
     "moves_note": "2 more drivers with small exposure are not shown. 30 other drivers: nothing sold, no exposure.",
     "book": "HOM-CUP",
-    "ts": "2026-11-04T17:17:59Z"
+    "ts": "2026-11-04T17:19:00Z"
   },
   "posts": [
-    {
-      "id": "1793687606365-941e1f",
-      "ts": "2026-11-03T06:33:26Z",
-      "book": "HOM-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$551, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793687666735-499e54",
       "ts": "2026-11-03T06:34:26Z",
@@ -3271,18 +3261,19 @@
       "text": "Bot restarted. It adopts the orders already resting.",
       "severity": "warn",
       "title": "Bot restarted"
+    },
+    {
+      "id": "1793812740144-14df14",
+      "ts": "2026-11-04T17:19:00Z",
+      "book": "HOM-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$667, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793740472990-c9d751",
-      "ts": "2026-11-03T21:14:32Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-CUP): 27 ladder(s) stale 10+ min: KXNASCARRACE-NASC26-CAME low 200c, KXNASCARRACE-NASC26-JJYE low 260c, KXNASCARRACE-NASC26-AJAL low 200c, KXNASCARRACE-NASC26-MIMC low 200c, KXNASCARRACE-NASC26-JOLO high 188c, KXNASCARRACE-NASC26-AUDI low 200c, KXNASCARRACE-NASC26-RIST low 200c, KXNASCARRACE-NASC26-SHVA low 200c, KXNASCARRACE-NASC26-CHBU low 205c, KXNASCARRACE-NASC26-ROCH low 205c, KXNASCARRACE-NASC26-TYDI low 200c, KXNASCARRACE-NASC26-BUWA low 106c, KXNASCARRACE-NASC26-CHEL high 216c, KXNASCARRACE-NASC26-ERJO low 200c, KXNASCARRACE-NASC26-JONE low 200c, KXNASCARRACE-NASC26-COCU low 200c, KXNASCARRACE-NASC26-DASU low 200c, KXNASCARRACE-NASC26-COWA low 200c, KXNASCARRACE-NASC26-AUHI low 200c, KXNASCARRACE-NASC26-AUCI low 207c, KXNASCARRACE-NASC26-NOGR low 200c, KXNASCARRACE-NASC26-TOGI low 200c, KXNASCARRACE-NASC26-CHFI low 260c, KXNASCARRACE-NASC26-RIHE low 200c, KXNASCARRACE-NASC26-ZASM low 260c, KXNASCARRACE-NASC26-CAHO high 151c, KXNASCARRACE-NASC26-COZI low 200c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793740472991-042b32",
       "ts": "2026-11-03T21:14:32Z",
@@ -4173,6 +4164,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-CUP): worst -666.61 vs floor -396.34. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793812739732-1ccc9d",
+      "ts": "2026-11-04T17:18:59Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
