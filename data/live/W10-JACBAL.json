@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T22:37:16.594948Z",
+  "generated_at": "2026-11-05T22:38:46.705428Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,191, 3,520 resting. Worst line -$329 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,191, 2,399 resting. Worst line -$329 (goal -$150)."
         ]
       },
       {
@@ -134,10 +134,10 @@
       {
         "label": "BAL by 1-6",
         "held": 75.0,
-        "resting": 1000.0,
+        "resting": 450.0,
         "target": null,
         "status": "even",
-        "price": 0.11
+        "price": 0.12
       },
       {
         "label": "BAL by 7-14",
@@ -150,7 +150,7 @@
       {
         "label": "BAL by 15+",
         "held": 547.0,
-        "resting": 671.0,
+        "resting": 370.9,
         "target": null,
         "status": "even",
         "price": 0.04
@@ -158,10 +158,10 @@
       {
         "label": "JAC by 1-6",
         "held": 354.4,
-        "resting": 720.6,
+        "resting": 450.0,
         "target": null,
         "status": "even",
-        "price": 0.19
+        "price": 0.2
       },
       {
         "label": "JAC by 7-14",
@@ -181,18 +181,9 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T22:36:35Z"
+    "ts": "2026-11-05T22:38:35Z"
   },
   "posts": [
-    {
-      "id": "1793763341080-79dbca",
-      "ts": "2026-11-04T03:35:41Z",
-      "book": "W10-JACBAL",
-      "kind": "text",
-      "source": "bot",
-      "text": "Lopsided: JAC 81% favored (no premium collected yet); pregame keeps posting both sides, the heavier side a few cents higher (no favored-side cap)",
-      "severity": "info"
-    },
     {
       "id": "1793763341329-14abc6",
       "ts": "2026-11-04T03:35:41Z",
@@ -3614,6 +3605,54 @@
       "source": "bot",
       "text": "Inactivity on W10-JACBAL: 0 orders posted in 10 min while the market traded 1832 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1793918275799-4f022f",
+      "ts": "2026-11-05T22:37:38Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on BAL by 1-6 (550 at 11c): [{'code': 'same_price_repost_blocked', 'message': 'same-pric.",
+      "severity": "warn",
+      "title": "Post refused"
+    },
+    {
+      "id": "1793918275800-c02be1",
+      "ts": "2026-11-05T22:37:38Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on BAL by 15+ (300 at 4c): [{'code': 'same_price_repost_blocked', 'message': 'same-pric.",
+      "severity": "warn",
+      "title": "Post refused"
+    },
+    {
+      "id": "1793918275800-ed81a8",
+      "ts": "2026-11-05T22:37:38Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on JAC by 1-6 (270 at 19c): [{'code': 'same_price_repost_blocked', 'message': 'same-pric.",
+      "severity": "warn",
+      "title": "Post refused"
+    },
+    {
+      "id": "1793918300385-06741c",
+      "ts": "2026-11-05T22:38:20Z",
+      "book": "W10-JACBAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBAL 1-6: +571 (+12.4% of bankroll)\nBAL 7-14: +56 (+1.2% of bankroll)\nBAL 15+: +99 (+2.2% of bankroll)\nJAC 1-6: +292 (+6.3% of bankroll)\nJAC 7-14: -329 (-7.2% of bankroll)\nJAC 15+: -4 (-0.1% of bankroll)\nCollected $646 premium ($0 fees) | Paper margin over fair $42 (not realized until settlement)\nEvent: BAL 7-14: BAL 0-0, Q0 0:00; JAC 7-14: JAC 0-0, Q0 0:00\nheld / resting\nBAL 1-6: 75 / 450\nBAL 7-14: 590 / 628\nBAL 15+: 547 / 371\nJAC 1-6: 354 / 450\nJAC 7-14: 975 / 25\nJAC 15+: 650 / 475\nPosted book 1.26 | Sold avg 1.039 | Worst now -138 | Cash free $1588\nAnchor age 43s | Last fill 214s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1793918304152-6b2770",
+      "ts": "2026-11-05T22:38:24Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W10-JACBAL book re-posted at the same price: 0 cancel-then-post at the same price and 9 caught by the guard in the last hour. That is the queue-loss bug; check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
