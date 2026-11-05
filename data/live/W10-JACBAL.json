@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T13:13:21.731139Z",
+  "generated_at": "2026-11-05T13:15:29.828619Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -181,7 +181,7 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T13:12:47Z"
+    "ts": "2026-11-05T13:14:48Z"
   },
   "posts": [
     {
@@ -2561,24 +2561,6 @@
   ],
   "audits": [
     {
-      "id": "1793798929078-6c83ec",
-      "ts": "2026-11-04T13:28:49Z",
-      "book": "W10-JACBAL",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
-      "id": "1793800450289-9588e9",
-      "ts": "2026-11-04T13:54:10Z",
-      "book": "W10-JACBAL",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 6 unexplained\n- W10-JACBAL - Baltimore by 1 to 6 has had no resting orders for at least 620 min (reason unknown: no reason logged).\n- W10-JACBAL - Baltimore by 7 to 14 has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- W10-JACBAL - Jacksonville by 15 or more has had no resting orders for at least 620 min (reason unknown: no reason logged).\n- W10-JACBAL - Jacksonville by 1 to 6 has had no resting orders for at least 620 min (reason unknown: no reason logged).\n- W10-JACBAL - Jacksonville by 7 to 14 has had no resting orders for at least 620 min (reason unknown: no reason logged).\n- W10-JACBAL has no resting orders on any side for at least 620 min while it should be posting.",
-      "severity": "warn"
-    },
-    {
       "id": "1793804100168-4ff2e8",
       "ts": "2026-11-04T14:55:00Z",
       "book": "W10-JACBAL",
@@ -3459,6 +3441,24 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-JACBAL): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793884449927-6d8b00",
+      "ts": "2026-11-05T13:14:09Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-JACBAL): worst -428.18 vs floor -325.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1793884449927-2f8c8d",
+      "ts": "2026-11-05T13:14:09Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-JACBAL): held worst -428.18 (backstop -300) or lagging gap 869 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
