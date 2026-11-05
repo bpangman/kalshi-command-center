@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T22:41:27.083376Z",
+  "generated_at": "2026-11-05T22:43:25.229099Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -55,7 +55,7 @@
       },
       {
         "side": "JAC by 1-6",
-        "resting": "721 @ 19-28c",
+        "resting": "720 @ 19-28c",
         "exposure": 291.53,
         "exposure_text": "+$292",
         "move": "Paid balancing (trickle)",
@@ -66,7 +66,7 @@
       },
       {
         "side": "BAL by 1-6",
-        "resting": "1,000 @ 11-21c",
+        "resting": "1,000 @ 12-21c",
         "exposure": 570.95,
         "exposure_text": "+$571",
         "move": "Paid balancing (trickle)",
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,191, 2,399 resting. Worst line -$329 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,191, 3,519 resting. Worst line -$329 (goal -$150)."
         ]
       },
       {
@@ -134,7 +134,7 @@
       {
         "label": "BAL by 1-6",
         "held": 75.0,
-        "resting": 450.0,
+        "resting": 1000.0,
         "target": null,
         "status": "even",
         "price": 0.12
@@ -150,7 +150,7 @@
       {
         "label": "BAL by 15+",
         "held": 547.0,
-        "resting": 370.9,
+        "resting": 671.0,
         "target": null,
         "status": "even",
         "price": 0.04
@@ -158,10 +158,10 @@
       {
         "label": "JAC by 1-6",
         "held": 354.4,
-        "resting": 450.0,
+        "resting": 720.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": 0.19
       },
       {
         "label": "JAC by 7-14",
@@ -181,18 +181,9 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T22:40:36Z"
+    "ts": "2026-11-05T22:42:37Z"
   },
   "posts": [
-    {
-      "id": "1793763341329-14abc6",
-      "ts": "2026-11-04T03:35:41Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +0 (+0.0% of bankroll)\nBAL 7-14: +0 (+0.0% of bankroll)\nBAL 15+: +0 (+0.0% of bankroll)\nJAC 1-6: +0 (+0.0% of bankroll)\nJAC 7-14: +0 (+0.0% of bankroll)\nJAC 15+: +0 (+0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 0\nBAL 7-14: 0 / 0\nBAL 15+: 0 / 0\nJAC 1-6: 0 / 0\nJAC 7-14: 0 / 0\nJAC 15+: 0 / 0\nPosted book 1.04 | Sold avg 1.040 | Worst now +0 | Cash free $4595\nAnchor age 0s | Last fill none yet",
-      "severity": "info"
-    },
     {
       "id": "1793763346251-3f6110",
       "ts": "2026-11-04T03:35:46Z",
@@ -3653,18 +3644,19 @@
       "source": "resistance_monitor",
       "text": "W10-JACBAL book re-posted at the same price: 0 cancel-then-post at the same price and 9 caught by the guard in the last hour. That is the queue-loss bug; check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1793918497133-8bc076",
+      "ts": "2026-11-05T22:41:28Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1793867983097-8874b5",
-      "ts": "2026-11-05T08:39:43Z",
-      "book": "W10-JACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-JACBAL): held worst -420.47 (backstop -300) or lagging gap 863 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793869435929-aaaf82",
       "ts": "2026-11-05T09:03:55Z",
@@ -4550,6 +4542,15 @@
     {
       "id": "1793918202378-7b203f",
       "ts": "2026-11-05T22:36:42Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1793918488585-715f8f",
+      "ts": "2026-11-05T22:41:28Z",
       "book": "W10-JACBAL",
       "kind": "audit",
       "source": "bot",
