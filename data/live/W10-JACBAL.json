@@ -1,13 +1,13 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T22:55:00.470645Z",
+  "generated_at": "2026-11-05T22:56:54.448516Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:15pm CT. Worst line -$329, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "checks_every_s": 20,
     "moves": [
       {
         "side": "JAC by 7-14",
@@ -181,28 +181,9 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T22:54:41Z"
+    "ts": "2026-11-05T22:56:42Z"
   },
   "posts": [
-    {
-      "id": "1793763347375-b57c3c",
-      "ts": "2026-11-04T03:35:47Z",
-      "book": "W10-JACBAL",
-      "kind": "update",
-      "source": "launcher",
-      "text": "Cortana: Thu 11/05 (Jacksonville at Baltimore) auto-launched by the nfl_primetime watcher slate - Kalshi listed Jacksonville at Baltimore; W10-JACBAL is live, the other 0 launch as their markets list.",
-      "severity": "info"
-    },
-    {
-      "id": "1793764252933-ba83c3",
-      "ts": "2026-11-04T03:50:52Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793765158928-161fc6",
       "ts": "2026-11-04T04:05:58Z",
@@ -3657,18 +3638,28 @@
       "source": "bot",
       "text": "Inactivity on W10-JACBAL: 0 orders posted in 10 min while the market traded 3584 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1793919402772-e18857",
+      "ts": "2026-11-05T22:56:34Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1793919409511-65b3e3",
+      "ts": "2026-11-05T22:56:49Z",
+      "book": "W10-JACBAL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W10-JACBAL: 0 orders posted in 10 min while the market traded 3578 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793869435929-aaaf82",
-      "ts": "2026-11-05T09:03:55Z",
-      "book": "W10-JACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-JACBAL): 1 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793869799129-bd9c6a",
       "ts": "2026-11-05T09:09:59Z",
@@ -4554,6 +4545,15 @@
     {
       "id": "1793918488585-715f8f",
       "ts": "2026-11-05T22:41:28Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1793919394873-622c2a",
+      "ts": "2026-11-05T22:56:34Z",
       "book": "W10-JACBAL",
       "kind": "audit",
       "source": "bot",
