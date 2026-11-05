@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T22:35:47.538777Z",
+  "generated_at": "2026-11-05T22:37:16.594948Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -181,7 +181,7 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T22:35:34Z"
+    "ts": "2026-11-05T22:36:35Z"
   },
   "posts": [
     {
@@ -3565,27 +3565,58 @@
       "text": "Quiet for 15 min. 3,547 resting. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793918215458-06432f",
+      "ts": "2026-11-05T22:36:42Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1793918215459-e5c072",
+      "ts": "2026-11-05T22:36:54Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$329 is under -$300. JAC by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1793918215460-deb76c",
+      "ts": "2026-11-05T22:34:50Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 27: BAL by 7-14 x27 at 7c. Worst line -$329.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 27.0,
+        "fills": [
+          {
+            "side": "BAL by 7-14",
+            "price": 0.07,
+            "qty": 27.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1793918216400-ba40e1",
+      "ts": "2026-11-05T22:36:56Z",
+      "book": "W10-JACBAL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W10-JACBAL: 0 orders posted in 10 min while the market traded 1832 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1793867619797-dba837",
-      "ts": "2026-11-05T08:33:39Z",
-      "book": "W10-JACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-JACBAL): 1 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1793867983097-eba0a4",
-      "ts": "2026-11-05T08:39:43Z",
-      "book": "W10-JACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-JACBAL): worst -420.47 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793867983097-8874b5",
       "ts": "2026-11-05T08:39:43Z",
@@ -4466,6 +4497,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-JACBAL): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=1700. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1793918153038-e3432e",
+      "ts": "2026-11-05T22:35:53Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+27 on BAL 7-14 @ 0.07 (maker)\nworst outcome now -14\nheld 75/590/547/354/975/650\nIf the game ends... you make\nBAL 1-6: +571 (+12.4% of bankroll)\nBAL 7-14: +56 (+1.2% of bankroll)\nBAL 15+: +99 (+2.2% of bankroll)\nJAC 1-6: +292 (+6.3% of bankroll)\nJAC 7-14: -329 (-7.2% of bankroll)\nJAC 15+: -4 (-0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1793918202378-7b203f",
+      "ts": "2026-11-05T22:36:42Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
