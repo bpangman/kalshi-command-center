@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T04:00:07.882919Z",
+  "generated_at": "2026-11-05T04:01:50.223123Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T03:59:18Z"
+    "ts": "2026-11-05T04:01:19Z"
   },
   "posts": [
     {
@@ -1733,6 +1733,26 @@
       "text": "Row sold out: JAC by 15+ at 38c (75 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1793851279365-f43c0b",
+      "ts": "2026-11-05T03:59:06Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 525: JAC by 15+ x525 at 38c. Worst line -$211.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 525.0,
+        "fills": [
+          {
+            "side": "JAC by 15+",
+            "price": 0.38,
+            "qty": 525.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -2284,6 +2304,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-JACBAL): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793851208845-871f03",
+      "ts": "2026-11-05T04:00:08Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+525 on JAC 15+ @ 0.38 (maker)\nworst outcome now +118\nheld 0/93/31/0/401/525\nIf the game ends... you make\nBAL 1-6: +314 (+6.8% of bankroll)\nBAL 7-14: +220 (+4.8% of bankroll)\nBAL 15+: +283 (+6.1% of bankroll)\nJAC 1-6: +314 (+6.8% of bankroll)\nJAC 7-14: -87 (-1.9% of bankroll)\nJAC 15+: -211 (-4.6% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
