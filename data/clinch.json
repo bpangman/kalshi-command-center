@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-05T04:12:31Z",
-  "mode": "live",
+  "generated_at": "2026-11-05T04:14:41Z",
+  "mode": "armed",
   "terms": "Live terms (v2 props): NBA threes / rebounds / assists and NFL receptions / yards / touchdowns and quarterback passing touchdowns / interceptions / completions only, rebounds / threes / assists buy once ESPN and Sleeper agree (ESPN's two views whenever Sleeper has no fresh reading), points after the next stoppage + 3 s of clock, NFL 3 s after the next real snap (not a timeout, flag or the same play posting late), every NBA stat (assists included unless an assists bet has lost, which turns assists off) and NFL touchdowns up to $1,500 per market, NFL receiving / rushing yards $1,500 once 15+ past the line, $1,000 at 10+, $500 before, and $500 whenever the game has a minute or less left, everything else $500; rebounds and threes take 98c-or-better stock first and re-fire while it keeps coming back, everything else walks the book from the cheapest ask up to 0.99; after any buy it keeps re-buying at 99c while sellers reload (stops after 10s with no fill, 15 rounds, the market cap, or the moment the stat moves against us or a correction hold starts); no crowd-bid requirement (the 98c seller is the crowd signal); unders only after the final, box unchanged 75 s on both ESPN views and matched by the second source (Sleeper) whenever it is reporting the game; a cash shortage never stops the night, clinch waits and fires when money returns; no per-game cap, cash floor $500, night pauses after 2 settled losses (every loss texts), no resting bids.",
   "days": [
     {
@@ -688990,10 +688990,10 @@
           "start_time": "2026-11-05T01:30:00Z",
           "market_type": "player_stat",
           "condition": "Keyonte George reb >= 8 -> YES certain (NO only once the game is final below it)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "watching",
+          "status": "missed",
           "outcome_key": "KXNBAREB-26NOV04UTANOP-UTAKGEORGE3-8",
           "cash_plan": 1500.0,
           "contracts": null,
@@ -689002,15 +689002,15 @@
           "payout": null,
           "fee": null,
           "profit": null,
-          "lock_ts": null,
-          "fire_ts": null,
-          "latency_ms": null,
+          "lock_ts": "2026-11-05T04:13:52Z",
+          "fire_ts": "2026-11-05T04:13:53Z",
+          "latency_ms": 95.9,
           "player": "Keyonte George",
           "stat": "reb",
-          "stat_word": null,
+          "stat_word": "rebounds",
           "line": 8,
-          "side_word": null,
-          "stat_at_buy": null,
+          "side_word": "under",
+          "stat_at_buy": 2.0,
           "stat_now": null,
           "to_win": null,
           "secured_ts": null
@@ -696931,7 +696931,7 @@
           "line": 8,
           "side_word": "over",
           "stat_at_buy": 9.0,
-          "stat_now": 9.0,
+          "stat_now": 10.0,
           "to_win": 2.72,
           "secured_ts": "2026-11-05T04:08:24Z"
         },
@@ -719881,15 +719881,15 @@
           "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "filled",
+          "status": "settled_win",
           "outcome_key": "KXNBA3PT-26NOV04CHABKN-BKNNTRAORE10-4",
           "cash_plan": 1500.0,
           "contracts": 94.0,
           "avg_price": 0.99,
           "cost": 93.06,
-          "payout": null,
+          "payout": 94.0,
           "fee": 0.0652,
-          "profit": null,
+          "profit": 0.87,
           "lock_ts": "2026-11-05T03:27:47Z",
           "fire_ts": "2026-11-05T03:27:47Z",
           "latency_ms": 100.1,
@@ -723511,15 +723511,15 @@
           "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "filled",
+          "status": "settled_win",
           "outcome_key": "KXNBA3PT-26NOV04MILBOS-MILBBURRIES0-2",
           "cash_plan": 1500.0,
           "contracts": 101.0,
           "avg_price": 0.99,
           "cost": 99.99,
-          "payout": null,
+          "payout": 101.0,
           "fee": 0.07,
-          "profit": null,
+          "profit": 0.94,
           "lock_ts": "2026-11-05T03:00:47Z",
           "fire_ts": "2026-11-05T03:00:47Z",
           "latency_ms": 96.9,
@@ -753900,10 +753900,10 @@
     "totals": {
       "contracts": 32731.0,
       "cost": 32370.23,
-      "payout": 27549.0,
+      "payout": 27744.0,
       "fees": 24.03,
-      "profit": -23.72,
-      "wins": 98,
+      "profit": -21.91,
+      "wins": 100,
       "losses": 1,
       "avg_price": 0.989,
       "fill_rate": 0.1551
@@ -753985,10 +753985,10 @@
         "date": "2026-11-04",
         "contracts": 7596.0,
         "cost": 7500.3,
-        "profit": 28.67,
+        "profit": 30.48,
         "avg_price": 0.9874,
         "fills": 56,
-        "targets_fired": 61
+        "targets_fired": 62
       }
     ],
     "cumulative": [
@@ -754387,6 +754387,14 @@
       {
         "ts": "2026-11-05T04:11:58Z",
         "profit": -23.72
+      },
+      {
+        "ts": "2026-11-05T04:12:38Z",
+        "profit": -22.78
+      },
+      {
+        "ts": "2026-11-05T04:13:39Z",
+        "profit": -21.91
       }
     ],
     "recent_fills": [
@@ -754901,7 +754909,7 @@
       "fees": 0.0,
       "profit": -286.51,
       "sweep_contracts": 33679.01,
-      "sweep_profit": 265.68
+      "sweep_profit": 267.49
     }
   },
   "health": {
@@ -754916,29 +754924,29 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:24Z",
-        "lag_s": 2.35,
+        "last_update": "2026-11-05T04:14:39Z",
+        "lag_s": 1.72,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:26Z",
-        "lag_s": 0.34,
+        "last_update": "2026-11-05T04:14:38Z",
+        "lag_s": 2.51,
         "ok": true
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:23Z",
-        "lag_s": 3.11,
-        "ok": true
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:25Z",
-        "lag_s": 1.14,
+        "last_update": "2026-11-05T04:14:39Z",
+        "lag_s": 1.57,
         "ok": true
       },
       {
@@ -754951,29 +754959,29 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:25Z",
-        "lag_s": 1.06,
+        "last_update": "2026-11-05T04:14:39Z",
+        "lag_s": 1.23,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:21Z",
-        "lag_s": 4.78,
+        "last_update": "2026-11-05T04:14:40Z",
+        "lag_s": 0.01,
         "ok": true
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:24Z",
-        "lag_s": 2.43,
-        "ok": true
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:24Z",
-        "lag_s": 2.59,
+        "last_update": "2026-11-05T04:14:39Z",
+        "lag_s": 1.85,
         "ok": true
       },
       {
@@ -754986,35 +754994,35 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:27Z",
-        "lag_s": 0.35,
+        "last_update": "2026-11-05T04:14:35Z",
+        "lag_s": 1.43,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:27Z",
-        "lag_s": 0.52,
-        "ok": true
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:24Z",
-        "lag_s": 3.14,
-        "ok": true
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
-        "last_update": "2026-11-05T04:12:26Z",
-        "lag_s": 0.95,
-        "ok": true
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
       }
     ],
-    "ws_age_s": 0.03289389610290527,
-    "cash_free": 48.77,
-    "cash_tied": 4821.57,
+    "ws_age_s": 0.011589288711547852,
+    "cash_free": 238.77,
+    "cash_tied": 4628.39,
     "kill": false,
     "armed": true
   },
