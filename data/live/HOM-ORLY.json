@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-05T18:37:55.530069Z",
+  "generated_at": "2026-11-05T18:39:33.700094Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -168,7 +168,7 @@
         "label": "Brent Crews",
         "held": 0.0,
         "resting": 397.0,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "even",
         "price": 0.07
       },
@@ -176,7 +176,7 @@
         "label": "Carson Kvapil",
         "held": 0.0,
         "resting": 135.0,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "even",
         "price": 0.18
       },
@@ -184,7 +184,7 @@
         "label": "Corey Day",
         "held": 55.0,
         "resting": 426.0,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "even",
         "price": 0.16
       },
@@ -192,7 +192,7 @@
         "label": "Jesse Love",
         "held": 0.0,
         "resting": 135.0,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "even",
         "price": 0.16
       },
@@ -200,7 +200,7 @@
         "label": "Justin Allgaier",
         "held": 339.7,
         "resting": 156.3,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "even",
         "price": 0.25
       },
@@ -208,7 +208,7 @@
         "label": "Sam Mayer",
         "held": 402.0,
         "resting": 0.0,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "heavy",
         "price": null
       },
@@ -216,26 +216,16 @@
         "label": "Sheldon Creed",
         "held": 0.0,
         "resting": 239.0,
-        "target": 1350.0,
+        "target": 1100.0,
         "status": "even",
         "price": 0.1
       }
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-05T18:37:19Z"
+    "ts": "2026-11-05T18:39:20Z"
   },
   "posts": [
-    {
-      "id": "1793788741394-c341bc",
-      "ts": "2026-11-04T10:39:01Z",
-      "book": "HOM-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$81, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793789103478-8c12bf",
       "ts": "2026-11-04T10:45:03Z",
@@ -3484,18 +3474,19 @@
       "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$254, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793903879678-c355bc",
+      "ts": "2026-11-05T18:37:53Z",
+      "book": "HOM-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1793823899682-c1c9e4",
-      "ts": "2026-11-04T20:24:59Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-ORLY): worst -249.37 vs floor -184.12. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793824410651-6da654",
       "ts": "2026-11-04T20:33:30Z",
@@ -4385,6 +4376,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1793903917253-623eb6",
+      "ts": "2026-11-05T18:38:37Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
