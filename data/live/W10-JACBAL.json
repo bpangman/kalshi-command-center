@@ -1,30 +1,30 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T04:59:27.638397Z",
+  "generated_at": "2026-11-05T05:01:03.927984Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$243, goal -$150.",
+    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$358, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "JAC by 7-14",
-        "resting": "385 @ 28-37c",
-        "exposure": -242.76,
-        "exposure_text": "-$243",
-        "move": "Holding",
-        "when": "no move planned until the even-done check at Thu 6:45pm CT",
+        "resting": "225 @ 29-37c",
+        "exposure": -358.03,
+        "exposure_text": "-$358",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$300 (now -$358)",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-05T04:55:13Z"
+        "last_fill": "2026-11-05T04:58:15Z"
       },
       {
         "side": "JAC by 15+",
         "resting": "375 @ 39-47c",
-        "exposure": -152.86,
-        "exposure_text": "-$153",
+        "exposure": -108.03,
+        "exposure_text": "-$108",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "BAL by 7-14",
         "resting": "907 @ 6-16c",
-        "exposure": 278.78,
-        "exposure_text": "+$279",
+        "exposure": 323.61,
+        "exposure_text": "+$324",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "BAL by 15+",
         "resting": "969 @ 3-13c",
-        "exposure": 340.93,
-        "exposure_text": "+$341",
+        "exposure": 385.76,
+        "exposure_text": "+$386",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
@@ -56,8 +56,8 @@
       {
         "side": "BAL by 1-6",
         "resting": "1,000 @ 11-21c",
-        "exposure": 372.14,
-        "exposure_text": "+$372",
+        "exposure": 416.97,
+        "exposure_text": "+$417",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
@@ -66,8 +66,8 @@
       {
         "side": "JAC by 1-6",
         "resting": "1,000 @ 19-28c",
-        "exposure": 372.14,
-        "exposure_text": "+$372",
+        "exposure": 416.97,
+        "exposure_text": "+$417",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,264, 4,736 resting. Worst line -$243 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,425, 4,575 resting. Worst line -$358 (goal -$150)."
         ]
       },
       {
@@ -91,14 +91,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$243).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$358).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
+          "Backstop ON: JAC by 7-14 stopped adding until worst line is above -$300 (now -$358).",
           "Paid balancing starts Thu 6:55pm CT: worst line to -$150 by Thu 7:10pm CT, up to $100.",
           "At Thu 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Thu 7:15pm CT: the in-game engine takes over."
@@ -163,11 +163,11 @@
       },
       {
         "label": "JAC by 7-14",
-        "held": 614.9,
-        "resting": 385.1,
+        "held": 775.0,
+        "resting": 225.0,
         "target": null,
-        "status": "even",
-        "price": 0.28
+        "status": "heavy",
+        "price": 0.29
       },
       {
         "label": "JAC by 15+",
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T04:58:37Z"
+    "ts": "2026-11-05T05:00:37Z"
   },
   "posts": [
     {
@@ -1917,6 +1917,16 @@
       "text": "Row sold out: JAC by 7-14 at 28c (225 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1793854777486-10339b",
+      "ts": "2026-11-05T04:59:37Z",
+      "book": "W10-JACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Thu 7:15pm CT. Worst line -$358, goal -$150. Next: Even-done check, Thu 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -2504,6 +2514,15 @@
       "source": "bot",
       "text": "+10 on JAC 7-14 @ 0.28 (maker)\nworst outcome now +118\nheld 0/93/31/0/615/525\nIf the game ends... you make\nBAL 1-6: +372 (+8.1% of bankroll)\nBAL 7-14: +279 (+6.1% of bankroll)\nBAL 15+: +341 (+7.4% of bankroll)\nJAC 1-6: +372 (+8.1% of bankroll)\nJAC 7-14: -243 (-5.3% of bankroll)\nJAC 15+: -153 (-3.3% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1793854796637-2078df",
+      "ts": "2026-11-05T04:59:56Z",
+      "book": "W10-JACBAL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-JACBAL): 1 order(s) with an unsafe price. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
