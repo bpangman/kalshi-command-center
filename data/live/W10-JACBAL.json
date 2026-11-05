@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-05T22:56:54.448516Z",
+  "generated_at": "2026-11-05T22:58:24.454275Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -55,25 +55,29 @@
       },
       {
         "side": "JAC by 1-6",
-        "resting": "720 @ 19-28c",
+        "resting": "854 @ 18-28c",
         "exposure": 291.53,
         "exposure_text": "+$292",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-05T13:23:49Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-05T13:23:49Z",
+        "lag_note": "Price 18c matches the crowd."
       },
       {
         "side": "BAL by 1-6",
-        "resting": "1,000 @ 12-21c",
+        "resting": "1,143 @ 10-21c",
         "exposure": 570.95,
         "exposure_text": "+$571",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-06T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-05T13:24:49Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-05T13:24:49Z",
+        "lag_note": "Price 10c is at its floor."
       }
     ],
     "sections": [
@@ -86,7 +90,10 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): BAL by 1-6, JAC by 1-6.",
+          "BAL by 1-6: 900 behind. Price 10c is at its floor.",
+          "JAC by 1-6: 621 behind. Price 18c matches the crowd.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -136,7 +143,7 @@
         "held": 75.0,
         "resting": 1000.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       },
       {
@@ -160,7 +167,7 @@
         "held": 354.4,
         "resting": 720.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.19
       },
       {
@@ -181,29 +188,9 @@
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-05T22:56:42Z"
+    "ts": "2026-11-05T22:57:43Z"
   },
   "posts": [
-    {
-      "id": "1793765158928-161fc6",
-      "ts": "2026-11-04T04:05:58Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793766065675-659ee9",
-      "ts": "2026-11-04T04:21:05Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793766971933-59fd68",
       "ts": "2026-11-04T04:36:11Z",
@@ -3657,6 +3644,26 @@
       "source": "bot",
       "text": "Inactivity on W10-JACBAL: 0 orders posted in 10 min while the market traded 3578 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1793919422927-7d55d8",
+      "ts": "2026-11-05T22:56:48Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$329 is under -$300. JAC by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1793919463126-bb2c6a",
+      "ts": "2026-11-05T22:57:43Z",
+      "book": "W10-JACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$329, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
