@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T02:57:56Z",
+  "generated_at": "2026-11-05T02:59:26Z",
   "mode": "live",
   "terms": "Live terms (v2 props): NBA threes / rebounds / assists and NFL receptions / yards / touchdowns and quarterback passing touchdowns / interceptions / completions only, rebounds / threes / assists buy once ESPN and Sleeper agree (ESPN's two views whenever Sleeper has no fresh reading), points after the next stoppage + 3 s of clock, NFL 3 s after the next real snap (not a timeout, flag or the same play posting late), every NBA stat (assists included unless an assists bet has lost, which turns assists off) and NFL touchdowns up to $1,500 per market, NFL receiving / rushing yards $1,500 once 15+ past the line, $1,000 at 10+, $500 before, and $500 whenever the game has a minute or less left, everything else $500; rebounds and threes take 98c-or-better stock first and re-fire while it keeps coming back, everything else walks the book from the cheapest ask up to 0.99; no crowd-bid requirement (the 98c seller is the crowd signal); unders only after the final, box unchanged 75 s on both ESPN views and matched by the second source (Sleeper) whenever it is reporting the game; a cash shortage never stops the night, clinch waits and fires when money returns; no per-game cap, cash floor $500, night pauses after 2 settled losses (every loss texts), no resting bids.",
   "days": [
@@ -678595,30 +678595,30 @@
           "start_time": "2026-11-05T00:30:00Z",
           "market_type": "player_stat",
           "condition": "Tyrese Maxey reb >= 4 -> YES certain (NO only once the game is final below it)",
-          "certain_side": "yes",
+          "certain_side": "no",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "watching",
+          "status": "partial",
           "outcome_key": "KXNBAREB-26NOV04PHIDET-PHITMAXEY0-4",
           "cash_plan": 1500.0,
-          "contracts": null,
-          "avg_price": null,
-          "cost": null,
+          "contracts": 6.0,
+          "avg_price": 0.99,
+          "cost": 5.94,
           "payout": null,
-          "fee": null,
+          "fee": 0.0042,
           "profit": null,
-          "lock_ts": null,
-          "fire_ts": null,
-          "latency_ms": null,
+          "lock_ts": "2026-11-05T02:59:25Z",
+          "fire_ts": "2026-11-05T02:59:25Z",
+          "latency_ms": 97.7,
           "player": "Tyrese Maxey",
           "stat": "reb",
-          "stat_word": null,
+          "stat_word": "rebounds",
           "line": 4,
-          "side_word": null,
-          "stat_at_buy": null,
-          "stat_now": null,
-          "to_win": null,
-          "secured_ts": null
+          "side_word": "under",
+          "stat_at_buy": 1.0,
+          "stat_now": 1.0,
+          "to_win": 0.06,
+          "secured_ts": "2026-11-05T02:59:25Z"
         },
         {
           "ticker": "KXNBAREB-26NOV04PHIDET-PHITMAXEY0-6",
@@ -687262,7 +687262,7 @@
           "line": 8,
           "side_word": "over",
           "stat_at_buy": 9.0,
-          "stat_now": 9.0,
+          "stat_now": 10.0,
           "to_win": 1.91,
           "secured_ts": "2026-11-05T02:56:55Z"
         },
@@ -753304,10 +753304,10 @@
   ],
   "results": {
     "totals": {
-      "contracts": 25589.0,
-      "cost": 25318.39,
+      "contracts": 25595.0,
+      "cost": 25324.33,
       "payout": 24880.0,
-      "fees": 17.8,
+      "fees": 17.81,
       "profit": -51.97,
       "wins": 82,
       "losses": 1,
@@ -753389,12 +753389,12 @@
       },
       {
         "date": "2026-11-04",
-        "contracts": 454.0,
-        "cost": 448.45,
+        "contracts": 460.0,
+        "cost": 454.39,
         "profit": 0.42,
         "avg_price": 0.9878,
-        "fills": 5,
-        "targets_fired": 10
+        "fills": 6,
+        "targets_fired": 11
       }
     ],
     "cumulative": [
@@ -753732,16 +753732,6 @@
       }
     ],
     "recent_fills": [
-      {
-        "ts": "2026-10-31T01:38:50Z",
-        "ticker": "KXNBA3PT-26OCT30ORLTOR-ORLDBANE3-5",
-        "title": "Desmond Bane: 5+ threes",
-        "side": "yes",
-        "contracts": 7.0,
-        "price": 0.99,
-        "cost": 6.93,
-        "kind": "sweep"
-      },
       {
         "ts": "2026-10-31T20:30:46Z",
         "ticker": "KXNBAREB-26OCT31PORUTA-UTAABAILEY19-4",
@@ -754231,6 +754221,16 @@
         "price": 0.9803,
         "cost": 101.9512,
         "kind": "sweep"
+      },
+      {
+        "ts": "2026-11-05T02:59:25Z",
+        "ticker": "KXNBAREB-26NOV04PHIDET-PHITMAXEY0-4",
+        "title": "Tyrese Maxey: 4+ rebounds",
+        "side": "no",
+        "contracts": 6.0,
+        "price": 0.99,
+        "cost": 5.94,
+        "kind": "sweep"
       }
     ],
     "rest": {
@@ -754242,7 +754242,7 @@
       "cost": 1335.5,
       "fees": 0.0,
       "profit": -286.51,
-      "sweep_contracts": 26537.01,
+      "sweep_contracts": 26543.01,
       "sweep_profit": 237.42
     }
   },
@@ -754258,67 +754258,32 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-05T02:57:53Z",
-        "lag_s": 1.88,
+        "last_update": "2026-11-05T02:59:24Z",
+        "lag_s": 1.15,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-11-05T02:57:54Z",
-        "lag_s": 0.36,
-        "ok": true
-      },
-      {
-        "name": "nba3",
-        "sport": "NBA",
-        "last_update": "2026-11-05T02:57:47Z",
-        "lag_s": 7.68,
-        "ok": true
-      },
-      {
-        "name": "sleeper",
-        "sport": "NBA",
-        "last_update": "2026-11-05T02:57:54Z",
-        "lag_s": 0.36,
-        "ok": true
-      },
-      {
-        "name": "nba_cdn",
-        "sport": "NBA",
-        "last_update": null,
-        "lag_s": null,
-        "ok": false
-      },
-      {
-        "name": "espn",
-        "sport": "NBA",
-        "last_update": "2026-11-05T02:57:51Z",
-        "lag_s": 0.51,
-        "ok": true
-      },
-      {
-        "name": "espn_sum",
-        "sport": "NBA",
-        "last_update": "2026-11-05T02:57:50Z",
-        "lag_s": 1.56,
-        "ok": true
-      },
-      {
-        "name": "nba3",
-        "sport": "NBA",
-        "last_update": "2026-11-05T02:57:42Z",
-        "lag_s": 9.93,
-        "ok": true
-      },
-      {
-        "name": "sleeper",
-        "sport": "NBA",
-        "last_update": "2026-11-05T02:57:50Z",
+        "last_update": "2026-11-05T02:59:24Z",
         "lag_s": 1.05,
         "ok": true
       },
       {
+        "name": "nba3",
+        "sport": "NBA",
+        "last_update": "2026-11-05T02:59:24Z",
+        "lag_s": 1.42,
+        "ok": true
+      },
+      {
+        "name": "sleeper",
+        "sport": "NBA",
+        "last_update": "2026-11-05T02:59:25Z",
+        "lag_s": 0.03,
+        "ok": true
+      },
+      {
         "name": "nba_cdn",
         "sport": "NBA",
         "last_update": null,
@@ -754328,35 +754293,70 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-05T02:57:51Z",
-        "lag_s": 2.57,
+        "last_update": "2026-11-05T02:59:24Z",
+        "lag_s": 0.69,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
-        "last_update": "2026-11-05T02:57:52Z",
-        "lag_s": 1.38,
+        "last_update": "2026-11-05T02:59:22Z",
+        "lag_s": 2.01,
         "ok": true
       },
       {
         "name": "nba3",
         "sport": "NBA",
-        "last_update": "2026-11-05T02:57:53Z",
-        "lag_s": 0.49,
+        "last_update": "2026-11-05T02:59:20Z",
+        "lag_s": 4.13,
         "ok": true
       },
       {
         "name": "sleeper",
         "sport": "NBA",
-        "last_update": "2026-11-05T02:57:53Z",
-        "lag_s": 0.44,
+        "last_update": "2026-11-05T02:59:22Z",
+        "lag_s": 2.74,
+        "ok": true
+      },
+      {
+        "name": "nba_cdn",
+        "sport": "NBA",
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
+      },
+      {
+        "name": "espn",
+        "sport": "NBA",
+        "last_update": "2026-11-05T02:59:24Z",
+        "lag_s": 0.8,
+        "ok": true
+      },
+      {
+        "name": "espn_sum",
+        "sport": "NBA",
+        "last_update": "2026-11-05T02:59:24Z",
+        "lag_s": 0.49,
+        "ok": true
+      },
+      {
+        "name": "nba3",
+        "sport": "NBA",
+        "last_update": "2026-11-05T02:59:17Z",
+        "lag_s": 7.82,
+        "ok": true
+      },
+      {
+        "name": "sleeper",
+        "sport": "NBA",
+        "last_update": "2026-11-05T02:59:23Z",
+        "lag_s": 1.46,
         "ok": true
       }
     ],
-    "ws_age_s": 0.008172035217285156,
+    "ws_age_s": 0.018251895904541016,
     "cash_free": 1086.85,
-    "cash_tied": 404.25,
+    "cash_tied": 410.2,
     "kill": false,
     "armed": true
   },
