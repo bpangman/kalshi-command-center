@@ -1,13 +1,13 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-06T08:55:45.566320Z",
+  "generated_at": "2026-11-06T08:57:27.027058Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$252, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 50,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -114,7 +114,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 4:00pm CT. Sold 2,434, 12,388 resting. Worst line -$252 (limit now -$250)."
+          "Pre-race growth, green flag Sat 4:00pm CT. Sold 2,434, 12,388 resting. Worst line -$252 (limit now -$250). Bot is slow (checks every 50s, set for 30s)."
         ]
       },
       {
@@ -223,23 +223,9 @@
     ],
     "moves_note": "29 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-06T08:55:11Z"
+    "ts": "2026-11-06T08:57:11Z"
   },
   "posts": [
-    {
-      "id": "1793828482120-778503",
-      "ts": "2026-11-04T21:40:26Z",
-      "book": "HOM-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 1,415 (launch ladder): Sam Mayer x45 at 8c, Brent Crews x45 at 7c, +31 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 1415.0,
-        "rows": 33
-      }
-    },
     {
       "id": "1793829327750-667280",
       "ts": "2026-11-04T21:55:27Z",
@@ -3579,18 +3565,19 @@
       "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$252, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793955431568-84c0f3",
+      "ts": "2026-11-06T08:57:11Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$252, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793894534080-3edaf2",
-      "ts": "2026-11-05T16:02:14Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Justin Allgaier has had no resting orders for at least 194 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793894813851-960b1c",
       "ts": "2026-11-05T16:06:53Z",
@@ -4481,6 +4468,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): worst -251.57 vs floor -184.12. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793955407209-339d9c",
+      "ts": "2026-11-06T08:56:47Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 684 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
