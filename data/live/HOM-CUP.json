@@ -1,13 +1,13 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-06T00:25:19.505200Z",
+  "generated_at": "2026-11-06T00:26:48.613099Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$491, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Tyler Reddick",
@@ -47,7 +47,7 @@
       },
       {
         "side": "Austin Cindric",
-        "resting": "none",
+        "resting": "494 @ 3c",
         "exposure": -271.61,
         "exposure_text": "-$272",
         "move": "Next wave up to 1,500 contracts",
@@ -76,7 +76,7 @@
         "exposure_text": "-$187",
         "move": "Next wave up to 2,000 contracts",
         "when": "next bot check (99% of the offered has sold)",
-        "at": "2026-11-06T00:24:54Z",
+        "at": "2026-11-06T00:25:54Z",
         "stuck": false,
         "also": "Also: glide starts Sun 10:00am CT",
         "last_fill": "2026-11-05T16:51:31Z"
@@ -123,7 +123,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 6,149, 39,718 resting. Worst line -$491."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 6,149, 39,718 resting. Worst line -$491. Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -251,29 +251,9 @@
     ],
     "moves_note": "3 more drivers with small exposure are not shown. 29 other drivers: nothing sold, no exposure.",
     "book": "HOM-CUP",
-    "ts": "2026-11-06T00:24:54Z"
+    "ts": "2026-11-06T00:25:54Z"
   },
   "posts": [
-    {
-      "id": "1793810203212-ced09c",
-      "ts": "2026-11-04T16:36:43Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 31,059 resting. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793811109656-6122be",
-      "ts": "2026-11-04T16:51:49Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 31,059 resting. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793811606329-d2b292",
       "ts": "2026-11-04T17:00:06Z",
@@ -3417,18 +3397,29 @@
       "text": "Quiet for 15 min. 39,718 resting. Next: Risk glide starts, Sun 10:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1793924754823-9fda5b",
+      "ts": "2026-11-06T00:25:43Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 3 drivers: Bubba Wallace, driver ROCH, Corey Heim.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1793924754829-820ae7",
+      "ts": "2026-11-06T00:25:54Z",
+      "book": "HOM-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$491, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793839640530-8a264d",
-      "ts": "2026-11-05T00:47:20Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-CUP): worst -666.61 vs floor -396.34. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793841566916-bfc011",
       "ts": "2026-11-05T01:19:26Z",
@@ -4319,6 +4310,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-CUP): worst -490.61 vs floor -396.34. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793924743143-bf3e26",
+      "ts": "2026-11-06T00:25:43Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 3 driver(s): Bubba Wallace (+43%), Ross Chastain (+42%), Corey Heim (+30%)",
+      "severity": "warn"
     }
   ]
 }
