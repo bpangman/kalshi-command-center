@@ -1,6 +1,6 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-06T00:23:50.889471Z",
+  "generated_at": "2026-11-06T00:25:19.505200Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -36,33 +36,39 @@
         "resting": "322 @ 39-47c",
         "exposure": 63.78,
         "exposure_text": "+$64",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-06T00:55:00Z",
+        "move": "Step price down 1c (39c to 38c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-06T00:25:14Z",
         "stuck": false,
-        "last_fill": "2026-11-05T17:33:24Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-05T17:33:24Z",
+        "lag_note": "Steps to 38c at the next check."
       },
       {
         "side": "BAL by 15+",
         "resting": "525 @ 4-13c",
         "exposure": 166.73,
         "exposure_text": "+$167",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-06T00:55:00Z",
+        "move": "Step price down 1c (4c to 3c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-06T00:25:14Z",
         "stuck": false,
-        "last_fill": "2026-11-05T19:34:45Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-05T19:34:45Z",
+        "lag_note": "Steps to 3c at the next check."
       },
       {
         "side": "JAC by 1-6",
         "resting": "574 @ 19-28c",
         "exposure": 215.36,
         "exposure_text": "+$215",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-06T00:55:00Z",
+        "move": "Step price down 1c (19c to 18c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-06T00:25:14Z",
         "stuck": false,
-        "last_fill": "2026-11-06T00:07:38Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-06T00:07:38Z",
+        "lag_note": "Steps to 18c at the next check."
       },
       {
         "side": "BAL by 1-6",
@@ -88,8 +94,9 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): BAL by 1-6.",
+          "Lagging (150+ behind the leader): BAL by 1-6, BAL by 15+, JAC by 1-6, JAC by 15+.",
           "BAL by 1-6: 631 behind. Steps to 11c if no fill by 6:29pm CT.",
+          "JAC by 1-6: 477 behind. Steps to 18c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -156,7 +163,7 @@
         "held": 547.0,
         "resting": 525.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.04
       },
       {
@@ -164,7 +171,7 @@
         "held": 498.4,
         "resting": 574.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.19
       },
       {
@@ -180,24 +187,14 @@
         "held": 650.0,
         "resting": 422.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.39
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-06T00:23:13Z"
+    "ts": "2026-11-06T00:25:14Z"
   },
   "posts": [
-    {
-      "id": "1793786909001-a8e589",
-      "ts": "2026-11-04T10:08:28Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793787815269-7eca9b",
       "ts": "2026-11-04T10:23:35Z",
@@ -3767,6 +3764,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793924654260-0df19e",
+      "ts": "2026-11-06T00:24:14Z",
+      "book": "W10-JACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$261, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
