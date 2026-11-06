@@ -1,13 +1,13 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-06T18:49:31.742449Z",
+  "generated_at": "2026-11-06T18:51:03.887622Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$221, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 49,
+    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
+    "checks_every_s": 30,
     "moves": [
       {
         "side": "Brandon Jones",
@@ -112,7 +112,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sat 4:00pm CT. Sold 2,701, 12,873 resting. Worst line -$221. Bot is slow (checks every 49s, set for 30s)."
+          "Pre-race growth, green flag Sat 4:00pm CT. Sold 2,701, 12,873 resting. Worst line -$221."
         ]
       },
       {
@@ -224,28 +224,9 @@
     ],
     "moves_note": "30 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-06T18:49:16Z"
+    "ts": "2026-11-06T18:50:17Z"
   },
   "posts": [
-    {
-      "id": "1793870818866-4ad5f1",
-      "ts": "2026-11-05T09:26:58Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBrandon Jones: -185\nJustin Allgaier: -175\nAustin Hill: -175\nSam Mayer: -148\nCorey Day: +95\nJeremy Clements: +123\nRyan Sieg: +123\nJoey Gase: +123\nall others (30) >= +123\nCollected $125 premium ($2 fees) | Paper margin over fair $28 (not realized until settlement)\nCore posted book 1.34 | Worst now -185 | Cash free $5131\nAnchor age 31s (source: bovada)\nKalshi trading paused (exchange-wide, trading_active=false) for 82 min; idling, no new posts/cancels.",
-      "severity": "info"
-    },
-    {
-      "id": "1793871337783-ccba8d",
-      "ts": "2026-11-05T09:35:37Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 11,549 resting. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793872243987-b3512f",
       "ts": "2026-11-05T09:50:43Z",
@@ -3480,18 +3461,29 @@
       "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$221, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1793991017159-11ef19",
+      "ts": "2026-11-06T18:50:13Z",
+      "book": "HOM-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Sam Mayer.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1793991017163-c56d2a",
+      "ts": "2026-11-06T18:50:17Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$221, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793926014057-6963ee",
-      "ts": "2026-11-06T00:46:54Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 194 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793926857282-7a7eaa",
       "ts": "2026-11-06T01:00:57Z",
@@ -4381,6 +4373,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+30 on Sheldon Creed @ 0.08 (maker)\n+44 on Justin Allgaier @ 0.23 (maker)\nworst outcome now -221\nIf the race ends... you make\nJustin Allgaier: -221\nBrandon Jones: -221\nSam Mayer: -221\nCorey Day: -221\nAustin Hill: +26\nSheldon Creed: +176\nCarson Kvapil: +249\nJeremy Clements: +324\nall others (30) >= +324",
+      "severity": "warn"
+    },
+    {
+      "id": "1793991013788-5acd95",
+      "ts": "2026-11-06T18:50:13Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Sam Mayer (+36%)",
       "severity": "warn"
     }
   ]
