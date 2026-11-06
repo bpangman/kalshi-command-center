@@ -1,40 +1,41 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-06T04:08:03.112936Z",
+  "generated_at": "2026-11-06T04:10:04.410668Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 3:25pm CT. Worst line -$24, goal -$150.",
+    "headline": "Building toward kickoff Sun 3:25pm CT. Worst line -$100, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "GB by 15+",
-        "resting": "447 @ 6-12c",
-        "exposure": -24.44,
-        "exposure_text": "-$24",
+        "side": "GB by 7-14",
+        "resting": "330 @ 15-16c",
+        "exposure": -100.44,
+        "exposure_text": "-$100",
         "move": "Holding",
         "when": "no move planned until the even-done check at Sun 2:55pm CT",
         "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-06T04:07:08Z"
+      },
+      {
+        "side": "GB by 15+",
+        "resting": "339 @ 7-12c",
+        "exposure": -6.44,
+        "exposure_text": "-$6",
+        "move": "Paid balancing (trickle)",
+        "when": "starts Sun 3:05pm CT, up to $100 in all",
+        "at": "2026-11-08T21:05:00Z",
         "stuck": false,
         "last_fill": "2026-11-06T01:58:53Z"
       },
       {
         "side": "GB by 1-6",
         "resting": "604 @ 18-22c",
-        "exposure": 1.56,
-        "exposure_text": "+$2",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 3:05pm CT, up to $100 in all",
-        "at": "2026-11-08T21:05:00Z",
-        "stuck": false
-      },
-      {
-        "side": "GB by 7-14",
-        "resting": "450 @ 15-16c",
-        "exposure": 1.56,
-        "exposure_text": "+$2",
+        "exposure": 19.56,
+        "exposure_text": "+$20",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 3:05pm CT, up to $100 in all",
         "at": "2026-11-08T21:05:00Z",
@@ -43,8 +44,8 @@
       {
         "side": "NE by 1-6",
         "resting": "526 @ 27-28c",
-        "exposure": 1.56,
-        "exposure_text": "+$2",
+        "exposure": 19.56,
+        "exposure_text": "+$20",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 3:05pm CT, up to $100 in all",
         "at": "2026-11-08T21:05:00Z",
@@ -53,8 +54,8 @@
       {
         "side": "NE by 15+",
         "resting": "543 @ 16-22c",
-        "exposure": 1.56,
-        "exposure_text": "+$2",
+        "exposure": 19.56,
+        "exposure_text": "+$20",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 3:05pm CT, up to $100 in all",
         "at": "2026-11-08T21:05:00Z",
@@ -63,8 +64,8 @@
       {
         "side": "NE by 7-14",
         "resting": "526 @ 22-23c",
-        "exposure": 1.56,
-        "exposure_text": "+$2",
+        "exposure": 19.56,
+        "exposure_text": "+$20",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 3:05pm CT, up to $100 in all",
         "at": "2026-11-08T21:05:00Z",
@@ -75,7 +76,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 3:25pm CT. Sold 26, 3,096 resting. Worst line -$24 (goal -$150)."
+          "Pregame build, kickoff Sun 3:25pm CT. Sold 146, 2,868 resting. Worst line -$100 (goal -$150)."
         ]
       },
       {
@@ -88,7 +89,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$24 is better than -$200.",
+          "Gate open: worst line -$100 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -136,8 +137,8 @@
       },
       {
         "label": "GB by 7-14",
-        "held": 0.0,
-        "resting": 450.0,
+        "held": 120.0,
+        "resting": 330.0,
         "target": null,
         "status": "even",
         "price": 0.15
@@ -145,10 +146,10 @@
       {
         "label": "GB by 15+",
         "held": 26.0,
-        "resting": 447.0,
+        "resting": 339.0,
         "target": null,
         "status": "even",
-        "price": 0.06
+        "price": 0.07
       },
       {
         "label": "NE by 1-6",
@@ -176,7 +177,7 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-06T04:07:13Z"
+    "ts": "2026-11-06T04:09:14Z"
   },
   "posts": [
     {
@@ -730,6 +731,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-GBNE): 2 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1793938152925-1e4000",
+      "ts": "2026-11-06T04:09:12Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+120 on GB 7-14 @ 0.15 (maker)\nworst outcome now -20\nheld 0/0/0/0/120/26\nIf the game ends... you make\nNE 1-6: +20 (+0.4% of bankroll)\nNE 7-14: +20 (+0.4% of bankroll)\nNE 15+: +20 (+0.4% of bankroll)\nGB 1-6: +20 (+0.4% of bankroll)\nGB 7-14: -100 (-2.0% of bankroll)\nGB 15+: -6 (-0.1% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
