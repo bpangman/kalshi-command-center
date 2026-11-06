@@ -1,207 +1,109 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-06T01:12:15.442449Z",
+  "generated_at": "2026-11-06T01:13:44.617729Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:15pm CT. Worst line +$35.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line +$35.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "BAL by 1-6",
-        "resting": "2 @ 16-21c",
-        "exposure": 35.09,
-        "exposure_text": "+$35",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-06T00:37:57Z"
-      },
-      {
-        "side": "BAL by 7-14",
-        "resting": "4 @ 8-16c",
-        "exposure": 35.09,
-        "exposure_text": "+$35",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-06T00:55:03Z"
-      },
-      {
-        "side": "JAC by 15+",
-        "resting": "4 @ 39-47c",
-        "exposure": 35.09,
-        "exposure_text": "+$35",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-06T00:55:03Z"
-      },
-      {
-        "side": "JAC by 7-14",
-        "resting": "1 @ 37c",
-        "exposure": 35.09,
-        "exposure_text": "+$35",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-06T00:55:03Z"
-      },
-      {
-        "side": "JAC by 1-6",
-        "resting": "3 @ 21-28c",
-        "exposure": 35.67,
-        "exposure_text": "+$36",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-06T00:55:03Z"
-      },
-      {
-        "side": "BAL by 15+",
-        "resting": "7 @ 4-13c",
-        "exposure": 36.04,
-        "exposure_text": "+$36",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-06T00:55:03Z"
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 5,962, 121 resting. Worst line +$35 (goal -$150)."
+          "In game (Ingame). Sold 5,962, 0 resting. Worst line +$35. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line +$35 is better than -$150.",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line +$35; spent $16 of $100.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-06T01:15:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "BAL by 1-6",
         "held": 994.0,
-        "resting": 2.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.16
+        "price": null
       },
       {
         "label": "BAL by 7-14",
         "held": 994.0,
-        "resting": 4.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.08
+        "price": null
       },
       {
         "label": "BAL by 15+",
         "held": 993.0,
-        "resting": 7.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.04
+        "price": null
       },
       {
         "label": "JAC by 1-6",
         "held": 993.4,
-        "resting": 3.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.21
+        "price": null
       },
       {
         "label": "JAC by 7-14",
         "held": 994.0,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.37
+        "price": null
       },
       {
         "label": "JAC by 15+",
         "held": 994.0,
-        "resting": 104.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.39
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-06T01:11:28Z"
+    "ts": "2026-11-06T01:13:29Z"
   },
   "posts": [
-    {
-      "id": "1793810636821-b891b2",
-      "ts": "2026-11-04T16:43:56Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +4 (+0.1% of bankroll)\nBAL 7-14: -71 (-1.6% of bankroll)\nBAL 15+: +4 (+0.1% of bankroll)\nJAC 1-6: +4 (+0.1% of bankroll)\nJAC 7-14: +4 (+0.1% of bankroll)\nJAC 15+: +4 (+0.1% of bankroll)\nCollected $4 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 1000\nBAL 7-14: 75 / 825\nBAL 15+: 0 / 950\nJAC 1-6: 0 / 1000\nJAC 7-14: 0 / 1000\nJAC 15+: 0 / 900\nPosted book 1.12 | Sold avg 1.101 | Worst now +69 | Cash free $1588\nAnchor age 0s | Last fill 2317s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1793811532832-b519b7",
-      "ts": "2026-11-04T16:58:52Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,675 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793812438220-44e9fe",
-      "ts": "2026-11-04T17:13:58Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,675 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793813344039-78d16b",
       "ts": "2026-11-04T17:29:04Z",
@@ -3815,6 +3717,35 @@
       "text": "Handoff: keeping every resting order for the in-game elevator (worst held line +35.09, L_max 300.00)",
       "severity": "info",
       "title": "Phase change"
+    },
+    {
+      "id": "1793927546729-aaf3a2",
+      "ts": "2026-11-06T01:12:26Z",
+      "book": "W10-JACBAL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W10-JACBAL: 0 orders posted in 10 min while the market traded 10751 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
+      "severity": "info"
+    },
+    {
+      "id": "1793927548761-3dfb98",
+      "ts": "2026-11-06T01:12:28Z",
+      "book": "W10-JACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1793927548761-cf1c86",
+      "ts": "2026-11-06T01:12:28Z",
+      "book": "W10-JACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line +$35.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
