@@ -1,21 +1,21 @@
 {
   "key": "W10-JACBAL",
-  "generated_at": "2026-11-06T00:29:46.547164Z",
+  "generated_at": "2026-11-06T00:31:25.697772Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:16pm CT. Worst line -$201, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$201, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
     "moves": [
       {
         "side": "BAL by 1-6",
-        "resting": "79 @ 13-21c",
+        "resting": "3 @ 13-21c",
         "exposure": -201.35,
         "exposure_text": "-$201",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:46pm CT",
+        "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-06T00:25:58Z"
@@ -26,67 +26,76 @@
         "exposure": -183.35,
         "exposure_text": "-$183",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:56pm CT, up to $100 in all",
-        "at": "2026-11-06T00:56:00Z",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-11-06T00:55:00Z",
         "stuck": false,
         "last_fill": "2026-11-05T17:14:32Z"
       },
       {
         "side": "BAL by 7-14",
-        "resting": "304 @ 8-16c",
+        "resting": "225 @ 8-16c",
         "exposure": 23.65,
         "exposure_text": "+$24",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:56pm CT, up to $100 in all",
-        "at": "2026-11-06T00:56:00Z",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-11-06T00:55:00Z",
         "stuck": false,
         "last_fill": "2026-11-05T23:01:03Z"
       },
       {
         "side": "JAC by 15+",
-        "resting": "322 @ 39-47c",
+        "resting": "243 @ 39-47c",
         "exposure": 141.65,
         "exposure_text": "+$142",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:56pm CT, up to $100 in all",
-        "at": "2026-11-06T00:56:00Z",
+        "move": "Step price down 1c (39c to 38c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-06T00:31:16Z",
         "stuck": false,
-        "last_fill": "2026-11-05T17:33:24Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-05T17:33:24Z",
+        "lag_note": "Steps to 38c at the next check."
       },
       {
         "side": "BAL by 15+",
-        "resting": "525 @ 4-13c",
+        "resting": "446 @ 4-13c",
         "exposure": 244.6,
         "exposure_text": "+$245",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:56pm CT, up to $100 in all",
-        "at": "2026-11-06T00:56:00Z",
+        "move": "Step price down 1c (4c to 3c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-06T00:31:16Z",
         "stuck": false,
-        "last_fill": "2026-11-05T19:34:45Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-05T19:34:45Z",
+        "lag_note": "Steps to 3c at the next check."
       },
       {
         "side": "JAC by 1-6",
-        "resting": "574 @ 19-28c",
+        "resting": "494 @ 19-28c",
         "exposure": 293.23,
         "exposure_text": "+$293",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:56pm CT, up to $100 in all",
-        "at": "2026-11-06T00:56:00Z",
+        "move": "Step price down 1c (19c to 18c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-06T00:31:16Z",
         "stuck": false,
-        "last_fill": "2026-11-06T00:07:38Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-06T00:07:38Z",
+        "lag_note": "Steps to 18c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:16pm CT. Sold 4,431, 1,929 resting. Worst line -$201 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,431, 1,536 resting. Worst line -$201 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): BAL by 15+, JAC by 1-6, JAC by 15+.",
+          "JAC by 1-6: 495 behind. Steps to 18c at the next check.",
+          "BAL by 15+: 446 behind. Steps to 3c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -101,9 +110,9 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 6:56pm CT: worst line to -$150 by 7:11pm CT, up to $100.",
-          "At 6:46pm CT, if worst line is -$150 or better, paid balancing stops.",
-          "Kickoff 7:16pm CT: the in-game engine takes over."
+          "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
+          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
+          "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
       {
@@ -115,17 +124,17 @@
     ],
     "next_steps": [
       {
-        "at": "2026-11-06T00:46:00Z",
+        "at": "2026-11-06T00:45:00Z",
         "label": "Even-done check",
         "detail": "Paid balancing stops if worst line is -$150 or better."
       },
       {
-        "at": "2026-11-06T00:56:00Z",
+        "at": "2026-11-06T00:55:00Z",
         "label": "Paid balancing starts",
-        "detail": "Worst line to -$150 by 7:11pm CT."
+        "detail": "Worst line to -$150 by 7:10pm CT."
       },
       {
-        "at": "2026-11-06T01:16:00Z",
+        "at": "2026-11-06T01:15:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
       }
@@ -134,7 +143,7 @@
       {
         "label": "BAL by 1-6",
         "held": 993.0,
-        "resting": 79.0,
+        "resting": 3.0,
         "target": null,
         "status": "even",
         "price": 0.13
@@ -142,7 +151,7 @@
       {
         "label": "BAL by 7-14",
         "held": 768.0,
-        "resting": 304.0,
+        "resting": 225.0,
         "target": null,
         "status": "even",
         "price": 0.08
@@ -150,17 +159,17 @@
       {
         "label": "BAL by 15+",
         "held": 547.0,
-        "resting": 525.0,
+        "resting": 445.9,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.04
       },
       {
         "label": "JAC by 1-6",
         "held": 498.4,
-        "resting": 574.0,
+        "resting": 494.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.19
       },
       {
@@ -174,26 +183,16 @@
       {
         "label": "JAC by 15+",
         "held": 650.0,
-        "resting": 422.0,
+        "resting": 343.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.39
       }
     ],
     "book": "W10-JACBAL",
-    "ts": "2026-11-06T00:29:15Z"
+    "ts": "2026-11-06T00:31:16Z"
   },
   "posts": [
-    {
-      "id": "1793790533726-baae5d",
-      "ts": "2026-11-04T11:08:53Z",
-      "book": "W10-JACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 0 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793791440319-413192",
       "ts": "2026-11-04T11:24:00Z",
@@ -3774,6 +3773,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1793925076658-254eb9",
+      "ts": "2026-11-06T00:31:16Z",
+      "book": "W10-JACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$201, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
