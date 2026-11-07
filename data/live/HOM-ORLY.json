@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T06:09:51.495930Z",
+  "generated_at": "2026-11-07T06:11:28.047054Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -64,7 +64,7 @@
         "exposure_text": "+$41",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-07T06:09:19Z",
+        "at": "2026-11-07T06:11:20Z",
         "stuck": false,
         "also": "Also: glide starts 12:00pm CT",
         "last_fill": "2026-11-07T03:05:22Z"
@@ -74,13 +74,13 @@
         "resting": "713 @ 12-17c",
         "exposure": 647.48,
         "exposure_text": "+$647",
-        "move": "Hold price at 12c",
-        "when": "next cent is under the crowd price (6c)",
-        "at": null,
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-07T06:11:20Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-06T16:18:47Z",
-        "lag_note": "Price 12c is at its floor."
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -107,7 +107,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil.",
           "Brent Crews: 1,087 behind. Price 6c matches the crowd.",
-          "Carson Kvapil: 1,012 behind. Price 12c is at its floor.",
+          "Carson Kvapil: 1,012 behind. Steps to 11c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,34 +211,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T06:09:19Z"
+    "ts": "2026-11-07T06:11:20Z"
   },
   "posts": [
-    {
-      "id": "1793920993264-f9e899",
-      "ts": "2026-11-05T23:21:00Z",
-      "book": "HOM-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 84: Justin Allgaier x59 at 24c, Corey Day x25 at 18c. Worst line -$252.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 84.0,
-        "fills": [
-          {
-            "side": "Justin Allgaier",
-            "price": 0.24,
-            "qty": 59.0
-          },
-          {
-            "side": "Corey Day",
-            "price": 0.18,
-            "qty": 25.0
-          }
-        ]
-      }
-    },
     {
       "id": "1793921013325-5a8aff",
       "ts": "2026-11-05T23:21:32Z",
@@ -3717,18 +3692,19 @@
       "text": "Pre-race growth for the green flag 4:00pm CT. Worst line -$364, final target +$100. Next: Risk glide starts, 12:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1794031839931-60e51f",
+      "ts": "2026-11-07T06:10:26Z",
+      "book": "HOM-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Brandon Jones.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1793972765502-d8f6ae",
-      "ts": "2026-11-06T13:46:05Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-ORLY): 27 ladder(s) stale 10+ min: KXNASCARRACE-OREI26-JECL low 350c, KXNASCARRACE-OREI26-JOGA low 350c, KXNASCARRACE-OREI26-JEBU low 350c, KXNASCARRACE-OREI26-RYEL low 350c, KXNASCARRACE-OREI26-JOWI low 350c, KXNASCARRACE-OREI26-BRPO low 350c, KXNASCARRACE-OREI26-GASM low 350c, KXNASCARRACE-OREI26-HABU low 350c, KXNASCARRACE-OREI26-SHCR low 545c, KXNASCARRACE-OREI26-JOBI low 350c, KXNASCARRACE-OREI26-PAEM low 350c, KXNASCARRACE-OREI26-DACR low 350c, KXNASCARRACE-OREI26-WIRO low 350c, KXNASCARRACE-OREI26-PRPA low 350c, KXNASCARRACE-OREI26-BLPE low 350c, KXNASCARRACE-OREI26-KYSI low 350c, KXNASCARRACE-OREI26-TAGR high 350c, KXNASCARRACE-OREI26-DETH low 350c, KXNASCARRACE-OREI26-NISA low 350c, KXNASCARRACE-OREI26-BRPE low 350c, KXNASCARRACE-OREI26-MAMA low 350c, KXNASCARRACE-OREI26-JELO low 545c, KXNASCARRACE-OREI26-BRCR low 715c, KXNASCARRACE-OREI26-PAST low 350c, KXNASCARRACE-OREI26-LASC low 350c, KXNASCARRACE-OREI26-ANPA low 350c, KXNASCARRACE-OREI26-ANAL low 350c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793972765503-4e9286",
       "ts": "2026-11-06T13:46:05Z",
@@ -4618,6 +4594,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Brandon Jones has had no resting orders for at least 133 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794031826105-90114c",
+      "ts": "2026-11-07T06:10:26Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Brandon Jones (+66%)",
       "severity": "warn"
     }
   ]
