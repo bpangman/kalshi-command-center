@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T07:04:53.720900Z",
+  "generated_at": "2026-11-07T07:06:29.484016Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -64,7 +64,7 @@
         "exposure_text": "+$41",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-07T07:04:40Z",
+        "at": "2026-11-07T07:05:40Z",
         "stuck": false,
         "also": "Also: glide starts 12:00pm CT",
         "last_fill": "2026-11-07T03:05:22Z"
@@ -74,13 +74,13 @@
         "resting": "713 @ 12-17c",
         "exposure": 647.48,
         "exposure_text": "+$647",
-        "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T07:04:40Z",
+        "move": "Hold price at 12c",
+        "when": "next cent is under the crowd price (6c)",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-06T16:18:47Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Price 12c is at its floor."
       },
       {
         "side": "Brent Crews",
@@ -107,7 +107,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil.",
           "Brent Crews: 1,087 behind. Price 6c matches the crowd.",
-          "Carson Kvapil: 1,012 behind. Steps to 11c at the next check.",
+          "Carson Kvapil: 1,012 behind. Price 12c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,19 +211,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T07:04:40Z"
+    "ts": "2026-11-07T07:05:40Z"
   },
   "posts": [
-    {
-      "id": "1793922924055-4feee6",
-      "ts": "2026-11-05T23:55:24Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 11,687 resting. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793923688656-245885",
       "ts": "2026-11-06T00:06:02Z",
@@ -3698,18 +3688,19 @@
       "text": "Quiet for 15 min. 14,561 resting. Next: Risk glide starts, 12:00pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794035120827-1ee1ae",
+      "ts": "2026-11-07T07:05:06Z",
+      "book": "HOM-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Carson Kvapil.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1793976591029-1f5f20",
-      "ts": "2026-11-06T14:49:51Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Corey Day has had no resting orders for at least 929 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793977507927-7edcb0",
       "ts": "2026-11-06T15:05:07Z",
@@ -4599,6 +4590,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Brandon Jones has had no resting orders for at least 194 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794035106809-f7b1a8",
+      "ts": "2026-11-07T07:05:06Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Carson Kvapil (+20%)",
       "severity": "warn"
     }
   ]
