@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T16:03:06.009160Z",
+  "generated_at": "2026-11-07T16:04:38.056112Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -40,33 +40,37 @@
         "exposure_text": "+$8",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (91% of the offered has sold)",
-        "at": "2026-11-07T16:02:23Z",
+        "at": "2026-11-07T16:04:23Z",
         "stuck": false,
         "also": "Also: glide starts 12:00pm CT",
-        "last_fill": "2026-11-07T15:16:17Z"
+        "last_fill": "2026-11-07T15:16:17Z",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "Corey Day",
         "resting": "485 @ 18-21c",
         "exposure": 27.23,
         "exposure_text": "+$27",
-        "move": "Glide starts: cheap buybacks, trims rows",
-        "when": "12:00pm CT (limit slides to +$100 by 4:00pm CT)",
-        "at": "2026-11-07T18:00:00Z",
+        "move": "Step price down 1c (18c to 17c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-07T16:04:23Z",
         "stuck": false,
-        "also": "Also: next wave at 90% sold (now 62%)",
-        "last_fill": "2026-11-07T14:34:12Z"
+        "also": "Also: glide starts 12:00pm CT",
+        "last_fill": "2026-11-07T14:34:12Z",
+        "lag_note": "Steps to 17c at the next check."
       },
       {
         "side": "Jesse Love",
         "resting": "556 @ 23-24c",
         "exposure": 109.79,
         "exposure_text": "+$110",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,020 offered has sold (now 70%)",
-        "at": null,
+        "move": "Step price down 1c (23c to 22c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-07T16:04:23Z",
         "stuck": false,
-        "last_fill": "2026-11-07T03:55:09Z"
+        "also": "Also: even-up 4:00pm CT",
+        "last_fill": "2026-11-07T03:55:09Z",
+        "lag_note": "Steps to 22c at the next check."
       },
       {
         "side": "Carson Kvapil",
@@ -75,7 +79,7 @@
         "exposure_text": "+$441",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T16:03:23Z",
+        "at": "2026-11-07T16:04:23Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T15:53:23Z",
@@ -104,7 +108,7 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil.",
+          "Lagging (150+ behind the leader): Austin Hill, Brent Crews, Carson Kvapil, Corey Day, Jesse Love, Sheldon Creed.",
           "Brent Crews: 1,118 behind. No crowd trade data yet.",
           "Carson Kvapil: 736 behind. Steps to 14c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
@@ -172,7 +176,7 @@
         "held": 795.6,
         "resting": 484.8,
         "target": 1100.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.18
       },
       {
@@ -180,7 +184,7 @@
         "held": 713.0,
         "resting": 556.0,
         "target": 1100.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.23
       },
       {
@@ -204,35 +208,15 @@
         "held": 815.0,
         "resting": 325.0,
         "target": 1100.0,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       }
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T16:02:23Z"
+    "ts": "2026-11-07T16:04:23Z"
   },
   "posts": [
-    {
-      "id": "1793960386290-da4a90",
-      "ts": "2026-11-06T10:19:46Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 12,388 resting. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793960627629-70b4f4",
-      "ts": "2026-11-06T10:23:47Z",
-      "book": "HOM-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$252, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793960688193-61c752",
       "ts": "2026-11-06T10:24:48Z",
@@ -3811,6 +3795,25 @@
         "contracts": 86.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1794067461769-a00047",
+      "ts": "2026-11-07T16:04:21Z",
+      "book": "HOM-ORLY",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on HOM-ORLY: 0 orders posted in 10 min while the market traded 2794 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1794067463813-fbeefa",
+      "ts": "2026-11-07T16:04:23Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 4:00pm CT. Worst line -$295, final target +$100. Next: Risk glide starts, 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
