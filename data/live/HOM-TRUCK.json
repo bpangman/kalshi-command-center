@@ -1,19 +1,30 @@
 {
   "key": "HOM-TRUCK",
-  "generated_at": "2026-11-07T00:30:34.821685Z",
+  "generated_at": "2026-11-07T00:32:18.611349Z",
   "plan": {
     "engine": "race",
     "phase": "Green flag handoff",
-    "headline": "Green flag handoff for the green flag 6:30pm CT. Worst line +$4, final target +$100.",
+    "headline": "Green flag handoff for the green flag 6:30pm CT. Worst line +$5, final target +$100.",
     "confidence": "medium",
     "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
     "checks_every_s": 30,
     "moves": [
       {
+        "side": "Ty Majeski",
+        "resting": "13 @ 8c",
+        "exposure": 17.35,
+        "exposure_text": "+$17",
+        "move": "Glide: buybacks and trims",
+        "when": "each bot check while his line is under +$100",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-07T00:30:35Z"
+      },
+      {
         "side": "Layne Riggs",
         "resting": "none",
-        "exposure": 18.49,
-        "exposure_text": "+$18",
+        "exposure": 18.84,
+        "exposure_text": "+$19",
         "move": "Glide: buybacks and trims",
         "when": "each bot check while his line is under +$100",
         "at": null,
@@ -21,21 +32,10 @@
         "last_fill": "2026-11-07T00:29:45Z"
       },
       {
-        "side": "Ty Majeski",
-        "resting": "45 @ 8c",
-        "exposure": 21.49,
-        "exposure_text": "+$21",
-        "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$100",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-07T00:29:15Z"
-      },
-      {
         "side": "Chandler Smith",
         "resting": "none",
-        "exposure": 26.49,
-        "exposure_text": "+$26",
+        "exposure": 26.84,
+        "exposure_text": "+$27",
         "move": "Glide: buybacks and trims",
         "when": "each bot check while his line is under +$100",
         "at": null,
@@ -45,8 +45,8 @@
       {
         "side": "Corey Heim",
         "resting": "22 @ 29c",
-        "exposure": 26.49,
-        "exposure_text": "+$26",
+        "exposure": 26.84,
+        "exposure_text": "+$27",
         "move": "Glide: buybacks and trims",
         "when": "each bot check while his line is under +$100",
         "at": null,
@@ -55,30 +55,30 @@
       },
       {
         "side": "Kaden Honeycutt",
-        "resting": "91 @ 22-29c",
-        "exposure": 58.49,
-        "exposure_text": "+$58",
+        "resting": "68 @ 22-29c",
+        "exposure": 58.84,
+        "exposure_text": "+$59",
         "move": "Step price down 1c (22c to 21c)",
-        "when": "if no fill by 6:33pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-07T00:33:34Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-11-07T00:23:34Z",
-        "lag_note": "Steps to 21c if no fill by 6:33pm CT."
+        "lag_note": "Steps to 21c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Green flag handoff, green flag 6:30pm CT. Sold 4,448, 5,469 resting. Worst line +$4 (limit now +$100)."
+          "Green flag handoff, green flag 6:30pm CT. Sold 4,453, 4,808 resting. Worst line +$5 (limit now +$100)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): Kaden Honeycutt.",
-          "Kaden Honeycutt: 40 behind. Steps to 21c if no fill by 6:33pm CT.",
+          "Kaden Honeycutt: 42 behind. Steps to 21c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -93,7 +93,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$250.",
-          "Glide is running: limit +$100, worst line +$4, final +$100 at 6:30pm CT.",
+          "Glide is running: limit +$100, worst line +$5, final +$100 at 6:30pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 5:00pm CT.",
           "Even-up from 6:30pm CT, last-resort take from 6:10pm CT, green flag 6:30pm CT."
         ]
@@ -105,23 +105,7 @@
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-07T00:30:00Z",
-        "label": "Glide target date",
-        "detail": "Worst line should be +$100 or better."
-      },
-      {
-        "at": "2026-11-07T00:30:00Z",
-        "label": "Even-up begins",
-        "detail": "Waves stop; lagging drivers repriced toward fair."
-      },
-      {
-        "at": "2026-11-07T00:30:00Z",
-        "label": "Green flag",
-        "detail": "In-race engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "Chandler Smith",
@@ -142,7 +126,7 @@
       {
         "label": "Kaden Honeycutt",
         "held": 245.0,
-        "resting": 91.0,
+        "resting": 68.0,
         "target": 1100.0,
         "status": "lagging",
         "price": 0.22
@@ -157,8 +141,8 @@
       },
       {
         "label": "Ty Majeski",
-        "held": 282.0,
-        "resting": 45.0,
+        "held": 286.5,
+        "resting": 13.0,
         "target": 1100.0,
         "status": "even",
         "price": 0.08
@@ -166,69 +150,9 @@
     ],
     "moves_note": "31 other drivers: nothing sold, no exposure.",
     "book": "HOM-TRUCK",
-    "ts": "2026-11-07T00:30:13Z"
+    "ts": "2026-11-07T00:32:13Z"
   },
   "posts": [
-    {
-      "id": "1793907503784-c87f3a",
-      "ts": "2026-11-05T19:38:23Z",
-      "book": "HOM-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$243, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793907564143-f472da",
-      "ts": "2026-11-05T19:39:24Z",
-      "book": "HOM-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$243, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793907624670-af4892",
-      "ts": "2026-11-05T19:40:24Z",
-      "book": "HOM-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$243, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1793908530802-d23a3d",
-      "ts": "2026-11-05T19:55:30Z",
-      "book": "HOM-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 8,109 resting. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793909436733-f1cb8e",
-      "ts": "2026-11-05T20:10:36Z",
-      "book": "HOM-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 8,109 resting. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793909738523-0c545f",
-      "ts": "2026-11-05T20:15:38Z",
-      "book": "HOM-TRUCK",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Fri 6:30pm CT. Worst line -$243, final target +$100. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793909919823-eb9318",
       "ts": "2026-11-05T20:18:39Z",
@@ -3620,18 +3544,89 @@
       "source": "takegap-study",
       "text": "NASCAR take study: Truck race - NO, it would not have helped enough. At the green flag our worst case was a $4 gain; it would have been a $33 gain (346 contracts). Including long shots would have bought 1,855 more contracts (information only).",
       "severity": "info"
+    },
+    {
+      "id": "1794011453467-90fcfc",
+      "ts": "2026-11-07T00:30:46Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: Christian Eckes.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1794011453468-6d5a29",
+      "ts": "2026-11-07T00:30:47Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Even: every contender within 15 percent; no more adding, floor-only armed",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1794011453468-3cbc95",
+      "ts": "2026-11-07T00:30:47Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim: Kaden Honeycutt resting 91 -> 68 (cap 68, line +59, others' minimum +5)",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1794011453468-e52686",
+      "ts": "2026-11-07T00:30:47Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Glide check: limit +$100, worst line +$5.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1794011473497-0abe27",
+      "ts": "2026-11-07T00:31:13Z",
+      "book": "HOM-TRUCK",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Green flag handoff for the green flag 6:30pm CT. Worst line +$5, final target +$100.",
+      "severity": "info",
+      "title": "Plan updated: Green flag handoff"
+    },
+    {
+      "id": "1794011493551-5a88b1",
+      "ts": "2026-11-07T00:30:46Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 85: Ty Majeski x44 at 7c, Layne Riggs x37 at 30c, Ty Majeski x4 at 8c. Worst line +$5.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 85.0,
+        "fills": [
+          {
+            "side": "Ty Majeski",
+            "price": 0.07,
+            "qty": 44.0
+          },
+          {
+            "side": "Layne Riggs",
+            "price": 0.3,
+            "qty": 37.0
+          },
+          {
+            "side": "Ty Majeski",
+            "price": 0.08,
+            "qty": 4.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793977283195-0558c0",
-      "ts": "2026-11-06T15:01:23Z",
-      "book": "HOM-TRUCK",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-TRUCK): 18 ladder(s) stale 10+ min: KXNASCARRACE-NASCA26-COLA low 300c, KXNASCARRACE-NASCA26-JORE low 300c, KXNASCARRACE-NASCA26-JUHA low 300c, KXNASCARRACE-NASCA26-SPBO low 300c, KXNASCARRACE-NASCA26-SPDA low 300c, KXNASCARRACE-NASCA26-MAMA low 300c, KXNASCARRACE-NASCA26-KRWR low 300c, KXNASCARRACE-NASCA26-KAHO low 238c, KXNASCARRACE-NASCA26-COMO low 275c, KXNASCARRACE-NASCA26-LEHO low 300c, KXNASCARRACE-NASCA26-LALE low 15c, KXNASCARRACE-NASCA26-FRMU low 300c, KXNASCARRACE-NASCA26-BRQU low 300c, KXNASCARRACE-NASCA26-CLGR low 300c, KXNASCARRACE-NASCA26-ANPE low 300c, KXNASCARRACE-NASCA26-COBU low 300c, KXNASCARRACE-NASCA26-MITY low 300c, KXNASCARRACE-NASCA26-MACR low 53c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1793977283196-5519f1",
       "ts": "2026-11-06T15:01:23Z",
@@ -4521,6 +4516,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-TRUCK): lagging contender priced over the crowd: Kaden Honeycutt ask 0.22 vs clearing 0.159 for 115 min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794011446732-36c214",
+      "ts": "2026-11-07T00:30:46Z",
+      "book": "HOM-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Christian Eckes (+43%)",
       "severity": "warn"
     }
   ]
