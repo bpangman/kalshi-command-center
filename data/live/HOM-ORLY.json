@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T21:08:51.061601Z",
+  "generated_at": "2026-11-07T21:10:54.119661Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -27,7 +27,7 @@
         "exposure": -220.84,
         "exposure_text": "-$221",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$25",
+        "when": "each bot check while his line is under +$27",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-07T18:45:50Z"
@@ -38,7 +38,7 @@
         "exposure": -189.84,
         "exposure_text": "-$190",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$25",
+        "when": "each bot check while his line is under +$27",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-07T04:33:48Z"
@@ -49,7 +49,7 @@
         "exposure": -109.4,
         "exposure_text": "-$109",
         "move": "Glide: buybacks and trims",
-        "when": "each bot check while his line is under +$25",
+        "when": "each bot check while his line is under +$27",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-07T19:45:20Z"
@@ -61,7 +61,7 @@
         "exposure_text": "+$184",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T21:08:23Z",
+        "at": "2026-11-07T21:10:23Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T03:55:09Z",
@@ -74,7 +74,7 @@
         "exposure_text": "+$515",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T21:08:23Z",
+        "at": "2026-11-07T21:10:23Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T15:53:23Z",
@@ -95,7 +95,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 4:00pm CT. Sold 7,797, 13,230 resting. Worst line -$221 (limit now +$25)."
+          "Risk glide, green flag 4:00pm CT. Sold 7,797, 13,230 resting. Worst line -$221 (limit now +$27)."
         ]
       },
       {
@@ -118,7 +118,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Justin Allgaier: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit +$25, worst line -$221, final +$100 at 4:00pm CT.",
+          "Glide is running: limit +$27, worst line -$221, final +$100 at 4:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 2:30pm CT.",
           "Even-up from 4:00pm CT, last-resort take from 3:40pm CT, green flag 4:00pm CT."
         ]
@@ -207,19 +207,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T21:08:23Z"
+    "ts": "2026-11-07T21:10:23Z"
   },
   "posts": [
-    {
-      "id": "1793987734900-675020",
-      "ts": "2026-11-06T17:55:34Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 12,917 resting. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793988640964-082c8d",
       "ts": "2026-11-06T18:10:40Z",
@@ -3891,18 +3881,19 @@
       "source": "bot",
       "text": "Inactivity on HOM-ORLY: 0 orders posted in 10 min while the market traded 43331 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1794085843915-0ecf13",
+      "ts": "2026-11-07T21:10:41Z",
+      "book": "HOM-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Risk glide: limit +$28, worst line -$221. worst held is $121 under the hard minimum -100 inside 3:00pm CT; still working (fills",
+      "severity": "info",
+      "title": "Glide"
     }
   ],
   "audits": [
-    {
-      "id": "1794048546754-2d2cd3",
-      "ts": "2026-11-07T10:49:06Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 378 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794049228497-f3ee45",
       "ts": "2026-11-07T11:00:28Z",
@@ -4792,6 +4783,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=43879. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794085809918-1748ca",
+      "ts": "2026-11-07T21:10:09Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-ORLY): pre-race risk glide short of target: worst held -221 is $121 under the -100 hard minimum at T-51; the bot keeps working fills, FILLFAIR, buybacks and takes to the green flag. Check the command center.",
       "severity": "warn"
     }
   ]
