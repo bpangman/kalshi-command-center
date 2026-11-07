@@ -1,13 +1,13 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T06:01:35.807244Z",
+  "generated_at": "2026-11-07T06:03:25.438590Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 4:00pm CT. Worst line -$364, final target +$100.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$100 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 49,
     "moves": [
       {
         "side": "Sam Mayer",
@@ -64,7 +64,7 @@
         "exposure_text": "+$41",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-07T06:01:17Z",
+        "at": "2026-11-07T06:03:17Z",
         "stuck": false,
         "also": "Also: glide starts 12:00pm CT",
         "last_fill": "2026-11-07T03:05:22Z"
@@ -99,7 +99,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 4:00pm CT. Sold 5,724, 14,561 resting. Worst line -$364 (limit now -$250)."
+          "Pre-race growth, green flag 4:00pm CT. Sold 5,724, 14,561 resting. Worst line -$364 (limit now -$250). Bot is slow (checks every 49s, set for 30s)."
         ]
       },
       {
@@ -211,39 +211,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T06:01:17Z"
+    "ts": "2026-11-07T06:03:17Z"
   },
   "posts": [
-    {
-      "id": "1793920449026-d2cd34",
-      "ts": "2026-11-05T23:12:03Z",
-      "book": "HOM-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 3: Corey Day x3 at 18c. Worst line -$270.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 3.0,
-        "fills": [
-          {
-            "side": "Corey Day",
-            "price": 0.18,
-            "qty": 3.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1793920872408-3028b1",
-      "ts": "2026-11-05T23:21:00Z",
-      "book": "HOM-ORLY",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot note: BACKSTOP Corey Day: line -252 under -250, stop adding; 0 resting kept (nothing cancelled); adding resumes when",
-      "severity": "info",
-      "title": "Bot note"
-    },
     {
       "id": "1793920872412-cb58e1",
       "ts": "2026-11-05T23:21:12Z",
@@ -3727,18 +3697,29 @@
       "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$364, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
       "severity": "info",
       "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1794031337280-fd4d0a",
+      "ts": "2026-11-07T06:02:17Z",
+      "book": "HOM-ORLY",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 14,561 resting. Next: Risk glide starts, 12:00pm CT.",
+      "severity": "info",
+      "title": "Quiet"
+    },
+    {
+      "id": "1794031397521-4c9aca",
+      "ts": "2026-11-07T06:03:17Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag 4:00pm CT. Worst line -$364, final target +$100. Next: Risk glide starts, 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
-    {
-      "id": "1793971533261-c2d2a7",
-      "ts": "2026-11-06T13:25:33Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 1 driver(s): Carson Kvapil (+23%)",
-      "severity": "warn"
-    },
     {
       "id": "1793972765502-d8f6ae",
       "ts": "2026-11-06T13:46:05Z",
@@ -4629,6 +4610,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): worst -364.40 vs floor -184.12. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794031378979-3cf2fd",
+      "ts": "2026-11-07T06:02:58Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Brandon Jones has had no resting orders for at least 133 min (reason unknown: no reason logged).",
+      "severity": "warn"
     }
   ]
 }
