@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T12:51:21.816641Z",
+  "generated_at": "2026-11-07T12:52:52.254959Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -64,7 +64,7 @@
         "exposure_text": "+$98",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-07T12:51:03Z",
+        "at": "2026-11-07T12:52:03Z",
         "stuck": false,
         "also": "Also: glide starts 12:00pm CT",
         "last_fill": "2026-11-07T03:05:22Z"
@@ -75,12 +75,12 @@
         "exposure": 491.46,
         "exposure_text": "+$491",
         "move": "Step price down 1c (17c to 16c)",
-        "when": "if no fill by 6:52am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-07T12:52:54Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T12:42:54Z",
-        "lag_note": "Steps to 16c if no fill by 6:52am CT."
+        "lag_note": "Steps to 16c at the next check."
       },
       {
         "side": "Brent Crews",
@@ -107,7 +107,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil.",
           "Brent Crews: 1,118 behind. No crowd trade data yet.",
-          "Carson Kvapil: 829 behind. Steps to 16c if no fill by 6:52am CT.",
+          "Carson Kvapil: 829 behind. Steps to 16c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,7 +211,7 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T12:51:03Z"
+    "ts": "2026-11-07T12:52:03Z"
   },
   "posts": [
     {
@@ -3735,15 +3735,6 @@
   ],
   "audits": [
     {
-      "id": "1794000278204-abf3d7",
-      "ts": "2026-11-06T21:24:38Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-ORLY): worst -303.75 vs floor -184.12. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1794000939103-b76678",
       "ts": "2026-11-06T21:35:39Z",
       "book": "HOM-ORLY",
@@ -4632,6 +4623,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Justin Allgaier (+39%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794055940706-e233a9",
+      "ts": "2026-11-07T12:52:20Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- HOM-ORLY - Justin Allgaier has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 501 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
