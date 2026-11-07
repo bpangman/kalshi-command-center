@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-07T15:02:18.404940Z",
+  "generated_at": "2026-11-07T15:04:13.576585Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -37,12 +37,12 @@
         "exposure": 89.0,
         "exposure_text": "+$89",
         "move": "Hold price at 13c",
-        "when": "needs 50+ crowd trades under 13c (now 15)",
+        "when": "needs 50+ crowd trades under 13c (now 14)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-06T09:22:38Z",
-        "lag_note": "Crowd is quiet here (15 traded)."
+        "lag_note": "Crowd is quiet here (14 traded)."
       },
       {
         "side": "ATL by 1-6",
@@ -50,11 +50,11 @@
         "exposure": 97.0,
         "exposure_text": "+$97",
         "move": "Hold price at 17c",
-        "when": "needs 50+ crowd trades under 17c (now 16)",
+        "when": "needs 50+ crowd trades under 17c (now 15)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
-        "lag_note": "Crowd is quiet here (16 traded)."
+        "lag_note": "Crowd is quiet here (15 traded)."
       },
       {
         "side": "CIN by 1-6",
@@ -62,11 +62,11 @@
         "exposure": 97.0,
         "exposure_text": "+$97",
         "move": "Hold price at 23c",
-        "when": "needs 50+ crowd trades under 23c (now 13)",
+        "when": "needs 50+ crowd trades under 23c (now 12)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
-        "lag_note": "Crowd is quiet here (13 traded)."
+        "lag_note": "Crowd is quiet here (12 traded)."
       },
       {
         "side": "CIN by 15+",
@@ -74,11 +74,11 @@
         "exposure": 97.0,
         "exposure_text": "+$97",
         "move": "Hold price at 16c",
-        "when": "needs 50+ crowd trades under 16c (now 13)",
+        "when": "needs 50+ crowd trades under 16c (now 12)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
-        "lag_note": "Crowd is quiet here (13 traded)."
+        "lag_note": "Crowd is quiet here (12 traded)."
       }
     ],
     "sections": [
@@ -92,8 +92,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): ATL by 1-6, ATL by 7-14, CIN by 1-6, CIN by 15+.",
-          "ATL by 1-6: 364 behind. Crowd is quiet here (16 traded).",
-          "CIN by 1-6: 364 behind. Crowd is quiet here (13 traded).",
+          "ATL by 1-6: 364 behind. Crowd is quiet here (15 traded).",
+          "CIN by 1-6: 364 behind. Crowd is quiet here (12 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-07T15:01:18Z"
+    "ts": "2026-11-07T15:03:19Z"
   },
   "posts": [
     {
@@ -3078,6 +3078,26 @@
       "text": "Quiet for 15 min. 5,252 resting. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794063819796-5abc9c",
+      "ts": "2026-11-07T15:03:21Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1794063819797-9e451c",
+      "ts": "2026-11-07T15:03:33Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$267 is under -$150. CIN by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
@@ -3935,6 +3955,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-CINATL): worst -267.00 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794063801396-04aeca",
+      "ts": "2026-11-07T15:03:21Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
