@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T18:29:54.511101Z",
+  "generated_at": "2026-11-07T18:31:26.868476Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -40,7 +40,7 @@
         "exposure_text": "-$56",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-07T18:29:23Z",
+        "at": "2026-11-07T18:31:23Z",
         "stuck": false,
         "last_fill": "2026-11-07T18:27:29Z"
       },
@@ -62,7 +62,7 @@
         "exposure_text": "+$132",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T18:29:23Z",
+        "at": "2026-11-07T18:31:23Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T03:55:09Z",
@@ -75,7 +75,7 @@
         "exposure_text": "+$463",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T18:29:23Z",
+        "at": "2026-11-07T18:31:23Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T15:53:23Z",
@@ -88,7 +88,7 @@
         "exposure_text": "+$845",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T18:29:23Z",
+        "at": "2026-11-07T18:31:23Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "lag_note": "Steps to 5c at the next check."
@@ -98,7 +98,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 4:00pm CT. Sold 7,318, 14,096 resting. Worst line -$273 (limit now -$208)."
+          "Risk glide, green flag 4:00pm CT. Sold 7,318, 14,096 resting. Worst line -$273 (limit now -$205)."
         ]
       },
       {
@@ -121,7 +121,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Justin Allgaier, Sam Mayer: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit -$208, worst line -$273, final +$100 at 4:00pm CT.",
+          "Glide is running: limit -$205, worst line -$273, final +$100 at 4:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 2:30pm CT.",
           "Even-up from 4:00pm CT, last-resort take from 3:40pm CT, green flag 4:00pm CT."
         ]
@@ -210,19 +210,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T18:29:23Z"
+    "ts": "2026-11-07T18:31:23Z"
   },
   "posts": [
-    {
-      "id": "1793970174030-1e9dec",
-      "ts": "2026-11-06T13:02:54Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 12,388 resting. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793970657809-8725c1",
       "ts": "2026-11-06T13:10:57Z",
@@ -3857,18 +3847,29 @@
       "text": "Quiet for 15 min. 14,142 resting. Next: Glide selling opens, 2:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794076203471-4a6f6e",
+      "ts": "2026-11-07T18:27:51Z",
+      "book": "HOM-ORLY",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 46: Sheldon Creed x46 at 8c. Worst line -$273.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 46.0,
+        "fills": [
+          {
+            "side": "Sheldon Creed",
+            "price": 0.08,
+            "qty": 46.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794030157559-faa5fc",
-      "ts": "2026-11-07T05:42:37Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 72 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794030864297-0d4ff8",
       "ts": "2026-11-07T05:54:24Z",
@@ -4758,6 +4759,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=7782. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794076261317-2147ae",
+      "ts": "2026-11-07T18:31:01Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-ORLY): 26 ladder(s) stale 10+ min: KXNASCARRACE-OREI26-JECL low 350c, KXNASCARRACE-OREI26-JOGA low 350c, KXNASCARRACE-OREI26-JEBU low 350c, KXNASCARRACE-OREI26-RYEL low 350c, KXNASCARRACE-OREI26-JOWI low 350c, KXNASCARRACE-OREI26-BRPO low 350c, KXNASCARRACE-OREI26-GASM low 350c, KXNASCARRACE-OREI26-HABU low 350c, KXNASCARRACE-OREI26-JOBI low 350c, KXNASCARRACE-OREI26-PAEM low 350c, KXNASCARRACE-OREI26-DACR low 350c, KXNASCARRACE-OREI26-WIRO low 350c, KXNASCARRACE-OREI26-PRPA low 350c, KXNASCARRACE-OREI26-BLPE low 350c, KXNASCARRACE-OREI26-KYSI low 350c, KXNASCARRACE-OREI26-TAGR high 350c, KXNASCARRACE-OREI26-DETH low 350c, KXNASCARRACE-OREI26-NISA low 228c, KXNASCARRACE-OREI26-BRPE low 350c, KXNASCARRACE-OREI26-MAMA low 350c, KXNASCARRACE-OREI26-BRCR high 1118c, KXNASCARRACE-OREI26-PAST low 350c, KXNASCARRACE-OREI26-LASC low 350c, KXNASCARRACE-OREI26-ANPA low 350c, KXNASCARRACE-OREI26-ANAL low 350c, KXNASCARRACE-OREI26-PARE low 700c. Check the command center.",
       "severity": "warn"
     }
   ]
