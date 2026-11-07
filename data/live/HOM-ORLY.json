@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T13:45:58.461410Z",
+  "generated_at": "2026-11-07T13:47:27.940970Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -74,13 +74,13 @@
         "resting": "608 @ 13-17c",
         "exposure": 491.46,
         "exposure_text": "+$491",
-        "move": "Step price down 1c (13c to 12c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T13:45:26Z",
+        "move": "Hold price at 13c",
+        "when": "crowd pays 13c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T12:42:54Z",
-        "lag_note": "Steps to 12c at the next check."
+        "lag_note": "Price 13c matches the crowd."
       },
       {
         "side": "Brent Crews",
@@ -107,7 +107,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil.",
           "Brent Crews: 1,118 behind. No crowd trade data yet.",
-          "Carson Kvapil: 829 behind. Steps to 12c at the next check.",
+          "Carson Kvapil: 829 behind. Price 13c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -211,19 +211,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T13:45:26Z"
+    "ts": "2026-11-07T13:47:26Z"
   },
   "posts": [
-    {
-      "id": "1793952594559-4815be",
-      "ts": "2026-11-06T08:09:54Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 12,388 resting. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793953499929-d7599c",
       "ts": "2026-11-06T08:24:59Z",
@@ -3740,6 +3730,15 @@
       "text": "Quiet for 15 min. 14,502 resting. Next: Risk glide starts, 12:00pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794059177139-bd5cf6",
+      "ts": "2026-11-07T13:46:17Z",
+      "book": "HOM-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nJustin Allgaier: -338\nSam Mayer: -307\nCorey Day: +45\nAustin Hill: +67\nJesse Love: +67\nBrandon Jones: +80\nSheldon Creed: +98\nCarson Kvapil: +491\nall others (31) >= +753\nCollected $792 premium ($12 fees) | Paper margin over fair $189 (not realized until settlement)\nCore posted book 1.06 | Worst now -338 | Cash free $5890\nAnchor age 180s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
