@@ -1,6 +1,6 @@
 {
   "key": "HOM-TRUCK",
-  "generated_at": "2026-11-07T00:59:56.568982Z",
+  "generated_at": "2026-11-07T01:01:26.958480Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 5,131, 5,989 resting. Worst line +$34. Race 9% done. Floor protocol off."
+          "In race (Ingame). Sold 5,131, 5,989 resting. Worst line +$34. Race 10% done. Floor protocol off."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-TRUCK",
-    "ts": "2026-11-07T00:59:21Z"
+    "ts": "2026-11-07T01:01:22Z"
   },
   "posts": [
-    {
-      "id": "1793918798948-60d716",
-      "ts": "2026-11-05T22:46:38Z",
-      "book": "HOM-TRUCK",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 8,109 resting. Next: Risk glide starts, Fri 2:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793919060656-7eaaa5",
-      "ts": "2026-11-05T22:50:42Z",
-      "book": "HOM-TRUCK",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1793919221700-92fb0c",
       "ts": "2026-11-05T22:51:33Z",
@@ -3615,18 +3595,48 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794013222130-f91bdd",
+      "ts": "2026-11-07T01:00:20Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 14 (race floor first): Connor Mosack x8 at 2c, Nick Sanchez x6 at 10c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 14.0,
+        "rows": 2
+      }
+    },
+    {
+      "id": "1794013282347-2eb01b",
+      "ts": "2026-11-07T00:59:12Z",
+      "book": "HOM-TRUCK",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 41: Jake Garcia x35 at 3c, Nick Sanchez x6 at 10c. Worst line +$34.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 41.0,
+        "fills": [
+          {
+            "side": "Jake Garcia",
+            "price": 0.03,
+            "qty": 35.0
+          },
+          {
+            "side": "Nick Sanchez",
+            "price": 0.1,
+            "qty": 6.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793979646532-ff98c4",
-      "ts": "2026-11-06T15:40:46Z",
-      "book": "HOM-TRUCK",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-TRUCK - Ben Rhodes has had no resting orders for at least 256 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1793981021505-7d6ec5",
       "ts": "2026-11-06T16:03:41Z",
@@ -4516,6 +4526,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-TRUCK): 13 ladder(s) stale 10+ min: KXNASCARRACE-NASCA26-COLA low 309c, KXNASCARRACE-NASCA26-JORE low 309c, KXNASCARRACE-NASCA26-JUHA low 309c, KXNASCARRACE-NASCA26-SPBO low 309c, KXNASCARRACE-NASCA26-SPDA low 309c, KXNASCARRACE-NASCA26-MAMA low 309c, KXNASCARRACE-NASCA26-KRWR low 309c, KXNASCARRACE-NASCA26-FRMU low 309c, KXNASCARRACE-NASCA26-CLGR low 309c, KXNASCARRACE-NASCA26-ANPE low 309c, KXNASCARRACE-NASCA26-COBU low 309c, KXNASCARRACE-NASCA26-MITY low 309c, KXNASCARRACE-NASCA26-TIHI low 312c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794013254510-bf3ab4",
+      "ts": "2026-11-07T01:00:54Z",
+      "book": "HOM-TRUCK",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Shock on Layne Riggs: pulled Layne Riggs only, kept every other order, pausing 120s\nIf the race ends... you make\nJake Garcia: +34\nKaden Honeycutt: +34\nDaniel Hemric: +35\nChandler Smith: +35\nCorey Heim: +35\nLayne Riggs: +35\nNick Sanchez: +36\nMatt Crafton: +42\nall others (28) >= +43",
       "severity": "warn"
     }
   ]
