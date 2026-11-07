@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-07T15:21:33.165432Z",
+  "generated_at": "2026-11-07T15:23:03.843305Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -37,12 +37,12 @@
         "exposure": -6.5,
         "exposure_text": "-$6",
         "move": "Hold price at 13c",
-        "when": "needs 50+ crowd trades under 13c (now 32)",
+        "when": "needs 50+ crowd trades under 13c (now 31)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-07T15:20:07Z",
-        "lag_note": "Crowd is quiet here (32 traded)."
+        "lag_note": "Crowd is quiet here (31 traded)."
       },
       {
         "side": "ATL by 1-6",
@@ -51,7 +51,7 @@
         "exposure_text": "+$94",
         "move": "Step price down 1c (17c to 16c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T15:21:27Z",
+        "at": "2026-11-07T15:22:27Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-07T15:08:34Z",
@@ -63,12 +63,12 @@
         "exposure": 112.08,
         "exposure_text": "+$112",
         "move": "Hold price at 23c",
-        "when": "needs 50+ crowd trades under 23c (now 8)",
+        "when": "needs 50+ crowd trades under 23c (now 7)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-07T15:08:34Z",
-        "lag_note": "Crowd is quiet here (8 traded)."
+        "lag_note": "Crowd is quiet here (7 traded)."
       },
       {
         "side": "CIN by 15+",
@@ -76,26 +76,26 @@
         "exposure": 117.08,
         "exposure_text": "+$117",
         "move": "Hold price at 16c",
-        "when": "needs 50+ crowd trades under 16c (now 8)",
+        "when": "needs 50+ crowd trades under 16c (now 7)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
-        "lag_note": "Crowd is quiet here (8 traded)."
+        "lag_note": "Crowd is quiet here (7 traded)."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 718, 5,109 resting. Worst line -$247 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 718, 5,224 resting. Worst line -$247 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): ATL by 1-6, ATL by 7-14, CIN by 1-6, CIN by 15+.",
-          "CIN by 15+: 364 behind. Crowd is quiet here (8 traded).",
-          "CIN by 1-6: 359 behind. Crowd is quiet here (8 traded).",
+          "CIN by 15+: 364 behind. Crowd is quiet here (7 traded).",
+          "CIN by 1-6: 359 behind. Crowd is quiet here (7 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -152,7 +152,7 @@
       {
         "label": "ATL by 7-14",
         "held": 123.6,
-        "resting": 735.4,
+        "resting": 850.4,
         "target": null,
         "status": "lagging",
         "price": 0.13
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-07T15:21:27Z"
+    "ts": "2026-11-07T15:22:27Z"
   },
   "posts": [
     {
@@ -3144,6 +3144,40 @@
       "text": "Fast fill on lagging ATL by 7-14: 116 of 175 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1794064967881-134bce",
+      "ts": "2026-11-07T15:20:34Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 116: ATL by 7-14 x116 at 13c. Worst line -$247.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 116.0,
+        "fills": [
+          {
+            "side": "ATL by 7-14",
+            "price": 0.13,
+            "qty": 116.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794064967882-4de38b",
+      "ts": "2026-11-07T15:20:34Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 115 (same-price reload): ATL by 7-14 x115 at 13c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 115.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -4037,6 +4071,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-CINATL): worst -261.94 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794064896200-ea029e",
+      "ts": "2026-11-07T15:21:36Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+116 on ATL 7-14 @ 0.13 (maker)\nworst outcome now +159\nheld 23/124/203/5/364/0\nIf the game ends... you make\nATL 1-6: +94 (+1.9% of bankroll)\nATL 7-14: -6 (-0.1% of bankroll)\nATL 15+: -86 (-1.7% of bankroll)\nCIN 1-6: +112 (+2.3% of bankroll)\nCIN 7-14: -247 (-5.0% of bankroll)\nCIN 15+: +117 (+2.4% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
