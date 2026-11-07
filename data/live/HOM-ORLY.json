@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T19:12:26.068151Z",
+  "generated_at": "2026-11-07T19:13:56.730206Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -28,7 +28,7 @@
         "exposure_text": "-$241",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (124% of the offered has sold)",
-        "at": "2026-11-07T19:11:39Z",
+        "at": "2026-11-07T19:13:40Z",
         "stuck": false,
         "also": "Also: glide buybacks",
         "last_fill": "2026-11-07T18:45:50Z"
@@ -47,14 +47,16 @@
       },
       {
         "side": "Corey Day",
-        "resting": "416 @ 18-21c",
+        "resting": "476 @ 16-21c",
         "exposure": -4.1,
         "exposure_text": "-$4",
-        "move": "Next wave up to 1,000 contracts",
-        "when": "when 90% of the 1,280 offered has sold (now 69%)",
+        "move": "Hold price at 16c",
+        "when": "crowd pays 16.2c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-07T18:00:39Z"
+        "also": "Also: even-up 4:00pm CT",
+        "last_fill": "2026-11-07T18:00:39Z",
+        "lag_note": "Price 16c matches the crowd."
       },
       {
         "side": "Jesse Love",
@@ -63,7 +65,7 @@
         "exposure_text": "+$164",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T19:11:39Z",
+        "at": "2026-11-07T19:13:40Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T03:55:09Z",
@@ -76,7 +78,7 @@
         "exposure_text": "+$495",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T19:11:39Z",
+        "at": "2026-11-07T19:13:40Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T15:53:23Z",
@@ -89,7 +91,7 @@
         "exposure_text": "+$877",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T19:11:39Z",
+        "at": "2026-11-07T19:13:40Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "lag_note": "Steps to 5c at the next check."
@@ -99,13 +101,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Risk glide, green flag 4:00pm CT. Sold 7,672, 13,687 resting. Worst line -$241 (limit now -$146)."
+          "Risk glide, green flag 4:00pm CT. Sold 7,672, 13,747 resting. Worst line -$241 (limit now -$143)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): Brent Crews, Carson Kvapil, Jesse Love.",
+          "Lagging (150+ behind the leader): Austin Hill, Brent Crews, Carson Kvapil, Corey Day, Jesse Love.",
           "Brent Crews: 1,118 behind. Steps to 5c at the next check.",
           "Carson Kvapil: 736 behind. Steps to 14c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
@@ -122,7 +124,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop ON for Justin Allgaier, Sam Mayer: lines under -$250, no adding until above -$200.",
-          "Glide is running: limit -$146, worst line -$241, final +$100 at 4:00pm CT.",
+          "Glide is running: limit -$143, worst line -$241, final +$100 at 4:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 2:30pm CT.",
           "Even-up from 4:00pm CT, last-resort take from 3:40pm CT, green flag 4:00pm CT."
         ]
@@ -171,10 +173,10 @@
       {
         "label": "Corey Day",
         "held": 881.6,
-        "resting": 415.8,
+        "resting": 475.8,
         "target": 1100.0,
-        "status": "even",
-        "price": 0.18
+        "status": "lagging",
+        "price": 0.16
       },
       {
         "label": "Jesse Love",
@@ -211,18 +213,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T19:11:39Z"
+    "ts": "2026-11-07T19:13:40Z"
   },
   "posts": [
-    {
-      "id": "1793975775510-de11d8",
-      "ts": "2026-11-06T14:36:15Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nBrandon Jones: -252\nSam Mayer: -252\nCorey Day: -252\nJustin Allgaier: -208\nAustin Hill: -5\nJeremy Clements: +293\nRyan Sieg: +293\nJoey Gase: +293\nall others (30) >= +293\nCollected $298 premium ($4 fees) | Paper margin over fair $79 (not realized until settlement)\nCore posted book 1.01 | Worst now -252 | Cash free $5704\nAnchor age 75s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1793975975472-03922c",
       "ts": "2026-11-06T14:39:35Z",
@@ -3913,6 +3906,16 @@
       "text": "Risk glide: limit -$146, worst line -$241. post gate waived Corey Day 125@0.16 (race_fillfair catch-up; held 882 + row 125 ",
       "severity": "info",
       "title": "Glide"
+    },
+    {
+      "id": "1794078760011-9b2208",
+      "ts": "2026-11-07T19:12:40Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 4:00pm CT. Worst line -$241, final target +$100. Next: Glide selling opens, 2:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
