@@ -1,41 +1,41 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-07T00:22:34.283768Z",
+  "generated_at": "2026-11-07T00:24:17.297453Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$142, goal -$75.",
+    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$267, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "ATL by 15+",
-        "resting": "697 @ 9-15c",
-        "exposure": -142.14,
-        "exposure_text": "-$142",
-        "move": "Holding",
-        "when": "no move planned until the even-done check at Sun 8:00am CT",
+        "side": "CIN by 7-14",
+        "resting": "604 @ 22-32c",
+        "exposure": -267.0,
+        "exposure_text": "-$267",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$150 (now -$267)",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-05T23:11:23Z"
+        "stuck": false,
+        "last_fill": "2026-11-07T00:21:55Z"
       },
       {
-        "side": "CIN by 7-14",
-        "resting": "770 @ 22-32c",
-        "exposure": -137.52,
-        "exposure_text": "-$138",
+        "side": "ATL by 15+",
+        "resting": "697 @ 9-15c",
+        "exposure": -105.62,
+        "exposure_text": "-$106",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-08T14:10:00Z",
-        "stuck": true,
-        "last_fill": "2026-11-06T20:18:22Z"
+        "stuck": false,
+        "last_fill": "2026-11-05T23:11:23Z"
       },
       {
         "side": "ATL by 7-14",
         "resting": "676 @ 15-25c",
-        "exposure": 52.48,
-        "exposure_text": "+$52",
+        "exposure": 89.0,
+        "exposure_text": "+$89",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-08T14:10:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "ATL by 1-6",
         "resting": "802 @ 20-30c",
-        "exposure": 60.48,
-        "exposure_text": "+$60",
+        "exposure": 97.0,
+        "exposure_text": "+$97",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-08T14:10:00Z",
@@ -55,8 +55,8 @@
       {
         "side": "CIN by 1-6",
         "resting": "802 @ 25-35c",
-        "exposure": 60.48,
-        "exposure_text": "+$60",
+        "exposure": 97.0,
+        "exposure_text": "+$97",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-08T14:10:00Z",
@@ -65,8 +65,8 @@
       {
         "side": "CIN by 15+",
         "resting": "950 @ 17-25c",
-        "exposure": 60.48,
-        "exposure_text": "+$60",
+        "exposure": 97.0,
+        "exposure_text": "+$97",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-08T14:10:00Z",
@@ -77,7 +77,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 409, 4,697 resting. Worst line -$142 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 575, 4,531 resting. Worst line -$267 (goal -$75)."
         ]
       },
       {
@@ -90,14 +90,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$142 is better than -$200.",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$267).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
+          "Backstop ON: CIN by 7-14 stopped adding until worst line is above -$150 (now -$267).",
           "Paid balancing starts Sun 8:10am CT: worst line to -$75 by Sun 8:25am CT, up to $100.",
           "At Sun 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Sun 8:30am CT: the in-game engine takes over."
@@ -162,10 +162,10 @@
       },
       {
         "label": "CIN by 7-14",
-        "held": 198.0,
-        "resting": 770.0,
+        "held": 364.0,
+        "resting": 604.0,
         "target": null,
-        "status": "even",
+        "status": "heavy",
         "price": 0.22
       },
       {
@@ -178,7 +178,7 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-07T00:21:50Z"
+    "ts": "2026-11-07T00:23:51Z"
   },
   "posts": [
     {
@@ -2270,6 +2270,26 @@
       "source": "bot",
       "text": "If the game ends... you make\nATL 1-6: +60 (+1.2% of bankroll)\nATL 7-14: +52 (+1.1% of bankroll)\nATL 15+: -142 (-2.9% of bankroll)\nCIN 1-6: +60 (+1.2% of bankroll)\nCIN 7-14: -138 (-2.8% of bankroll)\nCIN 15+: +60 (+1.2% of bankroll)\nCollected $60 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 802\nATL 7-14: 8 / 676\nATL 15+: 203 / 697\nCIN 1-6: 0 / 802\nCIN 7-14: 198 / 770\nCIN 15+: 0 / 950\nPosted book 1.21 | Sold avg 1.137 | Worst now +58 | Cash free $680\nAnchor age 0s | Last fill 13924s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794010990920-cab26d",
+      "ts": "2026-11-07T00:22:57Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$267 is under -$150. CIN by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
+    },
+    {
+      "id": "1794011031133-ec72b6",
+      "ts": "2026-11-07T00:23:51Z",
+      "book": "W10-CINATL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Sun 8:30am CT. Worst line -$267, goal -$75. Next: Even-done check, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -2838,6 +2858,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+157 on CIN 7-14 @ 0.21 (maker)\nworst outcome now +124\nheld 0/8/203/0/198/0\nIf the game ends... you make\nATL 1-6: +60 (+1.2% of bankroll)\nATL 7-14: +52 (+1.1% of bankroll)\nATL 15+: -142 (-2.9% of bankroll)\nCIN 1-6: +60 (+1.2% of bankroll)\nCIN 7-14: -138 (-2.8% of bankroll)\nCIN 15+: +60 (+1.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794011040131-a1e33a",
+      "ts": "2026-11-07T00:24:00Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+166 on CIN 7-14 @ 0.22 (maker)\nworst outcome now +58\nheld 0/8/203/0/364/0\nIf the game ends... you make\nATL 1-6: +97 (+2.0% of bankroll)\nATL 7-14: +89 (+1.8% of bankroll)\nATL 15+: -106 (-2.1% of bankroll)\nCIN 1-6: +97 (+2.0% of bankroll)\nCIN 7-14: -267 (-5.4% of bankroll)\nCIN 15+: +97 (+2.0% of bankroll)",
       "severity": "warn"
     }
   ]
