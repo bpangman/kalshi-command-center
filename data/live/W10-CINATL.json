@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-07T22:41:56.135078Z",
+  "generated_at": "2026-11-07T22:43:30.649491Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-07T22:41:16Z"
+    "ts": "2026-11-07T22:43:17Z"
   },
   "posts": [
-    {
-      "id": "1793904765320-6d8a6c",
-      "ts": "2026-11-05T18:52:32Z",
-      "book": "W10-CINATL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1793904929436-1ec25c",
       "ts": "2026-11-05T18:55:29Z",
@@ -3348,18 +3338,34 @@
       "text": "Quiet for 15 min. 4,923 resting. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794091397114-53afa1",
+      "ts": "2026-11-07T22:41:04Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 13: CIN by 1-6 x8 at 23c, ATL by 1-6 x5 at 17c. Worst line -$191.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 13.0,
+        "fills": [
+          {
+            "side": "CIN by 1-6",
+            "price": 0.23,
+            "qty": 8.0
+          },
+          {
+            "side": "ATL by 1-6",
+            "price": 0.17,
+            "qty": 5.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1793946342368-1aad6e",
-      "ts": "2026-11-06T06:25:42Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -182.12 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1793948158838-ab75e1",
       "ts": "2026-11-06T06:55:58Z",
@@ -4250,6 +4256,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-CINATL): worst -194.16 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794091326619-053a6b",
+      "ts": "2026-11-07T22:42:06Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+5 on ATL 1-6 @ 0.17 (maker)\n+8 on CIN 1-6 @ 0.23 (maker)\nworst outcome now +160\nheld 28/306/203/139/364/0\nIf the game ends... you make\nATL 1-6: +145 (+2.9% of bankroll)\nATL 7-14: -133 (-2.7% of bankroll)\nATL 15+: -30 (-0.6% of bankroll)\nCIN 1-6: +33 (+0.7% of bankroll)\nCIN 7-14: -191 (-3.9% of bankroll)\nCIN 15+: +173 (+3.5% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
