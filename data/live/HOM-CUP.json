@@ -1,13 +1,13 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-07T19:21:58.811567Z",
+  "generated_at": "2026-11-07T19:23:28.165401Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$668, final target +$150.",
     "confidence": "medium",
-    "confidence_note": "Rules are set, but reaching +$150 depends on the crowd and on cash.",
-    "checks_every_s": 30,
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 51,
     "moves": [
       {
         "side": "Ryan Blaney",
@@ -52,7 +52,7 @@
         "exposure_text": "-$120",
         "move": "Step price down 1c (11c to 10c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T19:21:02Z",
+        "at": "2026-11-07T19:23:03Z",
         "stuck": false,
         "also": "Also: glide starts Sun 10:00am CT",
         "last_fill": "2026-11-07T04:23:38Z",
@@ -98,16 +98,16 @@
       },
       {
         "side": "William Byron",
-        "resting": "900 @ 6-14c",
+        "resting": "936 @ 5-14c",
         "exposure": 895.87,
         "exposure_text": "+$896",
-        "move": "Step price down 1c (6c to 5c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T19:21:02Z",
+        "move": "Hold price at 5c",
+        "when": "crowd pays 5c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: even-up Sun 2:00pm CT",
         "last_fill": "2026-11-02T23:32:01Z",
-        "lag_note": "Steps to 5c at the next check."
+        "lag_note": "Price 5c matches the crowd."
       },
       {
         "side": "Chad Finchum",
@@ -124,7 +124,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Sun 2:00pm CT. Sold 14,318, 47,377 resting. Worst line -$668 (limit now -$600)."
+          "Pre-race growth, green flag Sun 2:00pm CT. Sold 14,318, 47,377 resting. Worst line -$668 (limit now -$600). Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -132,7 +132,7 @@
         "lines": [
           "Lagging (150+ behind the leader): Chase Briscoe, Christopher Bell, Denny Hamlin, William Byron.",
           "Chase Briscoe: 1,920 behind. Steps to 10c at the next check.",
-          "William Byron: 1,564 behind. Steps to 5c at the next check.",
+          "William Byron: 1,564 behind. Price 5c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -236,10 +236,10 @@
       {
         "label": "William Byron",
         "held": 356.0,
-        "resting": 900.0,
+        "resting": 936.0,
         "target": 1850.0,
         "status": "lagging",
-        "price": 0.06
+        "price": 0.05
       },
       {
         "label": "Zane Smith",
@@ -252,19 +252,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 31 other drivers: nothing sold, no exposure.",
     "book": "HOM-CUP",
-    "ts": "2026-11-07T19:21:02Z"
+    "ts": "2026-11-07T19:23:03Z"
   },
   "posts": [
-    {
-      "id": "1793964877942-edf7bc",
-      "ts": "2026-11-06T11:34:37Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 41,038 resting. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793965482498-5e90e8",
       "ts": "2026-11-06T11:44:42Z",
@@ -3812,6 +3802,16 @@
       "text": "Quiet for 15 min. 47,377 resting. Next: Risk glide starts, Sun 10:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794079323051-f65185",
+      "ts": "2026-11-07T19:22:03Z",
+      "book": "HOM-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$668, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
     }
   ],
   "audits": [
