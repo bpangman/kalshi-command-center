@@ -1,6 +1,6 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-07T17:57:55.914796Z",
+  "generated_at": "2026-11-07T17:59:39.077956Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -18,7 +18,7 @@
         "when": "holding until his loss is back above -$200 (now -$284)",
         "at": null,
         "stuck": false,
-        "also": "Also: glide starts 12:00pm CT",
+        "also": "Also: glide starts at the next check",
         "last_fill": "2026-11-07T12:43:45Z"
       },
       {
@@ -30,7 +30,7 @@
         "when": "holding until his loss is back above -$200 (now -$253)",
         "at": null,
         "stuck": false,
-        "also": "Also: glide starts 12:00pm CT",
+        "also": "Also: glide starts at the next check",
         "last_fill": "2026-11-07T04:33:48Z"
       },
       {
@@ -40,9 +40,9 @@
         "exposure_text": "-$21",
         "move": "Next wave up to 1,000 contracts",
         "when": "next bot check (95% of the offered has sold)",
-        "at": "2026-11-07T17:57:11Z",
+        "at": "2026-11-07T17:59:12Z",
         "stuck": false,
-        "also": "Also: glide starts 12:00pm CT",
+        "also": "Also: glide starts at the next check",
         "last_fill": "2026-11-07T16:56:36Z"
       },
       {
@@ -64,7 +64,7 @@
         "exposure_text": "+$121",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T17:57:11Z",
+        "at": "2026-11-07T17:59:12Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T03:55:09Z",
@@ -77,7 +77,7 @@
         "exposure_text": "+$452",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T17:57:11Z",
+        "at": "2026-11-07T17:59:12Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "last_fill": "2026-11-07T15:53:23Z",
@@ -90,7 +90,7 @@
         "exposure_text": "+$834",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-07T17:57:11Z",
+        "at": "2026-11-07T17:59:12Z",
         "stuck": false,
         "also": "Also: even-up 4:00pm CT",
         "lag_note": "Steps to 5c at the next check."
@@ -212,19 +212,9 @@
     ],
     "moves_note": "32 other drivers: nothing sold, no exposure.",
     "book": "HOM-ORLY",
-    "ts": "2026-11-07T17:57:11Z"
+    "ts": "2026-11-07T17:59:12Z"
   },
   "posts": [
-    {
-      "id": "1793965220073-a551df",
-      "ts": "2026-11-06T11:40:20Z",
-      "book": "HOM-ORLY",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sat 4:00pm CT. Worst line -$252, final target +$100. Next: Risk glide starts, Sat 12:00pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
     {
       "id": "1793965763531-f13ef2",
       "ts": "2026-11-06T11:49:23Z",
@@ -3849,18 +3839,19 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nJustin Allgaier: -284\nSam Mayer: -253\nSheldon Creed: -21\nCorey Day: -5\nAustin Hill: +121\nJesse Love: +121\nBrandon Jones: +134\nCarson Kvapil: +452\nall others (31) >= +484\nCollected $846 premium ($12 fees) | Paper margin over fair $199 (not realized until settlement)\nEvent: Preston Pardus: pre-race; Ryan Ellis: pre-race\nCore posted book 1.06 | Worst now -284 | Cash free $5644\nAnchor age 125s (source: bovada)",
       "severity": "info"
+    },
+    {
+      "id": "1794074291684-e5a467",
+      "ts": "2026-11-07T17:58:11Z",
+      "book": "HOM-ORLY",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 14,185 resting. Next: Risk glide starts, 12:00pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1794026633025-81e517",
-      "ts": "2026-11-07T04:43:53Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 1 driver(s): J.J. Yeley (+52%)",
-      "severity": "warn"
-    },
     {
       "id": "1794026928446-ea45ac",
       "ts": "2026-11-07T04:48:48Z",
@@ -4750,6 +4741,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=19804. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794074288930-80a70f",
+      "ts": "2026-11-07T17:58:08Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- HOM-ORLY - Justin Allgaier has had no resting orders for at least 316 min (reason unknown: no reason logged).\n- HOM-ORLY - Sam Mayer has had no resting orders for at least 807 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
