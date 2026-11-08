@@ -1,10 +1,10 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T21:17:46.422990Z",
+  "generated_at": "2026-11-08T21:19:09.859804Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$172.",
+    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$168.",
     "confidence": "medium",
     "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "GB by 1-6",
         "resting": "none",
-        "exposure": -172.27,
-        "exposure_text": "-$172",
+        "exposure": -167.54,
+        "exposure_text": "-$168",
         "move": "Holding",
         "when": "no move planned until kickoff at 3:25pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "GB by 7-14",
         "resting": "none",
-        "exposure": -172.27,
-        "exposure_text": "-$172",
+        "exposure": -167.54,
+        "exposure_text": "-$168",
         "move": "Holding",
         "when": "no move planned until kickoff at 3:25pm CT",
         "at": null,
@@ -32,10 +32,23 @@
         "last_fill": "2026-11-08T21:15:33Z"
       },
       {
+        "side": "NE by 7-14",
+        "resting": "33 @ 19-23c",
+        "exposure": -53.71,
+        "exposure_text": "-$54",
+        "move": "Hold price at 19c",
+        "when": "crowd pays 19c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing",
+        "last_fill": "2026-11-08T21:17:58Z",
+        "lag_note": "Price 19c matches the crowd."
+      },
+      {
         "side": "GB by 15+",
         "resting": "77 @ 6-12c",
-        "exposure": -24.27,
-        "exposure_text": "-$24",
+        "exposure": -19.54,
+        "exposure_text": "-$20",
         "move": "Hold price at 6c",
         "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
@@ -45,23 +58,10 @@
         "lag_note": "Price 6c matches the crowd."
       },
       {
-        "side": "NE by 7-14",
-        "resting": "58 @ 19-23c",
-        "exposure": 30.2,
-        "exposure_text": "+$30",
-        "move": "Hold price at 19c",
-        "when": "crowd pays 19c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T21:16:36Z",
-        "lag_note": "Price 19c matches the crowd."
-      },
-      {
         "side": "NE by 15+",
         "resting": "311 @ 17-22c",
-        "exposure": 161.0,
-        "exposure_text": "+$161",
+        "exposure": 165.73,
+        "exposure_text": "+$166",
         "move": "Hold price at 17c",
         "when": "needs 50+ crowd trades under 17c (now 13)",
         "at": null,
@@ -73,29 +73,29 @@
       {
         "side": "NE by 1-6",
         "resting": "5 @ 24-28c",
-        "exposure": 187.43,
-        "exposure_text": "+$187",
+        "exposure": 192.16,
+        "exposure_text": "+$192",
         "move": "Step price down 1c (24c to 23c)",
-        "when": "if no fill by 3:19pm CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-08T21:19:22Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T21:09:22Z",
-        "lag_note": "Steps to 23c if no fill by 3:19pm CT."
+        "lag_note": "Steps to 23c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 1,705, 452 resting. Worst line -$172 (goal -$150)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,730, 427 resting. Worst line -$168 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): GB by 15+, NE by 1-6, NE by 7-14, NE by 15+.",
-          "NE by 1-6: 360 behind. Steps to 23c if no fill by 3:19pm CT.",
+          "NE by 1-6: 360 behind. Steps to 23c at the next check.",
           "NE by 15+: 333 behind. Crowd is quiet here (13 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -104,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$172 is better than -$185.",
+          "Gate open: worst line -$168 is better than -$170.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -112,7 +112,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$185, worst line -$172; spent $0 of $100.",
+          "Paid balancing is running: plan -$170, worst line -$168; spent $0 of $100.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -165,8 +165,8 @@
       },
       {
         "label": "NE by 7-14",
-        "held": 212.5,
-        "resting": 58.3,
+        "held": 301.2,
+        "resting": 33.4,
         "target": null,
         "status": "lagging",
         "price": 0.19
@@ -181,23 +181,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T21:17:33Z"
+    "ts": "2026-11-08T21:18:34Z"
   },
   "posts": [
-    {
-      "id": "1794009643902-46d17f",
-      "ts": "2026-11-06T23:58:30Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 10 (FIELD far-bucket row (all-fill): GB by 15+ x10 at 10c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 10.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794010186998-f2c4e2",
       "ts": "2026-11-07T00:07:31Z",
@@ -3430,6 +3416,36 @@
       "text": "Final tightening before kickoff 3:25pm CT. Worst line -$184. Next: Kickoff, 3:25pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1794172673927-b3805a",
+      "ts": "2026-11-08T21:16:38Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 259: GB by 7-14 x194 at 14c, NE by 7-14 x64 at 19c, GB by 7-14 x1 at 13c. Worst line -$172.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 259.0,
+        "fills": [
+          {
+            "side": "GB by 7-14",
+            "price": 0.14,
+            "qty": 194.0
+          },
+          {
+            "side": "NE by 7-14",
+            "price": 0.19,
+            "qty": 64.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.13,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
