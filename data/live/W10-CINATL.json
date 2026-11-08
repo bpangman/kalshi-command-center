@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T12:50:19.168622Z",
+  "generated_at": "2026-11-08T12:51:47.775697Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -27,7 +27,7 @@
         "exposure_text": "-$168",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T12:50:16Z",
+        "at": "2026-11-08T12:51:17Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T11:15:03Z",
@@ -38,13 +38,13 @@
         "resting": "604 @ 22-32c",
         "exposure": -34.15,
         "exposure_text": "-$34",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 8:10am CT, up to $100 in all",
-        "at": "2026-11-08T14:10:00Z",
+        "move": "Step price down 1c (22c to 21c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-08T12:51:17Z",
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T06:56:47Z",
-        "lag_note": "Crowd is quiet here (48 traded)."
+        "lag_note": "Steps to 21c at the next check."
       },
       {
         "side": "ATL by 7-14",
@@ -194,7 +194,7 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T12:50:16Z"
+    "ts": "2026-11-08T12:51:17Z"
   },
   "posts": [
     {
@@ -3579,15 +3579,6 @@
   ],
   "audits": [
     {
-      "id": "1794077373269-1679c4",
-      "ts": "2026-11-07T18:49:33Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -194.16 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1794078833073-3ffcb0",
       "ts": "2026-11-07T19:13:53Z",
       "book": "W10-CINATL",
@@ -4476,6 +4467,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+25 on CIN 15+ @ 0.18 (maker)\nworst outcome now +113\nheld 193/526/732/962/598/212\nIf the game ends... you make\nATL 1-6: +371 (+7.5% of bankroll)\nATL 7-14: +38 (+0.8% of bankroll)\nATL 15+: -168 (-3.4% of bankroll)\nCIN 1-6: -398 (-8.0% of bankroll)\nCIN 7-14: -34 (-0.7% of bankroll)\nCIN 15+: +352 (+7.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794142250158-d0b9ed",
+      "ts": "2026-11-08T12:50:50Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-CINATL): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=1241. Check the command center.",
       "severity": "warn"
     }
   ]
