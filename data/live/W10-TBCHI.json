@@ -1,6 +1,6 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-08T23:01:24.603769Z",
+  "generated_at": "2026-11-08T23:02:44.424836Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -51,7 +51,7 @@
         "exposure_text": "+$245",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T23:01:09Z",
+        "at": "2026-11-08T23:02:09Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-08T22:40:00Z",
@@ -191,29 +191,9 @@
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-08T23:01:09Z"
+    "ts": "2026-11-08T23:02:09Z"
   },
   "posts": [
-    {
-      "id": "1794003380055-cd7714",
-      "ts": "2026-11-06T22:16:20Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,994 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794004285992-17e50a",
-      "ts": "2026-11-06T22:31:25Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,994 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794005192587-75da48",
       "ts": "2026-11-06T22:46:32Z",
@@ -3462,6 +3442,45 @@
       "text": "Fast fill on lagging CHI by 15+: 50 of 155 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1794178889094-60f40c",
+      "ts": "2026-11-08T23:00:21Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 88: CHI by 15+ x50 at 26c, CHI by 15+ x38 at 25c. Worst line -$444.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 88.0,
+        "fills": [
+          {
+            "side": "CHI by 15+",
+            "price": 0.26,
+            "qty": 50.0
+          },
+          {
+            "side": "CHI by 15+",
+            "price": 0.25,
+            "qty": 38.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794178949452-4cb071",
+      "ts": "2026-11-08T23:00:21Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 50 (same-price reload): CHI by 15+ x50 at 26c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 50.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -3824,6 +3843,15 @@
       "source": "bot",
       "text": "+33 on CHI 7-14 @ 0.25 (maker)\nworst outcome now -291\nheld 348/534/338/0/231/44\nIf the game ends... you make\nCHI 1-6: -21 (-0.4% of bankroll)\nCHI 7-14: -207 (-4.0% of bankroll)\nCHI 15+: -12 (-0.2% of bankroll)\nTB 1-6: +326 (+6.2% of bankroll)\nTB 7-14: +95 (+1.8% of bankroll)\nTB 15+: +282 (+5.4% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1794178934352-29d291",
+      "ts": "2026-11-08T23:02:14Z",
+      "book": "W10-TBCHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-TBCHI): worst -443.52 vs floor -325.00. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
