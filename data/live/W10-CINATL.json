@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T04:52:31.746703Z",
+  "generated_at": "2026-11-08T04:53:57.779433Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -27,7 +27,7 @@
         "exposure_text": "+$48",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T04:52:23Z",
+        "at": "2026-11-08T04:53:23Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-08T03:25:29Z",
@@ -35,16 +35,16 @@
       },
       {
         "side": "ATL by 7-14",
-        "resting": "676 @ 15-25c",
+        "resting": "896 @ 13-25c",
         "exposure": 107.18,
         "exposure_text": "+$107",
-        "move": "Step price down 1c (15c to 14c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T04:52:23Z",
+        "move": "Hold price at 13c",
+        "when": "crowd pays 13.9c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-07T15:51:04Z",
-        "lag_note": "Steps to 14c at the next check."
+        "lag_note": "Price 13c matches the crowd."
       },
       {
         "side": "ATL by 15+",
@@ -66,7 +66,7 @@
         "exposure_text": "+$289",
         "move": "Step price down 1c (17c to 16c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T04:52:23Z",
+        "at": "2026-11-08T04:53:23Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-08T03:03:33Z",
@@ -194,28 +194,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T04:52:23Z"
+    "ts": "2026-11-08T04:53:23Z"
   },
   "posts": [
-    {
-      "id": "1793933835866-baada8",
-      "ts": "2026-11-06T02:57:15Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,927 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793934020133-0b5e37",
-      "ts": "2026-11-06T03:00:20Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +18 (+0.4% of bankroll)\nATL 7-14: +18 (+0.4% of bankroll)\nATL 15+: -185 (-3.7% of bankroll)\nCIN 1-6: +18 (+0.4% of bankroll)\nCIN 7-14: +18 (+0.4% of bankroll)\nCIN 15+: +18 (+0.4% of bankroll)\nCollected $18 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 802\nATL 7-14: 0 / 676\nATL 15+: 203 / 697\nCIN 1-6: 0 / 802\nCIN 7-14: 0 / 1000\nCIN 15+: 0 / 950\nPosted book 1.21 | Sold avg 1.192 | Worst now +35 | Cash free $680\nAnchor age 0s | Last fill 13736s ago",
-      "severity": "info"
-    },
     {
       "id": "1793934739128-5294a9",
       "ts": "2026-11-06T03:12:19Z",
@@ -3464,18 +3445,29 @@
       "text": "Quiet for 15 min. 4,560 resting. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794113583504-4322f7",
+      "ts": "2026-11-08T04:52:59Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1794113603672-6bd29a",
+      "ts": "2026-11-08T04:53:12Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$549 is under -$150. CIN by 1-6 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
-    {
-      "id": "1794022403065-67da0e",
-      "ts": "2026-11-07T03:33:23Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -267.00 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794024244246-53785c",
       "ts": "2026-11-07T04:04:04Z",
@@ -4366,6 +4358,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-CINATL): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794113579868-49b736",
+      "ts": "2026-11-08T04:52:59Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
