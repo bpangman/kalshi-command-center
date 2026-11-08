@@ -1,6 +1,6 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-08T23:02:44.424836Z",
+  "generated_at": "2026-11-08T23:04:04.374639Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 36,984, 41,673 resting. Worst line +$136. Race 93% done. Floor protocol ON."
+          "In race (Ingame). Sold 36,984, 41,673 resting. Worst line +$136. Race 94% done. Floor protocol ON."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-CUP",
-    "ts": "2026-11-08T23:01:49Z"
+    "ts": "2026-11-08T23:03:49Z"
   },
   "posts": [
-    {
-      "id": "1794128220233-6b16d6",
-      "ts": "2026-11-08T08:57:00Z",
-      "book": "HOM-CUP",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "HOM-CUP book is not trading: no fills in the last hour while the crowd keeps trading (grew 8225). Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1794128373689-17c48c",
       "ts": "2026-11-08T08:59:33Z",
@@ -3904,27 +3895,18 @@
       "text": "Bot note: endgame: active (favorite William Byron at 0.64); likely ['Denny Hamlin', 'Tyler Reddick', 'William Byron']; f",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794179043939-3a88f7",
+      "ts": "2026-11-08T23:04:03Z",
+      "book": "HOM-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nAlex Bowman: +136\nJoey Logano: +137\nBubba Wallace: +137\nZane Smith: +137\nDaniel Suarez: +137\nChristopher Bell: +138\nAustin Cindric: +138\nTy Gibbs: +138\nall others (33) >= +138\nCollected $2177 premium ($36 fees) | Paper margin over fair $1228 (not realized until settlement)\nEvent: William Byron: running P1; Tyler Reddick: running P2\nCore posted book 0.26 | Worst now +136 | Cash free $11602\nAnchor age 117s (source: kalshi)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1794153370680-91b341",
-      "ts": "2026-11-08T15:56:10Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-CUP): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=42034. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1794153458079-78c5ff",
-      "ts": "2026-11-08T15:57:38Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1794153723122-c468ba",
       "ts": "2026-11-08T16:02:03Z",
@@ -4805,6 +4787,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- HOM-CUP - Denny Hamlin has had no resting orders for at least 132 min (reason unknown: no reason logged).\n- HOM-CUP - William Byron has had no resting orders for at least 71 min (reason unknown: no reason logged).\nBack: HOM-CUP - Christopher Bell is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794179043937-8035a4",
+      "ts": "2026-11-08T23:04:03Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Floor mode: re-opened -- margin-seeking resumes; high-water floor still holds",
+      "severity": "warn"
+    },
+    {
+      "id": "1794179043938-66448c",
+      "ts": "2026-11-08T23:04:03Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Shock on William Byron: pulled William Byron only, kept every other order, pausing 30s\nIf the race ends... you make\nAlex Bowman: +136\nJoey Logano: +137\nBubba Wallace: +137\nZane Smith: +137\nDaniel Suarez: +137\nChristopher Bell: +138\nAustin Cindric: +138\nTy Gibbs: +138\nall others (33) >= +138",
       "severity": "warn"
     }
   ]
