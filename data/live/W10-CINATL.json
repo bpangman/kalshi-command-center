@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T15:18:08.763354Z",
+  "generated_at": "2026-11-08T15:19:35.527537Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,738, 74 resting. Worst line -$89. Game 28% done."
+          "In game (Ingame). Sold 6,738, 37 resting. Worst line -$89. Game 28% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "ATL by 1-6",
         "held": 1060.6,
-        "resting": 74.0,
+        "resting": 37.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T15:18:08Z"
+    "ts": "2026-11-08T15:19:09Z"
   },
   "posts": [
-    {
-      "id": "1794011268814-225e74",
-      "ts": "2026-11-07T00:27:48Z",
-      "book": "W10-CINATL",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "W10-CINATL book loss is growing: worst case -267 dollars, past its limit and -125 in 30 min. Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1794011935825-14a745",
       "ts": "2026-11-07T00:38:55Z",
@@ -3759,18 +3750,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794151108770-5c6f7d",
+      "ts": "2026-11-08T15:17:25Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 92: CIN by 15+ x46 at 18c, CIN by 7-14 x46 at 24c. Worst line -$89.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 92.0,
+        "fills": [
+          {
+            "side": "CIN by 15+",
+            "price": 0.18,
+            "qty": 46.0
+          },
+          {
+            "side": "CIN by 7-14",
+            "price": 0.24,
+            "qty": 46.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794099092910-9c8c10",
-      "ts": "2026-11-08T00:51:32Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): held worst -186.21 (backstop -150) or lagging gap 364 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794099458867-3b9394",
       "ts": "2026-11-08T00:57:38Z",
@@ -4660,6 +4667,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W10-CINATL - Atlanta by 15 or more is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794151160103-712c4c",
+      "ts": "2026-11-08T15:19:20Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+133 on CIN 1-6 @ 0.25 (maker)\n+43 on CIN 15+ @ 0.16 (maker)\n+46 on CIN 7-14 @ 0.24 (maker)\n+16 on CIN 1-6 @ 0.26 (maker)\n+46 on CIN 15+ @ 0.18 (maker)\nworst outcome now -89\nheld 1061/1112/1137/1131/1111/1187\nIf the game ends... you make\nATL 1-6: +37 (+0.7% of bankroll)\nATL 7-14: -15 (-0.3% of bankroll)\nATL 15+: -40 (-0.8% of bankroll)\nCIN 1-6: -34 (-0.7% of bankroll)\nCIN 7-14: -13 (-0.3% of bankroll)\nCIN 15+: -89 (-1.8% of bankroll)",
       "severity": "warn"
     }
   ]
