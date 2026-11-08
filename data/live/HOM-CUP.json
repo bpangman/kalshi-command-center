@@ -1,10 +1,10 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-08T21:43:51.118313Z",
+  "generated_at": "2026-11-08T21:45:15.105785Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$100.",
+    "headline": "In race (Ingame). Worst line +$101.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 35,731, 42,855 resting. Worst line +$100. Race 48% done. Floor protocol off."
+          "In race (Ingame). Sold 35,734, 42,950 resting. Worst line +$101. Race 48% done. Floor protocol off."
         ]
       },
       {
@@ -44,28 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-CUP",
-    "ts": "2026-11-08T21:43:22Z"
+    "ts": "2026-11-08T21:44:22Z"
   },
   "posts": [
-    {
-      "id": "1794103081845-7cab0e",
-      "ts": "2026-11-08T01:58:01Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRyan Blaney: -376\nAustin Cindric: -376\nChase Briscoe: -376\nTyler Reddick: -256\nDenny Hamlin: -113\nKyle Larson: -63\nChristopher Bell: -24\nCorey Heim: +172\nall others (33) >= +649\nCollected $1568 premium ($24 fees) | Paper margin over fair $213 (not realized until settlement)\nCore posted book 1.37 | Worst now -376 | Cash free $5660\nAnchor age 117s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1794103504030-b6e60f",
-      "ts": "2026-11-08T02:05:04Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 45,716 resting. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794104408767-5ffbb1",
       "ts": "2026-11-08T02:20:08Z",
@@ -3816,18 +3797,58 @@
       "text": "Bot note: expiry extend: 3 order(s) moved past green (queue kept; new expiry 1794185014)",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794174242710-92f9e7",
+      "ts": "2026-11-08T21:43:34Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 55: Kyle Larson x18 at 20c, Denny Hamlin x17 at 13c, Tyler Reddick x17 at 26c, +1 more. Worst line +$101.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 55.0,
+        "fills": [
+          {
+            "side": "Kyle Larson",
+            "price": 0.2,
+            "qty": 18.0
+          },
+          {
+            "side": "Denny Hamlin",
+            "price": 0.13,
+            "qty": 17.0
+          },
+          {
+            "side": "Tyler Reddick",
+            "price": 0.26,
+            "qty": 17.0
+          },
+          {
+            "side": "Chase Elliott",
+            "price": 0.02,
+            "qty": 3.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794174302960-85f3c0",
+      "ts": "2026-11-08T21:44:29Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 488 (race floor first): driver RYPR x199 at 1c, driver CHBU x42 at 1c, +13 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 488.0,
+        "rows": 15
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794138211818-ff1100",
-      "ts": "2026-11-08T11:43:31Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-CUP - Chase Briscoe has had no resting orders for at least 927 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794138971988-a902e9",
       "ts": "2026-11-08T11:56:11Z",
@@ -4717,6 +4738,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: HOM-CUP - Christopher Bell is posting again.\nBack: HOM-CUP - Ryan Blaney is posting again.\nBack: HOM-CUP - William Byron is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794174268445-02010c",
+      "ts": "2026-11-08T21:44:28Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+1 on Zane Smith @ 0.01 (taker)\n+17 on Denny Hamlin @ 0.13 (maker)\n+18 on Kyle Larson @ 0.20 (maker)\n+17 on Tyler Reddick @ 0.26 (maker)\n+3 on Chase Elliott @ 0.02 (maker)\nworst outcome now +101\nIf the race ends... you make\nJoey Logano: +101\nBubba Wallace: +101\nZane Smith: +101\nDaniel Suarez: +101\nTyler Reddick: +102\nKyle Larson: +102\nDenny Hamlin: +102\nChristopher Bell: +119\nall others (33) >= +119",
       "severity": "warn"
     }
   ]
