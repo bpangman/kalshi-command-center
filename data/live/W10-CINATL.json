@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T14:08:44.039428Z",
+  "generated_at": "2026-11-08T14:10:13.919191Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -27,9 +27,9 @@
         "exposure_text": "-$126",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:07:44Z",
+        "at": "2026-11-08T14:09:45Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 8:10am CT",
+        "also": "Also: paid balancing starts at the next check",
         "last_fill": "2026-11-08T11:15:03Z",
         "lag_note": "Steps to 9c at the next check."
       },
@@ -40,9 +40,9 @@
         "exposure_text": "+$8",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:07:44Z",
+        "at": "2026-11-08T14:09:45Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 8:10am CT",
+        "also": "Also: paid balancing starts at the next check",
         "last_fill": "2026-11-08T06:56:47Z",
         "lag_note": "Steps to 21c at the next check."
       },
@@ -79,9 +79,9 @@
         "exposure_text": "+$338",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:07:44Z",
+        "at": "2026-11-08T14:09:45Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 8:10am CT",
+        "also": "Also: paid balancing starts at the next check",
         "last_fill": "2026-11-08T13:35:57Z",
         "lag_note": "Steps to 19c at the next check."
       }
@@ -188,48 +188,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T14:07:44Z"
+    "ts": "2026-11-08T14:09:45Z"
   },
   "posts": [
-    {
-      "id": "1793992089358-bf621f",
-      "ts": "2026-11-06T19:08:09Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +27 (+0.5% of bankroll)\nATL 7-14: +19 (+0.4% of bankroll)\nATL 15+: -175 (-3.5% of bankroll)\nCIN 1-6: +27 (+0.5% of bankroll)\nCIN 7-14: -13 (-0.3% of bankroll)\nCIN 15+: +27 (+0.5% of bankroll)\nCollected $27 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 802\nATL 7-14: 8 / 992\nATL 15+: 203 / 697\nCIN 1-6: 0 / 802\nCIN 7-14: 40 / 960\nCIN 15+: 0 / 950\nPosted book 1.20 | Sold avg 1.137 | Worst now +80 | Cash free $680\nAnchor age 0s | Last fill 4983s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1793992285921-41dcf2",
-      "ts": "2026-11-06T19:09:11Z",
-      "book": "W10-CINATL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 1: CIN by 7-14 x1 at 21c. Worst line -$175.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 1.0,
-        "fills": [
-          {
-            "side": "CIN by 7-14",
-            "price": 0.21,
-            "qty": 1.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1793993051419-43666c",
-      "ts": "2026-11-06T19:24:11Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,202 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793993956951-d71028",
       "ts": "2026-11-06T19:39:16Z",
@@ -3584,18 +3545,47 @@
       "source": "bot",
       "text": "Inactivity on W10-CINATL: 0 orders posted in 10 min while the market traded 681 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1794146985016-f8c93e",
+      "ts": "2026-11-08T14:07:41Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 173: ATL by 1-6 x173 at 17c. Worst line -$356.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 173.0,
+        "fills": [
+          {
+            "side": "ATL by 1-6",
+            "price": 0.17,
+            "qty": 173.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794147009547-d2371c",
+      "ts": "2026-11-08T14:10:09Z",
+      "book": "W10-CINATL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Entering the game -356 on any CIN win; ATL buckets -126; no buyback by rule",
+      "severity": "info"
+    },
+    {
+      "id": "1794147010220-3de303",
+      "ts": "2026-11-08T14:10:10Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "trickle",
+      "text": "W10-CINATL: selling 30 CIN 15+ at 14c + 335 ATL 1-6 at 15c + 199 ATL 7-14 at 11c + 28 CIN 7-14 at 20c + 22 ATL 15+ at 4c into the crowd's bid (about $18) to cut the worst case from -$356 to -$278, a paid sale under fair value. Reply in Claude if you want it stopped.",
+      "severity": "critical"
     }
   ],
   "audits": [
-    {
-      "id": "1794086600291-24a251",
-      "ts": "2026-11-07T21:23:20Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -194.16 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794088079259-8debaa",
       "ts": "2026-11-07T21:47:59Z",
@@ -4485,6 +4475,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-CINATL): held worst -385.07 (backstop -150) or lagging gap 750 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794146924413-cc37a3",
+      "ts": "2026-11-08T14:08:44Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+173 on ATL 1-6 @ 0.17 (maker)\nworst outcome now +92\nheld 385/526/732/962/598/268\nIf the game ends... you make\nATL 1-6: +221 (+4.5% of bankroll)\nATL 7-14: +80 (+1.6% of bankroll)\nATL 15+: -126 (-2.5% of bankroll)\nCIN 1-6: -356 (-7.2% of bankroll)\nCIN 7-14: +8 (+0.2% of bankroll)\nCIN 15+: +338 (+6.8% of bankroll)",
       "severity": "warn"
     }
   ]
