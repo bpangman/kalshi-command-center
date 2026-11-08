@@ -1,6 +1,6 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-08T20:39:25.016690Z",
+  "generated_at": "2026-11-08T20:40:44.076313Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,025, 3,574 resting. Worst line -$216 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,025, 3,725 resting. Worst line -$216 (goal -$150)."
         ]
       },
       {
@@ -172,35 +172,16 @@
       {
         "label": "TB by 15+",
         "held": 0.0,
-        "resting": 711.0,
+        "resting": 862.0,
         "target": null,
         "status": "even",
         "price": 0.06
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-08T20:39:20Z"
+    "ts": "2026-11-08T20:40:20Z"
   },
   "posts": [
-    {
-      "id": "1793969811853-93f841",
-      "ts": "2026-11-06T12:56:51Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,696 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793969945713-c2eacf",
-      "ts": "2026-11-06T12:59:05Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nCHI 1-6: +18 (+0.3% of bankroll)\nCHI 7-14: -50 (-1.0% of bankroll)\nCHI 15+: +18 (+0.3% of bankroll)\nTB 1-6: +18 (+0.3% of bankroll)\nTB 7-14: +18 (+0.3% of bankroll)\nTB 15+: +18 (+0.3% of bankroll)\nCollected $18 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nCHI 1-6: 0 / 1000\nCHI 7-14: 68 / 932\nCHI 15+: 0 / 964\nTB 1-6: 0 / 1000\nTB 7-14: 0 / 900\nTB 15+: 0 / 900\nPosted book 1.10 | Sold avg 1.096 | Worst now +74 | Cash free $1784\nAnchor age 0s | Last fill 10190s ago",
-      "severity": "info"
-    },
     {
       "id": "1793970718293-95eac2",
       "ts": "2026-11-06T13:11:58Z",
@@ -3296,6 +3277,40 @@
       "text": "Quiet for 15 min. 4,205 resting. Next: Even-done check, 6:51pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794170440944-08966b",
+      "ts": "2026-11-08T20:38:38Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 4: TB by 7-14 x4 at 8c. Worst line -$216.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 4.0,
+        "fills": [
+          {
+            "side": "TB by 7-14",
+            "price": 0.08,
+            "qty": 4.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794170440945-3a642b",
+      "ts": "2026-11-08T20:38:39Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 151 (FIELD far-bucket row (all-fill): TB by 15+ x151 at 7c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 151.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
@@ -3558,6 +3573,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Cash line: trimmed 627 contracts off the back of CHI7TO14, TB15PLUS, TB7TO14 so Kalshi would not pull the whole set (usable cash $511). No row cancelled; the front rows kept their place in line.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794170381695-807687",
+      "ts": "2026-11-08T20:39:41Z",
+      "book": "W10-TBCHI",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+4 on TB 7-14 @ 0.08 (maker)\nworst outcome now -138\nheld 333/458/145/0/89/0\nIf the game ends... you make\nCHI 1-6: -91 (-1.7% of bankroll)\nCHI 7-14: -216 (-4.1% of bankroll)\nCHI 15+: +97 (+1.8% of bankroll)\nTB 1-6: +242 (+4.6% of bankroll)\nTB 7-14: +153 (+2.9% of bankroll)\nTB 15+: +242 (+4.6% of bankroll)",
       "severity": "warn"
     }
   ]

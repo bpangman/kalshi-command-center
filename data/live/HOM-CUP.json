@@ -1,19 +1,19 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-08T20:39:25.016690Z",
+  "generated_at": "2026-11-08T20:40:44.076313Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$50.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 27,267, 45,741 resting. Worst line -$50. Race 13% done. Floor protocol off. Bot is slow (checks every 57s, set for 30s)."
+          "In race (Ingame). Sold 27,267, 50,039 resting. Worst line -$50. Race 13% done. Floor protocol off."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-CUP",
-    "ts": "2026-11-08T20:39:00Z"
+    "ts": "2026-11-08T20:40:00Z"
   },
   "posts": [
-    {
-      "id": "1794073345449-c77c8f",
-      "ts": "2026-11-07T17:42:25Z",
-      "book": "HOM-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$668, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1794073405848-6fa7eb",
-      "ts": "2026-11-07T17:43:25Z",
-      "book": "HOM-CUP",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Pre-race growth for the green flag Sun 2:00pm CT. Worst line -$668, final target +$150. Next: Risk glide starts, Sun 10:00am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pre-race growth"
-    },
-    {
-      "id": "1794074085961-500ec4",
-      "ts": "2026-11-07T17:54:45Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRyan Blaney: -668\nTyler Reddick: -234\nKyle Larson: -216\nChase Briscoe: -120\nCorey Heim: -120\nAustin Cindric: +5\nChristopher Bell: +190\nDenny Hamlin: +229\nall others (33) >= +357\nCollected $1271 premium ($20 fees) | Paper margin over fair $189 (not realized until settlement)\nCore posted book 1.51 | Worst now -668 | Cash free $5644\nAnchor age 201s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1794074311786-8d73bd",
       "ts": "2026-11-07T17:58:31Z",
@@ -3744,18 +3715,38 @@
       "text": "In race (Ingame). Worst line -$50.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1794170380484-b4c659",
+      "ts": "2026-11-08T20:39:26Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: expiry extend: 3 order(s) moved past green (queue kept; new expiry 1794181163)",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1794170400631-e5142a",
+      "ts": "2026-11-08T20:40:00Z",
+      "book": "HOM-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$50.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1794170404690-9046ef",
+      "ts": "2026-11-08T20:40:04Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "race-worstline-lift",
+      "text": "HOM-CUP: buying back 5 Corey Heim at 1c (about $0) (worst case right now -$50). Plus 2 more buybacks, $5 total since 1:15pm. Reply in Claude if you want it stopped.",
+      "severity": "critical"
     }
   ],
   "audits": [
-    {
-      "id": "1794115264481-cb6bc8",
-      "ts": "2026-11-08T05:21:04Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+160 on Kyle Larson @ 0.17 (maker)\n+120 on Christopher Bell @ 0.11 (maker)\nworst outcome now -292\nIf the race ends... you make\nRyan Blaney: -292\nAustin Cindric: -292\nChase Briscoe: -292\nTyler Reddick: -292\nDenny Hamlin: -235\nKyle Larson: -139\nChristopher Bell: -61\nCorey Heim: +256\nall others (33) >= +733",
-      "severity": "warn"
-    },
     {
       "id": "1794115755206-920e4d",
       "ts": "2026-11-08T05:29:15Z",
@@ -4645,6 +4636,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- HOM-CUP - Denny Hamlin has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794170404968-66976d",
+      "ts": "2026-11-08T20:40:04Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Worst-line lift Corey Heim: 5 @ 0.01, worst -50 -> -45 (cost $0.06)\nIf the race ends... you make\nCorey Heim: -50\nBubba Wallace: -45\nWilliam Byron: -21\nChristopher Bell: -21\nDenny Hamlin: -20\nAustin Cindric: -20\nChase Briscoe: -20\nTyler Reddick: -20\nall others (33) >= -19",
       "severity": "warn"
     }
   ]
