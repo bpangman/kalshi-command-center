@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T14:19:28.326521Z",
+  "generated_at": "2026-11-08T14:20:56.703000Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -40,7 +40,7 @@
         "exposure_text": "-$38",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:20:10Z",
+        "at": "2026-11-08T14:20:49Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -48,25 +48,25 @@
       },
       {
         "side": "ATL by 1-6",
-        "resting": "242 @ 20-30c",
+        "resting": "190 @ 21c",
         "exposure": -32.63,
         "exposure_text": "-$33",
-        "move": "Step price down 1c (20c to 19c)",
+        "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:20:10Z",
+        "at": "2026-11-08T14:20:49Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
-        "lag_note": "Steps to 19c at the next check."
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "CIN by 7-14",
-        "resting": "336 @ 22-32c",
+        "resting": "283 @ 22-32c",
         "exposure": 61.37,
         "exposure_text": "+$61",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:20:10Z",
+        "at": "2026-11-08T14:20:49Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -79,7 +79,7 @@
         "exposure_text": "+$389",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:20:10Z",
+        "at": "2026-11-08T14:20:49Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 4,085, 1,710 resting. Worst line -$275 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 4,085, 1,657 resting. Worst line -$275 (goal -$75)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$191 (now -$275).",
+          "Gate closed: batches wait for the worst line to reach -$153 (now -$275).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$191, worst line -$275; spent $18 of $100.",
+          "Paid balancing is running: plan -$153, worst line -$275; spent $18 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -139,7 +139,7 @@
         "resting": 242.0,
         "target": null,
         "status": "lagging",
-        "price": 0.2
+        "price": 0.21
       },
       {
         "label": "ATL by 7-14",
@@ -168,7 +168,7 @@
       {
         "label": "CIN by 7-14",
         "held": 626.0,
-        "resting": 336.0,
+        "resting": 283.0,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -183,19 +183,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T14:18:48Z"
+    "ts": "2026-11-08T14:20:49Z"
   },
   "posts": [
-    {
-      "id": "1793998305749-2c76ea",
-      "ts": "2026-11-06T20:51:45Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,013 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793999211836-54db97",
       "ts": "2026-11-06T21:06:51Z",
@@ -3605,6 +3595,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794147609083-5a8537",
+      "ts": "2026-11-08T14:19:50Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease CIN7TO14: resting 336 -> 283 (held 626 + resting was over the cap 910 = 1.11x; tighten p",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
