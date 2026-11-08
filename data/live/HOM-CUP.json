@@ -1,6 +1,6 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-08T16:01:19.266124Z",
+  "generated_at": "2026-11-08T16:02:45.109951Z",
   "plan": {
     "engine": "race",
     "phase": "Risk glide",
@@ -16,7 +16,7 @@
         "exposure_text": "-$334",
         "move": "Next wave up to 2,000 contracts",
         "when": "next bot check (124% of the offered has sold)",
-        "at": "2026-11-08T16:00:23Z",
+        "at": "2026-11-08T16:02:24Z",
         "stuck": false,
         "last_fill": "2026-11-08T13:13:12Z"
       },
@@ -27,7 +27,7 @@
         "exposure_text": "-$169",
         "move": "Next wave up to 1,500 contracts",
         "when": "next bot check (97% of the offered has sold)",
-        "at": "2026-11-08T16:00:23Z",
+        "at": "2026-11-08T16:02:24Z",
         "stuck": false,
         "last_fill": "2026-11-08T01:09:35Z"
       },
@@ -38,7 +38,7 @@
         "exposure_text": "-$169",
         "move": "Next wave up to 1,500 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-08T16:00:23Z",
+        "at": "2026-11-08T16:02:24Z",
         "stuck": false,
         "last_fill": "2026-11-07T20:20:57Z"
       },
@@ -49,7 +49,7 @@
         "exposure_text": "-$169",
         "move": "Next wave up to 2,000 contracts",
         "when": "next bot check (94% of the offered has sold)",
-        "at": "2026-11-08T16:00:23Z",
+        "at": "2026-11-08T16:02:24Z",
         "stuck": false,
         "last_fill": "2026-11-08T02:30:36Z"
       },
@@ -82,7 +82,7 @@
         "exposure_text": "+$61",
         "move": "Next wave up to 2,000 contracts",
         "when": "next bot check (100% of the offered has sold)",
-        "at": "2026-11-08T16:00:23Z",
+        "at": "2026-11-08T16:02:24Z",
         "stuck": false,
         "last_fill": "2026-11-08T05:22:28Z"
       },
@@ -136,7 +136,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$600.",
-          "Glide is running: limit -$600, worst line -$334, final +$150 at 2:00pm CT.",
+          "Glide is running: limit -$594, worst line -$334, final +$150 at 2:00pm CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 12:30pm CT.",
           "Even-up from 2:00pm CT, last-resort take from 1:40pm CT, green flag 2:00pm CT."
         ]
@@ -150,11 +150,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-11-08T16:00:00Z",
-        "label": "Risk glide starts",
-        "detail": "Limit slides from -$600 to +$150."
-      },
-      {
         "at": "2026-11-08T18:30:00Z",
         "label": "Glide selling opens",
         "detail": "Bot may sell to close gaps."
@@ -163,6 +158,11 @@
         "at": "2026-11-08T20:00:00Z",
         "label": "Glide target date",
         "detail": "Worst line should be +$150 or better."
+      },
+      {
+        "at": "2026-11-08T20:00:00Z",
+        "label": "Even-up begins",
+        "detail": "Waves stop; lagging drivers repriced toward fair."
       }
     ],
     "sides": [
@@ -241,38 +241,9 @@
     ],
     "moves_note": "1 more drivers with small exposure are not shown. 31 other drivers: nothing sold, no exposure.",
     "book": "HOM-CUP",
-    "ts": "2026-11-08T16:00:23Z"
+    "ts": "2026-11-08T16:02:24Z"
   },
   "posts": [
-    {
-      "id": "1794030677184-07c562",
-      "ts": "2026-11-07T05:51:17Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRyan Blaney: -403\nChase Briscoe: -308\nCorey Heim: -308\nTyler Reddick: -288\nAustin Cindric: -183\nKyle Larson: -156\nDenny Hamlin: +41\nBubba Wallace: +169\nall others (33) >= +173\nCollected $1081 premium ($17 fees) | Paper margin over fair $144 (not realized until settlement)\nCore posted book 1.35 | Worst now -403 | Cash free $5823\nAnchor age 54s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1794031015725-4b3824",
-      "ts": "2026-11-07T05:54:47Z",
-      "book": "HOM-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 26: Kyle Larson x26 at 17c. Worst line -$398.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 26.0,
-        "fills": [
-          {
-            "side": "Kyle Larson",
-            "price": 0.17,
-            "qty": 26.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794031237078-2045e7",
       "ts": "2026-11-07T05:58:25Z",
@@ -3851,18 +3822,28 @@
       "text": "Risk glide for the green flag 2:00pm CT. Worst line -$334, final target +$150. Next: Risk glide starts, 10:00am CT.",
       "severity": "info",
       "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1794153683957-408115",
+      "ts": "2026-11-08T16:01:23Z",
+      "book": "HOM-CUP",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 2:00pm CT. Worst line -$334, final target +$150. Next: Glide selling opens, 12:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
+    },
+    {
+      "id": "1794153724119-5bb5b6",
+      "ts": "2026-11-08T16:02:04Z",
+      "book": "HOM-CUP",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nRyan Blaney: -334\nAustin Cindric: -169\nChase Briscoe: -169\nTyler Reddick: -169\nDenny Hamlin: -112\nKyle Larson: -16\nChristopher Bell: +61\nTy Gibbs: +161\nall others (33) >= +310\nCollected $1779 premium ($27 fees) | Paper margin over fair $253 (not realized until settlement)\nCore posted book 1.42 | Worst now -334 | Cash free $5999\nAnchor age 0s (source: bovada)",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1794077730048-00c67f",
-      "ts": "2026-11-07T18:55:30Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-CUP): 26 ladder(s) stale 10+ min: KXNASCARRACE-NASC26-CAME low 463c, KXNASCARRACE-NASC26-BRKE low 370c, KXNASCARRACE-NASC26-AJAL low 333c, KXNASCARRACE-NASC26-DEHA low 897c, KXNASCARRACE-NASC26-MIMC low 463c, KXNASCARRACE-NASC26-JOLO high 322c, KXNASCARRACE-NASC26-AUDI low 463c, KXNASCARRACE-NASC26-RIST low 463c, KXNASCARRACE-NASC26-SHVA low 333c, KXNASCARRACE-NASC26-TYDI low 463c, KXNASCARRACE-NASC26-BUWA high 418c, KXNASCARRACE-NASC26-CHEL high 309c, KXNASCARRACE-NASC26-ERJO low 463c, KXNASCARRACE-NASC26-TYRE low 437c, KXNASCARRACE-NASC26-JONE low 463c, KXNASCARRACE-NASC26-COCU low 463c, KXNASCARRACE-NASC26-DASU low 333c, KXNASCARRACE-NASC26-COWA low 463c, KXNASCARRACE-NASC26-AUHI low 463c, KXNASCARRACE-NASC26-CHBE low 548c, KXNASCARRACE-NASC26-NOGR low 463c, KXNASCARRACE-NASC26-CHBR low 305c, KXNASCARRACE-NASC26-TOGI low 463c, KXNASCARRACE-NASC26-RIHE low 463c, KXNASCARRACE-NASC26-CAHO low 46c, KXNASCARRACE-NASC26-COZI low 463c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794079164926-89af94",
       "ts": "2026-11-07T19:19:24Z",
@@ -4752,6 +4733,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1794153723122-c468ba",
+      "ts": "2026-11-08T16:02:03Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+986 on Ty Gibbs @ 0.06 (maker)\n+1049 on William Byron @ 0.03 (maker)\nworst outcome now -334\nIf the race ends... you make\nRyan Blaney: -334\nAustin Cindric: -169\nChase Briscoe: -169\nTyler Reddick: -169\nDenny Hamlin: -112\nKyle Larson: -16\nChristopher Bell: +61\nTy Gibbs: +161\nall others (33) >= +310",
       "severity": "warn"
     }
   ]
