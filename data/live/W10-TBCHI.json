@@ -1,30 +1,30 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-08T22:46:21.151764Z",
+  "generated_at": "2026-11-08T22:47:52.063737Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$154, goal -$150.",
+    "headline": "Building toward kickoff 7:20pm CT. Worst line -$182, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
     "moves": [
       {
         "side": "CHI by 7-14",
-        "resting": "461 @ 25-27c",
-        "exposure": -153.88,
-        "exposure_text": "-$154",
+        "resting": "421 @ 25-27c",
+        "exposure": -182.33,
+        "exposure_text": "-$182",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:50pm CT",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-08T21:49:59Z"
+        "last_fill": "2026-11-08T22:46:15Z"
       },
       {
         "side": "CHI by 1-6",
         "resting": "86 @ 24-25c",
-        "exposure": -41.51,
-        "exposure_text": "-$42",
+        "exposure": -29.68,
+        "exposure_text": "-$30",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-09T01:00:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "CHI by 15+",
         "resting": "292 @ 25-27c",
-        "exposure": -31.88,
-        "exposure_text": "-$32",
+        "exposure": -20.05,
+        "exposure_text": "-$20",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-09T01:00:00Z",
@@ -45,52 +45,55 @@
       {
         "side": "TB by 7-14",
         "resting": "369 @ 10c",
-        "exposure": 75.12,
-        "exposure_text": "+$75",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-09T01:00:00Z",
+        "exposure": 86.95,
+        "exposure_text": "+$87",
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "if no fill by 4:50pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-08T22:50:00Z",
         "stuck": false,
-        "last_fill": "2026-11-08T22:40:00Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-08T22:40:00Z",
+        "lag_note": "Steps to 9c if no fill by 4:50pm CT."
+      },
+      {
+        "side": "TB by 15+",
+        "resting": "691 @ 4-8c",
+        "exposure": 274.1,
+        "exposure_text": "+$274",
+        "move": "Hold price at 4c",
+        "when": "crowd pays 4c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-08T22:46:06Z",
+        "lag_note": "Price 4c matches the crowd."
       },
       {
         "side": "TB by 1-6",
         "resting": "233 @ 15-20c",
-        "exposure": 306.12,
-        "exposure_text": "+$306",
+        "exposure": 317.95,
+        "exposure_text": "+$318",
         "move": "Hold price at 15c",
         "when": "crowd pays 15.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "lag_note": "Price 15c matches the crowd."
-      },
-      {
-        "side": "TB by 15+",
-        "resting": "735 @ 4-8c",
-        "exposure": 306.12,
-        "exposure_text": "+$306",
-        "move": "Hold price at 4c",
-        "when": "crowd pays 4c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts 7:00pm CT",
-        "lag_note": "Price 4c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,377, 2,176 resting. Worst line -$154 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,461, 2,092 resting. Worst line -$182 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): TB by 1-6, TB by 15+.",
-          "TB by 1-6: 460 behind. Price 15c matches the crowd.",
-          "TB by 15+: 460 behind. Price 4c matches the crowd.",
+          "Lagging (150+ behind the leader): TB by 1-6, TB by 7-14, TB by 15+.",
+          "TB by 1-6: 500 behind. Price 15c matches the crowd.",
+          "TB by 15+: 456 behind. Price 4c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -98,7 +101,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$154 is better than -$200.",
+          "Gate open: worst line -$182 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -146,10 +149,10 @@
       },
       {
         "label": "CHI by 7-14",
-        "held": 460.0,
-        "resting": 461.0,
+        "held": 500.3,
+        "resting": 420.7,
         "target": null,
-        "status": "even",
+        "status": "heavy",
         "price": 0.25
       },
       {
@@ -173,42 +176,22 @@
         "held": 231.0,
         "resting": 369.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
         "label": "TB by 15+",
-        "held": 0.0,
-        "resting": 735.0,
+        "held": 43.9,
+        "resting": 691.1,
         "target": null,
         "status": "lagging",
         "price": 0.04
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-08T22:46:04Z"
+    "ts": "2026-11-08T22:47:04Z"
   },
   "posts": [
-    {
-      "id": "1793990694686-af299c",
-      "ts": "2026-11-06T18:44:54Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,994 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793991601551-790894",
-      "ts": "2026-11-06T19:00:01Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,994 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793991710659-1dd8e6",
       "ts": "2026-11-06T19:01:50Z",
@@ -3392,6 +3375,30 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794178004429-ea0298",
+      "ts": "2026-11-08T22:44:32Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 126 (FIELD far-bucket row (all-fill): CHI by 15+ x126 at 26c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 126.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1794178024600-4dd1e2",
+      "ts": "2026-11-08T22:47:04Z",
+      "book": "W10-TBCHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$182, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -3736,6 +3743,15 @@
       "source": "bot",
       "text": "+140 on TB 7-14 @ 0.07 (maker)\nworst outcome now -323\nheld 348/460/338/0/231/0\nIf the game ends... you make\nCHI 1-6: -42 (-0.8% of bankroll)\nCHI 7-14: -154 (-2.9% of bankroll)\nCHI 15+: -32 (-0.6% of bankroll)\nTB 1-6: +306 (+5.8% of bankroll)\nTB 7-14: +75 (+1.4% of bankroll)\nTB 15+: +306 (+5.8% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1794178009944-8e98e5",
+      "ts": "2026-11-08T22:46:49Z",
+      "book": "W10-TBCHI",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-TBCHI): 1 order(s) with an unsafe price. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
