@@ -1,10 +1,10 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-08T20:25:02.132280Z",
+  "generated_at": "2026-11-08T20:26:34.437807Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$86.",
+    "headline": "In race (Ingame). Worst line -$78.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 24,147, 45,159 resting. Worst line -$86. Race 3% done. Floor protocol off."
+          "In race (Ingame). Sold 24,335, 49,568 resting. Worst line -$78. Race 4% done. Floor protocol off."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-CUP",
-    "ts": "2026-11-08T20:24:55Z"
+    "ts": "2026-11-08T20:25:55Z"
   },
   "posts": [
-    {
-      "id": "1794063261064-ddec67",
-      "ts": "2026-11-07T14:54:21Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRyan Blaney: -402\nKyle Larson: -300\nTyler Reddick: -245\nChase Briscoe: -204\nCorey Heim: -204\nAustin Cindric: -79\nChristopher Bell: +106\nDenny Hamlin: +145\nall others (33) >= +273\nCollected $1187 premium ($18 fees) | Paper margin over fair $168 (not realized until settlement)\nCore posted book 1.55 | Worst now -402 | Cash free $5851\nAnchor age 244s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1794063397118-766b6a",
       "ts": "2026-11-07T14:56:32Z",
@@ -3700,18 +3691,19 @@
       "source": "resistance_monitor",
       "text": "HOM-CUP book re-posted at the same price: 1 cancel-then-post at the same price and 0 caught by the guard in the last hour. That is the queue-loss bug; check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1794169515429-6c1e6c",
+      "ts": "2026-11-08T20:25:12Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: expiry extend: 5 order(s) moved past green (queue kept; new expiry 1794180291)",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1794111592415-56c421",
-      "ts": "2026-11-08T04:19:52Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-CUP - Austin Cindric has had no resting orders for at least 193 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794111968577-7b2c8f",
       "ts": "2026-11-08T04:26:08Z",
@@ -4601,6 +4593,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: HOM-CUP - Chase Briscoe is posting again.\nBack: HOM-CUP - Kyle Larson is posting again.\nBack: HOM-CUP - Ryan Blaney is posting again.\nBack: HOM-CUP - William Byron is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794169558577-bd9ba9",
+      "ts": "2026-11-08T20:25:58Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (HOM-CUP): bot reports stage2_price_cohort, auditor independently recomputed stage3_likely_set (progress=0.049, live_count>=20%=1, max_prob=0.200, feed_source=nascar_live_feed). Check the command center.",
       "severity": "warn"
     }
   ]

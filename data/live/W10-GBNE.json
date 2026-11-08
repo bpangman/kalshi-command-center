@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T20:25:02.132280Z",
+  "generated_at": "2026-11-08T20:26:34.437807Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,7 +33,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "144 @ 9-12c",
+        "resting": "141 @ 9-12c",
         "exposure": -20.72,
         "exposure_text": "-$21",
         "move": "Paid balancing (trickle)",
@@ -46,12 +46,12 @@
       },
       {
         "side": "NE by 7-14",
-        "resting": "234 @ 21-23c",
+        "resting": "231 @ 21-23c",
         "exposure": 33.75,
         "exposure_text": "+$34",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T20:24:15Z",
+        "at": "2026-11-08T20:26:15Z",
         "stuck": false,
         "also": "Also: paid balancing starts 3:05pm CT",
         "last_fill": "2026-11-08T20:05:52Z",
@@ -59,7 +59,7 @@
       },
       {
         "side": "NE by 15+",
-        "resting": "384 @ 17-22c",
+        "resting": "381 @ 17-22c",
         "exposure": 164.55,
         "exposure_text": "+$165",
         "move": "Paid balancing (trickle)",
@@ -72,7 +72,7 @@
       },
       {
         "side": "NE by 1-6",
-        "resting": "528 @ 23-28c",
+        "resting": "525 @ 23-28c",
         "exposure": 246.28,
         "exposure_text": "+$246",
         "move": "Paid balancing (trickle)",
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 1,586, 1,294 resting. Worst line -$364 (goal -$150)."
+          "Pregame build, kickoff 3:25pm CT. Sold 1,586, 1,285 resting. Worst line -$364 (goal -$150)."
         ]
       },
       {
@@ -160,7 +160,7 @@
       {
         "label": "GB by 15+",
         "held": 267.0,
-        "resting": 144.0,
+        "resting": 142.0,
         "target": null,
         "status": "lagging",
         "price": 0.09
@@ -168,7 +168,7 @@
       {
         "label": "NE by 1-6",
         "held": 0.0,
-        "resting": 528.0,
+        "resting": 525.0,
         "target": null,
         "status": "lagging",
         "price": 0.23
@@ -176,7 +176,7 @@
       {
         "label": "NE by 7-14",
         "held": 212.5,
-        "resting": 234.5,
+        "resting": 232.5,
         "target": null,
         "status": "lagging",
         "price": 0.21
@@ -184,30 +184,16 @@
       {
         "label": "NE by 15+",
         "held": 81.7,
-        "resting": 384.3,
+        "resting": 382.3,
         "target": null,
         "status": "lagging",
         "price": 0.17
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T20:24:15Z"
+    "ts": "2026-11-08T20:26:15Z"
   },
   "posts": [
-    {
-      "id": "1794002010341-9929d4",
-      "ts": "2026-11-06T21:51:28Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 12 (FIELD far-bucket row (all-fill): GB by 15+ x12 at 11c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 12.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794002654963-078963",
       "ts": "2026-11-06T22:02:14Z",
@@ -3502,6 +3488,15 @@
       "text": "Quiet for 15 min. 1,309 resting. Next: Even-done check, 2:55pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794169575284-6fd555",
+      "ts": "2026-11-08T20:26:15Z",
+      "book": "W10-GBNE",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nNE 1-6: +246 (+4.9% of bankroll)\nNE 7-14: +34 (+0.7% of bankroll)\nNE 15+: +165 (+3.3% of bankroll)\nGB 1-6: -169 (-3.4% of bankroll)\nGB 7-14: -364 (-7.3% of bankroll)\nGB 15+: -21 (-0.4% of bankroll)\nCollected $246 premium ($0 fees) | Paper margin over fair $17 (not realized until settlement)\nEvent: NE 7-14: NE 0-0, Q0 0:00; GB 7-14: GB 0-0, Q0 0:00\nheld / resting\nNE 1-6: 0 / 525\nNE 7-14: 213 / 232\nNE 15+: 82 / 382\nGB 1-6: 415 / 2\nGB 7-14: 610 / 1\nGB 15+: 267 / 142\nPosted book 1.11 | Sold avg 1.041 | Worst now -102 | Cash free $855\nAnchor age 0s | Last fill 1223s ago",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4133,6 +4128,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-GBNE): held worst -363.72 (backstop -300) or lagging gap 610 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794169534155-90a6b7",
+      "ts": "2026-11-08T20:25:34Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 T-60 table\nIf the game ends... you make\nNE 1-6: +246 (+4.9% of bankroll)\nNE 7-14: +34 (+0.7% of bankroll)\nNE 15+: +165 (+3.3% of bankroll)\nGB 1-6: -169 (-3.4% of bankroll)\nGB 7-14: -364 (-7.3% of bankroll)\nGB 15+: -21 (-0.4% of bankroll)",
       "severity": "warn"
     }
   ]
