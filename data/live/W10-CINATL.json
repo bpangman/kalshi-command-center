@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T12:59:07.201596Z",
+  "generated_at": "2026-11-08T13:00:46.260986Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -14,20 +14,20 @@
         "resting": "38 @ 35c",
         "exposure": -398.15,
         "exposure_text": "-$398",
-        "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$150 (now -$398)",
+        "move": "Holding",
+        "when": "no move planned until the even-done check at 8:00am CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-08T00:57:16Z"
       },
       {
         "side": "ATL by 15+",
-        "resting": "470 @ 10-15c",
+        "resting": "326 @ 10-15c",
         "exposure": -168.15,
         "exposure_text": "-$168",
         "move": "Step price down 1c (10c to 9c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T12:58:19Z",
+        "at": "2026-11-08T13:00:20Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T11:15:03Z",
@@ -35,12 +35,12 @@
       },
       {
         "side": "CIN by 7-14",
-        "resting": "604 @ 22-32c",
+        "resting": "460 @ 22-32c",
         "exposure": -34.15,
         "exposure_text": "-$34",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T12:58:19Z",
+        "at": "2026-11-08T13:00:20Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T06:56:47Z",
@@ -48,7 +48,7 @@
       },
       {
         "side": "ATL by 7-14",
-        "resting": "676 @ 15-25c",
+        "resting": "532 @ 15-25c",
         "exposure": 37.85,
         "exposure_text": "+$38",
         "move": "Paid balancing (trickle)",
@@ -61,12 +61,12 @@
       },
       {
         "side": "CIN by 15+",
-        "resting": "990 @ 18-25c",
+        "resting": "846 @ 18-25c",
         "exposure": 351.85,
         "exposure_text": "+$352",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T12:58:19Z",
+        "at": "2026-11-08T13:00:20Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T12:46:46Z",
@@ -74,7 +74,7 @@
       },
       {
         "side": "ATL by 1-6",
-        "resting": "1,009 @ 16-30c",
+        "resting": "865 @ 16-30c",
         "exposure": 370.62,
         "exposure_text": "+$371",
         "move": "Paid balancing (trickle)",
@@ -113,7 +113,7 @@
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: CIN by 1-6 stopped adding until worst line is above -$150 (now -$398).",
+          "Backstop off. It trips if the worst line falls under -$150.",
           "Paid balancing starts 8:10am CT: worst line to -$75 by 8:25am CT, up to $100.",
           "At 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 8:30am CT: the in-game engine takes over."
@@ -194,29 +194,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T12:58:19Z"
+    "ts": "2026-11-08T13:00:20Z"
   },
   "posts": [
-    {
-      "id": "1793981594709-6fd973",
-      "ts": "2026-11-06T16:13:14Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,226 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793982500894-8b86f6",
-      "ts": "2026-11-06T16:28:20Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,226 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793983406896-1a8615",
       "ts": "2026-11-06T16:43:26Z",
@@ -3575,6 +3555,26 @@
       "source": "bot",
       "text": "If the game ends... you make\nATL 1-6: +371 (+7.5% of bankroll)\nATL 7-14: +38 (+0.8% of bankroll)\nATL 15+: -168 (-3.4% of bankroll)\nCIN 1-6: -398 (-8.0% of bankroll)\nCIN 7-14: -34 (-0.7% of bankroll)\nCIN 15+: +352 (+7.1% of bankroll)\nCollected $564 premium ($0 fees) | Paper margin over fair $27 (not realized until settlement)\nEvent: ATL 7-14: ATL 0-0, Q0 0:00; CIN 7-14: CIN 0-0, Q0 0:00\nheld / resting\nATL 1-6: 193 / 1009\nATL 7-14: 526 / 676\nATL 15+: 732 / 470\nCIN 1-6: 962 / 38\nCIN 7-14: 598 / 604\nCIN 15+: 212 / 990\nPosted book 1.29 | Sold avg 1.007 | Worst now +113 | Cash free $885\nAnchor age 0s | Last fill 718s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794142820251-83d25b",
+      "ts": "2026-11-08T13:00:12Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop released: worst line is back to -$398. The heavy side can add again.",
+      "severity": "info",
+      "title": "Backstop"
+    },
+    {
+      "id": "1794142820259-1df40c",
+      "ts": "2026-11-08T13:00:20Z",
+      "book": "W10-CINATL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 8:30am CT. Worst line -$398, goal -$75. Next: Even-done check, 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
