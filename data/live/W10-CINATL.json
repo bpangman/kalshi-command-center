@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T15:06:11.173584Z",
+  "generated_at": "2026-11-08T15:07:47.460154Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,317, 247 resting. Worst line -$123. Game 20% done."
+          "In game (Ingame). Sold 6,319, 543 resting. Worst line -$123. Game 20% done."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "ATL by 1-6",
-        "held": 1013.8,
-        "resting": 37.0,
+        "held": 1015.8,
+        "resting": 105.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "ATL by 7-14",
         "held": 1022.1,
-        "resting": 137.0,
+        "resting": 143.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "ATL by 15+",
         "held": 1137.0,
-        "resting": 0.0,
+        "resting": 29.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "CIN by 1-6",
         "held": 982.1,
-        "resting": 73.0,
+        "resting": 208.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "CIN by 7-14",
         "held": 1064.5,
-        "resting": 0.0,
+        "resting": 29.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "CIN by 15+",
         "held": 1097.6,
-        "resting": 0.0,
+        "resting": 29.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T15:06:04Z"
+    "ts": "2026-11-08T15:07:04Z"
   },
   "posts": [
-    {
-      "id": "1794010990920-cab26d",
-      "ts": "2026-11-07T00:22:57Z",
-      "book": "W10-CINATL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Backstop on: worst line -$267 is under -$150. CIN by 7-14 stops adding.",
-      "severity": "warn",
-      "title": "Backstop"
-    },
     {
       "id": "1794011031133-ec72b6",
       "ts": "2026-11-07T00:23:51Z",
@@ -3709,18 +3699,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794150444743-448c4d",
+      "ts": "2026-11-08T15:06:12Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 36: CIN by 1-6 x20 at 25c, ATL by 7-14 x14 at 12c, ATL by 1-6 x2 at 19c. Worst line -$123.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 36.0,
+        "fills": [
+          {
+            "side": "CIN by 1-6",
+            "price": 0.25,
+            "qty": 20.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.12,
+            "qty": 14.0
+          },
+          {
+            "side": "ATL by 1-6",
+            "price": 0.19,
+            "qty": 2.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794097627550-eac257",
-      "ts": "2026-11-08T00:27:07Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -186.21 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794099092910-9c8c10",
       "ts": "2026-11-08T00:51:32Z",
@@ -4610,6 +4621,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+17 on ATL 15+ @ 0.08 (maker)\n+65 on ATL 1-6 @ 0.19 (maker)\n+15 on ATL 7-14 @ 0.13 (maker)\n+17 on CIN 15+ @ 0.12 (maker)\n+40 on ATL 7-14 @ 0.12 (maker)\n+20 on CIN 1-6 @ 0.25 (maker)\nworst outcome now -76\nheld 1014/1022/1137/982/1065/1098\nIf the game ends... you make\nATL 1-6: +0 (+0.0% of bankroll)\nATL 7-14: -8 (-0.2% of bankroll)\nATL 15+: -123 (-2.5% of bankroll)\nCIN 1-6: +32 (+0.6% of bankroll)\nCIN 7-14: -51 (-1.0% of bankroll)\nCIN 15+: -84 (-1.7% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794150406935-76c969",
+      "ts": "2026-11-08T15:06:46Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W10-CINATL - Atlanta by 15 or more is posting again.",
       "severity": "warn"
     }
   ]
