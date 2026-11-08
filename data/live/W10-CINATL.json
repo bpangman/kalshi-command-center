@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T06:58:37.484280Z",
+  "generated_at": "2026-11-08T07:00:03.118793Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -40,7 +40,7 @@
         "exposure_text": "-$25",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T06:58:11Z",
+        "at": "2026-11-08T06:59:12Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T05:17:29Z",
@@ -66,7 +66,7 @@
         "exposure_text": "+$377",
         "move": "Step price down 1c (17c to 16c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T06:58:11Z",
+        "at": "2026-11-08T06:59:12Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T03:03:33Z",
@@ -194,19 +194,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T06:58:11Z"
+    "ts": "2026-11-08T06:59:12Z"
   },
   "posts": [
-    {
-      "id": "1793951789952-045345",
-      "ts": "2026-11-06T07:56:29Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,915 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793952185677-00b8b4",
       "ts": "2026-11-06T08:03:05Z",
@@ -3548,18 +3538,29 @@
       "text": "Row sold out: CIN by 7-14 at 20c (118 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794121131886-0a5d00",
+      "ts": "2026-11-08T06:56:51Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 92: CIN by 7-14 x92 at 20c. Worst line -$461.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 92.0,
+        "fills": [
+          {
+            "side": "CIN by 7-14",
+            "price": 0.2,
+            "qty": 92.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794049808249-c72df1",
-      "ts": "2026-11-07T11:10:08Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -267.00 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794051650502-215c67",
       "ts": "2026-11-07T11:40:50Z",
@@ -4449,6 +4450,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+92 on CIN 7-14 @ 0.20 (maker)\nworst outcome now +99\nheld 124/526/405/962/598/76\nIf the game ends... you make\nATL 1-6: +377 (+7.6% of bankroll)\nATL 7-14: -25 (-0.5% of bankroll)\nATL 15+: +96 (+1.9% of bankroll)\nCIN 1-6: -461 (-9.3% of bankroll)\nCIN 7-14: -97 (-2.0% of bankroll)\nCIN 15+: +425 (+8.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794121124029-e5efe9",
+      "ts": "2026-11-08T06:58:44Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-CINATL): held worst -460.98 (backstop -150) or lagging gap 886 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
