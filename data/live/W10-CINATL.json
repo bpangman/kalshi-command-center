@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T09:00:13.926857Z",
+  "generated_at": "2026-11-08T09:01:40.868653Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -40,7 +40,7 @@
         "exposure_text": "-$14",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T08:59:55Z",
+        "at": "2026-11-08T09:00:56Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T05:17:29Z",
@@ -53,7 +53,7 @@
         "exposure_text": "+$107",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T08:59:55Z",
+        "at": "2026-11-08T09:00:56Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-08T05:17:48Z",
@@ -194,18 +194,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T08:59:55Z"
+    "ts": "2026-11-08T09:00:56Z"
   },
   "posts": [
-    {
-      "id": "1793959416314-723c9a",
-      "ts": "2026-11-06T10:03:36Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +22 (+0.4% of bankroll)\nATL 7-14: +14 (+0.3% of bankroll)\nATL 15+: -181 (-3.6% of bankroll)\nCIN 1-6: +22 (+0.4% of bankroll)\nCIN 7-14: +9 (+0.2% of bankroll)\nCIN 15+: +22 (+0.4% of bankroll)\nCollected $22 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 802\nATL 7-14: 8 / 798\nATL 15+: 203 / 697\nCIN 1-6: 0 / 802\nCIN 7-14: 13 / 987\nCIN 15+: 0 / 950\nPosted book 1.21 | Sold avg 1.137 | Worst now +53 | Cash free $680\nAnchor age 0s | Last fill 2457s ago",
-      "severity": "info"
-    },
     {
       "id": "1793959741302-4d3c36",
       "ts": "2026-11-06T10:09:01Z",
@@ -3549,18 +3540,19 @@
       "text": "Quiet for 15 min. 4,251 resting. Next: Even-done check, 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794128435948-1efed3",
+      "ts": "2026-11-08T09:00:35Z",
+      "book": "W10-CINATL",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 4,251 resting. Next: Even-done check, 8:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1794063801396-04aeca",
-      "ts": "2026-11-07T15:03:21Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1794064166037-685b77",
       "ts": "2026-11-07T15:09:26Z",
@@ -4451,6 +4443,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-CINATL): worst -450.06 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794128445379-2d4061",
+      "ts": "2026-11-08T09:00:45Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-CINATL): held worst -450.06 (backstop -150) or lagging gap 886 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
