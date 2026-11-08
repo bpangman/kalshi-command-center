@@ -1,221 +1,109 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T14:27:03.003969Z",
+  "generated_at": "2026-11-08T14:28:30.678748Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 8:30am CT. Worst line -$275.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$275.",
     "confidence": "medium",
-    "confidence_note": "Timers are set, but reaching -$75 depends on the crowd.",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "CIN by 1-6",
-        "resting": "none",
-        "exposure": -274.63,
-        "exposure_text": "-$275",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 8:30am CT",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-08T00:57:16Z"
-      },
-      {
-        "side": "ATL by 15+",
-        "resting": "230 @ 10-15c",
-        "exposure": -66.63,
-        "exposure_text": "-$67",
-        "move": "Hold price at 10c",
-        "when": "needs 50+ crowd trades under 10c (now 14)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T14:10:11Z",
-        "lag_note": "Crowd is quiet here (14 traded)."
-      },
-      {
-        "side": "ATL by 7-14",
-        "resting": "132 @ 15c",
-        "exposure": -37.63,
-        "exposure_text": "-$38",
-        "move": "Step price down 1c (15c to 14c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:26:51Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T14:10:10Z",
-        "lag_note": "Steps to 14c at the next check."
-      },
-      {
-        "side": "ATL by 1-6",
-        "resting": "139 @ 21c",
-        "exposure": -32.63,
-        "exposure_text": "-$33",
-        "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:26:51Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T14:10:10Z",
-        "lag_note": "Steps to 20c at the next check."
-      },
-      {
-        "side": "CIN by 7-14",
-        "resting": "229 @ 22-32c",
-        "exposure": 61.37,
-        "exposure_text": "+$61",
-        "move": "Step price down 1c (22c to 21c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:26:51Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T14:10:10Z",
-        "lag_note": "Steps to 21c at the next check."
-      },
-      {
-        "side": "CIN by 15+",
-        "resting": "664 @ 20-25c",
-        "exposure": 389.37,
-        "exposure_text": "+$389",
-        "move": "Step price down 1c (20c to 19c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:26:51Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T14:10:10Z",
-        "lag_note": "Steps to 19c at the next check."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 4,085, 1,394 resting. Worst line -$275 (goal -$75)."
+          "In game (Ingame). Sold 4,085, 1,814 resting. Worst line -$275. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): ATL by 1-6, ATL by 7-14, ATL by 15+, CIN by 7-14, CIN by 15+.",
-          "CIN by 15+: 664 behind. Steps to 19c at the next check.",
-          "CIN by 7-14: 336 behind. Steps to 21c at the next check.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$75 (now -$275).",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$75, worst line -$275; spent $18 of $100.",
-          "Kickoff 8:30am CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-08T14:30:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "ATL by 1-6",
         "held": 720.0,
-        "resting": 139.0,
+        "resting": 295.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.21
+        "status": "even",
+        "price": null
       },
       {
         "label": "ATL by 7-14",
         "held": 725.0,
-        "resting": 132.0,
+        "resting": 275.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.15
+        "status": "even",
+        "price": null
       },
       {
         "label": "ATL by 15+",
         "held": 754.0,
-        "resting": 230.0,
+        "resting": 226.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.1
+        "status": "even",
+        "price": null
       },
       {
         "label": "CIN by 1-6",
         "held": 962.0,
         "resting": 0.0,
         "target": null,
-        "status": "heavy",
+        "status": "even",
         "price": null
       },
       {
         "label": "CIN by 7-14",
         "held": 626.0,
-        "resting": 229.0,
+        "resting": 430.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.22
+        "status": "even",
+        "price": null
       },
       {
         "label": "CIN by 15+",
         "held": 298.0,
-        "resting": 664.0,
+        "resting": 588.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.2
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T14:26:51Z"
+    "ts": "2026-11-08T14:27:52Z"
   },
   "posts": [
-    {
-      "id": "1794001023845-1a0f2d",
-      "ts": "2026-11-06T21:37:03Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,013 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794001929728-33d86f",
-      "ts": "2026-11-06T21:52:09Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,013 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794002836295-c48616",
-      "ts": "2026-11-06T22:07:16Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,013 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794002964756-bb9acd",
       "ts": "2026-11-06T22:09:24Z",
@@ -3606,6 +3494,36 @@
       "text": "Bot note: COVERAGE-CAP decrease CIN7TO14: resting 283 -> 229 (held 626 + resting was over the cap 856 = 1.06x; tighten p",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794148031978-a4ab8d",
+      "ts": "2026-11-08T14:27:03Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: worst held -274.63 under -L_max 150.00, keeping orders anyway (cutover_always_keep), light sides repair in-gam",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794148072221-67ff2c",
+      "ts": "2026-11-08T14:27:52Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794148072222-60b7d8",
+      "ts": "2026-11-08T14:27:52Z",
+      "book": "W10-CINATL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$275.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
