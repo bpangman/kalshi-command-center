@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T14:25:34.370175Z",
+  "generated_at": "2026-11-08T14:27:03.003969Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -35,12 +35,12 @@
       },
       {
         "side": "ATL by 7-14",
-        "resting": "184 @ 15c",
+        "resting": "132 @ 15c",
         "exposure": -37.63,
         "exposure_text": "-$38",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:24:51Z",
+        "at": "2026-11-08T14:26:51Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -48,12 +48,12 @@
       },
       {
         "side": "ATL by 1-6",
-        "resting": "190 @ 21c",
+        "resting": "139 @ 21c",
         "exposure": -32.63,
         "exposure_text": "-$33",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:24:51Z",
+        "at": "2026-11-08T14:26:51Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -66,7 +66,7 @@
         "exposure_text": "+$61",
         "move": "Step price down 1c (22c to 21c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:24:51Z",
+        "at": "2026-11-08T14:26:51Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -79,7 +79,7 @@
         "exposure_text": "+$389",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T14:24:51Z",
+        "at": "2026-11-08T14:26:51Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T14:10:10Z",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 4,085, 1,551 resting. Worst line -$275 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 4,085, 1,394 resting. Worst line -$275 (goal -$75)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$78 (now -$275).",
+          "Gate closed: batches wait for the worst line to reach -$75 (now -$275).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$78, worst line -$275; spent $18 of $100.",
+          "Paid balancing is running: plan -$75, worst line -$275; spent $18 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -136,7 +136,7 @@
       {
         "label": "ATL by 1-6",
         "held": 720.0,
-        "resting": 190.0,
+        "resting": 139.0,
         "target": null,
         "status": "lagging",
         "price": 0.21
@@ -144,7 +144,7 @@
       {
         "label": "ATL by 7-14",
         "held": 725.0,
-        "resting": 184.0,
+        "resting": 132.0,
         "target": null,
         "status": "lagging",
         "price": 0.15
@@ -168,7 +168,7 @@
       {
         "label": "CIN by 7-14",
         "held": 626.0,
-        "resting": 283.0,
+        "resting": 229.0,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -183,7 +183,7 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T14:24:51Z"
+    "ts": "2026-11-08T14:26:51Z"
   },
   "posts": [
     {
@@ -3610,15 +3610,6 @@
   ],
   "audits": [
     {
-      "id": "1794091326619-053a6b",
-      "ts": "2026-11-07T22:42:06Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+5 on ATL 1-6 @ 0.17 (maker)\n+8 on CIN 1-6 @ 0.23 (maker)\nworst outcome now +160\nheld 28/306/203/139/364/0\nIf the game ends... you make\nATL 1-6: +145 (+2.9% of bankroll)\nATL 7-14: -133 (-2.7% of bankroll)\nATL 15+: -30 (-0.6% of bankroll)\nCIN 1-6: +33 (+0.7% of bankroll)\nCIN 7-14: -191 (-3.9% of bankroll)\nCIN 15+: +173 (+3.5% of bankroll)",
-      "severity": "warn"
-    },
-    {
       "id": "1794091730558-3a98e6",
       "ts": "2026-11-07T22:48:50Z",
       "book": "W10-CINATL",
@@ -4507,6 +4498,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: CIN 1-6 worst outcome -4\nIf the game ends... you make\nATL 1-6: -33 (-0.7% of bankroll)\nATL 7-14: -38 (-0.8% of bankroll)\nATL 15+: -67 (-1.3% of bankroll)\nCIN 1-6: -275 (-5.5% of bankroll)\nCIN 7-14: +61 (+1.2% of bankroll)\nCIN 15+: +389 (+7.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794148023122-7d89b6",
+      "ts": "2026-11-08T14:27:03Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nATL 1-6: -33 (-0.7% of bankroll)\nATL 7-14: -38 (-0.8% of bankroll)\nATL 15+: -67 (-1.3% of bankroll)\nCIN 1-6: -275 (-5.5% of bankroll)\nCIN 7-14: +61 (+1.2% of bankroll)\nCIN 15+: +389 (+7.8% of bankroll)",
       "severity": "warn"
     }
   ]
