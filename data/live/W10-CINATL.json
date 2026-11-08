@@ -1,10 +1,10 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T16:22:28.737677Z",
+  "generated_at": "2026-11-08T16:23:55.579031Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$149.",
+    "headline": "In game (Ingame). Worst line -$117.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,716, 611 resting. Worst line -$149. Game 50% done."
+          "In game (Ingame). Sold 7,912, 608 resting. Worst line -$117. Game 52% done."
         ]
       },
       {
@@ -62,14 +62,14 @@
       {
         "label": "ATL by 15+",
         "held": 1137.0,
-        "resting": 327.0,
+        "resting": 324.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "CIN by 1-6",
-        "held": 1216.4,
+        "held": 1412.4,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T16:21:30Z"
+    "ts": "2026-11-08T16:23:31Z"
   },
   "posts": [
-    {
-      "id": "1794023770556-b1783e",
-      "ts": "2026-11-07T03:56:10Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,631 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794024614762-99169a",
       "ts": "2026-11-07T04:09:57Z",
@@ -3956,18 +3946,29 @@
       "source": "bot",
       "text": "Inactivity on W10-CINATL: 0 orders posted in 10 min while the market traded 4997 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
       "severity": "info"
+    },
+    {
+      "id": "1794155031323-107a75",
+      "ts": "2026-11-08T16:22:05Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 196: CIN by 1-6 x196 at 16c. Worst line -$117.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 196.0,
+        "fills": [
+          {
+            "side": "CIN by 1-6",
+            "price": 0.16,
+            "qty": 196.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794106780156-1afb49",
-      "ts": "2026-11-08T02:59:40Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -550.82 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794107121734-a4d1e5",
       "ts": "2026-11-08T03:05:21Z",
@@ -4857,6 +4858,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: Floor clamp on (floor -48.5% of slice, no cushion to spend)\nIf the game ends... you make\nATL 1-6: -58 (-1.2% of bankroll)\nATL 7-14: +122 (+2.5% of bankroll)\nATL 15+: +166 (+3.3% of bankroll)\nCIN 1-6: +87 (+1.7% of bankroll)\nCIN 7-14: -66 (-1.3% of bankroll)\nCIN 15+: -149 (-3.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794154998301-d71496",
+      "ts": "2026-11-08T16:23:18Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W10-CINATL - Cincinnati by 1 to 6 is posting again.",
       "severity": "warn"
     }
   ]
