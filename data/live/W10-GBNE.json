@@ -1,133 +1,47 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T21:22:00.254263Z",
+  "generated_at": "2026-11-08T21:23:20.658161Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$91.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$91.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "GB by 1-6",
-        "resting": "none",
-        "exposure": -90.74,
-        "exposure_text": "-$91",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-08T01:05:44Z"
-      },
-      {
-        "side": "GB by 7-14",
-        "resting": "none",
-        "exposure": -90.74,
-        "exposure_text": "-$91",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-08T21:15:33Z"
-      },
-      {
-        "side": "NE by 1-6",
-        "resting": "5 @ 24-28c",
-        "exposure": -90.04,
-        "exposure_text": "-$90",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-08T21:20:42Z"
-      },
-      {
-        "side": "NE by 7-14",
-        "resting": "4 @ 21-23c",
-        "exposure": -6.27,
-        "exposure_text": "-$6",
-        "move": "Step price down 1c (21c to 20c)",
-        "when": "if no fill by 3:30pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-11-08T21:30:44Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T21:20:44Z",
-        "lag_note": "Steps to 20c if no fill by 3:30pm CT."
-      },
-      {
-        "side": "GB by 15+",
-        "resting": "77 @ 6-12c",
-        "exposure": 57.26,
-        "exposure_text": "+$57",
-        "move": "Hold price at 6c",
-        "when": "crowd pays 8c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T16:57:21Z",
-        "lag_note": "Price 6c matches the crowd."
-      },
-      {
-        "side": "NE by 15+",
-        "resting": "311 @ 17-22c",
-        "exposure": 242.53,
-        "exposure_text": "+$243",
-        "move": "Hold price at 17c",
-        "when": "needs 50+ crowd trades under 17c (now 13)",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-08T19:38:25Z",
-        "lag_note": "Crowd is quiet here (13 traded)."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 2,119, 397 resting. Worst line -$91 (goal -$150)."
+          "In game (Ingame). Sold 2,119, 392 resting. Worst line -$91. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): GB by 15+, NE by 7-14, NE by 15+.",
-          "NE by 15+: 333 behind. Crowd is quiet here (13 traded).",
-          "GB by 15+: 148 behind. Price 6c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$91 is better than -$150.",
-          "Batches used: none (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$91; spent $9 of $100.",
-          "Kickoff 3:25pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-08T21:25:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "GB by 1-6",
@@ -150,100 +64,46 @@
         "held": 267.0,
         "resting": 77.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.06
+        "status": "even",
+        "price": null
       },
       {
         "label": "NE by 1-6",
         "held": 414.3,
-        "resting": 5.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "NE by 7-14",
         "held": 330.5,
         "resting": 4.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.21
+        "status": "even",
+        "price": null
       },
       {
         "label": "NE by 15+",
         "held": 81.7,
         "resting": 311.3,
         "target": null,
-        "status": "lagging",
-        "price": 0.17
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T21:21:34Z"
+    "ts": "2026-11-08T21:22:35Z"
   },
   "posts": [
-    {
-      "id": "1794014588520-aafc5e",
-      "ts": "2026-11-07T01:23:08Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,056 resting. Next: Even-done check, Sun 2:55pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794014910210-767388",
-      "ts": "2026-11-07T01:26:13Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 98 (FAIR-ROSE rung 0 0.16 -> 0.19 ): NE by 15+ x98 at 19c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 98.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1794015352381-5cc78f",
-      "ts": "2026-11-07T01:33:51Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 98 (FIELD far-bucket row (all-fill): NE by 15+ x98 at 20c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 98.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1794015995642-acdeee",
-      "ts": "2026-11-07T01:44:17Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 98 (FIELD far-bucket row (all-fill): NE by 15+ x98 at 19c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 98.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1794016758811-5c7ec2",
-      "ts": "2026-11-07T01:59:18Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,057 resting. Next: Even-done check, Sun 2:55pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794017662525-3e3798",
       "ts": "2026-11-07T02:14:22Z",
@@ -3451,6 +3311,70 @@
       "text": "Bot note: COVERAGE-CAP decrease NE1TO6: resting 5 -> 0 (held 414 + resting was over the cap 369 = 1.04x; tighten phase; ",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794172935319-2b3785",
+      "ts": "2026-11-08T21:22:06Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -90.74, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794172955499-10a4b3",
+      "ts": "2026-11-08T21:22:35Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794172955500-78d006",
+      "ts": "2026-11-08T21:22:35Z",
+      "book": "W10-GBNE",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$91.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1794172971274-58c92e",
+      "ts": "2026-11-08T21:22:51Z",
+      "book": "W10-GBNE",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: GB now 42%",
+      "severity": "info"
+    },
+    {
+      "id": "1794172995574-960547",
+      "ts": "2026-11-08T21:21:02Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 388: NE by 1-6 x359 at 21c, NE by 7-14 x29 at 19c. Worst line -$91.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 388.0,
+        "fills": [
+          {
+            "side": "NE by 1-6",
+            "price": 0.21,
+            "qty": 359.0
+          },
+          {
+            "side": "NE by 7-14",
+            "price": 0.19,
+            "qty": 29.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4146,6 +4070,33 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-GBNE): 2 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794172926007-50fa68",
+      "ts": "2026-11-08T21:22:06Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+359 on NE 1-6 @ 0.21 (taker)\n+29 on NE 7-14 @ 0.19 (maker)\nworst outcome now -28\nheld 414/331/82/415/415/267\nIf the game ends... you make\nNE 1-6: -90 (-1.8% of bankroll)\nNE 7-14: -6 (-0.1% of bankroll)\nNE 15+: +243 (+4.8% of bankroll)\nGB 1-6: -91 (-1.8% of bankroll)\nGB 7-14: -91 (-1.8% of bankroll)\nGB 15+: +57 (+1.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794172926009-07863b",
+      "ts": "2026-11-08T21:22:06Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nNE 1-6: -90 (-1.8% of bankroll)\nNE 7-14: -6 (-0.1% of bankroll)\nNE 15+: +243 (+4.8% of bankroll)\nGB 1-6: -91 (-1.8% of bankroll)\nGB 7-14: -91 (-1.8% of bankroll)\nGB 15+: +57 (+1.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794172980232-0321aa",
+      "ts": "2026-11-08T21:23:00Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W10-GBNE - Green Bay by 1 to 6 is posting again.\nBack: W10-GBNE - Green Bay by 7 to 14 is posting again.",
+      "severity": "warn"
     }
   ]
 }
