@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T15:57:58.819187Z",
+  "generated_at": "2026-11-08T15:59:51.163212Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,7 +33,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "349 @ 9-12c",
+        "resting": "282 @ 9-12c",
         "exposure": 4.42,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -180,65 +180,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T15:57:42Z"
+    "ts": "2026-11-08T15:59:43Z"
   },
   "posts": [
-    {
-      "id": "1793975109648-63119b",
-      "ts": "2026-11-06T14:24:12Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 174 (SPORTSBOOK rate row (listed 0.): NE by 7-14 x120 at 21c, +1 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 174.0,
-        "rows": 3
-      }
-    },
-    {
-      "id": "1793975834334-930367",
-      "ts": "2026-11-06T14:35:12Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 6 (FIELD far-bucket row (all-fill): GB by 15+ x6 at 10c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 6.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1793976036052-58594a",
-      "ts": "2026-11-06T14:38:18Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 120 (SPORTSBOOK rate row (listed 0.): NE by 7-14 x120 at 21c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 120.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1793976479146-4db9fb",
-      "ts": "2026-11-06T14:45:48Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 114 (FIELD far-bucket row (all-fill): NE by 15+ x98 at 18c, GB by 15+ x16 at 10c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 114.0,
-        "rows": 2
-      }
-    },
     {
       "id": "1793977143698-d1602e",
       "ts": "2026-11-06T14:56:52Z",
@@ -3474,6 +3418,49 @@
       "text": "Quiet for 15 min. 1,930 resting. Next: Even-done check, 2:55pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794153523080-73bdde",
+      "ts": "2026-11-08T15:58:39Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1794153523081-ed4860",
+      "ts": "2026-11-08T15:56:35Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 67 (FIELD far-bucket row (all-fill): GB by 15+ x67 at 9c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 67.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1794153534663-c2b81e",
+      "ts": "2026-11-08T15:58:54Z",
+      "book": "W10-GBNE",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W10-GBNE: 0 orders posted in 10 min while the market traded 764 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1794153543265-f1abbb",
+      "ts": "2026-11-08T15:58:53Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$406 is under -$300. GB by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
@@ -3871,6 +3858,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-GBNE): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=764. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794153519457-c16fc9",
+      "ts": "2026-11-08T15:58:39Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
