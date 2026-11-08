@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T20:07:10.653491Z",
+  "generated_at": "2026-11-08T20:08:30.798983Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,7 +33,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "159 @ 9-12c",
+        "resting": "158 @ 9-12c",
         "exposure": -20.72,
         "exposure_text": "-$21",
         "move": "Paid balancing (trickle)",
@@ -46,7 +46,7 @@
       },
       {
         "side": "NE by 7-14",
-        "resting": "252 @ 21-23c",
+        "resting": "251 @ 21-23c",
         "exposure": 33.75,
         "exposure_text": "+$34",
         "move": "Step price down 1c (21c to 20c)",
@@ -59,7 +59,7 @@
       },
       {
         "side": "NE by 15+",
-        "resting": "401 @ 17-22c",
+        "resting": "400 @ 17-22c",
         "exposure": 164.55,
         "exposure_text": "+$165",
         "move": "Paid balancing (trickle)",
@@ -72,7 +72,7 @@
       },
       {
         "side": "NE by 1-6",
-        "resting": "547 @ 23-28c",
+        "resting": "546 @ 23-28c",
         "exposure": 246.28,
         "exposure_text": "+$246",
         "move": "Paid balancing (trickle)",
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 1,586, 1,363 resting. Worst line -$364 (goal -$150)."
+          "Pregame build, kickoff 3:25pm CT. Sold 1,586, 1,361 resting. Worst line -$364 (goal -$150)."
         ]
       },
       {
@@ -168,7 +168,7 @@
       {
         "label": "NE by 1-6",
         "held": 0.0,
-        "resting": 547.0,
+        "resting": 546.0,
         "target": null,
         "status": "lagging",
         "price": 0.23
@@ -176,7 +176,7 @@
       {
         "label": "NE by 7-14",
         "held": 212.5,
-        "resting": 252.5,
+        "resting": 251.5,
         "target": null,
         "status": "lagging",
         "price": 0.21
@@ -191,23 +191,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T20:07:09Z"
+    "ts": "2026-11-08T20:08:10Z"
   },
   "posts": [
-    {
-      "id": "1794000701966-cbc1e8",
-      "ts": "2026-11-06T21:29:26Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 12 (FIELD far-bucket row (all-fill): GB by 15+ x12 at 11c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 12.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794001345559-86f69c",
       "ts": "2026-11-06T21:40:23Z",
@@ -3500,6 +3486,26 @@
       "text": "Row sold out: NE by 7-14 at 19c (7 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794168490204-42a37d",
+      "ts": "2026-11-08T20:06:08Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 7: NE by 7-14 x7 at 19c. Worst line -$364.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 7.0,
+        "fills": [
+          {
+            "side": "NE by 7-14",
+            "price": 0.19,
+            "qty": 7.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4104,6 +4110,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-GBNE): held worst -365.05 (backstop -300) or lagging gap 610 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794168432541-ec841e",
+      "ts": "2026-11-08T20:07:12Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+7 on NE 7-14 @ 0.19 (maker)\nworst outcome now -86\nheld 0/213/82/415/610/267\nIf the game ends... you make\nNE 1-6: +246 (+4.9% of bankroll)\nNE 7-14: +34 (+0.7% of bankroll)\nNE 15+: +165 (+3.3% of bankroll)\nGB 1-6: -169 (-3.4% of bankroll)\nGB 7-14: -364 (-7.3% of bankroll)\nGB 15+: -21 (-0.4% of bankroll)",
       "severity": "warn"
     }
   ]
