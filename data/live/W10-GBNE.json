@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T15:34:13.792874Z",
+  "generated_at": "2026-11-08T15:35:48.229764Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,7 +33,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "698 @ 10-12c",
+        "resting": "497 @ 10-12c",
         "exposure": 4.42,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -180,39 +180,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T15:33:34Z"
+    "ts": "2026-11-08T15:35:35Z"
   },
   "posts": [
-    {
-      "id": "1793971503798-480f96",
-      "ts": "2026-11-06T13:25:03Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,555 resting. Next: Even-done check, Sun 2:55pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793972410553-81ae5e",
-      "ts": "2026-11-06T13:40:10Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,555 resting. Next: Even-done check, Sun 2:55pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1793973317164-4537f0",
-      "ts": "2026-11-06T13:55:17Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,555 resting. Next: Even-done check, Sun 2:55pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1793974223366-99acb9",
       "ts": "2026-11-06T14:10:23Z",
@@ -3475,6 +3445,35 @@
       "text": "Quiet for 15 min. 3,815 resting. Next: Even-done check, 2:55pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794152077404-32af26",
+      "ts": "2026-11-08T15:34:37Z",
+      "book": "W10-GBNE",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nNE 1-6: +204 (+4.1% of bankroll)\nNE 7-14: +120 (+2.4% of bankroll)\nNE 15+: +176 (+3.5% of bankroll)\nGB 1-6: -211 (-4.2% of bankroll)\nGB 7-14: -406 (-8.1% of bankroll)\nGB 15+: +4 (+0.1% of bankroll)\nCollected $204 premium ($0 fees) | Paper margin over fair $16 (not realized until settlement)\nEvent: NE 7-14: NE 0-0, Q0 0:00; GB 7-14: GB 0-0, Q0 0:00\nheld / resting\nNE 1-6: 0 / 1000\nNE 7-14: 84 / 802\nNE 15+: 28 / 872\nGB 1-6: 415 / 309\nGB 7-14: 610 / 135\nGB 15+: 200 / 698\nPosted book 1.15 | Sold avg 1.047 | Worst now -33 | Cash free $901\nAnchor age 0s | Last fill 2327s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1794152114828-b98545",
+      "ts": "2026-11-08T15:35:05Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1794152135006-3342ca",
+      "ts": "2026-11-08T15:35:18Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Backstop on: worst line -$406 is under -$300. GB by 7-14 stops adding.",
+      "severity": "warn",
+      "title": "Backstop"
     }
   ],
   "audits": [
@@ -3837,6 +3836,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-GBNE): worst -405.58 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794152105588-8c99b2",
+      "ts": "2026-11-08T15:35:05Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
