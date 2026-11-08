@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T18:52:03.170253Z",
+  "generated_at": "2026-11-08T18:53:23.646027Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,7 +33,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "220 @ 9-12c",
+        "resting": "219 @ 9-12c",
         "exposure": -29.24,
         "exposure_text": "-$29",
         "move": "Hold price at 9c",
@@ -46,7 +46,7 @@
       },
       {
         "side": "NE by 7-14",
-        "resting": "330 @ 19-23c",
+        "resting": "329 @ 19-23c",
         "exposure": 32.23,
         "exposure_text": "+$32",
         "move": "Hold price at 19c",
@@ -59,7 +59,7 @@
       },
       {
         "side": "NE by 15+",
-        "resting": "520 @ 17-22c",
+        "resting": "518 @ 17-22c",
         "exposure": 198.27,
         "exposure_text": "+$198",
         "move": "Hold price at 17c",
@@ -72,12 +72,12 @@
       },
       {
         "side": "NE by 1-6",
-        "resting": "621 @ 23-28c",
+        "resting": "620 @ 23-28c",
         "exposure": 237.76,
         "exposure_text": "+$238",
         "move": "Step price down 1c (23c to 22c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T18:51:43Z",
+        "at": "2026-11-08T18:52:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts 3:05pm CT",
         "lag_note": "Steps to 22c at the next check."
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 1,537, 1,742 resting. Worst line -$372 (goal -$150)."
+          "Pregame build, kickoff 3:25pm CT. Sold 1,537, 1,740 resting. Worst line -$372 (goal -$150)."
         ]
       },
       {
@@ -160,7 +160,7 @@
       {
         "label": "GB by 15+",
         "held": 267.0,
-        "resting": 220.0,
+        "resting": 219.0,
         "target": null,
         "status": "lagging",
         "price": 0.09
@@ -184,14 +184,14 @@
       {
         "label": "NE by 15+",
         "held": 39.5,
-        "resting": 520.5,
+        "resting": 519.5,
         "target": null,
         "status": "lagging",
         "price": 0.17
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T18:51:43Z"
+    "ts": "2026-11-08T18:52:44Z"
   },
   "posts": [
     {
@@ -4027,6 +4027,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+11 on NE 15+ @ 0.17 (maker)\nworst outcome now -30\nheld 0/206/39/415/610/267\nIf the game ends... you make\nNE 1-6: +238 (+4.8% of bankroll)\nNE 7-14: +32 (+0.6% of bankroll)\nNE 15+: +198 (+4.0% of bankroll)\nGB 1-6: -177 (-3.5% of bankroll)\nGB 7-14: -372 (-7.4% of bankroll)\nGB 15+: -29 (-0.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794163936884-f46e22",
+      "ts": "2026-11-08T18:52:16Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-GBNE): worst -372.24 vs floor -325.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1794163936884-6fc349",
+      "ts": "2026-11-08T18:52:16Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-GBNE): held worst -372.24 (backstop -300) or lagging gap 610 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
