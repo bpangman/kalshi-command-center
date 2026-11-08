@@ -1,19 +1,19 @@
 {
   "key": "HOM-ORLY",
-  "generated_at": "2026-11-08T00:55:28.121160Z",
+  "generated_at": "2026-11-08T00:56:58.140280Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$36.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 13,022, 0 resting. Worst line +$36. Race 100% done. Floor protocol ON."
+          "In race (Ingame). Sold 13,022, 0 resting. Worst line +$36. Race 100% done. Floor protocol ON. Bot is slow (checks every 54s, set for 30s)."
         ]
       },
       {
@@ -44,28 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-ORLY",
-    "ts": "2026-11-08T00:54:41Z"
+    "ts": "2026-11-08T00:56:41Z"
   },
   "posts": [
-    {
-      "id": "1794051148920-0658ba",
-      "ts": "2026-11-07T11:32:28Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 14,456 resting. Next: Risk glide starts, 12:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794051902067-df066e",
-      "ts": "2026-11-07T11:45:02Z",
-      "book": "HOM-ORLY",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nSam Mayer: -360\nJustin Allgaier: -282\nCorey Day: -9\nAustin Hill: +14\nJesse Love: +14\nBrandon Jones: +27\nSheldon Creed: +45\nCarson Kvapil: +652\nall others (31) >= +700\nCollected $738 premium ($11 fees) | Paper margin over fair $171 (not realized until settlement)\nCore posted book 1.32 | Worst now -360 | Cash free $5908\nAnchor age 63s (source: bovada)",
-      "severity": "info"
-    },
     {
       "id": "1794052055609-ad01a4",
       "ts": "2026-11-07T11:47:35Z",
@@ -3913,18 +3894,28 @@
       "text": "Bot note: endgame: active (favorite Brandon Jones at 0.81); likely ['Brandon Jones', 'Carson Kvapil', 'Jesse Love', 'She",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794099384291-2e6693",
+      "ts": "2026-11-08T00:56:24Z",
+      "book": "HOM-ORLY",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the race ends now, vs bankroll\nParker Retzlaff: +36\nBrent Crews: +36\nBrandon Jones: +37\nCarson Kvapil: +37\nJesse Love: +37\nSheldon Creed: +37\nSam Mayer: +37\nJustin Allgaier: +38\nall others (31) >= +43\nCollected $1075 premium ($25 fees) | Paper margin over fair $866 (not realized until settlement)\nEvent: Brandon Jones: race finished; Carson Kvapil: race finished\nCore posted book 0.00 | Worst now +36 | Cash free $6260\nAnchor age 202s (source: kalshi)",
+      "severity": "info"
+    },
+    {
+      "id": "1794099401819-89534b",
+      "ts": "2026-11-08T00:56:41Z",
+      "book": "HOM-ORLY",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$36.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794080411695-750d96",
-      "ts": "2026-11-07T19:40:11Z",
-      "book": "HOM-ORLY",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (HOM-ORLY): worst -240.54 vs floor -184.12. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794081259475-a0a5f5",
       "ts": "2026-11-07T19:54:19Z",
@@ -4814,6 +4805,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (HOM-ORLY): min live outcome (auditor's own read) +35.96 vs bot's ratchet_high +37.24 vs bot's ceiling_now +37.24. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794099400509-b4f58f",
+      "ts": "2026-11-08T00:56:40Z",
+      "book": "HOM-ORLY",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: HOM-ORLY - Jesse Love is posting again.",
       "severity": "warn"
     }
   ]
