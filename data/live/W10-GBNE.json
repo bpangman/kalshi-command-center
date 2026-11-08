@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T21:15:05.154991Z",
+  "generated_at": "2026-11-08T21:16:26.066856Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -27,7 +27,7 @@
         "exposure_text": "-$155",
         "move": "Catch-up batch",
         "when": "next bot check (lagging with nothing resting)",
-        "at": "2026-11-08T21:14:32Z",
+        "at": "2026-11-08T21:15:33Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T01:05:44Z",
@@ -35,7 +35,7 @@
       },
       {
         "side": "GB by 15+",
-        "resting": "109 @ 6-12c",
+        "resting": "108 @ 6-12c",
         "exposure": -7.45,
         "exposure_text": "-$7",
         "move": "Hold price at 6c",
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$228 (now -$350).",
+          "Gate closed: batches wait for the worst line to reach -$213 (now -$350).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$228, worst line -$350; spent $0 of $100.",
+          "Paid balancing is running: plan -$213, worst line -$350; spent $0 of $100.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -183,23 +183,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T21:14:32Z"
+    "ts": "2026-11-08T21:15:33Z"
   },
   "posts": [
-    {
-      "id": "1794008334836-0a2518",
-      "ts": "2026-11-06T23:36:49Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 11 (FIELD far-bucket row (all-fill): GB by 15+ x11 at 10c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 11.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794008999611-3a55b0",
       "ts": "2026-11-06T23:47:44Z",
@@ -3441,6 +3427,15 @@
         "contracts": 12.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1794172532916-5ee19d",
+      "ts": "2026-11-08T21:15:32Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "kickoff-buyback",
+      "text": "W10-GBNE: buying back 195 GB 7-14 at 14c (about $4) to cut the worst case from -$350 to -$184. Reply in Claude if you want it stopped.",
+      "severity": "critical"
     }
   ],
   "audits": [
@@ -4117,6 +4112,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+55 on NE 1-6 @ 0.24 (maker)\nworst outcome now -153\nheld 55/213/82/415/610/267\nIf the game ends... you make\nNE 1-6: +204 (+4.1% of bankroll)\nNE 7-14: +47 (+0.9% of bankroll)\nNE 15+: +178 (+3.6% of bankroll)\nGB 1-6: -155 (-3.1% of bankroll)\nGB 7-14: -350 (-7.0% of bankroll)\nGB 15+: -7 (-0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794172511947-70aaf8",
+      "ts": "2026-11-08T21:15:11Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: GB 7-14 worst outcome -257\nIf the game ends... you make\nNE 1-6: +204 (+4.1% of bankroll)\nNE 7-14: +47 (+0.9% of bankroll)\nNE 15+: +178 (+3.6% of bankroll)\nGB 1-6: -155 (-3.1% of bankroll)\nGB 7-14: -350 (-7.0% of bankroll)\nGB 15+: -7 (-0.1% of bankroll)",
       "severity": "warn"
     }
   ]

@@ -1,6 +1,6 @@
 {
   "key": "HOM-CUP",
-  "generated_at": "2026-11-08T21:15:05.154991Z",
+  "generated_at": "2026-11-08T21:16:26.066856Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 31,071, 46,191 resting. Worst line +$49. Race 31% done. Floor protocol off. New posts on hold: free cash $66 is under the $400 floor."
+          "In race (Ingame). Sold 31,071, 47,569 resting. Worst line +$49. Race 32% done. Floor protocol off. New posts on hold: free cash $395 is under the $400 floor."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "HOM-CUP",
-    "ts": "2026-11-08T21:14:12Z"
+    "ts": "2026-11-08T21:16:13Z"
   },
   "posts": [
-    {
-      "id": "1794088592649-f44c11",
-      "ts": "2026-11-07T21:56:32Z",
-      "book": "HOM-CUP",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nRyan Blaney: -415\nChase Briscoe: -415\nTyler Reddick: -295\nAustin Cindric: -159\nKyle Larson: -102\nChristopher Bell: -63\nDenny Hamlin: +59\nCorey Heim: +133\nall others (33) >= +610\nCollected $1529 premium ($23 fees) | Paper margin over fair $127 (not realized until settlement)\nCore posted book 1.46 | Worst now -415 | Cash free $6080\nAnchor age 8187s (source: bovada)",
-      "severity": "info"
-    },
-    {
-      "id": "1794088661520-f918ca",
-      "ts": "2026-11-07T21:55:36Z",
-      "book": "HOM-CUP",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 30: Denny Hamlin x30 at 14c. Worst line -$415.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 30.0,
-        "fills": [
-          {
-            "side": "Denny Hamlin",
-            "price": 0.14,
-            "qty": 30.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794088862593-c4dcff",
       "ts": "2026-11-07T22:01:02Z",
@@ -3759,27 +3730,33 @@
         "contracts": 2785.0,
         "rows": 5
       }
+    },
+    {
+      "id": "1794172513150-f95a6d",
+      "ts": "2026-11-08T21:14:55Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 3,129 (race floor first): Chad Finchum x740 at 1c, Joey Logano x445 at 2c, +9 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 3129.0,
+        "rows": 11
+      }
+    },
+    {
+      "id": "1794172553371-3c4117",
+      "ts": "2026-11-08T21:15:47Z",
+      "book": "HOM-CUP",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: expiry extend: 1 order(s) moved past green (queue kept; new expiry 1794183327)",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1794126304589-0c8f99",
-      "ts": "2026-11-08T08:25:04Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-CUP - Austin Cindric has had no resting orders for at least 438 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1794127219490-1b0b3d",
-      "ts": "2026-11-08T08:40:19Z",
-      "book": "HOM-CUP",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- HOM-CUP - Chase Briscoe has had no resting orders for at least 744 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794127442871-b2599e",
       "ts": "2026-11-08T08:44:02Z",
@@ -4660,6 +4637,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 4 driver(s): Chase Briscoe (+84%), Joey Logano (+23%), Bubba Wallace (+20%), Kyle Larson (+20%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794172547980-b1207b",
+      "ts": "2026-11-08T21:15:47Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Shock on Ryan Blaney: pulled Ryan Blaney only, kept every other order, pausing 30s\nIf the race ends... you make\nChristopher Bell: +49\nAustin Cindric: +49\nTyler Reddick: +49\nDaniel Suarez: +49\nChase Briscoe: +50\nDenny Hamlin: +50\nRyan Blaney: +51\nWilliam Byron: +51\nall others (33) >= +51",
+      "severity": "warn"
+    },
+    {
+      "id": "1794172580866-8e60de",
+      "ts": "2026-11-08T21:16:20Z",
+      "book": "HOM-CUP",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Cash line: trimmed 548 contracts off the back of Alex Bowman, Brad Keselowski, Chris Buescher, Josh Berry, Ross Chastain, Ryan Preece so Kalshi would not pull the whole set (usable cash $90). No row cancelled; the front rows kept their place in line.",
       "severity": "warn"
     }
   ]
