@@ -1,12 +1,12 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T21:05:26.181518Z",
+  "generated_at": "2026-11-08T21:06:45.576309Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 3:25pm CT. Worst line -$364, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$364.",
+    "confidence": "medium",
+    "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
     "checks_every_s": 20,
     "moves": [
       {
@@ -15,7 +15,7 @@
         "exposure": -363.72,
         "exposure_text": "-$364",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 3:05pm CT",
+        "when": "no move planned until kickoff at 3:25pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-08T14:34:45Z"
@@ -27,48 +27,48 @@
         "exposure_text": "-$169",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T21:04:29Z",
+        "at": "2026-11-08T21:06:30Z",
         "stuck": false,
-        "also": "Also: paid balancing starts at the next check",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-08T01:05:44Z",
         "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "GB by 15+",
-        "resting": "106 @ 9-12c",
+        "resting": "104 @ 9-12c",
         "exposure": -20.72,
         "exposure_text": "-$21",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-08T21:05:00Z",
+        "move": "Hold price at 9c",
+        "when": "needs 50+ crowd trades under 9c (now 35)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-08T16:57:21Z",
         "lag_note": "Crowd is quiet here (35 traded)."
       },
       {
         "side": "NE by 7-14",
-        "resting": "191 @ 21-23c",
+        "resting": "189 @ 21-23c",
         "exposure": 33.75,
         "exposure_text": "+$34",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T21:04:29Z",
+        "at": "2026-11-08T21:06:30Z",
         "stuck": false,
-        "also": "Also: paid balancing starts at the next check",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-08T20:05:52Z",
         "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "NE by 15+",
-        "resting": "342 @ 17-22c",
+        "resting": "340 @ 17-22c",
         "exposure": 164.55,
         "exposure_text": "+$165",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-08T21:05:00Z",
+        "move": "Hold price at 17c",
+        "when": "needs 50+ crowd trades under 17c (now 13)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-08T19:38:25Z",
         "lag_note": "Crowd is quiet here (13 traded)."
       },
@@ -79,9 +79,9 @@
         "exposure_text": "+$246",
         "move": "Step price down 1c (24c to 23c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T21:04:29Z",
+        "at": "2026-11-08T21:06:30Z",
         "stuck": false,
-        "also": "Also: paid balancing starts at the next check",
+        "also": "Also: paid balancing",
         "lag_note": "Steps to 23c at the next check."
       }
     ],
@@ -89,7 +89,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 1,586, 1,047 resting. Worst line -$364 (goal -$150)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,586, 1,042 resting. Worst line -$364 (goal -$150)."
         ]
       },
       {
@@ -105,7 +105,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$364).",
+          "Gate closed: batches wait for the worst line to reach -$342 (now -$364).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -113,7 +113,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 3:05pm CT: worst line to -$150 by 3:20pm CT, up to $100.",
+          "Paid balancing is running: plan -$342, worst line -$364; spent $0 of $100.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -125,11 +125,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-08T21:05:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$150 by 3:20pm CT."
-      },
       {
         "at": "2026-11-08T21:25:00Z",
         "label": "Kickoff",
@@ -156,7 +151,7 @@
       {
         "label": "GB by 15+",
         "held": 267.0,
-        "resting": 106.0,
+        "resting": 105.0,
         "target": null,
         "status": "lagging",
         "price": 0.09
@@ -172,7 +167,7 @@
       {
         "label": "NE by 7-14",
         "held": 212.5,
-        "resting": 191.5,
+        "resting": 189.5,
         "target": null,
         "status": "lagging",
         "price": 0.21
@@ -180,59 +175,16 @@
       {
         "label": "NE by 15+",
         "held": 81.7,
-        "resting": 343.3,
+        "resting": 341.3,
         "target": null,
         "status": "lagging",
         "price": 0.17
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T21:04:29Z"
+    "ts": "2026-11-08T21:06:30Z"
   },
   "posts": [
-    {
-      "id": "1794005917969-442793",
-      "ts": "2026-11-06T22:56:33Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 12: NE by 15+ x12 at 16c. Worst line -$92.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 12.0,
-        "fills": [
-          {
-            "side": "NE by 15+",
-            "price": 0.16,
-            "qty": 12.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794006461808-75b4f9",
-      "ts": "2026-11-06T23:05:34Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 11 (FIELD far-bucket row (all-fill): GB by 15+ x11 at 10c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 11.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1794006946529-80f2c3",
-      "ts": "2026-11-06T23:15:46Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNE 1-6: +28 (+0.6% of bankroll)\nNE 7-14: +28 (+0.6% of bankroll)\nNE 15+: +11 (+0.2% of bankroll)\nGB 1-6: +28 (+0.6% of bankroll)\nGB 7-14: -92 (-1.8% of bankroll)\nGB 15+: -81 (-1.6% of bankroll)\nCollected $28 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nNE 1-6: 0 / 646\nNE 7-14: 0 / 886\nNE 15+: 17 / 776\nGB 1-6: 0 / 724\nGB 7-14: 120 / 330\nGB 15+: 109 / 645\nPosted book 1.13 | Sold avg 1.070 | Worst now -88 | Cash free $855\nAnchor age 0s | Last fill 1212s ago",
-      "severity": "info"
-    },
     {
       "id": "1794007247580-46a61e",
       "ts": "2026-11-06T23:20:47Z",
@@ -3458,6 +3410,36 @@
       "text": "Paid balancing started. Worst line -$364; goal -$150 by 3:20pm CT.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1794171929858-0af122",
+      "ts": "2026-11-08T21:05:29Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794171929858-ad5925",
+      "ts": "2026-11-08T21:05:29Z",
+      "book": "W10-GBNE",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 3:25pm CT. Worst line -$364. Next: Paid balancing starts, 3:05pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1794171990112-917efe",
+      "ts": "2026-11-08T21:06:30Z",
+      "book": "W10-GBNE",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 3:25pm CT. Worst line -$364. Next: Kickoff, 3:25pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
