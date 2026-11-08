@@ -1,10 +1,10 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T15:04:45.897112Z",
+  "generated_at": "2026-11-08T15:06:11.173584Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$131.",
+    "headline": "In game (Ingame). Worst line -$123.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,278, 382 resting. Worst line -$131. Game 20% done."
+          "In game (Ingame). Sold 6,317, 247 resting. Worst line -$123. Game 20% done."
         ]
       },
       {
@@ -45,16 +45,16 @@
     "sides": [
       {
         "label": "ATL by 1-6",
-        "held": 1008.8,
-        "resting": 120.0,
+        "held": 1013.8,
+        "resting": 37.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "ATL by 7-14",
-        "held": 1008.2,
-        "resting": 62.0,
+        "held": 1022.1,
+        "resting": 137.0,
         "target": null,
         "status": "even",
         "price": null
@@ -69,8 +69,8 @@
       },
       {
         "label": "CIN by 1-6",
-        "held": 962.1,
-        "resting": 200.0,
+        "held": 982.1,
+        "resting": 73.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T15:04:03Z"
+    "ts": "2026-11-08T15:06:04Z"
   },
   "posts": [
-    {
-      "id": "1794010227822-c2011f",
-      "ts": "2026-11-07T00:10:27Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +60 (+1.2% of bankroll)\nATL 7-14: +52 (+1.1% of bankroll)\nATL 15+: -142 (-2.9% of bankroll)\nCIN 1-6: +60 (+1.2% of bankroll)\nCIN 7-14: -138 (-2.8% of bankroll)\nCIN 15+: +60 (+1.2% of bankroll)\nCollected $60 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 802\nATL 7-14: 8 / 676\nATL 15+: 203 / 697\nCIN 1-6: 0 / 802\nCIN 7-14: 198 / 770\nCIN 15+: 0 / 950\nPosted book 1.21 | Sold avg 1.137 | Worst now +58 | Cash free $680\nAnchor age 0s | Last fill 13924s ago",
-      "severity": "info"
-    },
     {
       "id": "1794010990920-cab26d",
       "ts": "2026-11-07T00:22:57Z",
@@ -3688,18 +3679,39 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794150304011-b83182",
+      "ts": "2026-11-08T15:04:04Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 8: ATL by 1-6 x6 at 19c, ATL by 7-14 x2 at 12c, CIN by 1-6 x0 at 25c. Worst line -$130.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 8.0,
+        "fills": [
+          {
+            "side": "ATL by 1-6",
+            "price": 0.19,
+            "qty": 6.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.12,
+            "qty": 2.0
+          },
+          {
+            "side": "CIN by 1-6",
+            "price": 0.25,
+            "qty": 0.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794097261639-45adf9",
-      "ts": "2026-11-08T00:21:01Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): held worst -186.21 (backstop -150) or lagging gap 364 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794097627550-eac257",
       "ts": "2026-11-08T00:27:07Z",
@@ -4589,6 +4601,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 40.35 over banked margin 27.30",
+      "severity": "warn"
+    },
+    {
+      "id": "1794150330154-dc9ca7",
+      "ts": "2026-11-08T15:05:30Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+17 on ATL 15+ @ 0.08 (maker)\n+65 on ATL 1-6 @ 0.19 (maker)\n+15 on ATL 7-14 @ 0.13 (maker)\n+17 on CIN 15+ @ 0.12 (maker)\n+40 on ATL 7-14 @ 0.12 (maker)\n+20 on CIN 1-6 @ 0.25 (maker)\nworst outcome now -76\nheld 1014/1022/1137/982/1065/1098\nIf the game ends... you make\nATL 1-6: +0 (+0.0% of bankroll)\nATL 7-14: -8 (-0.2% of bankroll)\nATL 15+: -123 (-2.5% of bankroll)\nCIN 1-6: +32 (+0.6% of bankroll)\nCIN 7-14: -51 (-1.0% of bankroll)\nCIN 15+: -84 (-1.7% of bankroll)",
       "severity": "warn"
     }
   ]
