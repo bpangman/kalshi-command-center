@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T21:12:17.711161Z",
+  "generated_at": "2026-11-08T21:13:37.913502Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -22,42 +22,42 @@
       },
       {
         "side": "GB by 1-6",
-        "resting": "2 @ 21-22c",
+        "resting": "none",
         "exposure": -155.45,
         "exposure_text": "-$155",
-        "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T21:11:31Z",
+        "move": "Catch-up batch",
+        "when": "next bot check (lagging with nothing resting)",
+        "at": "2026-11-08T21:13:32Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T01:05:44Z",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Nothing resting; catch-up batch due."
       },
       {
         "side": "GB by 15+",
-        "resting": "114 @ 7-12c",
+        "resting": "110 @ 6-12c",
         "exposure": -7.45,
         "exposure_text": "-$7",
-        "move": "Hold price at 7c",
+        "move": "Hold price at 6c",
         "when": "crowd pays 8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T16:57:21Z",
-        "lag_note": "Price 7c matches the crowd."
+        "lag_note": "Price 6c matches the crowd."
       },
       {
         "side": "NE by 7-14",
-        "resting": "186 @ 21-23c",
+        "resting": "122 @ 19-23c",
         "exposure": 47.02,
         "exposure_text": "+$47",
-        "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-08T21:11:31Z",
+        "move": "Hold price at 19c",
+        "when": "crowd pays 19c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-08T20:05:52Z",
-        "lag_note": "Steps to 20c at the next check."
+        "lag_note": "Price 19c matches the crowd."
       },
       {
         "side": "NE by 15+",
@@ -74,7 +74,7 @@
       },
       {
         "side": "NE by 1-6",
-        "resting": "349 @ 24-28c",
+        "resting": "5 @ 24-28c",
         "exposure": 204.25,
         "exposure_text": "+$204",
         "move": "Step price down 1c (24c to 23c)",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 1,642, 988 resting. Worst line -$350 (goal -$150)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,642, 574 resting. Worst line -$350 (goal -$150)."
         ]
       },
       {
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$271 (now -$350).",
+          "Gate closed: batches wait for the worst line to reach -$242 (now -$350).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$271, worst line -$350; spent $0 of $100.",
+          "Paid balancing is running: plan -$242, worst line -$350; spent $0 of $100.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -136,10 +136,10 @@
       {
         "label": "GB by 1-6",
         "held": 415.0,
-        "resting": 2.0,
+        "resting": 0.0,
         "target": null,
         "status": "lagging",
-        "price": 0.21
+        "price": null
       },
       {
         "label": "GB by 7-14",
@@ -152,15 +152,15 @@
       {
         "label": "GB by 15+",
         "held": 267.0,
-        "resting": 114.0,
+        "resting": 110.0,
         "target": null,
         "status": "lagging",
-        "price": 0.07
+        "price": 0.06
       },
       {
         "label": "NE by 1-6",
         "held": 55.3,
-        "resting": 348.7,
+        "resting": 5.0,
         "target": null,
         "status": "lagging",
         "price": 0.24
@@ -168,10 +168,10 @@
       {
         "label": "NE by 7-14",
         "held": 212.5,
-        "resting": 186.5,
+        "resting": 122.0,
         "target": null,
         "status": "lagging",
-        "price": 0.21
+        "price": 0.19
       },
       {
         "label": "NE by 15+",
@@ -183,43 +183,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T21:11:31Z"
+    "ts": "2026-11-08T21:13:32Z"
   },
   "posts": [
-    {
-      "id": "1794007710731-5c1d5b",
-      "ts": "2026-11-06T23:26:11Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 11 (FIELD far-bucket row (all-fill): GB by 15+ x11 at 10c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 11.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1794008334835-2d7a96",
-      "ts": "2026-11-06T23:36:48Z",
-      "book": "W10-GBNE",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 5: NE by 15+ x5 at 16c. Worst line -$91.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 5.0,
-        "fills": [
-          {
-            "side": "NE by 15+",
-            "price": 0.16,
-            "qty": 5.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794008334836-0a2518",
       "ts": "2026-11-06T23:36:49Z",
@@ -3450,6 +3416,30 @@
             "qty": 55.0
           }
         ]
+      }
+    },
+    {
+      "id": "1794172372178-9fe05f",
+      "ts": "2026-11-08T21:12:43Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease NE7TO14: resting 194 -> 122 (held 213 + resting was over the cap 335 = 1.14x; tighten ph",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1794172392357-5d7a6c",
+      "ts": "2026-11-08T21:10:58Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 12 (SPORTSBOOK rate row (listed 0.): GB by 15+ x12 at 7c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 12.0,
+        "rows": 1
       }
     }
   ],
