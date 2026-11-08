@@ -1,10 +1,10 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T14:40:46.870909Z",
+  "generated_at": "2026-11-08T14:42:15.382439Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$112.",
+    "headline": "In game (Ingame). Worst line -$110.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,047, 984 resting. Worst line -$112. Game 4% done."
+          "In game (Ingame). Sold 5,060, 686 resting. Worst line -$110. Game 6% done."
         ]
       },
       {
@@ -45,16 +45,16 @@
     "sides": [
       {
         "label": "ATL by 1-6",
-        "held": 897.3,
-        "resting": 113.5,
+        "held": 902.9,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "ATL by 7-14",
-        "held": 935.5,
-        "resting": 64.5,
+        "held": 943.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "ATL by 15+",
         "held": 767.0,
-        "resting": 226.0,
+        "resting": 218.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "CIN by 1-6",
         "held": 962.0,
-        "resting": 32.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "CIN by 7-14",
         "held": 905.4,
-        "resting": 72.6,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "CIN by 15+",
         "held": 579.6,
-        "resting": 475.0,
+        "resting": 468.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T14:39:55Z"
+    "ts": "2026-11-08T14:41:56Z"
   },
   "posts": [
-    {
-      "id": "1794005555131-c10971",
-      "ts": "2026-11-06T22:52:35Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,013 resting. Next: Even-done check, Sun 8:01am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794006461807-49b885",
       "ts": "2026-11-06T23:07:41Z",
@@ -3543,18 +3533,49 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794148856305-983e78",
+      "ts": "2026-11-08T14:39:51Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 449: ATL by 1-6 x178 at 17c, ATL by 7-14 x126 at 15c, ATL by 7-14 x85 at 14c, +2 more. Worst line -$112.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 449.0,
+        "fills": [
+          {
+            "side": "ATL by 1-6",
+            "price": 0.17,
+            "qty": 178.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.15,
+            "qty": 126.0
+          },
+          {
+            "side": "ATL by 7-14",
+            "price": 0.14,
+            "qty": 85.0
+          },
+          {
+            "side": "CIN by 7-14",
+            "price": 0.19,
+            "qty": 47.0
+          },
+          {
+            "side": "ATL by 15+",
+            "price": 0.08,
+            "qty": 13.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794092096431-134e4d",
-      "ts": "2026-11-07T22:54:56Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): worst -191.47 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794093560902-f1f218",
       "ts": "2026-11-07T23:19:20Z",
@@ -4444,6 +4465,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 26.62 over banked margin 21.95",
+      "severity": "warn"
+    },
+    {
+      "id": "1794148877040-06bf55",
+      "ts": "2026-11-08T14:41:17Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+279 on CIN 7-14 @ 0.19 (maker)\n+238 on CIN 15+ @ 0.17 (maker)\n+44 on CIN 15+ @ 0.16 (maker)\n+183 on ATL 1-6 @ 0.17 (maker)\n+85 on ATL 7-14 @ 0.14 (maker)\n+13 on ATL 15+ @ 0.08 (maker)\n+127 on ATL 7-14 @ 0.15 (maker)\n+6 on ATL 7-14 @ 0.16 (maker)\nworst outcome now -65\nheld 903/943/767/962/905/580\nIf the game ends... you make\nATL 1-6: -51 (-1.0% of bankroll)\nATL 7-14: -91 (-1.8% of bankroll)\nATL 15+: +85 (+1.7% of bankroll)\nCIN 1-6: -110 (-2.2% of bankroll)\nCIN 7-14: -53 (-1.1% of bankroll)\nCIN 15+: +272 (+5.5% of bankroll)",
       "severity": "warn"
     }
   ]
