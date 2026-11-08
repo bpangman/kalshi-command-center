@@ -1,6 +1,6 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-08T21:16:26.066856Z",
+  "generated_at": "2026-11-08T21:17:46.422990Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,7 +22,7 @@
       },
       {
         "side": "MIN by 15+",
-        "resting": "160 @ 9-12c",
+        "resting": "132 @ 9-12c",
         "exposure": -62.45,
         "exposure_text": "-$62",
         "move": "Paid balancing (trickle)",
@@ -44,7 +44,7 @@
       },
       {
         "side": "MIN by 7-14",
-        "resting": "326 @ 12-16c",
+        "resting": "196 @ 12-16c",
         "exposure": 38.55,
         "exposure_text": "+$39",
         "move": "Paid balancing (trickle)",
@@ -66,7 +66,7 @@
       },
       {
         "side": "BUF by 1-6",
-        "resting": "270 @ 24-25c",
+        "resting": "102 @ 24-25c",
         "exposure": 53.55,
         "exposure_text": "+$54",
         "move": "Paid balancing (trickle)",
@@ -79,7 +79,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Mon 7:15pm CT. Sold 333, 313 resting. Worst line -$70 (goal -$150)."
+          "Pregame build, kickoff Mon 7:15pm CT. Sold 333, 195 resting. Worst line -$70 (goal -$150)."
         ]
       },
       {
@@ -133,10 +133,10 @@
       {
         "label": "BUF by 1-6",
         "held": 0.0,
-        "resting": 0.0,
+        "resting": 102.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.24
       },
       {
         "label": "BUF by 7-14",
@@ -149,38 +149,38 @@
       {
         "label": "BUF by 15+",
         "held": 69.0,
-        "resting": 62.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.17
+        "price": null
       },
       {
         "label": "MIN by 1-6",
         "held": 9.0,
-        "resting": 132.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": null
       },
       {
         "label": "MIN by 7-14",
         "held": 15.0,
-        "resting": 109.0,
+        "resting": 87.0,
         "target": null,
         "status": "even",
-        "price": 0.15
+        "price": 0.12
       },
       {
         "label": "MIN by 15+",
         "held": 116.0,
-        "resting": 8.0,
+        "resting": 4.0,
         "target": null,
         "status": "even",
-        "price": 0.1
+        "price": 0.09
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-08T21:15:33Z"
+    "ts": "2026-11-08T21:17:33Z"
   },
   "posts": [
     {
@@ -2755,6 +2755,20 @@
         "side": "BUF by 1-6",
         "size": 101.0
       }
+    },
+    {
+      "id": "1794172653891-36b485",
+      "ts": "2026-11-08T21:16:30Z",
+      "book": "W10-BUFMIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 826 (re-posted): BUF by 1-6 x169 at 25c, MIN by 1-6 x132 at 20c, +10 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 826.0,
+        "rows": 12
+      }
     }
   ],
   "audits": [
@@ -2900,6 +2914,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Cash line: trimmed 290 contracts off the back of BUF1TO6 so Kalshi would not pull the whole set (usable cash $511). No row cancelled; the front rows kept their place in line.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794172586357-f7fb4e",
+      "ts": "2026-11-08T21:16:26Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Cash line: trimmed 326 contracts off the back of BUF1TO6, MIN15PLUS, MIN7TO14 so Kalshi would not pull the whole set (usable cash $90). No row cancelled; the front rows kept their place in line.",
       "severity": "warn"
     }
   ]
