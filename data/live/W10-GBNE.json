@@ -1,10 +1,10 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-08T23:05:24.232285Z",
+  "generated_at": "2026-11-08T23:06:44.011872Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$166.",
+    "headline": "In game (Ingame). Worst line -$162.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,103, 340 resting. Worst line -$166. Game 49% done."
+          "In game (Ingame). Sold 5,153, 1,135 resting. Worst line -$162. Game 49% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "GB by 1-6",
         "held": 876.3,
-        "resting": 0.0,
+        "resting": 50.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,14 +54,14 @@
       {
         "label": "GB by 7-14",
         "held": 776.6,
-        "resting": 141.0,
+        "resting": 215.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "GB by 15+",
-        "held": 898.8,
+        "held": 948.8,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -70,7 +70,7 @@
       {
         "label": "NE by 1-6",
         "held": 943.8,
-        "resting": 0.0,
+        "resting": 50.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "NE by 7-14",
         "held": 631.5,
-        "resting": 0.0,
+        "resting": 387.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "NE by 15+",
         "held": 563.2,
-        "resting": 199.0,
+        "resting": 433.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-08T23:05:10Z"
+    "ts": "2026-11-08T23:06:10Z"
   },
   "posts": [
-    {
-      "id": "1794043273506-119571",
-      "ts": "2026-11-07T09:21:13Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNE 1-6: +38 (+0.8% of bankroll)\nNE 7-14: -6 (-0.1% of bankroll)\nNE 15+: +16 (+0.3% of bankroll)\nGB 1-6: +38 (+0.8% of bankroll)\nGB 7-14: -82 (-1.6% of bankroll)\nGB 15+: -71 (-1.4% of bankroll)\nCollected $38 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nNE 1-6: 0 / 646\nNE 7-14: 44 / 842\nNE 15+: 22 / 772\nGB 1-6: 0 / 724\nGB 7-14: 120 / 330\nGB 15+: 109 / 699\nPosted book 1.14 | Sold avg 1.062 | Worst now -73 | Cash free $855\nAnchor age 0s | Last fill 13084s ago",
-      "severity": "info"
-    },
     {
       "id": "1794043916112-e816d3",
       "ts": "2026-11-07T09:31:56Z",
@@ -3855,6 +3846,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794179190801-876156",
+      "ts": "2026-11-08T23:05:17Z",
+      "book": "W10-GBNE",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 75: GB by 15+ x75 at 19c. Worst line -$162.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 75.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.19,
+            "qty": 75.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4648,6 +4659,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+73 on GB 1-6 @ 0.20 (maker)\n+56 on NE 1-6 @ 0.19 (maker)\n+8 on GB 1-6 @ 0.21 (maker)\n+0 on GB 7-14 @ 0.29 (maker)\n+20 on GB 1-6 @ 0.24 (maker)\n+56 on NE 1-6 @ 0.21 (maker)\nworst outcome now -99\nheld 894/632/563/837/777/851\nIf the game ends... you make\nNE 1-6: -145 (-2.9% of bankroll)\nNE 7-14: +117 (+2.3% of bankroll)\nNE 15+: +185 (+3.7% of bankroll)\nGB 1-6: -88 (-1.8% of bankroll)\nGB 7-14: -28 (-0.6% of bankroll)\nGB 15+: -103 (-2.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794179202801-f8f245",
+      "ts": "2026-11-08T23:06:42Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (floor -42.1% of slice, no cushion to spend)\nIf the game ends... you make\nNE 1-6: -157 (-3.1% of bankroll)\nNE 7-14: +155 (+3.1% of bankroll)\nNE 15+: +224 (+4.5% of bankroll)\nGB 1-6: -89 (-1.8% of bankroll)\nGB 7-14: +10 (+0.2% of bankroll)\nGB 15+: -162 (-3.2% of bankroll)",
       "severity": "warn"
     }
   ]
