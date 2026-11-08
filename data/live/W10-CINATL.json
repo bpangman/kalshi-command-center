@@ -1,6 +1,6 @@
 {
   "key": "W10-CINATL",
-  "generated_at": "2026-11-08T15:50:43.585862Z",
+  "generated_at": "2026-11-08T15:52:10.030074Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,595, 921 resting. Worst line -$118. Game 47% done."
+          "In game (Ingame). Sold 7,597, 657 resting. Worst line -$118. Game 48% done."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "ATL by 1-6",
-        "held": 1359.5,
-        "resting": 29.8,
+        "held": 1360.5,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "ATL by 7-14",
         "held": 1112.2,
-        "resting": 320.0,
+        "resting": 253.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,15 +62,15 @@
       {
         "label": "ATL by 15+",
         "held": 1137.0,
-        "resting": 292.0,
+        "resting": 217.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "CIN by 1-6",
-        "held": 1216.2,
-        "resting": 256.0,
+        "held": 1216.4,
+        "resting": 186.8,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "CIN by 7-14",
         "held": 1368.9,
-        "resting": 3.2,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "CIN by 15+",
         "held": 1401.8,
-        "resting": 19.9,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W10-CINATL",
-    "ts": "2026-11-08T15:50:20Z"
+    "ts": "2026-11-08T15:51:20Z"
   },
   "posts": [
-    {
-      "id": "1794017453069-d9823e",
-      "ts": "2026-11-07T02:10:53Z",
-      "book": "W10-CINATL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nATL 1-6: +97 (+2.0% of bankroll)\nATL 7-14: +89 (+1.8% of bankroll)\nATL 15+: -106 (-2.1% of bankroll)\nCIN 1-6: +97 (+2.0% of bankroll)\nCIN 7-14: -267 (-5.4% of bankroll)\nCIN 15+: +97 (+2.0% of bankroll)\nCollected $97 premium ($0 fees) | Paper margin over fair $6 (not realized until settlement)\nheld / resting\nATL 1-6: 0 / 802\nATL 7-14: 8 / 676\nATL 15+: 203 / 797\nCIN 1-6: 0 / 802\nCIN 7-14: 364 / 604\nCIN 15+: 0 / 950\nPosted book 1.21 | Sold avg 1.142 | Worst now +34 | Cash free $680\nAnchor age 0s | Last fill 6536s ago",
-      "severity": "info"
-    },
     {
       "id": "1794018345389-ee27fc",
       "ts": "2026-11-07T02:25:45Z",
@@ -3896,18 +3887,44 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794153080812-92e8d8",
+      "ts": "2026-11-08T15:51:05Z",
+      "book": "W10-CINATL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 46: CIN by 7-14 x30 at 32c, CIN by 15+ x13 at 36c, ATL by 1-6 x3 at 8c, +1 more. Worst line -$118.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 46.0,
+        "fills": [
+          {
+            "side": "CIN by 7-14",
+            "price": 0.32,
+            "qty": 30.0
+          },
+          {
+            "side": "CIN by 15+",
+            "price": 0.36,
+            "qty": 13.0
+          },
+          {
+            "side": "ATL by 1-6",
+            "price": 0.08,
+            "qty": 3.0
+          },
+          {
+            "side": "CIN by 1-6",
+            "price": 0.22,
+            "qty": 0.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794100922966-a1212f",
-      "ts": "2026-11-08T01:22:02Z",
-      "book": "W10-CINATL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-CINATL): held worst -570.55 (backstop -150) or lagging gap 962 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794101288988-82ded7",
       "ts": "2026-11-08T01:28:08Z",
@@ -4797,6 +4814,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- W10-CINATL - Cincinnati by 15 or more has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W10-CINATL - Cincinnati by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794153044017-ca12f9",
+      "ts": "2026-11-08T15:50:44Z",
+      "book": "W10-CINATL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+124 on ATL 1-6 @ 0.08 (maker)\n+30 on CIN 7-14 @ 0.32 (maker)\n+13 on CIN 15+ @ 0.36 (maker)\n+0 on CIN 1-6 @ 0.22 (maker)\nworst outcome now -55\nheld 1360/1112/1137/1216/1369/1402\nIf the game ends... you make\nATL 1-6: -76 (-1.5% of bankroll)\nATL 7-14: +172 (+3.5% of bankroll)\nATL 15+: +147 (+3.0% of bankroll)\nCIN 1-6: +67 (+1.4% of bankroll)\nCIN 7-14: -85 (-1.7% of bankroll)\nCIN 15+: -118 (-2.4% of bankroll)",
       "severity": "warn"
     }
   ]
