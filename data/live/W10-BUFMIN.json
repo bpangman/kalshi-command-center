@@ -1,6 +1,6 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-09T23:26:43.488286Z",
+  "generated_at": "2026-11-09T23:28:00.512638Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -181,28 +181,9 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-09T23:26:04Z"
+    "ts": "2026-11-09T23:27:04Z"
   },
   "posts": [
-    {
-      "id": "1794157926588-b632e8",
-      "ts": "2026-11-08T17:12:06Z",
-      "book": "W10-BUFMIN",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nMIN 1-6: +45 (+1.0% of bankroll)\nMIN 7-14: +39 (+0.9% of bankroll)\nMIN 15+: -62 (-1.4% of bankroll)\nBUF 1-6: +54 (+1.2% of bankroll)\nBUF 7-14: -70 (-1.6% of bankroll)\nBUF 15+: -15 (-0.3% of bankroll)\nCollected $54 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nMIN 1-6: 9 / 991\nMIN 7-14: 15 / 985\nMIN 15+: 116 / 784\nBUF 1-6: 0 / 1000\nBUF 7-14: 124 / 876\nBUF 15+: 69 / 905\nPosted book 1.09 | Sold avg 1.060 | Worst now +77 | Cash free $1569\nAnchor age 0s | Last fill 26553s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794158210337-183155",
-      "ts": "2026-11-08T17:16:50Z",
-      "book": "W10-BUFMIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 5,541 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794159115294-74bef8",
       "ts": "2026-11-08T17:31:55Z",
@@ -4090,18 +4071,28 @@
       "source": "bot",
       "text": "If the game ends... you make\nMIN 1-6: -170 (-3.8% of bankroll)\nMIN 7-14: +327 (+7.2% of bankroll)\nMIN 15+: +234 (+5.2% of bankroll)\nBUF 1-6: +62 (+1.4% of bankroll)\nBUF 7-14: +19 (+0.4% of bankroll)\nBUF 15+: -195 (-4.3% of bankroll)\nCollected $585 premium ($0 fees) | Paper margin over fair $21 (not realized until settlement)\nEvent: MIN 7-14: MIN 0-0, Q0 0:00; BUF 7-14: BUF 0-0, Q0 0:00\nheld / resting\nMIN 1-6: 755 / 50\nMIN 7-14: 258 / 25\nMIN 15+: 351 / 388\nBUF 1-6: 523 / 46\nBUF 7-14: 566 / 0\nBUF 15+: 780 / 0\nPosted book 1.06 | Sold avg 1.020 | Worst now -171 | Cash free $1569\nAnchor age 0s | Last fill 380s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794266824556-b9107e",
+      "ts": "2026-11-09T23:26:51Z",
+      "book": "W10-BUFMIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1794266847272-cccf3f",
+      "ts": "2026-11-09T23:27:27Z",
+      "book": "W10-BUFMIN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W10-BUFMIN: 0 orders posted in 10 min while the market traded 3925 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1794066436826-9fda69",
-      "ts": "2026-11-07T15:47:16Z",
-      "book": "W10-BUFMIN",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+83 on BUF 7-14 @ 0.22 (maker)\nworst outcome now +53\nheld 0/0/0/0/124/50\nIf the game ends... you make\nMIN 1-6: +36 (+0.8% of bankroll)\nMIN 7-14: +36 (+0.8% of bankroll)\nMIN 15+: +36 (+0.8% of bankroll)\nBUF 1-6: +36 (+0.8% of bankroll)\nBUF 7-14: -88 (-1.9% of bankroll)\nBUF 15+: -14 (-0.3% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1794094128091-eb30ec",
       "ts": "2026-11-07T23:28:48Z",
@@ -4991,6 +4982,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-BUFMIN): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=3197. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794266812055-c46ee5",
+      "ts": "2026-11-09T23:26:52Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
