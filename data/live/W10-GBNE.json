@@ -1,6 +1,6 @@
 {
   "key": "W10-GBNE",
-  "generated_at": "2026-11-09T00:02:41.269635Z",
+  "generated_at": "2026-11-09T00:04:03.361953Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,263, 0 resting. Worst line -$136. Game 73% done."
+          "In game (Ingame). Sold 5,263, 692 resting. Worst line -$136. Game 74% done."
         ]
       },
       {
@@ -78,7 +78,7 @@
       {
         "label": "NE by 7-14",
         "held": 658.4,
-        "resting": 0.0,
+        "resting": 299.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "NE by 15+",
         "held": 563.2,
-        "resting": 0.0,
+        "resting": 393.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W10-GBNE",
-    "ts": "2026-11-09T00:02:30Z"
+    "ts": "2026-11-09T00:03:30Z"
   },
   "posts": [
-    {
-      "id": "1794054151230-b07db7",
-      "ts": "2026-11-07T12:22:31Z",
-      "book": "W10-GBNE",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNE 1-6: +38 (+0.8% of bankroll)\nNE 7-14: -6 (-0.1% of bankroll)\nNE 15+: +16 (+0.3% of bankroll)\nGB 1-6: +38 (+0.8% of bankroll)\nGB 7-14: -82 (-1.6% of bankroll)\nGB 15+: -71 (-1.4% of bankroll)\nCollected $38 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nNE 1-6: 0 / 646\nNE 7-14: 44 / 842\nNE 15+: 22 / 772\nGB 1-6: 0 / 724\nGB 7-14: 120 / 330\nGB 15+: 109 / 699\nPosted book 1.14 | Sold avg 1.062 | Worst now -73 | Cash free $855\nAnchor age 0s | Last fill 23961s ago",
-      "severity": "info"
-    },
     {
       "id": "1794054795136-8b37cc",
       "ts": "2026-11-07T12:33:15Z",
@@ -3900,6 +3891,15 @@
       "text": "Bot note: endgame: active (favorite GB 15+ at 0.76); likely ['GB 15+', 'GB 7-14']; endgame: KXNFLWINMARGIN-26NOV08GBNE-G",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794182636525-5fc9a0",
+      "ts": "2026-11-09T00:03:56Z",
+      "book": "W10-GBNE",
+      "kind": "text",
+      "source": "bot",
+      "text": "Floor mode: guaranteed minimum is -136; from here only trades that raise it",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4792,6 +4792,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1794182587028-3d486e",
+      "ts": "2026-11-09T00:03:07Z",
+      "book": "W10-GBNE",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W10-GBNE): inactive, cause=room_zero, remedy=raise_slack, posts_last_10m=16, market_volume_last_30m=4465. Check the command center.",
       "severity": "warn"
     }
   ]
