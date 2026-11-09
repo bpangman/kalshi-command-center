@@ -1,6 +1,6 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-09T21:17:50.512439Z",
+  "generated_at": "2026-11-09T21:19:06.960022Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-09T21:17:11Z"
+    "ts": "2026-11-09T21:18:11Z"
   },
   "posts": [
     {
@@ -853,27 +853,19 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nDavis Bryant: -423\nManuel Elvira: -423\nAngel Hidalgo: -423\nKota Kaneko: -423\nYuto Katsuragawa: -423\nShaun Norris: -423\nFreddy Schott: -423\nJeff Winther: -423\nall others (42) >= -62\nCollected $77 premium ($0 fees) | Paper margin over fair $12 (not realized until settlement)\nCore posted book 0.40 | Worst now -423 | Cash free $5660\nAnchor age 456s (source: bovada_golf)",
       "severity": "info"
+    },
+    {
+      "id": "1794259132177-d07671",
+      "ts": "2026-11-09T21:18:50Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1794233553976-832b41",
-      "ts": "2026-11-09T14:12:33Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- DPWT-DPWTC26 - Grant Forrest has had no resting orders for at least 71 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1794233811764-43a867",
-      "ts": "2026-11-09T14:16:51Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst-all-resting-filled -317.84 vs hard cap -216.00 (2.0x L_max 108.00). Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794234000046-c17a08",
       "ts": "2026-11-09T14:20:00Z",
@@ -1755,6 +1747,24 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst-all-resting-filled -317.84 vs hard cap -216.00 (2.0x L_max 108.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794259121751-a28414",
+      "ts": "2026-11-09T21:18:41Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -317.84 past allowed limit -108.00",
+      "severity": "warn"
+    },
+    {
+      "id": "1794259130804-40c81c",
+      "ts": "2026-11-09T21:18:50Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
