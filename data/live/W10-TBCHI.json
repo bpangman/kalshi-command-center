@@ -1,6 +1,6 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-09T00:50:03.619284Z",
+  "generated_at": "2026-11-09T00:51:16.453107Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -133.05,
         "exposure_text": "-$133",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:50pm CT",
+        "when": "no move planned until paid balancing starts at 7:00pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-08T23:16:31Z"
@@ -102,7 +102,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 7:00pm CT: worst line to -$150 by 7:15pm CT, up to $100.",
-          "At 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -114,11 +113,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-09T00:50:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-09T01:00:00Z",
         "label": "Paid balancing starts",
@@ -181,38 +175,9 @@
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-09T00:49:46Z"
+    "ts": "2026-11-09T00:50:47Z"
   },
   "posts": [
-    {
-      "id": "1794045165596-656e1f",
-      "ts": "2026-11-07T09:52:45Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,910 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794046071410-8fcc2a",
-      "ts": "2026-11-07T10:07:51Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,910 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794046218364-183f57",
-      "ts": "2026-11-07T10:10:18Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nCHI 1-6: +56 (+1.1% of bankroll)\nCHI 7-14: -47 (-0.9% of bankroll)\nCHI 15+: -43 (-0.8% of bankroll)\nTB 1-6: +56 (+1.1% of bankroll)\nTB 7-14: +3 (+0.1% of bankroll)\nTB 15+: +56 (+1.1% of bankroll)\nCollected $56 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nheld / resting\nCHI 1-6: 0 / 401\nCHI 7-14: 103 / 897\nCHI 15+: 99 / 865\nTB 1-6: 0 / 1000\nTB 7-14: 53 / 847\nTB 15+: 0 / 900\nPosted book 1.11 | Sold avg 1.092 | Worst now -62 | Cash free $1784\nAnchor age 0s | Last fill 13106s ago",
-      "severity": "info"
-    },
     {
       "id": "1794046978081-b440e5",
       "ts": "2026-11-07T10:22:58Z",
@@ -3642,6 +3607,35 @@
       "text": "Bot note: COVERAGE-CAP clipped TB1TO6 230 -> 205@0.17 (REPLENISH batch #1): held 760, cap 1126 [tighten 1.34x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794185406740-b7143d",
+      "ts": "2026-11-09T00:50:05Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line -$133 beats the -$150 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1794185447051-50007a",
+      "ts": "2026-11-09T00:50:47Z",
+      "book": "W10-TBCHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$133, goal -$150. Next: Paid balancing starts, 7:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794185469809-40febe",
+      "ts": "2026-11-09T00:51:09Z",
+      "book": "W10-TBCHI",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nCHI 1-6: +96 (+1.8% of bankroll)\nCHI 7-14: -133 (-2.5% of bankroll)\nCHI 15+: -64 (-1.2% of bankroll)\nTB 1-6: +28 (+0.5% of bankroll)\nTB 7-14: +144 (+2.7% of bankroll)\nTB 15+: +279 (+5.3% of bankroll)\nCollected $788 premium ($0 fees) | Paper margin over fair $31 (not realized until settlement)\nEvent: CHI 7-14: CHI 0-0, Q0 0:00; TB 7-14: TB 0-0, Q0 0:00\nheld / resting\nCHI 1-6: 692 / 229\nCHI 7-14: 921 / 0\nCHI 15+: 852 / 1\nTB 1-6: 760 / 160\nTB 7-14: 644 / 277\nTB 15+: 509 / 412\nPosted book 1.06 | Sold avg 0.997 | Worst now -4 | Cash free $1784\nAnchor age 44s | Last fill 718s ago",
+      "severity": "info"
     }
   ],
   "audits": [
