@@ -1,6 +1,6 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-09T00:28:41.288897Z",
+  "generated_at": "2026-11-09T00:30:03.470072Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -36,33 +36,39 @@
         "resting": "436 @ 14-20c",
         "exposure": 119.44,
         "exposure_text": "+$119",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-09T01:00:00Z",
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "if no fill by 6:37pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-09T00:37:03Z",
         "stuck": false,
-        "last_fill": "2026-11-09T00:27:03Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-09T00:27:03Z",
+        "lag_note": "Steps to 13c if no fill by 6:37pm CT."
       },
       {
         "side": "CHI by 1-6",
-        "resting": "86 @ 24-25c",
+        "resting": "368 @ 21-25c",
         "exposure": 218.36,
         "exposure_text": "+$218",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-09T01:00:00Z",
         "stuck": false,
-        "last_fill": "2026-11-08T22:57:05Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-08T22:57:05Z",
+        "lag_note": "Price 21c matches the crowd."
       },
       {
         "side": "TB by 7-14",
-        "resting": "369 @ 10c",
+        "resting": "552 @ 8-10c",
         "exposure": 234.99,
         "exposure_text": "+$235",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-09T01:00:00Z",
         "stuck": false,
-        "last_fill": "2026-11-08T23:32:01Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-08T23:32:01Z",
+        "lag_note": "Price 8c matches the crowd."
       },
       {
         "side": "TB by 15+",
@@ -71,7 +77,7 @@
         "exposure_text": "+$353",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-09T00:28:39Z",
+        "at": "2026-11-09T00:29:39Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-09T00:02:05Z",
@@ -82,14 +88,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 3,631, 1,397 resting. Worst line -$225 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 3,631, 1,862 resting. Worst line -$225 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): TB by 15+.",
+          "Lagging (150+ behind the leader): CHI by 1-6, TB by 1-6, TB by 7-14, TB by 15+.",
           "TB by 15+: 578 behind. Steps to 5c at the next check.",
+          "TB by 7-14: 460 behind. Price 8c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -138,10 +145,10 @@
       {
         "label": "CHI by 1-6",
         "held": 477.6,
-        "resting": 86.4,
+        "resting": 368.4,
         "target": null,
-        "status": "even",
-        "price": 0.24
+        "status": "lagging",
+        "price": 0.21
       },
       {
         "label": "CHI by 7-14",
@@ -164,16 +171,16 @@
         "held": 576.5,
         "resting": 436.4,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
         "label": "TB by 7-14",
         "held": 461.0,
-        "resting": 369.0,
+        "resting": 552.0,
         "target": null,
-        "status": "even",
-        "price": 0.1
+        "status": "lagging",
+        "price": 0.08
       },
       {
         "label": "TB by 15+",
@@ -185,39 +192,9 @@
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-09T00:28:39Z"
+    "ts": "2026-11-09T00:29:39Z"
   },
   "posts": [
-    {
-      "id": "1794032746070-b70dc5",
-      "ts": "2026-11-07T06:25:46Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,895 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794033248915-30e10d",
-      "ts": "2026-11-07T06:31:56Z",
-      "book": "W10-TBCHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 53: TB by 7-14 x53 at 8c. Worst line -$47.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 53.0,
-        "fills": [
-          {
-            "side": "TB by 7-14",
-            "price": 0.08,
-            "qty": 53.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794034033714-99c014",
       "ts": "2026-11-07T06:47:13Z",
@@ -3595,6 +3572,36 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794184159640-fed1ab",
+      "ts": "2026-11-09T00:27:15Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: TB by 1-6 x1 at 14c. Worst line -$225.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "TB by 1-6",
+            "price": 0.14,
+            "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794184179725-c5ea74",
+      "ts": "2026-11-09T00:29:39Z",
+      "book": "W10-TBCHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$225, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
