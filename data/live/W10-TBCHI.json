@@ -1,136 +1,55 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-09T01:17:22.862710Z",
+  "generated_at": "2026-11-09T01:18:33.834524Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$49.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$49.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "CHI by 15+",
-        "resting": "none",
-        "exposure": -49.3,
-        "exposure_text": "-$49",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-09T01:00:08Z"
-      },
-      {
-        "side": "CHI by 7-14",
-        "resting": "none",
-        "exposure": -49.3,
-        "exposure_text": "-$49",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-08T23:16:31Z"
-      },
-      {
-        "side": "TB by 15+",
-        "resting": "9 @ 6-8c",
-        "exposure": -49.3,
-        "exposure_text": "-$49",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-09T01:00:07Z"
-      },
-      {
-        "side": "TB by 7-14",
-        "resting": "1 @ 10c",
-        "exposure": -49.3,
-        "exposure_text": "-$49",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-09T01:00:08Z"
-      },
-      {
-        "side": "CHI by 1-6",
-        "resting": "4 @ 22-25c",
-        "exposure": -48.93,
-        "exposure_text": "-$49",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-09T01:00:08Z"
-      },
-      {
-        "side": "TB by 1-6",
-        "resting": "160 @ 14-20c",
-        "exposure": 111.31,
-        "exposure_text": "+$111",
-        "move": "Hold price at 14c",
-        "when": "crowd pays 13.9c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-09T00:39:12Z",
-        "lag_note": "Price 14c matches the crowd."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 5,365, 174 resting. Worst line -$49 (goal -$150)."
+          "In game (Ingame). Sold 5,365, 291 resting. Worst line -$49. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): TB by 1-6.",
-          "TB by 1-6: 161 behind. Price 14c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$49 is better than -$150.",
-          "Batches used: 1 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$49; spent $30 of $100.",
-          "Kickoff 7:20pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-09T01:20:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "CHI by 1-6",
         "held": 920.6,
-        "resting": 4.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       },
       {
         "label": "CHI by 7-14",
@@ -151,52 +70,40 @@
       {
         "label": "TB by 1-6",
         "held": 760.4,
-        "resting": 160.0,
+        "resting": 291.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.14
+        "status": "even",
+        "price": null
       },
       {
         "label": "TB by 7-14",
         "held": 921.0,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.1
+        "price": null
       },
       {
         "label": "TB by 15+",
         "held": 921.0,
-        "resting": 9.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.06
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-09T01:16:56Z"
+    "ts": "2026-11-09T01:17:56Z"
   },
   "posts": [
-    {
-      "id": "1794063296261-2a0eba",
-      "ts": "2026-11-07T14:54:56Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,910 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794063799632-42bff8",
-      "ts": "2026-11-07T15:03:13Z",
-      "book": "W10-TBCHI",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
     {
       "id": "1794064368380-5cd2fd",
       "ts": "2026-11-07T15:12:48Z",
@@ -3677,6 +3584,26 @@
       "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -49.30, L_max 300.00)",
       "severity": "info",
       "title": "Phase change"
+    },
+    {
+      "id": "1794187076828-fd1fbe",
+      "ts": "2026-11-09T01:17:56Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794187076828-5c4342",
+      "ts": "2026-11-09T01:17:56Z",
+      "book": "W10-TBCHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$49.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
