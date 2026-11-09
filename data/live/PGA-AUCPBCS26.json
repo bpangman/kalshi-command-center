@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-09T22:34:19.949677Z",
+  "generated_at": "2026-11-09T22:35:36.667222Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$928, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 104,
+    "checks_every_s": 63,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 53,720, 56,223 resting. Worst line -$928. Bot is slow (checks every 2m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 53,720, 56,223 resting. Worst line -$928. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-09T22:33:42Z"
+    "ts": "2026-11-09T22:34:42Z"
   },
   "posts": [
     {
@@ -2090,6 +2090,26 @@
         "contracts": 60.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1794263702396-0fdee6",
+      "ts": "2026-11-09T22:33:00Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 60: driver BHAR x60 at 2.3c. Worst line -$928.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 60.0,
+        "fills": [
+          {
+            "side": "driver BHAR",
+            "price": 0.023,
+            "qty": 60.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -2685,6 +2705,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH - worst-all-resting -371.85 past allowed limit -306.00",
+      "severity": "warn"
+    },
+    {
+      "id": "1794263731003-d022d3",
+      "ts": "2026-11-09T22:35:31Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- PGA-AUCPBCS26 - Jackson Koivun has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Nick Dunlap has had no resting orders for at least 315 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
