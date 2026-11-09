@@ -1,6 +1,6 @@
 {
   "key": "W10-TBCHI",
-  "generated_at": "2026-11-09T00:51:16.453107Z",
+  "generated_at": "2026-11-09T00:52:27.204993Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -12,7 +12,7 @@
       {
         "side": "CHI by 7-14",
         "resting": "none",
-        "exposure": -133.05,
+        "exposure": -132.78,
         "exposure_text": "-$133",
         "move": "Holding",
         "when": "no move planned until paid balancing starts at 7:00pm CT",
@@ -22,19 +22,19 @@
       },
       {
         "side": "CHI by 15+",
-        "resting": "1 @ 27c",
-        "exposure": -64.05,
-        "exposure_text": "-$64",
+        "resting": "none",
+        "exposure": -64.78,
+        "exposure_text": "-$65",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-09T01:00:00Z",
         "stuck": false,
-        "last_fill": "2026-11-08T23:47:01Z"
+        "last_fill": "2026-11-09T00:51:12Z"
       },
       {
         "side": "TB by 1-6",
         "resting": "160 @ 15-20c",
-        "exposure": 27.56,
+        "exposure": 27.83,
         "exposure_text": "+$28",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
@@ -45,8 +45,8 @@
       {
         "side": "CHI by 1-6",
         "resting": "229 @ 22-25c",
-        "exposure": 96.32,
-        "exposure_text": "+$96",
+        "exposure": 96.59,
+        "exposure_text": "+$97",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-09T01:00:00Z",
@@ -56,37 +56,44 @@
       {
         "side": "TB by 7-14",
         "resting": "277 @ 10c",
-        "exposure": 143.95,
+        "exposure": 144.22,
         "exposure_text": "+$144",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-09T01:00:00Z",
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-09T00:51:47Z",
         "stuck": false,
-        "last_fill": "2026-11-09T00:38:55Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-09T00:38:55Z",
+        "lag_note": "Steps to 9c at the next check."
       },
       {
         "side": "TB by 15+",
         "resting": "412 @ 6-8c",
-        "exposure": 278.95,
+        "exposure": 279.22,
         "exposure_text": "+$279",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-09T01:00:00Z",
+        "move": "Step price down 1c (6c to 5c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-09T00:51:47Z",
         "stuck": false,
-        "last_fill": "2026-11-09T00:29:43Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-09T00:29:43Z",
+        "lag_note": "Steps to 5c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 4,378, 1,079 resting. Worst line -$133 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 4,379, 1,078 resting. Worst line -$133 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): TB by 7-14, TB by 15+.",
+          "TB by 15+: 412 behind. Steps to 5c at the next check.",
+          "TB by 7-14: 277 behind. Steps to 9c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -143,11 +150,11 @@
       },
       {
         "label": "CHI by 15+",
-        "held": 852.0,
-        "resting": 1.0,
+        "held": 853.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.27
+        "price": null
       },
       {
         "label": "TB by 1-6",
@@ -162,7 +169,7 @@
         "held": 644.0,
         "resting": 277.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       },
       {
@@ -170,34 +177,14 @@
         "held": 509.0,
         "resting": 412.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.06
       }
     ],
     "book": "W10-TBCHI",
-    "ts": "2026-11-09T00:50:47Z"
+    "ts": "2026-11-09T00:51:47Z"
   },
   "posts": [
-    {
-      "id": "1794046978081-b440e5",
-      "ts": "2026-11-07T10:22:58Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,910 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794047884463-962903",
-      "ts": "2026-11-07T10:38:04Z",
-      "book": "W10-TBCHI",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,910 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794048791052-d3add8",
       "ts": "2026-11-07T10:53:11Z",
@@ -3636,6 +3623,26 @@
       "source": "bot",
       "text": "If the game ends... you make\nCHI 1-6: +96 (+1.8% of bankroll)\nCHI 7-14: -133 (-2.5% of bankroll)\nCHI 15+: -64 (-1.2% of bankroll)\nTB 1-6: +28 (+0.5% of bankroll)\nTB 7-14: +144 (+2.7% of bankroll)\nTB 15+: +279 (+5.3% of bankroll)\nCollected $788 premium ($0 fees) | Paper margin over fair $31 (not realized until settlement)\nEvent: CHI 7-14: CHI 0-0, Q0 0:00; TB 7-14: TB 0-0, Q0 0:00\nheld / resting\nCHI 1-6: 692 / 229\nCHI 7-14: 921 / 0\nCHI 15+: 852 / 1\nTB 1-6: 760 / 160\nTB 7-14: 644 / 277\nTB 15+: 509 / 412\nPosted book 1.06 | Sold avg 0.997 | Worst now -4 | Cash free $1784\nAnchor age 44s | Last fill 718s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794185507356-33511c",
+      "ts": "2026-11-09T00:51:31Z",
+      "book": "W10-TBCHI",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: CHI by 15+ at 27c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794185507360-d30ce5",
+      "ts": "2026-11-09T00:51:47Z",
+      "book": "W10-TBCHI",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$133, goal -$150. Next: Paid balancing starts, 7:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
