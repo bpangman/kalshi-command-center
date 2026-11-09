@@ -1,10 +1,10 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-09T16:34:13.225539Z",
+  "generated_at": "2026-11-09T16:35:29.986691Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$235, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$225, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "BUF by 1-6",
         "resting": "none",
-        "exposure": -234.54,
-        "exposure_text": "-$235",
+        "exposure": -225.05,
+        "exposure_text": "-$225",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -22,20 +22,20 @@
       },
       {
         "side": "BUF by 7-14",
-        "resting": "335 @ 23-24c",
-        "exposure": -0.13,
-        "exposure_text": "$0",
+        "resting": "294 @ 23-24c",
+        "exposure": -31.89,
+        "exposure_text": "-$32",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-09T15:22:34Z"
+        "last_fill": "2026-11-09T16:33:23Z"
       },
       {
         "side": "BUF by 15+",
         "resting": "320 @ 19-21c",
-        "exposure": 23.87,
-        "exposure_text": "+$24",
+        "exposure": 33.36,
+        "exposure_text": "+$33",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "MIN by 15+",
         "resting": "701 @ 6-12c",
-        "exposure": 27.69,
-        "exposure_text": "+$28",
+        "exposure": 37.18,
+        "exposure_text": "+$37",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
@@ -56,8 +56,8 @@
       {
         "side": "MIN by 7-14",
         "resting": "133 @ 15-16c",
-        "exposure": 149.87,
-        "exposure_text": "+$150",
+        "exposure": 159.36,
+        "exposure_text": "+$159",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
@@ -67,8 +67,8 @@
       {
         "side": "MIN by 1-6",
         "resting": "373 @ 20-21c",
-        "exposure": 220.87,
-        "exposure_text": "+$221",
+        "exposure": 230.36,
+        "exposure_text": "+$230",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 1,312, 1,642 resting. Worst line -$235 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 1,353, 1,601 resting. Worst line -$225 (goal -$150)."
         ]
       },
       {
@@ -93,7 +93,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$235).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$225).",
           "Batches used: 14 (max 3 per side)."
         ]
       },
@@ -141,8 +141,8 @@
       },
       {
         "label": "BUF by 7-14",
-        "held": 250.0,
-        "resting": 335.0,
+        "held": 291.2,
+        "resting": 293.8,
         "target": null,
         "status": "even",
         "price": 0.23
@@ -181,7 +181,7 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-09T16:33:15Z"
+    "ts": "2026-11-09T16:35:16Z"
   },
   "posts": [
     {
@@ -4317,6 +4317,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-BUFMIN): 2 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794242090370-1bae63",
+      "ts": "2026-11-09T16:34:50Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+41 on BUF 7-14 @ 0.23 (maker)\nworst outcome now -324\nheld 29/100/222/484/291/226\nIf the game ends... you make\nMIN 1-6: +230 (+5.1% of bankroll)\nMIN 7-14: +159 (+3.5% of bankroll)\nMIN 15+: +37 (+0.8% of bankroll)\nBUF 1-6: -225 (-5.0% of bankroll)\nBUF 7-14: -32 (-0.7% of bankroll)\nBUF 15+: +33 (+0.7% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
