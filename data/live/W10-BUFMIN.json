@@ -1,10 +1,10 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-10T00:23:41.093235Z",
+  "generated_at": "2026-11-10T00:24:58.974098Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$169, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$133, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "BUF by 15+",
         "resting": "none",
-        "exposure": -168.94,
-        "exposure_text": "-$169",
+        "exposure": -132.86,
+        "exposure_text": "-$133",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "MIN by 1-6",
         "resting": "25 @ 19c",
-        "exposure": -168.94,
-        "exposure_text": "-$169",
+        "exposure": -132.86,
+        "exposure_text": "-$133",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -32,10 +32,21 @@
         "last_fill": "2026-11-09T23:44:36Z"
       },
       {
+        "side": "BUF by 7-14",
+        "resting": "50 @ 23-24c",
+        "exposure": -82.86,
+        "exposure_text": "-$83",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-11-10T00:55:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-10T00:23:34Z"
+      },
+      {
         "side": "MIN by 15+",
         "resting": "35 @ 8c",
-        "exposure": -102.94,
-        "exposure_text": "-$103",
+        "exposure": -66.86,
+        "exposure_text": "-$67",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
@@ -43,21 +54,10 @@
         "last_fill": "2026-11-09T23:54:41Z"
       },
       {
-        "side": "BUF by 7-14",
-        "resting": "214 @ 22-24c",
-        "exposure": 45.06,
-        "exposure_text": "+$45",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-10T00:55:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-09T17:14:03Z"
-      },
-      {
         "side": "BUF by 1-6",
         "resting": "256 @ 25-27c",
-        "exposure": 87.65,
-        "exposure_text": "+$88",
+        "exposure": 123.73,
+        "exposure_text": "+$124",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
@@ -66,34 +66,38 @@
       },
       {
         "side": "MIN by 7-14",
-        "resting": "475 @ 14-16c",
-        "exposure": 353.06,
-        "exposure_text": "+$353",
+        "resting": "622 @ 13-16c",
+        "exposure": 389.14,
+        "exposure_text": "+$389",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-10T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-09T22:56:20Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-09T22:56:20Z",
+        "lag_note": "Price 13c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,621, 1,005 resting. Worst line -$169 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,785, 841 resting. Worst line -$133 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): MIN by 7-14.",
+          "MIN by 7-14: 522 behind. Price 13c matches the crowd.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$169 is better than -$200.",
+          "Gate open: worst line -$133 is better than -$200.",
           "Batches used: 22 (max 3 per side)."
         ]
       },
@@ -141,11 +145,11 @@
       },
       {
         "label": "BUF by 7-14",
-        "held": 566.0,
-        "resting": 214.0,
+        "held": 730.0,
+        "resting": 50.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": 0.23
       },
       {
         "label": "BUF by 15+",
@@ -168,7 +172,7 @@
         "held": 258.0,
         "resting": 475.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
@@ -181,32 +185,9 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-10T00:23:27Z"
+    "ts": "2026-11-10T00:24:27Z"
   },
   "posts": [
-    {
-      "id": "1794164768733-c77711",
-      "ts": "2026-11-08T19:03:49Z",
-      "book": "W10-BUFMIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 49 (FIELD far-bucket row (all-fill): BUF by 15+ x41 at 19c, MIN by 15+ x8 at 9c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 49.0,
-        "rows": 2
-      }
-    },
-    {
-      "id": "1794165191386-d41bbf",
-      "ts": "2026-11-08T19:13:11Z",
-      "book": "W10-BUFMIN",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nMIN 1-6: +45 (+1.0% of bankroll)\nMIN 7-14: +39 (+0.9% of bankroll)\nMIN 15+: -62 (-1.4% of bankroll)\nBUF 1-6: +54 (+1.2% of bankroll)\nBUF 7-14: -70 (-1.6% of bankroll)\nBUF 15+: -15 (-0.3% of bankroll)\nCollected $54 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nMIN 1-6: 9 / 244\nMIN 7-14: 15 / 219\nMIN 15+: 116 / 75\nBUF 1-6: 0 / 736\nBUF 7-14: 124 / 2\nBUF 15+: 69 / 317\nPosted book 1.11 | Sold avg 1.057 | Worst now -349 | Cash free $1569\nAnchor age 0s | Last fill 33818s ago",
-      "severity": "info"
-    },
     {
       "id": "1794165392301-3191d7",
       "ts": "2026-11-08T19:14:13Z",
@@ -4109,6 +4090,26 @@
         "contracts": 369.0,
         "rows": 5
       }
+    },
+    {
+      "id": "1794270247330-ff3765",
+      "ts": "2026-11-10T00:23:52Z",
+      "book": "W10-BUFMIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BUF by 7-14 at 22c (164 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794270267373-a94b3a",
+      "ts": "2026-11-10T00:24:27Z",
+      "book": "W10-BUFMIN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$133, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
