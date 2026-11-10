@@ -1,30 +1,41 @@
 {
   "key": "W11-WASNYG",
-  "generated_at": "2026-11-10T06:11:00.719392Z",
+  "generated_at": "2026-11-10T06:12:41.684751Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$356, goal -$150.",
+    "headline": "Building toward kickoff Thu 7:15pm CT. Worst line -$357, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "WAS by 15+",
-        "resting": "520 @ 12-15c",
-        "exposure": -355.92,
-        "exposure_text": "-$356",
+        "side": "WAS by 7-14",
+        "resting": "450 @ 19-21c",
+        "exposure": -357.42,
+        "exposure_text": "-$357",
         "move": "Holding",
         "when": "no move planned until the even-done check at Thu 6:45pm CT",
         "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-10T06:10:55Z"
+      },
+      {
+        "side": "WAS by 15+",
+        "resting": "520 @ 12-15c",
+        "exposure": -262.42,
+        "exposure_text": "-$262",
+        "move": "Paid balancing (trickle)",
+        "when": "starts Thu 6:55pm CT, up to $100 in all",
+        "at": "2026-11-13T00:55:00Z",
         "stuck": false,
         "last_fill": "2026-11-10T05:37:31Z"
       },
       {
         "side": "NYG by 15+",
         "resting": "699 @ 15-23c",
-        "exposure": -201.79,
-        "exposure_text": "-$202",
+        "exposure": -108.29,
+        "exposure_text": "-$108",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -34,8 +45,8 @@
       {
         "side": "NYG by 7-14",
         "resting": "980 @ 20-28c",
-        "exposure": 79.58,
-        "exposure_text": "+$80",
+        "exposure": 173.08,
+        "exposure_text": "+$173",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -45,8 +56,8 @@
       {
         "side": "NYG by 1-6",
         "resting": "1,000 @ 23-32c",
-        "exposure": 99.08,
-        "exposure_text": "+$99",
+        "exposure": 192.58,
+        "exposure_text": "+$193",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -55,18 +66,8 @@
       {
         "side": "WAS by 1-6",
         "resting": "1,000 @ 22-27c",
-        "exposure": 99.08,
-        "exposure_text": "+$99",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Thu 6:55pm CT, up to $100 in all",
-        "at": "2026-11-13T00:55:00Z",
-        "stuck": false
-      },
-      {
-        "side": "WAS by 7-14",
-        "resting": "1,000 @ 17-21c",
-        "exposure": 99.08,
-        "exposure_text": "+$99",
+        "exposure": 192.58,
+        "exposure_text": "+$193",
         "move": "Paid balancing (trickle)",
         "when": "starts Thu 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -77,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Thu 7:15pm CT. Sold 775, 5,200 resting. Worst line -$356 (goal -$150)."
+          "Pregame build, kickoff Thu 7:15pm CT. Sold 1,325, 4,650 resting. Worst line -$357 (goal -$150)."
         ]
       },
       {
@@ -90,7 +91,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$356).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$357).",
           "Batches used: 6 (max 3 per side)."
         ]
       },
@@ -162,23 +163,23 @@
       },
       {
         "label": "WAS by 7-14",
-        "held": 0.0,
-        "resting": 1000.0,
+        "held": 550.0,
+        "resting": 450.0,
         "target": null,
         "status": "even",
-        "price": 0.17
+        "price": 0.19
       },
       {
         "label": "WAS by 15+",
         "held": 455.0,
         "resting": 520.0,
         "target": null,
-        "status": "heavy",
+        "status": "even",
         "price": 0.12
       }
     ],
     "book": "W11-WASNYG",
-    "ts": "2026-11-10T06:10:07Z"
+    "ts": "2026-11-10T06:12:08Z"
   },
   "posts": [
     {
@@ -596,6 +597,16 @@
       "text": "Quiet for 15 min. 5,200 resting. Next: Even-done check, Thu 6:45pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794291108016-74d943",
+      "ts": "2026-11-10T06:11:31Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: WAS by 7-14 at 17c (550 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -660,6 +671,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+15 on NYG 15+ @ 0.15 (maker)\nworst outcome now +223\nheld 0/20/195/0/0/455\nIf the game ends... you make\nNYG 1-6: +83 (+1.7% of bankroll)\nNYG 7-14: +64 (+1.3% of bankroll)\nNYG 15+: -112 (-2.3% of bankroll)\nWAS 1-6: +83 (+1.7% of bankroll)\nWAS 7-14: +83 (+1.7% of bankroll)\nWAS 15+: -372 (-7.6% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794291153980-c5e26c",
+      "ts": "2026-11-10T06:12:33Z",
+      "book": "W11-WASNYG",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+550 on WAS 7-14 @ 0.17 (maker)\nworst outcome now +223\nheld 0/20/301/0/550/455\nIf the game ends... you make\nNYG 1-6: +193 (+3.9% of bankroll)\nNYG 7-14: +173 (+3.5% of bankroll)\nNYG 15+: -108 (-2.2% of bankroll)\nWAS 1-6: +193 (+3.9% of bankroll)\nWAS 7-14: -357 (-7.3% of bankroll)\nWAS 15+: -262 (-5.4% of bankroll)",
       "severity": "warn"
     }
   ]
