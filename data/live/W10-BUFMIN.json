@@ -1,6 +1,6 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-10T00:45:24.022970Z",
+  "generated_at": "2026-11-10T00:46:41.217985Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -96.09,
         "exposure_text": "-$96",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
+        "when": "no move planned until paid balancing starts at 6:55pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-09T22:15:27Z"
@@ -26,7 +26,7 @@
         "exposure": -96.09,
         "exposure_text": "-$96",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
+        "when": "no move planned until paid balancing starts at 6:55pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-09T23:44:36Z"
@@ -102,7 +102,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -114,11 +113,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-10T00:45:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-10T00:55:00Z",
         "label": "Paid balancing starts",
@@ -181,37 +175,9 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-10T00:44:34Z"
+    "ts": "2026-11-10T00:46:35Z"
   },
   "posts": [
-    {
-      "id": "1794171084397-b5e7e3",
-      "ts": "2026-11-08T20:49:05Z",
-      "book": "W10-BUFMIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 8 (FIELD far-bucket row (all-fill): MIN by 15+ x8 at 9c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 8.0,
-        "rows": 1
-      }
-    },
-    {
-      "id": "1794171648201-6be9c3",
-      "ts": "2026-11-08T21:00:33Z",
-      "book": "W10-BUFMIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "New wave on MIN by 1-6: batch 2 of 3, 132 contracts from 20c.",
-      "severity": "info",
-      "title": "New wave",
-      "data": {
-        "side": "MIN by 1-6",
-        "size": 132.0
-      }
-    },
     {
       "id": "1794171648202-f99370",
       "ts": "2026-11-08T21:00:33Z",
@@ -4118,6 +4084,25 @@
       "text": "Balanced enough: worst line -$96 beats the -$150 goal. Paid balancing is off.",
       "severity": "info",
       "title": "Even"
+    },
+    {
+      "id": "1794271534591-326c3b",
+      "ts": "2026-11-10T00:45:34Z",
+      "book": "W10-BUFMIN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$96, goal -$150. Next: Paid balancing starts, 6:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794271546657-903810",
+      "ts": "2026-11-10T00:45:46Z",
+      "book": "W10-BUFMIN",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nMIN 1-6: -96 (-2.1% of bankroll)\nMIN 7-14: +143 (+3.2% of bankroll)\nMIN 15+: -30 (-0.7% of bankroll)\nBUF 1-6: +161 (+3.5% of bankroll)\nBUF 7-14: -46 (-1.0% of bankroll)\nBUF 15+: -96 (-2.1% of bankroll)\nCollected $684 premium ($0 fees) | Paper margin over fair $24 (not realized until settlement)\nEvent: MIN 7-14: MIN 0-0, Q0 0:00; BUF 7-14: BUF 0-0, Q0 0:00\nheld / resting\nMIN 1-6: 780 / 25\nMIN 7-14: 541 / 259\nMIN 15+: 714 / 43\nBUF 1-6: 523 / 276\nBUF 7-14: 730 / 70\nBUF 15+: 780 / 20\nPosted book 1.08 | Sold avg 1.017 | Worst now +11 | Cash free $1569\nAnchor age 23s | Last fill 244s ago",
+      "severity": "info"
     }
   ],
   "audits": [
