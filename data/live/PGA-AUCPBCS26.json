@@ -1,6 +1,6 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-10T06:24:53.636778Z",
+  "generated_at": "2026-11-10T06:26:14.706390Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 84,109, 27,590 resting. Worst line -$693. Bot is slow (checks every 2m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 84,109, 27,664 resting. Worst line -$693. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-10T06:24:32Z"
+    "ts": "2026-11-10T06:25:33Z"
   },
   "posts": [
     {
@@ -3891,18 +3891,43 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nDaniel Berger: -701\nChandler Blanchet: -701\nLuke Clanton: -701\nCam Davis: -701\nAdrien Dumont De Chassart: -701\nNick Dunlap: -701\nAustin Eckroat: -701\nPatrick Fishburn: -701\nall others (108) >= -701\nCollected $813 premium ($14 fees) | Paper margin over fair $117 (not realized until settlement)\nCore posted book 1.11 | Worst now -701 | Cash free $6051\nAnchor age 377s (source: bovada_golf)",
       "severity": "info"
+    },
+    {
+      "id": "1794291933325-a46723",
+      "ts": "2026-11-10T06:23:17Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 529: driver JSUB x529 at 1.6c. Worst line -$693.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 529.0,
+        "fills": [
+          {
+            "side": "driver JSUB",
+            "price": 0.016,
+            "qty": 529.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794291933325-ee8f89",
+      "ts": "2026-11-10T06:23:18Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 74 (golf add): driver MRUS x37 at 1c, driver KVEN x37 at 1.9c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 74.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794266224793-af450a",
-      "ts": "2026-11-09T23:17:04Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: RISK-BREACH - worst-all-resting -368.09 past allowed limit -306.00",
-      "severity": "warn"
-    },
     {
       "id": "1794266851242-6da835",
       "ts": "2026-11-09T23:27:31Z",
@@ -4792,6 +4817,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 2 unexplained\n- PGA-AUCPBCS26 - Davis Riley has had no resting orders for at least 559 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Vince Whaley has had no resting orders for at least 864 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794291970098-c87e58",
+      "ts": "2026-11-10T06:26:10Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -369.33 past allowed limit -306.00",
       "severity": "warn"
     }
   ]
