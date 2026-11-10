@@ -1,19 +1,19 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-10T02:54:55.582894Z",
+  "generated_at": "2026-11-10T02:56:14.016608Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$400, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 85,
+    "checks_every_s": 62,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 6,226, 9,940 resting. Worst line -$400. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 6,226, 10,345 resting. Worst line -$400. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-10T02:54:20Z"
+    "ts": "2026-11-10T02:55:20Z"
   },
   "posts": [
     {
@@ -1337,27 +1337,23 @@
       "text": "Quiet for 15 min. 9,940 resting. Next: Risk glide starts, Wed 7:00pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794279361045-46b221",
+      "ts": "2026-11-10T02:54:50Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 570 (golf add): driver DPUI x36 at 2c, driver VPER x36 at 1.9c, +15 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 570.0,
+        "rows": 17
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794251202159-1ffd53",
-      "ts": "2026-11-09T19:06:42Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 3 unexplained\n- DPWT-DPWTC26 - Davis Bryant has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-DPWTC26 - Kota Kaneko has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-DPWTC26 - Shaun Norris has had no resting orders for at least 71 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
-    {
-      "id": "1794251422646-203f24",
-      "ts": "2026-11-09T19:10:22Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: RISK-BREACH - worst-all-resting -317.84 past allowed limit -108.00",
-      "severity": "warn"
-    },
     {
       "id": "1794251620693-08c780",
       "ts": "2026-11-09T19:13:40Z",
@@ -2238,6 +2234,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst -399.96 vs floor -133.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1794279318009-594f39",
+      "ts": "2026-11-10T02:55:18Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (DPWT-DPWTC26): 19 ladder(s) stale 10+ min: KXDPWORLDTOUR-DPWTC26-MARM low 500c, KXDPWORLDTOUR-DPWTC26-DBRA low 500c, KXDPWORLDTOUR-DPWTC26-GDEL low 500c, KXDPWORLDTOUR-DPWTC26-JDEA low 500c, KXDPWORLDTOUR-DPWTC26-HDUP low 500c, KXDPWORLDTOUR-DPWTC26-NELV low 500c, KXDPWORLDTOUR-DPWTC26-JGUE low 500c, KXDPWORLDTOUR-DPWTC26-CHIL low 500c, KXDPWORLDTOUR-DPWTC26-MJOR low 204c, KXDPWORLDTOUR-DPWTC26-FLAP low 65c, KXDPWORLDTOUR-DPWTC26-TLAW low 500c, KXDPWORLDTOUR-DPWTC26-MLIN low 500c, KXDPWORLDTOUR-DPWTC26-JLUI low 500c, KXDPWORLDTOUR-DPWTC26-RMCI low 32c, KXDPWORLDTOUR-DPWTC26-AMER low 65c, KXDPWORLDTOUR-DPWTC26-NNOR low 500c, KXDPWORLDTOUR-DPWTC26-VPER low 204c, KXDPWORLDTOUR-DPWTC26-DPUI low 204c, KXDPWORLDTOUR-DPWTC26-JSCH low 204c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794279318010-caf0be",
+      "ts": "2026-11-10T02:55:18Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst-all-resting-filled -288.31 vs hard cap -216.00 (2.0x L_max 108.00). Check the command center.",
       "severity": "critical"
     }
   ]
