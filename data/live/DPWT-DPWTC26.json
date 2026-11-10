@@ -1,10 +1,10 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-10T04:33:38.455447Z",
+  "generated_at": "2026-11-10T04:35:44.990418Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
-    "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$346, final target $0.",
+    "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$324, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 85,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 10,542, 6,226 resting. Worst line -$346. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 13,542, 3,226 resting. Worst line -$324. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-10T04:32:51Z"
+    "ts": "2026-11-10T04:34:51Z"
   },
   "posts": [
     {
@@ -1692,18 +1692,59 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794285312009-748450",
+      "ts": "2026-11-10T04:34:31Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 3,000: driver MARM x500 at 0.7c, driver CHIL x500 at 0.6c, driver MLIN x500 at 0.8c, +4 more. Worst line -$324.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 3000.0,
+        "fills": [
+          {
+            "side": "driver MARM",
+            "price": 0.007,
+            "qty": 500.0
+          },
+          {
+            "side": "driver CHIL",
+            "price": 0.006,
+            "qty": 500.0
+          },
+          {
+            "side": "driver MLIN",
+            "price": 0.008,
+            "qty": 500.0
+          },
+          {
+            "side": "driver JGUE",
+            "price": 0.006,
+            "qty": 500.0
+          },
+          {
+            "side": "driver NNOR",
+            "price": 0.009,
+            "qty": 500.0
+          },
+          {
+            "side": "driver FLAC",
+            "price": 0.007,
+            "qty": 400.0
+          },
+          {
+            "side": "driver FLAC",
+            "price": 0.009,
+            "qty": 100.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794257535713-00a3c0",
-      "ts": "2026-11-09T20:52:15Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst -422.85 vs floor -133.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794257717567-135902",
       "ts": "2026-11-09T20:55:17Z",
@@ -2594,6 +2635,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst-all-resting-filled -286.85 vs hard cap -216.00 (2.0x L_max 108.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794285333576-11db26",
+      "ts": "2026-11-10T04:35:33Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -285.64 past allowed limit -108.00",
+      "severity": "warn"
     }
   ]
 }
