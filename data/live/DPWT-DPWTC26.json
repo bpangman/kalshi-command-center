@@ -1,19 +1,19 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-10T08:44:37.598908Z",
+  "generated_at": "2026-11-10T08:51:11.614424Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$307, final target $0.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence": "low",
+    "confidence_note": "The bot looks unhealthy, so no step below is certain.",
     "checks_every_s": 63,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 14,893, 2,020 resting. Worst line -$307. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 14,893, 2,020 resting. Worst line -$307. Bot heartbeat is 7m old: it may be down."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-10T08:44:26Z"
+    "ts": "2026-11-10T08:50:28Z"
   },
   "posts": [
     {
@@ -2056,18 +2056,48 @@
       "text": "Quiet for 15 min. 2,020 resting. Next: Risk glide starts, Wed 7:00pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794300608777-f37f73",
+      "ts": "2026-11-10T08:50:08Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot heartbeat is 6m old (normal is under 6m). It may be down. Resting orders stay.",
+      "severity": "warn",
+      "title": "Heartbeat stale"
+    },
+    {
+      "id": "1794300628924-1af4b9",
+      "ts": "2026-11-10T08:50:28Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$307, final target $0. Next: Risk glide starts, Wed 7:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pre-race growth"
+    },
+    {
+      "id": "1794300661528-e62d47",
+      "ts": "2026-11-10T08:51:01Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "DPWT-DPWTC26 book hitting resistance: coverage 0.39 vs 0.59 glide, 19 sides with room blocked / 0 posted in 30 min, fills 0 in last hour. Check the bot.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794300669232-06289f",
+      "ts": "2026-11-10T08:51:01Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
     }
   ],
   "audits": [
-    {
-      "id": "1794271752724-6e3aee",
-      "ts": "2026-11-10T00:49:12Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (DPWT-DPWTC26): 19 ladder(s) stale 10+ min: KXDPWORLDTOUR-DPWTC26-MARM low 500c, KXDPWORLDTOUR-DPWTC26-DBRA low 500c, KXDPWORLDTOUR-DPWTC26-GDEL low 500c, KXDPWORLDTOUR-DPWTC26-JDEA low 500c, KXDPWORLDTOUR-DPWTC26-HDUP low 500c, KXDPWORLDTOUR-DPWTC26-NELV low 500c, KXDPWORLDTOUR-DPWTC26-JGUE low 500c, KXDPWORLDTOUR-DPWTC26-CHIL low 500c, KXDPWORLDTOUR-DPWTC26-MJOR low 173c, KXDPWORLDTOUR-DPWTC26-FLAP low 34c, KXDPWORLDTOUR-DPWTC26-TLAW low 500c, KXDPWORLDTOUR-DPWTC26-MLIN low 500c, KXDPWORLDTOUR-DPWTC26-JLUI low 500c, KXDPWORLDTOUR-DPWTC26-AMER low 34c, KXDPWORLDTOUR-DPWTC26-NNOR low 500c, KXDPWORLDTOUR-DPWTC26-VPER low 168c, KXDPWORLDTOUR-DPWTC26-DPUI low 168c, KXDPWORLDTOUR-DPWTC26-KREI low 173c, KXDPWORLDTOUR-DPWTC26-JSCH low 168c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794271752724-7bb97b",
       "ts": "2026-11-10T00:49:12Z",
@@ -2958,6 +2988,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst-all-resting-filled -278.19 vs hard cap -216.00 (2.0x L_max 108.00). Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794300662493-6139a5",
+      "ts": "2026-11-10T08:51:02Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
     }
   ]
 }
