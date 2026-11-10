@@ -1,6 +1,6 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-10T04:02:10.403960Z",
+  "generated_at": "2026-11-10T04:03:51.854906Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 4,782, 0 resting. Worst line -$1. Game 83% done. Floor mode ON: only raising the worst line."
+          "In game (Ingame). Sold 4,782, 0 resting. Worst line -$1. Game 86% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -101,23 +101,9 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-10T04:01:41Z"
+    "ts": "2026-11-10T04:03:41Z"
   },
   "posts": [
-    {
-      "id": "1794198867759-01de7d",
-      "ts": "2026-11-09T04:32:25Z",
-      "book": "W10-BUFMIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 10 (SPORTSBOOK rate row (listed 0.): MIN by 1-6 x10 at 19c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 10.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794199531976-ed3845",
       "ts": "2026-11-09T04:43:17Z",
@@ -3936,27 +3922,19 @@
       "text": "Bot note: endgame: active (favorite BUF 7-14 at 0.53); likely ['BUF 1-6', 'BUF 7-14']; floor mode: KXNFLWINMARGIN-26NOV0",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794283341626-3bac83",
+      "ts": "2026-11-10T04:02:14Z",
+      "book": "W10-BUFMIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite BUF 7-14 at 0.55); likely ['BUF 1-6', 'BUF 7-14']; floor mode: KXNFLWINMARGIN-26NOV0",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1794210505884-4db164",
-      "ts": "2026-11-09T07:48:25Z",
-      "book": "W10-BUFMIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-BUFMIN): 1 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1794211449552-18ecc8",
-      "ts": "2026-11-09T08:04:09Z",
-      "book": "W10-BUFMIN",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- W10-BUFMIN - Buffalo by 1 to 6 has had no resting orders for at least 192 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794212350503-426317",
       "ts": "2026-11-09T08:19:10Z",
@@ -4833,6 +4811,24 @@
     {
       "id": "1794282797821-71ca21",
       "ts": "2026-11-10T03:53:17Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1794283334794-3bd272",
+      "ts": "2026-11-10T04:02:14Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1794283418245-dc30d9",
+      "ts": "2026-11-10T04:03:38Z",
       "book": "W10-BUFMIN",
       "kind": "audit",
       "source": "bot",
