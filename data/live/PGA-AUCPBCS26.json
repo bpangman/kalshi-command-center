@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-10T06:46:32.405410Z",
+  "generated_at": "2026-11-10T06:47:52.792196Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$692, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 63,
+    "checks_every_s": 110,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 84,181, 28,132 resting. Worst line -$692. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 84,181, 28,132 resting. Worst line -$692. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-10T06:45:40Z"
+    "ts": "2026-11-10T06:47:41Z"
   },
   "posts": [
     {
@@ -3973,18 +3973,43 @@
         "contracts": 288.0,
         "rows": 8
       }
+    },
+    {
+      "id": "1794293200709-7bcce4",
+      "ts": "2026-11-10T06:44:34Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 36 (golf add): driver JSUB x36 at 1.6c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 36.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1794293261076-164a16",
+      "ts": "2026-11-10T06:45:37Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 37: driver KVEN x37 at 1.9c. Worst line -$692.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 37.0,
+        "fills": [
+          {
+            "side": "driver KVEN",
+            "price": 0.019,
+            "qty": 37.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794267499457-31b9ad",
-      "ts": "2026-11-09T23:38:19Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: RISK-BREACH - worst-all-resting -368.19 past allowed limit -306.00",
-      "severity": "warn"
-    },
     {
       "id": "1794267684855-2ecfc6",
       "ts": "2026-11-09T23:41:24Z",
@@ -4875,6 +4900,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (PGA-AUCPBCS26): worst -692.28 vs floor -331.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794293247972-5b516e",
+      "ts": "2026-11-10T06:47:27Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH - worst-all-resting -359.13 past allowed limit -306.00",
+      "severity": "warn"
     }
   ]
 }
