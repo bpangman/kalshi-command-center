@@ -1,6 +1,6 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-10T03:47:02.714737Z",
+  "generated_at": "2026-11-10T03:48:21.706896Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,23 +101,9 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-10T03:46:37Z"
+    "ts": "2026-11-10T03:47:37Z"
   },
   "posts": [
-    {
-      "id": "1794196694818-fc951d",
-      "ts": "2026-11-09T03:56:07Z",
-      "book": "W10-BUFMIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 44 (FIELD far-bucket row (all-fill): MIN by 15+ x44 at 9c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 44.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794196956233-1cdf6c",
       "ts": "2026-11-09T04:02:29Z",
@@ -3957,18 +3943,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nMIN 1-6: -0 (-0.0% of bankroll)\nMIN 7-14: -0 (-0.0% of bankroll)\nMIN 15+: -1 (-0.0% of bankroll)\nBUF 1-6: +0 (+0.0% of bankroll)\nBUF 7-14: -0 (-0.0% of bankroll)\nBUF 15+: -0 (-0.0% of bankroll)\nCollected $802 premium ($6 fees) | Paper margin over fair $80 (not realized until settlement)\nEvent: BUF 7-14: BUF 6-13, Q3 0:00; BUF 1-6: BUF 6-13, Q3 0:00\nheld / resting\nMIN 1-6: 797 / 0\nMIN 7-14: 797 / 0\nMIN 15+: 798 / 0\nBUF 1-6: 796 / 0\nBUF 7-14: 797 / 0\nBUF 15+: 797 / 0\nPosted book 1.17 | Sold avg 1.007 | Worst now -1 | Cash free $1569\nAnchor age 3890s | Last fill 7615s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794282437330-868694",
+      "ts": "2026-11-10T03:47:11Z",
+      "book": "W10-BUFMIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite BUF 7-14 at 0.44); likely ['BUF 1-6', 'BUF 7-14']; floor mode: KXNFLWINMARGIN-26NOV0",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1794207824498-d993db",
-      "ts": "2026-11-09T07:03:44Z",
-      "book": "W10-BUFMIN",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- W10-BUFMIN - Buffalo by 1 to 6 has had no resting orders for at least 131 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794208660652-b71d16",
       "ts": "2026-11-09T07:17:40Z",
@@ -4858,6 +4845,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1794282431071-fc9dcd",
+      "ts": "2026-11-10T03:47:11Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Endgame mode on: BUF 7-14 at 0.44; likely outcomes: BUF 1-6, BUF 7-14; action: none",
       "severity": "warn"
     }
   ]
