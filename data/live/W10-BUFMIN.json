@@ -1,6 +1,6 @@
 {
   "key": "W10-BUFMIN",
-  "generated_at": "2026-11-10T03:11:49.694167Z",
+  "generated_at": "2026-11-10T03:13:08.845536Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W10-BUFMIN",
-    "ts": "2026-11-10T03:11:26Z"
+    "ts": "2026-11-10T03:12:26Z"
   },
   "posts": [
-    {
-      "id": "1794195990539-d8003d",
-      "ts": "2026-11-09T03:46:30Z",
-      "book": "W10-BUFMIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,088 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794196071050-0f0e5c",
       "ts": "2026-11-09T03:47:35Z",
@@ -3993,18 +3983,18 @@
       "text": "Quiet for 15 min. 0 resting.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794280380882-43cae0",
+      "ts": "2026-11-10T03:13:00Z",
+      "book": "W10-BUFMIN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W10-BUFMIN: 0 orders posted in 10 min while the market traded 11340 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1794203041992-2aeec9",
-      "ts": "2026-11-09T05:44:01Z",
-      "book": "W10-BUFMIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W10-BUFMIN): 1 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794204193932-8f8e7e",
       "ts": "2026-11-09T06:03:13Z",
@@ -4894,6 +4884,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W10-BUFMIN): inactive, cause=room_zero, remedy=raise_slack, posts_last_10m=0, market_volume_last_30m=11227. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794280338667-da5d51",
+      "ts": "2026-11-10T03:12:18Z",
+      "book": "W10-BUFMIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
