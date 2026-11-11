@@ -1,13 +1,13 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-11T23:35:29.302566Z",
+  "generated_at": "2026-11-11T23:37:30.327662Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
     "headline": "Pre-race growth for the green flag 10:25pm CT. Worst line -$112, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 64,
+    "checks_every_s": 85,
     "moves": [],
     "sections": [
       {
@@ -64,39 +64,9 @@
     ],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-11T23:35:16Z"
+    "ts": "2026-11-11T23:37:17Z"
   },
   "posts": [
-    {
-      "id": "1794288451306-24af9c",
-      "ts": "2026-11-10T05:27:31Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 1,966 resting. Next: Risk glide starts, Wed 7:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794288612523-6fbc2a",
-      "ts": "2026-11-10T05:28:12Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 16: driver ASCO x16 at 5c. Worst line -$310.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 16.0,
-        "fills": [
-          {
-            "side": "driver ASCO",
-            "price": 0.05,
-            "qty": 16.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794289296838-e97456",
       "ts": "2026-11-10T05:40:48Z",
@@ -4087,18 +4057,38 @@
       "source": "bot",
       "text": "Inactivity on DPWT-DPWTC26: 0 orders posted in 10 min while the market traded 70173 contracts. Cause: the ESPN feed was stale, so the ladder was only posting defensive spike prices. Remedy: priced off Kalshi's own book with the join rung for 15 min.",
       "severity": "info"
+    },
+    {
+      "id": "1794440156471-56761b",
+      "ts": "2026-11-11T23:33:55Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 34: driver TFLE x34 at 7.2c. Worst line -$112.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 34.0,
+        "fills": [
+          {
+            "side": "driver TFLE",
+            "price": 0.072,
+            "qty": 34.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794440247316-610f4d",
+      "ts": "2026-11-11T23:37:27Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on DPWT-DPWTC26: 0 orders posted in 10 min while the market traded 61102 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1794363147548-c34fc2",
-      "ts": "2026-11-11T02:12:27Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: RISK-BREACH - worst-all-resting -113.91 past allowed limit -108.00",
-      "severity": "warn"
-    },
     {
       "id": "1794363457564-aa0435",
       "ts": "2026-11-11T02:17:37Z",
@@ -4988,6 +4978,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (DPWT-DPWTC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=61865. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794440238856-2d7c34",
+      "ts": "2026-11-11T23:37:18Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (DPWT-DPWTC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=62502. Check the command center.",
       "severity": "warn"
     }
   ]
