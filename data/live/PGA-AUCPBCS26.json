@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T13:20:18.501212Z",
+  "generated_at": "2026-11-12T13:21:36.523315Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$99.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 124,849, 12,317 resting. Worst line -$99. Floor protocol off."
+          "In race (Ingame). Sold 124,849, 12,317 resting. Worst line -$99. Floor protocol off. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T13:19:45Z"
+    "ts": "2026-11-12T13:20:45Z"
   },
   "posts": [
-    {
-      "id": "1794361313135-c1714f",
-      "ts": "2026-11-11T01:39:38Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 39: driver MMEI x39 at 1.2c. Worst line -$312.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 39.0,
-        "fills": [
-          {
-            "side": "driver MMEI",
-            "price": 0.012,
-            "qty": 39.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794362097383-0ce472",
       "ts": "2026-11-11T01:54:57Z",
@@ -4082,18 +4062,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794489645570-62c6ea",
+      "ts": "2026-11-12T13:20:45Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$99.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794422125011-c68a1c",
-      "ts": "2026-11-11T18:35:25Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 14 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-CBEZ low 41c, KXPGATOUR-AUCPBCS26-BBRO low 84c, KXPGATOUR-AUCPBCS26-RCAS low 274c, KXPGATOUR-AUCPBCS26-ECOL low 805c, KXPGATOUR-AUCPBCS26-MGRE low 421c, KXPGATOUR-AUCPBCS26-JKEE low 80c, KXPGATOUR-AUCPBCS26-CKIR low 308c, KXPGATOUR-AUCPBCS26-MMEI low 79c, KXPGATOUR-AUCPBCS26-ANOV low 533c, KXPGATOUR-AUCPBCS26-MPEN low 763c, KXPGATOUR-AUCPBCS26-NSHI low 42c, KXPGATOUR-AUCPBCS26-HSPR low 1160c, KXPGATOUR-AUCPBCS26-DTHO low 452c, KXPGATOUR-AUCPBCS26-KVEN low 275c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794422934212-42c29c",
       "ts": "2026-11-11T18:48:54Z",
@@ -4983,6 +4964,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH - worst-all-resting -367.51 past allowed limit -306.00",
+      "severity": "warn"
+    },
+    {
+      "id": "1794489667805-2462b5",
+      "ts": "2026-11-12T13:21:07Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+895 on Aaron Wise @ 0.00 (maker)\n+25 on Jackson Koivun @ 0.07 (maker)\nworst outcome now -99\nIf the race ends... you make\nDaniel Berger: -99\nChandler Blanchet: -99\nLuke Clanton: -99\nJoel Dahmen: -99\nCam Davis: -99\nZecheng Dou: -99\nAdrien Dumont De Chassart: -99\nNick Dunlap: -99\nall others (108) >= -99",
       "severity": "warn"
     }
   ]
