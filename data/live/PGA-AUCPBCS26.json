@@ -1,6 +1,6 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T19:39:30.198227Z",
+  "generated_at": "2026-11-12T19:40:49.151337Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -44,23 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T19:39:23Z"
+    "ts": "2026-11-12T19:40:23Z"
   },
   "posts": [
-    {
-      "id": "1794424994637-6371a6",
-      "ts": "2026-11-11T19:20:56Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 44 (golf add): driver DGHI x44 at 5.4c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 44.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794425095274-8a4b40",
       "ts": "2026-11-11T19:22:47Z",
@@ -4333,18 +4319,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794512443922-dad863",
+      "ts": "2026-11-12T19:38:38Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 220: driver MROZ x220 at 0.2c. Worst line -$8.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 220.0,
+        "fills": [
+          {
+            "side": "driver MROZ",
+            "price": 0.002,
+            "qty": 220.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794485890492-77bc21",
-      "ts": "2026-11-12T12:18:10Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=190037. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794486273184-8da092",
       "ts": "2026-11-12T12:24:33Z",
@@ -5234,6 +5231,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Golf PGA-AUCPBCS26: trimmed resting sells in place (Johnny Keefer by 1) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794512412017-4b5ae8",
+      "ts": "2026-11-12T19:40:12Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+11 on Ben Kohles @ 0.03 (maker)\n+100 on Dylan Wu @ 0.00 (maker)\n+220 on Marcelo Rozo @ 0.00 (maker)\nworst outcome now -8\nIf the race ends... you make\nJackson Suber: -8\nDaniel Berger: +3\nChandler Blanchet: +3\nLuke Clanton: +3\nTrace Crowe: +3\nCam Davis: +3\nZecheng Dou: +3\nAdrien Dumont De Chassart: +3\nall others (118) >= +3",
       "severity": "warn"
     }
   ]
