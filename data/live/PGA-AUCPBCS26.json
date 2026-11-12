@@ -1,10 +1,10 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T16:18:52.603554Z",
+  "generated_at": "2026-11-12T16:20:13.352093Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$46.",
+    "headline": "In race (Ingame). Worst line -$40.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 131,385, 12,317 resting. Worst line -$46. Floor protocol off."
+          "In race (Ingame). Sold 131,965, 12,317 resting. Worst line -$40. Floor protocol off."
         ]
       },
       {
@@ -44,32 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T16:17:59Z"
+    "ts": "2026-11-12T16:20:00Z"
   },
   "posts": [
-    {
-      "id": "1794398992028-eb47b5",
-      "ts": "2026-11-11T12:07:52Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 378 (golf add): driver SJAE x42 at 1.3c, driver MPEN x42 at 1.9c, +7 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 378.0,
-        "rows": 9
-      }
-    },
-    {
-      "id": "1794399347943-743041",
-      "ts": "2026-11-11T12:15:47Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "PGA-AUCPBCS26 book is not trading: no fills in the last hour while the crowd keeps trading (grew 3307). Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1794399636591-62a816",
       "ts": "2026-11-11T12:18:31Z",
@@ -4362,18 +4339,43 @@
       "text": "Bot note: dead-driver buyback KXPGATOUR-AUCPBCS26-JDAH: 1600 @ 0.01, floor -138 -> -46",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794500360513-002b30",
+      "ts": "2026-11-12T16:17:35Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,700: driver JDAH x1,700 at 0.5c. Worst line -$46.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1700.0,
+        "fills": [
+          {
+            "side": "driver JDAH",
+            "price": 0.005,
+            "qty": 1700.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794500380600-0c44a9",
+      "ts": "2026-11-12T16:19:10Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 1,451 (race floor first): driver JDAH x1,451 at 0.5c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 1451.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794463712904-452dac",
-      "ts": "2026-11-12T06:08:32Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 7 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-ZBAU low 39c, KXPGATOUR-AUCPBCS26-CBEZ low 80c, KXPGATOUR-AUCPBCS26-DFOR low 77c, KXPGATOUR-AUCPBCS26-MGRE low 460c, KXPGATOUR-AUCPBCS26-JKEE low 119c, KXPGATOUR-AUCPBCS26-HSPR low 1160c, KXPGATOUR-AUCPBCS26-JSUB low 116c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794465552405-e1e8db",
       "ts": "2026-11-12T06:39:12Z",
@@ -5263,6 +5265,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Dead-driver buy-back Joel Dahmen: 1600 @ 0.01, floor -138 -> -46 (cost $8.56)\nIf the race ends... you make\nJoel Dahmen: -138\nDaniel Berger: -38\nChandler Blanchet: -38\nLuke Clanton: -38\nCam Davis: -38\nZecheng Dou: -38\nAdrien Dumont De Chassart: -38\nNick Dunlap: -38\nall others (118) >= -38",
+      "severity": "warn"
+    },
+    {
+      "id": "1794500345121-7a1645",
+      "ts": "2026-11-12T16:19:05Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 24 unexplained\n- PGA-AUCPBCS26 - Adrien Dumont De Chassart has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Austin Eckroat has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Alejandro Tosti has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Christiaan Maas has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Chandler Phillips has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Cole Sherwood has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Daniel Berger has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - David Lipsky has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- plus 16 more (fleet/state/empty_side_sentinel.json)\nBack: PGA-AUCPBCS26 - Aaron Wise is posting again.\nBack: PGA-AUCPBCS26 - Cam Davis is posting again.\nBack: PGA-AUCPBCS26 - Karl Vilips is posting again.",
       "severity": "warn"
     }
   ]
