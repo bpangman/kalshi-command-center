@@ -1,6 +1,6 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-12T07:39:33.868628Z",
+  "generated_at": "2026-11-12T07:40:51.115408Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -44,23 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-12T07:39:19Z"
+    "ts": "2026-11-12T07:40:20Z"
   },
   "posts": [
-    {
-      "id": "1794337797923-d6eb1f",
-      "ts": "2026-11-10T19:07:38Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 76 (golf add): driver JRAH x38 at 12c, driver RMCI x38 at 22c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 76.0,
-        "rows": 2
-      }
-    },
     {
       "id": "1794338079966-738ff6",
       "ts": "2026-11-10T19:14:22Z",
@@ -4067,18 +4053,34 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794469240450-921a66",
+      "ts": "2026-11-12T07:40:37Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 60: driver THAT x41 at 4.6c, driver JRAH x19 at 13c. Worst line -$45.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 60.0,
+        "fills": [
+          {
+            "side": "driver THAT",
+            "price": 0.046,
+            "qty": 41.0
+          },
+          {
+            "side": "driver JRAH",
+            "price": 0.13,
+            "qty": 19.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794419329230-965a32",
-      "ts": "2026-11-11T17:48:49Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (DPWT-DPWTC26): worst -138.30 vs floor -133.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794420005552-497d89",
       "ts": "2026-11-11T18:00:05Z",
@@ -4968,6 +4970,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+118 on Francesco Laporta @ 0.01 (maker)\n+75 on Francesco Laporta @ 0.01 (maker)\n+37 on Francesco Laporta @ 0.01 (maker)\n+65 on Francesco Laporta @ 0.02 (maker)\n+6 on Jon Rahm @ 0.13 (maker)\n+41 on Tyrrell Hatton @ 0.05 (maker)\nworst outcome now -48\nIf the race ends... you make\nMarcus Armitage: -48\nDan Bradbury: -48\nDavis Bryant: -48\nMartin Couvra: -48\nGregorio De Leo: -48\nJoe Dean: -48\nHennie Du Plessis: -48\nManuel Elvira: -48\nall others (42) >= -48",
+      "severity": "warn"
+    },
+    {
+      "id": "1794469196738-4685d6",
+      "ts": "2026-11-12T07:39:56Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- DPWT-DPWTC26 - Francesco Laporta has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
