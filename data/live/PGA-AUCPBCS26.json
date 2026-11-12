@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T23:38:11.299961Z",
+  "generated_at": "2026-11-12T23:39:31.836137Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$24.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 148,662, ? resting. Worst line +$24. Floor protocol off."
+          "In race (Ingame). Sold 148,662, ? resting. Worst line +$24. Floor protocol off. Bot is slow (checks every 48s, set for 30s)."
         ]
       },
       {
@@ -44,23 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T23:38:03Z"
+    "ts": "2026-11-12T23:39:04Z"
   },
   "posts": [
-    {
-      "id": "1794447543054-59dc37",
-      "ts": "2026-11-12T01:36:52Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 379 (golf add): driver MGRE x39 at 1.3c, driver BHAR x39 at 2.2c, +8 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 379.0,
-        "rows": 10
-      }
-    },
     {
       "id": "1794448099952-802d07",
       "ts": "2026-11-12T01:48:19Z",
@@ -4527,18 +4513,19 @@
       "text": "Quiet for 15 min.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794526744211-5a0aff",
+      "ts": "2026-11-12T23:39:04Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$24.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794492136145-664da1",
-      "ts": "2026-11-12T14:02:16Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+125 on Doug Ghim @ 0.05 (maker)\n+25 on Doug Ghim @ 0.05 (maker)\n+50 on Doug Ghim @ 0.06 (maker)\nworst outcome now -44\nIf the race ends... you make\nDaniel Berger: -44\nChandler Blanchet: -44\nLuke Clanton: -44\nJoel Dahmen: -44\nCam Davis: -44\nZecheng Dou: -44\nAdrien Dumont De Chassart: -44\nNick Dunlap: -44\nall others (108) >= -44",
-      "severity": "warn"
-    },
     {
       "id": "1794492345295-30d49b",
       "ts": "2026-11-12T14:05:45Z",
@@ -5428,6 +5415,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 3 unexplained\n- PGA-AUCPBCS26 - Austin Smotherman has had no resting orders for at least 193 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Nicholas Lindheim has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Tommy Morrison has had no resting orders for at least 193 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794526750480-e18b82",
+      "ts": "2026-11-12T23:39:10Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 11 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-CBEZ low 50c, KXPGATOUR-AUCPBCS26-BBRO low 25c, KXPGATOUR-AUCPBCS26-JDAH low 1451c, KXPGATOUR-AUCPBCS26-TKAN high 50c, KXPGATOUR-AUCPBCS26-HLEB low 102c, KXPGATOUR-AUCPBCS26-PMAL high 50c, KXPGATOUR-AUCPBCS26-TMOO low 25c, KXPGATOUR-AUCPBCS26-CPAN low 1394c, KXPGATOUR-AUCPBCS26-JSTA high 383c, KXPGATOUR-AUCPBCS26-FHAR high 1548c, KXPGATOUR-AUCPBCS26-BMAR high 1549c. Check the command center.",
       "severity": "warn"
     }
   ]
