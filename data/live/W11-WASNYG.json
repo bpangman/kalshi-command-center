@@ -1,10 +1,10 @@
 {
   "key": "W11-WASNYG",
-  "generated_at": "2026-11-12T21:31:58.612390Z",
+  "generated_at": "2026-11-12T21:33:22.243429Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$382, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$381, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "WAS by 7-14",
         "resting": "25 @ 17c",
-        "exposure": -382.3,
-        "exposure_text": "-$382",
+        "exposure": -380.73,
+        "exposure_text": "-$381",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "WAS by 15+",
         "resting": "193 @ 11-13c",
-        "exposure": -189.01,
-        "exposure_text": "-$189",
+        "exposure": -187.44,
+        "exposure_text": "-$187",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -33,20 +33,20 @@
       },
       {
         "side": "NYG by 1-6",
-        "resting": "499 @ 23-24c",
-        "exposure": 91.7,
-        "exposure_text": "+$92",
+        "resting": "492 @ 23-24c",
+        "exposure": 86.45,
+        "exposure_text": "+$86",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-12T20:18:07Z"
+        "last_fill": "2026-11-12T21:30:55Z"
       },
       {
         "side": "NYG by 7-14",
         "resting": "506 @ 19-21c",
-        "exposure": 99.1,
-        "exposure_text": "+$99",
+        "exposure": 100.67,
+        "exposure_text": "+$101",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -56,8 +56,8 @@
       {
         "side": "NYG by 15+",
         "resting": "422 @ 14-15c",
-        "exposure": 109.73,
-        "exposure_text": "+$110",
+        "exposure": 111.3,
+        "exposure_text": "+$111",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -67,8 +67,8 @@
       {
         "side": "WAS by 1-6",
         "resting": "595 @ 21-23c",
-        "exposure": 282.7,
-        "exposure_text": "+$283",
+        "exposure": 284.27,
+        "exposure_text": "+$284",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-13T00:55:00Z",
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,114, 2,240 resting. Worst line -$382 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,121, 2,234 resting. Worst line -$381 (goal -$150)."
         ]
       },
       {
@@ -93,7 +93,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$382).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$381).",
           "Batches used: 7 (max 3 per side)."
         ]
       },
@@ -133,8 +133,8 @@
     "sides": [
       {
         "label": "NYG by 1-6",
-        "held": 596.0,
-        "resting": 499.0,
+        "held": 602.8,
+        "resting": 492.2,
         "target": null,
         "status": "even",
         "price": 0.23
@@ -181,7 +181,7 @@
       }
     ],
     "book": "W11-WASNYG",
-    "ts": "2026-11-12T21:31:50Z"
+    "ts": "2026-11-12T21:32:50Z"
   },
   "posts": [
     {
@@ -3508,15 +3508,6 @@
   ],
   "audits": [
     {
-      "id": "1794300526333-19345c",
-      "ts": "2026-11-10T08:48:46Z",
-      "book": "W11-WASNYG",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed -> REST fallback",
-      "severity": "warn"
-    },
-    {
       "id": "1794300724324-3671e8",
       "ts": "2026-11-10T08:52:04Z",
       "book": "W11-WASNYG",
@@ -4405,6 +4396,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-WASNYG): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=1714. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794519188407-567382",
+      "ts": "2026-11-12T21:33:08Z",
+      "book": "W11-WASNYG",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+7 on NYG 1-6 @ 0.23 (maker)\nworst outcome now +16\nheld 603/589/578/405/1070/877\nIf the game ends... you make\nNYG 1-6: +86 (+1.8% of bankroll)\nNYG 7-14: +101 (+2.1% of bankroll)\nNYG 15+: +111 (+2.3% of bankroll)\nWAS 1-6: +284 (+5.8% of bankroll)\nWAS 7-14: -381 (-7.8% of bankroll)\nWAS 15+: -187 (-3.8% of bankroll)",
       "severity": "warn"
     }
   ]
