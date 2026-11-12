@@ -1,6 +1,6 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T20:27:02.246680Z",
+  "generated_at": "2026-11-12T20:28:25.867692Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 146,572, ? resting. Worst line +$16. Floor protocol off."
+          "In race (Ingame). Sold 146,622, ? resting. Worst line +$16. Floor protocol off."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T20:26:42Z"
+    "ts": "2026-11-12T20:27:42Z"
   },
   "posts": [
-    {
-      "id": "1794432174788-e36565",
-      "ts": "2026-11-11T21:22:54Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "PGA-AUCPBCS26 book is not trading: no fills in the last hour while the crowd keeps trading (grew 31279). Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1794432828194-acfc1c",
       "ts": "2026-11-11T21:33:48Z",
@@ -4450,27 +4441,39 @@
         "contracts": 1025.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1794515222511-6a1bf4",
+      "ts": "2026-11-12T20:26:56Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 104: driver RNEE x50 at 0.3c, driver CKIR x29 at 1c, driver BHAR x25 at 4c. Worst line +$16.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 104.0,
+        "fills": [
+          {
+            "side": "driver RNEE",
+            "price": 0.003,
+            "qty": 50.0
+          },
+          {
+            "side": "driver CKIR",
+            "price": 0.01,
+            "qty": 29.0
+          },
+          {
+            "side": "driver BHAR",
+            "price": 0.04,
+            "qty": 25.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794488768248-0ae825",
-      "ts": "2026-11-12T13:06:08Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Golf: trimmed Marco Penge's resting sell from 37 to 25 contracts (his pile would have passed the $1397 collected). Nothing cancelled, queue place kept.",
-      "severity": "warn"
-    },
-    {
-      "id": "1794488833433-e06395",
-      "ts": "2026-11-12T13:07:13Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Golf PGA-AUCPBCS26: trimmed resting sells in place (Marco Penge by 51, Doug Ghim by 126) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
-      "severity": "warn"
-    },
     {
       "id": "1794488835532-543d48",
       "ts": "2026-11-12T13:07:15Z",
@@ -5351,6 +5354,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+25 on Tommy Morrison @ 0.02 (maker)\n+25 on Austin Smotherman @ 0.06 (maker)\n+29 on Chris Kirk @ 0.01 (maker)\nworst outcome now +15\nIf the race ends... you make\nJackson Suber: +15\nTommy Morrison: +19\nDaniel Berger: +26\nChandler Blanchet: +26\nLuke Clanton: +26\nTrace Crowe: +26\nCam Davis: +26\nZecheng Dou: +26\nall others (118) >= +26",
+      "severity": "warn"
+    },
+    {
+      "id": "1794515249692-1ffeab",
+      "ts": "2026-11-12T20:27:29Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 18 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-CBEZ low 50c, KXPGATOUR-AUCPBCS26-ZBLA low 25c, KXPGATOUR-AUCPBCS26-JDAH low 1451c, KXPGATOUR-AUCPBCS26-RHOJ low 50c, KXPGATOUR-AUCPBCS26-TKAN high 50c, KXPGATOUR-AUCPBCS26-PKIZ low 100c, KXPGATOUR-AUCPBCS26-HLEB low 102c, KXPGATOUR-AUCPBCS26-PMAL high 50c, KXPGATOUR-AUCPBCS26-TMOO low 25c, KXPGATOUR-AUCPBCS26-RNEE low 50c, KXPGATOUR-AUCPBCS26-CPAN low 1394c, KXPGATOUR-AUCPBCS26-JPAR low 25c, KXPGATOUR-AUCPBCS26-SVAL low 50c, KXPGATOUR-AUCPBCS26-DWAL low 1491c, KXPGATOUR-AUCPBCS26-TROS high 1571c, KXPGATOUR-AUCPBCS26-PPET high 1549c, KXPGATOUR-AUCPBCS26-JSTA high 383c, KXPGATOUR-AUCPBCS26-FHAR high 1548c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794515252544-4ee81d",
+      "ts": "2026-11-12T20:27:32Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- PGA-AUCPBCS26 - Austin Smotherman has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Tommy Morrison has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: PGA-AUCPBCS26 - A.J. Ewart is posting again.",
       "severity": "warn"
     }
   ]
