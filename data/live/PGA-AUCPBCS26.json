@@ -1,10 +1,10 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T09:00:08.634821Z",
+  "generated_at": "2026-11-12T09:01:28.607306Z",
   "plan": {
     "engine": "race",
-    "phase": "Pre-race growth",
-    "headline": "Pre-race growth for the green flag 7:00am CT. Worst line -$179, final target $0.",
+    "phase": "Risk glide",
+    "headline": "Risk glide for the green flag 7:00am CT. Worst line -$179, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 113,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag 7:00am CT. Sold 113,010, 21,224 resting. Worst line -$179. Bot is slow (checks every 2m, set for 30s)."
+          "Risk glide, green flag 7:00am CT. Sold 113,010, 21,224 resting. Worst line -$179. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -33,7 +33,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It stops a driver whose line falls under -$1,000.",
-          "Glide starts 3:00am CT: limit slides from -$1,000 to $0 by 7:00am CT.",
+          "Glide is running: limit unknown, worst line -$179, final $0 at 7:00am CT.",
           "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 5:30am CT.",
           "Even-up from 6:00am CT, last-resort take from 6:40am CT, green flag 7:00am CT."
         ]
@@ -47,11 +47,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-11-12T09:00:00Z",
-        "label": "Risk glide starts",
-        "detail": "Limit slides from -$1,000 to $0."
-      },
-      {
         "at": "2026-11-12T11:30:00Z",
         "label": "Glide selling opens",
         "detail": "Bot may sell to close gaps."
@@ -60,52 +55,18 @@
         "at": "2026-11-12T12:00:00Z",
         "label": "Even-up begins",
         "detail": "Waves stop; lagging drivers repriced toward fair."
+      },
+      {
+        "at": "2026-11-12T13:00:00Z",
+        "label": "Glide target date",
+        "detail": "Worst line should be $0 or better."
       }
     ],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T08:59:51Z"
+    "ts": "2026-11-12T09:00:51Z"
   },
   "posts": [
-    {
-      "id": "1794345551675-abd392",
-      "ts": "2026-11-10T21:17:09Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 273 (golf add): driver CBEZ x39 at 1.4c, driver JKEE x39 at 2.2c, +5 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 273.0,
-        "rows": 7
-      }
-    },
-    {
-      "id": "1794345732878-0d3987",
-      "ts": "2026-11-10T21:21:04Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 77: driver ASMO x39 at 2.5c, driver BKOH x38 at 2.1c. Worst line -$379.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 77.0,
-        "fills": [
-          {
-            "side": "driver ASMO",
-            "price": 0.025,
-            "qty": 39.0
-          },
-          {
-            "side": "driver BKOH",
-            "price": 0.021,
-            "qty": 38.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794345793408-753559",
       "ts": "2026-11-10T21:21:05Z",
@@ -4312,6 +4273,26 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nDaniel Berger: -179\nChandler Blanchet: -179\nLuke Clanton: -179\nCam Davis: -179\nAdrien Dumont De Chassart: -179\nNick Dunlap: -179\nAustin Eckroat: -179\nPatrick Fishburn: -179\nall others (108) >= -179\nCollected $1344 premium ($23 fees) | Paper margin over fair $182 (not realized until settlement)\nEvent: A.J. Ewart: running: T1 E; Aaron Wise: running: T1 E\nCore posted book 1.28 | Worst now -179 | Cash free $7651\nAnchor age 450s (source: bovada_golf)\nKalshi trading paused (exchange-wide, trading_active=false) for 51 min; idling, no new posts/cancels.",
       "severity": "info"
+    },
+    {
+      "id": "1794474051566-476a89",
+      "ts": "2026-11-12T09:00:51Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pre-race growth to Risk glide.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794474051567-cee80e",
+      "ts": "2026-11-12T09:00:51Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Risk glide for the green flag 7:00am CT. Worst line -$179, final target $0. Next: Glide selling opens, 5:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Risk glide"
     }
   ],
   "audits": [
