@@ -1,10 +1,10 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-12T07:52:20.762218Z",
+  "generated_at": "2026-11-12T07:53:38.286634Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$45.",
+    "headline": "In race (Ingame). Worst line -$25.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 21,011, 4,506 resting. Worst line -$45. Floor protocol off."
+          "In race (Ingame). Sold 21,243, 4,506 resting. Worst line -$25. Floor protocol off."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-12T07:51:24Z"
+    "ts": "2026-11-12T07:53:25Z"
   },
   "posts": [
-    {
-      "id": "1794338871207-1118fd",
-      "ts": "2026-11-10T19:27:51Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nMarcus Armitage: -277\nDan Bradbury: -277\nDavis Bryant: -277\nGregorio De Leo: -277\nJoe Dean: -277\nHennie Du Plessis: -277\nManuel Elvira: -277\nNacho Elvira: -277\nall others (42) >= -277\nCollected $223 premium ($0 fees) | Paper margin over fair $22 (not realized until settlement)\nEvent: Aaron Rai: running: T1 E; Adam Scott: running: T1 E\nCore posted book 0.93 | Worst now -277 | Cash free $6381\nAnchor age 148s (source: bovada_golf)",
-      "severity": "info"
-    },
-    {
-      "id": "1794339006648-ca2d23",
-      "ts": "2026-11-10T19:27:50Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 38: driver KREI x38 at 3.5c. Worst line -$277.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 38.0,
-        "fills": [
-          {
-            "side": "driver KREI",
-            "price": 0.035,
-            "qty": 38.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794339349244-156f18",
       "ts": "2026-11-10T19:33:50Z",
@@ -4068,18 +4039,44 @@
       "text": "In race (Ingame). Worst line -$45.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1794469944974-94e308",
+      "ts": "2026-11-12T07:51:51Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 73: driver JRAH x73 at 13c, driver THAT x0 at 5c. Worst line -$32.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 73.0,
+        "fills": [
+          {
+            "side": "driver JRAH",
+            "price": 0.13,
+            "qty": 73.0
+          },
+          {
+            "side": "driver THAT",
+            "price": 0.05,
+            "qty": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794469985183-294569",
+      "ts": "2026-11-12T07:52:55Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 3 drivers: driver VPER, driver FLAP, driver FSCH.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1794423135437-5c9509",
-      "ts": "2026-11-11T18:52:15Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (DPWT-DPWTC26): 6 ladder(s) stale 10+ min: KXDPWORLDTOUR-DPWTC26-EFER low 291c, KXDPWORLDTOUR-DPWTC26-TFLE low 69c, KXDPWORLDTOUR-DPWTC26-ELOP low 225c, KXDPWORLDTOUR-DPWTC26-RMCI low 126c, KXDPWORLDTOUR-DPWTC26-JRAH low 42c, KXDPWORLDTOUR-DPWTC26-PREE low 322c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794423135438-2203af",
       "ts": "2026-11-11T18:52:15Z",
@@ -4969,6 +4966,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- DPWT-DPWTC26 - Grant Forrest has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1794469975617-da5f15",
+      "ts": "2026-11-12T07:52:55Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 3 driver(s): Victor Perez (+47%), Francesco Laporta (+47%), Freddy Schott (+24%)",
       "severity": "warn"
     }
   ]
