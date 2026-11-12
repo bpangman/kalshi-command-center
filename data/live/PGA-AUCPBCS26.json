@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T23:08:41.374094Z",
+  "generated_at": "2026-11-12T23:10:05.522363Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$24.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 148,662, ? resting. Worst line +$24. Floor protocol off."
+          "In race (Ingame). Sold 148,662, ? resting. Worst line +$24. Floor protocol off. Bot is slow (checks every 51s, set for 30s)."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T23:07:51Z"
+    "ts": "2026-11-12T23:09:52Z"
   },
   "posts": [
-    {
-      "id": "1794446034091-2e38da",
-      "ts": "2026-11-12T01:13:54Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 21,551 resting. Next: Risk glide starts, Thu 3:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794446396211-acae89",
       "ts": "2026-11-12T01:17:51Z",
@@ -4537,27 +4527,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794524931610-efbeb9",
+      "ts": "2026-11-12T23:08:51Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$24.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794491424929-51e4b7",
-      "ts": "2026-11-12T13:50:24Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: RISK-BREACH - worst-all-resting -366.51 past allowed limit -306.00",
-      "severity": "warn"
-    },
-    {
-      "id": "1794491827877-3571a6",
-      "ts": "2026-11-12T13:57:07Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- PGA-AUCPBCS26 - Max Homa has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Rafael Campos has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: PGA-AUCPBCS26 - Matthieu Pavon is posting again.",
-      "severity": "warn"
-    },
     {
       "id": "1794491917323-2c4a73",
       "ts": "2026-11-12T13:58:37Z",
@@ -5438,6 +5420,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+50 on Sudarshan Yellamaraju @ 0.01 (maker)\n+25 on Zac Blair @ 0.00 (maker)\nworst outcome now +21\nIf the race ends... you make\nJackson Suber: +21\nMiles Russell: +23\nTommy Morrison: +25\nKris Ventura: +31\nDaniel Berger: +32\nZac Blair: +32\nChandler Blanchet: +32\nLuke Clanton: +32\nall others (118) >= +32",
+      "severity": "warn"
+    },
+    {
+      "id": "1794524954345-8a9fb0",
+      "ts": "2026-11-12T23:09:14Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 11 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-CBEZ low 50c, KXPGATOUR-AUCPBCS26-JDAH low 1451c, KXPGATOUR-AUCPBCS26-TKAN high 50c, KXPGATOUR-AUCPBCS26-HLEB low 102c, KXPGATOUR-AUCPBCS26-PMAL high 50c, KXPGATOUR-AUCPBCS26-TMOO low 25c, KXPGATOUR-AUCPBCS26-CPAN low 1394c, KXPGATOUR-AUCPBCS26-JPAR low 25c, KXPGATOUR-AUCPBCS26-JSTA high 383c, KXPGATOUR-AUCPBCS26-FHAR high 1548c, KXPGATOUR-AUCPBCS26-BMAR high 1549c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794524969415-247594",
+      "ts": "2026-11-12T23:09:29Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+1500 on Nicholas Lindheim @ 0.00 (maker)\nworst outcome now +24\nIf the race ends... you make\nJackson Suber: +24\nMiles Russell: +26\nTommy Morrison: +28\nKris Ventura: +34\nDaniel Berger: +35\nZac Blair: +35\nChandler Blanchet: +35\nLuke Clanton: +35\nall others (118) >= +35",
       "severity": "warn"
     }
   ]
