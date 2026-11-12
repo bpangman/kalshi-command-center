@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T15:14:20.766122Z",
+  "generated_at": "2026-11-12T15:15:42.125356Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$83.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 129,896, 12,317 resting. Worst line -$83. Floor protocol off."
+          "In race (Ingame). Sold 129,896, 12,317 resting. Worst line -$83. Floor protocol off. Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -44,28 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T15:13:34Z"
+    "ts": "2026-11-12T15:15:35Z"
   },
   "posts": [
-    {
-      "id": "1794385696675-d6ad8b",
-      "ts": "2026-11-11T08:28:16Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 22,478 resting. Next: Risk glide starts, Thu 3:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794385990174-3d2879",
-      "ts": "2026-11-11T08:33:10Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nDaniel Berger: -277\nChandler Blanchet: -277\nLuke Clanton: -277\nCam Davis: -277\nAdrien Dumont De Chassart: -277\nNick Dunlap: -277\nAustin Eckroat: -277\nPatrick Fishburn: -277\nall others (108) >= -277\nCollected $1244 premium ($21 fees) | Paper margin over fair $171 (not realized until settlement)\nEvent: A.J. Ewart: running: T1 E; Aaron Wise: running: T1 E\nCore posted book 1.22 | Worst now -277 | Cash free $6882\nAnchor age 302s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1794386119622-96cba1",
       "ts": "2026-11-11T08:33:10Z",
@@ -4307,18 +4288,33 @@
       "text": "In race (Ingame). Worst line -$83.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1794496475097-8257a8",
+      "ts": "2026-11-12T15:13:43Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 3,716 (race floor first): driver NHAR x1,360 at 21c, driver JSTA x1,000 at 26c, +3 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 3716.0,
+        "rows": 5
+      }
+    },
+    {
+      "id": "1794496475100-4e18e6",
+      "ts": "2026-11-12T15:14:35Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$83.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794446923309-6ebf92",
-      "ts": "2026-11-12T01:28:43Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- PGA-AUCPBCS26 - Lee Hodges has had no resting orders for at least 316 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794448447273-f507fb",
       "ts": "2026-11-12T01:54:07Z",
@@ -5208,6 +5204,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 12 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-CBEZ low 50c, KXPGATOUR-AUCPBCS26-ECOL low 538c, KXPGATOUR-AUCPBCS26-DGHI high 19c, KXPGATOUR-AUCPBCS26-EGON low 1394c, KXPGATOUR-AUCPBCS26-MGRE low 300c, KXPGATOUR-AUCPBCS26-RHOS low 1394c, KXPGATOUR-AUCPBCS26-MHUB low 1390c, KXPGATOUR-AUCPBCS26-PKIZ low 1390c, KXPGATOUR-AUCPBCS26-PNYH low 1390c, KXPGATOUR-AUCPBCS26-HSPR low 100c, KXPGATOUR-AUCPBCS26-ASVE low 1394c, KXPGATOUR-AUCPBCS26-DWAL low 1390c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794496538663-11b2e7",
+      "ts": "2026-11-12T15:15:38Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+25 on Billy Horschel @ 0.02 (maker)\n+25 on Billy Horschel @ 0.02 (maker)\nworst outcome now -83\nIf the race ends... you make\nSeamus Power: -83\nDaniel Berger: -33\nChandler Blanchet: -33\nLuke Clanton: -33\nJoel Dahmen: -33\nCam Davis: -33\nZecheng Dou: -33\nAdrien Dumont De Chassart: -33\nall others (118) >= -33",
       "severity": "warn"
     }
   ]
