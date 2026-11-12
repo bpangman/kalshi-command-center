@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T14:36:48.866684Z",
+  "generated_at": "2026-11-12T14:38:47.997872Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$89.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 128,291, 12,317 resting. Worst line -$89. Floor protocol off. Bot is slow (checks every 53s, set for 30s)."
+          "In race (Ingame). Sold 128,316, 12,317 resting. Worst line -$89. Floor protocol off."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T14:36:18Z"
+    "ts": "2026-11-12T14:38:19Z"
   },
   "posts": [
-    {
-      "id": "1794377545084-766060",
-      "ts": "2026-11-11T06:12:25Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 22,478 resting. Next: Risk glide starts, Thu 3:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794378450522-44d467",
-      "ts": "2026-11-11T06:27:30Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 22,478 resting. Next: Risk glide starts, Thu 3:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794378676724-eb149e",
       "ts": "2026-11-11T06:31:16Z",
@@ -4228,18 +4208,39 @@
       "text": "In race (Ingame). Worst line -$89.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1794494239333-3532b7",
+      "ts": "2026-11-12T14:37:19Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$89.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1794494299813-04232a",
+      "ts": "2026-11-12T14:36:19Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 25: driver NSHI x25 at 1.4c. Worst line -$89.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 25.0,
+        "fills": [
+          {
+            "side": "driver NSHI",
+            "price": 0.014,
+            "qty": 25.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794439912997-d88ba2",
-      "ts": "2026-11-11T23:31:52Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- PGA-AUCPBCS26 - Matt Kuchar has had no resting orders for at least 500 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794441268823-527bb0",
       "ts": "2026-11-11T23:54:28Z",
@@ -5129,6 +5130,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH - worst-all-resting -356.74 past allowed limit -306.00",
+      "severity": "warn"
+    },
+    {
+      "id": "1794494214243-6fd3a5",
+      "ts": "2026-11-12T14:36:54Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+54 on Tommy Morrison @ 0.01 (maker)\n+25 on Neal Shipley @ 0.01 (maker)\nworst outcome now -89\nIf the race ends... you make\nSeamus Power: -89\nDaniel Berger: -39\nChandler Blanchet: -39\nLuke Clanton: -39\nJoel Dahmen: -39\nCam Davis: -39\nZecheng Dou: -39\nAdrien Dumont De Chassart: -39\nall others (108) >= -39",
       "severity": "warn"
     }
   ]
