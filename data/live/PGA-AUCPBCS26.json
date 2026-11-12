@@ -1,10 +1,10 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T20:07:13.269545Z",
+  "generated_at": "2026-11-12T20:08:34.072460Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line +$4.",
+    "headline": "In race (Ingame). Worst line +$6.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 145,167, ? resting. Worst line +$4. Floor protocol off."
+          "In race (Ingame). Sold 145,217, ? resting. Worst line +$6. Floor protocol off."
         ]
       },
       {
@@ -44,23 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T20:06:34Z"
+    "ts": "2026-11-12T20:07:34Z"
   },
   "posts": [
-    {
-      "id": "1794428458299-106b12",
-      "ts": "2026-11-11T20:18:53Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 43 (golf add): driver DGHI x43 at 5.3c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 43.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794429243660-b004e9",
       "ts": "2026-11-11T20:34:03Z",
@@ -4384,18 +4370,54 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794514094990-22fa11",
+      "ts": "2026-11-12T20:07:55Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 304: driver AEWA x100 at 0.3c, driver DCHA x79 at 0.2c, driver SSTE x50 at 0.4c, +3 more. Worst line +$7.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 304.0,
+        "fills": [
+          {
+            "side": "driver AEWA",
+            "price": 0.003,
+            "qty": 100.0
+          },
+          {
+            "side": "driver DCHA",
+            "price": 0.002,
+            "qty": 79.0
+          },
+          {
+            "side": "driver SSTE",
+            "price": 0.004,
+            "qty": 50.0
+          },
+          {
+            "side": "driver PCOO",
+            "price": 0.017,
+            "qty": 25.0
+          },
+          {
+            "side": "driver JSMI",
+            "price": 0.058,
+            "qty": 25.0
+          },
+          {
+            "side": "driver ASMO",
+            "price": 0.025,
+            "qty": 25.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794488767914-c27c1a",
-      "ts": "2026-11-12T13:06:07Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
-      "severity": "warn"
-    },
     {
       "id": "1794488767916-aec677",
       "ts": "2026-11-12T13:06:07Z",
@@ -5285,6 +5307,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Golf PGA-AUCPBCS26: trimmed resting sells in place (Jimmy Stanger by 13) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794514106423-71ae65",
+      "ts": "2026-11-12T20:08:26Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+1154 on Jimmy Stanger @ 0.00 (maker)\n+25 on Zachary Bauchou @ 0.01 (maker)\n+26 on Miles Russell @ 0.01 (maker)\n+100 on A.J. Ewart @ 0.00 (maker)\n+50 on Sam Stevens @ 0.00 (maker)\n+25 on Pierceson Coody @ 0.02 (maker)\n+25 on Jordan Smith @ 0.06 (maker)\n+25 on Austin Smotherman @ 0.03 (maker)\n+79 on Davis Chatfield @ 0.00 (maker)\nworst outcome now +7\nIf the race ends... you make\nJackson Suber: +7\nDaniel Berger: +18\nChandler Blanchet: +18\nLuke Clanton: +18\nTrace Crowe: +18\nCam Davis: +18\nZecheng Dou: +18\nAdrien Dumont De Chassart: +18\nall others (118) >= +18",
       "severity": "warn"
     }
   ]
