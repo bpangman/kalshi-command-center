@@ -1,6 +1,6 @@
 {
   "key": "W11-WASNYG",
-  "generated_at": "2026-11-12T21:42:03.636295Z",
+  "generated_at": "2026-11-12T21:43:27.856973Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -181,18 +181,9 @@
       }
     ],
     "book": "W11-WASNYG",
-    "ts": "2026-11-12T21:41:54Z"
+    "ts": "2026-11-12T21:42:55Z"
   },
   "posts": [
-    {
-      "id": "1794337388167-aa3fe8",
-      "ts": "2026-11-10T19:03:08Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNYG 1-6: +204 (+4.2% of bankroll)\nNYG 7-14: +185 (+3.8% of bankroll)\nNYG 15+: -154 (-3.1% of bankroll)\nWAS 1-6: +204 (+4.2% of bankroll)\nWAS 7-14: -346 (-7.1% of bankroll)\nWAS 15+: -276 (-5.6% of bankroll)\nCollected $204 premium ($0 fees) | Paper margin over fair $24 (not realized until settlement)\nheld / resting\nNYG 1-6: 0 / 1000\nNYG 7-14: 20 / 980\nNYG 15+: 358 / 642\nWAS 1-6: 0 / 1000\nWAS 7-14: 550 / 450\nWAS 15+: 481 / 494\nPosted book 1.27 | Sold avg 1.140 | Worst now +223 | Cash free $1678\nAnchor age 0s | Last fill 16827s ago",
-      "severity": "info"
-    },
     {
       "id": "1794337818061-7facb2",
       "ts": "2026-11-10T19:10:18Z",
@@ -3534,27 +3525,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794519775089-ca30c7",
+      "ts": "2026-11-12T21:40:40Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 21: WAS by 1-6 x21 at 21c. Worst line -$363.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 21.0,
+        "fills": [
+          {
+            "side": "WAS by 1-6",
+            "price": 0.21,
+            "qty": 21.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794300724324-3671e8",
-      "ts": "2026-11-10T08:52:04Z",
-      "book": "W11-WASNYG",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
-      "id": "1794300753557-cc8d9c",
-      "ts": "2026-11-10T08:52:33Z",
-      "book": "W11-WASNYG",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-WASNYG): worst -354.33 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794302590597-745dba",
       "ts": "2026-11-10T09:23:10Z",
@@ -4435,6 +4428,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+7 on NYG 1-6 @ 0.23 (maker)\nworst outcome now +16\nheld 603/589/578/405/1070/877\nIf the game ends... you make\nNYG 1-6: +86 (+1.8% of bankroll)\nNYG 7-14: +101 (+2.1% of bankroll)\nNYG 15+: +111 (+2.3% of bankroll)\nWAS 1-6: +284 (+5.8% of bankroll)\nWAS 7-14: -381 (-7.8% of bankroll)\nWAS 15+: -187 (-3.8% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794519742259-411654",
+      "ts": "2026-11-12T21:42:22Z",
+      "book": "W11-WASNYG",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W11-WASNYG): worst -363.09 vs floor -325.00. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1794519742259-505b9c",
+      "ts": "2026-11-12T21:42:22Z",
+      "book": "W11-WASNYG",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W11-WASNYG): held worst -363.09 (backstop -300) or lagging gap 621 (batch-ahead cap None) for 60+ min. Check the command center.",
       "severity": "warn"
     }
   ]
