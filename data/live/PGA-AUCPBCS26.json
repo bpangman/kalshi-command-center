@@ -1,19 +1,19 @@
 {
   "key": "PGA-AUCPBCS26",
-  "generated_at": "2026-11-12T14:17:07.162166Z",
+  "generated_at": "2026-11-12T14:18:26.718531Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$91.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 128,120, 12,317 resting. Worst line -$91. Floor protocol off."
+          "In race (Ingame). Sold 128,145, 12,317 resting. Worst line -$91. Floor protocol off. Bot is slow (checks every 55s, set for 30s)."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-AUCPBCS26",
-    "ts": "2026-11-12T14:16:09Z"
+    "ts": "2026-11-12T14:18:10Z"
   },
   "posts": [
-    {
-      "id": "1794371389986-578ed7",
-      "ts": "2026-11-11T04:29:49Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nDaniel Berger: -279\nChandler Blanchet: -279\nLuke Clanton: -279\nCam Davis: -279\nAdrien Dumont De Chassart: -279\nNick Dunlap: -279\nAustin Eckroat: -279\nPatrick Fishburn: -279\nall others (108) >= -279\nCollected $1242 premium ($21 fees) | Paper margin over fair $171 (not realized until settlement)\nEvent: A.J. Ewart: running: T1 E; Aaron Wise: running: T1 E\nCore posted book 1.20 | Worst now -279 | Cash free $137\nAnchor age 62s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1794371952870-b9775a",
       "ts": "2026-11-11T04:39:12Z",
@@ -4199,18 +4190,19 @@
       "text": "Sharp price move on 1 driver: driver DGHI.",
       "severity": "info",
       "title": "Price shock"
+    },
+    {
+      "id": "1794493090733-051731",
+      "ts": "2026-11-12T14:18:10Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$91.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794435319503-e79e45",
-      "ts": "2026-11-11T22:15:19Z",
-      "book": "PGA-AUCPBCS26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-AUCPBCS26): 4 ladder(s) stale 10+ min: KXPGATOUR-AUCPBCS26-ECOL low 800c, KXPGATOUR-AUCPBCS26-DGHI low 215c, KXPGATOUR-AUCPBCS26-JKOI low 253c, KXPGATOUR-AUCPBCS26-HSPR low 1160c. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794435929647-7a72c7",
       "ts": "2026-11-11T22:25:29Z",
@@ -5100,6 +5092,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 1 driver(s): Doug Ghim (+53%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794493044759-99ee1a",
+      "ts": "2026-11-12T14:17:24Z",
+      "book": "PGA-AUCPBCS26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 32 unexplained\n- PGA-AUCPBCS26 - Adrien Dumont De Chassart has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Austin Eckroat has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Alejandro Tosti has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Chandler Blanchet has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Cam Davis has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Christiaan Maas has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Chandler Phillips has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-AUCPBCS26 - Cole Sherwood has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- plus 24 more (fleet/state/empty_side_sentinel.json)",
       "severity": "warn"
     }
   ]
