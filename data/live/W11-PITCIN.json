@@ -1,30 +1,41 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-13T16:03:28.394583Z",
+  "generated_at": "2026-11-13T16:04:48.362374Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 7:20pm CT. Worst line -$144, goal -$150.",
+    "headline": "Building toward kickoff Sun 7:20pm CT. Worst line -$686, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
+        "side": "CIN by 15+",
+        "resting": "none",
+        "exposure": -686.48,
+        "exposure_text": "-$686",
+        "move": "Stops adding (backstop)",
+        "when": "holding until worst loss is back above -$300 (now -$686)",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-13T16:02:53Z"
+      },
+      {
         "side": "PIT by 15+",
         "resting": "554 @ 8-11c",
-        "exposure": -144.14,
-        "exposure_text": "-$144",
-        "move": "Holding",
-        "when": "no move planned until the even-done check at Sun 6:50pm CT",
-        "at": null,
+        "exposure": 36.02,
+        "exposure_text": "+$36",
+        "move": "Paid balancing (trickle)",
+        "when": "starts Sun 7:00pm CT, up to $100 in all",
+        "at": "2026-11-16T01:00:00Z",
         "stuck": false,
         "last_fill": "2026-11-13T14:36:32Z"
       },
       {
         "side": "CIN by 7-14",
         "resting": "491 @ 22-23c",
-        "exposure": -53.71,
-        "exposure_text": "-$54",
+        "exposure": 126.45,
+        "exposure_text": "+$126",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 7:00pm CT, up to $100 in all",
         "at": "2026-11-16T01:00:00Z",
@@ -34,18 +45,8 @@
       {
         "side": "CIN by 1-6",
         "resting": "637 @ 23-25c",
-        "exposure": 33.36,
-        "exposure_text": "+$33",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 7:00pm CT, up to $100 in all",
-        "at": "2026-11-16T01:00:00Z",
-        "stuck": false
-      },
-      {
-        "side": "CIN by 15+",
-        "resting": "900 @ 19-23c",
-        "exposure": 33.36,
-        "exposure_text": "+$33",
+        "exposure": 213.52,
+        "exposure_text": "+$214",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 7:00pm CT, up to $100 in all",
         "at": "2026-11-16T01:00:00Z",
@@ -54,8 +55,8 @@
       {
         "side": "PIT by 1-6",
         "resting": "598 @ 18-20c",
-        "exposure": 33.36,
-        "exposure_text": "+$33",
+        "exposure": 213.52,
+        "exposure_text": "+$214",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 7:00pm CT, up to $100 in all",
         "at": "2026-11-16T01:00:00Z",
@@ -64,8 +65,8 @@
       {
         "side": "PIT by 7-14",
         "resting": "701 @ 14-15c",
-        "exposure": 33.36,
-        "exposure_text": "+$33",
+        "exposure": 213.52,
+        "exposure_text": "+$214",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 7:00pm CT, up to $100 in all",
         "at": "2026-11-16T01:00:00Z",
@@ -76,7 +77,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 7:20pm CT. Sold 265, 3,880 resting. Worst line -$144 (goal -$150)."
+          "Pregame build, kickoff Sun 7:20pm CT. Sold 1,165, 2,980 resting. Worst line -$686 (goal -$150)."
         ]
       },
       {
@@ -89,14 +90,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$144 is better than -$200.",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$686).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
+          "Backstop ON: CIN by 15+ stopped adding until worst line is above -$300 (now -$686).",
           "Paid balancing starts Sun 7:00pm CT: worst line to -$150 by Sun 7:15pm CT, up to $100.",
           "At Sun 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Sun 7:20pm CT: the in-game engine takes over."
@@ -145,11 +146,11 @@
       },
       {
         "label": "CIN by 15+",
-        "held": 0.0,
-        "resting": 900.0,
+        "held": 900.0,
+        "resting": 0.0,
         "target": null,
-        "status": "even",
-        "price": 0.19
+        "status": "heavy",
+        "price": null
       },
       {
         "label": "PIT by 1-6",
@@ -177,7 +178,7 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-13T16:02:45Z"
+    "ts": "2026-11-13T16:04:46Z"
   },
   "posts": [
     {
@@ -1135,6 +1136,16 @@
       "text": "Row sold out: CIN by 15+ at 20c (600 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794585826331-e9228f",
+      "ts": "2026-11-13T16:03:46Z",
+      "book": "W11-PITCIN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Sun 7:20pm CT. Worst line -$686, goal -$150. Next: Even-done check, Sun 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -1208,6 +1219,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on PIT 15+ @ 0.08 (maker)\nworst outcome now -163\nheld 0/87/0/0/0/178\nIf the game ends... you make\nCIN 1-6: +33 (+0.2% of bankroll)\nCIN 7-14: -54 (-0.4% of bankroll)\nCIN 15+: +33 (+0.2% of bankroll)\nPIT 1-6: +33 (+0.2% of bankroll)\nPIT 7-14: +33 (+0.2% of bankroll)\nPIT 15+: -144 (-1.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794585855923-1ffed2",
+      "ts": "2026-11-13T16:04:15Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+146 on CIN 15+ @ 0.19 (maker)\n+700 on CIN 15+ @ 0.20 (maker)\n+54 on CIN 15+ @ 0.23 (maker)\nworst outcome now -163\nheld 0/87/900/0/0/178\nIf the game ends... you make\nCIN 1-6: +214 (+1.5% of bankroll)\nCIN 7-14: +126 (+0.9% of bankroll)\nCIN 15+: -686 (-4.7% of bankroll)\nPIT 1-6: +214 (+1.5% of bankroll)\nPIT 7-14: +214 (+1.5% of bankroll)\nPIT 15+: +36 (+0.2% of bankroll)",
       "severity": "warn"
     }
   ]
