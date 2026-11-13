@@ -1,198 +1,109 @@
 {
   "key": "W11-WASNYG",
-  "generated_at": "2026-11-13T01:13:18.111345Z",
+  "generated_at": "2026-11-13T01:14:38.124946Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:15pm CT. Worst line +$28.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line +$28.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "NYG by 1-6",
-        "resting": "2 @ 23-24c",
-        "exposure": 28.0,
-        "exposure_text": "+$28",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-12T22:19:29Z"
-      },
-      {
-        "side": "WAS by 1-6",
-        "resting": "5 @ 21-24c",
-        "exposure": 28.0,
-        "exposure_text": "+$28",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-13T00:55:02Z"
-      },
-      {
-        "side": "WAS by 7-14",
-        "resting": "1 @ 17c",
-        "exposure": 28.0,
-        "exposure_text": "+$28",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-12T20:31:56Z"
-      },
-      {
-        "side": "NYG by 15+",
-        "resting": "4 @ 15-17c",
-        "exposure": 28.06,
-        "exposure_text": "+$28",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-13T00:55:02Z"
-      },
-      {
-        "side": "WAS by 15+",
-        "resting": "2 @ 12-13c",
-        "exposure": 28.29,
-        "exposure_text": "+$28",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-13T00:55:02Z"
-      },
-      {
-        "side": "NYG by 7-14",
-        "resting": "2 @ 19-21c",
-        "exposure": 28.4,
-        "exposure_text": "+$28",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-13T00:55:02Z"
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 6,419, 16 resting. Worst line +$28 (goal -$150)."
+          "In game (Ingame). Sold 6,419, 0 resting. Worst line +$28. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line +$28 is better than -$150.",
-          "Batches used: 10 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line +$28; spent $15 of $100.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-13T01:15:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "NYG by 1-6",
         "held": 1070.0,
-        "resting": 2.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": null
       },
       {
         "label": "NYG by 7-14",
         "held": 1069.6,
-        "resting": 2.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.19
+        "price": null
       },
       {
         "label": "NYG by 15+",
         "held": 1069.9,
-        "resting": 4.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.15
+        "price": null
       },
       {
         "label": "WAS by 1-6",
         "held": 1070.0,
-        "resting": 5.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.21
+        "price": null
       },
       {
         "label": "WAS by 7-14",
         "held": 1070.0,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.17
+        "price": null
       },
       {
         "label": "WAS by 15+",
         "held": 1069.7,
-        "resting": 2.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.12
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W11-WASNYG",
-    "ts": "2026-11-13T01:12:18Z"
+    "ts": "2026-11-13T01:14:18Z"
   },
   "posts": [
-    {
-      "id": "1794382234101-e830a5",
-      "ts": "2026-11-11T07:30:34Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794383139612-9f1886",
-      "ts": "2026-11-11T07:45:39Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794384045845-cb116f",
       "ts": "2026-11-11T08:00:45Z",
@@ -3693,6 +3604,26 @@
       "source": "bot",
       "text": "Comeback mode: WAS now 47%",
       "severity": "info"
+    },
+    {
+      "id": "1794532398555-6755af",
+      "ts": "2026-11-13T01:13:18Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794532398555-a6e38a",
+      "ts": "2026-11-13T01:13:18Z",
+      "book": "W11-WASNYG",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line +$28.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
