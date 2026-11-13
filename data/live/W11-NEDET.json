@@ -1,10 +1,10 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-13T02:31:58.473185Z",
+  "generated_at": "2026-11-13T02:33:25.229255Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$394, goal -$75.",
+    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$387, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "DET by 15+",
         "resting": "none",
-        "exposure": -393.68,
-        "exposure_text": "-$394",
+        "exposure": -387.18,
+        "exposure_text": "-$387",
         "move": "Holding",
         "when": "no move planned until the even-done check at Sun 8:00am CT",
         "at": null,
@@ -22,20 +22,20 @@
       },
       {
         "side": "NE by 15+",
-        "resting": "50 @ 13c",
-        "exposure": -343.68,
-        "exposure_text": "-$344",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 8:10am CT, up to $100 in all",
-        "at": "2026-11-15T14:10:00Z",
-        "stuck": true,
-        "last_fill": "2026-11-13T00:03:30Z"
+        "resting": "none",
+        "exposure": -387.18,
+        "exposure_text": "-$387",
+        "move": "Holding",
+        "when": "no move planned until the even-done check at Sun 8:00am CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-13T02:31:25Z"
       },
       {
         "side": "DET by 1-6",
         "resting": "526 @ 23-24c",
-        "exposure": 161.32,
-        "exposure_text": "+$161",
+        "exposure": 167.82,
+        "exposure_text": "+$168",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-15T14:10:00Z",
@@ -44,8 +44,8 @@
       {
         "side": "DET by 7-14",
         "resting": "526 @ 20-21c",
-        "exposure": 161.32,
-        "exposure_text": "+$161",
+        "exposure": 167.82,
+        "exposure_text": "+$168",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-15T14:10:00Z",
@@ -54,8 +54,8 @@
       {
         "side": "NE by 1-6",
         "resting": "564 @ 19-21c",
-        "exposure": 161.32,
-        "exposure_text": "+$161",
+        "exposure": 167.82,
+        "exposure_text": "+$168",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-15T14:10:00Z",
@@ -64,8 +64,8 @@
       {
         "side": "NE by 7-14",
         "resting": "450 @ 15-16c",
-        "exposure": 161.32,
-        "exposure_text": "+$161",
+        "exposure": 167.82,
+        "exposure_text": "+$168",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-15T14:10:00Z",
@@ -76,7 +76,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 1,060, 2,116 resting. Worst line -$394 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 1,110, 2,066 resting. Worst line -$387 (goal -$75)."
         ]
       },
       {
@@ -89,7 +89,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$394).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$387).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -169,15 +169,15 @@
       },
       {
         "label": "NE by 15+",
-        "held": 505.0,
-        "resting": 50.0,
+        "held": 555.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.13
+        "price": null
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-13T02:31:02Z"
+    "ts": "2026-11-13T02:33:03Z"
   },
   "posts": [
     {
@@ -944,6 +944,16 @@
       "text": "Quiet for 15 min. 2,116 resting. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794537143085-02ba69",
+      "ts": "2026-11-13T02:32:20Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: NE by 15+ at 13c (50 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -1009,6 +1019,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-NEDET): worst -393.68 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794537201985-350ad2",
+      "ts": "2026-11-13T02:33:21Z",
+      "book": "W11-NEDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+50 on NE 15+ @ 0.13 (maker)\nworst outcome now +16\nheld 0/0/555/0/0/555\nIf the game ends... you make\nDET 1-6: +168 (+2.2% of bankroll)\nDET 7-14: +168 (+2.2% of bankroll)\nDET 15+: -387 (-5.0% of bankroll)\nNE 1-6: +168 (+2.2% of bankroll)\nNE 7-14: +168 (+2.2% of bankroll)\nNE 15+: -387 (-5.0% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
