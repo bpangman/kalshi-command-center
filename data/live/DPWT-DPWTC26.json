@@ -1,19 +1,19 @@
 {
   "key": "DPWT-DPWTC26",
-  "generated_at": "2026-11-13T09:29:48.825088Z",
+  "generated_at": "2026-11-13T09:31:09.515619Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$16.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 23,810, ? resting. Worst line +$16. Floor protocol off."
+          "In race (Ingame). Sold 23,810, ? resting. Worst line +$16. Floor protocol off. Bot is slow (checks every 47s, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-DPWTC26",
-    "ts": "2026-11-13T09:29:31Z"
+    "ts": "2026-11-13T09:30:31Z"
   },
   "posts": [
-    {
-      "id": "1794415829701-74bdc6",
-      "ts": "2026-11-11T16:48:16Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 1: driver JRAH x1 at 13c. Worst line -$148.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 1.0,
-        "fills": [
-          {
-            "side": "driver JRAH",
-            "price": 0.13,
-            "qty": 1.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794416615433-6dcfc1",
       "ts": "2026-11-11T17:01:31Z",
@@ -3585,18 +3565,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794562231521-6ee392",
+      "ts": "2026-11-13T09:30:31Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$16.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1794474378561-23851b",
-      "ts": "2026-11-12T09:06:18Z",
-      "book": "DPWT-DPWTC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- DPWT-DPWTC26 - Jeff Winther has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-DPWTC26 - Kota Kaneko has had no resting orders for at least 71 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1794474755196-6209cb",
       "ts": "2026-11-12T09:12:35Z",
@@ -4486,6 +4467,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 5 driver(s): Oliver Lindell (+50%), Jacob Skov Olesen (+41%), Kristoffer Reitan (+36%), Adam Scott (+33%), Tyrrell Hatton (+29%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794562197343-b08ee3",
+      "ts": "2026-11-13T09:29:57Z",
+      "book": "DPWT-DPWTC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- DPWT-DPWTC26 - Jacob Skov Olesen has had no resting orders for at least 1412 min (reason unknown: no reason logged).\n- DPWT-DPWTC26 - Oliver Lindell has had no resting orders for at least 1412 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
