@@ -1,10 +1,10 @@
 {
   "key": "W11-WASNYG",
-  "generated_at": "2026-11-13T00:54:00.111852Z",
+  "generated_at": "2026-11-13T00:55:19.490193Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$90, goal -$150.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$90.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -15,7 +15,7 @@
         "exposure": -90.49,
         "exposure_text": "-$90",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 6:55pm CT",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-12T22:19:29Z"
@@ -26,7 +26,7 @@
         "exposure": -90.49,
         "exposure_text": "-$90",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 6:55pm CT",
+        "when": "no move planned until kickoff at 7:15pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-12T20:31:56Z"
@@ -37,8 +37,8 @@
         "exposure": -13.2,
         "exposure_text": "-$13",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-13T00:55:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-13T00:00:46Z"
       },
@@ -48,8 +48,8 @@
         "exposure": 4.57,
         "exposure_text": "+$5",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-13T00:55:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-12T23:59:50Z"
       },
@@ -59,8 +59,8 @@
         "exposure": 29.51,
         "exposure_text": "+$30",
         "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-13T00:55:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-12T22:43:41Z"
       },
@@ -71,9 +71,9 @@
         "exposure_text": "+$391",
         "move": "Step price down 1c (19c to 18c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-13T00:53:11Z",
+        "at": "2026-11-13T00:55:12Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 6:55pm CT",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-12T20:38:45Z",
         "lag_note": "Steps to 18c at the next check."
       }
@@ -82,7 +82,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 5,646, 769 resting. Worst line -$90 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 5,646, 769 resting. Worst line -$90 (goal -$150)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$90 is better than -$200.",
+          "Gate open: worst line -$90 is better than -$150.",
           "Batches used: 10 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
+          "Paid balancing is running: plan -$150, worst line -$90; spent $15 of $100.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -179,88 +179,9 @@
       }
     ],
     "book": "W11-WASNYG",
-    "ts": "2026-11-13T00:53:11Z"
+    "ts": "2026-11-13T00:55:12Z"
   },
   "posts": [
-    {
-      "id": "1794367748093-8c1a95",
-      "ts": "2026-11-11T03:29:08Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794368652963-4ffd8c",
-      "ts": "2026-11-11T03:44:12Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794369557845-743ea2",
-      "ts": "2026-11-11T03:59:17Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794369951170-3f95d4",
-      "ts": "2026-11-11T04:05:51Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nNYG 1-6: +213 (+4.4% of bankroll)\nNYG 7-14: +163 (+3.3% of bankroll)\nNYG 15+: -144 (-3.0% of bankroll)\nWAS 1-6: +213 (+4.4% of bankroll)\nWAS 7-14: -337 (-6.9% of bankroll)\nWAS 15+: -292 (-6.0% of bankroll)\nCollected $213 premium ($0 fees) | Paper margin over fair $26 (not realized until settlement)\nheld / resting\nNYG 1-6: 0 / 1000\nNYG 7-14: 51 / 949\nNYG 15+: 358 / 642\nWAS 1-6: 0 / 1000\nWAS 7-14: 550 / 450\nWAS 15+: 506 / 469\nPosted book 1.27 | Sold avg 1.141 | Worst now +223 | Cash free $1678\nAnchor age 0s | Last fill 6752s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794370463358-ea21c9",
-      "ts": "2026-11-11T04:14:23Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794371369292-46d982",
-      "ts": "2026-11-11T04:29:29Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794372274857-964ef0",
-      "ts": "2026-11-11T04:44:34Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794373179573-6631c9",
-      "ts": "2026-11-11T04:59:39Z",
-      "book": "W11-WASNYG",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,511 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794373573619-eb467d",
       "ts": "2026-11-11T05:06:13Z",
@@ -3676,6 +3597,85 @@
       "source": "bot",
       "text": "If the game ends... you make\nNYG 1-6: -90 (-1.8% of bankroll)\nNYG 7-14: +391 (+8.0% of bankroll)\nNYG 15+: +5 (+0.1% of bankroll)\nWAS 1-6: +30 (+0.6% of bankroll)\nWAS 7-14: -90 (-1.8% of bankroll)\nWAS 15+: -13 (-0.3% of bankroll)\nCollected $980 premium ($0 fees) | Paper margin over fair $49 (not realized until settlement)\nEvent: NYG 7-14: NYG 0-0, Q0 0:00; WAS 7-14: WAS 0-0, Q0 0:00\nheld / resting\nNYG 1-6: 1070 / 2\nNYG 7-14: 589 / 481\nNYG 15+: 975 / 95\nWAS 1-6: 950 / 113\nWAS 7-14: 1070 / 1\nWAS 15+: 993 / 77\nPosted book 1.10 | Sold avg 1.047 | Worst now +49 | Cash free $1678\nAnchor age 43s | Last fill 2742s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794531302306-9ea2d7",
+      "ts": "2026-11-13T00:55:02Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "trickle",
+      "text": "W11-WASNYG: selling 481 NYG 7-14 at 17c + 120 WAS 1-6 at 20c + 95 NYG 15+ at 13c + 77 WAS 15+ at 10c into the crowd's bid (about $15) to cut the worst case from -$90 to $28, a paid sale under fair value. Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1794531312233-21bddc",
+      "ts": "2026-11-13T00:55:02Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$90; goal -$150 by 7:10pm CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794531312234-47b47d",
+      "ts": "2026-11-13T00:55:02Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 481 NYG by 7-14 at the bid 17c. Worst line -$90. Cost $11.34.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794531312234-a74519",
+      "ts": "2026-11-13T00:55:02Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 120 WAS by 1-6 at the bid 20c. Worst line -$90. Cost $1.50.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794531312234-482226",
+      "ts": "2026-11-13T00:55:02Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 95 NYG by 15+ at the bid 13c. Worst line -$90. Cost $1.10.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794531312234-b7f4d8",
+      "ts": "2026-11-13T00:55:02Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 77 WAS by 15+ at the bid 10c. Worst line -$90. Cost $0.67.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794531312256-21cb82",
+      "ts": "2026-11-13T00:55:12Z",
+      "book": "W11-WASNYG",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794531312256-4e4b40",
+      "ts": "2026-11-13T00:55:12Z",
+      "book": "W11-WASNYG",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:15pm CT. Worst line -$90. Next: Paid balancing starts, 6:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
