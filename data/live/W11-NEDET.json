@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-14T20:10:21.563298Z",
+  "generated_at": "2026-11-14T20:11:58.211060Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,7 +38,7 @@
         "exposure_text": "-$45",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-14T20:09:42Z",
+        "at": "2026-11-14T20:11:42Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-14T16:45:24Z",
@@ -64,7 +64,7 @@
         "exposure_text": "+$226",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-14T20:09:42Z",
+        "at": "2026-11-14T20:11:42Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "lag_note": "Steps to 20c at the next check."
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 1,436, 2,417 resting. Worst line -$329 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 1,436, 2,478 resting. Worst line -$329 (goal -$75)."
         ]
       },
       {
@@ -151,10 +151,10 @@
       {
         "label": "DET by 7-14",
         "held": 55.0,
-        "resting": 688.0,
+        "resting": 749.0,
         "target": null,
         "status": "lagging",
-        "price": 0.18
+        "price": 0.17
       },
       {
         "label": "DET by 15+",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-14T20:09:42Z"
+    "ts": "2026-11-14T20:11:42Z"
   },
   "posts": [
     {
@@ -3236,18 +3236,29 @@
       "text": "Row sold out: DET by 7-14 at 17c (55 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794687102714-329f12",
+      "ts": "2026-11-14T20:09:28Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 55: DET by 7-14 x55 at 17c. Worst line -$329.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 55.0,
+        "fills": [
+          {
+            "side": "DET by 7-14",
+            "price": 0.17,
+            "qty": 55.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794535877053-be6731",
-      "ts": "2026-11-13T02:11:17Z",
-      "book": "W11-NEDET",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-NEDET): worst -393.68 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794537201985-350ad2",
       "ts": "2026-11-13T02:33:21Z",
@@ -4138,6 +4149,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-NEDET): worst -338.02 vs floor -175.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794687031881-e5d463",
+      "ts": "2026-11-14T20:10:31Z",
+      "book": "W11-NEDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+55 on DET 7-14 @ 0.17 (maker)\nworst outcome now -95\nheld 0/55/555/271/0/555\nIf the game ends... you make\nDET 1-6: +226 (+3.0% of bankroll)\nDET 7-14: +171 (+2.2% of bankroll)\nDET 15+: -329 (-4.3% of bankroll)\nNE 1-6: -45 (-0.6% of bankroll)\nNE 7-14: +226 (+3.0% of bankroll)\nNE 15+: -329 (-4.3% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
