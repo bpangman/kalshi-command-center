@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-14T05:43:21.094532Z",
+  "generated_at": "2026-11-14T05:44:46.931255Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-14T05:43:04Z"
+    "ts": "2026-11-14T05:44:04Z"
   },
   "posts": [
     {
@@ -1863,6 +1863,26 @@
       "text": "Row sold out: PIT by 1-6 at 18c (41 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794635085031-9b45ec",
+      "ts": "2026-11-14T05:42:41Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 41: PIT by 1-6 x41 at 18c. Worst line -$679.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 41.0,
+        "fills": [
+          {
+            "side": "PIT by 1-6",
+            "price": 0.18,
+            "qty": 41.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -2198,6 +2218,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-PITCIN): worst -686.48 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794635024482-ea2718",
+      "ts": "2026-11-14T05:43:44Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+41 on PIT 1-6 @ 0.18 (maker)\nworst outcome now -163\nheld 0/87/900/41/0/178\nIf the game ends... you make\nCIN 1-6: +221 (+1.5% of bankroll)\nCIN 7-14: +134 (+0.9% of bankroll)\nCIN 15+: -679 (-4.7% of bankroll)\nPIT 1-6: +180 (+1.2% of bankroll)\nPIT 7-14: +221 (+1.5% of bankroll)\nPIT 15+: +43 (+0.3% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
