@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-14T11:59:20.713264Z",
+  "generated_at": "2026-11-14T12:00:45.187658Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,44 +33,52 @@
       },
       {
         "side": "NE by 1-6",
-        "resting": "526 @ 20-21c",
+        "resting": "730 @ 18-21c",
         "exposure": 137.04,
         "exposure_text": "+$137",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 8:10am CT, up to $100 in all",
-        "at": "2026-11-15T14:10:00Z",
+        "move": "Hold price at 18c",
+        "when": "no crowd trade data yet",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-14T03:28:16Z"
+        "also": "Also: paid balancing starts Sun 8:10am CT",
+        "last_fill": "2026-11-14T03:28:16Z",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "DET by 1-6",
-        "resting": "526 @ 23-24c",
+        "resting": "806 @ 21-24c",
         "exposure": 175.04,
         "exposure_text": "+$175",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 8:10am CT, up to $100 in all",
-        "at": "2026-11-15T14:10:00Z",
-        "stuck": false
+        "move": "Step price down 1c (21c to 20c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-14T12:00:18Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts Sun 8:10am CT",
+        "lag_note": "Steps to 20c at the next check."
       },
       {
         "side": "DET by 7-14",
         "resting": "780 @ 19-21c",
         "exposure": 175.04,
         "exposure_text": "+$175",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 8:10am CT, up to $100 in all",
-        "at": "2026-11-15T14:10:00Z",
-        "stuck": false
+        "move": "Hold price at 19c",
+        "when": "no crowd trade data yet",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Sun 8:10am CT",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "NE by 7-14",
         "resting": "555 @ 14-16c",
         "exposure": 175.04,
         "exposure_text": "+$175",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Sun 8:10am CT, up to $100 in all",
-        "at": "2026-11-15T14:10:00Z",
-        "stuck": false
+        "move": "Hold price at 14c",
+        "when": "no crowd trade data yet",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Sun 8:10am CT",
+        "lag_note": "No crowd trade data yet."
       }
     ],
     "sections": [
@@ -83,7 +91,10 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): DET by 1-6, DET by 7-14, NE by 1-6, NE by 7-14.",
+          "DET by 1-6: 555 behind. Steps to 20c at the next check.",
+          "DET by 7-14: 555 behind. No crowd trade data yet.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -133,7 +144,7 @@
         "held": 0.0,
         "resting": 526.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.23
       },
       {
@@ -141,7 +152,7 @@
         "held": 0.0,
         "resting": 780.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.19
       },
       {
@@ -157,7 +168,7 @@
         "held": 38.0,
         "resting": 526.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.2
       },
       {
@@ -165,7 +176,7 @@
         "held": 0.0,
         "resting": 555.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
@@ -178,7 +189,7 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-14T11:59:18Z"
+    "ts": "2026-11-14T12:00:18Z"
   },
   "posts": [
     {
@@ -2680,6 +2691,16 @@
       "text": "Quiet for 15 min. 2,387 resting. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794657618915-3ad7ad",
+      "ts": "2026-11-14T12:00:18Z",
+      "book": "W11-NEDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff Sun 8:30am CT. Worst line -$380, goal -$75. Next: Even-done check, Sun 8:00am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
