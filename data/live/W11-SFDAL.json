@@ -1,10 +1,10 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T21:20:45.088395Z",
+  "generated_at": "2026-11-15T21:22:03.949193Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$2.",
+    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$1.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "SF by 1-6",
         "resting": "1 @ 24c",
-        "exposure": -2.33,
-        "exposure_text": "-$2",
+        "exposure": -0.85,
+        "exposure_text": "-$1",
         "move": "Holding",
         "when": "no move planned until kickoff at 3:25pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "SF by 7-14",
         "resting": "2 @ 24-25c",
-        "exposure": -0.33,
-        "exposure_text": "$0",
+        "exposure": 1.15,
+        "exposure_text": "+$1",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
         "at": null,
@@ -33,20 +33,20 @@
       },
       {
         "side": "DAL by 1-6",
-        "resting": "13 @ 19c",
-        "exposure": 9.67,
-        "exposure_text": "+$10",
+        "resting": "5 @ 19c",
+        "exposure": 3.35,
+        "exposure_text": "+$3",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-15T21:19:06Z"
+        "last_fill": "2026-11-15T21:21:09Z"
       },
       {
         "side": "SF by 15+",
         "resting": "14 @ 25c",
-        "exposure": 11.67,
-        "exposure_text": "+$12",
+        "exposure": 13.15,
+        "exposure_text": "+$13",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
         "at": null,
@@ -56,8 +56,8 @@
       {
         "side": "DAL by 7-14",
         "resting": "21 @ 13c",
-        "exposure": 17.67,
-        "exposure_text": "+$18",
+        "exposure": 19.15,
+        "exposure_text": "+$19",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
         "at": null,
@@ -67,11 +67,11 @@
       {
         "side": "DAL by 15+",
         "resting": "59 @ 8c",
-        "exposure": 56.67,
-        "exposure_text": "+$57",
+        "exposure": 58.15,
+        "exposure_text": "+$58",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T21:20:00Z",
+        "at": "2026-11-15T21:22:00Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T20:48:10Z",
@@ -82,7 +82,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 1,873, 110 resting. Worst line -$2 (goal -$50)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,881, 102 resting. Worst line -$1 (goal -$50)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$2 is better than -$50.",
+          "Gate open: worst line -$1 is better than -$50.",
           "Batches used: 13 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
-          "Paid balancing is running: plan -$50, worst line -$2; spent $0 of $100.",
+          "Paid balancing is running: plan -$50, worst line -$1; spent $0 of $100.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -126,8 +126,8 @@
     "sides": [
       {
         "label": "DAL by 1-6",
-        "held": 318.0,
-        "resting": 13.0,
+        "held": 325.8,
+        "resting": 5.2,
         "target": null,
         "status": "even",
         "price": 0.19
@@ -174,7 +174,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T21:20:00Z"
+    "ts": "2026-11-15T21:22:00Z"
   },
   "posts": [
     {
@@ -2904,6 +2904,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794777680674-86fe2b",
+      "ts": "2026-11-15T21:21:15Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP clipped DAL1TO6 39 -> 17@0.19 (REPLENISH batch #4): held 326, cap 349 [tighten 1.04x]",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
