@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T21:12:18.571569Z",
+  "generated_at": "2026-11-15T21:13:37.901417Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -12,7 +12,7 @@
       {
         "side": "SF by 1-6",
         "resting": "1 @ 24c",
-        "exposure": -5.45,
+        "exposure": -5.22,
         "exposure_text": "-$5",
         "move": "Holding",
         "when": "no move planned until kickoff at 3:25pm CT",
@@ -21,9 +21,20 @@
         "last_fill": "2026-11-15T20:22:34Z"
       },
       {
+        "side": "SF by 7-14",
+        "resting": "13 @ 23-25c",
+        "exposure": 7.78,
+        "exposure_text": "+$8",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-15T21:12:24Z"
+      },
+      {
         "side": "DAL by 1-6",
         "resting": "15 @ 18-19c",
-        "exposure": 8.55,
+        "exposure": 8.78,
         "exposure_text": "+$9",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
@@ -34,7 +45,7 @@
       {
         "side": "SF by 15+",
         "resting": "14 @ 25c",
-        "exposure": 8.55,
+        "exposure": 8.78,
         "exposure_text": "+$9",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
@@ -43,20 +54,9 @@
         "last_fill": "2026-11-15T19:01:10Z"
       },
       {
-        "side": "SF by 7-14",
-        "resting": "3 @ 23-25c",
-        "exposure": 8.55,
-        "exposure_text": "+$9",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-15T20:23:20Z"
-      },
-      {
         "side": "DAL by 7-14",
         "resting": "21 @ 13c",
-        "exposure": 14.55,
+        "exposure": 14.78,
         "exposure_text": "+$15",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
@@ -67,11 +67,11 @@
       {
         "side": "DAL by 15+",
         "resting": "59 @ 8c",
-        "exposure": 53.55,
+        "exposure": 53.78,
         "exposure_text": "+$54",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T21:11:57Z",
+        "at": "2026-11-15T21:12:57Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T20:48:10Z",
@@ -82,7 +82,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 1,859, 113 resting. Worst line -$5 (goal -$50)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,860, 112 resting. Worst line -$5 (goal -$50)."
         ]
       },
       {
@@ -98,7 +98,7 @@
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
           "Gate open: worst line -$5 is better than -$50.",
-          "Batches used: 12 (max 3 per side)."
+          "Batches used: 13 (max 3 per side)."
         ]
       },
       {
@@ -158,11 +158,11 @@
       },
       {
         "label": "SF by 7-14",
-        "held": 316.0,
-        "resting": 3.0,
+        "held": 317.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": 0.24
       },
       {
         "label": "SF by 15+",
@@ -174,7 +174,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T21:11:57Z"
+    "ts": "2026-11-15T21:12:57Z"
   },
   "posts": [
     {
@@ -2804,6 +2804,16 @@
         "contracts": 13.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1794777177407-ab2429",
+      "ts": "2026-11-15T21:12:50Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: SF by 7-14 at 23c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
