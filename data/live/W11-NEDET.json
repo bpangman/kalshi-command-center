@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T14:22:30.575311Z",
+  "generated_at": "2026-11-15T14:23:58.586741Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -26,7 +26,7 @@
         "exposure": -91.96,
         "exposure_text": "-$92",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$85); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$81); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T14:21:27Z"
@@ -37,7 +37,7 @@
         "exposure": -91.96,
         "exposure_text": "-$92",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$85); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$81); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T14:21:27Z"
@@ -48,7 +48,7 @@
         "exposure": -91.96,
         "exposure_text": "-$92",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$85); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$81); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T14:21:27Z"
@@ -59,7 +59,7 @@
         "exposure": -91.96,
         "exposure_text": "-$92",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$85); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$81); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T14:21:27Z"
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$85 (now -$93).",
+          "Gate closed: batches wait for the worst line to reach -$81 (now -$93).",
           "Batches used: 1 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$85, worst line -$93; spent $17 of $100.",
+          "Paid balancing is running: plan -$81, worst line -$93; spent $17 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -174,28 +174,9 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T14:22:12Z"
+    "ts": "2026-11-15T14:23:12Z"
   },
   "posts": [
-    {
-      "id": "1794611445354-595914",
-      "ts": "2026-11-13T23:10:45Z",
-      "book": "W11-NEDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +172 (+2.2% of bankroll)\nDET 7-14: +172 (+2.2% of bankroll)\nDET 15+: -383 (-5.0% of bankroll)\nNE 1-6: +151 (+2.0% of bankroll)\nNE 7-14: +172 (+2.2% of bankroll)\nNE 15+: -383 (-5.0% of bankroll)\nCollected $172 premium ($0 fees) | Paper margin over fair $25 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 526\nDET 7-14: 0 / 526\nDET 15+: 555 / 0\nNE 1-6: 21 / 543\nNE 7-14: 0 / 555\nNE 15+: 555 / 0\nPosted book 1.10 | Sold avg 1.079 | Worst now +31 | Cash free $1004\nAnchor age 0s | Last fill 57999s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794611852046-e764eb",
-      "ts": "2026-11-13T23:17:32Z",
-      "book": "W11-NEDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,150 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794612758174-6951c5",
       "ts": "2026-11-13T23:32:38Z",
@@ -3593,6 +3574,61 @@
       "text": "Final tightening before kickoff 8:30am CT. Worst line -$93. Next: Kickoff, 8:30am CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1794752633136-5d0539",
+      "ts": "2026-11-15T14:23:34Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease NE1TO6: resting 44 -> 0 (held 616 + resting was over the cap 609 = 1.07x; tighten phase;",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1794752633137-7dd3ae",
+      "ts": "2026-11-15T14:21:48Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 244: NE by 1-6 x61 at 17c, DET by 15+ x61 at 14c, DET by 7-14 x57 at 17c, +3 more. Worst line -$93.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 244.0,
+        "fills": [
+          {
+            "side": "NE by 1-6",
+            "price": 0.17,
+            "qty": 61.0
+          },
+          {
+            "side": "DET by 15+",
+            "price": 0.14,
+            "qty": 61.0
+          },
+          {
+            "side": "DET by 7-14",
+            "price": 0.17,
+            "qty": 57.0
+          },
+          {
+            "side": "NE by 15+",
+            "price": 0.07,
+            "qty": 39.0
+          },
+          {
+            "side": "NE by 15+",
+            "price": 0.08,
+            "qty": 22.0
+          },
+          {
+            "side": "DET by 7-14",
+            "price": 0.18,
+            "qty": 4.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
