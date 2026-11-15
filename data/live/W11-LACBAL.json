@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-15T19:30:11.335636Z",
+  "generated_at": "2026-11-15T19:31:37.362183Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "LAC by 15+",
-        "resting": "133 @ 4-9c",
+        "resting": "5 @ 4-9c",
         "exposure": -96.4,
         "exposure_text": "-$96",
         "move": "Holding",
@@ -75,7 +75,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Mon 7:15pm CT. Sold 100, 661 resting. Worst line -$96 (goal -$150)."
+          "Pregame build, kickoff Mon 7:15pm CT. Sold 100, 533 resting. Worst line -$96 (goal -$150)."
         ]
       },
       {
@@ -169,14 +169,14 @@
       {
         "label": "LAC by 15+",
         "held": 100.4,
-        "resting": 132.6,
+        "resting": 4.6,
         "target": null,
         "status": "even",
         "price": 0.04
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-15T19:30:06Z"
+    "ts": "2026-11-15T19:31:06Z"
   },
   "posts": [
     {
@@ -3170,6 +3170,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794771061882-5b7097",
+      "ts": "2026-11-15T19:31:01Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Cash line: trimmed 128 contracts off the back of LAC15PLUS so Kalshi would not pull the whole set (usable cash $-64). No row cancelled; the front rows kept their place in line.",
+      "severity": "warn"
     }
   ]
 }
