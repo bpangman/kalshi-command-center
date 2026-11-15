@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-15T22:56:57.827449Z",
+  "generated_at": "2026-11-15T22:58:19.997743Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,7 +38,7 @@
         "exposure_text": "+$73",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T22:56:13Z",
+        "at": "2026-11-15T22:58:13Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-14T23:56:38Z",
@@ -191,19 +191,9 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-15T22:56:13Z"
+    "ts": "2026-11-15T22:58:13Z"
   },
   "posts": [
-    {
-      "id": "1794585826331-e9228f",
-      "ts": "2026-11-13T16:03:46Z",
-      "book": "W11-PITCIN",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Sun 7:20pm CT. Worst line -$686, goal -$150. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
     {
       "id": "1794585926992-e7a808",
       "ts": "2026-11-13T16:03:12Z",
@@ -3291,18 +3281,29 @@
       "text": "Row sold out: PIT by 1-6 at 17c (195 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794783493674-a81236",
+      "ts": "2026-11-15T22:56:12Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 219: PIT by 1-6 x219 at 17c. Worst line -$481.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 219.0,
+        "fills": [
+          {
+            "side": "PIT by 1-6",
+            "price": 0.17,
+            "qty": 219.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794695655354-29e057",
-      "ts": "2026-11-14T22:34:15Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): worst -679.10 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794697511304-d5475c",
       "ts": "2026-11-14T23:05:11Z",
@@ -4192,6 +4193,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-PITCIN): held worst -518.09 (backstop -300) or lagging gap 900 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794783467015-20309b",
+      "ts": "2026-11-15T22:57:47Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+219 on PIT 1-6 @ 0.17 (maker)\nworst outcome now -45\nheld 230/509/900/310/0/346\nIf the game ends... you make\nCIN 1-6: +190 (+1.3% of bankroll)\nCIN 7-14: -89 (-0.6% of bankroll)\nCIN 15+: -481 (-3.3% of bankroll)\nPIT 1-6: +110 (+0.8% of bankroll)\nPIT 7-14: +419 (+2.9% of bankroll)\nPIT 15+: +73 (+0.5% of bankroll)",
       "severity": "warn"
     }
   ]
