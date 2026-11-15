@@ -1,6 +1,6 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T17:49:28.146055Z",
+  "generated_at": "2026-11-15T17:51:09.789780Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -37,29 +37,29 @@
         "exposure": -54.02,
         "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$83); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$72); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:40:03Z"
       },
       {
         "side": "MIN by 15+",
-        "resting": "60 @ 7-10c",
+        "resting": "58 @ 7-10c",
         "exposure": -53.85,
         "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$83); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$72); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:40:03Z"
       },
       {
         "side": "GB by 15+",
-        "resting": "67 @ 18-19c",
+        "resting": "65 @ 18-19c",
         "exposure": -53.8,
         "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$83); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$72); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:40:03Z"
@@ -82,7 +82,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 12:00pm CT. Sold 1,624, 504 resting. Worst line -$55 (goal -$50)."
+          "Final tightening, kickoff 12:00pm CT. Sold 1,624, 451 resting. Worst line -$55 (goal -$50)."
         ]
       },
       {
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$55 is better than -$83.",
+          "Gate open: worst line -$55 is better than -$72.",
           "Batches used: 2 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
-          "Paid balancing is running: plan -$83, worst line -$55; spent $8 of $100.",
+          "Paid balancing is running: plan -$72, worst line -$55; spent $9 of $100.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -127,7 +127,7 @@
       {
         "label": "GB by 1-6",
         "held": 316.0,
-        "resting": 66.0,
+        "resting": 15.0,
         "target": null,
         "status": "even",
         "price": 0.22
@@ -143,7 +143,7 @@
       {
         "label": "GB by 15+",
         "held": 315.2,
-        "resting": 67.0,
+        "resting": 66.0,
         "target": null,
         "status": "even",
         "price": 0.18
@@ -167,14 +167,14 @@
       {
         "label": "MIN by 15+",
         "held": 315.3,
-        "resting": 60.0,
+        "resting": 59.0,
         "target": null,
         "status": "even",
         "price": 0.07
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T17:48:57Z"
+    "ts": "2026-11-15T17:50:57Z"
   },
   "posts": [
     {
@@ -2470,18 +2470,28 @@
       "text": "Bot note: COVERAGE-CAP decrease GB1TO6: resting 66 -> 15 (held 316 + resting was over the cap 332 = 1.13x; tighten phase",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794765005315-b04c32",
+      "ts": "2026-11-15T17:50:05Z",
+      "book": "W11-MINGB",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nGB 1-6: -55 (-0.4% of bankroll)\nGB 7-14: -54 (-0.4% of bankroll)\nGB 15+: -54 (-0.4% of bankroll)\nMIN 1-6: -55 (-0.4% of bankroll)\nMIN 7-14: +215 (+1.5% of bankroll)\nMIN 15+: -54 (-0.4% of bankroll)\nCollected $266 premium ($5 fees) | Paper margin over fair $4 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; MIN 7-14: MIN 0-0, Q0 0:00\nheld / resting\nGB 1-6: 316 / 15\nGB 7-14: 315 / 41\nGB 15+: 315 / 66\nMIN 1-6: 316 / 0\nMIN 7-14: 46 / 270\nMIN 15+: 315 / 59\nPosted book 1.06 | Sold avg 0.957 | Worst now -50 | Cash free $595\nAnchor age 22s | Last fill 243s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1794765057634-b72454",
+      "ts": "2026-11-15T17:50:48Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 17 MIN by 7-14 at the bid 12c. Worst line -$55. Cost $0.72.",
+      "severity": "info",
+      "title": "Trickle"
     }
   ],
   "audits": [
-    {
-      "id": "1794679197355-2ec057",
-      "ts": "2026-11-14T17:59:57Z",
-      "book": "W11-MINGB",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+14 on MIN 1-6 @ 0.19 (maker)\nworst outcome now -5\nheld 0/0/0/65/0/0\nIf the game ends... you make\nGB 1-6: +12 (+0.1% of bankroll)\nGB 7-14: +12 (+0.1% of bankroll)\nGB 15+: +12 (+0.1% of bankroll)\nMIN 1-6: -52 (-0.4% of bankroll)\nMIN 7-14: +12 (+0.1% of bankroll)\nMIN 15+: +12 (+0.1% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1794680726093-87f3b1",
       "ts": "2026-11-14T18:25:26Z",
@@ -3371,6 +3381,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: MIN 1-6 worst outcome -6\nIf the game ends... you make\nGB 1-6: -37 (-0.3% of bankroll)\nGB 7-14: -81 (-0.6% of bankroll)\nGB 15+: +128 (+0.9% of bankroll)\nMIN 1-6: -132 (-0.9% of bankroll)\nMIN 7-14: +155 (+1.1% of bankroll)\nMIN 15+: +58 (+0.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794765005316-690142",
+      "ts": "2026-11-15T17:50:05Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: GB 1-6 worst outcome -50\nIf the game ends... you make\nGB 1-6: -55 (-0.4% of bankroll)\nGB 7-14: -54 (-0.4% of bankroll)\nGB 15+: -54 (-0.4% of bankroll)\nMIN 1-6: -55 (-0.4% of bankroll)\nMIN 7-14: +215 (+1.5% of bankroll)\nMIN 15+: -54 (-0.4% of bankroll)",
       "severity": "warn"
     }
   ]
