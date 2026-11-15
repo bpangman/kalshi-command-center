@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T10:49:24.548891Z",
+  "generated_at": "2026-11-15T10:51:08.777160Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -178,7 +178,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T10:48:34Z"
+    "ts": "2026-11-15T10:50:35Z"
   },
   "posts": [
     {
@@ -1353,6 +1353,26 @@
       "text": "Row sold out: SF by 7-14 at 21c (43 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794739835766-328a93",
+      "ts": "2026-11-15T10:48:25Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 43: SF by 7-14 x43 at 21c. Worst line -$115.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 43.0,
+        "fills": [
+          {
+            "side": "SF by 7-14",
+            "price": 0.21,
+            "qty": 43.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -1579,6 +1599,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-SFDAL): held worst -124.50 (backstop -100) or lagging gap 221 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794739767907-609ca5",
+      "ts": "2026-11-15T10:49:27Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+43 on SF 7-14 @ 0.21 (maker)\nworst outcome now -39\nheld 221/189/0/0/220/0\nIf the game ends... you make\nDAL 1-6: -115 (-0.8% of bankroll)\nDAL 7-14: -83 (-0.6% of bankroll)\nDAL 15+: +106 (+0.7% of bankroll)\nSF 1-6: +106 (+0.7% of bankroll)\nSF 7-14: -114 (-0.8% of bankroll)\nSF 15+: +106 (+0.7% of bankroll)",
       "severity": "warn"
     }
   ]
