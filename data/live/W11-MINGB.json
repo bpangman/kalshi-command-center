@@ -1,6 +1,6 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T17:22:22.580468Z",
+  "generated_at": "2026-11-15T17:23:48.480484Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -22,7 +22,7 @@
       },
       {
         "side": "GB by 7-14",
-        "resting": "186 @ 19-23c",
+        "resting": "181 @ 19-23c",
         "exposure": 3.62,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -35,7 +35,7 @@
       },
       {
         "side": "MIN by 15+",
-        "resting": "172 @ 7-10c",
+        "resting": "168 @ 7-10c",
         "exposure": 11.35,
         "exposure_text": "+$11",
         "move": "Paid balancing (trickle)",
@@ -48,7 +48,7 @@
       },
       {
         "side": "GB by 1-6",
-        "resting": "219 @ 22-23c",
+        "resting": "214 @ 22-23c",
         "exposure": 25.28,
         "exposure_text": "+$25",
         "move": "Paid balancing (trickle)",
@@ -61,20 +61,20 @@
       },
       {
         "side": "MIN by 7-14",
-        "resting": "272 @ 14-16c",
+        "resting": "267 @ 14-16c",
         "exposure": 85.62,
         "exposure_text": "+$86",
         "move": "Step price down 1c (14c to 13c)",
-        "when": "if no fill by 11:24am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-15T17:24:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:40am CT",
         "last_fill": "2026-11-15T17:14:16Z",
-        "lag_note": "Steps to 13c if no fill by 11:24am CT."
+        "lag_note": "Steps to 13c at the next check."
       },
       {
         "side": "GB by 15+",
-        "resting": "311 @ 16-19c",
+        "resting": "306 @ 16-19c",
         "exposure": 109.4,
         "exposure_text": "+$109",
         "move": "Paid balancing (trickle)",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 654, 1,163 resting. Worst line -$201 (goal -$50)."
+          "Pregame build, kickoff 12:00pm CT. Sold 654, 1,142 resting. Worst line -$201 (goal -$50)."
         ]
       },
       {
@@ -98,7 +98,7 @@
         "lines": [
           "Lagging (150+ behind the leader): GB by 1-6, GB by 7-14, GB by 15+, MIN by 7-14, MIN by 15+.",
           "GB by 15+: 311 behind. Price 16c matches the crowd.",
-          "MIN by 7-14: 287 behind. Steps to 13c if no fill by 11:24am CT.",
+          "MIN by 7-14: 287 behind. Steps to 13c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -147,7 +147,7 @@
       {
         "label": "GB by 1-6",
         "held": 89.3,
-        "resting": 219.7,
+        "resting": 214.7,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -155,7 +155,7 @@
       {
         "label": "GB by 7-14",
         "held": 111.0,
-        "resting": 187.0,
+        "resting": 183.0,
         "target": null,
         "status": "lagging",
         "price": 0.19
@@ -163,7 +163,7 @@
       {
         "label": "GB by 15+",
         "held": 5.2,
-        "resting": 310.8,
+        "resting": 306.8,
         "target": null,
         "status": "lagging",
         "price": 0.16
@@ -179,7 +179,7 @@
       {
         "label": "MIN by 7-14",
         "held": 29.0,
-        "resting": 273.0,
+        "resting": 269.0,
         "target": null,
         "status": "lagging",
         "price": 0.14
@@ -187,14 +187,14 @@
       {
         "label": "MIN by 15+",
         "held": 103.3,
-        "resting": 172.7,
+        "resting": 168.7,
         "target": null,
         "status": "lagging",
         "price": 0.07
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T17:21:48Z"
+    "ts": "2026-11-15T17:22:48Z"
   },
   "posts": [
     {
@@ -2078,6 +2078,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nGB 1-6: +25 (+0.2% of bankroll)\nGB 7-14: +4 (+0.0% of bankroll)\nGB 15+: +109 (+0.8% of bankroll)\nMIN 1-6: -201 (-1.4% of bankroll)\nMIN 7-14: +86 (+0.6% of bankroll)\nMIN 15+: +11 (+0.1% of bankroll)\nCollected $115 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; MIN 7-14: MIN 0-0, Q0 0:00\nheld / resting\nGB 1-6: 89 / 228\nGB 7-14: 111 / 195\nGB 15+: 5 / 311\nMIN 1-6: 316 / 0\nMIN 7-14: 29 / 281\nMIN 15+: 103 / 180\nPosted book 1.05 | Sold avg 0.992 | Worst now +2 | Cash free $595\nAnchor age 0s | Last fill 333s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794763408736-964dcd",
+      "ts": "2026-11-15T17:23:17Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: GB by 1-6 at 22c (221 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
