@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-15T18:54:53.271233Z",
+  "generated_at": "2026-11-15T18:56:26.761667Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "LAC by 15+",
-        "resting": "550 @ 4-5c",
+        "resting": "3 @ 4-5c",
         "exposure": -96.4,
         "exposure_text": "-$96",
         "move": "Holding",
@@ -22,7 +22,7 @@
       },
       {
         "side": "BAL by 1-6",
-        "resting": "602 @ 25-26c",
+        "resting": "2 @ 25-26c",
         "exposure": 4.02,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -32,7 +32,7 @@
       },
       {
         "side": "BAL by 15+",
-        "resting": "900 @ 21-22c",
+        "resting": "2 @ 21-22c",
         "exposure": 4.02,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -42,7 +42,7 @@
       },
       {
         "side": "BAL by 7-14",
-        "resting": "601 @ 25-26c",
+        "resting": "2 @ 25-26c",
         "exposure": 4.02,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -52,7 +52,7 @@
       },
       {
         "side": "LAC by 1-6",
-        "resting": "557 @ 19-20c",
+        "resting": "2 @ 19-20c",
         "exposure": 4.02,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -62,7 +62,7 @@
       },
       {
         "side": "LAC by 7-14",
-        "resting": "900 @ 13-14c",
+        "resting": "2 @ 13-14c",
         "exposure": 4.02,
         "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
@@ -75,7 +75,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Mon 7:15pm CT. Sold 100, 4,110 resting. Worst line -$96 (goal -$150)."
+          "Pregame build, kickoff Mon 7:15pm CT. Sold 100, 13 resting. Worst line -$96 (goal -$150)."
         ]
       },
       {
@@ -129,7 +129,7 @@
       {
         "label": "BAL by 1-6",
         "held": 0.0,
-        "resting": 602.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
         "price": 0.25
@@ -137,7 +137,7 @@
       {
         "label": "BAL by 7-14",
         "held": 0.0,
-        "resting": 601.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
         "price": 0.25
@@ -145,7 +145,7 @@
       {
         "label": "BAL by 15+",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
         "price": 0.21
@@ -153,7 +153,7 @@
       {
         "label": "LAC by 1-6",
         "held": 0.0,
-        "resting": 557.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
         "price": 0.19
@@ -161,7 +161,7 @@
       {
         "label": "LAC by 7-14",
         "held": 0.0,
-        "resting": 900.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
         "price": 0.13
@@ -169,14 +169,14 @@
       {
         "label": "LAC by 15+",
         "held": 100.4,
-        "resting": 549.6,
+        "resting": 2.6,
         "target": null,
         "status": "even",
         "price": 0.04
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-15T18:53:56Z"
+    "ts": "2026-11-15T18:55:56Z"
   },
   "posts": [
     {
@@ -3123,6 +3123,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794768925390-8a12f1",
+      "ts": "2026-11-15T18:55:25Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Cash line: trimmed 4097 contracts off the back of BAL15PLUS, BAL1TO6, BAL7TO14, LAC15PLUS, LAC1TO6, LAC7TO14 so Kalshi would not pull the whole set (usable cash $-442). No row cancelled; the front rows kept their place in line.",
+      "severity": "warn"
     }
   ]
 }
