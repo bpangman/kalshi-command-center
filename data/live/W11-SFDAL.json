@@ -1,10 +1,10 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T21:04:58.827152Z",
+  "generated_at": "2026-11-15T21:06:41.428126Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 3:25pm CT. Worst line -$5, goal -$50.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$5.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -15,7 +15,7 @@
         "exposure": -5.45,
         "exposure_text": "-$5",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 3:05pm CT",
+        "when": "no move planned until kickoff at 3:25pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T20:22:34Z"
@@ -26,8 +26,8 @@
         "exposure": 8.55,
         "exposure_text": "+$9",
         "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-15T21:05:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:32:38Z"
       },
@@ -37,8 +37,8 @@
         "exposure": 8.55,
         "exposure_text": "+$9",
         "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-15T21:05:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T19:01:10Z"
       },
@@ -48,8 +48,8 @@
         "exposure": 8.55,
         "exposure_text": "+$9",
         "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-15T21:05:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T20:23:20Z"
       },
@@ -59,8 +59,8 @@
         "exposure": 14.55,
         "exposure_text": "+$15",
         "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-15T21:05:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T20:39:53Z"
       },
@@ -69,31 +69,35 @@
         "resting": "59 @ 8c",
         "exposure": 53.55,
         "exposure_text": "+$54",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-15T21:05:00Z",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-15T21:05:55Z",
         "stuck": false,
-        "last_fill": "2026-11-15T20:48:10Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-11-15T20:48:10Z",
+        "lag_note": "Steps to 7c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 1,859, 187 resting. Worst line -$5 (goal -$50)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,859, 187 resting. Worst line -$5 (goal -$50)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): DAL by 15+.",
+          "DAL by 15+: 59 behind. Steps to 7c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$5 is better than -$200.",
+          "Gate open: worst line -$5 is better than -$50.",
           "Batches used: 12 (max 3 per side)."
         ]
       },
@@ -101,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
-          "Paid balancing starts 3:05pm CT: worst line to -$50 by 3:20pm CT, up to $100.",
+          "Paid balancing is running: plan -$50, worst line -$5; spent $0 of $100.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -113,11 +117,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-15T21:05:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$50 by 3:20pm CT."
-      },
       {
         "at": "2026-11-15T21:25:00Z",
         "label": "Kickoff",
@@ -146,7 +145,7 @@
         "held": 271.0,
         "resting": 59.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       },
       {
@@ -175,7 +174,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T21:04:55Z"
+    "ts": "2026-11-15T21:05:55Z"
   },
   "posts": [
     {
@@ -2752,6 +2751,45 @@
       "source": "bot",
       "text": "If the game ends... you make\nDAL 1-6: +9 (+0.1% of bankroll)\nDAL 7-14: +15 (+0.1% of bankroll)\nDAL 15+: +54 (+0.4% of bankroll)\nSF 1-6: -5 (-0.0% of bankroll)\nSF 7-14: +9 (+0.1% of bankroll)\nSF 15+: +9 (+0.1% of bankroll)\nCollected $325 premium ($0 fees) | Paper margin over fair $11 (not realized until settlement)\nEvent: DAL 7-14: DAL 0-0, Q0 0:00; SF 7-14: SF 0-0, Q0 0:00\nheld / resting\nDAL 1-6: 316 / 14\nDAL 7-14: 310 / 20\nDAL 15+: 271 / 59\nSF 1-6: 330 / 1\nSF 7-14: 316 / 3\nSF 15+: 316 / 14\nPosted book 1.12 | Sold avg 1.029 | Worst now +8 | Cash free $595\nAnchor age 0s | Last fill 484s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794776714983-db2b06",
+      "ts": "2026-11-15T21:05:14Z",
+      "book": "W11-SFDAL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Entering the game -5 on any SF win; DAL buckets +9; no buyback by rule",
+      "severity": "info"
+    },
+    {
+      "id": "1794776715313-7161a0",
+      "ts": "2026-11-15T21:05:14Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$5; goal -$50 by 3:20pm CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794776755528-6e8d01",
+      "ts": "2026-11-15T21:05:55Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794776755528-9434b7",
+      "ts": "2026-11-15T21:05:55Z",
+      "book": "W11-SFDAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 3:25pm CT. Worst line -$5. Next: Kickoff, 3:25pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
@@ -3338,6 +3376,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "Cash line: trimmed 146 contracts off the back of SF7TO14 so Kalshi would not pull the whole set (usable cash $26). No row cancelled; the front rows kept their place in line.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794776714986-88ecd5",
+      "ts": "2026-11-15T21:05:14Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: SF 1-6 worst outcome -17\nIf the game ends... you make\nDAL 1-6: +9 (+0.1% of bankroll)\nDAL 7-14: +15 (+0.1% of bankroll)\nDAL 15+: +54 (+0.4% of bankroll)\nSF 1-6: -5 (-0.0% of bankroll)\nSF 7-14: +9 (+0.1% of bankroll)\nSF 15+: +9 (+0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794776757598-f8bd3b",
+      "ts": "2026-11-15T21:05:57Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Cash line: trimmed 74 contracts off the back of DAL1TO6, DAL7TO14 so Kalshi would not pull the whole set (usable cash $-1,563). No row cancelled; the front rows kept their place in line.",
       "severity": "warn"
     }
   ]
