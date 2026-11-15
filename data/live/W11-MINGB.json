@@ -1,6 +1,6 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T16:07:29.449098Z",
+  "generated_at": "2026-11-15T16:08:58.184506Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -35,7 +35,7 @@
       },
       {
         "side": "GB by 7-14",
-        "resting": "369 @ 19-23c",
+        "resting": "368 @ 19-23c",
         "exposure": 27.48,
         "exposure_text": "+$27",
         "move": "Paid balancing (trickle)",
@@ -53,7 +53,7 @@
         "exposure_text": "+$71",
         "move": "Step price down 1c (18c to 17c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T16:07:24Z",
+        "at": "2026-11-15T16:08:24Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:40am CT",
         "last_fill": "2026-11-14T20:38:25Z",
@@ -78,7 +78,7 @@
         "exposure_text": "+$76",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T16:07:24Z",
+        "at": "2026-11-15T16:08:24Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:40am CT",
         "lag_note": "Steps to 14c at the next check."
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 385, 1,533 resting. Worst line -$166 (goal -$50)."
+          "Pregame build, kickoff 12:00pm CT. Sold 385, 1,531 resting. Worst line -$166 (goal -$50)."
         ]
       },
       {
@@ -153,7 +153,7 @@
       {
         "label": "GB by 7-14",
         "held": 48.4,
-        "resting": 369.6,
+        "resting": 367.6,
         "target": null,
         "status": "lagging",
         "price": 0.19
@@ -192,7 +192,7 @@
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T16:07:24Z"
+    "ts": "2026-11-15T16:08:24Z"
   },
   "posts": [
     {
@@ -1763,6 +1763,56 @@
       "text": "Fast fill on lagging GB by 7-14: 48 of 111 sold, re-posted at the same price.",
       "severity": "info",
       "title": "Reprice"
+    },
+    {
+      "id": "1794758925063-3bf4a1",
+      "ts": "2026-11-15T16:08:32Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on lagging MIN by 15+: 37 of 137 sold, re-posted at the same price.",
+      "severity": "info",
+      "title": "Reprice"
+    },
+    {
+      "id": "1794758925063-877fd1",
+      "ts": "2026-11-15T16:08:32Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: MIN by 15+ at 8c (20 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794758925064-199bb7",
+      "ts": "2026-11-15T16:08:32Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 105: GB by 7-14 x48 at 19c, MIN by 15+ x37 at 9c, MIN by 15+ x20 at 8c. Worst line -$161.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 105.0,
+        "fills": [
+          {
+            "side": "GB by 7-14",
+            "price": 0.19,
+            "qty": 48.0
+          },
+          {
+            "side": "MIN by 15+",
+            "price": 0.09,
+            "qty": 37.0
+          },
+          {
+            "side": "MIN by 15+",
+            "price": 0.08,
+            "qty": 20.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -2529,6 +2579,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-MINGB): held worst -174.89 (backstop -100) or lagging gap 242 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794758869421-439968",
+      "ts": "2026-11-15T16:07:49Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+48 on GB 7-14 @ 0.19 (maker)\nworst outcome now -69\nheld 89/48/5/242/0/0\nIf the game ends... you make\nGB 1-6: -13 (-0.1% of bankroll)\nGB 7-14: +27 (+0.2% of bankroll)\nGB 15+: +71 (+0.5% of bankroll)\nMIN 1-6: -166 (-1.2% of bankroll)\nMIN 7-14: +76 (+0.5% of bankroll)\nMIN 15+: +76 (+0.5% of bankroll)",
       "severity": "warn"
     }
   ]
