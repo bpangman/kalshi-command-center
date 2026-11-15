@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T21:13:37.901417Z",
+  "generated_at": "2026-11-15T21:15:13.458983Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -71,7 +71,7 @@
         "exposure_text": "+$54",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T21:12:57Z",
+        "at": "2026-11-15T21:14:58Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T20:48:10Z",
@@ -82,7 +82,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 1,860, 112 resting. Worst line -$5 (goal -$50)."
+          "Final tightening, kickoff 3:25pm CT. Sold 1,860, 123 resting. Worst line -$5 (goal -$50)."
         ]
       },
       {
@@ -159,10 +159,10 @@
       {
         "label": "SF by 7-14",
         "held": 317.0,
-        "resting": 2.0,
+        "resting": 13.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": 0.23
       },
       {
         "label": "SF by 15+",
@@ -174,7 +174,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T21:12:57Z"
+    "ts": "2026-11-15T21:14:58Z"
   },
   "posts": [
     {
@@ -2814,6 +2814,26 @@
       "text": "Row sold out: SF by 7-14 at 23c (1 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794777298169-ec05fa",
+      "ts": "2026-11-15T21:12:50Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: SF by 7-14 x1 at 23c. Worst line -$5.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "SF by 7-14",
+            "price": 0.23,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3418,6 +3438,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Cash line: trimmed 74 contracts off the back of DAL1TO6, DAL7TO14 so Kalshi would not pull the whole set (usable cash $-1,563). No row cancelled; the front rows kept their place in line.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794777233183-8587e7",
+      "ts": "2026-11-15T21:13:53Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+1 on SF 7-14 @ 0.23 (maker)\nworst outcome now +11\nheld 316/310/271/330/317/316\nIf the game ends... you make\nDAL 1-6: +9 (+0.1% of bankroll)\nDAL 7-14: +15 (+0.1% of bankroll)\nDAL 15+: +54 (+0.4% of bankroll)\nSF 1-6: -5 (-0.0% of bankroll)\nSF 7-14: +8 (+0.1% of bankroll)\nSF 15+: +9 (+0.1% of bankroll)",
       "severity": "warn"
     }
   ]
