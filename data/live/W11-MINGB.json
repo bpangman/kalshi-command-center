@@ -1,10 +1,10 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T17:14:44.376902Z",
+  "generated_at": "2026-11-15T17:16:09.805213Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 12:00pm CT. Worst line -$205, goal -$50.",
+    "headline": "Building toward kickoff 12:00pm CT. Worst line -$201, goal -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "MIN by 1-6",
         "resting": "none",
-        "exposure": -205.15,
-        "exposure_text": "-$205",
+        "exposure": -201.38,
+        "exposure_text": "-$201",
         "move": "Holding",
         "when": "no move planned until the even-done check at 11:30am CT",
         "at": null,
@@ -22,9 +22,9 @@
       },
       {
         "side": "GB by 7-14",
-        "resting": "215 @ 19-23c",
-        "exposure": -0.15,
-        "exposure_text": "$0",
+        "resting": "212 @ 19-23c",
+        "exposure": 3.62,
+        "exposure_text": "+$4",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-15T17:40:00Z",
@@ -35,9 +35,9 @@
       },
       {
         "side": "MIN by 15+",
-        "resting": "197 @ 7-10c",
-        "exposure": 7.58,
-        "exposure_text": "+$8",
+        "resting": "195 @ 7-10c",
+        "exposure": 11.35,
+        "exposure_text": "+$11",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-15T17:40:00Z",
@@ -48,9 +48,9 @@
       },
       {
         "side": "GB by 1-6",
-        "resting": "248 @ 22-23c",
-        "exposure": 21.51,
-        "exposure_text": "+$22",
+        "resting": "245 @ 22-23c",
+        "exposure": 25.28,
+        "exposure_text": "+$25",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-15T17:40:00Z",
@@ -60,10 +60,23 @@
         "lag_note": "Price 22c matches the crowd."
       },
       {
+        "side": "MIN by 7-14",
+        "resting": "287 @ 14-16c",
+        "exposure": 85.62,
+        "exposure_text": "+$86",
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "if no fill by 11:24am CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-15T17:24:16Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts 11:40am CT",
+        "last_fill": "2026-11-15T17:14:16Z",
+        "lag_note": "Steps to 13c if no fill by 11:24am CT."
+      },
+      {
         "side": "GB by 15+",
         "resting": "311 @ 16-19c",
-        "exposure": 105.63,
-        "exposure_text": "+$106",
+        "exposure": 109.4,
+        "exposure_text": "+$109",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-15T17:40:00Z",
@@ -71,33 +84,21 @@
         "also": "Also: price step",
         "last_fill": "2026-11-14T20:38:25Z",
         "lag_note": "Price 16c matches the crowd."
-      },
-      {
-        "side": "MIN by 7-14",
-        "resting": "316 @ 13-16c",
-        "exposure": 110.85,
-        "exposure_text": "+$111",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-15T17:40:00Z",
-        "stuck": false,
-        "also": "Also: price step",
-        "lag_note": "Price 13c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 625, 1,295 resting. Worst line -$205 (goal -$50)."
+          "Pregame build, kickoff 12:00pm CT. Sold 654, 1,253 resting. Worst line -$201 (goal -$50)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): GB by 1-6, GB by 7-14, GB by 15+, MIN by 7-14, MIN by 15+.",
-          "MIN by 7-14: 316 behind. Price 13c matches the crowd.",
           "GB by 15+: 311 behind. Price 16c matches the crowd.",
+          "MIN by 7-14: 287 behind. Steps to 13c if no fill by 11:24am CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -105,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$205).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$201).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -146,7 +147,7 @@
       {
         "label": "GB by 1-6",
         "held": 89.3,
-        "resting": 250.7,
+        "resting": 246.7,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -154,7 +155,7 @@
       {
         "label": "GB by 7-14",
         "held": 111.0,
-        "resting": 218.0,
+        "resting": 213.0,
         "target": null,
         "status": "lagging",
         "price": 0.19
@@ -177,23 +178,23 @@
       },
       {
         "label": "MIN by 7-14",
-        "held": 0.0,
-        "resting": 316.0,
+        "held": 29.0,
+        "resting": 287.0,
         "target": null,
         "status": "lagging",
-        "price": 0.13
+        "price": 0.14
       },
       {
         "label": "MIN by 15+",
         "held": 103.3,
-        "resting": 199.7,
+        "resting": 195.7,
         "target": null,
         "status": "lagging",
         "price": 0.07
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T17:13:45Z"
+    "ts": "2026-11-15T17:15:46Z"
   },
   "posts": [
     {
@@ -2038,6 +2039,16 @@
       "text": "Quiet for 15 min. 1,314 resting. Next: Even-done check, 11:30am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794762886190-bae908",
+      "ts": "2026-11-15T17:14:28Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: MIN by 7-14 at 13c (29 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -2904,6 +2915,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-MINGB): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794762931711-0c1c13",
+      "ts": "2026-11-15T17:15:31Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+29 on MIN 7-14 @ 0.13 (maker)\nworst outcome now -6\nheld 89/111/5/316/29/103\nIf the game ends... you make\nGB 1-6: +25 (+0.2% of bankroll)\nGB 7-14: +4 (+0.0% of bankroll)\nGB 15+: +109 (+0.8% of bankroll)\nMIN 1-6: -201 (-1.4% of bankroll)\nMIN 7-14: +86 (+0.6% of bankroll)\nMIN 15+: +11 (+0.1% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
