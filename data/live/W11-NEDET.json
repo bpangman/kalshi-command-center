@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T14:12:06.510522Z",
+  "generated_at": "2026-11-15T14:13:35.535115Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -44,7 +44,7 @@
       },
       {
         "side": "NE by 1-6",
-        "resting": "149 @ 20c",
+        "resting": "98 @ 20c",
         "exposure": -76.98,
         "exposure_text": "-$77",
         "move": "Holding",
@@ -70,26 +70,26 @@
         "exposure": 442.21,
         "exposure_text": "+$442",
         "move": "Step price down 1c (14c to 13c)",
-        "when": "if no fill by 8:13am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-15T14:13:48Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T14:03:48Z",
-        "lag_note": "Steps to 13c if no fill by 8:13am CT."
+        "lag_note": "Steps to 13c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 8:30am CT. Sold 2,811, 955 resting. Worst line -$77 (goal -$75)."
+          "Final tightening, kickoff 8:30am CT. Sold 2,811, 837 resting. Worst line -$77 (goal -$75)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): NE by 7-14.",
-          "NE by 7-14: 519 behind. Steps to 13c if no fill by 8:13am CT.",
+          "NE by 7-14: 519 behind. Steps to 13c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$77 is better than -$123.",
+          "Gate open: worst line -$77 is better than -$116.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$123, worst line -$77; spent $10 of $100.",
+          "Paid balancing is running: plan -$116, worst line -$77; spent $10 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -127,7 +127,7 @@
       {
         "label": "DET by 1-6",
         "held": 555.0,
-        "resting": 171.0,
+        "resting": 104.0,
         "target": null,
         "status": "even",
         "price": 0.23
@@ -151,7 +151,7 @@
       {
         "label": "NE by 1-6",
         "held": 555.0,
-        "resting": 149.0,
+        "resting": 98.0,
         "target": null,
         "status": "even",
         "price": 0.2
@@ -174,18 +174,9 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T14:11:08Z"
+    "ts": "2026-11-15T14:13:09Z"
   },
   "posts": [
-    {
-      "id": "1794604159240-8beeca",
-      "ts": "2026-11-13T21:09:19Z",
-      "book": "W11-NEDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +172 (+2.2% of bankroll)\nDET 7-14: +172 (+2.2% of bankroll)\nDET 15+: -383 (-5.0% of bankroll)\nNE 1-6: +151 (+2.0% of bankroll)\nNE 7-14: +172 (+2.2% of bankroll)\nNE 15+: -383 (-5.0% of bankroll)\nCollected $172 premium ($0 fees) | Paper margin over fair $25 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 526\nDET 7-14: 0 / 526\nDET 15+: 555 / 0\nNE 1-6: 21 / 543\nNE 7-14: 0 / 555\nNE 15+: 555 / 0\nPosted book 1.07 | Sold avg 1.079 | Worst now +31 | Cash free $1004\nAnchor age 0s | Last fill 50712s ago",
-      "severity": "info"
-    },
     {
       "id": "1794604257580-518f78",
       "ts": "2026-11-13T21:10:57Z",
@@ -3557,6 +3548,36 @@
       "text": "Final tightening before kickoff 8:30am CT. Worst line -$77. Next: Kickoff, 8:30am CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1794751969134-08b311",
+      "ts": "2026-11-15T14:10:30Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 309: DET by 7-14 x166 at 16c, DET by 1-6 x86 at 20c, NE by 1-6 x57 at 17c. Worst line -$77.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 309.0,
+        "fills": [
+          {
+            "side": "DET by 7-14",
+            "price": 0.16,
+            "qty": 166.0
+          },
+          {
+            "side": "DET by 1-6",
+            "price": 0.2,
+            "qty": 86.0
+          },
+          {
+            "side": "NE by 1-6",
+            "price": 0.17,
+            "qty": 57.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
