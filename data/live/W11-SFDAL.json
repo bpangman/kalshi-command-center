@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T23:40:12.648037Z",
+  "generated_at": "2026-11-15T23:41:34.947486Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T23:39:47Z"
+    "ts": "2026-11-15T23:40:47Z"
   },
   "posts": [
     {
@@ -3787,6 +3787,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W11-SFDAL has no resting orders on any side for at least 10 min while it should be posting.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794786061996-4591bd",
+      "ts": "2026-11-15T23:41:01Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1794786081928-235c2c",
+      "ts": "2026-11-15T23:41:21Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W11-SFDAL): inactive, cause=room_zero, remedy=raise_slack, posts_last_10m=10, market_volume_last_30m=6865. Check the command center.",
       "severity": "warn"
     }
   ]
