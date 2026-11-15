@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T20:23:54.241144Z",
+  "generated_at": "2026-11-15T20:25:26.768450Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -44,7 +44,7 @@
       },
       {
         "side": "SF by 7-14",
-        "resting": "14 @ 25c",
+        "resting": "149 @ 24-25c",
         "exposure": -12.92,
         "exposure_text": "-$13",
         "move": "Paid balancing (trickle)",
@@ -71,7 +71,7 @@
         "exposure_text": "+$277",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T20:23:43Z",
+        "at": "2026-11-15T20:24:43Z",
         "stuck": false,
         "also": "Also: paid balancing starts 3:05pm CT",
         "last_fill": "2026-11-15T19:38:55Z",
@@ -82,7 +82,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 1,574, 351 resting. Worst line -$27 (goal -$50)."
+          "Pregame build, kickoff 3:25pm CT. Sold 1,574, 365 resting. Worst line -$27 (goal -$50)."
         ]
       },
       {
@@ -170,10 +170,10 @@
       {
         "label": "SF by 7-14",
         "held": 316.0,
-        "resting": 0.0,
+        "resting": 14.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.25
       },
       {
         "label": "SF by 15+",
@@ -185,7 +185,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T20:23:43Z"
+    "ts": "2026-11-15T20:24:43Z"
   },
   "posts": [
     {
@@ -2491,6 +2491,51 @@
       "text": "Building toward kickoff 3:25pm CT. Worst line -$27, goal -$50. Next: Even-done check, 2:55pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794774303450-e134bd",
+      "ts": "2026-11-15T20:23:28Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 354: SF by 1-6 x221 at 23c, SF by 1-6 x79 at 22c, SF by 7-14 x51 at 21c, +3 more. Worst line -$27.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 354.0,
+        "fills": [
+          {
+            "side": "SF by 1-6",
+            "price": 0.23,
+            "qty": 221.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.22,
+            "qty": 79.0
+          },
+          {
+            "side": "SF by 7-14",
+            "price": 0.21,
+            "qty": 51.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.24,
+            "qty": 1.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.25,
+            "qty": 1.0
+          },
+          {
+            "side": "SF by 7-14",
+            "price": 0.23,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3041,6 +3086,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+79 on SF 1-6 @ 0.22 (maker)\n+221 on SF 1-6 @ 0.23 (maker)\n+1 on SF 1-6 @ 0.24 (maker)\n+1 on SF 1-6 @ 0.25 (maker)\n+51 on SF 7-14 @ 0.21 (maker)\n+1 on SF 7-14 @ 0.23 (maker)\nworst outcome now +7\nheld 316/270/26/330/316/316\nIf the game ends... you make\nDAL 1-6: -13 (-0.1% of bankroll)\nDAL 7-14: +33 (+0.2% of bankroll)\nDAL 15+: +277 (+2.0% of bankroll)\nSF 1-6: -27 (-0.2% of bankroll)\nSF 7-14: -13 (-0.1% of bankroll)\nSF 15+: -13 (-0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794774315210-4d40f6",
+      "ts": "2026-11-15T20:25:15Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 T-60 table\nIf the game ends... you make\nDAL 1-6: -13 (-0.1% of bankroll)\nDAL 7-14: +33 (+0.2% of bankroll)\nDAL 15+: +277 (+2.0% of bankroll)\nSF 1-6: -27 (-0.2% of bankroll)\nSF 7-14: -13 (-0.1% of bankroll)\nSF 15+: -13 (-0.1% of bankroll)",
       "severity": "warn"
     }
   ]
