@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T05:14:35.754591Z",
+  "generated_at": "2026-11-15T05:16:06.464069Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -12,7 +12,7 @@
       {
         "side": "DET by 15+",
         "resting": "none",
-        "exposure": -225.16,
+        "exposure": -224.95,
         "exposure_text": "-$225",
         "move": "Stops adding (backstop)",
         "when": "holding until worst loss is back above -$150 (now -$225)",
@@ -23,7 +23,7 @@
       {
         "side": "NE by 15+",
         "resting": "none",
-        "exposure": -225.16,
+        "exposure": -224.95,
         "exposure_text": "-$225",
         "move": "Holding",
         "when": "no move planned until the even-done check at Sun 8:00am CT",
@@ -34,7 +34,7 @@
       {
         "side": "NE by 1-6",
         "resting": "362 @ 20-21c",
-        "exposure": -87.16,
+        "exposure": -86.95,
         "exposure_text": "-$87",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
@@ -45,11 +45,11 @@
       {
         "side": "DET by 7-14",
         "resting": "542 @ 19-21c",
-        "exposure": 45.84,
+        "exposure": 46.05,
         "exposure_text": "+$46",
         "move": "Step price down 1c (19c to 18c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T05:13:47Z",
+        "at": "2026-11-15T05:15:48Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-15T04:35:02Z",
@@ -57,25 +57,25 @@
       },
       {
         "side": "DET by 1-6",
-        "resting": "653 @ 21-24c",
-        "exposure": 148.33,
+        "resting": "652 @ 21-24c",
+        "exposure": 147.54,
         "exposure_text": "+$148",
         "move": "Step price down 1c (21c to 20c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T05:13:47Z",
+        "when": "if no fill by 11:24pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-15T05:24:18Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
-        "last_fill": "2026-11-15T05:02:19Z",
-        "lag_note": "Steps to 20c at the next check."
+        "last_fill": "2026-11-15T05:14:18Z",
+        "lag_note": "Steps to 20c if no fill by 11:24pm CT."
       },
       {
         "side": "NE by 7-14",
         "resting": "555 @ 14-16c",
-        "exposure": 329.84,
+        "exposure": 330.05,
         "exposure_text": "+$330",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T05:13:47Z",
+        "at": "2026-11-15T05:15:48Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "lag_note": "Steps to 13c at the next check."
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 1,993, 2,112 resting. Worst line -$225 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 1,994, 2,111 resting. Worst line -$225 (goal -$75)."
         ]
       },
       {
@@ -93,7 +93,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DET by 1-6, DET by 7-14, NE by 7-14.",
           "NE by 7-14: 555 behind. Steps to 13c at the next check.",
-          "DET by 1-6: 374 behind. Steps to 20c at the next check.",
+          "DET by 1-6: 372 behind. Steps to 20c if no fill by 11:24pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -141,8 +141,8 @@
     "sides": [
       {
         "label": "DET by 1-6",
-        "held": 181.5,
-        "resting": 653.5,
+        "held": 182.5,
+        "resting": 652.5,
         "target": null,
         "status": "lagging",
         "price": 0.21
@@ -189,7 +189,7 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T05:13:47Z"
+    "ts": "2026-11-15T05:15:48Z"
   },
   "posts": [
     {
@@ -3396,15 +3396,6 @@
   ],
   "audits": [
     {
-      "id": "1794612641713-57a2d6",
-      "ts": "2026-11-13T23:30:41Z",
-      "book": "W11-NEDET",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-NEDET): worst -383.19 vs floor -175.00. Check the command center.",
-      "severity": "critical"
-    },
-    {
       "id": "1794614458117-3b71e6",
       "ts": "2026-11-14T00:00:58Z",
       "book": "W11-NEDET",
@@ -4293,6 +4284,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+43 on DET 1-6 @ 0.21 (maker)\nworst outcome now -97\nheld 182/284/555/417/0/555\nIf the game ends... you make\nDET 1-6: +148 (+1.9% of bankroll)\nDET 7-14: +46 (+0.6% of bankroll)\nDET 15+: -225 (-2.9% of bankroll)\nNE 1-6: -87 (-1.1% of bankroll)\nNE 7-14: +330 (+4.3% of bankroll)\nNE 15+: -225 (-2.9% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794719731813-3d311a",
+      "ts": "2026-11-15T05:15:31Z",
+      "book": "W11-NEDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+1 on DET 1-6 @ 0.21 (maker)\nworst outcome now -97\nheld 183/284/555/417/0/555\nIf the game ends... you make\nDET 1-6: +148 (+1.9% of bankroll)\nDET 7-14: +46 (+0.6% of bankroll)\nDET 15+: -225 (-2.9% of bankroll)\nNE 1-6: -87 (-1.1% of bankroll)\nNE 7-14: +330 (+4.3% of bankroll)\nNE 15+: -225 (-2.9% of bankroll)",
       "severity": "warn"
     }
   ]
