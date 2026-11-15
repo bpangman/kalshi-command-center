@@ -1,10 +1,10 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T03:48:53.580395Z",
+  "generated_at": "2026-11-15T03:50:28.203383Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$243, goal -$75.",
+    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$239, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,10 +12,10 @@
       {
         "side": "DET by 15+",
         "resting": "none",
-        "exposure": -242.69,
-        "exposure_text": "-$243",
+        "exposure": -239.45,
+        "exposure_text": "-$239",
         "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$150 (now -$243)",
+        "when": "holding until worst loss is back above -$150 (now -$239)",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-13T00:04:31Z"
@@ -23,8 +23,8 @@
       {
         "side": "NE by 15+",
         "resting": "none",
-        "exposure": -242.69,
-        "exposure_text": "-$243",
+        "exposure": -239.45,
+        "exposure_text": "-$239",
         "move": "Holding",
         "when": "no move planned until the even-done check at Sun 8:00am CT",
         "at": null,
@@ -34,8 +34,8 @@
       {
         "side": "NE by 1-6",
         "resting": "362 @ 20-21c",
-        "exposure": -104.69,
-        "exposure_text": "-$105",
+        "exposure": -101.45,
+        "exposure_text": "-$101",
         "move": "Paid balancing (trickle)",
         "when": "starts Sun 8:10am CT, up to $100 in all",
         "at": "2026-11-15T14:10:00Z",
@@ -44,25 +44,25 @@
       },
       {
         "side": "DET by 7-14",
-        "resting": "566 @ 18-21c",
-        "exposure": 51.31,
-        "exposure_text": "+$51",
-        "move": "Hold price at 18c",
-        "when": "no crowd trade data yet",
-        "at": null,
+        "resting": "547 @ 19-21c",
+        "exposure": 36.55,
+        "exposure_text": "+$37",
+        "move": "Step price down 1c (19c to 18c)",
+        "when": "if no fill by 9:58pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-15T03:58:37Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
-        "last_fill": "2026-11-15T03:13:14Z",
-        "lag_note": "No crowd trade data yet."
+        "last_fill": "2026-11-15T03:48:37Z",
+        "lag_note": "Steps to 18c if no fill by 9:58pm CT."
       },
       {
         "side": "DET by 1-6",
         "resting": "717 @ 21-24c",
-        "exposure": 194.8,
-        "exposure_text": "+$195",
+        "exposure": 198.04,
+        "exposure_text": "+$198",
         "move": "Step price down 1c (21c to 20c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T03:48:15Z",
+        "at": "2026-11-15T03:50:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "last_fill": "2026-11-15T00:34:33Z",
@@ -71,11 +71,11 @@
       {
         "side": "NE by 7-14",
         "resting": "555 @ 14-16c",
-        "exposure": 312.31,
-        "exposure_text": "+$312",
+        "exposure": 315.55,
+        "exposure_text": "+$316",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T03:48:15Z",
+        "at": "2026-11-15T03:50:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts Sun 8:10am CT",
         "lag_note": "Steps to 13c at the next check."
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 1,906, 2,200 resting. Worst line -$243 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 1,924, 2,181 resting. Worst line -$239 (goal -$75)."
         ]
       },
       {
@@ -101,14 +101,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$243).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$239).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: DET by 15+ stopped adding until worst line is above -$150 (now -$243).",
+          "Backstop ON: DET by 15+ stopped adding until worst line is above -$150 (now -$239).",
           "Paid balancing starts Sun 8:10am CT: worst line to -$75 by Sun 8:25am CT, up to $100.",
           "At Sun 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Sun 8:30am CT: the in-game engine takes over."
@@ -149,11 +149,11 @@
       },
       {
         "label": "DET by 7-14",
-        "held": 261.0,
-        "resting": 566.0,
+        "held": 279.0,
+        "resting": 547.0,
         "target": null,
         "status": "lagging",
-        "price": 0.18
+        "price": 0.19
       },
       {
         "label": "DET by 15+",
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T03:48:15Z"
+    "ts": "2026-11-15T03:50:16Z"
   },
   "posts": [
-    {
-      "id": "1794528335092-f3d460",
-      "ts": "2026-11-13T00:05:27Z",
-      "book": "W11-NEDET",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: DET by 15+ at 20c (286 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
     {
       "id": "1794528335092-6dcb50",
       "ts": "2026-11-13T00:05:27Z",
@@ -3375,6 +3365,16 @@
       "text": "Quiet for 15 min. 2,200 resting. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794714616552-6ef3f7",
+      "ts": "2026-11-15T03:50:00Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DET by 7-14 at 18c (18 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
