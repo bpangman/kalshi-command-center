@@ -1,6 +1,6 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T17:48:05.617896Z",
+  "generated_at": "2026-11-15T17:49:28.146055Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -11,7 +11,7 @@
     "moves": [
       {
         "side": "GB by 1-6",
-        "resting": "66 @ 22-23c",
+        "resting": "15 @ 22-23c",
         "exposure": -54.58,
         "exposure_text": "-$55",
         "move": "Holding",
@@ -37,7 +37,7 @@
         "exposure": -54.02,
         "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$88); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$83); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:40:03Z"
@@ -48,7 +48,7 @@
         "exposure": -53.85,
         "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$88); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$83); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:40:03Z"
@@ -59,7 +59,7 @@
         "exposure": -53.8,
         "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$88); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$83); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T17:40:03Z"
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$55 is better than -$88.",
+          "Gate open: worst line -$55 is better than -$83.",
           "Batches used: 2 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
-          "Paid balancing is running: plan -$88, worst line -$55; spent $8 of $100.",
+          "Paid balancing is running: plan -$83, worst line -$55; spent $8 of $100.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -174,7 +174,7 @@
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T17:47:56Z"
+    "ts": "2026-11-15T17:48:57Z"
   },
   "posts": [
     {
@@ -2426,6 +2426,50 @@
       "text": "Row sold out: MIN by 7-14 at 14c (17 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794764896862-fb344d",
+      "ts": "2026-11-15T17:46:13Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 17: MIN by 7-14 x17 at 14c. Worst line -$55.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 17.0,
+        "fills": [
+          {
+            "side": "MIN by 7-14",
+            "price": 0.14,
+            "qty": 17.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794764896862-e77757",
+      "ts": "2026-11-15T17:46:13Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 20 (SPORTSBOOK rate row (listed 0.): MIN by 7-14 x20 at 14c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 20.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1794764937133-ef1a20",
+      "ts": "2026-11-15T17:48:41Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease GB1TO6: resting 66 -> 15 (held 316 + resting was over the cap 332 = 1.13x; tighten phase",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
