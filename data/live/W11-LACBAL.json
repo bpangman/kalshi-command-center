@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-15T20:14:09.428880Z",
+  "generated_at": "2026-11-15T20:15:35.515093Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -176,7 +176,7 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-15T20:13:19Z"
+    "ts": "2026-11-15T20:15:20Z"
   },
   "posts": [
     {
@@ -2431,6 +2431,45 @@
       "text": "Row sold out: LAC by 15+ at 5c (1 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794773661950-b78c84",
+      "ts": "2026-11-15T20:14:21Z",
+      "book": "W11-LACBAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBAL 1-6: +5 (+0.0% of bankroll)\nBAL 7-14: +5 (+0.0% of bankroll)\nBAL 15+: +5 (+0.0% of bankroll)\nLAC 1-6: +5 (+0.0% of bankroll)\nLAC 7-14: +5 (+0.0% of bankroll)\nLAC 15+: -114 (-0.8% of bankroll)\nCollected $5 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 379\nBAL 7-14: 0 / 379\nBAL 15+: 0 / 452\nLAC 1-6: 0 / 379\nLAC 7-14: 0 / 452\nLAC 15+: 119 / 286\nPosted book 1.11 | Sold avg 1.080 | Worst now -8 | Cash free $2500\nAnchor age 0s | Last fill 113s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1794773720618-ee3bb4",
+      "ts": "2026-11-15T20:13:19Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 19: LAC by 15+ x16 at 7c, LAC by 15+ x2 at 4c, LAC by 15+ x1 at 5c. Worst line -$114.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 19.0,
+        "fills": [
+          {
+            "side": "LAC by 15+",
+            "price": 0.07,
+            "qty": 16.0
+          },
+          {
+            "side": "LAC by 15+",
+            "price": 0.04,
+            "qty": 2.0
+          },
+          {
+            "side": "LAC by 15+",
+            "price": 0.05,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3252,6 +3291,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794773661949-897062",
+      "ts": "2026-11-15T20:14:21Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+2 on LAC 15+ @ 0.04 (maker)\n+1 on LAC 15+ @ 0.05 (maker)\n+16 on LAC 15+ @ 0.07 (maker)\nworst outcome now -8\nheld 0/0/0/0/0/119\nIf the game ends... you make\nBAL 1-6: +5 (+0.0% of bankroll)\nBAL 7-14: +5 (+0.0% of bankroll)\nBAL 15+: +5 (+0.0% of bankroll)\nLAC 1-6: +5 (+0.0% of bankroll)\nLAC 7-14: +5 (+0.0% of bankroll)\nLAC 15+: -114 (-0.8% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
