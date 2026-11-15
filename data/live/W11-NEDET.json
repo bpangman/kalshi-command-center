@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T14:17:53.665070Z",
+  "generated_at": "2026-11-15T14:19:20.291759Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -39,12 +39,12 @@
         "exposure": -62.75,
         "exposure_text": "-$63",
         "move": "Step price down 1c (20c to 19c)",
-        "when": "if no fill by 8:20am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-15T14:20:08Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T14:10:08Z",
-        "lag_note": "Steps to 19c if no fill by 8:20am CT."
+        "lag_note": "Steps to 19c at the next check."
       },
       {
         "side": "NE by 1-6",
@@ -52,12 +52,12 @@
         "exposure": -62.75,
         "exposure_text": "-$63",
         "move": "Step price down 1c (20c to 19c)",
-        "when": "if no fill by 8:20am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-15T14:20:08Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T14:10:08Z",
-        "lag_note": "Steps to 19c if no fill by 8:20am CT."
+        "lag_note": "Steps to 19c at the next check."
       },
       {
         "side": "NE by 15+",
@@ -74,16 +74,16 @@
       },
       {
         "side": "NE by 7-14",
-        "resting": "519 @ 14-16c",
+        "resting": "525 @ 13-16c",
         "exposure": 456.44,
         "exposure_text": "+$456",
-        "move": "Step price down 1c (14c to 13c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T14:17:10Z",
+        "move": "Hold price at 13c",
+        "when": "crowd pays 13c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-15T14:03:48Z",
-        "lag_note": "Steps to 13c at the next check."
+        "lag_note": "Price 13c matches the crowd."
       }
     ],
     "sections": [
@@ -97,8 +97,8 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DET by 7-14, DET by 15+, NE by 1-6, NE by 7-14, NE by 15+.",
-          "NE by 7-14: 581 behind. Steps to 13c at the next check.",
-          "DET by 7-14: 62 behind. Steps to 19c if no fill by 8:20am CT.",
+          "NE by 7-14: 581 behind. Price 13c matches the crowd.",
+          "DET by 7-14: 62 behind. Steps to 19c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -106,7 +106,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$102 (now -$125).",
+          "Gate closed: batches wait for the worst line to reach -$95 (now -$125).",
           "Batches used: 1 (max 3 per side)."
         ]
       },
@@ -114,7 +114,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$150.",
-          "Paid balancing is running: plan -$102, worst line -$125; spent $10 of $100.",
+          "Paid balancing is running: plan -$95, worst line -$125; spent $10 of $100.",
           "Kickoff 8:30am CT: the in-game engine takes over."
         ]
       },
@@ -183,29 +183,9 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T14:17:10Z"
+    "ts": "2026-11-15T14:19:11Z"
   },
   "posts": [
-    {
-      "id": "1794605506443-e6233f",
-      "ts": "2026-11-13T21:31:36Z",
-      "book": "W11-NEDET",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Bot restarted. It adopts the orders already resting.",
-      "severity": "warn",
-      "title": "Bot restarted"
-    },
-    {
-      "id": "1794606413447-c89f1c",
-      "ts": "2026-11-13T21:46:53Z",
-      "book": "W11-NEDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,150 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794607320583-bd22a0",
       "ts": "2026-11-13T22:02:00Z",
@@ -3587,6 +3567,40 @@
       "text": "Final tightening before kickoff 8:30am CT. Worst line -$125. Next: Kickoff, 8:30am CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1794752331381-004c38",
+      "ts": "2026-11-15T14:16:49Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 62: DET by 1-6 x62 at 23c. Worst line -$125.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 62.0,
+        "fills": [
+          {
+            "side": "DET by 1-6",
+            "price": 0.23,
+            "qty": 62.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794752331382-09dfad",
+      "ts": "2026-11-15T14:16:49Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 61 (rung 1 allotment): DET by 15+ x61 at 18c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 61.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
