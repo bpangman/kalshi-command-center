@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T23:15:52.321834Z",
+  "generated_at": "2026-11-15T23:17:11.059384Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 1,908, 63 resting. Worst line +$2. Game 55% done."
+          "In game (Ingame). Sold 1,908, 0 resting. Worst line +$2. Game 55% done."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "label": "DAL by 15+",
         "held": 271.0,
-        "resting": 63.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,7 +101,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T23:15:39Z"
+    "ts": "2026-11-15T23:16:39Z"
   },
   "posts": [
     {
@@ -3749,6 +3749,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-SFDAL): inactive, cause=room_zero, remedy=raise_slack, posts_last_10m=10, market_volume_last_30m=6876. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794784614905-bdbab6",
+      "ts": "2026-11-15T23:16:54Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W11-SFDAL has no resting orders on any side for at least 10 min while it should be posting.",
       "severity": "warn"
     }
   ]
