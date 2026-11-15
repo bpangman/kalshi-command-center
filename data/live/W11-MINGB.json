@@ -1,21 +1,32 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T17:38:31.612263Z",
+  "generated_at": "2026-11-15T17:41:04.879753Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 12:00pm CT. Worst line -$133, goal -$50.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 12:00pm CT. Worst line -$57.",
+    "confidence": "medium",
+    "confidence_note": "Timers are set, but reaching -$50 depends on the crowd.",
     "checks_every_s": 20,
     "moves": [
       {
+        "side": "GB by 1-6",
+        "resting": "66 @ 22-23c",
+        "exposure": -56.96,
+        "exposure_text": "-$57",
+        "move": "Holding",
+        "when": "no move planned until kickoff at 12:00pm CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-15T17:40:03Z"
+      },
+      {
         "side": "MIN by 1-6",
         "resting": "none",
-        "exposure": -133.22,
-        "exposure_text": "-$133",
+        "exposure": -56.96,
+        "exposure_text": "-$57",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 11:40am CT",
+        "when": "no move planned until kickoff at 12:00pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T16:55:07Z"
@@ -23,63 +34,46 @@
       {
         "side": "GB by 7-14",
         "resting": "41 @ 20-23c",
-        "exposure": -82.66,
-        "exposure_text": "-$83",
+        "exposure": -56.4,
+        "exposure_text": "-$56",
         "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-15T17:40:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$127); up to $100 in all",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-15T17:35:58Z"
-      },
-      {
-        "side": "GB by 1-6",
-        "resting": "66 @ 22-23c",
-        "exposure": -38.22,
-        "exposure_text": "-$38",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-15T17:40:00Z",
-        "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-11-15T17:22:54Z",
-        "lag_note": "Price 22c matches the crowd."
+        "last_fill": "2026-11-15T17:40:03Z"
       },
       {
         "side": "MIN by 15+",
-        "resting": "186 @ 7-10c",
-        "exposure": 79.51,
-        "exposure_text": "+$80",
+        "resting": "64 @ 7-10c",
+        "exposure": -56.23,
+        "exposure_text": "-$56",
         "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-15T17:40:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$127); up to $100 in all",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-11-15T16:41:29Z",
-        "lag_note": "Price 7c matches the crowd."
+        "last_fill": "2026-11-15T17:40:03Z"
       },
       {
         "side": "GB by 15+",
-        "resting": "260 @ 18-19c",
-        "exposure": 126.56,
-        "exposure_text": "+$127",
-        "move": "Step price down 1c (18c to 17c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T17:37:53Z",
+        "resting": "72 @ 18-19c",
+        "exposure": -56.18,
+        "exposure_text": "-$56",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$127); up to $100 in all",
+        "at": null,
         "stuck": false,
-        "also": "Also: paid balancing starts 11:40am CT",
-        "last_fill": "2026-11-15T17:27:16Z",
-        "lag_note": "Steps to 17c at the next check."
+        "last_fill": "2026-11-15T17:40:03Z"
       },
       {
         "side": "MIN by 7-14",
         "resting": "267 @ 14-16c",
-        "exposure": 153.78,
-        "exposure_text": "+$154",
+        "exposure": 230.04,
+        "exposure_text": "+$230",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T17:37:53Z",
+        "at": "2026-11-15T17:40:54Z",
         "stuck": false,
-        "also": "Also: paid balancing starts 11:40am CT",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-15T17:14:16Z",
         "lag_note": "Steps to 13c at the next check."
       }
@@ -88,15 +82,14 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 991, 819 resting. Worst line -$133 (goal -$50)."
+          "Final tightening, kickoff 12:00pm CT. Sold 1,607, 510 resting. Worst line -$57 (goal -$50)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): GB by 1-6, GB by 15+, MIN by 7-14, MIN by 15+.",
+          "Lagging (150+ behind the leader): MIN by 7-14.",
           "MIN by 7-14: 287 behind. Steps to 13c at the next check.",
-          "GB by 15+: 260 behind. Steps to 17c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -104,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$133 is better than -$200.",
+          "Gate open: worst line -$57 is better than -$127.",
           "Batches used: 2 (max 3 per side)."
         ]
       },
@@ -112,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
-          "Paid balancing starts 11:40am CT: worst line to -$50 by 11:55am CT, up to $100.",
+          "Paid balancing is running: plan -$127, worst line -$57; spent $8 of $100.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -125,11 +118,6 @@
     ],
     "next_steps": [
       {
-        "at": "2026-11-15T17:40:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$50 by 11:55am CT."
-      },
-      {
         "at": "2026-11-15T18:00:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
@@ -138,15 +126,15 @@
     "sides": [
       {
         "label": "GB by 1-6",
-        "held": 221.0,
+        "held": 316.0,
         "resting": 66.0,
         "target": null,
-        "status": "lagging",
+        "status": "even",
         "price": 0.22
       },
       {
         "label": "GB by 7-14",
-        "held": 265.4,
+        "held": 315.4,
         "resting": 40.6,
         "target": null,
         "status": "even",
@@ -154,10 +142,10 @@
       },
       {
         "label": "GB by 15+",
-        "held": 56.2,
-        "resting": 259.8,
+        "held": 315.2,
+        "resting": 72.0,
         "target": null,
-        "status": "lagging",
+        "status": "even",
         "price": 0.18
       },
       {
@@ -178,15 +166,15 @@
       },
       {
         "label": "MIN by 15+",
-        "held": 103.3,
-        "resting": 185.7,
+        "held": 315.3,
+        "resting": 64.0,
         "target": null,
-        "status": "lagging",
+        "status": "even",
         "price": 0.07
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T17:37:53Z"
+    "ts": "2026-11-15T17:40:54Z"
   },
   "posts": [
     {
@@ -2304,36 +2292,133 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794764402701-209557",
+      "ts": "2026-11-15T17:40:02Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "trickle",
+      "text": "W11-MINGB: selling 259 GB 15+ at 15c + 189 MIN 15+ at 6c + 95 GB 1-6 at 21c + 50 GB 7-14 at 18c into the crowd's bid (about $8) to cut the worst case from -$132 to -$57, a paid sale under fair value. Reply in Claude if you want it stopped.",
+      "severity": "critical"
+    },
+    {
+      "id": "1794764414526-e0a0ba",
+      "ts": "2026-11-15T17:40:01Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$132; goal -$50 by 11:55am CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794764414527-9e6343",
+      "ts": "2026-11-15T17:40:03Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 259 GB by 15+ at the bid 15c. Worst line -$132. Cost $2.32.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794764414528-694635",
+      "ts": "2026-11-15T17:40:03Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 189 MIN by 15+ at the bid 6c. Worst line -$132. Cost $1.64.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794764414528-efa71c",
+      "ts": "2026-11-15T17:40:03Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 95 GB by 1-6 at the bid 21c. Worst line -$132. Cost $2.45.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794764414528-bb4c6c",
+      "ts": "2026-11-15T17:40:03Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 50 GB by 7-14 at the bid 18c. Worst line -$132. Cost $2.00.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1794764454707-df4d8d",
+      "ts": "2026-11-15T17:40:23Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 616: GB by 15+ x259 at 15c, MIN by 15+ x189 at 6c, GB by 1-6 x95 at 21c, +3 more. Worst line -$57.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 616.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.15,
+            "qty": 259.0
+          },
+          {
+            "side": "MIN by 15+",
+            "price": 0.06,
+            "qty": 189.0
+          },
+          {
+            "side": "GB by 1-6",
+            "price": 0.21,
+            "qty": 95.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.18,
+            "qty": 31.0
+          },
+          {
+            "side": "MIN by 15+",
+            "price": 0.07,
+            "qty": 23.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.19,
+            "qty": 19.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794764454718-56a3f1",
+      "ts": "2026-11-15T17:40:54Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794764454718-2137bf",
+      "ts": "2026-11-15T17:40:54Z",
+      "book": "W11-MINGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 12:00pm CT. Worst line -$57. Next: Kickoff, 12:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
-    {
-      "id": "1794670621634-8e8168",
-      "ts": "2026-11-14T15:37:01Z",
-      "book": "W11-MINGB",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
-    {
-      "id": "1794674739155-873001",
-      "ts": "2026-11-14T16:45:39Z",
-      "book": "W11-MINGB",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+1 on MIN 1-6 @ 0.19 (maker)\nworst outcome now -5\nheld 0/0/0/1/0/0\nIf the game ends... you make\nGB 1-6: +0 (+0.0% of bankroll)\nGB 7-14: +0 (+0.0% of bankroll)\nGB 15+: +0 (+0.0% of bankroll)\nMIN 1-6: -1 (-0.0% of bankroll)\nMIN 7-14: +0 (+0.0% of bankroll)\nMIN 15+: +0 (+0.0% of bankroll)",
-      "severity": "warn"
-    },
-    {
-      "id": "1794677395705-6a2a11",
-      "ts": "2026-11-14T17:29:55Z",
-      "book": "W11-MINGB",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+50 on MIN 1-6 @ 0.19 (maker)\nworst outcome now -5\nheld 0/0/0/51/0/0\nIf the game ends... you make\nGB 1-6: +10 (+0.1% of bankroll)\nGB 7-14: +10 (+0.1% of bankroll)\nGB 15+: +10 (+0.1% of bankroll)\nMIN 1-6: -41 (-0.3% of bankroll)\nMIN 7-14: +10 (+0.1% of bankroll)\nMIN 15+: +10 (+0.1% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1794679197355-2ec057",
       "ts": "2026-11-14T17:59:57Z",
@@ -3205,6 +3290,33 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-MINGB): held worst -164.02 (backstop -100) or lagging gap 287 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794764360830-7b35cf",
+      "ts": "2026-11-15T17:39:20Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W11-MINGB): 2 order(s) with an unsafe price. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1794764380372-0d41cb",
+      "ts": "2026-11-15T17:39:40Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+23 on MIN 15+ @ 0.07 (maker)\nworst outcome now -6\nheld 221/265/56/316/29/126\nIf the game ends... you make\nGB 1-6: -37 (-0.3% of bankroll)\nGB 7-14: -81 (-0.6% of bankroll)\nGB 15+: +128 (+0.9% of bankroll)\nMIN 1-6: -132 (-0.9% of bankroll)\nMIN 7-14: +155 (+1.1% of bankroll)\nMIN 15+: +58 (+0.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794764401982-5f6145",
+      "ts": "2026-11-15T17:40:01Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: MIN 1-6 worst outcome -6\nIf the game ends... you make\nGB 1-6: -37 (-0.3% of bankroll)\nGB 7-14: -81 (-0.6% of bankroll)\nGB 15+: +128 (+0.9% of bankroll)\nMIN 1-6: -132 (-0.9% of bankroll)\nMIN 7-14: +155 (+1.1% of bankroll)\nMIN 15+: +58 (+0.4% of bankroll)",
       "severity": "warn"
     }
   ]
