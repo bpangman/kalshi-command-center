@@ -1,10 +1,10 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T02:50:34.121297Z",
+  "generated_at": "2026-11-15T02:52:04.293742Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$292, goal -$75.",
+    "headline": "Building toward kickoff Sun 8:30am CT. Worst line -$273, goal -$75.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,10 +12,10 @@
       {
         "side": "DET by 15+",
         "resting": "none",
-        "exposure": -292.36,
-        "exposure_text": "-$292",
+        "exposure": -273.46,
+        "exposure_text": "-$273",
         "move": "Stops adding (backstop)",
-        "when": "holding until worst loss is back above -$150 (now -$292)",
+        "when": "holding until worst loss is back above -$150 (now -$273)",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-13T00:04:31Z"
@@ -23,8 +23,8 @@
       {
         "side": "NE by 15+",
         "resting": "none",
-        "exposure": -292.36,
-        "exposure_text": "-$292",
+        "exposure": -273.46,
+        "exposure_text": "-$273",
         "move": "Holding",
         "when": "no move planned until the even-done check at Sun 8:00am CT",
         "at": null,
@@ -34,8 +34,8 @@
       {
         "side": "NE by 1-6",
         "resting": "493 @ 18-21c",
-        "exposure": -15.36,
-        "exposure_text": "-$15",
+        "exposure": 3.54,
+        "exposure_text": "+$4",
         "move": "Hold price at 18c",
         "when": "crowd pays 18c; steps down 1c only if it trades lower",
         "at": null,
@@ -45,10 +45,23 @@
         "lag_note": "Price 18c matches the crowd."
       },
       {
+        "side": "DET by 7-14",
+        "resting": "579 @ 17-21c",
+        "exposure": 54.36,
+        "exposure_text": "+$54",
+        "move": "Hold price at 17c",
+        "when": "crowd pays 17c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts Sun 8:10am CT",
+        "last_fill": "2026-11-15T02:50:40Z",
+        "lag_note": "Price 17c matches the crowd."
+      },
+      {
         "side": "DET by 1-6",
         "resting": "717 @ 21-24c",
-        "exposure": 145.13,
-        "exposure_text": "+$145",
+        "exposure": 164.03,
+        "exposure_text": "+$164",
         "move": "Hold price at 21c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -58,23 +71,10 @@
         "lag_note": "No crowd trade data yet."
       },
       {
-        "side": "DET by 7-14",
-        "resting": "691 @ 17-21c",
-        "exposure": 146.64,
-        "exposure_text": "+$147",
-        "move": "Hold price at 17c",
-        "when": "crowd pays 17c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts Sun 8:10am CT",
-        "last_fill": "2026-11-14T23:49:45Z",
-        "lag_note": "Price 17c matches the crowd."
-      },
-      {
         "side": "NE by 7-14",
         "resting": "555 @ 14-16c",
-        "exposure": 262.64,
-        "exposure_text": "+$263",
+        "exposure": 281.54,
+        "exposure_text": "+$282",
         "move": "Hold price at 14c",
         "when": "needs 50+ crowd trades under 14c (now 1)",
         "at": null,
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Sun 8:30am CT. Sold 1,622, 2,457 resting. Worst line -$292 (goal -$75)."
+          "Pregame build, kickoff Sun 8:30am CT. Sold 1,733, 2,345 resting. Worst line -$273 (goal -$75)."
         ]
       },
       {
@@ -95,7 +95,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DET by 1-6, DET by 7-14, NE by 1-6, NE by 7-14.",
           "NE by 7-14: 555 behind. Crowd is quiet here (1 traded).",
-          "DET by 7-14: 439 behind. Price 17c matches the crowd.",
+          "DET by 1-6: 438 behind. No crowd trade data yet.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -103,14 +103,14 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$292).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$273).",
           "Batches used: none (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop ON: DET by 15+ stopped adding until worst line is above -$150 (now -$292).",
+          "Backstop ON: DET by 15+ stopped adding until worst line is above -$150 (now -$273).",
           "Paid balancing starts Sun 8:10am CT: worst line to -$75 by Sun 8:25am CT, up to $100.",
           "At Sun 8:00am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff Sun 8:30am CT: the in-game engine takes over."
@@ -144,15 +144,15 @@
       {
         "label": "DET by 1-6",
         "held": 117.5,
-        "resting": 718.5,
+        "resting": 717.5,
         "target": null,
         "status": "lagging",
         "price": 0.21
       },
       {
         "label": "DET by 7-14",
-        "held": 116.0,
-        "resting": 691.0,
+        "held": 227.2,
+        "resting": 579.8,
         "target": null,
         "status": "lagging",
         "price": 0.17
@@ -191,19 +191,9 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T02:49:59Z"
+    "ts": "2026-11-15T02:51:59Z"
   },
   "posts": [
-    {
-      "id": "1794521708056-0cc4d6",
-      "ts": "2026-11-12T22:15:08Z",
-      "book": "W11-NEDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,126 resting. Next: Even-done check, Sun 8:00am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794522615292-36a481",
       "ts": "2026-11-12T22:30:15Z",
@@ -3311,6 +3301,16 @@
       "text": "Building toward kickoff Sun 8:30am CT. Worst line -$292, goal -$75. Next: Even-done check, Sun 8:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794711099784-33e22e",
+      "ts": "2026-11-15T02:51:36Z",
+      "book": "W11-NEDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on lagging DET by 7-14: 111 of 120 sold, re-posted at the same price.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
