@@ -1,6 +1,6 @@
 {
   "key": "W11-NEDET",
-  "generated_at": "2026-11-15T11:46:54.208202Z",
+  "generated_at": "2026-11-15T11:48:25.358735Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -38,7 +38,7 @@
         "exposure_text": "-$71",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T11:46:15Z",
+        "at": "2026-11-15T11:48:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-15T10:28:05Z",
@@ -46,7 +46,7 @@
       },
       {
         "side": "DET by 1-6",
-        "resting": "454 @ 22-24c",
+        "resting": "452 @ 22-24c",
         "exposure": -41.77,
         "exposure_text": "-$42",
         "move": "Hold price at 22c",
@@ -59,16 +59,16 @@
       },
       {
         "side": "DET by 7-14",
-        "resting": "533 @ 19-21c",
+        "resting": "532 @ 19-21c",
         "exposure": 38.23,
         "exposure_text": "+$38",
-        "move": "Step price down 1c (19c to 18c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T11:46:15Z",
+        "move": "Hold price at 19c",
+        "when": "needs 50+ crowd trades under 19c (now 44)",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-15T11:30:02Z",
-        "lag_note": "Steps to 18c at the next check."
+        "lag_note": "Crowd is quiet here (44 traded)."
       },
       {
         "side": "NE by 7-14",
@@ -77,7 +77,7 @@
         "exposure_text": "+$394",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T11:46:15Z",
+        "at": "2026-11-15T11:48:16Z",
         "stuck": false,
         "also": "Also: paid balancing starts 8:10am CT",
         "last_fill": "2026-11-15T09:29:53Z",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 8:30am CT. Sold 2,499, 1,871 resting. Worst line -$128 (goal -$75)."
+          "Pregame build, kickoff 8:30am CT. Sold 2,499, 1,869 resting. Worst line -$128 (goal -$75)."
         ]
       },
       {
@@ -96,7 +96,7 @@
         "lines": [
           "Lagging (150+ behind the leader): DET by 1-6, DET by 7-14, NE by 1-6, NE by 7-14.",
           "NE by 7-14: 522 behind. Steps to 13c at the next check.",
-          "DET by 7-14: 166 behind. Steps to 18c at the next check.",
+          "DET by 7-14: 166 behind. Crowd is quiet here (44 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -145,7 +145,7 @@
       {
         "label": "DET by 1-6",
         "held": 469.0,
-        "resting": 454.0,
+        "resting": 453.0,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -153,7 +153,7 @@
       {
         "label": "DET by 7-14",
         "held": 389.0,
-        "resting": 533.0,
+        "resting": 532.0,
         "target": null,
         "status": "lagging",
         "price": 0.19
@@ -192,18 +192,9 @@
       }
     ],
     "book": "W11-NEDET",
-    "ts": "2026-11-15T11:46:15Z"
+    "ts": "2026-11-15T11:48:16Z"
   },
   "posts": [
-    {
-      "id": "1794582418023-f82d34",
-      "ts": "2026-11-13T15:06:58Z",
-      "book": "W11-NEDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +172 (+2.2% of bankroll)\nDET 7-14: +172 (+2.2% of bankroll)\nDET 15+: -383 (-5.0% of bankroll)\nNE 1-6: +151 (+2.0% of bankroll)\nNE 7-14: +172 (+2.2% of bankroll)\nNE 15+: -383 (-5.0% of bankroll)\nCollected $172 premium ($0 fees) | Paper margin over fair $24 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 526\nDET 7-14: 0 / 526\nDET 15+: 555 / 0\nNE 1-6: 21 / 543\nNE 7-14: 0 / 450\nNE 15+: 555 / 0\nPosted book 1.08 | Sold avg 1.081 | Worst now +16 | Cash free $1004\nAnchor age 0s | Last fill 28971s ago",
-      "severity": "info"
-    },
     {
       "id": "1794582502738-958517",
       "ts": "2026-11-13T15:08:22Z",
@@ -3571,6 +3562,16 @@
       "text": "Building toward kickoff 8:30am CT. Worst line -$128, goal -$75. Next: Even-done check, 8:00am CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794743296328-4cae25",
+      "ts": "2026-11-15T11:48:16Z",
+      "book": "W11-NEDET",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 1,869 resting. Next: Even-done check, 8:00am CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
