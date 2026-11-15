@@ -1,128 +1,47 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T21:22:03.949193Z",
+  "generated_at": "2026-11-15T21:23:24.930871Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:25pm CT. Worst line -$1.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$1.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "SF by 1-6",
-        "resting": "1 @ 24c",
-        "exposure": -0.85,
-        "exposure_text": "-$1",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:25pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-15T20:22:34Z"
-      },
-      {
-        "side": "SF by 7-14",
-        "resting": "2 @ 24-25c",
-        "exposure": 1.15,
-        "exposure_text": "+$1",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-15T21:15:29Z"
-      },
-      {
-        "side": "DAL by 1-6",
-        "resting": "5 @ 19c",
-        "exposure": 3.35,
-        "exposure_text": "+$3",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-15T21:21:09Z"
-      },
-      {
-        "side": "SF by 15+",
-        "resting": "14 @ 25c",
-        "exposure": 13.15,
-        "exposure_text": "+$13",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-15T19:01:10Z"
-      },
-      {
-        "side": "DAL by 7-14",
-        "resting": "21 @ 13c",
-        "exposure": 19.15,
-        "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$50); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-15T20:39:53Z"
-      },
-      {
-        "side": "DAL by 15+",
-        "resting": "59 @ 8c",
-        "exposure": 58.15,
-        "exposure_text": "+$58",
-        "move": "Step price down 1c (8c to 7c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T21:22:00Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-15T20:48:10Z",
-        "lag_note": "Steps to 7c at the next check."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:25pm CT. Sold 1,881, 102 resting. Worst line -$1 (goal -$50)."
+          "In game (Ingame). Sold 1,881, 102 resting. Worst line -$1. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): DAL by 15+.",
-          "DAL by 15+: 59 behind. Steps to 7c at the next check.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$1 is better than -$50.",
-          "Batches used: 13 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$100.",
-          "Paid balancing is running: plan -$50, worst line -$1; spent $0 of $100.",
-          "Kickoff 3:25pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-15T21:25:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "DAL by 1-6",
@@ -130,7 +49,7 @@
         "resting": 5.2,
         "target": null,
         "status": "even",
-        "price": 0.19
+        "price": null
       },
       {
         "label": "DAL by 7-14",
@@ -138,15 +57,15 @@
         "resting": 21.0,
         "target": null,
         "status": "even",
-        "price": 0.13
+        "price": null
       },
       {
         "label": "DAL by 15+",
         "held": 271.0,
         "resting": 59.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.08
+        "status": "even",
+        "price": null
       },
       {
         "label": "SF by 1-6",
@@ -154,7 +73,7 @@
         "resting": 1.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "SF by 7-14",
@@ -162,7 +81,7 @@
         "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "SF by 15+",
@@ -170,11 +89,19 @@
         "resting": 14.0,
         "target": null,
         "status": "even",
-        "price": 0.25
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T21:22:00Z"
+    "ts": "2026-11-15T21:23:01Z"
   },
   "posts": [
     {
@@ -2914,6 +2841,65 @@
       "text": "Bot note: COVERAGE-CAP clipped DAL1TO6 39 -> 17@0.19 (REPLENISH batch #4): held 326, cap 349 [tighten 1.04x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794777741114-ec92ae",
+      "ts": "2026-11-15T21:22:18Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -0.85, L_max 100.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794777781406-c5c032",
+      "ts": "2026-11-15T21:23:01Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794777781406-79be10",
+      "ts": "2026-11-15T21:23:01Z",
+      "book": "W11-SFDAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$1.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1794777796184-4c128a",
+      "ts": "2026-11-15T21:23:16Z",
+      "book": "W11-SFDAL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: DAL now 41%",
+      "severity": "info"
+    },
+    {
+      "id": "1794777801566-1890cd",
+      "ts": "2026-11-15T21:21:15Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 8: DAL by 1-6 x8 at 19c. Worst line -$1.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 8.0,
+        "fills": [
+          {
+            "side": "DAL by 1-6",
+            "price": 0.19,
+            "qty": 8.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3527,6 +3513,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on SF 7-14 @ 0.23 (maker)\nworst outcome now +11\nheld 316/310/271/330/317/316\nIf the game ends... you make\nDAL 1-6: +9 (+0.1% of bankroll)\nDAL 7-14: +15 (+0.1% of bankroll)\nDAL 15+: +54 (+0.4% of bankroll)\nSF 1-6: -5 (-0.0% of bankroll)\nSF 7-14: +8 (+0.1% of bankroll)\nSF 15+: +9 (+0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794777738710-ae8be6",
+      "ts": "2026-11-15T21:22:18Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nDAL 1-6: +3 (+0.0% of bankroll)\nDAL 7-14: +19 (+0.1% of bankroll)\nDAL 15+: +58 (+0.4% of bankroll)\nSF 1-6: -1 (-0.0% of bankroll)\nSF 7-14: +1 (+0.0% of bankroll)\nSF 15+: +13 (+0.1% of bankroll)",
       "severity": "warn"
     }
   ]
