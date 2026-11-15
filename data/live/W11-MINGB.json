@@ -1,10 +1,10 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T15:23:37.277350Z",
+  "generated_at": "2026-11-15T15:25:05.265530Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 12:00pm CT. Worst line -$177, goal -$50.",
+    "headline": "Building toward kickoff 12:00pm CT. Worst line -$158, goal -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "MIN by 1-6",
         "resting": "95 @ 20c",
-        "exposure": -177.38,
-        "exposure_text": "-$177",
+        "exposure": -158.42,
+        "exposure_text": "-$158",
         "move": "Holding",
         "when": "no move planned until the even-done check at 11:30am CT",
         "at": null,
@@ -21,10 +21,23 @@
         "last_fill": "2026-11-15T01:46:16Z"
       },
       {
+        "side": "GB by 1-6",
+        "resting": "316 @ 22-23c",
+        "exposure": -26.76,
+        "exposure_text": "-$27",
+        "move": "Hold price at 22c",
+        "when": "crowd pays 22c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 11:40am CT",
+        "last_fill": "2026-11-15T15:23:14Z",
+        "lag_note": "Price 22c matches the crowd."
+      },
+      {
         "side": "GB by 15+",
         "resting": "265 @ 18-19c",
-        "exposure": 38.4,
-        "exposure_text": "+$38",
+        "exposure": 57.36,
+        "exposure_text": "+$57",
         "move": "Hold price at 18c",
         "when": "no crowd trade data yet",
         "at": null,
@@ -34,23 +47,10 @@
         "lag_note": "No crowd trade data yet."
       },
       {
-        "side": "GB by 1-6",
-        "resting": "313 @ 22-23c",
-        "exposure": 40.48,
-        "exposure_text": "+$40",
-        "move": "Hold price at 22c",
-        "when": "crowd pays 22c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing starts 11:40am CT",
-        "last_fill": "2026-11-15T14:32:02Z",
-        "lag_note": "Price 22c matches the crowd."
-      },
-      {
         "side": "GB by 7-14",
         "resting": "421 @ 19-23c",
-        "exposure": 43.62,
-        "exposure_text": "+$44",
+        "exposure": 62.58,
+        "exposure_text": "+$63",
         "move": "Hold price at 19c",
         "when": "next cent is under the crowd price (18.1c)",
         "at": null,
@@ -61,8 +61,8 @@
       {
         "side": "MIN by 15+",
         "resting": "221 @ 9-10c",
-        "exposure": 43.62,
-        "exposure_text": "+$44",
+        "exposure": 62.58,
+        "exposure_text": "+$63",
         "move": "Hold price at 9c",
         "when": "needs 50+ crowd trades under 9c (now 1)",
         "at": null,
@@ -73,11 +73,11 @@
       {
         "side": "MIN by 7-14",
         "resting": "270 @ 15-16c",
-        "exposure": 43.62,
-        "exposure_text": "+$44",
+        "exposure": 62.58,
+        "exposure_text": "+$63",
         "move": "Step price down 1c (15c to 14c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T15:23:11Z",
+        "at": "2026-11-15T15:24:11Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:40am CT",
         "lag_note": "Steps to 14c at the next check."
@@ -87,7 +87,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 229, 1,586 resting. Worst line -$177 (goal -$50)."
+          "Pregame build, kickoff 12:00pm CT. Sold 316, 1,587 resting. Worst line -$158 (goal -$50)."
         ]
       },
       {
@@ -103,7 +103,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$177 is better than -$200.",
+          "Gate open: worst line -$158 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -143,8 +143,8 @@
     "sides": [
       {
         "label": "GB by 1-6",
-        "held": 3.1,
-        "resting": 312.9,
+        "held": 89.3,
+        "resting": 315.7,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -152,7 +152,7 @@
       {
         "label": "GB by 7-14",
         "held": 0.0,
-        "resting": 422.0,
+        "resting": 421.0,
         "target": null,
         "status": "lagging",
         "price": 0.19
@@ -170,7 +170,7 @@
         "held": 221.0,
         "resting": 95.0,
         "target": null,
-        "status": "heavy",
+        "status": "even",
         "price": 0.2
       },
       {
@@ -191,7 +191,7 @@
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T15:23:11Z"
+    "ts": "2026-11-15T15:24:11Z"
   },
   "posts": [
     {
@@ -1645,6 +1645,16 @@
       "source": "bot",
       "text": "If the game ends... you make\nGB 1-6: +40 (+0.3% of bankroll)\nGB 7-14: +44 (+0.3% of bankroll)\nGB 15+: +38 (+0.3% of bankroll)\nMIN 1-6: -177 (-1.3% of bankroll)\nMIN 7-14: +44 (+0.3% of bankroll)\nMIN 15+: +44 (+0.3% of bankroll)\nCollected $44 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nEvent: GB 7-14: GB 0-0, Q0 0:00; MIN 7-14: MIN 0-0, Q0 0:00\nheld / resting\nGB 1-6: 3 / 313\nGB 7-14: 0 / 424\nGB 15+: 5 / 265\nMIN 1-6: 221 / 95\nMIN 7-14: 0 / 270\nMIN 15+: 0 / 221\nPosted book 1.06 | Sold avg 1.043 | Worst now -95 | Cash free $595\nAnchor age 22s | Last fill 2786s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794756231368-eb93ba",
+      "ts": "2026-11-15T15:23:34Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on lagging GB by 1-6: 86 of 221 sold, re-posted at the same price.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
@@ -2348,6 +2358,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 0.55 over banked margin 0.21",
+      "severity": "warn"
+    },
+    {
+      "id": "1794756277134-d04d23",
+      "ts": "2026-11-15T15:24:37Z",
+      "book": "W11-MINGB",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+86 on GB 1-6 @ 0.22 (maker)\nworst outcome now -73\nheld 89/0/5/221/0/0\nIf the game ends... you make\nGB 1-6: -27 (-0.2% of bankroll)\nGB 7-14: +63 (+0.4% of bankroll)\nGB 15+: +57 (+0.4% of bankroll)\nMIN 1-6: -158 (-1.1% of bankroll)\nMIN 7-14: +63 (+0.4% of bankroll)\nMIN 15+: +63 (+0.4% of bankroll)",
       "severity": "warn"
     }
   ]

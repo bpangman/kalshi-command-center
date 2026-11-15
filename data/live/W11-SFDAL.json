@@ -1,41 +1,52 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T15:23:37.277350Z",
+  "generated_at": "2026-11-15T15:25:05.265530Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 3:25pm CT. Worst line -$94, goal -$50.",
+    "headline": "Building toward kickoff 3:25pm CT. Worst line -$97, goal -$50.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
-        "side": "SF by 7-14",
-        "resting": "117 @ 22-23c",
-        "exposure": -94.37,
-        "exposure_text": "-$94",
+        "side": "SF by 15+",
+        "resting": "none",
+        "exposure": -96.83,
+        "exposure_text": "-$97",
         "move": "Holding",
         "when": "no move planned until the even-done check at 2:55pm CT",
         "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-15T15:22:21Z"
+      },
+      {
+        "side": "SF by 7-14",
+        "resting": "117 @ 22-23c",
+        "exposure": -68.35,
+        "exposure_text": "-$68",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 3:05pm CT, up to $100 in all",
+        "at": "2026-11-15T21:05:00Z",
         "stuck": false,
         "last_fill": "2026-11-15T15:16:14Z"
       },
       {
         "side": "DAL by 1-6",
         "resting": "95 @ 18c",
-        "exposure": -73.85,
-        "exposure_text": "-$74",
+        "exposure": -47.83,
+        "exposure_text": "-$48",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:05pm CT, up to $100 in all",
         "at": "2026-11-15T21:05:00Z",
-        "stuck": true,
+        "stuck": false,
         "last_fill": "2026-11-15T06:34:36Z"
       },
       {
         "side": "DAL by 7-14",
         "resting": "81 @ 12c",
-        "exposure": -41.85,
-        "exposure_text": "-$42",
+        "exposure": -15.83,
+        "exposure_text": "-$16",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:05pm CT, up to $100 in all",
         "at": "2026-11-15T21:05:00Z",
@@ -43,21 +54,10 @@
         "last_fill": "2026-11-15T04:18:57Z"
       },
       {
-        "side": "SF by 15+",
-        "resting": "110 @ 23-24c",
-        "exposure": -13.22,
-        "exposure_text": "-$13",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 3:05pm CT, up to $100 in all",
-        "at": "2026-11-15T21:05:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-15T15:13:04Z"
-      },
-      {
         "side": "DAL by 15+",
-        "resting": "240 @ 7-8c",
-        "exposure": 147.15,
-        "exposure_text": "+$147",
+        "resting": "270 @ 7-8c",
+        "exposure": 173.17,
+        "exposure_text": "+$173",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:05pm CT, up to $100 in all",
         "at": "2026-11-15T21:05:00Z",
@@ -66,8 +66,8 @@
       {
         "side": "SF by 1-6",
         "resting": "316 @ 24-25c",
-        "exposure": 147.15,
-        "exposure_text": "+$147",
+        "exposure": 173.17,
+        "exposure_text": "+$173",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:05pm CT, up to $100 in all",
         "at": "2026-11-15T21:05:00Z",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:25pm CT. Sold 812, 959 resting. Worst line -$94 (goal -$50)."
+          "Pregame build, kickoff 3:25pm CT. Sold 922, 849 resting. Worst line -$97 (goal -$50)."
         ]
       },
       {
@@ -91,7 +91,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$94 is better than -$200.",
+          "Gate open: worst line -$97 is better than -$200.",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -171,15 +171,15 @@
       },
       {
         "label": "SF by 15+",
-        "held": 160.4,
-        "resting": 109.6,
+        "held": 270.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": null
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T15:23:11Z"
+    "ts": "2026-11-15T15:24:11Z"
   },
   "posts": [
     {
@@ -2094,6 +2094,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+12 on SF 15+ @ 0.23 (maker)\nworst outcome now -38\nheld 221/189/0/0/241/160\nIf the game ends... you make\nDAL 1-6: -74 (-0.5% of bankroll)\nDAL 7-14: -42 (-0.3% of bankroll)\nDAL 15+: +147 (+1.0% of bankroll)\nSF 1-6: +147 (+1.0% of bankroll)\nSF 7-14: -94 (-0.7% of bankroll)\nSF 15+: -13 (-0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794756261275-f35f04",
+      "ts": "2026-11-15T15:24:21Z",
+      "book": "W11-SFDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+29 on SF 15+ @ 0.23 (maker)\n+81 on SF 15+ @ 0.24 (maker)\nworst outcome now -36\nheld 221/189/0/0/242/270\nIf the game ends... you make\nDAL 1-6: -48 (-0.3% of bankroll)\nDAL 7-14: -16 (-0.1% of bankroll)\nDAL 15+: +173 (+1.2% of bankroll)\nSF 1-6: +173 (+1.2% of bankroll)\nSF 7-14: -68 (-0.5% of bankroll)\nSF 15+: -97 (-0.7% of bankroll)",
       "severity": "warn"
     }
   ]
