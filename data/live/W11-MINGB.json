@@ -1,6 +1,6 @@
 {
   "key": "W11-MINGB",
-  "generated_at": "2026-11-15T17:29:47.812869Z",
+  "generated_at": "2026-11-15T17:31:15.003465Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,14 +15,14 @@
         "exposure": -164.02,
         "exposure_text": "-$164",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 11:30am CT",
+        "when": "no move planned until paid balancing starts at 11:40am CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T16:55:07Z"
       },
       {
         "side": "GB by 1-6",
-        "resting": "73 @ 22-23c",
+        "resting": "71 @ 22-23c",
         "exposure": -69.02,
         "exposure_text": "-$69",
         "move": "Paid balancing (trickle)",
@@ -79,7 +79,7 @@
         "exposure_text": "+$123",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-15T17:28:50Z",
+        "at": "2026-11-15T17:30:51Z",
         "stuck": false,
         "also": "Also: paid balancing starts 11:40am CT",
         "last_fill": "2026-11-15T17:14:16Z",
@@ -90,7 +90,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 836, 968 resting. Worst line -$164 (goal -$50)."
+          "Pregame build, kickoff 12:00pm CT. Sold 836, 966 resting. Worst line -$164 (goal -$50)."
         ]
       },
       {
@@ -115,7 +115,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
           "Paid balancing starts 11:40am CT: worst line to -$50 by 11:55am CT, up to $100.",
-          "At 11:30am CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -127,11 +126,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-15T17:30:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-15T17:40:00Z",
         "label": "Paid balancing starts",
@@ -147,7 +141,7 @@
       {
         "label": "GB by 1-6",
         "held": 221.0,
-        "resting": 73.0,
+        "resting": 71.0,
         "target": null,
         "status": "lagging",
         "price": 0.22
@@ -194,7 +188,7 @@
       }
     ],
     "book": "W11-MINGB",
-    "ts": "2026-11-15T17:28:50Z"
+    "ts": "2026-11-15T17:30:51Z"
   },
   "posts": [
     {
@@ -2217,6 +2211,36 @@
       "text": "Bot note: COVERAGE-CAP clipped GB1TO6 16 -> 12@0.23 (REPLENISH batch #1): held 221, cap 302 [tighten 1.36x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794763791080-417e6e",
+      "ts": "2026-11-15T17:27:31Z",
+      "book": "W11-MINGB",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 29: GB by 15+ x29 at 17c. Worst line -$164.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 29.0,
+        "fills": [
+          {
+            "side": "GB by 15+",
+            "price": 0.17,
+            "qty": 29.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794763851398-072e60",
+      "ts": "2026-11-15T17:30:51Z",
+      "book": "W11-MINGB",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 12:00pm CT. Worst line -$164, goal -$50. Next: Paid balancing starts, 11:40am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
