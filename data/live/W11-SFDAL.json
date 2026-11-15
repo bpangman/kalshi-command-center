@@ -1,6 +1,6 @@
 {
   "key": "W11-SFDAL",
-  "generated_at": "2026-11-15T20:55:10.268195Z",
+  "generated_at": "2026-11-15T20:56:33.657070Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -5.45,
         "exposure_text": "-$5",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 2:55pm CT",
+        "when": "no move planned until paid balancing starts at 3:05pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-15T20:22:34Z"
@@ -102,7 +102,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$100.",
           "Paid balancing starts 3:05pm CT: worst line to -$50 by 3:20pm CT, up to $100.",
-          "At 2:55pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 3:25pm CT: the in-game engine takes over."
         ]
       },
@@ -114,11 +113,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-15T20:55:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-15T21:05:00Z",
         "label": "Paid balancing starts",
@@ -181,7 +175,7 @@
       }
     ],
     "book": "W11-SFDAL",
-    "ts": "2026-11-15T20:54:52Z"
+    "ts": "2026-11-15T20:55:52Z"
   },
   "posts": [
     {
@@ -2729,6 +2723,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794776112525-c7c4c5",
+      "ts": "2026-11-15T20:55:10Z",
+      "book": "W11-SFDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balanced enough: worst line -$5 beats the -$150 goal. Paid balancing is off.",
+      "severity": "info",
+      "title": "Even"
+    },
+    {
+      "id": "1794776152606-1f55cb",
+      "ts": "2026-11-15T20:55:52Z",
+      "book": "W11-SFDAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 3:25pm CT. Worst line -$5, goal -$50. Next: Paid balancing starts, 3:05pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
