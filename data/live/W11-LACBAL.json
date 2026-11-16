@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-16T21:59:23.432808Z",
+  "generated_at": "2026-11-16T22:00:36.332679Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -12,7 +12,7 @@
       {
         "side": "LAC by 1-6",
         "resting": "134 @ 18-20c",
-        "exposure": -135.63,
+        "exposure": -135.54,
         "exposure_text": "-$136",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
@@ -23,7 +23,7 @@
       {
         "side": "BAL by 7-14",
         "resting": "131 @ 24-26c",
-        "exposure": -47.63,
+        "exposure": -47.54,
         "exposure_text": "-$48",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
@@ -34,7 +34,7 @@
       {
         "side": "BAL by 1-6",
         "resting": "111 @ 25-26c",
-        "exposure": -17.63,
+        "exposure": -17.54,
         "exposure_text": "-$18",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
@@ -45,18 +45,18 @@
       {
         "side": "BAL by 15+",
         "resting": "497 @ 22-24c",
-        "exposure": 24.79,
-        "exposure_text": "+$25",
+        "exposure": 24.46,
+        "exposure_text": "+$24",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-17T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-16T21:03:28Z"
+        "last_fill": "2026-11-16T21:58:10Z"
       },
       {
         "side": "LAC by 15+",
         "resting": "426 @ 7-10c",
-        "exposure": 203.37,
+        "exposure": 203.46,
         "exposure_text": "+$203",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
@@ -67,7 +67,7 @@
       {
         "side": "LAC by 7-14",
         "resting": "330 @ 11-14c",
-        "exposure": 291.17,
+        "exposure": 291.26,
         "exposure_text": "+$291",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
@@ -149,8 +149,8 @@
       },
       {
         "label": "BAL by 15+",
-        "held": 402.6,
-        "resting": 497.4,
+        "held": 403.0,
+        "resting": 497.0,
         "target": null,
         "status": "even",
         "price": 0.22
@@ -181,19 +181,9 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-16T21:59:10Z"
+    "ts": "2026-11-16T22:00:10Z"
   },
   "posts": [
-    {
-      "id": "1794705655628-24cc58",
-      "ts": "2026-11-15T01:20:55Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,210 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794706559703-387209",
       "ts": "2026-11-15T01:35:59Z",
@@ -3640,18 +3630,19 @@
       "text": "Quiet for 15 min. 1,629 resting. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794866370350-6879d5",
+      "ts": "2026-11-16T21:59:12Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 15+ at 22c (12 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
-    {
-      "id": "1794705373971-f48721",
-      "ts": "2026-11-15T01:16:13Z",
-      "book": "W11-LACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794707302774-3d70c8",
       "ts": "2026-11-15T01:48:22Z",
@@ -4541,6 +4532,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-LACBAL): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=1826. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794866415685-626535",
+      "ts": "2026-11-16T22:00:15Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+0 on BAL 15+ @ 0.22 (maker)\n+3 on LAC 7-14 @ 0.11 (maker)\nworst outcome now -203\nheld 445/475/403/563/139/224\nIf the game ends... you make\nBAL 1-6: -17 (-0.1% of bankroll)\nBAL 7-14: -47 (-0.3% of bankroll)\nBAL 15+: +25 (+0.2% of bankroll)\nLAC 1-6: -135 (-1.0% of bankroll)\nLAC 7-14: +289 (+2.1% of bankroll)\nLAC 15+: +204 (+1.5% of bankroll)",
       "severity": "warn"
     }
   ]
