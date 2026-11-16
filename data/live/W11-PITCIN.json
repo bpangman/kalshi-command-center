@@ -1,132 +1,51 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T01:16:51.829734Z",
+  "generated_at": "2026-11-16T01:18:17.376346Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$56.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$53.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "PIT by 1-6",
-        "resting": "1 @ 20c",
-        "exposure": -56.25,
-        "exposure_text": "-$56",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-16T01:13:30Z"
-      },
-      {
-        "side": "CIN by 15+",
-        "resting": "none",
-        "exposure": -54.33,
-        "exposure_text": "-$54",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-13T16:02:53Z"
-      },
-      {
-        "side": "PIT by 7-14",
-        "resting": "1 @ 14c",
-        "exposure": -54.33,
-        "exposure_text": "-$54",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-16T01:00:19Z"
-      },
-      {
-        "side": "CIN by 7-14",
-        "resting": "25 @ 24c",
-        "exposure": -53.88,
-        "exposure_text": "-$54",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-16T01:00:19Z"
-      },
-      {
-        "side": "CIN by 1-6",
-        "resting": "none",
-        "exposure": -53.59,
-        "exposure_text": "-$54",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-16T00:56:19Z"
-      },
-      {
-        "side": "PIT by 15+",
-        "resting": "365 @ 5-11c",
-        "exposure": 311.65,
-        "exposure_text": "+$312",
-        "move": "Hold price at 5c",
-        "when": "crowd pays 6.5c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-16T01:13:09Z",
-        "lag_note": "Price 5c matches the crowd."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 5,035, 392 resting. Worst line -$56 (goal -$150)."
+          "In game (Ingame). Sold 5,081, 352 resting. Worst line -$53. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): PIT by 15+.",
-          "PIT by 15+: 368 behind. Price 5c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$56 is better than -$150.",
-          "Batches used: 2 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$56; spent $28 of $100.",
-          "Kickoff 7:20pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-16T01:20:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "CIN by 1-6",
-        "held": 899.3,
+        "held": 901.3,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -134,15 +53,15 @@
       },
       {
         "label": "CIN by 7-14",
-        "held": 899.5,
+        "held": 901.5,
         "resting": 25.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "CIN by 15+",
-        "held": 900.0,
+        "held": 901.0,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -154,68 +73,37 @@
         "resting": 1.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": null
       },
       {
         "label": "PIT by 7-14",
-        "held": 900.0,
+        "held": 901.0,
         "resting": 1.0,
         "target": null,
         "status": "even",
-        "price": 0.14
+        "price": null
       },
       {
         "label": "PIT by 15+",
-        "held": 534.0,
-        "resting": 365.5,
+        "held": 574.5,
+        "resting": 325.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.05
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T01:15:56Z"
+    "ts": "2026-11-16T01:17:57Z"
   },
   "posts": [
-    {
-      "id": "1794639492101-7e6e51",
-      "ts": "2026-11-14T06:58:12Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,939 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794640092058-4887c1",
-      "ts": "2026-11-14T07:08:12Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nCIN 1-6: +221 (+1.5% of bankroll)\nCIN 7-14: +134 (+0.9% of bankroll)\nCIN 15+: -679 (-4.7% of bankroll)\nPIT 1-6: +180 (+1.2% of bankroll)\nPIT 7-14: +221 (+1.5% of bankroll)\nPIT 15+: +43 (+0.3% of bankroll)\nCollected $221 premium ($0 fees) | Paper margin over fair $16 (not realized until settlement)\nheld / resting\nCIN 1-6: 0 / 637\nCIN 7-14: 87 / 491\nCIN 15+: 900 / 0\nPIT 1-6: 41 / 557\nPIT 7-14: 0 / 701\nPIT 15+: 178 / 554\nPosted book 1.07 | Sold avg 1.063 | Worst now -163 | Cash free $2500\nAnchor age 0s | Last fill 5138s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794640397596-f0105d",
-      "ts": "2026-11-14T07:13:17Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,939 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794641303792-d083d6",
-      "ts": "2026-11-14T07:28:23Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,939 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794642209858-513cff",
       "ts": "2026-11-14T07:43:29Z",
@@ -3556,27 +3444,48 @@
       "text": "Row sold out: PIT by 15+ at 5c (228 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794791837147-04ffef",
+      "ts": "2026-11-16T01:17:09Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -53.16, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794791877374-0782db",
+      "ts": "2026-11-16T01:17:57Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1794791877374-8fc0b6",
+      "ts": "2026-11-16T01:17:57Z",
+      "book": "W11-PITCIN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$53.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1794791892238-d992e8",
+      "ts": "2026-11-16T01:18:12Z",
+      "book": "W11-PITCIN",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: PIT now 40%",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1794720752656-85aecc",
-      "ts": "2026-11-15T05:32:32Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): held worst -667.27 (backstop -300) or lagging gap 900 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1794721298809-a287b4",
-      "ts": "2026-11-15T05:41:38Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): worst -667.27 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794722573519-0f51cf",
       "ts": "2026-11-15T06:02:53Z",
@@ -4457,6 +4366,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+188 on PIT 15+ @ 0.05 (maker)\n+2 on PIT 1-6 @ 0.19 (maker)\nworst outcome now -51\nheld 899/900/900/902/900/534\nIf the game ends... you make\nCIN 1-6: -54 (-0.4% of bankroll)\nCIN 7-14: -54 (-0.4% of bankroll)\nCIN 15+: -54 (-0.4% of bankroll)\nPIT 1-6: -56 (-0.4% of bankroll)\nPIT 7-14: -54 (-0.4% of bankroll)\nPIT 15+: +312 (+2.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794791829516-f378f5",
+      "ts": "2026-11-16T01:17:09Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nCIN 1-6: -52 (-0.4% of bankroll)\nCIN 7-14: -53 (-0.4% of bankroll)\nCIN 15+: -52 (-0.4% of bankroll)\nPIT 1-6: -53 (-0.4% of bankroll)\nPIT 7-14: -52 (-0.4% of bankroll)\nPIT 15+: +274 (+1.9% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794791883523-b89888",
+      "ts": "2026-11-16T01:18:03Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W11-PITCIN - Cincinnati by 15 or more is posting again.\nBack: W11-PITCIN - Cincinnati by 1 to 6 is posting again.",
       "severity": "warn"
     }
   ]
