@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T02:52:51.894034Z",
+  "generated_at": "2026-11-16T02:54:20.410524Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,083, 0 resting. Worst line -$53. Game 50% done."
+          "In game (Ingame). Sold 5,083, 347 resting. Worst line -$53. Game 50% done."
         ]
       },
       {
@@ -86,7 +86,7 @@
       {
         "label": "PIT by 15+",
         "held": 575.5,
-        "resting": 0.0,
+        "resting": 347.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T02:52:29Z"
+    "ts": "2026-11-16T02:53:29Z"
   },
   "posts": [
-    {
-      "id": "1794651632647-aac77e",
-      "ts": "2026-11-14T10:20:32Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,108 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794652540227-10db81",
       "ts": "2026-11-14T10:35:40Z",
@@ -3526,18 +3516,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nCIN 1-6: -52 (-0.4% of bankroll)\nCIN 7-14: -53 (-0.4% of bankroll)\nCIN 15+: -52 (-0.4% of bankroll)\nPIT 1-6: -53 (-0.4% of bankroll)\nPIT 7-14: -53 (-0.4% of bankroll)\nPIT 15+: +273 (+1.9% of bankroll)\nCollected $855 premium ($6 fees) | Paper margin over fair $74 (not realized until settlement)\nEvent: CIN 15+: CIN 23-3, Q2 0:09; CIN 7-14: CIN 23-3, Q2 0:09\nheld / resting\nCIN 1-6: 901 / 0\nCIN 7-14: 902 / 0\nCIN 15+: 901 / 0\nPIT 1-6: 902 / 0\nPIT 7-14: 902 / 0\nPIT 15+: 576 / 0\nPosted book 1.38 | Sold avg 0.972 | Worst now -53 | Cash free $2500\nAnchor age 3284s | Last fill 5221s ago",
       "severity": "info"
+    },
+    {
+      "id": "1794797609840-d820c4",
+      "ts": "2026-11-16T02:53:14Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite CIN 15+ at 0.73); likely ['CIN 15+']; endgame: KXNFLWINMARGIN-26NOV15PITCIN-CIN15PLU",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1794731758134-97b873",
-      "ts": "2026-11-15T08:35:58Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): held worst -623.83 (backstop -300) or lagging gap 900 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794732304271-71be96",
       "ts": "2026-11-15T08:45:04Z",
@@ -4427,6 +4418,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1794797594917-258c48",
+      "ts": "2026-11-16T02:53:14Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Endgame mode on: CIN 15+ at 0.73; likely outcomes: CIN 15+; action: none",
       "severity": "warn"
     }
   ]
