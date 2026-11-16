@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T00:25:27.254562Z",
+  "generated_at": "2026-11-16T00:26:50.377433Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -58,11 +58,13 @@
         "resting": "554 @ 8-11c",
         "exposure": 341.12,
         "exposure_text": "+$341",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-16T01:00:00Z",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-16T00:26:41Z",
         "stuck": false,
-        "last_fill": "2026-11-14T23:56:38Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-14T23:56:38Z",
+        "lag_note": "Steps to 7c at the next check."
       },
       {
         "side": "PIT by 7-14",
@@ -87,8 +89,9 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): PIT by 7-14.",
+          "Lagging (150+ behind the leader): PIT by 7-14, PIT by 15+.",
           "PIT by 7-14: 900 behind. Price 13c matches the crowd.",
+          "PIT by 15+: 554 behind. Steps to 7c at the next check.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -179,24 +182,14 @@
         "held": 346.5,
         "resting": 553.5,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T00:24:41Z"
+    "ts": "2026-11-16T00:26:41Z"
   },
   "posts": [
-    {
-      "id": "1794611972963-98bfb9",
-      "ts": "2026-11-13T23:19:32Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,980 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794612878949-1fa014",
       "ts": "2026-11-13T23:34:38Z",
@@ -3440,6 +3433,16 @@
       "text": "Quiet for 15 min. 1,920 resting. Next: Even-done check, 6:50pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794788801660-1a1163",
+      "ts": "2026-11-16T00:26:41Z",
+      "book": "W11-PITCIN",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$212, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
