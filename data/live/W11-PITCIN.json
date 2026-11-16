@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T01:10:05.875276Z",
+  "generated_at": "2026-11-16T01:11:25.491477Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -37,7 +37,7 @@
         "exposure": -64.01,
         "exposure_text": "-$64",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$151); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-16T01:00:19Z"
@@ -48,7 +48,7 @@
         "exposure": -63.64,
         "exposure_text": "-$64",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$151); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-16T01:00:19Z"
@@ -59,7 +59,7 @@
         "exposure": -63.35,
         "exposure_text": "-$63",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$151); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-16T00:56:19Z"
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$64 is better than -$151.",
+          "Gate open: worst line -$64 is better than -$150.",
           "Batches used: 2 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$151, worst line -$64; spent $28 of $100.",
+          "Paid balancing is running: plan -$150, worst line -$64; spent $28 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -174,7 +174,7 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T01:09:54Z"
+    "ts": "2026-11-16T01:10:54Z"
   },
   "posts": [
     {
@@ -3554,15 +3554,6 @@
   ],
   "audits": [
     {
-      "id": "1794718929888-6949e1",
-      "ts": "2026-11-15T05:02:09Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): held worst -667.27 (backstop -300) or lagging gap 900 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1794719477431-5c302c",
       "ts": "2026-11-15T05:11:17Z",
       "book": "W11-PITCIN",
@@ -4452,6 +4443,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-PITCIN): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794791449524-7e5d1b",
+      "ts": "2026-11-16T01:10:49Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: CIN 15+ worst outcome -45\nIf the game ends... you make\nCIN 1-6: -63 (-0.4% of bankroll)\nCIN 7-14: -64 (-0.4% of bankroll)\nCIN 15+: -64 (-0.4% of bankroll)\nPIT 1-6: -64 (-0.4% of bankroll)\nPIT 7-14: -64 (-0.4% of bankroll)\nPIT 15+: +489 (+3.4% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
