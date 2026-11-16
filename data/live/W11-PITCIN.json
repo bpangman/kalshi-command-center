@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T00:38:21.762284Z",
+  "generated_at": "2026-11-16T00:39:44.445227Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -62,7 +62,7 @@
         "exposure_text": "+$345",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-16T00:37:44Z",
+        "at": "2026-11-16T00:38:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-14T23:56:38Z",
@@ -189,19 +189,9 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T00:37:44Z"
+    "ts": "2026-11-16T00:38:44Z"
   },
   "posts": [
-    {
-      "id": "1794614689512-1bf852",
-      "ts": "2026-11-14T00:04:49Z",
-      "book": "W11-PITCIN",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,980 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794614795036-cbf4d4",
       "ts": "2026-11-14T00:06:35Z",
@@ -3444,18 +3434,29 @@
       "source": "bot",
       "text": "Inactivity on W11-PITCIN: 0 orders posted in 10 min while the market traded 2200 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1794789565175-208c97",
+      "ts": "2026-11-16T00:37:25Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 19: PIT by 1-6 x19 at 18c. Worst line -$209.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 19.0,
+        "fills": [
+          {
+            "side": "PIT by 1-6",
+            "price": 0.18,
+            "qty": 19.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794713385533-6ae6c0",
-      "ts": "2026-11-15T03:29:45Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): held worst -667.27 (backstop -300) or lagging gap 900 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794713951424-9c9c9f",
       "ts": "2026-11-15T03:39:11Z",
@@ -4345,6 +4346,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-PITCIN): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=3375. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1794789508153-78a294",
+      "ts": "2026-11-16T00:38:28Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+19 on PIT 1-6 @ 0.18 (maker)\nworst outcome now +33\nheld 851/851/900/640/0/346\nIf the game ends... you make\nCIN 1-6: -160 (-1.1% of bankroll)\nCIN 7-14: -160 (-1.1% of bankroll)\nCIN 15+: -209 (-1.4% of bankroll)\nPIT 1-6: +51 (+0.4% of bankroll)\nPIT 7-14: +691 (+4.8% of bankroll)\nPIT 15+: +345 (+2.4% of bankroll)",
       "severity": "warn"
     }
   ]
