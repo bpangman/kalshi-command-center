@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T01:14:04.046168Z",
+  "generated_at": "2026-11-16T01:15:23.123809Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -174,29 +174,9 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T01:13:55Z"
+    "ts": "2026-11-16T01:14:56Z"
   },
   "posts": [
-    {
-      "id": "1794635085031-9b45ec",
-      "ts": "2026-11-14T05:42:41Z",
-      "book": "W11-PITCIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 41: PIT by 1-6 x41 at 18c. Worst line -$679.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 41.0,
-        "fills": [
-          {
-            "side": "PIT by 1-6",
-            "price": 0.18,
-            "qty": 41.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794635869903-043aad",
       "ts": "2026-11-14T05:57:49Z",
@@ -3550,18 +3530,34 @@
       "text": "Row sold out: PIT by 1-6 at 19c (1 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794791716320-6d3bb6",
+      "ts": "2026-11-16T01:13:38Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 190: PIT by 15+ x188 at 5c, PIT by 1-6 x2 at 19c. Worst line -$56.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 190.0,
+        "fills": [
+          {
+            "side": "PIT by 15+",
+            "price": 0.05,
+            "qty": 188.0
+          },
+          {
+            "side": "PIT by 1-6",
+            "price": 0.19,
+            "qty": 2.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794719477431-5c302c",
-      "ts": "2026-11-15T05:11:17Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): worst -667.27 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794720752656-85aecc",
       "ts": "2026-11-15T05:32:32Z",
@@ -4451,6 +4447,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: CIN 15+ worst outcome -45\nIf the game ends... you make\nCIN 1-6: -63 (-0.4% of bankroll)\nCIN 7-14: -64 (-0.4% of bankroll)\nCIN 15+: -64 (-0.4% of bankroll)\nPIT 1-6: -64 (-0.4% of bankroll)\nPIT 7-14: -64 (-0.4% of bankroll)\nPIT 15+: +489 (+3.4% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794791659108-4a7528",
+      "ts": "2026-11-16T01:14:19Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+188 on PIT 15+ @ 0.05 (maker)\n+2 on PIT 1-6 @ 0.19 (maker)\nworst outcome now -51\nheld 899/900/900/902/900/534\nIf the game ends... you make\nCIN 1-6: -54 (-0.4% of bankroll)\nCIN 7-14: -54 (-0.4% of bankroll)\nCIN 15+: -54 (-0.4% of bankroll)\nPIT 1-6: -56 (-0.4% of bankroll)\nPIT 7-14: -54 (-0.4% of bankroll)\nPIT 15+: +312 (+2.2% of bankroll)",
       "severity": "warn"
     }
   ]
