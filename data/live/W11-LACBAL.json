@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-16T13:30:05.348870Z",
+  "generated_at": "2026-11-16T13:32:14.302347Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -180,19 +180,9 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-16T13:29:38Z"
+    "ts": "2026-11-16T13:31:38Z"
   },
   "posts": [
-    {
-      "id": "1794642229897-40cddf",
-      "ts": "2026-11-14T07:43:49Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,210 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794642832362-6d80f0",
       "ts": "2026-11-14T07:53:52Z",
@@ -3341,18 +3331,29 @@
       "text": "Row sold out: BAL by 7-14 at 23c (15 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794835898739-125c4c",
+      "ts": "2026-11-16T13:29:32Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 15: BAL by 7-14 x15 at 23c. Worst line -$140.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 15.0,
+        "fills": [
+          {
+            "side": "BAL by 7-14",
+            "price": 0.23,
+            "qty": 15.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794662726769-53bab5",
-      "ts": "2026-11-14T13:25:26Z",
-      "book": "W11-LACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794664500828-34ddea",
       "ts": "2026-11-14T13:55:00Z",
@@ -4243,6 +4244,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W11-LACBAL): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1794835835073-d9003e",
+      "ts": "2026-11-16T13:30:35Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+15 on BAL 7-14 @ 0.23 (maker)\nworst outcome now -163\nheld 60/75/238/48/0/122\nIf the game ends... you make\nBAL 1-6: +38 (+0.3% of bankroll)\nBAL 7-14: +23 (+0.2% of bankroll)\nBAL 15+: -140 (-1.0% of bankroll)\nLAC 1-6: +51 (+0.4% of bankroll)\nLAC 7-14: +98 (+0.7% of bankroll)\nLAC 15+: -24 (-0.2% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
