@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-16T07:22:13.617023Z",
+  "generated_at": "2026-11-16T07:23:29.686566Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -180,7 +180,7 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-16T07:22:04Z"
+    "ts": "2026-11-16T07:23:05Z"
   },
   "posts": [
     {
@@ -3303,18 +3303,29 @@
       "text": "Row sold out: BAL by 15+ at 22c (58 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794813785078-3668c9",
+      "ts": "2026-11-16T07:21:03Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 128: BAL by 15+ x128 at 22c. Worst line -$61.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 128.0,
+        "fills": [
+          {
+            "side": "BAL by 15+",
+            "price": 0.22,
+            "qty": 128.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794633398590-fb125c",
-      "ts": "2026-11-14T05:16:38Z",
-      "book": "W11-LACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794635363593-158f6a",
       "ts": "2026-11-14T05:49:23Z",
@@ -4204,6 +4215,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 1.63 over banked margin 1.52",
+      "severity": "warn"
+    },
+    {
+      "id": "1794813745393-f9ae00",
+      "ts": "2026-11-16T07:22:25Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+128 on BAL 15+ @ 0.22 (maker)\nworst outcome now -231\nheld 60/60/129/32/0/122\nIf the game ends... you make\nBAL 1-6: +8 (+0.1% of bankroll)\nBAL 7-14: +8 (+0.1% of bankroll)\nBAL 15+: -61 (-0.4% of bankroll)\nLAC 1-6: +36 (+0.3% of bankroll)\nLAC 7-14: +68 (+0.5% of bankroll)\nLAC 15+: -54 (-0.4% of bankroll)",
       "severity": "warn"
     }
   ]
