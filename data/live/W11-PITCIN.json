@@ -1,6 +1,6 @@
 {
   "key": "W11-PITCIN",
-  "generated_at": "2026-11-16T02:28:11.003046Z",
+  "generated_at": "2026-11-16T02:29:30.673275Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,083, 244 resting. Worst line -$53. Game 41% done."
+          "In game (Ingame). Sold 5,083, 347 resting. Worst line -$53. Game 41% done."
         ]
       },
       {
@@ -86,7 +86,7 @@
       {
         "label": "PIT by 15+",
         "held": 575.5,
-        "resting": 244.0,
+        "resting": 347.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,23 +101,9 @@
       }
     ],
     "book": "W11-PITCIN",
-    "ts": "2026-11-16T02:27:20Z"
+    "ts": "2026-11-16T02:29:21Z"
   },
   "posts": [
-    {
-      "id": "1794649961225-b1ea11",
-      "ts": "2026-11-14T09:50:24Z",
-      "book": "W11-PITCIN",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 169 (SPORTSBOOK rate row (listed 0.): PIT by 15+ x169 at 7c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 169.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1794650726161-ba53dc",
       "ts": "2026-11-14T10:05:26Z",
@@ -3531,18 +3517,18 @@
       "text": "Quiet for 15 min. 244 resting.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1794796098665-2f87c0",
+      "ts": "2026-11-16T02:28:18Z",
+      "book": "W11-PITCIN",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W11-PITCIN book is not trading: no fills in the last hour while the crowd keeps trading (grew 4133). Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
-    {
-      "id": "1794728115274-6291e0",
-      "ts": "2026-11-15T07:35:15Z",
-      "book": "W11-PITCIN",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-PITCIN): held worst -623.83 (backstop -300) or lagging gap 900 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1794728661536-4ed369",
       "ts": "2026-11-15T07:44:21Z",
@@ -4432,6 +4418,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1794796124737-5d90ab",
+      "ts": "2026-11-16T02:28:44Z",
+      "book": "W11-PITCIN",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 4 unexplained\n- W11-PITCIN - Cincinnati by 15 or more has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- W11-PITCIN - Cincinnati by 1 to 6 has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- W11-PITCIN - Cincinnati by 7 to 14 has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- W11-PITCIN - Pittsburgh by 1 to 6 has had no resting orders for at least 71 min (reason unknown: no reason logged).\nBack: W11-PITCIN - Pittsburgh by 7 to 14 is posting again.",
       "severity": "warn"
     }
   ]
