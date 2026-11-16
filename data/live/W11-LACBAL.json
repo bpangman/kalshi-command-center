@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-16T21:29:06.926411Z",
+  "generated_at": "2026-11-16T21:30:22.192217Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -181,29 +181,9 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-16T21:28:57Z"
+    "ts": "2026-11-16T21:29:57Z"
   },
   "posts": [
-    {
-      "id": "1794701133558-9dfb9c",
-      "ts": "2026-11-15T00:05:33Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,210 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794702038823-866f2e",
-      "ts": "2026-11-15T00:20:38Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,210 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794702943666-a458ea",
       "ts": "2026-11-15T00:35:43Z",
@@ -3627,18 +3607,43 @@
       "text": "Row sold out: LAC by 1-6 at 17c (97 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794864557381-8645fc",
+      "ts": "2026-11-16T21:27:06Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 210 (TRIM-KEEP row (public bought 2): LAC by 15+ x210 at 7c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 210.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1794864617788-94069d",
+      "ts": "2026-11-16T21:28:08Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 182: LAC by 1-6 x182 at 17c. Worst line -$136.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 182.0,
+        "fills": [
+          {
+            "side": "LAC by 1-6",
+            "price": 0.17,
+            "qty": 182.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1794701514786-f593d8",
-      "ts": "2026-11-15T00:11:54Z",
-      "book": "W11-LACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794703444994-02f040",
       "ts": "2026-11-15T00:44:04Z",
@@ -4528,6 +4533,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+125 on LAC 7-14 @ 0.11 (maker)\nworst outcome now -200\nheld 445/475/403/381/136/224\nIf the game ends... you make\nBAL 1-6: -49 (-0.3% of bankroll)\nBAL 7-14: -79 (-0.6% of bankroll)\nBAL 15+: -6 (-0.0% of bankroll)\nLAC 1-6: +16 (+0.1% of bankroll)\nLAC 7-14: +260 (+1.9% of bankroll)\nLAC 15+: +172 (+1.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794864551102-9fae9f",
+      "ts": "2026-11-16T21:29:11Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+182 on LAC 1-6 @ 0.17 (maker)\nworst outcome now -203\nheld 445/475/403/563/136/224\nIf the game ends... you make\nBAL 1-6: -18 (-0.1% of bankroll)\nBAL 7-14: -48 (-0.3% of bankroll)\nBAL 15+: +25 (+0.2% of bankroll)\nLAC 1-6: -136 (-1.0% of bankroll)\nLAC 7-14: +291 (+2.1% of bankroll)\nLAC 15+: +203 (+1.5% of bankroll)",
       "severity": "warn"
     }
   ]
