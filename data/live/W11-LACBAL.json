@@ -1,10 +1,10 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-16T22:49:55.687102Z",
+  "generated_at": "2026-11-16T22:51:08.239312Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$129, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$72, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "LAC by 1-6",
         "resting": "57 @ 19-20c",
-        "exposure": -128.89,
-        "exposure_text": "-$129",
+        "exposure": -71.77,
+        "exposure_text": "-$72",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -21,10 +21,21 @@
         "last_fill": "2026-11-16T22:23:21Z"
       },
       {
+        "side": "BAL by 15+",
+        "resting": "271 @ 21-24c",
+        "exposure": -60.38,
+        "exposure_text": "-$60",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-11-17T00:55:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-16T22:50:16Z"
+      },
+      {
         "side": "BAL by 7-14",
         "resting": "69 @ 25-26c",
-        "exposure": -110.89,
-        "exposure_text": "-$111",
+        "exposure": -53.77,
+        "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-17T00:55:00Z",
@@ -33,67 +44,63 @@
       },
       {
         "side": "BAL by 1-6",
-        "resting": "152 @ 24-26c",
-        "exposure": -31.3,
-        "exposure_text": "-$31",
+        "resting": "111 @ 25-26c",
+        "exposure": -14.77,
+        "exposure_text": "-$15",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-17T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-16T22:45:11Z"
-      },
-      {
-        "side": "BAL by 15+",
-        "resting": "497 @ 21-24c",
-        "exposure": 108.11,
-        "exposure_text": "+$108",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-17T00:55:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-16T21:58:10Z"
+        "last_fill": "2026-11-16T22:49:43Z"
       },
       {
         "side": "LAC by 7-14",
         "resting": "655 @ 12-14c",
-        "exposure": 266.11,
-        "exposure_text": "+$266",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-17T00:55:00Z",
+        "exposure": 323.23,
+        "exposure_text": "+$323",
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-16T22:50:31Z",
         "stuck": false,
-        "last_fill": "2026-11-16T22:03:11Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-16T22:03:11Z",
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "LAC by 15+",
         "resting": "426 @ 6-10c",
-        "exposure": 287.11,
-        "exposure_text": "+$287",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-17T00:55:00Z",
+        "exposure": 344.23,
+        "exposure_text": "+$344",
+        "move": "Hold price at 6c",
+        "when": "crowd pays 6c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-16T13:51:36Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-16T13:51:36Z",
+        "lag_note": "Price 6c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 2,676, 1,856 resting. Worst line -$129 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 2,943, 1,589 resting. Worst line -$72 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): LAC by 7-14, LAC by 15+.",
+          "LAC by 15+: 416 behind. Price 6c matches the crowd.",
+          "LAC by 7-14: 395 behind. Steps to 11c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$129 is better than -$200.",
+          "Gate open: worst line -$72 is better than -$200.",
           "Batches used: 35 (max 3 per side)."
         ]
       },
@@ -133,11 +140,11 @@
     "sides": [
       {
         "label": "BAL by 1-6",
-        "held": 542.4,
-        "resting": 151.6,
+        "held": 583.0,
+        "resting": 111.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": 0.25
       },
       {
         "label": "BAL by 7-14",
@@ -149,8 +156,8 @@
       },
       {
         "label": "BAL by 15+",
-        "held": 403.0,
-        "resting": 497.0,
+        "held": 628.6,
+        "resting": 271.4,
         "target": null,
         "status": "even",
         "price": 0.21
@@ -168,7 +175,7 @@
         "held": 245.0,
         "resting": 655.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       },
       {
@@ -176,181 +183,14 @@
         "held": 224.0,
         "resting": 426.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.06
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-16T22:49:31Z"
+    "ts": "2026-11-16T22:50:31Z"
   },
   "posts": [
-    {
-      "id": "1794722786079-8aab7f",
-      "ts": "2026-11-15T06:06:26Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +0 (+0.0% of bankroll)\nBAL 7-14: +0 (+0.0% of bankroll)\nBAL 15+: +0 (+0.0% of bankroll)\nLAC 1-6: +0 (+0.0% of bankroll)\nLAC 7-14: +0 (+0.0% of bankroll)\nLAC 15+: -1 (-0.0% of bankroll)\nCollected $0 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 602\nBAL 7-14: 0 / 601\nBAL 15+: 0 / 900\nLAC 1-6: 0 / 557\nLAC 7-14: 0 / 900\nLAC 15+: 1 / 649\nPosted book 1.09 | Sold avg 1.088 | Worst now -149 | Cash free $2500\nAnchor age 0s | Last fill 180s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794723237892-56e0ea",
-      "ts": "2026-11-15T06:13:57Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "trajectory_monitor",
-      "text": "W11-LACBAL is behind its coverage path: coverage 0.04 vs glide 0.559 with 3 percent of the crowd in (worst line about -1). OK for Claude to review it? Reply in Claude; nothing changes until you do.",
-      "severity": "warn"
-    },
-    {
-      "id": "1794723552458-cf69cc",
-      "ts": "2026-11-15T06:19:12Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,209 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794723975146-82b4e4",
-      "ts": "2026-11-15T06:25:04Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 74: LAC by 15+ x74 at 4c. Worst line -$72.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 74.0,
-        "fills": [
-          {
-            "side": "LAC by 15+",
-            "price": 0.04,
-            "qty": 74.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794724820930-7197bb",
-      "ts": "2026-11-15T06:40:20Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,135 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794725726523-b6756f",
-      "ts": "2026-11-15T06:55:26Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,135 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794726402211-8d325c",
-      "ts": "2026-11-15T07:06:42Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +3 (+0.0% of bankroll)\nBAL 7-14: +3 (+0.0% of bankroll)\nBAL 15+: +3 (+0.0% of bankroll)\nLAC 1-6: +3 (+0.0% of bankroll)\nLAC 7-14: +3 (+0.0% of bankroll)\nLAC 15+: -72 (-0.5% of bankroll)\nCollected $3 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 602\nBAL 7-14: 0 / 601\nBAL 15+: 0 / 900\nLAC 1-6: 0 / 557\nLAC 7-14: 0 / 900\nLAC 15+: 75 / 575\nPosted book 1.09 | Sold avg 1.085 | Worst now -149 | Cash free $2500\nAnchor age 0s | Last fill 2549s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794726632359-cd2f44",
-      "ts": "2026-11-15T07:10:32Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,135 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794727497509-5551c0",
-      "ts": "2026-11-15T07:22:41Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 10: LAC by 15+ x10 at 4c. Worst line -$82.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 10.0,
-        "fills": [
-          {
-            "side": "LAC by 15+",
-            "price": 0.04,
-            "qty": 10.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794728262961-82da64",
-      "ts": "2026-11-15T07:37:42Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,125 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794729128732-9129a2",
-      "ts": "2026-11-15T07:50:00Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 5: LAC by 15+ x5 at 4c. Worst line -$87.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 5.0,
-        "fills": [
-          {
-            "side": "LAC by 15+",
-            "price": 0.04,
-            "qty": 5.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794729913726-9f64bb",
-      "ts": "2026-11-15T08:05:13Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,115 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794730014523-98ddf6",
-      "ts": "2026-11-15T08:04:50Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 5: LAC by 15+ x5 at 4c. Worst line -$92.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 5.0,
-        "fills": [
-          {
-            "side": "LAC by 15+",
-            "price": 0.04,
-            "qty": 5.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794730035009-bb153b",
       "ts": "2026-11-15T08:07:15Z",
@@ -3724,6 +3564,136 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794869411811-e0e842",
+      "ts": "2026-11-16T22:50:04Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 24c (138 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869432000-bcb3b4",
+      "ts": "2026-11-16T22:50:31Z",
+      "book": "W11-LACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$72, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794869452177-eca4e9",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 25c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452178-309462",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 25c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452178-fe7161",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 25c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452178-dfcc25",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 25c (13 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452178-53044c",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 25c (25 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452178-4d1dab",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 1-6 at 25c (31 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452179-498c32",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 7-14 at 25c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452179-ab83c6",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 7-14 at 25c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452179-4512b8",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 7-14 at 25c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452179-d90061",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 7-14 at 25c (13 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1794869452179-546040",
+      "ts": "2026-11-16T22:50:47Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 7-14 at 25c (25 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
