@@ -1,10 +1,10 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-17T00:35:21.937298Z",
+  "generated_at": "2026-11-17T00:36:33.379814Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$78, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$65, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "LAC by 1-6",
         "resting": "7 @ 19-20c",
-        "exposure": -77.78,
-        "exposure_text": "-$78",
+        "exposure": -65.39,
+        "exposure_text": "-$65",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "BAL by 15+",
         "resting": "25 @ 23-24c",
-        "exposure": -52.78,
-        "exposure_text": "-$53",
+        "exposure": -40.39,
+        "exposure_text": "-$40",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-17T00:55:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "LAC by 7-14",
         "resting": "27 @ 13-14c",
-        "exposure": -50.78,
-        "exposure_text": "-$51",
+        "exposure": -38.39,
+        "exposure_text": "-$38",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-17T00:55:00Z",
@@ -43,10 +43,21 @@
         "last_fill": "2026-11-16T23:33:41Z"
       },
       {
+        "side": "BAL by 7-14",
+        "resting": "128 @ 23-26c",
+        "exposure": 62.72,
+        "exposure_text": "+$63",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 6:55pm CT, up to $100 in all",
+        "at": "2026-11-17T00:55:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-17T00:35:51Z"
+      },
+      {
         "side": "BAL by 1-6",
         "resting": "145 @ 26-27c",
-        "exposure": 67.22,
-        "exposure_text": "+$67",
+        "exposure": 79.61,
+        "exposure_text": "+$80",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-17T00:55:00Z",
@@ -54,46 +65,39 @@
         "last_fill": "2026-11-17T00:02:24Z"
       },
       {
-        "side": "BAL by 7-14",
-        "resting": "182 @ 23-26c",
-        "exposure": 104.22,
-        "exposure_text": "+$104",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-17T00:55:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-16T22:51:00Z"
-      },
-      {
         "side": "LAC by 15+",
         "resting": "322 @ 7-10c",
-        "exposure": 280.22,
-        "exposure_text": "+$280",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-17T00:55:00Z",
+        "exposure": 292.61,
+        "exposure_text": "+$293",
+        "move": "Step price down 1c (7c to 6c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-17T00:36:14Z",
         "stuck": false,
-        "last_fill": "2026-11-16T23:39:48Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-16T23:39:48Z",
+        "lag_note": "Steps to 6c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 4,501, 708 resting. Worst line -$78 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 4,555, 654 resting. Worst line -$65 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): LAC by 15+.",
+          "LAC by 15+: 358 behind. Steps to 6c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$78 is better than -$200.",
+          "Gate open: worst line -$65 is better than -$200.",
           "Batches used: 46 (max 3 per side)."
         ]
       },
@@ -141,8 +145,8 @@
       },
       {
         "label": "BAL by 7-14",
-        "held": 691.0,
-        "resting": 182.0,
+        "held": 744.9,
+        "resting": 128.1,
         "target": null,
         "status": "even",
         "price": 0.23
@@ -176,23 +180,14 @@
         "held": 515.0,
         "resting": 322.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.07
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-17T00:35:14Z"
+    "ts": "2026-11-17T00:36:14Z"
   },
   "posts": [
-    {
-      "id": "1794766389143-a80c11",
-      "ts": "2026-11-15T18:13:09Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +4 (+0.0% of bankroll)\nBAL 7-14: +4 (+0.0% of bankroll)\nBAL 15+: +4 (+0.0% of bankroll)\nLAC 1-6: +4 (+0.0% of bankroll)\nLAC 7-14: +4 (+0.0% of bankroll)\nLAC 15+: -96 (-0.7% of bankroll)\nCollected $4 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 602\nBAL 7-14: 0 / 601\nBAL 15+: 0 / 900\nLAC 1-6: 0 / 557\nLAC 7-14: 0 / 900\nLAC 15+: 100 / 550\nPosted book 1.09 | Sold avg 1.085 | Worst now -149 | Cash free $2500\nAnchor age 0s | Last fill 20286s ago",
-      "severity": "info"
-    },
     {
       "id": "1794766926666-7a4b22",
       "ts": "2026-11-15T18:22:06Z",
@@ -3917,6 +3912,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1794875774372-b15c95",
+      "ts": "2026-11-17T00:36:14Z",
+      "book": "W11-LACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$65, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
