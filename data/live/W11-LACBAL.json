@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-17T00:45:37.858018Z",
+  "generated_at": "2026-11-17T00:46:49.856116Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -71,7 +71,7 @@
         "exposure_text": "+$300",
         "move": "Step price down 1c (7c to 6c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-17T00:45:17Z",
+        "at": "2026-11-17T00:46:17Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:55pm CT",
         "last_fill": "2026-11-16T23:39:48Z",
@@ -117,11 +117,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-17T00:45:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-17T00:55:00Z",
         "label": "Paid balancing starts",
@@ -184,38 +179,9 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-17T00:45:17Z"
+    "ts": "2026-11-17T00:46:17Z"
   },
   "posts": [
-    {
-      "id": "1794769640137-a3242d",
-      "ts": "2026-11-15T19:07:20Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 13 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794770029366-46ac32",
-      "ts": "2026-11-15T19:13:49Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBAL 1-6: +4 (+0.0% of bankroll)\nBAL 7-14: +4 (+0.0% of bankroll)\nBAL 15+: +4 (+0.0% of bankroll)\nLAC 1-6: +4 (+0.0% of bankroll)\nLAC 7-14: +4 (+0.0% of bankroll)\nLAC 15+: -96 (-0.7% of bankroll)\nCollected $4 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nBAL 1-6: 0 / 2\nBAL 7-14: 0 / 2\nBAL 15+: 0 / 2\nLAC 1-6: 0 / 2\nLAC 7-14: 0 / 2\nLAC 15+: 100 / 3\nPosted book 1.10 | Sold avg 1.095 | Worst now -97 | Cash free $2500\nAnchor age 0s | Last fill 23920s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1794770544478-c37bc3",
-      "ts": "2026-11-15T19:22:24Z",
-      "book": "W11-LACBAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 13 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794771448485-5f4fff",
       "ts": "2026-11-15T19:37:28Z",
@@ -3931,6 +3897,45 @@
       "text": "Row sold out: BAL by 7-14 at 23c (84 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1794876357764-edfe4d",
+      "ts": "2026-11-17T00:45:02Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 30: BAL by 7-14 x30 at 23c. Worst line -$58.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 30.0,
+        "fills": [
+          {
+            "side": "BAL by 7-14",
+            "price": 0.23,
+            "qty": 30.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1794876377918-3bc053",
+      "ts": "2026-11-17T00:46:17Z",
+      "book": "W11-LACBAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$58, goal -$150. Next: Paid balancing starts, 6:55pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1794876386781-2d7734",
+      "ts": "2026-11-17T00:46:26Z",
+      "book": "W11-LACBAL",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nBAL 1-6: +87 (+0.6% of bankroll)\nBAL 7-14: +40 (+0.3% of bankroll)\nBAL 15+: -33 (-0.2% of bankroll)\nLAC 1-6: -58 (-0.4% of bankroll)\nLAC 7-14: -31 (-0.2% of bankroll)\nLAC 15+: +300 (+2.1% of bankroll)\nCollected $815 premium ($0 fees) | Paper margin over fair $35 (not realized until settlement)\nEvent: BAL 7-14: BAL 0-0, Q0 0:00; LAC 7-14: LAC 0-0, Q0 0:00\nheld / resting\nBAL 1-6: 728 / 145\nBAL 7-14: 775 / 98\nBAL 15+: 848 / 25\nLAC 1-6: 873 / 7\nLAC 7-14: 846 / 27\nLAC 15+: 515 / 322\nPosted book 1.15 | Sold avg 1.032 | Worst now +32 | Cash free $2500\nAnchor age 0s | Last fill 85s ago",
+      "severity": "info"
     }
   ],
   "audits": [
