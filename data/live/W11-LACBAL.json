@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-17T02:45:00.515292Z",
+  "generated_at": "2026-11-17T02:46:15.510771Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,345, 0 resting. Worst line +$8. Game 50% done."
+          "In game (Ingame). Sold 5,345, 10 resting. Worst line +$8. Game 50% done."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "BAL by 7-14",
         "held": 883.0,
-        "resting": 0.0,
+        "resting": 10.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-17T02:44:02Z"
+    "ts": "2026-11-17T02:46:02Z"
   },
   "posts": [
-    {
-      "id": "1794804206255-8f48ba",
-      "ts": "2026-11-16T04:43:22Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: BAL by 15+ at 21c (1 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
     {
       "id": "1794804206256-b578d5",
       "ts": "2026-11-16T04:41:18Z",
@@ -4006,18 +3996,19 @@
       "source": "bot",
       "text": "Inactivity on W11-LACBAL: 0 orders posted in 10 min while the market traded 5370 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
       "severity": "info"
+    },
+    {
+      "id": "1794883502309-2d3299",
+      "ts": "2026-11-17T02:45:02Z",
+      "book": "W11-LACBAL",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 0 resting.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1794748414604-07e787",
-      "ts": "2026-11-15T13:13:34Z",
-      "book": "W11-LACBAL",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W11-LACBAL): 2 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1794750230610-64d556",
       "ts": "2026-11-15T13:43:50Z",
@@ -4907,6 +4898,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+5 on LAC 15+ @ 0.17 (maker)\nworst outcome now +8\nheld 896/883/877/883/901/905\nIf the game ends... you make\nBAL 1-6: +18 (+0.1% of bankroll)\nBAL 7-14: +31 (+0.2% of bankroll)\nBAL 15+: +37 (+0.3% of bankroll)\nLAC 1-6: +31 (+0.2% of bankroll)\nLAC 7-14: +13 (+0.1% of bankroll)\nLAC 15+: +8 (+0.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1794883571996-6dfb93",
+      "ts": "2026-11-17T02:46:11Z",
+      "book": "W11-LACBAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (floor 0.8% of slice, no cushion to spend)\nIf the game ends... you make\nBAL 1-6: +18 (+0.1% of bankroll)\nBAL 7-14: +31 (+0.2% of bankroll)\nBAL 15+: +37 (+0.3% of bankroll)\nLAC 1-6: +31 (+0.2% of bankroll)\nLAC 7-14: +13 (+0.1% of bankroll)\nLAC 15+: +8 (+0.1% of bankroll)",
       "severity": "warn"
     }
   ]
