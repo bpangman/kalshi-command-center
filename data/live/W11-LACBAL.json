@@ -1,6 +1,6 @@
 {
   "key": "W11-LACBAL",
-  "generated_at": "2026-11-17T01:08:58.335124Z",
+  "generated_at": "2026-11-17T01:10:09.427519Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -10,12 +10,23 @@
     "checks_every_s": 20,
     "moves": [
       {
-        "side": "LAC by 15+",
-        "resting": "7 @ 8-10c",
-        "exposure": 17.24,
+        "side": "BAL by 7-14",
+        "resting": "2 @ 26c",
+        "exposure": 16.59,
         "exposure_text": "+$17",
         "move": "Holding",
         "when": "no move planned until kickoff at 7:15pm CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-17T01:09:06Z"
+      },
+      {
+        "side": "LAC by 15+",
+        "resting": "7 @ 8-10c",
+        "exposure": 17.47,
+        "exposure_text": "+$17",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-17T00:59:14Z"
@@ -23,8 +34,8 @@
       {
         "side": "BAL by 1-6",
         "resting": "3 @ 26-27c",
-        "exposure": 17.36,
-        "exposure_text": "+$17",
+        "exposure": 17.59,
+        "exposure_text": "+$18",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -34,19 +45,8 @@
       {
         "side": "BAL by 15+",
         "resting": "4 @ 23-24c",
-        "exposure": 17.36,
-        "exposure_text": "+$17",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-17T01:00:24Z"
-      },
-      {
-        "side": "BAL by 7-14",
-        "resting": "3 @ 23-26c",
-        "exposure": 17.36,
-        "exposure_text": "+$17",
+        "exposure": 17.59,
+        "exposure_text": "+$18",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -56,8 +56,8 @@
       {
         "side": "LAC by 1-6",
         "resting": "7 @ 19-20c",
-        "exposure": 17.36,
-        "exposure_text": "+$17",
+        "exposure": 17.59,
+        "exposure_text": "+$18",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -67,8 +67,8 @@
       {
         "side": "LAC by 7-14",
         "resting": "6 @ 13-14c",
-        "exposure": 17.36,
-        "exposure_text": "+$17",
+        "exposure": 17.59,
+        "exposure_text": "+$18",
         "move": "Paid balancing (trickle)",
         "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 5,256, 30 resting. Worst line +$17 (goal -$150)."
+          "Final tightening, kickoff 7:15pm CT. Sold 5,257, 29 resting. Worst line +$17 (goal -$150)."
         ]
       },
       {
@@ -130,11 +130,11 @@
       },
       {
         "label": "BAL by 7-14",
-        "held": 876.0,
-        "resting": 3.0,
+        "held": 877.0,
+        "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": 0.26
       },
       {
         "label": "BAL by 15+",
@@ -170,29 +170,9 @@
       }
     ],
     "book": "W11-LACBAL",
-    "ts": "2026-11-17T01:08:25Z"
+    "ts": "2026-11-17T01:09:26Z"
   },
   "posts": [
-    {
-      "id": "1794787998544-495b7a",
-      "ts": "2026-11-16T00:11:05Z",
-      "book": "W11-LACBAL",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 60: BAL by 7-14 x60 at 24c. Worst line -$101.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 60.0,
-        "fills": [
-          {
-            "side": "BAL by 7-14",
-            "price": 0.24,
-            "qty": 60.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794788241536-646697",
       "ts": "2026-11-16T00:17:21Z",
@@ -3972,6 +3952,16 @@
       "text": "Bot note: COVERAGE-CAP clipped BAL1TO6 208 -> 83@0.25 (REPLENISH batch #12): held 876, cap 962 [tighten 1.07x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1794877766336-61d60c",
+      "ts": "2026-11-17T01:09:24Z",
+      "book": "W11-LACBAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: BAL by 7-14 at 23c (1 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
