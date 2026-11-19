@@ -1,19 +1,19 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-19T15:59:20.467784Z",
+  "generated_at": "2026-11-19T16:00:34.164497Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$80.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 303,562, 23,801 resting. Worst line -$80. Floor protocol off. Bot is slow (checks every 47s, set for 30s)."
+          "In race (Ingame). Sold 303,617, 23,801 resting. Worst line -$80. Floor protocol off."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-19T15:58:57Z"
+    "ts": "2026-11-19T15:59:58Z"
   },
   "posts": [
-    {
-      "id": "1794996051906-e4db19",
-      "ts": "2026-11-18T10:00:51Z",
-      "book": "PGA-THRC26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nChristiaan Bezuidenhout: -509\nZac Blair: -509\nKeegan Bradley: -509\nRicky Castillo: -509\nEric Cole: -509\nPierceson Coody: -509\nTrace Crowe: -509\nJoel Dahmen: -509\nall others (135) >= -509\nCollected $2535 premium ($43 fees) | Paper margin over fair $313 (not realized until settlement)\nEvent: A.J. Ewart: running: T1 E; Aaron Wise: running: T1 E\nCore posted book 0.35 | Worst now -509 | Cash free $15440\nAnchor age 414s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1794996708977-e8cf3f",
       "ts": "2026-11-18T10:11:48Z",
@@ -4610,18 +4601,19 @@
         "contracts": 1525.0,
         "rows": 2
       }
+    },
+    {
+      "id": "1795103998344-4e545b",
+      "ts": "2026-11-19T15:59:58Z",
+      "book": "PGA-THRC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$80.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795085223063-056cd2",
-      "ts": "2026-11-19T10:47:03Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-THRC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=37249. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1795085223064-fdfa4b",
       "ts": "2026-11-19T10:47:03Z",
@@ -5511,6 +5503,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Golf PGA-THRC26: trimmed resting sells in place (Emiliano Grillo by 14) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795104024608-b81076",
+      "ts": "2026-11-19T16:00:24Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 35 unexplained\n- PGA-THRC26 - Adrien Dumont De Chassart has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- PGA-THRC26 - Andrew Novak has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- PGA-THRC26 - Andrew Putnam has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- PGA-THRC26 - Alex Smalley has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- PGA-THRC26 - Blades Brown has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-THRC26 - Ben Kohles has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- PGA-THRC26 - Ben Silverman has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- PGA-THRC26 - Chris Kirk has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- plus 27 more (fleet/state/empty_side_sentinel.json)\nBack: PGA-THRC26 - Adam Schenk is posting again.\nBack: PGA-THRC26 - Brooks Koepka is posting again.\nBack: PGA-THRC26 - Doug Ghim is posting again.\nBack: PGA-THRC26 - Harry Hall is posting again.\nBack: PGA-THRC26 - Michael Thorbjornsen is posting again.\nBack: PGA-THRC26 - Zac Blair is posting again.",
       "severity": "warn"
     }
   ]
