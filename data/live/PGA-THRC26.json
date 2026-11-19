@@ -1,10 +1,10 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-19T15:18:48.027742Z",
+  "generated_at": "2026-11-19T15:20:00.762578Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$175.",
+    "headline": "In race (Ingame). Worst line -$166.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 284,072, 23,801 resting. Worst line -$175. Floor protocol off."
+          "In race (Ingame). Sold 284,496, 23,801 resting. Worst line -$166. Floor protocol off."
         ]
       },
       {
@@ -44,28 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-19T15:18:43Z"
+    "ts": "2026-11-19T15:19:43Z"
   },
   "posts": [
-    {
-      "id": "1794973243695-dc78a2",
-      "ts": "2026-11-18T03:40:43Z",
-      "book": "PGA-THRC26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 68,726 resting. Next: Risk glide starts, Thu 3:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794974048666-816884",
-      "ts": "2026-11-18T03:54:08Z",
-      "book": "PGA-THRC26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nChristiaan Bezuidenhout: -540\nZac Blair: -540\nKeegan Bradley: -540\nRicky Castillo: -540\nEric Cole: -540\nPierceson Coody: -540\nTrace Crowe: -540\nJoel Dahmen: -540\nall others (135) >= -540\nCollected $2503 premium ($43 fees) | Paper margin over fair $304 (not realized until settlement)\nEvent: A.J. Ewart: running: T1 E; Aaron Wise: running: T1 E\nCore posted book 0.40 | Worst now -540 | Cash free $13386\nAnchor age 419s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1794974068712-508de9",
       "ts": "2026-11-18T03:52:13Z",
@@ -4176,18 +4157,63 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795101583376-75856a",
+      "ts": "2026-11-19T15:19:01Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 2,345: driver CYOU x2,189 at 0.4c, driver MBRE x92 at 3.7c, driver JKOI x30 at 4c, +2 more. Worst line -$166.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 2345.0,
+        "fills": [
+          {
+            "side": "driver CYOU",
+            "price": 0.004,
+            "qty": 2189.0
+          },
+          {
+            "side": "driver MBRE",
+            "price": 0.037,
+            "qty": 92.0
+          },
+          {
+            "side": "driver JKOI",
+            "price": 0.04,
+            "qty": 30.0
+          },
+          {
+            "side": "driver BJAM",
+            "price": 0.044,
+            "qty": 29.0
+          },
+          {
+            "side": "driver MKUC",
+            "price": 0.002,
+            "qty": 5.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795101583379-dd8fcc",
+      "ts": "2026-11-19T15:19:01Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 61 (race floor first): driver BBRO x32 at 3.3c, driver JPOS x29 at 1.4c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 61.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1795081459004-a29585",
-      "ts": "2026-11-19T09:44:19Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-THRC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=54778. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1795081583782-9893ed",
       "ts": "2026-11-19T09:46:23Z",
@@ -5077,6 +5103,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Golf PGA-THRC26: trimmed resting sells in place (Rasmus Neergaard-Petersen by 13) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795101596458-cbb1c7",
+      "ts": "2026-11-19T15:19:56Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: PGA-THRC26 - Billy Horschel is posting again.",
       "severity": "warn"
     }
   ]
