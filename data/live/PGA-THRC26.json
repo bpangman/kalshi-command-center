@@ -1,151 +1,52 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-19T13:46:02.402412Z",
+  "generated_at": "2026-11-19T13:47:14.950661Z",
   "plan": {
     "engine": "race",
-    "phase": "Green flag handoff",
-    "headline": "Green flag handoff for the green flag 7:30am CT. Worst line -$243, final target $0.",
+    "phase": "In race (Ingame)",
+    "headline": "In race (Ingame). Worst line -$243.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 118,
+    "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Green flag handoff, green flag 7:30am CT. Sold 272,073, 23,801 resting. Worst line -$243. Bot is slow (checks every 2m, set for 30s)."
+          "In race (Ingame). Sold 272,073, 23,801 resting. Worst line -$243. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No contender is lagging."
+          "No lag rule in the race; the engine follows the running order."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A driver gets a new wave when 90% of what he offered has sold.",
-          "Waves stop 6:30am CT."
+          "New contracts post through the in-race ladder inside the floor rules."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It stops a driver whose line falls under -$2,000.",
-          "Glide is running: limit unknown, worst line -$243, final $0 at 7:30am CT.",
-          "Under the limit it trims rows, buys back cheaply, and sells to close gaps from 6:00am CT.",
-          "Even-up from 6:30am CT, last-resort take from 7:10am CT, green flag 7:30am CT."
+          "The floor rule tightens the book as the race goes on."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: waves, price steps and the glide run by rule. The worst line may not fully close."
+          "Yes, it follows the race and raises its floor as it goes."
         ]
       }
     ],
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-19T13:45:04Z"
+    "ts": "2026-11-19T13:47:05Z"
   },
   "posts": [
-    {
-      "id": "1794938213638-829084",
-      "ts": "2026-11-17T17:54:39Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 292: driver MTHO x292 at 3c. Worst line -$790.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 292.0,
-        "fills": [
-          {
-            "side": "driver MTHO",
-            "price": 0.03,
-            "qty": 292.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794938475406-bafcab",
-      "ts": "2026-11-17T17:59:14Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 1,145: driver TPEN x1,145 at 0.4c. Worst line -$785.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 1145.0,
-        "fills": [
-          {
-            "side": "driver TPEN",
-            "price": 0.004,
-            "qty": 1145.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794938797385-d83ee0",
-      "ts": "2026-11-17T18:04:30Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 434: driver CRAM x340 at 0.8c, driver MTHO x94 at 3c. Worst line -$780.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 434.0,
-        "fills": [
-          {
-            "side": "driver CRAM",
-            "price": 0.008,
-            "qty": 340.0
-          },
-          {
-            "side": "driver MTHO",
-            "price": 0.03,
-            "qty": 94.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1794939582670-7e481f",
-      "ts": "2026-11-17T18:19:42Z",
-      "book": "PGA-THRC26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 90,676 resting. Next: Risk glide starts, Thu 3:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794940368291-640a67",
-      "ts": "2026-11-17T18:30:43Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 79: driver JPOS x79 at 1.8c. Worst line -$778.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 79.0,
-        "fills": [
-          {
-            "side": "driver JPOS",
-            "price": 0.018,
-            "qty": 79.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794940831437-6c05e2",
       "ts": "2026-11-17T18:38:15Z",
@@ -3980,18 +3881,59 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795096005324-4a29a8",
+      "ts": "2026-11-19T13:46:44Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: green flag - 3 min. cutover_keep_resting on: keeping every resting order for the in-race engine, one flatten p",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795096005325-f4ccea",
+      "ts": "2026-11-19T13:46:44Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: flatten: sell-light-only plan reached the target (pre-race buyback skipped: salvage_pregame_buybacks=never (Bl",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795096005325-fd3c2e",
+      "ts": "2026-11-19T13:46:44Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: tier3 last-resort: pre-race buyback skipped: salvage_pregame_buybacks=never (Blake 2026-10-02: make it up in-r",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795096025374-0fa646",
+      "ts": "2026-11-19T13:47:05Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Green flag handoff to In race (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795096025377-0d1b33",
+      "ts": "2026-11-19T13:47:05Z",
+      "book": "PGA-THRC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$243.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795074314208-4dd591",
-      "ts": "2026-11-19T07:45:14Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 9 unexplained\n- PGA-THRC26 - Austin Eckroat has had no resting orders for at least 1283 min (reason unknown: no reason logged).\n- PGA-THRC26 - Alex Smalley has had no resting orders for at least 2436 min (reason unknown: no reason logged).\n- PGA-THRC26 - Brian Harman has had no resting orders for at least 2557 min (reason unknown: no reason logged).\n- PGA-THRC26 - Ben Silverman has had no resting orders for at least 798 min (reason unknown: no reason logged).\n- PGA-THRC26 - John VanDerLaan has had no resting orders for at least 2618 min (reason unknown: no reason logged).\n- PGA-THRC26 - Keegan Bradley has had no resting orders for at least 2799 min (reason unknown: no reason logged).\n- PGA-THRC26 - Lucas Glover has had no resting orders for at least 2618 min (reason unknown: no reason logged).\n- PGA-THRC26 - Mackenzie Hughes has had no resting orders for at least 920 min (reason unknown: no reason logged).\n- plus 1 more (fleet/state/empty_side_sentinel.json)",
-      "severity": "warn"
-    },
     {
       "id": "1795074617047-f84af1",
       "ts": "2026-11-19T07:50:17Z",
@@ -4881,6 +4823,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 6 unexplained\n- PGA-THRC26 - Adrien Dumont De Chassart has had no resting orders for at least 1284 min (reason unknown: no reason logged).\n- PGA-THRC26 - Davis Thompson has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-THRC26 - Garrick Higgo has had no resting orders for at least 2374 min (reason unknown: no reason logged).\n- PGA-THRC26 - Hayden Springer has had no resting orders for at least 2921 min (reason unknown: no reason logged).\n- PGA-THRC26 - Pierceson Coody has had no resting orders for at least 2800 min (reason unknown: no reason logged).\n- PGA-THRC26 - Sepp Straka has had no resting orders for at least 2678 min (reason unknown: no reason logged).\nBack: PGA-THRC26 - John Parry is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795096004553-30a2a0",
+      "ts": "2026-11-19T13:46:44Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House21 race T-3 table\nIf the race ends... you make\nChris Kirk: -243\nAndrew Novak: -243\nJohn Parry: -243\nPaul Peterson: -243\nChandler Phillips: -243\nKevin Streelman: -243\nJackson Suber: -243\nMax McGreevy: -243\nall others (146) >= -242",
       "severity": "warn"
     }
   ]
