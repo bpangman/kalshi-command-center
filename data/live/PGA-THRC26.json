@@ -1,19 +1,19 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-19T14:53:50.902637Z",
+  "generated_at": "2026-11-19T14:55:03.518281Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$220.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 276,084, 23,801 resting. Worst line -$220. Floor protocol off."
+          "In race (Ingame). Sold 276,084, 23,801 resting. Worst line -$220. Floor protocol off. Bot is slow (checks every 46s, set for 30s)."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-19T14:53:32Z"
+    "ts": "2026-11-19T14:54:32Z"
   },
   "posts": [
-    {
-      "id": "1794962879489-f6307e",
-      "ts": "2026-11-18T00:47:59Z",
-      "book": "PGA-THRC26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 72,528 resting. Next: Risk glide starts, Thu 3:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1794963076326-eb6fe3",
       "ts": "2026-11-18T00:51:16Z",
@@ -4021,18 +4011,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795100072991-84d951",
+      "ts": "2026-11-19T14:54:32Z",
+      "book": "PGA-THRC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$220.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795079656192-891d9e",
-      "ts": "2026-11-19T09:14:16Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-THRC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=54778. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1795079766136-7f22e7",
       "ts": "2026-11-19T09:16:06Z",
@@ -4922,6 +4913,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Golf PGA-THRC26: trimmed resting sells in place (J.T. Poston by 16) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795100081303-80b9b7",
+      "ts": "2026-11-19T14:54:41Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- PGA-THRC26 - John VanDerLaan has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-THRC26 - Patrick Rodgers has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: PGA-THRC26 - Kensei Hirata is posting again.\nBack: PGA-THRC26 - Takumi Kanaya is posting again.",
       "severity": "warn"
     }
   ]
