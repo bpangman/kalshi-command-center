@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T07:54:21.337947Z",
+  "generated_at": "2026-11-19T07:55:33.416128Z",
   "cash_free": 16228.52,
   "cash_by_shard": {
     "0": 16221.52,
@@ -24,11 +24,11 @@
       "ends_by_time": "2026-11-22T00:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-19T07:52:20Z",
+      "heartbeat_ts": "2026-11-19T07:54:37Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 113.7,
+      "heartbeat_age_s": 48.4,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 0.0,
+      "anchor_age_s": 61.2,
       "allocation_dollars": null,
       "allocation_note": null,
       "starting_bankroll": 13382.97,
@@ -51,8 +51,8 @@
       "worst_now": -281.25,
       "best_now": 2718.75,
       "worst_all_resting": 930.56,
-      "market_implied_outcome_now": 2133.93,
-      "market_implied_trend_15m": 0.08,
+      "market_implied_outcome_now": 2134.23,
+      "market_implied_trend_15m": 0.26,
       "break_glass": {
         "locked_floor": -281.25,
         "cost": 0.0
@@ -597,13 +597,13 @@
           "held": 3000.0,
           "resting": 0.0,
           "avg_sale_price": 0.0077,
-          "market_yes_price": 0.008,
-          "implied_prob": 0.001,
+          "market_yes_price": 0.007,
+          "implied_prob": 0.0009,
           "outcome_now": -281.25,
-          "win_pct": 0.7,
+          "win_pct": 0.6,
           "win_src": "mid",
           "settled": null,
-          "crowd_ask": 0.008,
+          "crowd_ask": 0.007,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
@@ -812,7 +812,7 @@
           "win_pct": 0.2,
           "win_src": "mid",
           "settled": null,
-          "crowd_ask": 0.003,
+          "crowd_ask": 0.004,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
@@ -1319,8 +1319,8 @@
           "held": 2700.0,
           "resting": 0.0,
           "avg_sale_price": 0.0485,
-          "market_yes_price": 0.059,
-          "implied_prob": 0.0072,
+          "market_yes_price": 0.06,
+          "implied_prob": 0.0074,
           "outcome_now": 18.75,
           "win_pct": 5.8,
           "win_src": "mid",
@@ -3110,20 +3110,22 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 61621.74000000002,
+        "market_volume_last_30m": 56681.79000000001,
         "posts_last_10m": 0,
         "fills_last_30m": 0.0,
         "resting_contracts": 41535.7,
         "inactive": true,
-        "cause": "unknown",
-        "remedy": null
+        "cause": "feed_stale",
+        "remedy": {
+          "action": "kalshi_only_join"
+        }
       },
       "floor_mode": {
         "active": false,
         "floor_now": null
       },
       "coverage": null,
-      "coverage_glide_floor": 0.998,
+      "coverage_glide_floor": 0.999,
       "coverage_on_glide": false,
       "coverage_glide_f": 0.897,
       "posted_book_sum": 3.24,
@@ -3152,13 +3154,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-17T01:51:38.576012Z",
-      "start_time": "2026-11-20T01:15:01.870545Z",
+      "start_time": "2026-11-20T01:15:01.591107Z",
       "ends_by_time": "2026-11-20T04:15:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-19T07:54:11Z",
+      "heartbeat_ts": "2026-11-19T07:55:13Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 2.7,
+      "heartbeat_age_s": 12.4,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -3491,7 +3493,7 @@
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 35424,
+            "unchanged_s": 35486,
             "need_s": 900.0,
             "moved": {
               "bovada": -0.0059
@@ -3504,7 +3506,7 @@
             "p_home": 0.8406,
             "spread_home": -12.5,
             "total": 44.0,
-            "ts": 1795074786.382731
+            "ts": 1795074911.4088929
           },
           "espn": {
             "spread_home": -12.5,
@@ -6500,7 +6502,7 @@
         "source": "ledger"
       }
     ],
-    "as_of": "2026-11-19T07:54:04Z",
+    "as_of": "2026-11-19T07:55:04Z",
     "source": "ledger"
   },
   "allocation_target": null
