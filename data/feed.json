@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T07:33:31.161559Z",
+  "generated_at": "2026-11-19T07:34:54.574626Z",
   "cash_free": 16228.52,
   "cash_by_shard": {
     "0": 16221.52,
@@ -24,11 +24,11 @@
       "ends_by_time": "2026-11-22T00:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-19T07:32:13Z",
+      "heartbeat_ts": "2026-11-19T07:34:10Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 70.6,
+      "heartbeat_age_s": 25.4,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 0.0,
+      "anchor_age_s": 62.0,
       "allocation_dollars": null,
       "allocation_note": null,
       "starting_bankroll": 13382.97,
@@ -52,7 +52,7 @@
       "best_now": 2718.75,
       "worst_all_resting": 1218.56,
       "market_implied_outcome_now": 2134.12,
-      "market_implied_trend_15m": -0.2,
+      "market_implied_trend_15m": -0.44,
       "break_glass": {
         "locked_floor": -281.25,
         "cost": 0.0
@@ -3110,13 +3110,15 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 109772.33,
+        "market_volume_last_30m": 109462.79,
         "posts_last_10m": 0,
         "fills_last_30m": 0.0,
         "resting_contracts": 38835.7,
         "inactive": true,
-        "cause": "unknown",
-        "remedy": null
+        "cause": "feed_stale",
+        "remedy": {
+          "action": "kalshi_only_join"
+        }
       },
       "floor_mode": {
         "active": false,
@@ -3152,13 +3154,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-17T01:51:38.576012Z",
-      "start_time": "2026-11-20T01:15:01.087892Z",
+      "start_time": "2026-11-20T01:15:02.047203Z",
       "ends_by_time": "2026-11-20T04:15:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-19T07:32:44Z",
+      "heartbeat_ts": "2026-11-19T07:33:47Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 39.6,
+      "heartbeat_age_s": 48.4,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -3430,7 +3432,7 @@
       },
       "activity": {
         "is_live": false,
-        "market_volume_last_30m": 295.33,
+        "market_volume_last_30m": 264.0,
         "posts_last_10m": 0,
         "fills_last_30m": 85.0,
         "resting_contracts": 3847.5299999999997,
@@ -3491,7 +3493,7 @@
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 34138,
+            "unchanged_s": 34200,
             "need_s": 900.0,
             "moved": {
               "bovada": -0.0059
@@ -3504,7 +3506,7 @@
             "p_home": 0.8406,
             "spread_home": -12.5,
             "total": 44.0,
-            "ts": 1795073479.983965
+            "ts": 1795073624.952797
           },
           "espn": {
             "spread_home": -12.5,
@@ -6500,7 +6502,7 @@
         "source": "ledger"
       }
     ],
-    "as_of": "2026-11-19T07:32:59Z",
+    "as_of": "2026-11-19T07:34:00Z",
     "source": "ledger"
   },
   "allocation_target": null
