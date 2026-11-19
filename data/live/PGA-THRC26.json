@@ -1,10 +1,10 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-19T16:39:47.982666Z",
+  "generated_at": "2026-11-19T16:41:00.666985Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$20.",
+    "headline": "In race (Ingame). Worst line -$19.",
     "confidence": "medium",
     "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 315,157, 23,801 resting. Worst line -$20. Floor protocol off."
+          "In race (Ingame). Sold 315,188, 23,801 resting. Worst line -$19. Floor protocol off."
         ]
       },
       {
@@ -44,49 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-19T16:39:14Z"
+    "ts": "2026-11-19T16:40:14Z"
   },
   "posts": [
-    {
-      "id": "1795020729189-9f6997",
-      "ts": "2026-11-18T16:49:54Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 625: driver ZBAU x625 at 1c. Worst line -$427.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 625.0,
-        "fills": [
-          {
-            "side": "driver ZBAU",
-            "price": 0.01,
-            "qty": 625.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795020910397-2bde05",
-      "ts": "2026-11-18T16:52:51Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 1,374: driver CBLA x1,374 at 0.2c. Worst line -$424.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 1374.0,
-        "fills": [
-          {
-            "side": "driver CBLA",
-            "price": 0.002,
-            "qty": 1374.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795021468201-c3e8f9",
       "ts": "2026-11-18T17:04:28Z",
@@ -5167,18 +5127,68 @@
         "contracts": 307.0,
         "rows": 6
       }
+    },
+    {
+      "id": "1795106414512-e28ef4",
+      "ts": "2026-11-19T16:39:53Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 43: driver ASMO x19 at 1.5c, driver MWAL x11 at 1.5c, driver SVAL x10 at 1.6c, +3 more. Worst line -$19.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 43.0,
+        "fills": [
+          {
+            "side": "driver ASMO",
+            "price": 0.015,
+            "qty": 19.0
+          },
+          {
+            "side": "driver MWAL",
+            "price": 0.015,
+            "qty": 11.0
+          },
+          {
+            "side": "driver SVAL",
+            "price": 0.016,
+            "qty": 10.0
+          },
+          {
+            "side": "driver BSIL",
+            "price": 0.003,
+            "qty": 1.0
+          },
+          {
+            "side": "driver ECOL",
+            "price": 0.014,
+            "qty": 1.0
+          },
+          {
+            "side": "driver AECK",
+            "price": 0.003,
+            "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795106414514-176519",
+      "ts": "2026-11-19T16:39:53Z",
+      "book": "PGA-THRC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 595 (race floor first): driver BTOD x500 at 0.4c, driver BKOE x40 at 1c, +2 more.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 595.0,
+        "rows": 4
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1795089000332-2ae820",
-      "ts": "2026-11-19T11:50:00Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (PGA-THRC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=25599. Check the command center.",
-      "severity": "warn"
-    },
     {
       "id": "1795089175787-4e584f",
       "ts": "2026-11-19T11:52:55Z",
@@ -6068,6 +6078,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Golf PGA-THRC26: trimmed resting sells in place (Doug Ghim by 25, Brian Harman by 12) so one sweep cannot push a golfer under the floor. Nothing cancelled, queue place kept.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795106453210-925e1b",
+      "ts": "2026-11-19T16:40:53Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 4 unexplained\n- PGA-THRC26 - Billy Horschel has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-THRC26 - Denny McCarthy has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-THRC26 - Johnny Keefer has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-THRC26 - Neal Shipley has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: PGA-THRC26 - Kris Ventura is posting again.\nBack: PGA-THRC26 - Max Greyserman is posting again.\nBack: PGA-THRC26 - Ryo Hisatsune is posting again.",
       "severity": "warn"
     }
   ]
