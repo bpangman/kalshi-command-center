@@ -1,10 +1,10 @@
 {
   "key": "W12-INDHOU",
-  "generated_at": "2026-11-19T07:06:32.201043Z",
+  "generated_at": "2026-11-19T07:07:44.684767Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$102, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$100, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "HOU by 7-14",
         "resting": "463 @ 29-30c",
-        "exposure": -101.84,
-        "exposure_text": "-$102",
+        "exposure": -100.49,
+        "exposure_text": "-$100",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -22,20 +22,20 @@
       },
       {
         "side": "IND by 1-6",
-        "resting": "240 @ 9-12c",
-        "exposure": -84.5,
-        "exposure_text": "-$85",
+        "resting": "225 @ 9-12c",
+        "exposure": -98.15,
+        "exposure_text": "-$98",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-20T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-19T07:05:32Z"
+        "last_fill": "2026-11-19T07:05:52Z"
       },
       {
         "side": "HOU by 1-6",
         "resting": "610 @ 19-23c",
-        "exposure": 32.63,
-        "exposure_text": "+$33",
+        "exposure": 33.98,
+        "exposure_text": "+$34",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-20T00:55:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "HOU by 15+",
         "resting": "1,000 @ 42-49c",
-        "exposure": 70.63,
-        "exposure_text": "+$71",
+        "exposure": 71.98,
+        "exposure_text": "+$72",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-20T00:55:00Z",
@@ -55,8 +55,8 @@
       {
         "side": "IND by 15+",
         "resting": "650 @ 4-5c",
-        "exposure": 70.63,
-        "exposure_text": "+$71",
+        "exposure": 71.98,
+        "exposure_text": "+$72",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-20T00:55:00Z",
@@ -65,8 +65,8 @@
       {
         "side": "IND by 7-14",
         "resting": "900 @ 6-7c",
-        "exposure": 70.63,
-        "exposure_text": "+$71",
+        "exposure": 71.98,
+        "exposure_text": "+$72",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-20T00:55:00Z",
@@ -77,7 +77,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 366, 3,829 resting. Worst line -$102 (goal -$150)."
+          "Pregame build, kickoff 7:15pm CT. Sold 381, 3,848 resting. Worst line -$100 (goal -$150)."
         ]
       },
       {
@@ -90,7 +90,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$102 is better than -$200.",
+          "Gate open: worst line -$100 is better than -$200.",
           "Batches used: 3 (max 3 per side)."
         ]
       },
@@ -154,8 +154,8 @@
       },
       {
         "label": "IND by 1-6",
-        "held": 155.1,
-        "resting": 206.0,
+        "held": 170.1,
+        "resting": 225.0,
         "target": null,
         "status": "even",
         "price": 0.09
@@ -178,7 +178,7 @@
       }
     ],
     "book": "W12-INDHOU",
-    "ts": "2026-11-19T07:06:08Z"
+    "ts": "2026-11-19T07:07:09Z"
   },
   "posts": [
     {
@@ -3120,6 +3120,16 @@
       "text": "Quiet for 15 min. 3,899 resting. Next: Even-done check, 6:45pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795072009058-804187",
+      "ts": "2026-11-19T07:06:48Z",
+      "book": "W12-INDHOU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: IND by 1-6 at 9c (85 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -3211,6 +3221,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+38 on HOU 1-6 @ 0.18 (maker)\nworst outcome now -117\nheld 38/172/0/85/0/0\nIf the game ends... you make\nHOU 1-6: +26 (+0.2% of bankroll)\nHOU 7-14: -108 (-0.8% of bankroll)\nHOU 15+: +64 (+0.5% of bankroll)\nIND 1-6: -21 (-0.1% of bankroll)\nIND 7-14: +64 (+0.5% of bankroll)\nIND 15+: +64 (+0.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795072007735-22f603",
+      "ts": "2026-11-19T07:06:47Z",
+      "book": "W12-INDHOU",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+85 on IND 1-6 @ 0.09 (maker)\nworst outcome now -115\nheld 38/172/0/170/0/0\nIf the game ends... you make\nHOU 1-6: +34 (+0.2% of bankroll)\nHOU 7-14: -100 (-0.7% of bankroll)\nHOU 15+: +72 (+0.5% of bankroll)\nIND 1-6: -98 (-0.7% of bankroll)\nIND 7-14: +72 (+0.5% of bankroll)\nIND 15+: +72 (+0.5% of bankroll)",
       "severity": "warn"
     }
   ]
