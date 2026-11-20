@@ -1,129 +1,47 @@
 {
   "key": "W12-INDHOU",
-  "generated_at": "2026-11-20T01:11:46.023896Z",
+  "generated_at": "2026-11-20T01:13:17.154921Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:15pm CT. Worst line -$77.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$77.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "IND by 1-6",
-        "resting": "208 @ 10-12c",
-        "exposure": -77.21,
-        "exposure_text": "-$77",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-19T14:01:52Z"
-      },
-      {
-        "side": "HOU by 1-6",
-        "resting": "387 @ 22-23c",
-        "exposure": -77.08,
-        "exposure_text": "-$77",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-19T20:54:37Z"
-      },
-      {
-        "side": "IND by 7-14",
-        "resting": "301 @ 6c",
-        "exposure": -76.7,
-        "exposure_text": "-$77",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-20T00:55:07Z"
-      },
-      {
-        "side": "HOU by 7-14",
-        "resting": "366 @ 29-30c",
-        "exposure": -76.55,
-        "exposure_text": "-$77",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-20T00:55:07Z"
-      },
-      {
-        "side": "HOU by 15+",
-        "resting": "800 @ 42-49c",
-        "exposure": 109.92,
-        "exposure_text": "+$110",
-        "move": "Step price down 1c (42c to 41c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-20T01:11:33Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "lag_note": "Steps to 41c at the next check."
-      },
-      {
-        "side": "IND by 15+",
-        "resting": "187 @ 2-5c",
-        "exposure": 109.92,
-        "exposure_text": "+$110",
-        "move": "Hold price at 2c",
-        "when": "crowd pays 2c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "lag_note": "Price 2c matches the crowd."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 747, 2,249 resting. Worst line -$77 (goal -$150)."
+          "In game (Ingame). Sold 747, 2,249 resting. Worst line -$77. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): HOU by 15+, IND by 15+.",
-          "HOU by 15+: 187 behind. Steps to 41c at the next check.",
-          "IND by 15+: 187 behind. Price 2c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$77 is better than -$150.",
-          "Batches used: 3 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$77; spent $3 of $100.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-20T01:15:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "HOU by 1-6",
@@ -131,7 +49,7 @@
         "resting": 387.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       },
       {
         "label": "HOU by 7-14",
@@ -139,15 +57,15 @@
         "resting": 366.0,
         "target": null,
         "status": "even",
-        "price": 0.29
+        "price": null
       },
       {
         "label": "HOU by 15+",
         "held": 0.0,
         "resting": 800.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.42
+        "status": "even",
+        "price": null
       },
       {
         "label": "IND by 1-6",
@@ -155,7 +73,7 @@
         "resting": 208.0,
         "target": null,
         "status": "even",
-        "price": 0.1
+        "price": null
       },
       {
         "label": "IND by 7-14",
@@ -163,61 +81,29 @@
         "resting": 301.0,
         "target": null,
         "status": "even",
-        "price": 0.06
+        "price": null
       },
       {
         "label": "IND by 15+",
         "held": 0.0,
         "resting": 187.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.02
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W12-INDHOU",
-    "ts": "2026-11-20T01:11:33Z"
+    "ts": "2026-11-20T01:12:34Z"
   },
   "posts": [
-    {
-      "id": "1794950439312-621054",
-      "ts": "2026-11-17T21:20:39Z",
-      "book": "W12-INDHOU",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,972 resting. Next: Even-done check, Thu 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1794951124280-62c86c",
-      "ts": "2026-11-17T21:32:03Z",
-      "book": "W12-INDHOU",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: IND by 1-6 at 10c (16 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
-    {
-      "id": "1794951244966-fc7e37",
-      "ts": "2026-11-17T21:32:03Z",
-      "book": "W12-INDHOU",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 29: IND by 1-6 x29 at 10c. Worst line -$69.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 29.0,
-        "fills": [
-          {
-            "side": "IND by 1-6",
-            "price": 0.1,
-            "qty": 29.0
-          }
-        ]
-      }
-    },
     {
       "id": "1794952029627-399860",
       "ts": "2026-11-17T21:47:09Z",
@@ -3237,6 +3123,36 @@
       "text": "Quiet for 15 min. 2,249 resting. Next: Kickoff, 7:15pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795137133970-7e2c26",
+      "ts": "2026-11-20T01:12:01Z",
+      "book": "W12-INDHOU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -77.21, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795137154151-9f1a70",
+      "ts": "2026-11-20T01:12:34Z",
+      "book": "W12-INDHOU",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795137154151-de21dd",
+      "ts": "2026-11-20T01:12:34Z",
+      "book": "W12-INDHOU",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$77.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
@@ -3536,6 +3452,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W12-INDHOU): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795137121444-7313f1",
+      "ts": "2026-11-20T01:12:01Z",
+      "book": "W12-INDHOU",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nHOU 1-6: -77 (-0.5% of bankroll)\nHOU 7-14: -77 (-0.5% of bankroll)\nHOU 15+: +110 (+0.8% of bankroll)\nIND 1-6: -77 (-0.5% of bankroll)\nIND 7-14: -77 (-0.5% of bankroll)\nIND 15+: +110 (+0.8% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
