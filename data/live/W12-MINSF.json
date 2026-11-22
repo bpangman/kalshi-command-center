@@ -1,41 +1,41 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-22T07:24:26.513776Z",
+  "generated_at": "2026-11-22T07:26:02.588986Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$201, goal -$150.",
+    "headline": "Building toward kickoff 7:20pm CT. Worst line -$335, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "SF by 1-6",
-        "resting": "176 @ 24c",
-        "exposure": -201.25,
-        "exposure_text": "-$201",
+        "resting": "none",
+        "exposure": -335.01,
+        "exposure_text": "-$335",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:50pm CT",
         "at": null,
-        "stuck": true,
-        "last_fill": "2026-11-22T05:10:32Z"
+        "stuck": false,
+        "last_fill": "2026-11-22T07:23:31Z"
       },
       {
         "side": "MIN by 15+",
         "resting": "635 @ 8-11c",
-        "exposure": -113.14,
-        "exposure_text": "-$113",
+        "exposure": -70.9,
+        "exposure_text": "-$71",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-23T01:00:00Z",
-        "stuck": true,
+        "stuck": false,
         "last_fill": "2026-11-22T01:48:30Z"
       },
       {
         "side": "MIN by 1-6",
         "resting": "360 @ 20-21c",
-        "exposure": -50.71,
-        "exposure_text": "-$51",
+        "exposure": -8.47,
+        "exposure_text": "-$8",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-23T01:00:00Z",
@@ -45,8 +45,8 @@
       {
         "side": "SF by 7-14",
         "resting": "514 @ 23-24c",
-        "exposure": 96.5,
-        "exposure_text": "+$97",
+        "exposure": 138.74,
+        "exposure_text": "+$139",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-23T01:00:00Z",
@@ -56,8 +56,8 @@
       {
         "side": "SF by 15+",
         "resting": "950 @ 20-22c",
-        "exposure": 159.0,
-        "exposure_text": "+$159",
+        "exposure": 201.24,
+        "exposure_text": "+$201",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-23T01:00:00Z",
@@ -67,8 +67,8 @@
       {
         "side": "MIN by 7-14",
         "resting": "870 @ 14-15c",
-        "exposure": 178.88,
-        "exposure_text": "+$179",
+        "exposure": 221.12,
+        "exposure_text": "+$221",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-23T01:00:00Z",
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,183, 3,505 resting. Worst line -$201 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,359, 3,329 resting. Worst line -$335 (goal -$150)."
         ]
       },
       {
@@ -93,7 +93,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$201).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$335).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -157,11 +157,11 @@
       },
       {
         "label": "SF by 1-6",
-        "held": 410.0,
-        "resting": 176.0,
+        "held": 586.0,
+        "resting": 0.0,
         "target": null,
-        "status": "even",
-        "price": 0.24
+        "status": "heavy",
+        "price": null
       },
       {
         "label": "SF by 7-14",
@@ -181,18 +181,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-22T07:23:36Z"
+    "ts": "2026-11-22T07:25:37Z"
   },
   "posts": [
-    {
-      "id": "1795139630280-130324",
-      "ts": "2026-11-20T01:53:50Z",
-      "book": "W12-MINSF",
-      "kind": "text",
-      "source": "bot",
-      "text": "Lopsided: SF 60% favored (no premium collected yet); pregame keeps posting both sides, the heavier side a few cents higher (no favored-side cap)",
-      "severity": "info"
-    },
     {
       "id": "1795139630501-a47b4e",
       "ts": "2026-11-20T01:53:50Z",
@@ -3433,6 +3424,24 @@
       "text": "Row sold out: SF by 1-6 at 24c (176 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1795332298070-8b0e47",
+      "ts": "2026-11-22T07:24:58Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W12-MINSF book loss is growing: worst case -335 dollars, past its limit and -134 in 30 min. Check the bot.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795332316849-c17c0b",
+      "ts": "2026-11-22T07:25:16Z",
+      "book": "W12-MINSF",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nSF 1-6: -335 (-3.1% of bankroll)\nSF 7-14: +139 (+1.3% of bankroll)\nSF 15+: +201 (+1.9% of bankroll)\nMIN 1-6: -8 (-0.1% of bankroll)\nMIN 7-14: +221 (+2.1% of bankroll)\nMIN 15+: -71 (-0.7% of bankroll)\nCollected $251 premium ($0 fees) | Paper margin over fair $15 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; MIN 7-14: MIN 0-0, Q0 0:00\nheld / resting\nSF 1-6: 586 / 0\nSF 7-14: 112 / 514\nSF 15+: 50 / 950\nMIN 1-6: 259 / 360\nMIN 7-14: 30 / 870\nMIN 15+: 322 / 635\nPosted book 1.13 | Sold avg 1.053 | Worst now -180 | Cash free $2500\nAnchor age 0s | Last fill 104s ago",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -3641,6 +3650,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+51 on MIN 1-6 @ 0.20 (maker)\nworst outcome now -180\nheld 410/112/50/259/30/322\nIf the game ends... you make\nSF 1-6: -201 (-1.9% of bankroll)\nSF 7-14: +97 (+0.9% of bankroll)\nSF 15+: +159 (+1.5% of bankroll)\nMIN 1-6: -51 (-0.5% of bankroll)\nMIN 7-14: +179 (+1.7% of bankroll)\nMIN 15+: -113 (-1.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795332316845-eb60e9",
+      "ts": "2026-11-22T07:25:16Z",
+      "book": "W12-MINSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+176 on SF 1-6 @ 0.24 (maker)\nworst outcome now -180\nheld 586/112/50/259/30/322\nIf the game ends... you make\nSF 1-6: -335 (-3.1% of bankroll)\nSF 7-14: +139 (+1.3% of bankroll)\nSF 15+: +201 (+1.9% of bankroll)\nMIN 1-6: -8 (-0.1% of bankroll)\nMIN 7-14: +221 (+2.1% of bankroll)\nMIN 15+: -71 (-0.7% of bankroll)",
       "severity": "warn"
     }
   ]
