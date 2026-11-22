@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T03:51:02Z",
+  "generated_at": "2026-11-22T03:52:02Z",
   "mode": "live",
   "terms": "Live terms (v2 props): NBA threes / rebounds / assists and NFL receptions / yards / touchdowns and quarterback passing touchdowns / interceptions / completions only, rebounds / threes / assists buy once NBA overs buy on the NBA's own table alone at one past the line (two other sources agreeing also counts), points after the next stoppage + 3 s of clock, NFL 3 s after the next real snap (not a timeout, flag or the same play posting late), NBA rebounds, threes and assists (assists unless an assists bet has lost, which turns assists off) up to $5,000 per market, NFL touchdowns up to $1,500 per market, NFL receiving / rushing yards $1,500 once 15+ past the line, $1,000 at 10+, $500 before, and $500 whenever the game has a minute or less left, everything else $500; rebounds and threes take 98c-or-better stock first and re-fire while it keeps coming back, everything else walks the book from the cheapest ask up to 0.99; after any buy it keeps re-buying at 99c while sellers reload (stops after 10s with no fill, 15 rounds, the market cap, or the moment the stat moves against us or a correction hold starts; an NBA in-game buy is followed on the same rule it fired on); no price floor (an ask of any price up to 0.99 is bought; the dollar caps limit a bad read), a touchdown line needs the second vendor (never ESPN alone), no crowd-bid requirement (the 98c seller is the crowd signal); unders only after the final, box unchanged 75 s on both ESPN views and matched by the second source (Sleeper) whenever it is reporting the game; a cash shortage never stops the night, clinch waits and fires when money returns; no per-game cap, cash floor $500, night pauses after 2 settled losses (every loss texts), no resting bids. NHL goals / assists / points are live one over (a 1+ line fires at 2, only after the game clock has run 3 s past the goal and both ESPN and the NHL API show it, over side in game only, $500 per market); goalie saves stay watch-only. Also watching, never buying (recorded to watchonly_<date>.jsonl; no cash, caps or loss stop touched), watch-only: KXNFLBOTH, KXNFLDSTTD, KXNFLFG, KXNFLLONGREC, KXNFLLONGRSH, KXNFLPASSATT, KXNFLRRYDS, KXNFLRSHATT, KXNFLSFTY, KXNFLTEAMSACK, KXNHLSAVE.",
   "days": [
@@ -115337,15 +115337,15 @@
           "certain_side": "yes",
           "safe_class": "thin",
           "est_lock_time": "in-game",
-          "status": "filled",
+          "status": "settled_win",
           "outcome_key": "KXNBAREB-26NOV21MEMMIN-MINTLYLES41-2",
           "cash_plan": 1500.0,
           "contracts": 538.0,
           "avg_price": 0.99,
           "cost": 532.62,
-          "payout": null,
+          "payout": 538.0,
           "fee": 0.3729,
-          "profit": null,
+          "profit": 5.01,
           "lock_ts": "2026-11-22T02:49:08Z",
           "fire_ts": "2026-11-22T02:49:09Z",
           "latency_ms": 136.8,
@@ -118798,10 +118798,10 @@
     "totals": {
       "contracts": 261031.59,
       "cost": 258214.53,
-      "payout": 257022.59,
+      "payout": 257560.59,
       "fees": 193.99,
-      "profit": 2288.55,
-      "wins": 388,
+      "profit": 2293.56,
+      "wins": 389,
       "losses": 1,
       "avg_price": 0.9892,
       "fill_rate": 0.5662
@@ -119036,7 +119036,7 @@
         "date": "2026-11-21",
         "contracts": 13720.98,
         "cost": 13579.02,
-        "profit": 97.6,
+        "profit": 102.61,
         "avg_price": 0.9897,
         "fills": 31,
         "targets_fired": 28
@@ -120598,6 +120598,10 @@
       {
         "ts": "2026-11-22T03:50:43Z",
         "profit": 2288.55
+      },
+      {
+        "ts": "2026-11-22T03:51:38Z",
+        "profit": 2293.56
       }
     ],
     "recent_fills": [
@@ -121112,7 +121116,7 @@
       "fees": 0.0,
       "profit": -286.51,
       "sweep_contracts": 261979.6,
-      "sweep_profit": 2577.91
+      "sweep_profit": 2582.91
     }
   },
   "health": {
@@ -121127,15 +121131,15 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-22T03:50:56Z",
-        "lag_s": 2.83,
+        "last_update": "2026-11-22T03:51:56Z",
+        "lag_s": 1.5,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
         "last_update": "2026-11-21T20:46:20Z",
-        "lag_s": 25479.52,
+        "lag_s": 25537.7,
         "ok": false
       },
       {
@@ -121149,14 +121153,14 @@
         "name": "nbacdn",
         "sport": "NBA",
         "last_update": "2026-11-21T20:41:51Z",
-        "lag_s": 25748.17,
+        "lag_s": 25806.35,
         "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
         "last_update": "2026-11-21T20:41:49Z",
-        "lag_s": 25750.33,
+        "lag_s": 25808.51,
         "ok": false
       },
       {
@@ -121169,15 +121173,15 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-22T03:50:57Z",
-        "lag_s": 0.66,
+        "last_update": "2026-11-22T03:51:58Z",
+        "lag_s": 1.06,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
         "last_update": "2026-11-22T03:22:45Z",
-        "lag_s": 1692.81,
+        "lag_s": 1754.34,
         "ok": false
       },
       {
@@ -121191,14 +121195,14 @@
         "name": "nbacdn",
         "sport": "NBA",
         "last_update": "2026-11-22T03:20:57Z",
-        "lag_s": 1800.39,
+        "lag_s": 1861.91,
         "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
         "last_update": "2026-11-22T03:20:57Z",
-        "lag_s": 1800.39,
+        "lag_s": 1861.91,
         "ok": false
       },
       {
@@ -121211,15 +121215,15 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-22T03:50:57Z",
-        "lag_s": 4.25,
+        "last_update": "2026-11-22T03:51:58Z",
+        "lag_s": 0.87,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
         "last_update": "2026-11-22T03:04:50Z",
-        "lag_s": 2771.55,
+        "lag_s": 2829.35,
         "ok": false
       },
       {
@@ -121233,14 +121237,14 @@
         "name": "nbacdn",
         "sport": "NBA",
         "last_update": "2026-11-22T03:03:59Z",
-        "lag_s": 2822.67,
+        "lag_s": 2880.47,
         "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
         "last_update": "2026-11-22T03:03:59Z",
-        "lag_s": 2822.17,
+        "lag_s": 2879.97,
         "ok": false
       },
       {
@@ -121253,15 +121257,15 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-22T03:50:54Z",
-        "lag_s": 4.6,
+        "last_update": "2026-11-22T03:51:57Z",
+        "lag_s": 1.27,
         "ok": true
       },
       {
         "name": "espn_sum",
         "sport": "NBA",
         "last_update": "2026-11-22T03:37:43Z",
-        "lag_s": 795.17,
+        "lag_s": 855.57,
         "ok": false
       },
       {
@@ -121275,14 +121279,14 @@
         "name": "nbacdn",
         "sport": "NBA",
         "last_update": "2026-11-22T03:37:43Z",
-        "lag_s": 795.17,
+        "lag_s": 855.57,
         "ok": false
       },
       {
         "name": "sleeper",
         "sport": "NBA",
         "last_update": "2026-11-22T03:37:43Z",
-        "lag_s": 795.17,
+        "lag_s": 855.57,
         "ok": false
       },
       {
@@ -121295,84 +121299,84 @@
       {
         "name": "espn",
         "sport": "NBA",
-        "last_update": "2026-11-22T03:51:00Z",
+        "last_update": "2026-11-22T03:51:58Z",
+        "lag_s": 2.15,
+        "ok": true
+      },
+      {
+        "name": "espn_sum",
+        "sport": "NBA",
+        "last_update": "2026-11-22T03:52:00Z",
+        "lag_s": 0.61,
+        "ok": true
+      },
+      {
+        "name": "nba3",
+        "sport": "NBA",
+        "last_update": null,
+        "lag_s": null,
+        "ok": false
+      },
+      {
+        "name": "nbacdn",
+        "sport": "NBA",
+        "last_update": "2026-11-22T03:52:00Z",
         "lag_s": 0.03,
         "ok": true
       },
       {
-        "name": "espn_sum",
-        "sport": "NBA",
-        "last_update": "2026-11-22T03:50:54Z",
-        "lag_s": 6.28,
-        "ok": true
-      },
-      {
-        "name": "nba3",
-        "sport": "NBA",
-        "last_update": null,
-        "lag_s": null,
-        "ok": false
-      },
-      {
-        "name": "nbacdn",
-        "sport": "NBA",
-        "last_update": "2026-11-22T03:50:55Z",
-        "lag_s": 5.08,
-        "ok": true
-      },
-      {
         "name": "sleeper",
         "sport": "NBA",
-        "last_update": "2026-11-22T03:50:55Z",
-        "lag_s": 5.36,
+        "last_update": "2026-11-22T03:52:00Z",
+        "lag_s": 0.32,
         "ok": true
       },
       {
         "name": "nhl_api",
         "sport": "NHL",
-        "last_update": "2026-11-22T03:51:00Z",
-        "lag_s": 0.29,
+        "last_update": "2026-11-22T03:51:59Z",
+        "lag_s": 0.21,
         "ok": true
       },
       {
         "name": "espn",
         "sport": "NHL",
-        "last_update": "2026-11-22T03:50:54Z",
-        "lag_s": 6.43,
+        "last_update": "2026-11-22T03:51:58Z",
+        "lag_s": 0.87,
         "ok": true
       },
       {
         "name": "nhl_api",
         "sport": "NHL",
-        "last_update": "2026-11-22T03:50:59Z",
-        "lag_s": 2.02,
+        "last_update": "2026-11-22T03:51:58Z",
+        "lag_s": 0.78,
         "ok": true
       },
       {
         "name": "espn",
         "sport": "NHL",
-        "last_update": "2026-11-22T03:50:57Z",
-        "lag_s": 4.3,
+        "last_update": "2026-11-22T03:51:58Z",
+        "lag_s": 0.81,
         "ok": true
       },
       {
         "name": "nhl_api",
         "sport": "NHL",
-        "last_update": "2026-11-22T03:51:00Z",
-        "lag_s": 1.41,
+        "last_update": "2026-11-22T03:51:59Z",
+        "lag_s": 0.35,
         "ok": true
       },
       {
         "name": "espn",
         "sport": "NHL",
-        "last_update": "2026-11-22T03:50:57Z",
-        "lag_s": 3.99,
+        "last_update": "2026-11-22T03:51:56Z",
+        "lag_s": 2.45,
         "ok": true
       }
     ],
-    "ws_age_s": 2291.071750164032,
-    "cash_free": 24.55,
-    "cash_tied": 3674.48,
+    "ws_age_s": 2348.872538089752,
+    "cash_free": 43.52,
+    "cash_tied": 3141.49,
     "kill": false,
     "armed": true,
     "outbox": {
