@@ -1,19 +1,19 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-22T19:40:46.571728Z",
+  "generated_at": "2026-11-22T19:42:03.194700Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$157.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 354,182, 23,801 resting. Worst line +$157. Floor protocol off."
+          "In race (Ingame). Sold 354,182, 23,801 resting. Worst line +$157. Floor protocol off. Bot is slow (checks every 47s, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-22T19:40:03Z"
+    "ts": "2026-11-22T19:41:03Z"
   },
   "posts": [
-    {
-      "id": "1795193032006-b534a3",
-      "ts": "2026-11-20T16:41:33Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 25: driver BKOE x25 at 4.5c. Worst line +$136.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 25.0,
-        "fills": [
-          {
-            "side": "driver BKOE",
-            "price": 0.045,
-            "qty": 25.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795193474754-04511a",
       "ts": "2026-11-20T16:51:14Z",
@@ -3436,18 +3416,19 @@
       "source": "resistance_monitor",
       "text": "PGA-THRC26 book is not trading: no fills in the last hour while the crowd keeps trading (grew 55224). Check the bot.",
       "severity": "warn"
+    },
+    {
+      "id": "1795376463519-b297a3",
+      "ts": "2026-11-22T19:41:03Z",
+      "book": "PGA-THRC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$157.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795352399380-383550",
-      "ts": "2026-11-22T12:59:59Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- PGA-THRC26 - Jordan Smith has had no resting orders for at least 2681 min (reason unknown: no reason logged).\n- PGA-THRC26 - S.Y. Noh has had no resting orders for at least 2378 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1795352702590-9a4721",
       "ts": "2026-11-22T13:05:02Z",
@@ -4337,6 +4318,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 4 unexplained\n- PGA-THRC26 - Brooks Koepka has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- PGA-THRC26 - Davis Thompson has had no resting orders for at least 3592 min (reason unknown: no reason logged).\n- PGA-THRC26 - Emiliano Grillo has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- PGA-THRC26 - Marco Penge has had no resting orders for at least 2984 min (reason unknown: no reason logged).\nBack: PGA-THRC26 - Christiaan Bezuidenhout is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795376489367-2d7859",
+      "ts": "2026-11-22T19:41:29Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (PGA-THRC26): 3 ladder(s) stale 10+ min: KXPGATOUR-THRC26-MATK high 300c, KXPGATOUR-THRC26-MDON high 300c, KXPGATOUR-THRC26-BHAA high 3326c. Check the command center.",
       "severity": "warn"
     }
   ]
