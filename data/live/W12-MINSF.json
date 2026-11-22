@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-22T23:24:12.927182Z",
+  "generated_at": "2026-11-22T23:25:31.966383Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -47,33 +47,39 @@
         "resting": "623 @ 8-11c",
         "exposure": 127.47,
         "exposure_text": "+$127",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-23T01:00:00Z",
+        "move": "Step price down 1c (8c to 7c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-22T23:24:59Z",
         "stuck": false,
-        "last_fill": "2026-11-22T19:30:53Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-22T19:30:53Z",
+        "lag_note": "Steps to 7c at the next check."
       },
       {
         "side": "SF by 15+",
         "resting": "863 @ 20-22c",
         "exposure": 324.72,
         "exposure_text": "+$325",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-23T01:00:00Z",
+        "move": "Step price down 1c (20c to 19c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-22T23:24:59Z",
         "stuck": false,
-        "last_fill": "2026-11-22T22:22:30Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-22T22:22:30Z",
+        "lag_note": "Steps to 19c at the next check."
       },
       {
         "side": "MIN by 7-14",
         "resting": "870 @ 14-15c",
         "exposure": 431.23,
         "exposure_text": "+$431",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-23T01:00:00Z",
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-22T23:24:59Z",
         "stuck": false,
-        "last_fill": "2026-11-20T04:38:36Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-20T04:38:36Z",
+        "lag_note": "Steps to 13c at the next check."
       }
     ],
     "sections": [
@@ -86,7 +92,10 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): MIN by 7-14, MIN by 15+, SF by 15+.",
+          "MIN by 7-14: 642 behind. Steps to 13c at the next check.",
+          "SF by 15+: 536 behind. Steps to 19c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -144,7 +153,7 @@
         "held": 29.9,
         "resting": 870.1,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
@@ -152,7 +161,7 @@
         "held": 333.6,
         "resting": 623.4,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.08
       },
       {
@@ -176,43 +185,14 @@
         "held": 136.4,
         "resting": 863.4,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.2
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-22T23:23:59Z"
+    "ts": "2026-11-22T23:24:59Z"
   },
   "posts": [
-    {
-      "id": "1795212177030-deb53b",
-      "ts": "2026-11-20T22:02:57Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,388 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795212252429-9c1bc8",
-      "ts": "2026-11-20T22:04:12Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSF 1-6: +6 (+0.1% of bankroll)\nSF 7-14: +13 (+0.1% of bankroll)\nSF 15+: -3 (-0.0% of bankroll)\nMIN 1-6: -17 (-0.2% of bankroll)\nMIN 7-14: +12 (+0.1% of bankroll)\nMIN 15+: +2 (+0.0% of bankroll)\nCollected $42 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nSF 1-6: 36 / 550\nSF 7-14: 29 / 598\nSF 15+: 45 / 955\nMIN 1-6: 59 / 498\nMIN 7-14: 30 / 870\nMIN 15+: 40 / 917\nPosted book 1.10 | Sold avg 1.052 | Worst now -190 | Cash free $2500\nAnchor age 0s | Last fill 2865s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795213087703-b451d5",
-      "ts": "2026-11-20T22:18:07Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,388 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795213631354-a51ed0",
       "ts": "2026-11-20T22:24:57Z",
@@ -3572,6 +3552,36 @@
       "source": "bot",
       "text": "If the game ends... you make\nSF 1-6: -211 (-2.0% of bankroll)\nSF 7-14: -211 (-2.0% of bankroll)\nSF 15+: +325 (+3.0% of bankroll)\nMIN 1-6: -90 (-0.8% of bankroll)\nMIN 7-14: +431 (+4.0% of bankroll)\nMIN 15+: +127 (+1.2% of bankroll)\nCollected $461 premium ($0 fees) | Paper margin over fair $19 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; MIN 7-14: MIN 0-0, Q0 0:00\nheld / resting\nSF 1-6: 672 / 0\nSF 7-14: 672 / 220\nSF 15+: 136 / 863\nMIN 1-6: 551 / 346\nMIN 7-14: 30 / 870\nMIN 15+: 334 / 623\nPosted book 1.12 | Sold avg 1.051 | Worst now -66 | Cash free $2500\nAnchor age 0s | Last fill 345s ago",
       "severity": "info"
+    },
+    {
+      "id": "1795389899774-13658d",
+      "ts": "2026-11-22T23:24:59Z",
+      "book": "W12-MINSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$211, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795389919872-8daeaa",
+      "ts": "2026-11-22T23:25:13Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: MIN by 1-6 at 17c (134 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795389919873-6b9dab",
+      "ts": "2026-11-22T23:25:13Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: MIN by 1-6 at 19c (55 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
