@@ -1,13 +1,13 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-22T22:20:41.954750Z",
+  "generated_at": "2026-11-22T22:22:00.104781Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:20pm CT. Worst line -$292, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 63,
     "moves": [
       {
         "side": "SF by 1-6",
@@ -44,49 +44,58 @@
       },
       {
         "side": "SF by 7-14",
-        "resting": "514 @ 23-24c",
+        "resting": "695 @ 22-24c",
         "exposure": 181.31,
         "exposure_text": "+$181",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-23T01:00:00Z",
+        "move": "Step price down 1c (22c to 21c)",
+        "when": "if no fill by 4:30pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-22T22:30:55Z",
         "stuck": false,
-        "last_fill": "2026-11-21T23:10:27Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-21T23:10:27Z",
+        "lag_note": "Steps to 21c if no fill by 4:30pm CT."
       },
       {
         "side": "SF by 15+",
         "resting": "934 @ 20-22c",
         "exposure": 228.2,
         "exposure_text": "+$228",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-23T01:00:00Z",
+        "move": "Hold price at 20c",
+        "when": "no crowd trade data yet",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-22T21:45:10Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-22T21:45:10Z",
+        "lag_note": "No crowd trade data yet."
       },
       {
         "side": "MIN by 7-14",
         "resting": "870 @ 14-15c",
         "exposure": 263.69,
         "exposure_text": "+$264",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-23T01:00:00Z",
+        "move": "Step price down 1c (14c to 13c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-22T22:21:30Z",
         "stuck": false,
-        "last_fill": "2026-11-20T04:38:36Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-20T04:38:36Z",
+        "lag_note": "Steps to 13c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,579, 3,109 resting. Worst line -$292 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,579, 3,290 resting. Worst line -$292 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): MIN by 7-14, SF by 7-14, SF by 15+.",
+          "MIN by 7-14: 556 behind. Steps to 13c at the next check.",
+          "SF by 15+: 521 behind. No crowd trade data yet.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -144,7 +153,7 @@
         "held": 29.9,
         "resting": 870.1,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
@@ -166,54 +175,24 @@
       {
         "label": "SF by 7-14",
         "held": 112.2,
-        "resting": 514.0,
+        "resting": 695.0,
         "target": null,
-        "status": "even",
-        "price": 0.23
+        "status": "lagging",
+        "price": 0.22
       },
       {
         "label": "SF by 15+",
         "held": 65.4,
         "resting": 934.4,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.2
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-22T22:20:30Z"
+    "ts": "2026-11-22T22:21:30Z"
   },
   "posts": [
-    {
-      "id": "1795191903185-1534ca",
-      "ts": "2026-11-20T16:25:03Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,406 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795192810182-7c8a57",
-      "ts": "2026-11-20T16:40:10Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,406 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795193716759-45d8c1",
-      "ts": "2026-11-20T16:55:16Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,406 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795194124855-6d1a7d",
       "ts": "2026-11-20T17:02:04Z",
@@ -3465,6 +3444,35 @@
       "text": "Quiet for 15 min. 3,109 resting. Next: Even-done check, 6:50pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795386057102-d93535",
+      "ts": "2026-11-22T22:20:57Z",
+      "book": "W12-MINSF",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nSF 1-6: -292 (-2.7% of bankroll)\nSF 7-14: +181 (+1.7% of bankroll)\nSF 15+: +228 (+2.1% of bankroll)\nMIN 1-6: -158 (-1.5% of bankroll)\nMIN 7-14: +264 (+2.5% of bankroll)\nMIN 15+: -40 (-0.4% of bankroll)\nCollected $294 premium ($0 fees) | Paper margin over fair $22 (not realized until settlement)\nEvent: SF 7-14: SF 0-0, Q0 0:00; MIN 7-14: MIN 0-0, Q0 0:00\nheld / resting\nSF 1-6: 586 / 0\nSF 7-14: 112 / 514\nSF 15+: 65 / 934\nMIN 1-6: 452 / 167\nMIN 7-14: 30 / 870\nMIN 15+: 334 / 623\nPosted book 1.15 | Sold avg 1.056 | Worst now -180 | Cash free $2500\nAnchor age 0s | Last fill 2146s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1795386070621-66cee6",
+      "ts": "2026-11-22T22:20:57Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$292. Lagging: SF by 7-14, SF by 15+, MIN by 7-14.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1795386090764-344354",
+      "ts": "2026-11-22T22:21:30Z",
+      "book": "W12-MINSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$292, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
