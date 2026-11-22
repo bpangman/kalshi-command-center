@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-22T23:36:04.280472Z",
+  "generated_at": "2026-11-22T23:37:29.531974Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,7 +33,7 @@
       },
       {
         "side": "SF by 1-6",
-        "resting": "none",
+        "resting": "58 @ 26c",
         "exposure": -179.37,
         "exposure_text": "-$179",
         "move": "Paid balancing (trickle)",
@@ -49,7 +49,7 @@
         "exposure_text": "+$159",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-22T23:36:04Z",
+        "at": "2026-11-22T23:37:05Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-22T19:30:53Z",
@@ -62,7 +62,7 @@
         "exposure_text": "+$356",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-22T23:36:04Z",
+        "at": "2026-11-22T23:37:05Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-22T22:22:30Z",
@@ -75,7 +75,7 @@
         "exposure_text": "+$463",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-22T23:36:04Z",
+        "at": "2026-11-22T23:37:05Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-20T04:38:36Z",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 2,574, 2,744 resting. Worst line -$237 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 2,574, 2,802 resting. Worst line -$237 (goal -$150)."
         ]
       },
       {
@@ -103,7 +103,7 @@
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
           "Gate closed: batches wait for the worst line to reach -$200 (now -$237).",
-          "Batches used: 1 (max 3 per side)."
+          "Batches used: 2 (max 3 per side)."
         ]
       },
       {
@@ -167,10 +167,10 @@
       {
         "label": "SF by 1-6",
         "held": 672.0,
-        "resting": 0.0,
+        "resting": 58.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.26
       },
       {
         "label": "SF by 7-14",
@@ -190,7 +190,7 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-22T23:36:04Z"
+    "ts": "2026-11-22T23:37:05Z"
   },
   "posts": [
     {
@@ -4377,6 +4377,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+124 on MIN 1-6 @ 0.17 (maker)\n+55 on MIN 1-6 @ 0.19 (maker)\nworst outcome now -66\nheld 672/672/136/730/30/334\nIf the game ends... you make\nSF 1-6: -179 (-1.7% of bankroll)\nSF 7-14: -180 (-1.7% of bankroll)\nSF 15+: +356 (+3.3% of bankroll)\nMIN 1-6: -237 (-2.2% of bankroll)\nMIN 7-14: +463 (+4.3% of bankroll)\nMIN 15+: +159 (+1.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795390577430-972479",
+      "ts": "2026-11-22T23:36:17Z",
+      "book": "W12-MINSF",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Back: W12-MINSF - San Francisco by 1 to 6 is posting again.",
       "severity": "warn"
     }
   ]
