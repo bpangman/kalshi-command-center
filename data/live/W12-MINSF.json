@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T01:14:49.937723Z",
+  "generated_at": "2026-11-23T01:16:08.102537Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -37,7 +37,7 @@
         "exposure": -109.76,
         "exposure_text": "-$110",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$154); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-23T01:10:58Z"
@@ -48,7 +48,7 @@
         "exposure": -51.89,
         "exposure_text": "-$52",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$154); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-23T01:04:08Z"
@@ -73,7 +73,7 @@
         "exposure_text": "+$591",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-23T01:13:58Z",
+        "at": "2026-11-23T01:15:59Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-23T01:00:15Z",
@@ -100,7 +100,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$113 is better than -$154.",
+          "Gate open: worst line -$113 is better than -$150.",
           "Batches used: 7 (max 3 per side)."
         ]
       },
@@ -108,7 +108,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$154, worst line -$113; spent $5 of $100.",
+          "Paid balancing is running: plan -$150, worst line -$113; spent $5 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -177,18 +177,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T01:13:58Z"
+    "ts": "2026-11-23T01:15:59Z"
   },
   "posts": [
-    {
-      "id": "1795248654389-656547",
-      "ts": "2026-11-21T08:10:54Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSF 1-6: +12 (+0.1% of bankroll)\nSF 7-14: -17 (-0.2% of bankroll)\nSF 15+: +11 (+0.1% of bankroll)\nMIN 1-6: +2 (+0.0% of bankroll)\nMIN 7-14: +31 (+0.3% of bankroll)\nMIN 15+: -38 (-0.4% of bankroll)\nCollected $61 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nSF 1-6: 49 / 537\nSF 7-14: 78 / 548\nSF 15+: 50 / 950\nMIN 1-6: 59 / 560\nMIN 7-14: 30 / 870\nMIN 15+: 99 / 858\nPosted book 1.10 | Sold avg 1.052 | Worst now -180 | Cash free $2500\nAnchor age 0s | Last fill 8319s ago",
-      "severity": "info"
-    },
     {
       "id": "1795249438940-d44663",
       "ts": "2026-11-21T08:23:58Z",
@@ -3764,6 +3755,26 @@
       "source": "bot",
       "text": "Inactivity on W12-MINSF: 0 orders posted in 10 min while the market traded 26948 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1795396559133-1272c1",
+      "ts": "2026-11-23T01:13:48Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 25: MIN by 15+ x25 at 7c. Worst line -$113.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 25.0,
+        "fills": [
+          {
+            "side": "MIN by 15+",
+            "price": 0.07,
+            "qty": 25.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
