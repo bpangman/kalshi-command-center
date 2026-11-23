@@ -1,19 +1,19 @@
 {
   "key": "PGA-THRC26",
-  "generated_at": "2026-11-23T11:53:47.526866Z",
+  "generated_at": "2026-11-23T11:55:05.256535Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$173.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 354,300, ? resting. Worst line +$173. Floor protocol off. Live feed is down; the bot is polling, so numbers may lag."
+          "In race (Ingame). Sold 354,300, ? resting. Worst line +$173. Floor protocol off."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "PGA-THRC26",
-    "ts": "2026-11-23T11:53:06Z"
+    "ts": "2026-11-23T11:54:06Z"
   },
   "posts": [
-    {
-      "id": "1795246536953-9a5120",
-      "ts": "2026-11-21T07:35:36Z",
-      "book": "PGA-THRC26",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "PGA-THRC26 book is not trading: no fills in the last hour while the crowd keeps trading (grew 8580). Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1795246821132-213ca1",
       "ts": "2026-11-21T07:40:21Z",
@@ -3262,18 +3253,19 @@
       "text": "In race (Ingame). Worst line +$173.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795434846972-617e9b",
+      "ts": "2026-11-23T11:54:06Z",
+      "book": "PGA-THRC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$173.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795398509558-75c9fe",
-      "ts": "2026-11-23T01:48:29Z",
-      "book": "PGA-THRC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
-      "severity": "warn"
-    },
     {
       "id": "1795399347633-17c6b0",
       "ts": "2026-11-23T02:02:27Z",
@@ -4163,6 +4155,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: websocket feed recovered, back off REST",
+      "severity": "warn"
+    },
+    {
+      "id": "1795434879733-abe5d9",
+      "ts": "2026-11-23T11:54:39Z",
+      "book": "PGA-THRC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- PGA-THRC26 - Jackson Koivun has had no resting orders for at least 1890 min (reason unknown: no reason logged).\n- PGA-THRC26 - Max McGreevy has had no resting orders for at least 799 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
