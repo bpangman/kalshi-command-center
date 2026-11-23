@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T01:16:08.102537Z",
+  "generated_at": "2026-11-23T01:17:40.746778Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -68,30 +68,30 @@
       },
       {
         "side": "MIN by 7-14",
-        "resting": "703 @ 12-15c",
+        "resting": "703 @ 10-15c",
         "exposure": 590.62,
         "exposure_text": "+$591",
-        "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-23T01:15:59Z",
+        "move": "Hold price at 10c",
+        "when": "crowd pays 10.1c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-23T01:00:15Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Price 10c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 3,957, 1,301 resting. Worst line -$113 (goal -$150)."
+          "Final tightening, kickoff 7:20pm CT. Sold 3,957, 1,249 resting. Worst line -$113 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): MIN by 7-14, MIN by 15+.",
-          "MIN by 7-14: 703 behind. Steps to 11c at the next check.",
+          "MIN by 7-14: 703 behind. Price 10c matches the crowd.",
           "MIN by 15+: 514 behind. Steps to 7c if no fill by 7:23pm CT.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -138,7 +138,7 @@
       {
         "label": "MIN by 7-14",
         "held": 169.9,
-        "resting": 703.0,
+        "resting": 651.0,
         "target": null,
         "status": "lagging",
         "price": 0.12
@@ -177,29 +177,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T01:15:59Z"
+    "ts": "2026-11-23T01:16:59Z"
   },
   "posts": [
-    {
-      "id": "1795249438940-d44663",
-      "ts": "2026-11-21T08:23:58Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,323 resting. Next: Even-done check, Sun 6:51pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795250345298-e11431",
-      "ts": "2026-11-21T08:39:05Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,323 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795251252022-297fa4",
       "ts": "2026-11-21T08:54:12Z",
@@ -3775,18 +3755,29 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795396599555-58e8d5",
+      "ts": "2026-11-23T01:16:37Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease MIN7TO14: resting 703 -> 651 (held 170 + resting was over the cap 821 = 1.04x; tighten p",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795396660362-070712",
+      "ts": "2026-11-23T01:17:20Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -112.51, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
     }
   ],
   "audits": [
-    {
-      "id": "1795142935097-5d4b56",
-      "ts": "2026-11-20T02:48:55Z",
-      "book": "W12-MINSF",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Cash line: trimmed 238 contracts off the back of MIN15PLUS so Kalshi would not pull the whole set (usable cash $1,002). No row cancelled; the front rows kept their place in line.",
-      "severity": "warn"
-    },
     {
       "id": "1795149276646-859289",
       "ts": "2026-11-20T04:34:36Z",
@@ -4676,6 +4667,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+1 on SF 7-14 @ 0.20 (taker)\nworst outcome now +17\nheld 873/870/812/873/170/334\nIf the game ends... you make\nSF 1-6: -114 (-1.1% of bankroll)\nSF 7-14: -112 (-1.0% of bankroll)\nSF 15+: -54 (-0.5% of bankroll)\nMIN 1-6: -114 (-1.1% of bankroll)\nMIN 7-14: +589 (+5.5% of bankroll)\nMIN 15+: +425 (+4.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795396640312-b00783",
+      "ts": "2026-11-23T01:17:20Z",
+      "book": "W12-MINSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nSF 1-6: -113 (-1.1% of bankroll)\nSF 7-14: -110 (-1.0% of bankroll)\nSF 15+: -52 (-0.5% of bankroll)\nMIN 1-6: -113 (-1.1% of bankroll)\nMIN 7-14: +591 (+5.5% of bankroll)\nMIN 15+: +402 (+3.8% of bankroll)",
       "severity": "warn"
     }
   ]
