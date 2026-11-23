@@ -1,155 +1,71 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T01:17:40.746778Z",
+  "generated_at": "2026-11-23T01:19:01.100230Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$113.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$108.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "MIN by 1-6",
-        "resting": "1 @ 21c",
-        "exposure": -112.51,
-        "exposure_text": "-$113",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-23T01:05:25Z"
-      },
-      {
-        "side": "SF by 1-6",
-        "resting": "none",
-        "exposure": -112.51,
-        "exposure_text": "-$113",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-23T01:03:31Z"
-      },
-      {
-        "side": "SF by 7-14",
-        "resting": "23 @ 24c",
-        "exposure": -109.76,
-        "exposure_text": "-$110",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-23T01:10:58Z"
-      },
-      {
-        "side": "SF by 15+",
-        "resting": "60 @ 22c",
-        "exposure": -51.89,
-        "exposure_text": "-$52",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-23T01:04:08Z"
-      },
-      {
-        "side": "MIN by 15+",
-        "resting": "514 @ 8-11c",
-        "exposure": 401.86,
-        "exposure_text": "+$402",
-        "move": "Step price down 1c (8c to 7c)",
-        "when": "if no fill by 7:23pm CT (FILLFAIR: 10 min with no fill)",
-        "at": "2026-11-23T01:23:39Z",
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-23T01:13:39Z",
-        "lag_note": "Steps to 7c if no fill by 7:23pm CT."
-      },
-      {
-        "side": "MIN by 7-14",
-        "resting": "703 @ 10-15c",
-        "exposure": 590.62,
-        "exposure_text": "+$591",
-        "move": "Hold price at 10c",
-        "when": "crowd pays 10.1c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-23T01:00:15Z",
-        "lag_note": "Price 10c matches the crowd."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 3,957, 1,249 resting. Worst line -$113 (goal -$150)."
+          "In game (Ingame). Sold 3,999, 1,236 resting. Worst line -$108. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): MIN by 7-14, MIN by 15+.",
-          "MIN by 7-14: 703 behind. Price 10c matches the crowd.",
-          "MIN by 15+: 514 behind. Steps to 7c if no fill by 7:23pm CT.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$113 is better than -$150.",
-          "Batches used: 7 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$113; spent $5 of $100.",
-          "Kickoff 7:20pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-23T01:20:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "MIN by 1-6",
         "held": 873.0,
-        "resting": 1.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.21
+        "price": null
       },
       {
         "label": "MIN by 7-14",
-        "held": 169.9,
-        "resting": 651.0,
+        "held": 209.5,
+        "resting": 662.4,
         "target": null,
-        "status": "lagging",
-        "price": 0.12
+        "status": "even",
+        "price": null
       },
       {
         "label": "MIN by 15+",
         "held": 358.6,
-        "resting": 514.4,
+        "resting": 513.4,
         "target": null,
-        "status": "lagging",
-        "price": 0.08
+        "status": "even",
+        "price": null
       },
       {
         "label": "SF by 1-6",
@@ -161,11 +77,11 @@
       },
       {
         "label": "SF by 7-14",
-        "held": 870.2,
-        "resting": 23.0,
+        "held": 872.2,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.24
+        "price": null
       },
       {
         "label": "SF by 15+",
@@ -173,52 +89,21 @@
         "resting": 60.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T01:16:59Z"
+    "ts": "2026-11-23T01:19:01Z"
   },
   "posts": [
-    {
-      "id": "1795251252022-297fa4",
-      "ts": "2026-11-21T08:54:12Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,323 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795251876390-f20c5a",
-      "ts": "2026-11-21T09:02:22Z",
-      "book": "W12-MINSF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 1: MIN by 15+ x1 at 8c. Worst line -$38.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 1.0,
-        "fills": [
-          {
-            "side": "MIN by 15+",
-            "price": 0.08,
-            "qty": 1.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795252305636-e48ce2",
-      "ts": "2026-11-21T09:11:45Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSF 1-6: +12 (+0.1% of bankroll)\nSF 7-14: -17 (-0.2% of bankroll)\nSF 15+: +12 (+0.1% of bankroll)\nMIN 1-6: +2 (+0.0% of bankroll)\nMIN 7-14: +31 (+0.3% of bankroll)\nMIN 15+: -38 (-0.4% of bankroll)\nCollected $61 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nSF 1-6: 49 / 537\nSF 7-14: 78 / 548\nSF 15+: 50 / 950\nMIN 1-6: 59 / 560\nMIN 7-14: 30 / 870\nMIN 15+: 100 / 857\nPosted book 1.10 | Sold avg 1.052 | Worst now -180 | Cash free $2500\nAnchor age 0s | Last fill 621s ago",
-      "severity": "info"
-    },
     {
       "id": "1795252642434-6b9ff5",
       "ts": "2026-11-21T09:17:22Z",
@@ -3775,6 +3660,40 @@
       "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -112.51, L_max 300.00)",
       "severity": "info",
       "title": "Phase change"
+    },
+    {
+      "id": "1795396680571-979cae",
+      "ts": "2026-11-23T01:18:00Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795396680571-8a39c0",
+      "ts": "2026-11-23T01:18:00Z",
+      "book": "W12-MINSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$109.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1795396741029-7d1f16",
+      "ts": "2026-11-23T01:16:59Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 52 (SPORTSBOOK rate row (listed 0.): MIN by 7-14 x52 at 10c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 52.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
