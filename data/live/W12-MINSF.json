@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T00:50:07.902444Z",
+  "generated_at": "2026-11-23T00:51:33.556148Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -252.75,
         "exposure_text": "-$253",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:50pm CT",
+        "when": "no move planned until paid balancing starts at 7:00pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-23T00:25:58Z"
@@ -49,7 +49,7 @@
         "exposure_text": "+$262",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-23T00:49:44Z",
+        "at": "2026-11-23T00:50:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-22T19:30:53Z",
@@ -62,7 +62,7 @@
         "exposure_text": "+$441",
         "move": "Step price down 1c (20c to 19c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-23T00:49:44Z",
+        "at": "2026-11-23T00:50:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-23T00:39:44Z",
@@ -75,7 +75,7 @@
         "exposure_text": "+$566",
         "move": "Step price down 1c (14c to 13c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-23T00:49:44Z",
+        "at": "2026-11-23T00:50:44Z",
         "stuck": false,
         "also": "Also: paid balancing starts 7:00pm CT",
         "last_fill": "2026-11-20T04:38:36Z",
@@ -111,7 +111,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 7:00pm CT: worst line to -$150 by 7:15pm CT, up to $100.",
-          "At 6:50pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -123,11 +122,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-23T00:50:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-23T01:00:00Z",
         "label": "Paid balancing starts",
@@ -190,19 +184,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T00:49:44Z"
+    "ts": "2026-11-23T00:50:44Z"
   },
   "posts": [
-    {
-      "id": "1795229822514-fbb178",
-      "ts": "2026-11-21T02:57:02Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,338 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795230431789-28e30d",
       "ts": "2026-11-21T03:07:11Z",
@@ -3692,6 +3676,16 @@
       "text": "Row sold out: MIN by 1-6 at 21c (35 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1795395044656-9dbbce",
+      "ts": "2026-11-23T00:50:44Z",
+      "book": "W12-MINSF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$253, goal -$150. Next: Paid balancing starts, 7:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4557,6 +4551,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W12-MINSF): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=3677. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795395037927-33fc0a",
+      "ts": "2026-11-23T00:50:37Z",
+      "book": "W12-MINSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+35 on MIN 1-6 @ 0.21 (maker)\nworst outcome now +56\nheld 813/848/154/848/30/334\nIf the game ends... you make\nSF 1-6: -218 (-2.0% of bankroll)\nSF 7-14: -253 (-2.4% of bankroll)\nSF 15+: +441 (+4.1% of bankroll)\nMIN 1-6: -253 (-2.4% of bankroll)\nMIN 7-14: +566 (+5.3% of bankroll)\nMIN 15+: +262 (+2.4% of bankroll)",
       "severity": "warn"
     }
   ]
