@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T04:00:47.494311Z",
+  "generated_at": "2026-11-23T04:02:06.627996Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,235, 0 resting. Worst line -$26. Game 81% done. Floor mode ON: only raising the worst line."
+          "In game (Ingame). Sold 5,235, 0 resting. Worst line -$26. Game 83% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T04:00:24Z"
+    "ts": "2026-11-23T04:01:24Z"
   },
   "posts": [
-    {
-      "id": "1795277774280-7bc495",
-      "ts": "2026-11-21T16:16:14Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSF 1-6: +16 (+0.2% of bankroll)\nSF 7-14: -13 (-0.1% of bankroll)\nSF 15+: +16 (+0.1% of bankroll)\nMIN 1-6: -16 (-0.2% of bankroll)\nMIN 7-14: +36 (+0.3% of bankroll)\nMIN 15+: -34 (-0.3% of bankroll)\nCollected $66 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nheld / resting\nSF 1-6: 49 / 537\nSF 7-14: 78 / 548\nSF 15+: 50 / 950\nMIN 1-6: 82 / 537\nMIN 7-14: 30 / 870\nMIN 15+: 100 / 857\nPosted book 1.10 | Sold avg 1.049 | Worst now -180 | Cash free $2500\nAnchor age 0s | Last fill 3779s ago",
-      "severity": "info"
-    },
     {
       "id": "1795278545657-f91eaa",
       "ts": "2026-11-21T16:29:05Z",
@@ -3782,18 +3773,19 @@
       "text": "Bot note: endgame: active (favorite SF 15+ at 0.90); likely ['SF 15+']; floor mode: KXNFLWINMARGIN-26NOV22MINSF-SF15PLUS",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795406525031-65c22f",
+      "ts": "2026-11-23T04:01:53Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite SF 15+ at 0.91); likely ['SF 15+']; floor mode: KXNFLWINMARGIN-26NOV22MINSF-SF15PLUS",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1795319580027-a5accd",
-      "ts": "2026-11-22T03:53:00Z",
-      "book": "W12-MINSF",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+82 on SF 1-6 @ 0.23 (maker)\nworst outcome now -180\nheld 298/112/50/101/30/322\nIf the game ends... you make\nSF 1-6: -146 (-1.4% of bankroll)\nSF 7-14: +39 (+0.4% of bankroll)\nSF 15+: +102 (+1.0% of bankroll)\nMIN 1-6: +50 (+0.5% of bankroll)\nMIN 7-14: +122 (+1.1% of bankroll)\nMIN 15+: -170 (-1.6% of bankroll)",
-      "severity": "warn"
-    },
     {
       "id": "1795324376611-d028a6",
       "ts": "2026-11-22T05:12:56Z",
@@ -4683,6 +4675,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1795406513072-c86786",
+      "ts": "2026-11-23T04:01:53Z",
+      "book": "W12-MINSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
