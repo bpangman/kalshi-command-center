@@ -1,19 +1,30 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T01:05:13.747313Z",
+  "generated_at": "2026-11-23T01:06:45.128136Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$122.",
+    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$114.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
     "moves": [
       {
+        "side": "MIN by 1-6",
+        "resting": "1 @ 21c",
+        "exposure": -114.45,
+        "exposure_text": "-$114",
+        "move": "Holding",
+        "when": "no move planned until kickoff at 7:20pm CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-23T01:05:25Z"
+      },
+      {
         "side": "SF by 1-6",
         "resting": "none",
-        "exposure": -122.18,
-        "exposure_text": "-$122",
+        "exposure": -114.45,
+        "exposure_text": "-$114",
         "move": "Holding",
         "when": "no move planned until kickoff at 7:20pm CT",
         "at": null,
@@ -23,32 +34,21 @@
       {
         "side": "SF by 7-14",
         "resting": "23 @ 24c",
-        "exposure": -98.43,
-        "exposure_text": "-$98",
+        "exposure": -110.7,
+        "exposure_text": "-$111",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$191); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$187); up to $100 in all",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-23T01:03:50Z"
-      },
-      {
-        "side": "MIN by 1-6",
-        "resting": "25 @ 21c",
-        "exposure": -97.18,
-        "exposure_text": "-$97",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$191); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-23T00:49:17Z"
+        "last_fill": "2026-11-23T01:05:25Z"
       },
       {
         "side": "SF by 15+",
         "resting": "60 @ 22c",
-        "exposure": -61.56,
-        "exposure_text": "-$62",
+        "exposure": -53.83,
+        "exposure_text": "-$54",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$191); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$187); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-23T01:04:08Z"
@@ -56,10 +56,10 @@
       {
         "side": "MIN by 15+",
         "resting": "539 @ 7-11c",
-        "exposure": 417.19,
-        "exposure_text": "+$417",
+        "exposure": 424.92,
+        "exposure_text": "+$425",
         "move": "Hold price at 7c",
-        "when": "next cent is under the crowd price (6.2c)",
+        "when": "next cent is under the crowd price (6.1c)",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -69,29 +69,29 @@
       {
         "side": "MIN by 7-14",
         "resting": "703 @ 12-15c",
-        "exposure": 580.95,
-        "exposure_text": "+$581",
-        "move": "Hold price at 12c",
-        "when": "next cent is under the crowd price (11.5c)",
-        "at": null,
+        "exposure": 588.68,
+        "exposure_text": "+$589",
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "if no fill by 7:10pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-23T01:10:15Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-23T01:00:15Z",
-        "lag_note": "Price 12c is at its floor."
+        "lag_note": "Steps to 11c if no fill by 7:10pm CT."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 3,886, 1,350 resting. Worst line -$122 (goal -$150)."
+          "Final tightening, kickoff 7:20pm CT. Sold 3,931, 1,350 resting. Worst line -$114 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): MIN by 7-14, MIN by 15+.",
-          "MIN by 7-14: 703 behind. Price 12c is at its floor.",
+          "MIN by 7-14: 703 behind. Steps to 11c if no fill by 7:10pm CT.",
           "MIN by 15+: 539 behind. Price 7c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -100,7 +100,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$122 is better than -$191.",
+          "Gate open: worst line -$114 is better than -$187.",
           "Batches used: 7 (max 3 per side)."
         ]
       },
@@ -108,7 +108,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$191, worst line -$122; spent $4 of $100.",
+          "Paid balancing is running: plan -$187, worst line -$114; spent $5 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -129,7 +129,7 @@
     "sides": [
       {
         "label": "MIN by 1-6",
-        "held": 848.0,
+        "held": 873.0,
         "resting": 25.0,
         "target": null,
         "status": "even",
@@ -161,7 +161,7 @@
       },
       {
         "label": "SF by 7-14",
-        "held": 849.2,
+        "held": 869.2,
         "resting": 23.0,
         "target": null,
         "status": "even",
@@ -177,48 +177,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T01:04:53Z"
+    "ts": "2026-11-23T01:05:53Z"
   },
   "posts": [
-    {
-      "id": "1795243093213-a17d0b",
-      "ts": "2026-11-21T06:38:13Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,323 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795243999978-8b793d",
-      "ts": "2026-11-21T06:53:19Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,323 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795244906468-04a047",
-      "ts": "2026-11-21T07:08:26Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,323 resting. Next: Even-done check, Sun 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795244996776-63698e",
-      "ts": "2026-11-21T07:09:56Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSF 1-6: +12 (+0.1% of bankroll)\nSF 7-14: -17 (-0.2% of bankroll)\nSF 15+: +11 (+0.1% of bankroll)\nMIN 1-6: +2 (+0.0% of bankroll)\nMIN 7-14: +31 (+0.3% of bankroll)\nMIN 15+: -38 (-0.4% of bankroll)\nCollected $61 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nSF 1-6: 49 / 537\nSF 7-14: 78 / 548\nSF 15+: 50 / 950\nMIN 1-6: 59 / 560\nMIN 7-14: 30 / 870\nMIN 15+: 99 / 858\nPosted book 1.10 | Sold avg 1.052 | Worst now -180 | Cash free $2500\nAnchor age 0s | Last fill 4661s ago",
-      "severity": "info"
-    },
     {
       "id": "1795245814010-06729e",
       "ts": "2026-11-21T07:23:34Z",
@@ -3710,6 +3671,90 @@
       "text": "Final tightening before kickoff 7:20pm CT. Worst line -$122. Next: Kickoff, 7:20pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1795395933679-590f77",
+      "ts": "2026-11-23T01:05:25Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 25 MIN by 1-6 at the bid 16c. Worst line -$122. Cost $0.52.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795395933679-624e96",
+      "ts": "2026-11-23T01:05:25Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 20 SF by 7-14 at the bid 21c. Worst line -$122. Cost $0.34.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795395974030-e0114b",
+      "ts": "2026-11-23T01:05:46Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 521: SF by 15+ x273 at 20c, SF by 15+ x161 at 19c, SF by 1-6 x25 at 26c, +4 more. Worst line -$114.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 521.0,
+        "fills": [
+          {
+            "side": "SF by 15+",
+            "price": 0.2,
+            "qty": 273.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.19,
+            "qty": 161.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.26,
+            "qty": 25.0
+          },
+          {
+            "side": "MIN by 1-6",
+            "price": 0.16,
+            "qty": 25.0
+          },
+          {
+            "side": "SF by 7-14",
+            "price": 0.21,
+            "qty": 20.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.21,
+            "qty": 16.0
+          },
+          {
+            "side": "SF by 7-14",
+            "price": 0.24,
+            "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795395974031-089dfb",
+      "ts": "2026-11-23T01:04:00Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 50 (FAIR-FALL extra row 0.13 (fair): MIN by 7-14 x25 at 13c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 50.0,
+        "rows": 2
+      }
     }
   ],
   "audits": [
