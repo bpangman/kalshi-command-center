@@ -1,6 +1,6 @@
 {
   "key": "W12-MINSF",
-  "generated_at": "2026-11-23T01:01:16.681444Z",
+  "generated_at": "2026-11-23T01:02:35.752990Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -26,7 +26,7 @@
         "exposure": -192.51,
         "exposure_text": "-$193",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$207); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$203); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-23T00:49:17Z"
@@ -37,7 +37,7 @@
         "exposure": -192.36,
         "exposure_text": "-$192",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$207); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$203); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-23T01:00:15Z"
@@ -62,7 +62,7 @@
         "exposure_text": "+$322",
         "move": "Step price down 1c (8c to 7c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-23T01:00:51Z",
+        "at": "2026-11-23T01:01:51Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-22T19:30:53Z",
@@ -74,7 +74,7 @@
         "exposure": 485.62,
         "exposure_text": "+$486",
         "move": "Hold price at 12c",
-        "when": "crowd pays 12c; steps down 1c only if it trades lower",
+        "when": "crowd pays 11.8c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 3,410, 1,844 resting. Worst line -$193 (goal -$150)."
+          "Final tightening, kickoff 7:20pm CT. Sold 3,410, 1,704 resting. Worst line -$193 (goal -$150)."
         ]
       },
       {
@@ -102,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$193 is better than -$207.",
+          "Gate open: worst line -$193 is better than -$203.",
           "Batches used: 4 (max 3 per side)."
         ]
       },
@@ -110,7 +110,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$207, worst line -$193; spent $4 of $100.",
+          "Paid balancing is running: plan -$203, worst line -$193; spent $4 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -140,7 +140,7 @@
       {
         "label": "MIN by 7-14",
         "held": 169.9,
-        "resting": 818.0,
+        "resting": 678.0,
         "target": null,
         "status": "lagging",
         "price": 0.12
@@ -179,18 +179,9 @@
       }
     ],
     "book": "W12-MINSF",
-    "ts": "2026-11-23T01:00:51Z"
+    "ts": "2026-11-23T01:01:51Z"
   },
   "posts": [
-    {
-      "id": "1795237711572-4a5eb9",
-      "ts": "2026-11-21T05:08:31Z",
-      "book": "W12-MINSF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nSF 1-6: +7 (+0.1% of bankroll)\nSF 7-14: -22 (-0.2% of bankroll)\nSF 15+: +7 (+0.1% of bankroll)\nMIN 1-6: -3 (-0.0% of bankroll)\nMIN 7-14: +27 (+0.2% of bankroll)\nMIN 15+: +16 (+0.2% of bankroll)\nCollected $56 premium ($0 fees) | Paper margin over fair $3 (not realized until settlement)\nheld / resting\nSF 1-6: 49 / 537\nSF 7-14: 78 / 548\nSF 15+: 50 / 950\nMIN 1-6: 59 / 498\nMIN 7-14: 30 / 870\nMIN 15+: 40 / 917\nPosted book 1.10 | Sold avg 1.052 | Worst now -192 | Cash free $2500\nAnchor age 0s | Last fill 2424s ago",
-      "severity": "info"
-    },
     {
       "id": "1795238077438-a9ad30",
       "ts": "2026-11-21T05:14:37Z",
@@ -3684,6 +3675,56 @@
       "text": "Final tightening before kickoff 7:20pm CT. Worst line -$193. Next: Kickoff, 7:20pm CT.",
       "severity": "info",
       "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1795395691594-1d5ff7",
+      "ts": "2026-11-23T01:00:36Z",
+      "book": "W12-MINSF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 275: MIN by 7-14 x102 at 9c, SF by 15+ x100 at 19c, MIN by 7-14 x22 at 10c, +4 more. Worst line -$193.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 275.0,
+        "fills": [
+          {
+            "side": "MIN by 7-14",
+            "price": 0.09,
+            "qty": 102.0
+          },
+          {
+            "side": "SF by 15+",
+            "price": 0.19,
+            "qty": 100.0
+          },
+          {
+            "side": "MIN by 7-14",
+            "price": 0.1,
+            "qty": 22.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.24,
+            "qty": 17.0
+          },
+          {
+            "side": "MIN by 7-14",
+            "price": 0.11,
+            "qty": 16.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.26,
+            "qty": 10.0
+          },
+          {
+            "side": "SF by 1-6",
+            "price": 0.23,
+            "qty": 8.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4576,6 +4617,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: SF 7-14 worst outcome -84\nIf the game ends... you make\nSF 1-6: -192 (-1.8% of bankroll)\nSF 7-14: -193 (-1.8% of bankroll)\nSF 15+: +293 (+2.7% of bankroll)\nMIN 1-6: -193 (-1.8% of bankroll)\nMIN 7-14: +486 (+4.5% of bankroll)\nMIN 15+: +322 (+3.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795395699889-7b6b90",
+      "ts": "2026-11-23T01:01:39Z",
+      "book": "W12-MINSF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+16 on MIN 7-14 @ 0.11 (taker)\n+22 on MIN 7-14 @ 0.10 (taker)\n+102 on MIN 7-14 @ 0.09 (taker)\n+17 on SF 1-6 @ 0.24 (taker)\n+8 on SF 1-6 @ 0.23 (taker)\nworst outcome now +13\nheld 848/848/362/848/170/334\nIf the game ends... you make\nSF 1-6: -192 (-1.8% of bankroll)\nSF 7-14: -193 (-1.8% of bankroll)\nSF 15+: +293 (+2.7% of bankroll)\nMIN 1-6: -193 (-1.8% of bankroll)\nMIN 7-14: +486 (+4.5% of bankroll)\nMIN 15+: +322 (+3.0% of bankroll)",
       "severity": "warn"
     }
   ]
