@@ -1,6 +1,6 @@
 {
   "key": "W12-CINWAS",
-  "generated_at": "2026-11-24T03:27:09.539221Z",
+  "generated_at": "2026-11-24T03:28:58.159535Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W12-CINWAS",
-    "ts": "2026-11-24T03:26:43Z"
+    "ts": "2026-11-24T03:28:44Z"
   },
   "posts": [
-    {
-      "id": "1795365654089-7addb0",
-      "ts": "2026-11-22T16:40:54Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,156 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795366559268-49f581",
       "ts": "2026-11-22T16:55:59Z",
@@ -3744,18 +3734,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nWAS 1-6: +2 (+0.0% of bankroll)\nWAS 7-14: +2 (+0.0% of bankroll)\nWAS 15+: +2 (+0.0% of bankroll)\nCIN 1-6: +3 (+0.0% of bankroll)\nCIN 7-14: +3 (+0.0% of bankroll)\nCIN 15+: +2 (+0.0% of bankroll)\nCollected $958 premium ($10 fees) | Paper margin over fair $166 (not realized until settlement)\nEvent: CIN 7-14: CIN 10-17, Q3 7:04; CIN 1-6: CIN 10-17, Q3 7:04\nheld / resting\nWAS 1-6: 945 / 0\nWAS 7-14: 945 / 0\nWAS 15+: 945 / 0\nCIN 1-6: 945 / 0\nCIN 7-14: 944 / 0\nCIN 15+: 945 / 0\nPosted book 1.16 | Sold avg 1.014 | Worst now +2 | Cash free $2500\nAnchor age 1039s | Last fill 7575s ago",
       "severity": "info"
+    },
+    {
+      "id": "1795490863915-bce170",
+      "ts": "2026-11-24T03:27:43Z",
+      "book": "W12-CINWAS",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 0 resting.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1795431235622-f8cd20",
-      "ts": "2026-11-23T10:53:55Z",
-      "book": "W12-CINWAS",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "W12-CINWAS: bot loop crashing (1 in a row): no exception detail available; restart/fix needed",
-      "severity": "critical"
-    },
     {
       "id": "1795432510947-7c880d",
       "ts": "2026-11-23T11:15:10Z",
@@ -4645,6 +4636,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W12-CINWAS): inactive, cause=room_zero, remedy=raise_slack, posts_last_10m=0, market_volume_last_30m=10497. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795490856529-6d2f37",
+      "ts": "2026-11-24T03:27:36Z",
+      "book": "W12-CINWAS",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 5 unexplained\n- W12-CINWAS - Cincinnati by 15 or more has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- W12-CINWAS - Cincinnati by 1 to 6 has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- W12-CINWAS - Cincinnati by 7 to 14 has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- W12-CINWAS - Washington by 1 to 6 has had no resting orders for at least 131 min (reason unknown: no reason logged).\n- W12-CINWAS has no resting orders on any side for at least 131 min while it should be posting.\nBack: W12-CINWAS - Washington by 7 to 14 is posting again.",
       "severity": "warn"
     }
   ]
