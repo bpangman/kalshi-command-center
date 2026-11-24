@@ -1,124 +1,47 @@
 {
   "key": "W12-CINWAS",
-  "generated_at": "2026-11-24T01:11:35.698904Z",
+  "generated_at": "2026-11-24T01:13:01.821270Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:15pm CT. Worst line +$2.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line +$2.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "CIN by 15+",
-        "resting": "none",
-        "exposure": 2.41,
-        "exposure_text": "+$2",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-24T01:09:49Z"
-      },
-      {
-        "side": "WAS by 1-6",
-        "resting": "3 @ 15-17c",
-        "exposure": 2.41,
-        "exposure_text": "+$2",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-24T01:10:49Z"
-      },
-      {
-        "side": "WAS by 15+",
-        "resting": "6 @ 5-7c",
-        "exposure": 2.41,
-        "exposure_text": "+$2",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-24T01:10:49Z"
-      },
-      {
-        "side": "WAS by 7-14",
-        "resting": "2 @ 8-10c",
-        "exposure": 2.41,
-        "exposure_text": "+$2",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:15pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-24T01:10:48Z"
-      },
-      {
-        "side": "CIN by 1-6",
-        "resting": "5 @ 25-27c",
-        "exposure": 2.8,
-        "exposure_text": "+$3",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-24T01:10:49Z"
-      },
-      {
-        "side": "CIN by 7-14",
-        "resting": "2 @ 25-26c",
-        "exposure": 3.09,
-        "exposure_text": "+$3",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-24T01:10:49Z"
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:15pm CT. Sold 5,669, 18 resting. Worst line +$2 (goal -$150). Bot logged 1 loop error."
+          "In game (Ingame). Sold 5,669, 18 resting. Worst line +$2. Game 0% done. Bot logged 1 loop error."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line +$2 is better than -$150.",
-          "Batches used: 6 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line +$2; spent $22 of $100.",
-          "Kickoff 7:15pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-24T01:15:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "CIN by 1-6",
@@ -126,7 +49,7 @@
         "resting": 5.0,
         "target": null,
         "status": "even",
-        "price": 0.25
+        "price": null
       },
       {
         "label": "CIN by 7-14",
@@ -134,7 +57,7 @@
         "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.25
+        "price": null
       },
       {
         "label": "CIN by 15+",
@@ -150,7 +73,7 @@
         "resting": 3.0,
         "target": null,
         "status": "even",
-        "price": 0.15
+        "price": null
       },
       {
         "label": "WAS by 7-14",
@@ -158,7 +81,7 @@
         "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.08
+        "price": null
       },
       {
         "label": "WAS by 15+",
@@ -166,62 +89,21 @@
         "resting": 6.0,
         "target": null,
         "status": "even",
-        "price": 0.05
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W12-CINWAS",
-    "ts": "2026-11-24T01:11:13Z"
+    "ts": "2026-11-24T01:12:13Z"
   },
   "posts": [
-    {
-      "id": "1795349273741-4d2219",
-      "ts": "2026-11-22T12:07:53Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nWAS 1-6: +8 (+0.1% of bankroll)\nWAS 7-14: +8 (+0.1% of bankroll)\nWAS 15+: +8 (+0.1% of bankroll)\nCIN 1-6: +7 (+0.1% of bankroll)\nCIN 7-14: -24 (-0.2% of bankroll)\nCIN 15+: +8 (+0.1% of bankroll)\nCollected $8 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nWAS 1-6: 0 / 537\nWAS 7-14: 0 / 900\nWAS 15+: 0 / 650\nCIN 1-6: 1 / 600\nCIN 7-14: 32 / 569\nCIN 15+: 0 / 900\nPosted book 1.09 | Sold avg 1.085 | Worst now -147 | Cash free $2500\nAnchor age 0s | Last fill 25292s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795349348310-8d187c",
-      "ts": "2026-11-22T12:09:08Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,156 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795350254319-1bebfd",
-      "ts": "2026-11-22T12:24:14Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,156 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795351160386-e26b38",
-      "ts": "2026-11-22T12:39:20Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,156 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795352066228-0d14f5",
-      "ts": "2026-11-22T12:54:26Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,156 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795352911985-fd2a11",
       "ts": "2026-11-22T13:08:31Z",
@@ -3779,6 +3661,95 @@
       "text": "Balancing: sold 1 CIN by 1-6 at the bid 23c. Worst line +$2. Cost $0.02.",
       "severity": "info",
       "title": "Trickle"
+    },
+    {
+      "id": "1795482733526-4bf3f6",
+      "ts": "2026-11-24T01:12:12Z",
+      "book": "W12-CINWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line +2.41, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795482733526-5ccdd9",
+      "ts": "2026-11-24T01:11:09Z",
+      "book": "W12-CINWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 10: WAS by 7-14 x2 at 7c, WAS by 1-6 x2 at 14c, WAS by 15+ x2 at 4c, +4 more. Worst line +$2.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 10.0,
+        "fills": [
+          {
+            "side": "WAS by 7-14",
+            "price": 0.07,
+            "qty": 2.0
+          },
+          {
+            "side": "WAS by 1-6",
+            "price": 0.14,
+            "qty": 2.0
+          },
+          {
+            "side": "WAS by 15+",
+            "price": 0.04,
+            "qty": 2.0
+          },
+          {
+            "side": "CIN by 15+",
+            "price": 0.28,
+            "qty": 1.0
+          },
+          {
+            "side": "CIN by 15+",
+            "price": 0.29,
+            "qty": 1.0
+          },
+          {
+            "side": "CIN by 7-14",
+            "price": 0.22,
+            "qty": 1.0
+          },
+          {
+            "side": "CIN by 1-6",
+            "price": 0.23,
+            "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795482733530-41bcc6",
+      "ts": "2026-11-24T01:12:13Z",
+      "book": "W12-CINWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795482733530-6e3987",
+      "ts": "2026-11-24T01:12:13Z",
+      "book": "W12-CINWAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line +$2.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1795482757356-c2dcba",
+      "ts": "2026-11-24T01:12:37Z",
+      "book": "W12-CINWAS",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W12-CINWAS: 0 orders posted in 10 min while the market traded 24483 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4653,6 +4624,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: WAS 1-6 worst outcome -1\nIf the game ends... you make\nWAS 1-6: +2 (+0.0% of bankroll)\nWAS 7-14: +2 (+0.0% of bankroll)\nWAS 15+: +2 (+0.0% of bankroll)\nCIN 1-6: +3 (+0.0% of bankroll)\nCIN 7-14: +3 (+0.0% of bankroll)\nCIN 15+: +2 (+0.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795482732053-11658c",
+      "ts": "2026-11-24T01:12:12Z",
+      "book": "W12-CINWAS",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nWAS 1-6: +2 (+0.0% of bankroll)\nWAS 7-14: +2 (+0.0% of bankroll)\nWAS 15+: +2 (+0.0% of bankroll)\nCIN 1-6: +3 (+0.0% of bankroll)\nCIN 7-14: +3 (+0.0% of bankroll)\nCIN 15+: +2 (+0.0% of bankroll)",
       "severity": "warn"
     }
   ]
