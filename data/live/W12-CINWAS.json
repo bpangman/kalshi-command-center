@@ -1,10 +1,10 @@
 {
   "key": "W12-CINWAS",
-  "generated_at": "2026-11-24T00:27:42.420519Z",
+  "generated_at": "2026-11-24T00:29:07.843920Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:15pm CT. Worst line -$212, goal -$150.",
+    "headline": "Building toward kickoff 7:15pm CT. Worst line -$199, goal -$150.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "CIN by 1-6",
         "resting": "94 @ 25-27c",
-        "exposure": -212.42,
-        "exposure_text": "-$212",
+        "exposure": -198.53,
+        "exposure_text": "-$199",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:45pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "CIN by 15+",
         "resting": "37 @ 28-29c",
-        "exposure": -168.81,
-        "exposure_text": "-$169",
+        "exposure": -154.92,
+        "exposure_text": "-$155",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-24T00:55:00Z",
@@ -32,10 +32,23 @@
         "last_fill": "2026-11-23T22:06:21Z"
       },
       {
+        "side": "CIN by 7-14",
+        "resting": "364 @ 24-26c",
+        "exposure": 71.34,
+        "exposure_text": "+$71",
+        "move": "Step price down 1c (24c to 23c)",
+        "when": "if no fill by 6:38pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-24T00:38:45Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-24T00:28:45Z",
+        "lag_note": "Steps to 23c if no fill by 6:38pm CT."
+      },
+      {
         "side": "WAS by 7-14",
         "resting": "313 @ 8-10c",
-        "exposure": 101.19,
-        "exposure_text": "+$101",
+        "exposure": 115.08,
+        "exposure_text": "+$115",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-24T00:55:00Z",
@@ -45,23 +58,10 @@
         "lag_note": "Price 8c matches the crowd."
       },
       {
-        "side": "CIN by 7-14",
-        "resting": "422 @ 23-26c",
-        "exposure": 116.05,
-        "exposure_text": "+$116",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-24T00:55:00Z",
-        "stuck": false,
-        "also": "Also: price step",
-        "last_fill": "2026-11-24T00:26:04Z",
-        "lag_note": "Price 23c matches the crowd."
-      },
-      {
         "side": "WAS by 15+",
         "resting": "557 @ 5-7c",
-        "exposure": 345.19,
-        "exposure_text": "+$345",
+        "exposure": 359.08,
+        "exposure_text": "+$359",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-24T00:55:00Z",
@@ -73,8 +73,8 @@
       {
         "side": "WAS by 1-6",
         "resting": "352 @ 15-17c",
-        "exposure": 453.19,
-        "exposure_text": "+$453",
+        "exposure": 467.08,
+        "exposure_text": "+$467",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-24T00:55:00Z",
@@ -88,7 +88,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,753, 1,775 resting. Worst line -$212 (goal -$150). Bot logged 1 loop error."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,811, 1,717 resting. Worst line -$199 (goal -$150). Bot logged 1 loop error."
         ]
       },
       {
@@ -104,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$212).",
+          "Gate open: worst line -$199 is better than -$200.",
           "Batches used: 6 (max 3 per side)."
         ]
       },
@@ -152,11 +152,11 @@
       },
       {
         "label": "CIN by 7-14",
-        "held": 615.1,
-        "resting": 422.2,
+        "held": 673.7,
+        "resting": 363.6,
         "target": null,
         "status": "lagging",
-        "price": 0.23
+        "price": 0.24
       },
       {
         "label": "CIN by 15+",
@@ -192,29 +192,9 @@
       }
     ],
     "book": "W12-CINWAS",
-    "ts": "2026-11-24T00:27:02Z"
+    "ts": "2026-11-24T00:29:03Z"
   },
   "posts": [
-    {
-      "id": "1795321790050-045a28",
-      "ts": "2026-11-22T04:29:50Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,157 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795322696293-fd8b7d",
-      "ts": "2026-11-22T04:44:56Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,157 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795323602148-b99d27",
       "ts": "2026-11-22T05:00:02Z",
@@ -3753,6 +3733,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795480062948-22401b",
+      "ts": "2026-11-24T00:27:27Z",
+      "book": "W12-CINWAS",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: CIN by 7-14 at 23c (185 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795480143363-c90d60",
+      "ts": "2026-11-24T00:29:03Z",
+      "book": "W12-CINWAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$199, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -4547,6 +4547,24 @@
       "source": "bot",
       "text": "+101 on CIN 7-14 @ 0.23 (maker)\nworst outcome now -50\nheld 278/630/386/944/549/900\nIf the game ends... you make\nWAS 1-6: +438 (+4.0% of bankroll)\nWAS 7-14: +86 (+0.8% of bankroll)\nWAS 15+: +330 (+3.0% of bankroll)\nCIN 1-6: -228 (-2.1% of bankroll)\nCIN 7-14: +167 (+1.5% of bankroll)\nCIN 15+: -184 (-1.7% of bankroll)",
       "severity": "warn"
+    },
+    {
+      "id": "1795480130967-785a22",
+      "ts": "2026-11-24T00:28:50Z",
+      "book": "W12-CINWAS",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W12-CINWAS): loop_exceptions=1. Check the command center.",
+      "severity": "critical"
+    },
+    {
+      "id": "1795480130967-38e43d",
+      "ts": "2026-11-24T00:28:50Z",
+      "book": "W12-CINWAS",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W12-CINWAS): 1 order(s) with an unsafe price. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
