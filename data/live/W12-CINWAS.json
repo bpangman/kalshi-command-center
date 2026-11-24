@@ -1,6 +1,6 @@
 {
   "key": "W12-CINWAS",
-  "generated_at": "2026-11-24T00:05:27.559592Z",
+  "generated_at": "2026-11-24T00:07:14.863942Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -44,25 +44,29 @@
       },
       {
         "side": "CIN by 7-14",
-        "resting": "405 @ 24-26c",
+        "resting": "590 @ 23-26c",
         "exposure": 245.38,
         "exposure_text": "+$245",
         "move": "Paid balancing (trickle)",
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-24T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-23T21:37:46Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-23T21:37:46Z",
+        "lag_note": "Price 23c matches the crowd."
       },
       {
         "side": "WAS by 15+",
         "resting": "557 @ 6-7c",
         "exposure": 306.56,
         "exposure_text": "+$307",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 6:55pm CT, up to $100 in all",
-        "at": "2026-11-24T00:55:00Z",
+        "move": "Step price down 1c (6c to 5c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-24T00:06:57Z",
         "stuck": false,
-        "last_fill": "2026-11-23T23:51:54Z"
+        "also": "Also: paid balancing starts 6:55pm CT",
+        "last_fill": "2026-11-23T23:51:54Z",
+        "lag_note": "Steps to 5c at the next check."
       },
       {
         "side": "WAS by 1-6",
@@ -73,20 +77,25 @@
         "when": "starts 6:55pm CT, up to $100 in all",
         "at": "2026-11-24T00:55:00Z",
         "stuck": false,
-        "last_fill": "2026-11-23T21:58:13Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-23T21:58:13Z",
+        "lag_note": "Price 15c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:15pm CT. Sold 3,585, 1,715 resting. Worst line -$251 (goal -$150). Bot logged 1 loop error."
+          "Pregame build, kickoff 7:15pm CT. Sold 3,585, 1,900 resting. Worst line -$251 (goal -$150). Bot logged 1 loop error."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): CIN by 7-14, WAS by 1-6, WAS by 15+.",
+          "WAS by 1-6: 666 behind. Price 15c matches the crowd.",
+          "WAS by 15+: 558 behind. Steps to 5c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -142,10 +151,10 @@
       {
         "label": "CIN by 7-14",
         "held": 447.2,
-        "resting": 405.1,
+        "resting": 590.1,
         "target": null,
-        "status": "even",
-        "price": 0.24
+        "status": "lagging",
+        "price": 0.23
       },
       {
         "label": "CIN by 15+",
@@ -160,7 +169,7 @@
         "held": 278.0,
         "resting": 352.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.15
       },
       {
@@ -176,24 +185,14 @@
         "held": 386.0,
         "resting": 557.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.06
       }
     ],
     "book": "W12-CINWAS",
-    "ts": "2026-11-24T00:04:56Z"
+    "ts": "2026-11-24T00:06:57Z"
   },
   "posts": [
-    {
-      "id": "1795316342503-6a6045",
-      "ts": "2026-11-22T02:59:02Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,157 resting. Next: Even-done check, Mon 6:45pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795316627693-c64798",
       "ts": "2026-11-22T03:03:47Z",
@@ -3719,6 +3718,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795478756580-5327ff",
+      "ts": "2026-11-24T00:05:56Z",
+      "book": "W12-CINWAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$251, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
