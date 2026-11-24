@@ -1,6 +1,6 @@
 {
   "key": "W12-CINWAS",
-  "generated_at": "2026-11-24T00:44:58.050839Z",
+  "generated_at": "2026-11-24T00:46:20.761712Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -157.83,
         "exposure_text": "-$158",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 6:45pm CT",
+        "when": "no move planned until paid balancing starts at 6:55pm CT",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-23T23:13:36Z"
@@ -111,7 +111,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 6:55pm CT: worst line to -$150 by 7:10pm CT, up to $100.",
-          "At 6:45pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 7:15pm CT: the in-game engine takes over."
         ]
       },
@@ -123,11 +122,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-24T00:45:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-24T00:55:00Z",
         "label": "Paid balancing starts",
@@ -190,18 +184,9 @@
       }
     ],
     "book": "W12-CINWAS",
-    "ts": "2026-11-24T00:44:06Z"
+    "ts": "2026-11-24T00:46:07Z"
   },
   "posts": [
-    {
-      "id": "1795327487567-c8e353",
-      "ts": "2026-11-22T06:04:47Z",
-      "book": "W12-CINWAS",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nWAS 1-6: +8 (+0.1% of bankroll)\nWAS 7-14: +8 (+0.1% of bankroll)\nWAS 15+: +8 (+0.1% of bankroll)\nCIN 1-6: +7 (+0.1% of bankroll)\nCIN 7-14: -24 (-0.2% of bankroll)\nCIN 15+: +8 (+0.1% of bankroll)\nCollected $8 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nWAS 1-6: 0 / 537\nWAS 7-14: 0 / 900\nWAS 15+: 0 / 650\nCIN 1-6: 1 / 600\nCIN 7-14: 32 / 569\nCIN 15+: 0 / 900\nPosted book 1.09 | Sold avg 1.085 | Worst now -147 | Cash free $2500\nAnchor age 0s | Last fill 3505s ago",
-      "severity": "info"
-    },
     {
       "id": "1795327607193-b4ce82",
       "ts": "2026-11-22T06:06:47Z",
@@ -3764,6 +3749,16 @@
       "kind": "plan",
       "source": "narrator",
       "text": "Building toward kickoff 7:15pm CT. Worst line -$158, goal -$150. Next: Even-done check, 6:45pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795481167461-d06c56",
+      "ts": "2026-11-24T00:46:07Z",
+      "book": "W12-CINWAS",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:15pm CT. Worst line -$158, goal -$150. Next: Paid balancing starts, 6:55pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
     }
