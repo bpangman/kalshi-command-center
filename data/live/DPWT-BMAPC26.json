@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-24T04:17:33.698028Z",
+  "generated_at": "2026-11-24T04:19:00.232113Z",
   "plan": {
     "engine": "race",
     "phase": "Pre-race growth",
-    "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$365, final target $0.",
+    "headline": "Pre-race growth for the green flag Wed 11:00pm CT. Worst line -$363, final target $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 66,
+    "checks_every_s": 68,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pre-race growth, green flag Wed 11:00pm CT. Sold 29,435, 41,419 resting. Worst line -$365. Bot is slow (checks every 1m, set for 30s)."
+          "Pre-race growth, green flag Wed 11:00pm CT. Sold 29,706, 41,221 resting. Worst line -$363. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -64,7 +64,7 @@
     ],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-24T04:16:33Z"
+    "ts": "2026-11-24T04:18:34Z"
   },
   "posts": [
     {
@@ -2685,18 +2685,43 @@
       "source": "bot",
       "text": "If the race ends now, vs bankroll\nSam Bairstow: -363\nJoel Girrbach: -363\nMichael La Sasso: -363\nTommy Morrison: -363\nCarlos Ortiz: -353\nRoss Steelman: -341\nSudarshan Yellamaraju: -317\nJose Luis Ballester Barrio: -311\nall others (142) >= -303\nCollected $637 premium ($0 fees) | Paper margin over fair $37 (not realized until settlement)\nCore posted book 0.79 | Worst now -363 | Cash free $11066\nAnchor age 545s (source: bovada_golf)",
       "severity": "info"
+    },
+    {
+      "id": "1795493934719-69a8ca",
+      "ts": "2026-11-24T04:16:38Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 271: driver CSUR x271 at 0.9c. Worst line -$363.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 271.0,
+        "fills": [
+          {
+            "side": "driver CSUR",
+            "price": 0.009,
+            "qty": 271.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795493934719-b1afe9",
+      "ts": "2026-11-24T04:16:42Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 73 (golf add): driver CSUR x73 at 2c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 73.0,
+        "rows": 1
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1795457201113-0e8bca",
-      "ts": "2026-11-23T18:06:41Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1795457307469-73708e",
       "ts": "2026-11-23T18:08:27Z",
@@ -3586,6 +3611,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (DPWT-BMAPC26): 8 ladder(s) stale 10+ min: KXDPWORLDTOUR-BMAPC26-FCEL low 268c, KXDPWORLDTOUR-BMAPC26-NHOJ low 283c, KXDPWORLDTOUR-BMAPC26-KKOB low 287c, KXDPWORLDTOUR-BMAPC26-RLAN low 553c, KXDPWORLDTOUR-BMAPC26-DPUI low 450c, KXDPWORLDTOUR-BMAPC26-SSCO low 653c, KXDPWORLDTOUR-BMAPC26-CSUR low 367c, KXDPWORLDTOUR-BMAPC26-NVOK low 328c. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795493891056-3e3a48",
+      "ts": "2026-11-24T04:18:11Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 2 unexplained\n- DPWT-BMAPC26 - Adam Scott has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Joel Girrbach has had no resting orders for at least 71 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
