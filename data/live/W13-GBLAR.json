@@ -1,10 +1,10 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-24T16:05:25.847092Z",
+  "generated_at": "2026-11-24T16:06:49.732233Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff Wed 7:00pm CT. Worst line -$185, goal -$150.",
+    "headline": "Building toward kickoff Wed 7:00pm CT. Worst line -$184, goal -$150.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 60,
@@ -12,8 +12,8 @@
       {
         "side": "GB by 15+",
         "resting": "782 @ 9-11c",
-        "exposure": -184.98,
-        "exposure_text": "-$185",
+        "exposure": -184.1,
+        "exposure_text": "-$184",
         "move": "Holding",
         "when": "no move planned until the even-done check at Wed 6:30pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "GB by 7-14",
         "resting": "855 @ 16-17c",
-        "exposure": -11.09,
-        "exposure_text": "-$11",
+        "exposure": -10.21,
+        "exposure_text": "-$10",
         "move": "Paid balancing (trickle)",
         "when": "starts Wed 6:40pm CT, up to $100 in all",
         "at": "2026-11-26T00:40:00Z",
@@ -32,9 +32,20 @@
         "last_fill": "2026-11-23T03:42:08Z"
       },
       {
+        "side": "LAR by 1-6",
+        "resting": "302 @ 23-26c",
+        "exposure": 14.4,
+        "exposure_text": "+$14",
+        "move": "Paid balancing (trickle)",
+        "when": "starts Wed 6:40pm CT, up to $100 in all",
+        "at": "2026-11-26T00:40:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-24T16:05:04Z"
+      },
+      {
         "side": "GB by 1-6",
-        "resting": "564 @ 21-22c",
-        "exposure": 17.52,
+        "resting": "564 @ 20-22c",
+        "exposure": 18.4,
         "exposure_text": "+$18",
         "move": "Paid balancing (trickle)",
         "when": "starts Wed 6:40pm CT, up to $100 in all",
@@ -43,20 +54,9 @@
         "last_fill": "2026-11-23T05:32:07Z"
       },
       {
-        "side": "LAR by 1-6",
-        "resting": "306 @ 22-26c",
-        "exposure": 17.52,
-        "exposure_text": "+$18",
-        "move": "Paid balancing (trickle)",
-        "when": "starts Wed 6:40pm CT, up to $100 in all",
-        "at": "2026-11-26T00:40:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-24T12:49:43Z"
-      },
-      {
         "side": "LAR by 15+",
         "resting": "1,000 @ 18-22c",
-        "exposure": 33.52,
+        "exposure": 34.4,
         "exposure_text": "+$34",
         "move": "Paid balancing (trickle)",
         "when": "starts Wed 6:40pm CT, up to $100 in all",
@@ -66,7 +66,7 @@
       {
         "side": "LAR by 7-14",
         "resting": "583 @ 19-21c",
-        "exposure": 33.52,
+        "exposure": 34.4,
         "exposure_text": "+$34",
         "move": "Paid balancing (trickle)",
         "when": "starts Wed 6:40pm CT, up to $100 in all",
@@ -78,7 +78,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff Wed 7:00pm CT. Sold 295, 4,090 resting. Worst line -$185 (goal -$150). Bot logged 1 loop error."
+          "Pregame build, kickoff Wed 7:00pm CT. Sold 299, 4,086 resting. Worst line -$184 (goal -$150). Bot logged 1 loop error."
         ]
       },
       {
@@ -91,7 +91,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$185 is better than -$200.",
+          "Gate open: worst line -$184 is better than -$200.",
           "Batches used: 2 (max 3 per side)."
         ]
       },
@@ -155,11 +155,11 @@
       },
       {
         "label": "LAR by 1-6",
-        "held": 16.0,
-        "resting": 306.0,
+        "held": 20.0,
+        "resting": 302.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": 0.23
       },
       {
         "label": "LAR by 7-14",
@@ -179,7 +179,7 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-24T16:05:04Z"
+    "ts": "2026-11-24T16:06:05Z"
   },
   "posts": [
     {
@@ -2985,6 +2985,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-GBLAR): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795536382632-ad8629",
+      "ts": "2026-11-24T16:06:22Z",
+      "book": "W13-GBLAR",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+4 on LAR 1-6 @ 0.22 (maker)\nworst outcome now -248\nheld 20/0/0/16/45/218\nIf the game ends... you make\nLAR 1-6: +14 (+0.1% of bankroll)\nLAR 7-14: +34 (+0.3% of bankroll)\nLAR 15+: +34 (+0.3% of bankroll)\nGB 1-6: +18 (+0.2% of bankroll)\nGB 7-14: -10 (-0.1% of bankroll)\nGB 15+: -184 (-1.6% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
