@@ -1,6 +1,6 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-25T21:54:45.136523Z",
+  "generated_at": "2026-11-25T21:56:55.982239Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -73,7 +73,7 @@
         "exposure_text": "+$388",
         "move": "Step price down 1c (16c to 15c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-25T21:53:51Z",
+        "at": "2026-11-25T21:56:53Z",
         "stuck": false,
         "also": "Also: paid balancing starts 6:40pm CT",
         "lag_note": "Steps to 15c at the next check."
@@ -187,18 +187,9 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-25T21:53:51Z"
+    "ts": "2026-11-25T21:56:53Z"
   },
   "posts": [
-    {
-      "id": "1795460418550-6f169c",
-      "ts": "2026-11-23T19:00:18Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nLAR 1-6: +10 (+0.1% of bankroll)\nLAR 7-14: +10 (+0.1% of bankroll)\nLAR 15+: +10 (+0.1% of bankroll)\nGB 1-6: -6 (-0.1% of bankroll)\nGB 7-14: -34 (-0.3% of bankroll)\nGB 15+: +10 (+0.1% of bankroll)\nCollected $10 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nLAR 1-6: 0 / 322\nLAR 7-14: 0 / 564\nLAR 15+: 0 / 1000\nGB 1-6: 16 / 564\nGB 7-14: 45 / 855\nGB 15+: 0 / 1000\nPosted book 1.11 | Sold avg 1.090 | Worst now -250 | Cash free $2500\nAnchor age 0s | Last fill 48490s ago",
-      "severity": "info"
-    },
     {
       "id": "1795460729409-e544d3",
       "ts": "2026-11-23T19:05:29Z",
@@ -3482,18 +3473,18 @@
         "contracts": 534.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1795643746216-003289",
+      "ts": "2026-11-25T21:55:46Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "resistance_monitor",
+      "text": "W13-GBLAR book is not trading: no fills in the last hour while the crowd keeps trading (grew 2214). Check the bot.",
+      "severity": "warn"
     }
   ],
   "audits": [
-    {
-      "id": "1795533207811-89e60f",
-      "ts": "2026-11-24T15:13:27Z",
-      "book": "W13-GBLAR",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-GBLAR): 1 order(s) with an unsafe price. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795535033528-48e4cb",
       "ts": "2026-11-24T15:43:53Z",
@@ -4384,6 +4375,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-GBLAR): loop_exceptions=1. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795643708749-f767f7",
+      "ts": "2026-11-25T21:55:08Z",
+      "book": "W13-GBLAR",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W13-GBLAR): inactive, cause=unknown, remedy=none, posts_last_10m=1, market_volume_last_30m=2442. Check the command center.",
+      "severity": "warn"
     }
   ]
 }
