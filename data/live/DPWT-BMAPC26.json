@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-25T23:02:47.406728Z",
+  "generated_at": "2026-11-25T23:04:14.776695Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$89.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 73,759, 21,071 resting. Worst line -$89. Floor protocol off."
+          "In race (Ingame). Sold 73,759, 21,071 resting. Worst line -$89. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-25T23:02:42Z"
+    "ts": "2026-11-25T23:03:42Z"
   },
   "posts": [
-    {
-      "id": "1795504571677-a2287d",
-      "ts": "2026-11-24T07:14:05Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 529: driver LVAN x529 at 0.4c. Worst line -$264.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 529.0,
-        "fills": [
-          {
-            "side": "driver LVAN",
-            "price": 0.004,
-            "qty": 529.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795504757797-8a0a0e",
-      "ts": "2026-11-24T07:19:17Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nSam Bairstow: -264\nCam Davis: -264\nJoel Girrbach: -264\nMichael La Sasso: -264\nMarc Leishman: -264\nTommy Morrison: -264\nCarlos Ortiz: -264\nSandy Scott: -246\nall others (142) >= -242\nCollected $736 premium ($0 fees) | Paper margin over fair $65 (not realized until settlement)\nCore posted book 0.63 | Worst now -264 | Cash free $10979\nAnchor age 491s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1795504994405-226c23",
       "ts": "2026-11-24T07:21:13Z",
@@ -3793,27 +3764,29 @@
       "text": "In race (Ingame). Worst line -$89.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795647822418-f590d3",
+      "ts": "2026-11-25T23:03:26Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: driver MLEE.",
+      "severity": "info",
+      "title": "Price shock"
+    },
+    {
+      "id": "1795647822425-beb085",
+      "ts": "2026-11-25T23:03:42Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$89.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795625278973-f48900",
-      "ts": "2026-11-25T16:47:58Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (DPWT-BMAPC26): inactive, cause=feed_stale, remedy=kalshi_only_join, posts_last_10m=0, market_volume_last_30m=43901. Check the command center.",
-      "severity": "warn"
-    },
-    {
-      "id": "1795625362512-019184",
-      "ts": "2026-11-25T16:49:22Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 5 unexplained\n- DPWT-BMAPC26 - Jung-Hwan Lee has had no resting orders for at least 2805 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Kiradech Aphibarnrat has had no resting orders for at least 132 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Ryan Lumsden has had no resting orders for at least 2805 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Sam Bairstow has had no resting orders for at least 2318 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Wade Ormsby has had no resting orders for at least 2805 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1795625665639-a9851a",
       "ts": "2026-11-25T16:54:25Z",
@@ -4694,6 +4667,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: DPWT-BMAPC26 - Douglas Klein is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795647806470-3e4fb0",
+      "ts": "2026-11-25T23:03:26Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Min Woo Lee (+61%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795647806477-4699f7",
+      "ts": "2026-11-25T23:03:26Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+117 on Adam Bland @ 0.01 (maker)\nworst outcome now -89\nIf the race ends... you make\nByeong Hun An: -89\nSam Bairstow: -89\nEliot Baker: -89\nJose Luis Ballester Barrio: -89\nRafa Cabrera Bello: -89\nJohn Catlin: -89\nCam Davis: -89\nWenyi Ding: -89\nall others (144) >= -89",
       "severity": "warn"
     }
   ]
