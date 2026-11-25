@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T16:42:27.533484Z",
+  "generated_at": "2026-11-25T16:43:58.023816Z",
   "cash_free": 11269.11,
   "cash_by_shard": {
     "0": 11269.1,
@@ -24,11 +24,11 @@
       "ends_by_time": "2026-11-29T00:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-25T16:41:08Z",
+      "heartbeat_ts": "2026-11-25T16:42:57Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 61.7,
+      "heartbeat_age_s": 34.6,
       "heartbeat_stale_threshold_s": 300.0,
-      "anchor_age_s": 0.0,
+      "anchor_age_s": 62.7,
       "allocation_dollars": null,
       "allocation_note": null,
       "starting_bankroll": 11339.44,
@@ -51,8 +51,8 @@
       "worst_now": -140.3,
       "best_now": 859.7,
       "worst_all_resting": 85.96,
-      "market_implied_outcome_now": 61.68,
-      "market_implied_trend_15m": -0.0,
+      "market_implied_outcome_now": 61.72,
+      "market_implied_trend_15m": 0.04,
       "break_glass": {
         "locked_floor": -140.3,
         "cost": 0.0
@@ -199,7 +199,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0083,
           "market_yes_price": 0.012,
-          "implied_prob": 0.0099,
+          "implied_prob": 0.01,
           "outcome_now": -140.3,
           "win_pct": 1.1,
           "win_src": "mid",
@@ -294,7 +294,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0096,
           "market_yes_price": 0.012,
-          "implied_prob": 0.0099,
+          "implied_prob": 0.01,
           "outcome_now": -140.3,
           "win_pct": 1.1,
           "win_src": "mid",
@@ -332,7 +332,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0319,
           "market_yes_price": 0.033,
-          "implied_prob": 0.0273,
+          "implied_prob": 0.0274,
           "outcome_now": -140.3,
           "win_pct": 3.2,
           "win_src": "mid",
@@ -408,7 +408,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0185,
           "market_yes_price": 0.012,
-          "implied_prob": 0.0099,
+          "implied_prob": 0.01,
           "outcome_now": -140.3,
           "win_pct": 1.1,
           "win_src": "mid",
@@ -731,7 +731,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.04,
           "market_yes_price": 0.036,
-          "implied_prob": 0.0298,
+          "implied_prob": 0.0299,
           "outcome_now": -80.3,
           "win_pct": 3.5,
           "win_src": "mid",
@@ -996,13 +996,13 @@
           "held": 900.0,
           "resting": 0.0,
           "avg_sale_price": 0.0658,
-          "market_yes_price": 0.067,
-          "implied_prob": 0.0555,
+          "market_yes_price": 0.066,
+          "implied_prob": 0.0547,
           "outcome_now": -40.3,
           "win_pct": 6.6,
           "win_src": "mid",
           "settled": null,
-          "crowd_ask": 0.067,
+          "crowd_ask": 0.066,
           "our_ask": null,
           "our_ask_state": null,
           "our_planned_ask": null,
@@ -1035,7 +1035,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0747,
           "market_yes_price": 0.088,
-          "implied_prob": 0.0729,
+          "implied_prob": 0.073,
           "outcome_now": -40.3,
           "win_pct": 8.8,
           "win_src": "mid",
@@ -1054,7 +1054,7 @@
           "resting": 100.0,
           "avg_sale_price": 0.0264,
           "market_yes_price": 0.036,
-          "implied_prob": 0.0298,
+          "implied_prob": 0.0299,
           "outcome_now": -40.3,
           "win_pct": 3.6,
           "win_src": "mid",
@@ -1073,7 +1073,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0821,
           "market_yes_price": 0.099,
-          "implied_prob": 0.082,
+          "implied_prob": 0.0821,
           "outcome_now": -40.3,
           "win_pct": 9.8,
           "win_src": "mid",
@@ -1111,7 +1111,7 @@
           "resting": 0.0,
           "avg_sale_price": 0.0401,
           "market_yes_price": 0.036,
-          "implied_prob": 0.0298,
+          "implied_prob": 0.0299,
           "outcome_now": -0.3,
           "win_pct": 3.5,
           "win_src": "mid",
@@ -3072,13 +3072,15 @@
       },
       "activity": {
         "is_live": true,
-        "market_volume_last_30m": 43154.81,
+        "market_volume_last_30m": 40877.27,
         "posts_last_10m": 0,
         "fills_last_30m": 167.0,
         "resting_contracts": 22934.59,
         "inactive": true,
-        "cause": "unknown",
-        "remedy": null
+        "cause": "feed_stale",
+        "remedy": {
+          "action": "kalshi_only_join"
+        }
       },
       "floor_mode": {
         "active": false,
@@ -3087,18 +3089,18 @@
       "coverage": null,
       "coverage_glide_floor": 0.983,
       "coverage_on_glide": false,
-      "coverage_glide_f": 0.865,
-      "posted_book_sum": 2.256,
+      "coverage_glide_f": 0.866,
+      "posted_book_sum": 2.255,
       "posted_book_sum_outcomes": 152,
       "posted_book_sum_resting_outcomes": 33,
-      "crowd_book_sum": 1.208,
+      "crowd_book_sum": 1.207,
       "crowd_book_sum_outcomes": 152,
-      "my_book_sum": 2.257,
+      "my_book_sum": 2.256,
       "my_book_sum_outcomes": 33,
       "my_vig_on_schedule": null,
       "my_vig_scheduled_sum": null,
       "my_vig_scheduled_outcomes": 0,
-      "vig_clock_f": 0.865,
+      "vig_clock_f": 0.866,
       "vig_clock_sport": "golf_dpwt",
       "livefair": null,
       "game_clock": null
@@ -3114,13 +3116,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-23T19:01:46.136788Z",
-      "start_time": "2026-11-26T18:00:02.190355Z",
+      "start_time": "2026-11-26T18:00:05.726935Z",
       "ends_by_time": "2026-11-26T21:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-25T16:41:50Z",
+      "heartbeat_ts": "2026-11-25T16:42:56Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 19.7,
+      "heartbeat_age_s": 35.6,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -3146,10 +3148,10 @@
       "best_now": 308.04,
       "worst_all_resting": -70.33,
       "market_implied_outcome_now": 3.31,
-      "market_implied_trend_15m": -4.48,
+      "market_implied_trend_15m": -5.61,
       "break_glass": {
-        "locked_floor": -1101.75,
-        "cost": 1209.79
+        "locked_floor": -942.73,
+        "cost": 1050.77
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -3392,7 +3394,7 @@
       },
       "activity": {
         "is_live": false,
-        "market_volume_last_30m": 23.0,
+        "market_volume_last_30m": 6.0,
         "posts_last_10m": 0,
         "fills_last_30m": 0.0,
         "resting_contracts": 2237.67,
@@ -3456,12 +3458,12 @@
             "p_home": 0.4739,
             "spread_home": 1.5,
             "total": 55.5,
-            "ts": 1795624836.177493
+            "ts": 1795624970.2730649
           },
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 322,
+            "unchanged_s": 384,
             "need_s": 900.0,
             "moved": {
               "bovada": 0.0,
@@ -3475,7 +3477,7 @@
             "spread_home": 1.5,
             "total": 55.5,
             "injury_rows": 10,
-            "ts": 1795624648.5131578
+            "ts": 1795624970.2730649
           }
         },
         "backup_active": false,
@@ -3497,13 +3499,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-24T20:57:25.025850Z",
-      "start_time": "2026-11-27T20:00:21.433686Z",
+      "start_time": "2026-11-27T20:00:07.035269Z",
       "ends_by_time": "2026-11-27T23:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-25T16:41:39Z",
+      "heartbeat_ts": "2026-11-25T16:42:47Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 30.7,
+      "heartbeat_age_s": 44.6,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -3528,11 +3530,11 @@
       "worst_now": -10.26,
       "best_now": 9.74,
       "worst_all_resting": 35.04,
-      "market_implied_outcome_now": 0.33,
-      "market_implied_trend_15m": -0.2,
+      "market_implied_outcome_now": 0.26,
+      "market_implied_trend_15m": -0.1,
       "break_glass": {
-        "locked_floor": -88999.2,
-        "cost": -368.06
+        "locked_floor": -89135.36,
+        "cost": -231.9
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -3545,7 +3547,7 @@
           "market_yes_price": 0.23,
           "implied_prob": 0.2347,
           "outcome_now": -10.26,
-          "win_pct": 19.0,
+          "win_pct": 19.5,
           "win_src": "mid",
           "settled": null,
           "crowd_ask": 0.23,
@@ -3654,7 +3656,7 @@
       "leaders": [
         {
           "label": "Denver Broncos wins by 1-6",
-          "win_pct": 19.0
+          "win_pct": 19.5
         },
         {
           "label": "Denver Broncos wins by 7-14",
@@ -3787,7 +3789,7 @@
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 2091,
+            "unchanged_s": 2173,
             "need_s": 900.0,
             "moved": {
               "bovada": 0.0064,
@@ -3830,13 +3832,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-23T02:01:18.384419Z",
-      "start_time": "2026-11-26T01:00:36.232524Z",
+      "start_time": "2026-11-26T01:00:02.600083Z",
       "ends_by_time": "2026-11-26T04:00:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-25T16:41:28Z",
+      "heartbeat_ts": "2026-11-25T16:42:31Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 41.7,
+      "heartbeat_age_s": 60.6,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -4136,7 +4138,7 @@
         },
         "banked_margin_dollars": 26.06,
         "cap_phase": "taper",
-        "cap_mult": 2.509,
+        "cap_mult": 2.506,
         "v2": {
           "strategy": "v2",
           "sport": "nfl_primetime",
@@ -4171,7 +4173,7 @@
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 9513,
+            "unchanged_s": 9610,
             "need_s": 900.0,
             "moved": {
               "bovada": 0.0147,
@@ -4184,7 +4186,7 @@
             "p_home": 0.5711,
             "spread_home": -2.5,
             "total": 43.5,
-            "ts": 1795624789.286478
+            "ts": 1795624948.3999171
           },
           "espn": {
             "spread_home": -2.5,
@@ -4212,13 +4214,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-24T02:02:59.781324Z",
-      "start_time": "2026-11-27T01:20:01.618899Z",
+      "start_time": "2026-11-27T01:20:01.462434Z",
       "ends_by_time": "2026-11-27T04:20:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-25T16:41:12Z",
+      "heartbeat_ts": "2026-11-25T16:43:17Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 57.7,
+      "heartbeat_age_s": 14.6,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -4555,12 +4557,12 @@
             "p_home": 0.5746,
             "spread_home": -2.5,
             "total": 46.5,
-            "ts": 1795624807.99901
+            "ts": 1795624932.565656
           },
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 86948,
+            "unchanged_s": 87073,
             "need_s": 900.0,
             "moved": {
               "bovada": -0.0052,
@@ -4574,7 +4576,7 @@
             "spread_home": -3.0,
             "total": 46.5,
             "injury_rows": 10,
-            "ts": 1795624683.01087
+            "ts": 1795624995.537566
           },
           "rises": 1
         },
@@ -4597,13 +4599,13 @@
       "liveness_reason": "trading",
       "awaiting_info": null,
       "first_posted_time": "2026-11-23T22:02:25.639722Z",
-      "start_time": "2026-11-26T21:30:22.460672Z",
+      "start_time": "2026-11-26T21:30:01.835521Z",
       "ends_by_time": "2026-11-27T00:30:00Z",
       "ends_by_time_approx": true,
       "in_play": false,
-      "heartbeat_ts": "2026-11-25T16:41:27Z",
+      "heartbeat_ts": "2026-11-25T16:42:29Z",
       "heartbeat_ok": true,
-      "heartbeat_age_s": 42.7,
+      "heartbeat_age_s": 62.6,
       "heartbeat_stale_threshold_s": 300.0,
       "anchor_age_s": 0.0,
       "allocation_dollars": 2500.0,
@@ -4628,11 +4630,11 @@
       "worst_now": -114.48,
       "best_now": 15.35,
       "worst_all_resting": -9.7,
-      "market_implied_outcome_now": 1.38,
-      "market_implied_trend_15m": -1.19,
+      "market_implied_outcome_now": 1.3,
+      "market_implied_trend_15m": -1.27,
       "break_glass": {
-        "locked_floor": -275.4,
-        "cost": 222.0
+        "locked_floor": -211.88,
+        "cost": 158.48
       },
       "is_deci_cent": false,
       "outcomes": [
@@ -4740,7 +4742,7 @@
           "market_yes_price": 0.03,
           "implied_prob": 0.03,
           "outcome_now": 15.35,
-          "win_pct": 2.0,
+          "win_pct": 1.5,
           "win_src": "mid",
           "settled": null,
           "crowd_ask": 0.03,
@@ -4872,7 +4874,7 @@
           "stale": {
             "stale": false,
             "was": false,
-            "unchanged_s": 14285,
+            "unchanged_s": 14368,
             "need_s": 900.0,
             "moved": {
               "bovada": 0.0,
