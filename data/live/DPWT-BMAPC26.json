@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-25T23:11:58.939625Z",
+  "generated_at": "2026-11-25T23:13:48.072105Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line -$82.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 76,581, 21,071 resting. Worst line -$82. Floor protocol off."
+          "In race (Ingame). Sold 76,581, 21,071 resting. Worst line -$82. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,38 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-25T23:11:45Z"
+    "ts": "2026-11-25T23:13:45Z"
   },
   "posts": [
-    {
-      "id": "1795510308480-200077",
-      "ts": "2026-11-24T08:51:48Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 32,736 resting. Next: Risk glide starts, Wed 7:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795511214617-db7a4a",
-      "ts": "2026-11-24T09:06:54Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 32,736 resting. Next: Risk glide starts, Wed 7:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795512103083-045a8d",
-      "ts": "2026-11-24T09:21:43Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nSam Bairstow: -264\nCam Davis: -264\nJoel Girrbach: -264\nMichael La Sasso: -264\nMarc Leishman: -264\nTommy Morrison: -264\nCarlos Ortiz: -264\nSandy Scott: -246\nall others (142) >= -242\nCollected $736 premium ($0 fees) | Paper margin over fair $60 (not realized until settlement)\nCore posted book 0.64 | Worst now -264 | Cash free $10844\nAnchor age 0s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1795512121723-885ce6",
       "ts": "2026-11-24T09:22:01Z",
@@ -3810,18 +3781,53 @@
       "text": "In race (Ingame). Worst line -$82.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795648385547-c2ea73",
+      "ts": "2026-11-25T23:10:54Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 182: driver RLAN x182 at 0.9c. Worst line -$82.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 182.0,
+        "fills": [
+          {
+            "side": "driver RLAN",
+            "price": 0.009,
+            "qty": 182.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795648385548-6b0cb3",
+      "ts": "2026-11-25T23:10:54Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 45 (race floor first): driver CMCD x45 at 1c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 45.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1795648425720-e22824",
+      "ts": "2026-11-25T23:13:45Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line -$82.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795625968572-3b416c",
-      "ts": "2026-11-25T16:59:28Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 6 unexplained\n- DPWT-BMAPC26 - Brandon Stone has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Connor Syme has had no resting orders for at least 678 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Eddie Pepperell has had no resting orders for at least 132 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Marcus Helligkilde has had no resting orders for at least 860 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Marc Leishman has had no resting orders for at least 2075 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Sandy Scott has had no resting orders for at least 2196 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1795626271482-0780bd",
       "ts": "2026-11-25T17:04:31Z",
@@ -4711,6 +4717,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: DPWT-BMAPC26 - Louis Dobbelaar is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795648325384-79d948",
+      "ts": "2026-11-25T23:12:05Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (DPWT-BMAPC26): 70 ladder(s) stale 10+ min: KXDPWORLDTOUR-BMAPC26-JARM low 871c, KXDPWORLDTOUR-BMAPC26-LAYL low 871c, KXDPWORLDTOUR-BMAPC26-NBAR low 871c, KXDPWORLDTOUR-BMAPC26-LBAR low 872c, KXDPWORLDTOUR-BMAPC26-PBEA low 906c, KXDPWORLDTOUR-BMAPC26-OBEK low 872c, KXDPWORLDTOUR-BMAPC26-ABLA low 786c, KXDPWORLDTOUR-BMAPC26-WBRU low 871c, KXDPWORLDTOUR-BMAPC26-JBUC low 871c, KXDPWORLDTOUR-BMAPC26-ACAM low 872c, KXDPWORLDTOUR-BMAPC26-PCAM low 874c, KXDPWORLDTOUR-BMAPC26-ICAN low 803c, KXDPWORLDTOUR-BMAPC26-BCOL low 871c, KXDPWORLDTOUR-BMAPC26-JCON low 871c, KXDPWORLDTOUR-BMAPC26-CCRA low 874c, KXDPWORLDTOUR-BMAPC26-MCRI low 900c, KXDPWORLDTOUR-BMAPC26-HCRO low 876c, KXDPWORLDTOUR-BMAPC26-JDOU low 871c, KXDPWORLDTOUR-BMAPC26-JEDW low 871c, KXDPWORLDTOUR-BMAPC26-WENE low 871c, KXDPWORLDTOUR-BMAPC26-WFLO low 871c, KXDPWORLDTOUR-BMAPC26-JGEA low 871c, KXDPWORLDTOUR-BMAPC26-MGIB low 871c, KXDPWORLDTOUR-BMAPC26-TGIR low 871c, KXDPWORLDTOUR-BMAPC26-RGOU low 874c, KXDPWORLDTOUR-BMAPC26-MGRI low 871c, KXDPWORLDTOUR-BMAPC26-OGUI low 221c, KXDPWORLDTOUR-BMAPC26-CHAR low 871c, KXDPWORLDTOUR-BMAPC26-MHEN low 871c, KXDPWORLDTOUR-BMAPC26-BHEN low 874c, KXDPWORLDTOUR-BMAPC26-JHOD low 871c, KXDPWORLDTOUR-BMAPC26-JHON low 872c, KXDPWORLDTOUR-BMAPC26-RLAN low 131c, KXDPWORLDTOUR-BMAPC26-JLEE low 587c, KXDPWORLDTOUR-BMAPC26-PLON low 871c, KXDPWORLDTOUR-BMAPC26-HLOU low 874c, KXDPWORLDTOUR-BMAPC26-RLUM low 872c, KXDPWORLDTOUR-BMAPC26-MMAG low 869c, KXDPWORLDTOUR-BMAPC26-JMAR low 905c, KXDPWORLDTOUR-BMAPC26-AMAR low 871c, KXDPWORLDTOUR-BMAPC26-CMCK low 789c, KXDPWORLDTOUR-BMAPC26-JMCL low 690c, KXDPWORLDTOUR-BMAPC26-RMIN low 871c, KXDPWORLDTOUR-BMAPC26-JMUR low 36c, KXDPWORLDTOUR-BMAPC26-ZMUR low 871c, KXDPWORLDTOUR-BMAPC26-LNOL low 873c, KXDPWORLDTOUR-BMAPC26-DNYF low 901c, KXDPWORLDTOUR-BMAPC26-GOGI low 872c, KXDPWORLDTOUR-BMAPC26-WORM low 868c, KXDPWORLDTOUR-BMAPC26-RPEA low 871c, KXDPWORLDTOUR-BMAPC26-JPRE low 871c, KXDPWORLDTOUR-BMAPC26-TPUL low 902c, KXDPWORLDTOUR-BMAP",
       "severity": "warn"
     }
   ]
