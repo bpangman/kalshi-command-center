@@ -1,6 +1,6 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T16:23:28.604448Z",
+  "generated_at": "2026-11-26T16:24:52.555673Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -55,7 +55,7 @@
       },
       {
         "side": "DAL by 1-6",
-        "resting": "587 @ 21-23c",
+        "resting": "59 @ 21-23c",
         "exposure": 184.53,
         "exposure_text": "+$185",
         "move": "Paid balancing (trickle)",
@@ -79,7 +79,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:30pm CT. Sold 1,104, 2,356 resting. Worst line -$377 (goal -$150)."
+          "Pregame build, kickoff 3:30pm CT. Sold 1,104, 2,094 resting. Worst line -$377 (goal -$150)."
         ]
       },
       {
@@ -149,7 +149,7 @@
       {
         "label": "DAL by 15+",
         "held": 227.0,
-        "resting": 337.0,
+        "resting": 75.0,
         "target": null,
         "status": "even",
         "price": 0.35
@@ -180,29 +180,9 @@
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T16:23:24Z"
+    "ts": "2026-11-26T16:24:25Z"
   },
   "posts": [
-    {
-      "id": "1795509119994-246409",
-      "ts": "2026-11-24T08:31:59Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,230 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795510026424-2060d7",
-      "ts": "2026-11-24T08:47:06Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,230 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795510681926-a855a0",
       "ts": "2026-11-24T08:58:01Z",
@@ -3249,6 +3229,36 @@
       "text": "Kalshi refused a post on PHI by 7-14 (80 at 9c): Kalshi API error 403 on POST /portfolio/events/orders/batche.",
       "severity": "warn",
       "title": "Post refused"
+    },
+    {
+      "id": "1795710224810-02d62c",
+      "ts": "2026-11-26T16:23:34Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Kalshi refused a post on DAL by 1-6 (528 at 20c): Kalshi API error 403 on POST /portfolio/events/orders/batche.",
+      "severity": "warn",
+      "title": "Post refused"
+    },
+    {
+      "id": "1795710285332-e972b9",
+      "ts": "2026-11-26T16:22:30Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 265: DAL by 7-14 x265 at 26c. Worst line -$372.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 265.0,
+        "fills": [
+          {
+            "side": "DAL by 7-14",
+            "price": 0.26,
+            "qty": 265.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3475,6 +3485,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-PHIDAL): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=4088. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795710213612-77dfe6",
+      "ts": "2026-11-26T16:23:33Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+265 on DAL 7-14 @ 0.26 (maker)\nworst outcome now -83\nheld 9/282/227/16/570/0\nIf the game ends... you make\nDAL 1-6: +185 (+1.7% of bankroll)\nDAL 7-14: -88 (-0.8% of bankroll)\nDAL 15+: -34 (-0.3% of bankroll)\nPHI 1-6: +177 (+1.7% of bankroll)\nPHI 7-14: -377 (-3.5% of bankroll)\nPHI 15+: +193 (+1.8% of bankroll)",
       "severity": "warn"
     }
   ]
