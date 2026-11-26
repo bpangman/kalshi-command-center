@@ -1,10 +1,10 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T18:48:29.591371Z",
+  "generated_at": "2026-11-26T18:50:36.120735Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 3:30pm CT. Worst line -$350, goal -$150.",
+    "headline": "Building toward kickoff 3:30pm CT. Worst line -$347, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "PHI by 7-14",
         "resting": "103 @ 8-9c",
-        "exposure": -350.39,
-        "exposure_text": "-$350",
+        "exposure": -346.79,
+        "exposure_text": "-$347",
         "move": "Holding",
         "when": "no move planned until the even-done check at 3:00pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "DAL by 7-14",
         "resting": "315 @ 27-29c",
-        "exposure": -92.39,
-        "exposure_text": "-$92",
+        "exposure": -88.79,
+        "exposure_text": "-$89",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:10pm CT, up to $100 in all",
         "at": "2026-11-26T21:10:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "DAL by 15+",
         "resting": "673 @ 33-38c",
-        "exposure": -7.39,
-        "exposure_text": "-$7",
+        "exposure": -3.79,
+        "exposure_text": "-$4",
         "move": "Hold price at 33c",
         "when": "crowd pays 33.4c; steps down 1c only if it trades lower",
         "at": null,
@@ -45,10 +45,23 @@
         "lag_note": "Price 33c matches the crowd."
       },
       {
+        "side": "PHI by 15+",
+        "resting": "530 @ 3-6c",
+        "exposure": 103.21,
+        "exposure_text": "+$103",
+        "move": "Step price down 1c (3c to 2c)",
+        "when": "if no fill by 12:58pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-26T18:58:36Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts 3:10pm CT",
+        "last_fill": "2026-11-26T18:48:36Z",
+        "lag_note": "Steps to 2c if no fill by 12:58pm CT."
+      },
+      {
         "side": "DAL by 1-6",
         "resting": "736 @ 19-23c",
-        "exposure": 138.39,
-        "exposure_text": "+$138",
+        "exposure": 141.99,
+        "exposure_text": "+$142",
         "move": "Hold price at 19c",
         "when": "crowd pays 19.8c; steps down 1c only if it trades lower",
         "at": null,
@@ -60,8 +73,8 @@
       {
         "side": "PHI by 1-6",
         "resting": "675 @ 11-14c",
-        "exposure": 160.83,
-        "exposure_text": "+$161",
+        "exposure": 164.43,
+        "exposure_text": "+$164",
         "move": "Hold price at 11c",
         "when": "crowd pays 12c; steps down 1c only if it trades lower",
         "at": null,
@@ -69,33 +82,21 @@
         "also": "Also: paid balancing starts 3:10pm CT",
         "last_fill": "2026-11-26T18:40:33Z",
         "lag_note": "Price 11c matches the crowd."
-      },
-      {
-        "side": "PHI by 15+",
-        "resting": "650 @ 3-6c",
-        "exposure": 219.61,
-        "exposure_text": "+$220",
-        "move": "Step price down 1c (3c to 2c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-26T18:48:16Z",
-        "stuck": false,
-        "also": "Also: paid balancing starts 3:10pm CT",
-        "lag_note": "Steps to 2c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:30pm CT. Sold 1,249, 3,152 resting. Worst line -$350 (goal -$150)."
+          "Pregame build, kickoff 3:30pm CT. Sold 1,369, 3,032 resting. Worst line -$347 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): DAL by 1-6, DAL by 15+, PHI by 1-6, PHI by 15+.",
-          "PHI by 15+: 570 behind. Steps to 2c at the next check.",
           "PHI by 1-6: 511 behind. Price 11c matches the crowd.",
+          "DAL by 1-6: 489 behind. Price 19c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -103,7 +104,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$350).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$347).",
           "Batches used: 3 (max 3 per side)."
         ]
       },
@@ -183,27 +184,17 @@
       },
       {
         "label": "PHI by 15+",
-        "held": 0.0,
-        "resting": 650.0,
+        "held": 120.0,
+        "resting": 530.0,
         "target": null,
         "status": "lagging",
         "price": 0.03
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T18:48:16Z"
+    "ts": "2026-11-26T18:50:17Z"
   },
   "posts": [
-    {
-      "id": "1795535781804-feeda5",
-      "ts": "2026-11-24T15:56:21Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,264 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795536039598-d7bf29",
       "ts": "2026-11-24T16:00:39Z",
@@ -3322,6 +3313,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795718937121-6f6956",
+      "ts": "2026-11-26T18:48:43Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Fast fill on lagging PHI by 15+: 120 of 442 sold, re-posted at the same price.",
+      "severity": "info",
+      "title": "Reprice"
     }
   ],
   "audits": [
