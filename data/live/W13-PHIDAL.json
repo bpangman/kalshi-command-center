@@ -1,10 +1,10 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T20:46:51.324556Z",
+  "generated_at": "2026-11-26T20:48:14.963638Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 3:30pm CT. Worst line -$202, goal -$150.",
+    "headline": "Building toward kickoff 3:30pm CT. Worst line -$197, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -12,8 +12,8 @@
       {
         "side": "DAL by 1-6",
         "resting": "182 @ 20-23c",
-        "exposure": -201.84,
-        "exposure_text": "-$202",
+        "exposure": -196.67,
+        "exposure_text": "-$197",
         "move": "Holding",
         "when": "no move planned until the even-done check at 3:00pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "PHI by 7-14",
         "resting": "181 @ 7-9c",
-        "exposure": -177.09,
-        "exposure_text": "-$177",
+        "exposure": -171.92,
+        "exposure_text": "-$172",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:10pm CT, up to $100 in all",
         "at": "2026-11-26T21:10:00Z",
@@ -34,8 +34,8 @@
       {
         "side": "PHI by 15+",
         "resting": "151 @ 3-6c",
-        "exposure": -106.51,
-        "exposure_text": "-$107",
+        "exposure": -101.34,
+        "exposure_text": "-$101",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:10pm CT, up to $100 in all",
         "at": "2026-11-26T21:10:00Z",
@@ -44,22 +44,22 @@
       },
       {
         "side": "DAL by 15+",
-        "resting": "458 @ 34-38c",
-        "exposure": 51.24,
-        "exposure_text": "+$51",
+        "resting": "443 @ 34-38c",
+        "exposure": 41.21,
+        "exposure_text": "+$41",
         "move": "Step price down 1c (34c to 33c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-26T20:46:51Z",
+        "when": "if no fill by 2:56pm CT (FILLFAIR: 10 min with no fill)",
+        "at": "2026-11-26T20:56:48Z",
         "stuck": false,
         "also": "Also: paid balancing starts 3:10pm CT",
-        "last_fill": "2026-11-26T20:22:39Z",
-        "lag_note": "Steps to 33c at the next check."
+        "last_fill": "2026-11-26T20:46:48Z",
+        "lag_note": "Steps to 33c if no fill by 2:56pm CT."
       },
       {
         "side": "DAL by 7-14",
         "resting": "315 @ 26-29c",
-        "exposure": 80.91,
-        "exposure_text": "+$81",
+        "exposure": 86.08,
+        "exposure_text": "+$86",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:10pm CT, up to $100 in all",
         "at": "2026-11-26T21:10:00Z",
@@ -71,8 +71,8 @@
       {
         "side": "PHI by 1-6",
         "resting": "480 @ 12-14c",
-        "exposure": 134.91,
-        "exposure_text": "+$135",
+        "exposure": 140.08,
+        "exposure_text": "+$140",
         "move": "Paid balancing (trickle)",
         "when": "starts 3:10pm CT, up to $100 in all",
         "at": "2026-11-26T21:10:00Z",
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 3:30pm CT. Sold 2,576, 1,769 resting. Worst line -$202 (goal -$150)."
+          "Pregame build, kickoff 3:30pm CT. Sold 2,591, 1,752 resting. Worst line -$197 (goal -$150)."
         ]
       },
       {
@@ -102,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$202).",
+          "Gate open: worst line -$197 is better than -$200.",
           "Batches used: 8 (max 3 per side)."
         ]
       },
@@ -143,7 +143,7 @@
       {
         "label": "DAL by 1-6",
         "held": 594.8,
-        "resting": 183.0,
+        "resting": 182.0,
         "target": null,
         "status": "even",
         "price": 0.2
@@ -158,8 +158,8 @@
       },
       {
         "label": "DAL by 15+",
-        "held": 341.7,
-        "resting": 458.3,
+        "held": 356.9,
+        "resting": 443.1,
         "target": null,
         "status": "lagging",
         "price": 0.34
@@ -175,7 +175,7 @@
       {
         "label": "PHI by 7-14",
         "held": 570.0,
-        "resting": 182.0,
+        "resting": 181.0,
         "target": null,
         "status": "even",
         "price": 0.07
@@ -190,28 +190,9 @@
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T20:46:51Z"
+    "ts": "2026-11-26T20:47:51Z"
   },
   "posts": [
-    {
-      "id": "1795568396161-825a0f",
-      "ts": "2026-11-25T00:59:56Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795568769698-7e52ef",
-      "ts": "2026-11-25T01:06:09Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDAL 1-6: +7 (+0.1% of bankroll)\nDAL 7-14: -2 (-0.0% of bankroll)\nDAL 15+: +15 (+0.1% of bankroll)\nPHI 1-6: +15 (+0.1% of bankroll)\nPHI 7-14: -114 (-1.1% of bankroll)\nPHI 15+: +15 (+0.1% of bankroll)\nCollected $15 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nDAL 1-6: 9 / 587\nDAL 7-14: 17 / 610\nDAL 15+: 0 / 682\nPHI 1-6: 0 / 534\nPHI 7-14: 130 / 353\nPHI 15+: 0 / 489\nPosted book 1.10 | Sold avg 1.066 | Worst now -10 | Cash free $2500\nAnchor age 0s | Last fill 24967s ago",
-      "severity": "info"
-    },
     {
       "id": "1795569302038-f69d8e",
       "ts": "2026-11-25T01:15:02Z",
@@ -3515,6 +3496,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795726071685-824027",
+      "ts": "2026-11-26T20:47:51Z",
+      "book": "W13-PHIDAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 3:30pm CT. Worst line -$197, goal -$150. Next: Even-done check, 3:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795726091772-729f97",
+      "ts": "2026-11-26T20:47:57Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DAL by 15+ at 34c (136 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
@@ -4048,6 +4049,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-PHIDAL): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795726077308-1033c7",
+      "ts": "2026-11-26T20:47:57Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+37 on DAL 15+ @ 0.34 (maker)\nworst outcome now -40\nheld 595/312/379/258/570/499\nIf the game ends... you make\nDAL 1-6: -189 (-1.8% of bankroll)\nDAL 7-14: +94 (+0.9% of bankroll)\nDAL 15+: +27 (+0.2% of bankroll)\nPHI 1-6: +148 (+1.4% of bankroll)\nPHI 7-14: -164 (-1.5% of bankroll)\nPHI 15+: -94 (-0.9% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
