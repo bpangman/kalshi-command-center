@@ -1,6 +1,6 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T13:04:54.732825Z",
+  "generated_at": "2026-11-26T13:06:17.814156Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 94,384, ? resting. Worst line +$26. Floor protocol off. Bot is slow (checks every 49s, set for 30s)."
+          "In race (Ingame). Sold 94,384, ? resting. Worst line +$26. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,48 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T13:04:49Z"
+    "ts": "2026-11-26T13:05:49Z"
   },
   "posts": [
-    {
-      "id": "1795651745943-b2ebcb",
-      "ts": "2026-11-26T00:07:30Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 900: driver TPUL x875 at 0.5c, driver HBAR x25 at 5c. Worst line -$73.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 900.0,
-        "fills": [
-          {
-            "side": "driver TPUL",
-            "price": 0.005,
-            "qty": 875.0
-          },
-          {
-            "side": "driver HBAR",
-            "price": 0.05,
-            "qty": 25.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795651745944-e5bbcf",
-      "ts": "2026-11-26T00:07:30Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 357 (race floor first): driver AWAL x29 at 2c, driver PBEA x28 at 2c, +11 more.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 357.0,
-        "rows": 13
-      }
-    },
     {
       "id": "1795651926725-fe8988",
       "ts": "2026-11-26T00:11:50Z",
@@ -3901,27 +3862,43 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795698329629-acbb5e",
+      "ts": "2026-11-26T13:03:20Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Posted 28 (race floor first): driver MGIB x28 at 1.2c.",
+      "severity": "info",
+      "title": "Orders posted",
+      "data": {
+        "contracts": 28.0,
+        "rows": 1
+      }
+    },
+    {
+      "id": "1795698369715-93bd69",
+      "ts": "2026-11-26T13:03:52Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: driver MGIB x1 at 0.4c. Worst line +$26.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "driver MGIB",
+            "price": 0.004,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1795672014631-c270e6",
-      "ts": "2026-11-26T05:46:54Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 4 driver(s): Alex Noren (+97%), Marc Leishman (+65%), Austen Truslow (+39%), Harold Varner III (+37%)",
-      "severity": "warn"
-    },
-    {
-      "id": "1795672122813-14841c",
-      "ts": "2026-11-26T05:48:42Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Connor Syme has had no resting orders for at least 10 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1795672426398-38fa8c",
       "ts": "2026-11-26T05:53:46Z",
@@ -4802,6 +4779,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Haydn Barron has had no resting orders for at least 498 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795698339868-0b65de",
+      "ts": "2026-11-26T13:05:39Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Min Woo Lee has had no resting orders for at least 132 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795698347735-690d6a",
+      "ts": "2026-11-26T13:05:47Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Min Woo Lee (+26%)",
       "severity": "warn"
     }
   ]
