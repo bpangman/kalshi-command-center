@@ -1,6 +1,6 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-26T00:51:35.045090Z",
+  "generated_at": "2026-11-26T00:53:02.286845Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -48,7 +48,7 @@
         "exposure": -25.51,
         "exposure_text": "-$26",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$156); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$153); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T00:45:37Z"
@@ -59,7 +59,7 @@
         "exposure": -25.33,
         "exposure_text": "-$25",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$156); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$153); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T00:45:37Z"
@@ -70,7 +70,7 @@
         "exposure": -11.26,
         "exposure_text": "-$11",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$156); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$153); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T00:40:19Z"
@@ -93,7 +93,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$26 is better than -$156.",
+          "Gate open: worst line -$26 is better than -$153.",
           "Batches used: 8 (max 3 per side)."
         ]
       },
@@ -101,7 +101,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$156, worst line -$26; spent $38 of $100.",
+          "Paid balancing is running: plan -$153, worst line -$26; spent $38 of $100.",
           "Kickoff 7:00pm CT: the in-game engine takes over."
         ]
       },
@@ -170,18 +170,9 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-26T00:50:57Z"
+    "ts": "2026-11-26T00:52:58Z"
   },
   "posts": [
-    {
-      "id": "1795496897804-168436",
-      "ts": "2026-11-24T05:08:17Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nLAR 1-6: +15 (+0.1% of bankroll)\nLAR 7-14: +15 (+0.1% of bankroll)\nLAR 15+: +15 (+0.1% of bankroll)\nGB 1-6: -1 (-0.0% of bankroll)\nGB 7-14: -30 (-0.3% of bankroll)\nGB 15+: -36 (-0.3% of bankroll)\nCollected $15 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nLAR 1-6: 0 / 322\nLAR 7-14: 0 / 583\nLAR 15+: 0 / 1000\nGB 1-6: 16 / 564\nGB 7-14: 45 / 855\nGB 15+: 51 / 949\nPosted book 1.11 | Sold avg 1.079 | Worst now -246 | Cash free $2500\nAnchor age 0s | Last fill 23133s ago",
-      "severity": "info"
-    },
     {
       "id": "1795496927049-099a4e",
       "ts": "2026-11-24T05:08:47Z",
@@ -3541,6 +3532,16 @@
       "kind": "update",
       "source": "narrator",
       "text": "Bot note: COVERAGE-CAP clipped LAR1TO6 97 -> 17@0.23 (REPLENISH batch #8): held 594, cap 677 [tighten 1.10x]",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795654378059-9d5910",
+      "ts": "2026-11-26T00:52:49Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP blocked LAR1TO6 97@0.23 (REPLENISH batch #8): held 594 is at the cap 663 (premium 568) [tighten 1",
       "severity": "info",
       "title": "Bot note"
     }
