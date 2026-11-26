@@ -1,10 +1,10 @@
 {
   "key": "W13-KCBUF",
-  "generated_at": "2026-11-26T15:13:02.640248Z",
+  "generated_at": "2026-11-26T15:14:30.721927Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$302, goal -$150.",
+    "headline": "Building toward kickoff 7:20pm CT. Worst line -$222, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
@@ -12,30 +12,41 @@
       {
         "side": "BUF by 7-14",
         "resting": "none",
-        "exposure": -301.6,
-        "exposure_text": "-$302",
+        "exposure": -221.6,
+        "exposure_text": "-$222",
         "move": "Holding",
         "when": "no move planned until the even-done check at 6:50pm CT",
         "at": null,
-        "stuck": false,
+        "stuck": true,
         "last_fill": "2026-11-26T13:43:46Z"
+      },
+      {
+        "side": "BUF by 15+",
+        "resting": "438 @ 17-19c",
+        "exposure": -220.39,
+        "exposure_text": "-$220",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 7:00pm CT, up to $100 in all",
+        "at": "2026-11-27T01:00:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-26T15:12:14Z"
       },
       {
         "side": "KC by 1-6",
         "resting": "171 @ 22c",
-        "exposure": -138.41,
-        "exposure_text": "-$138",
+        "exposure": -58.41,
+        "exposure_text": "-$58",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-27T01:00:00Z",
-        "stuck": true,
+        "stuck": false,
         "last_fill": "2026-11-24T20:28:57Z"
       },
       {
         "side": "KC by 15+",
         "resting": "859 @ 10-12c",
-        "exposure": 120.1,
-        "exposure_text": "+$120",
+        "exposure": 200.1,
+        "exposure_text": "+$200",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-27T01:00:00Z",
@@ -45,8 +56,8 @@
       {
         "side": "BUF by 1-6",
         "resting": "567 @ 23-26c",
-        "exposure": 135.91,
-        "exposure_text": "+$136",
+        "exposure": 215.91,
+        "exposure_text": "+$216",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-27T01:00:00Z",
@@ -54,21 +65,10 @@
         "last_fill": "2026-11-26T14:57:52Z"
       },
       {
-        "side": "BUF by 15+",
-        "resting": "938 @ 16-19c",
-        "exposure": 199.61,
-        "exposure_text": "+$200",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-25T04:52:22Z"
-      },
-      {
         "side": "KC by 7-14",
         "resting": "841 @ 13-16c",
-        "exposure": 203.39,
-        "exposure_text": "+$203",
+        "exposure": 283.39,
+        "exposure_text": "+$283",
         "move": "Paid balancing (trickle)",
         "when": "starts 7:00pm CT, up to $100 in all",
         "at": "2026-11-27T01:00:00Z",
@@ -80,7 +80,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 1,351, 3,375 resting. Worst line -$302 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 1,851, 2,875 resting. Worst line -$222 (goal -$150)."
         ]
       },
       {
@@ -93,7 +93,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$302).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$222).",
           "Batches used: none (max 3 per side)."
         ]
       },
@@ -144,16 +144,16 @@
         "held": 563.2,
         "resting": 0.0,
         "target": null,
-        "status": "heavy",
+        "status": "even",
         "price": null
       },
       {
         "label": "BUF by 15+",
-        "held": 62.0,
-        "resting": 938.0,
+        "held": 562.0,
+        "resting": 438.0,
         "target": null,
         "status": "even",
-        "price": 0.16
+        "price": 0.17
       },
       {
         "label": "KC by 1-6",
@@ -181,7 +181,7 @@
       }
     ],
     "book": "W13-KCBUF",
-    "ts": "2026-11-26T15:12:17Z"
+    "ts": "2026-11-26T15:14:18Z"
   },
   "posts": [
     {
@@ -3575,6 +3575,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+16 on BUF 1-6 @ 0.23 (maker)\nworst outcome now -198\nheld 126/563/62/400/58/141\nIf the game ends... you make\nBUF 1-6: +136 (+1.3% of bankroll)\nBUF 7-14: -302 (-2.8% of bankroll)\nBUF 15+: +200 (+1.8% of bankroll)\nKC 1-6: -138 (-1.3% of bankroll)\nKC 7-14: +203 (+1.9% of bankroll)\nKC 15+: +120 (+1.1% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795706007735-62ed53",
+      "ts": "2026-11-26T15:13:27Z",
+      "book": "W13-KCBUF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+500 on BUF 15+ @ 0.16 (maker)\nworst outcome now -198\nheld 126/563/562/400/58/141\nIf the game ends... you make\nBUF 1-6: +216 (+2.0% of bankroll)\nBUF 7-14: -222 (-2.0% of bankroll)\nBUF 15+: -220 (-2.0% of bankroll)\nKC 1-6: -58 (-0.5% of bankroll)\nKC 7-14: +283 (+2.6% of bankroll)\nKC 15+: +200 (+1.8% of bankroll)",
       "severity": "warn"
     }
   ]
