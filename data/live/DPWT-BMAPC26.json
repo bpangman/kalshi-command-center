@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T10:05:29.804391Z",
+  "generated_at": "2026-11-26T10:06:59.572607Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$21.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 94,129, ? resting. Worst line +$21. Floor protocol off."
+          "In race (Ingame). Sold 94,129, ? resting. Worst line +$21. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T10:04:40Z"
+    "ts": "2026-11-26T10:06:40Z"
   },
   "posts": [
-    {
-      "id": "1795646073652-824335",
-      "ts": "2026-11-25T22:32:17Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 27: driver HBAR x27 at 2c. Worst line -$96.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 27.0,
-        "fills": [
-          {
-            "side": "driver HBAR",
-            "price": 0.02,
-            "qty": 27.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795646475656-afefb7",
       "ts": "2026-11-25T22:39:04Z",
@@ -3967,18 +3947,19 @@
         "contracts": 29.0,
         "rows": 1
       }
+    },
+    {
+      "id": "1795687600930-29a56e",
+      "ts": "2026-11-26T10:06:40Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$21.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795663318118-f3a4a9",
-      "ts": "2026-11-26T03:21:58Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Matthew Griffin has had no resting orders for at least 192 min (reason unknown: no reason logged).\nBack: DPWT-BMAPC26 - Douglas Klein is posting again.\nBack: DPWT-BMAPC26 - Tom McKibbin is posting again.",
-      "severity": "warn"
-    },
     {
       "id": "1795663413789-9c46fa",
       "ts": "2026-11-26T03:23:33Z",
@@ -4868,6 +4849,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 17 driver(s): Byeong Hun An (+79%), Harold Varner III (+73%), Jason Scrivener (+58%), Adam Scott (+58%), Cameron Smith (+48%), Elvis Smylie (+48%), Ugo Coussaud (+47%), Nicolai Hojgaard (+47%), Connor Syme (+46%), Nick Voke (+46%) and 7 more",
+      "severity": "warn"
+    },
+    {
+      "id": "1795687612909-e7f928",
+      "ts": "2026-11-26T10:06:52Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+7 on Min Woo Lee @ 0.14 (maker)\nworst outcome now +21\nIf the race ends... you make\nByeong Hun An: +21\nSam Bairstow: +21\nEliot Baker: +21\nJose Luis Ballester Barrio: +21\nRafa Cabrera Bello: +21\nJohn Catlin: +21\nCam Davis: +21\nWenyi Ding: +21\nall others (144) >= +21",
       "severity": "warn"
     }
   ]
