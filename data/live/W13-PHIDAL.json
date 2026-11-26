@@ -1,10 +1,10 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T23:27:12.232291Z",
+  "generated_at": "2026-11-26T23:28:41.235171Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$71.",
+    "headline": "In game (Ingame). Worst line -$63.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 4,629, 537 resting. Worst line -$71. Game 50% done."
+          "In game (Ingame). Sold 4,666, 986 resting. Worst line -$63. Game 50% done."
         ]
       },
       {
@@ -46,14 +46,14 @@
       {
         "label": "DAL by 1-6",
         "held": 653.8,
-        "resting": 126.0,
+        "resting": 288.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "DAL by 7-14",
-        "held": 905.0,
+        "held": 942.0,
         "resting": 0.0,
         "target": null,
         "status": "even",
@@ -70,7 +70,7 @@
       {
         "label": "PHI by 1-6",
         "held": 771.0,
-        "resting": 0.0,
+        "resting": 171.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "PHI by 7-14",
         "held": 704.0,
-        "resting": 180.0,
+        "resting": 238.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "PHI by 15+",
         "held": 653.0,
-        "resting": 231.0,
+        "resting": 289.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T23:26:37Z"
+    "ts": "2026-11-26T23:28:38Z"
   },
   "posts": [
-    {
-      "id": "1795619191861-1a1bd9",
-      "ts": "2026-11-25T15:06:31Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795619596999-38fed5",
       "ts": "2026-11-25T15:13:16Z",
@@ -3816,6 +3806,15 @@
       "text": "Quiet for 15 min. 537 resting.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795735634438-63192e",
+      "ts": "2026-11-26T23:27:14Z",
+      "book": "W13-PHIDAL",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W13-PHIDAL: 3 orders posted in 10 min while the market traded 29254 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
@@ -4510,6 +4509,24 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W13-PHIDAL - Philadelphia by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795735633185-0b6f77",
+      "ts": "2026-11-26T23:27:13Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: Floor clamp on (leader at p 0.97, game decided)\nIf the game ends... you make\nDAL 1-6: +217 (+2.0% of bankroll)\nDAL 7-14: -34 (-0.3% of bankroll)\nDAL 15+: -71 (-0.7% of bankroll)\nPHI 1-6: +100 (+0.9% of bankroll)\nPHI 7-14: +167 (+1.6% of bankroll)\nPHI 15+: +218 (+2.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795735697217-945dbe",
+      "ts": "2026-11-26T23:28:17Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
