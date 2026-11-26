@@ -1,6 +1,6 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T14:31:52.123689Z",
+  "generated_at": "2026-11-26T14:33:45.492719Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -180,19 +180,9 @@
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T14:31:41Z"
+    "ts": "2026-11-26T14:33:42Z"
   },
   "posts": [
-    {
-      "id": "1795500063677-54185f",
-      "ts": "2026-11-24T06:01:03Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,230 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795500969463-6bc624",
       "ts": "2026-11-24T06:16:09Z",
@@ -3239,6 +3229,26 @@
       "text": "Row sold out: PHI by 7-14 at 7c (483 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1795703622658-61eec4",
+      "ts": "2026-11-26T14:31:38Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 235: PHI by 7-14 x235 at 7c. Worst line -$446.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 235.0,
+        "fills": [
+          {
+            "side": "PHI by 7-14",
+            "price": 0.07,
+            "qty": 235.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3366,6 +3376,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 1.27 over banked margin 1.23",
+      "severity": "warn"
+    },
+    {
+      "id": "1795703560937-35a363",
+      "ts": "2026-11-26T14:32:40Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+235 on PHI 7-14 @ 0.07 (maker)\nworst outcome now +11\nheld 9/17/227/16/570/0\nIf the game ends... you make\nDAL 1-6: +116 (+1.1% of bankroll)\nDAL 7-14: +107 (+1.0% of bankroll)\nDAL 15+: -103 (-1.0% of bankroll)\nPHI 1-6: +108 (+1.0% of bankroll)\nPHI 7-14: -446 (-4.2% of bankroll)\nPHI 15+: +124 (+1.2% of bankroll)",
       "severity": "warn"
     }
   ]
