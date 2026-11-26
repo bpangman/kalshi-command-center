@@ -1,6 +1,6 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T18:19:27.371343Z",
+  "generated_at": "2026-11-26T18:20:50.657699Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 4,908, 256 resting. Worst line -$71. Game 11% done."
+          "In game (Ingame). Sold 4,908, 248 resting. Worst line -$71. Game 12% done."
         ]
       },
       {
@@ -54,7 +54,7 @@
       {
         "label": "CHI by 7-14",
         "held": 831.8,
-        "resting": 18.0,
+        "resting": 51.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "CHI by 15+",
         "held": 706.0,
-        "resting": 165.0,
+        "resting": 120.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "DET by 1-6",
         "held": 873.0,
-        "resting": 4.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,7 +78,7 @@
       {
         "label": "DET by 7-14",
         "held": 855.5,
-        "resting": 20.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -86,7 +86,7 @@
       {
         "label": "DET by 15+",
         "held": 764.0,
-        "resting": 49.5,
+        "resting": 77.5,
         "target": null,
         "status": "even",
         "price": null
@@ -101,29 +101,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T18:18:27Z"
+    "ts": "2026-11-26T18:20:28Z"
   },
   "posts": [
-    {
-      "id": "1795573561738-2b09b3",
-      "ts": "2026-11-25T02:23:46Z",
-      "book": "W13-CHIDET",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 503: DET by 1-6 x503 at 20c. Worst line -$299.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 503.0,
-        "fills": [
-          {
-            "side": "DET by 1-6",
-            "price": 0.2,
-            "qty": 503.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795574345753-8bb953",
       "ts": "2026-11-25T02:39:05Z",
@@ -3637,6 +3617,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795717208466-b97a32",
+      "ts": "2026-11-26T18:17:50Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 6: DET by 7-14 x6 at 21c. Worst line -$71.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 6.0,
+        "fills": [
+          {
+            "side": "DET by 7-14",
+            "price": 0.21,
+            "qty": 6.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4286,6 +4286,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 36.61 over banked margin 15.48",
+      "severity": "warn"
+    },
+    {
+      "id": "1795717189272-c40801",
+      "ts": "2026-11-26T18:19:49Z",
+      "book": "W13-CHIDET",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W13-CHIDET - Detroit by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
