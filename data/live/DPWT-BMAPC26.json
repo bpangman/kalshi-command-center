@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T05:43:17.619843Z",
+  "generated_at": "2026-11-26T05:44:49.039232Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$13.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 93,116, 21,071 resting. Worst line +$13. Floor protocol off."
+          "In race (Ingame). Sold 93,116, 21,071 resting. Worst line +$13. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T05:42:38Z"
+    "ts": "2026-11-26T05:44:38Z"
   },
   "posts": [
-    {
-      "id": "1795622966209-77aab8",
-      "ts": "2026-11-25T16:09:26Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "text",
-      "source": "bot",
-      "text": "Inactivity on DPWT-BMAPC26: 0 orders posted in 10 min while the market traded 204979 contracts. Cause: no specific cause could be identified.",
-      "severity": "info"
-    },
     {
       "id": "1795623068352-2daecc",
       "ts": "2026-11-25T16:11:08Z",
@@ -4045,18 +4036,19 @@
       "text": "In race (Ingame). Worst line +$13.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795671878821-2b0a23",
+      "ts": "2026-11-26T05:44:38Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$13.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795648103274-4c8d04",
-      "ts": "2026-11-25T23:08:23Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Shock on Lucas Herbert: pulled nothing (golf rows are good till cancelled), new rows paused, pausing 30s\nIf the race ends... you make\nByeong Hun An: -83\nSam Bairstow: -83\nEliot Baker: -83\nJose Luis Ballester Barrio: -83\nRafa Cabrera Bello: -83\nJohn Catlin: -83\nCam Davis: -83\nWenyi Ding: -83\nall others (144) >= -83",
-      "severity": "warn"
-    },
     {
       "id": "1795648120915-edaa59",
       "ts": "2026-11-25T23:08:40Z",
@@ -4946,6 +4938,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Alex Noren has had no resting orders for at least 71 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795671819211-087fd2",
+      "ts": "2026-11-26T05:43:39Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Cameron Smith has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
