@@ -1,13 +1,13 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T15:00:55.950765Z",
+  "generated_at": "2026-11-26T15:02:19.195458Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 12:00pm CT. Worst line -$273, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 62,
     "moves": [
       {
         "side": "DET by 7-14",
@@ -69,23 +69,27 @@
         "resting": "900 @ 12-17c",
         "exposure": 561.73,
         "exposure_text": "+$562",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-26T17:40:00Z",
-        "stuck": false
+        "move": "Hold price at 12c",
+        "when": "crowd pays 13c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 11:40am CT",
+        "lag_note": "Price 12c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 3,205, 1,691 resting. Worst line -$273 (goal -$150)."
+          "Pregame build, kickoff 12:00pm CT. Sold 3,205, 1,691 resting. Worst line -$273 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): CHI by 15+.",
+          "CHI by 15+: 835 behind. Price 12c matches the crowd.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -151,7 +155,7 @@
         "held": 0.0,
         "resting": 900.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       },
       {
@@ -180,48 +184,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T15:00:12Z"
+    "ts": "2026-11-26T15:02:13Z"
   },
   "posts": [
-    {
-      "id": "1795532668687-b0b16c",
-      "ts": "2026-11-24T15:04:28Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +7 (+0.1% of bankroll)\nDET 7-14: -42 (-0.4% of bankroll)\nDET 15+: +7 (+0.1% of bankroll)\nCHI 1-6: +7 (+0.1% of bankroll)\nCHI 7-14: +7 (+0.1% of bankroll)\nCHI 15+: +7 (+0.1% of bankroll)\nCollected $7 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 578\nDET 7-14: 50 / 479\nDET 15+: 0 / 506\nCHI 1-6: 0 / 594\nCHI 7-14: 0 / 557\nCHI 15+: 0 / 539\nPosted book 1.09 | Sold avg 1.086 | Worst now +11 | Cash free $2500\nAnchor age 0s | Last fill 3377s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795532984387-d94e76",
-      "ts": "2026-11-24T15:09:44Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,253 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795533105021-28c7ca",
-      "ts": "2026-11-24T15:11:44Z",
-      "book": "W13-CHIDET",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: CHI by 1-6 at 24c (416 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
-    {
-      "id": "1795533105030-e9cea2",
-      "ts": "2026-11-24T15:11:45Z",
-      "book": "W13-CHIDET",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Thu 12:00pm CT. Worst line -$399, goal -$150. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
     {
       "id": "1795533145208-abab6f",
       "ts": "2026-11-24T15:10:21Z",
@@ -3568,6 +3533,45 @@
       "source": "bot",
       "text": "Inactivity on W13-CHIDET: 0 orders posted in 10 min while the market traded 2130 contracts. Cause: no specific cause could be identified.",
       "severity": "info"
+    },
+    {
+      "id": "1795705261079-deeb4b",
+      "ts": "2026-11-26T15:01:01Z",
+      "book": "W13-CHIDET",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nDET 1-6: +9 (+0.1% of bankroll)\nDET 7-14: -273 (-2.5% of bankroll)\nDET 15+: -122 (-1.1% of bankroll)\nCHI 1-6: -209 (-2.0% of bankroll)\nCHI 7-14: +200 (+1.9% of bankroll)\nCHI 15+: +562 (+5.2% of bankroll)\nCollected $562 premium ($0 fees) | Paper margin over fair $17 (not realized until settlement)\nEvent: DET 7-14: DET 0-0, Q0 0:00; CHI 7-14: CHI 0-0, Q0 0:00\nheld / resting\nDET 1-6: 553 / 174\nDET 7-14: 835 / 52\nDET 15+: 684 / 126\nCHI 1-6: 771 / 105\nCHI 7-14: 362 / 334\nCHI 15+: 0 / 900\nPosted book 1.12 | Sold avg 1.034 | Worst now -45 | Cash free $2500\nAnchor age 0s | Last fill 599s ago",
+      "severity": "info"
+    },
+    {
+      "id": "1795705273074-04d34c",
+      "ts": "2026-11-26T15:01:01Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$273. Lagging: CHI by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1795705273084-082389",
+      "ts": "2026-11-26T15:01:13Z",
+      "book": "W13-CHIDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 12:00pm CT. Worst line -$273, goal -$150. Next: Even-done check, 11:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795705333521-f50694",
+      "ts": "2026-11-26T15:02:13Z",
+      "book": "W13-CHIDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 12:00pm CT. Worst line -$273, goal -$150. Next: Even-done check, 11:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
