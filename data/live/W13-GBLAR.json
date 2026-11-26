@@ -1,6 +1,6 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-26T01:25:09.717607Z",
+  "generated_at": "2026-11-26T01:26:37.764867Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 3,559, 3 resting. Worst line -$24. Game 8% done. Bot logged 1 loop error."
+          "In game (Ingame). Sold 3,559, 0 resting. Worst line -$24. Game 8% done. Bot logged 1 loop error."
         ]
       },
       {
@@ -86,7 +86,7 @@
       {
         "label": "LAR by 15+",
         "held": 590.4,
-        "resting": 3.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-26T01:25:06Z"
+    "ts": "2026-11-26T01:26:06Z"
   },
   "posts": [
-    {
-      "id": "1795504114130-f7c9d0",
-      "ts": "2026-11-24T07:08:34Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nLAR 1-6: +15 (+0.1% of bankroll)\nLAR 7-14: +15 (+0.1% of bankroll)\nLAR 15+: +15 (+0.1% of bankroll)\nGB 1-6: -1 (-0.0% of bankroll)\nGB 7-14: -30 (-0.3% of bankroll)\nGB 15+: -36 (-0.3% of bankroll)\nCollected $15 premium ($0 fees) | Paper margin over fair $1 (not realized until settlement)\nheld / resting\nLAR 1-6: 0 / 322\nLAR 7-14: 0 / 583\nLAR 15+: 0 / 1000\nGB 1-6: 16 / 564\nGB 7-14: 45 / 855\nGB 15+: 51 / 949\nPosted book 1.11 | Sold avg 1.079 | Worst now -246 | Cash free $2500\nAnchor age 0s | Last fill 30349s ago",
-      "severity": "info"
-    },
     {
       "id": "1795504169112-ea927a",
       "ts": "2026-11-24T07:09:29Z",
@@ -3483,27 +3474,18 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795656339311-5cd713",
+      "ts": "2026-11-26T01:25:39Z",
+      "book": "W13-GBLAR",
+      "kind": "text",
+      "source": "bot",
+      "text": "Lopsided: LAR 62% favored (premium share 56%); favored-side cap = $720 of held per bucket",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1795553376488-a3f666",
-      "ts": "2026-11-24T20:49:36Z",
-      "book": "W13-GBLAR",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-GBLAR): loop_exceptions=1. Check the command center.",
-      "severity": "critical"
-    },
-    {
-      "id": "1795553741687-4e3dc5",
-      "ts": "2026-11-24T20:55:41Z",
-      "book": "W13-GBLAR",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-GBLAR): worst -337.18 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795555203075-835310",
       "ts": "2026-11-24T21:20:03Z",
@@ -4385,6 +4367,24 @@
       "source": "sentinel",
       "text": "Empty side watch: 5 unexplained\n- W13-GBLAR - Green Bay by 15 or more has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W13-GBLAR - Green Bay by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W13-GBLAR - Green Bay by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W13-GBLAR - Los Angeles R by 1 to 6 has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- W13-GBLAR - Los Angeles R by 7 to 14 has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
+    },
+    {
+      "id": "1795656359852-1fc498",
+      "ts": "2026-11-26T01:25:59Z",
+      "book": "W13-GBLAR",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+11 on LAR 15+ @ 0.16 (maker)\nworst outcome now -24\nheld 594/594/590/594/594/593\nIf the game ends... you make\nLAR 1-6: -24 (-0.2% of bankroll)\nLAR 7-14: -24 (-0.2% of bankroll)\nLAR 15+: -20 (-0.2% of bankroll)\nGB 1-6: -24 (-0.2% of bankroll)\nGB 7-14: -24 (-0.2% of bankroll)\nGB 15+: -24 (-0.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795656366482-ec10a5",
+      "ts": "2026-11-26T01:26:06Z",
+      "book": "W13-GBLAR",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W13-GBLAR): loop_exceptions=1. Check the command center.",
+      "severity": "critical"
     }
   ]
 }
