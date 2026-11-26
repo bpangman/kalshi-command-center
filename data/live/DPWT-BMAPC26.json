@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T05:46:13.256799Z",
+  "generated_at": "2026-11-26T05:47:36.889217Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$13.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 93,116, 21,071 resting. Worst line +$13. Floor protocol off."
+          "In race (Ingame). Sold 93,116, 21,071 resting. Worst line +$13. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T05:45:39Z"
+    "ts": "2026-11-26T05:46:39Z"
   },
   "posts": [
-    {
-      "id": "1795623392523-a04982",
-      "ts": "2026-11-25T16:14:17Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 167: driver BSCH x167 at 0.4c. Worst line -$140.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 167.0,
-        "fills": [
-          {
-            "side": "driver BSCH",
-            "price": 0.004,
-            "qty": 167.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795624161592-738d85",
       "ts": "2026-11-25T16:29:21Z",
@@ -4046,18 +4026,19 @@
       "text": "In race (Ingame). Worst line +$13.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795671999471-17757a",
+      "ts": "2026-11-26T05:46:39Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$13.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795648120915-edaa59",
-      "ts": "2026-11-25T23:08:40Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Back: DPWT-BMAPC26 - Louis Dobbelaar is posting again.",
-      "severity": "warn"
-    },
     {
       "id": "1795648325384-79d948",
       "ts": "2026-11-25T23:12:05Z",
@@ -4947,6 +4928,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Cameron Smith has had no resting orders for at least 10 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795672014631-c270e6",
+      "ts": "2026-11-26T05:46:54Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 4 driver(s): Alex Noren (+97%), Marc Leishman (+65%), Austen Truslow (+39%), Harold Varner III (+37%)",
       "severity": "warn"
     }
   ]
