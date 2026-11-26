@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T21:57:27.151752Z",
+  "generated_at": "2026-11-26T21:59:16.254755Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$35.",
     "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence_note": "In-race steps follow the live race.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 97,941, ? resting. Worst line +$35. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
+          "In race (Ingame). Sold 97,941, ? resting. Worst line +$35. Floor protocol off."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T21:56:54Z"
+    "ts": "2026-11-26T21:58:54Z"
   },
   "posts": [
-    {
-      "id": "1795668561896-164d3a",
-      "ts": "2026-11-26T04:49:21Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "In race (Ingame). Worst line -$7.",
-      "severity": "info",
-      "title": "Plan updated: In race (Ingame)"
-    },
     {
       "id": "1795668923794-1c6fdb",
       "ts": "2026-11-26T04:55:23Z",
@@ -3470,27 +3460,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795730334655-030f0e",
+      "ts": "2026-11-26T21:58:54Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$35.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795693385973-886d27",
-      "ts": "2026-11-26T11:43:05Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: anchor fell back to kalshi - Bovada unavailable; pricing off the crowd's own book (ex our asks) with the fee-net TB check as the only guard",
-      "severity": "warn"
-    },
-    {
-      "id": "1795693418079-a5c7f9",
-      "ts": "2026-11-26T11:43:38Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Anomaly: websocket feed recovered, back off REST",
-      "severity": "warn"
-    },
     {
       "id": "1795693470952-1583dd",
       "ts": "2026-11-26T11:44:30Z",
@@ -4371,6 +4353,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+874 on Ben Henkel @ 0.00 (maker)\nworst outcome now +34\nIf the race ends... you make\nBlake Proverbs: +34\nByeong Hun An: +35\nSam Bairstow: +35\nEliot Baker: +35\nJose Luis Ballester Barrio: +35\nRafa Cabrera Bello: +35\nJohn Catlin: +35\nCam Davis: +35\nall others (144) >= +35",
+      "severity": "warn"
+    },
+    {
+      "id": "1795730262955-56d4d0",
+      "ts": "2026-11-26T21:57:42Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Cameron Smith has had no resting orders for at least 984 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795730276452-3d74da",
+      "ts": "2026-11-26T21:57:56Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (DPWT-BMAPC26): 22 ladder(s) stale 10+ min: KXDPWORLDTOUR-BMAPC26-JARM low 101c, KXDPWORLDTOUR-BMAPC26-ICAN low 102c, KXDPWORLDTOUR-BMAPC26-BCOL low 472c, KXDPWORLDTOUR-BMAPC26-CCON high 25c, KXDPWORLDTOUR-BMAPC26-JDEB low 84c, KXDPWORLDTOUR-BMAPC26-LDOB high 66c, KXDPWORLDTOUR-BMAPC26-JDOU low 101c, KXDPWORLDTOUR-BMAPC26-BECC low 102c, KXDPWORLDTOUR-BMAPC26-SFRI low 101c, KXDPWORLDTOUR-BMAPC26-TGIR low 472c, KXDPWORLDTOUR-BMAPC26-MGRI low 100c, KXDPWORLDTOUR-BMAPC26-DLAW low 100c, KXDPWORLDTOUR-BMAPC26-JLEE low 100c, KXDPWORLDTOUR-BMAPC26-CLUC low 126c, KXDPWORLDTOUR-BMAPC26-JMUR low 136c, KXDPWORLDTOUR-BMAPC26-ZMUR low 472c, KXDPWORLDTOUR-BMAPC26-WORM low 468c, KXDPWORLDTOUR-BMAPC26-DPUI high 2c, KXDPWORLDTOUR-BMAPC26-TPUL low 45c, KXDPWORLDTOUR-BMAPC26-MSAN low 100c, KXDPWORLDTOUR-BMAPC26-JSCR high 26c, KXDPWORLDTOUR-BMAPC26-ZYAN low 51c. Check the command center.",
       "severity": "warn"
     }
   ]
