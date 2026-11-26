@@ -1,32 +1,32 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T21:14:54.972106Z",
+  "generated_at": "2026-11-26T21:16:46.881071Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:30pm CT. Worst line -$99.",
+    "headline": "Final tightening before kickoff 3:31pm CT. Worst line -$106.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
     "moves": [
       {
         "side": "DAL by 1-6",
-        "resting": "110 @ 21-23c",
-        "exposure": -98.71,
-        "exposure_text": "-$99",
+        "resting": "101 @ 21-23c",
+        "exposure": -105.82,
+        "exposure_text": "-$106",
         "move": "Holding",
-        "when": "no move planned until kickoff at 3:30pm CT",
+        "when": "no move planned until kickoff at 3:31pm CT",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-26T20:38:30Z"
+        "last_fill": "2026-11-26T21:14:20Z"
       },
       {
         "side": "PHI by 15+",
         "resting": "75 @ 4-6c",
-        "exposure": -78.96,
-        "exposure_text": "-$79",
+        "exposure": -77.07,
+        "exposure_text": "-$77",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$177); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$174); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T20:47:58Z"
@@ -34,10 +34,10 @@
       {
         "side": "PHI by 7-14",
         "resting": "164 @ 7-9c",
-        "exposure": -73.96,
-        "exposure_text": "-$74",
+        "exposure": -72.07,
+        "exposure_text": "-$72",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$177); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$174); up to $100 in all",
         "at": null,
         "stuck": true,
         "last_fill": "2026-11-26T14:30:57Z"
@@ -45,10 +45,10 @@
       {
         "side": "DAL by 15+",
         "resting": "234 @ 34-38c",
-        "exposure": -69.96,
-        "exposure_text": "-$70",
+        "exposure": -68.07,
+        "exposure_text": "-$68",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$177); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$174); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T21:10:08Z"
@@ -56,19 +56,21 @@
       {
         "side": "PHI by 1-6",
         "resting": "180 @ 12-14c",
-        "exposure": -40.96,
-        "exposure_text": "-$41",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$177); up to $100 in all",
+        "exposure": -39.07,
+        "exposure_text": "-$39",
+        "move": "Hold price at 12c",
+        "when": "crowd pays 12c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
-        "last_fill": "2026-11-26T21:10:08Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-11-26T21:10:08Z",
+        "lag_note": "Price 12c matches the crowd."
       },
       {
         "side": "DAL by 7-14",
         "resting": "315 @ 26-29c",
-        "exposure": 184.04,
-        "exposure_text": "+$184",
+        "exposure": 185.93,
+        "exposure_text": "+$186",
         "move": "Hold price at 26c",
         "when": "crowd pays 26c; steps down 1c only if it trades lower",
         "at": null,
@@ -82,14 +84,15 @@
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:30pm CT. Sold 3,155, 1,078 resting. Worst line -$99 (goal -$150)."
+          "Final tightening, kickoff 3:31pm CT. Sold 3,164, 1,069 resting. Worst line -$106 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): DAL by 7-14.",
-          "DAL by 7-14: 283 behind. Price 26c matches the crowd.",
+          "Lagging (150+ behind the leader): DAL by 7-14, PHI by 1-6.",
+          "DAL by 7-14: 292 behind. Price 26c matches the crowd.",
+          "PHI by 1-6: 67 behind. Price 12c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -97,7 +100,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$99 is better than -$177.",
+          "Gate open: worst line -$106 is better than -$174.",
           "Batches used: 9 (max 3 per side)."
         ]
       },
@@ -105,8 +108,8 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$177, worst line -$99; spent $9 of $100.",
-          "Kickoff 3:30pm CT: the in-game engine takes over."
+          "Paid balancing is running: plan -$174, worst line -$106; spent $9 of $100.",
+          "Kickoff 3:31pm CT: the in-game engine takes over."
         ]
       },
       {
@@ -118,7 +121,7 @@
     ],
     "next_steps": [
       {
-        "at": "2026-11-26T21:30:00Z",
+        "at": "2026-11-26T21:31:00Z",
         "label": "Kickoff",
         "detail": "In-game engine takes over."
       }
@@ -126,8 +129,8 @@
     "sides": [
       {
         "label": "DAL by 1-6",
-        "held": 594.8,
-        "resting": 110.0,
+        "held": 603.8,
+        "resting": 101.0,
         "target": null,
         "status": "even",
         "price": 0.21
@@ -153,7 +156,7 @@
         "held": 537.0,
         "resting": 180.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       },
       {
@@ -174,29 +177,9 @@
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T21:13:59Z"
+    "ts": "2026-11-26T21:15:59Z"
   },
   "posts": [
-    {
-      "id": "1795584688662-301d11",
-      "ts": "2026-11-25T05:31:28Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795585594864-2e17d3",
-      "ts": "2026-11-25T05:46:34Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795586501028-5857ce",
       "ts": "2026-11-25T06:01:41Z",
@@ -3544,6 +3527,36 @@
       "text": "Row sold out: DAL by 1-6 at 21c (18 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1795727699545-7a1f2a",
+      "ts": "2026-11-26T21:14:59Z",
+      "book": "W13-PHIDAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 3:30pm CT. Worst line -$106. Next: Kickoff, 3:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1795727799922-35e5d5",
+      "ts": "2026-11-26T21:14:22Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 9: DAL by 1-6 x9 at 21c. Worst line -$106.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 9.0,
+        "fills": [
+          {
+            "side": "DAL by 1-6",
+            "price": 0.21,
+            "qty": 9.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
