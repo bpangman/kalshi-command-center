@@ -1,6 +1,6 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T15:35:46.751372Z",
+  "generated_at": "2026-11-26T15:37:40.591111Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -185,19 +185,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T15:35:26Z"
+    "ts": "2026-11-26T15:37:27Z"
   },
   "posts": [
-    {
-      "id": "1795534312644-7b7dbf",
-      "ts": "2026-11-24T15:31:52Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,157 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795535218756-5366b4",
       "ts": "2026-11-24T15:46:58Z",
@@ -3550,6 +3540,26 @@
       "text": "Row sold out: CHI by 15+ at 12c (30 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1795707447081-c4e7bc",
+      "ts": "2026-11-26T15:35:23Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 30: CHI by 15+ x30 at 12c. Worst line -$270.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 30.0,
+        "fills": [
+          {
+            "side": "CHI by 15+",
+            "price": 0.12,
+            "qty": 30.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4056,6 +4066,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-CHIDET): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795707386694-4fb915",
+      "ts": "2026-11-26T15:36:26Z",
+      "book": "W13-CHIDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+30 on CHI 15+ @ 0.12 (maker)\nworst outcome now -49\nheld 553/835/684/771/362/30\nIf the game ends... you make\nDET 1-6: +12 (+0.1% of bankroll)\nDET 7-14: -270 (-2.5% of bankroll)\nDET 15+: -119 (-1.1% of bankroll)\nCHI 1-6: -206 (-1.9% of bankroll)\nCHI 7-14: +204 (+1.9% of bankroll)\nCHI 15+: +535 (+5.0% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
