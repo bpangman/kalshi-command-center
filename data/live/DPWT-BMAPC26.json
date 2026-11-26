@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T22:27:48.978907Z",
+  "generated_at": "2026-11-26T22:29:08.543042Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$35.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 97,941, ? resting. Worst line +$35. Floor protocol off."
+          "In race (Ingame). Sold 97,941, ? resting. Worst line +$35. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,39 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T22:27:02Z"
+    "ts": "2026-11-26T22:29:02Z"
   },
   "posts": [
-    {
-      "id": "1795669728440-8e70f8",
-      "ts": "2026-11-26T05:06:42Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 63: driver RLAN x63 at 0.9c. Worst line +$6.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 63.0,
-        "fills": [
-          {
-            "side": "driver RLAN",
-            "price": 0.009,
-            "qty": 63.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795669768577-a7c614",
-      "ts": "2026-11-26T05:09:28Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "In race (Ingame). Worst line +$6.",
-      "severity": "info",
-      "title": "Plan updated: In race (Ingame)"
-    },
     {
       "id": "1795669848858-bd4868",
       "ts": "2026-11-26T05:08:45Z",
@@ -3407,18 +3377,29 @@
       "text": "In race (Ingame). Worst line +$35.",
       "severity": "info",
       "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795732082712-ca6443",
+      "ts": "2026-11-26T22:28:02Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$35.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
+    },
+    {
+      "id": "1795732142829-0e86ef",
+      "ts": "2026-11-26T22:28:43Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sharp price move on 1 driver: driver MMAG.",
+      "severity": "info",
+      "title": "Price shock"
     }
   ],
   "audits": [
-    {
-      "id": "1795694491211-7e3d15",
-      "ts": "2026-11-26T12:01:31Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 5 driver(s): Cameron Smith (+37%), Alex Noren (+34%), Wenyi Ding (+30%), Ashun Wu (+29%), Sandy Scott (+28%)",
-      "severity": "warn"
-    },
     {
       "id": "1795694685315-eceb5e",
       "ts": "2026-11-26T12:04:45Z",
@@ -4308,6 +4289,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Qualifying moved 2 driver(s): Nicolai von Dellingshausen (+42%), Nicolai Hojgaard (+35%)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795732084418-29035c",
+      "ts": "2026-11-26T22:28:04Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 3 unexplained\n- DPWT-BMAPC26 - Blake Proverbs has had no resting orders for at least 132 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Douglas Klein has had no resting orders for at least 132 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - David Micheluzzi has had no resting orders for at least 132 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
