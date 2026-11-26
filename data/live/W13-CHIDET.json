@@ -1,19 +1,19 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T13:42:57.288583Z",
+  "generated_at": "2026-11-26T13:44:20.756059Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 12:00pm CT. Worst line -$255, goal -$150.",
+    "headline": "Building toward kickoff 12:00pm CT. Worst line -$204, goal -$150.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
         "side": "DET by 7-14",
-        "resting": "182 @ 17-19c",
-        "exposure": -255.09,
-        "exposure_text": "-$255",
+        "resting": "201 @ 16-19c",
+        "exposure": -203.72,
+        "exposure_text": "-$204",
         "move": "Holding",
         "when": "no move planned until the even-done check at 11:30am CT",
         "at": null,
@@ -21,10 +21,21 @@
         "last_fill": "2026-11-26T12:06:18Z"
       },
       {
+        "side": "DET by 15+",
+        "resting": "85 @ 12c",
+        "exposure": -116.83,
+        "exposure_text": "-$117",
+        "move": "Paid balancing (trickle)",
+        "when": "starts 11:40am CT, up to $100 in all",
+        "at": "2026-11-26T17:40:00Z",
+        "stuck": false,
+        "last_fill": "2026-11-26T13:42:50Z"
+      },
+      {
         "side": "CHI by 1-6",
         "resting": "297 @ 22-26c",
-        "exposure": -148.21,
-        "exposure_text": "-$148",
+        "exposure": -96.84,
+        "exposure_text": "-$97",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-26T17:40:00Z",
@@ -34,8 +45,8 @@
       {
         "side": "DET by 1-6",
         "resting": "165 @ 21-24c",
-        "exposure": -112.83,
-        "exposure_text": "-$113",
+        "exposure": -61.46,
+        "exposure_text": "-$61",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-26T17:40:00Z",
@@ -45,8 +56,8 @@
       {
         "side": "CHI by 7-14",
         "resting": "241 @ 18-21c",
-        "exposure": 69.0,
-        "exposure_text": "+$69",
+        "exposure": 120.37,
+        "exposure_text": "+$120",
         "move": "Paid balancing (trickle)",
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-26T17:40:00Z",
@@ -54,46 +65,39 @@
         "last_fill": "2026-11-26T05:28:51Z"
       },
       {
-        "side": "DET by 15+",
-        "resting": "552 @ 11-12c",
-        "exposure": 298.8,
-        "exposure_text": "+$299",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-26T17:40:00Z",
-        "stuck": false,
-        "last_fill": "2026-11-25T07:59:53Z"
-      },
-      {
         "side": "CHI by 15+",
-        "resting": "788 @ 14-17c",
-        "exposure": 430.8,
-        "exposure_text": "+$431",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 11:40am CT, up to $100 in all",
-        "at": "2026-11-26T17:40:00Z",
-        "stuck": false
+        "resting": "818 @ 12-17c",
+        "exposure": 482.17,
+        "exposure_text": "+$482",
+        "move": "Hold price at 12c",
+        "when": "crowd pays 12.7c; steps down 1c only if it trades lower",
+        "at": null,
+        "stuck": false,
+        "also": "Also: paid balancing starts 11:40am CT",
+        "lag_note": "Price 12c matches the crowd."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 2,302, 2,225 resting. Worst line -$255 (goal -$150)."
+          "Pregame build, kickoff 12:00pm CT. Sold 2,769, 1,758 resting. Worst line -$204 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): CHI by 15+.",
+          "CHI by 15+: 686 behind. Price 12c matches the crowd.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$255).",
-          "Batches used: 6 (max 3 per side)."
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$204).",
+          "Batches used: 7 (max 3 per side)."
         ]
       },
       {
@@ -151,7 +155,7 @@
         "held": 0.0,
         "resting": 788.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.14
       },
       {
@@ -172,76 +176,17 @@
       },
       {
         "label": "DET by 15+",
-        "held": 132.0,
-        "resting": 552.0,
+        "held": 599.0,
+        "resting": 85.0,
         "target": null,
         "status": "even",
-        "price": 0.11
+        "price": 0.12
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T13:42:43Z"
+    "ts": "2026-11-26T13:43:44Z"
   },
   "posts": [
-    {
-      "id": "1795512041027-f4b838",
-      "ts": "2026-11-24T09:20:41Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795512948616-42bebe",
-      "ts": "2026-11-24T09:35:48Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795513855642-431839",
-      "ts": "2026-11-24T09:50:55Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795514463484-12e028",
-      "ts": "2026-11-24T10:01:03Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +1 (+0.0% of bankroll)\nDET 7-14: -5 (-0.0% of bankroll)\nDET 15+: +1 (+0.0% of bankroll)\nCHI 1-6: +1 (+0.0% of bankroll)\nCHI 7-14: +1 (+0.0% of bankroll)\nCHI 15+: +1 (+0.0% of bankroll)\nCollected $1 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 578\nDET 7-14: 6 / 523\nDET 15+: 0 / 506\nCHI 1-6: 0 / 594\nCHI 7-14: 0 / 557\nCHI 15+: 0 / 539\nPosted book 1.09 | Sold avg 1.086 | Worst now +11 | Cash free $2500\nAnchor age 0s | Last fill 26909s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795514762044-39b74d",
-      "ts": "2026-11-24T10:06:02Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795515669490-e5c591",
-      "ts": "2026-11-24T10:21:09Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795516576375-e5b451",
       "ts": "2026-11-24T10:36:16Z",
@@ -3489,6 +3434,76 @@
       "text": "Quiet for 15 min. 2,229 resting. Next: Even-done check, 11:30am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795700584093-c7f1ab",
+      "ts": "2026-11-26T13:40:48Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 4: DET by 1-6 x4 at 21c. Worst line -$204.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 4.0,
+        "fills": [
+          {
+            "side": "DET by 1-6",
+            "price": 0.21,
+            "qty": 4.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795700584093-03cb25",
+      "ts": "2026-11-26T13:42:54Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DET by 15+ at 11c (455 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795700584093-a54179",
+      "ts": "2026-11-26T13:42:54Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DET by 15+ at 11c (20 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795700624349-b424d2",
+      "ts": "2026-11-26T13:43:44Z",
+      "book": "W13-CHIDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 12:00pm CT. Worst line -$204, goal -$150. Next: Even-done check, 11:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795700644537-5563c0",
+      "ts": "2026-11-26T13:43:57Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DET by 15+ at 12c (51 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795700644537-c24c4c",
+      "ts": "2026-11-26T13:43:57Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DET by 15+ at 12c (34 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
     }
   ],
   "audits": [
