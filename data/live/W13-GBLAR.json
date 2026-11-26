@@ -1,6 +1,6 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-26T04:01:00.409954Z",
+  "generated_at": "2026-11-26T04:02:27.344316Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 3,562, 0 resting. Worst line -$23. Game 84% done. Floor mode ON: only raising the worst line. Bot logged 1 loop error."
+          "In game (Ingame). Sold 3,562, 0 resting. Worst line -$23. Game 86% done. Floor mode ON: only raising the worst line. Bot logged 1 loop error."
         ]
       },
       {
@@ -101,34 +101,9 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-26T04:00:49Z"
+    "ts": "2026-11-26T04:01:49Z"
   },
   "posts": [
-    {
-      "id": "1795524740600-65bbcc",
-      "ts": "2026-11-24T12:50:15Z",
-      "book": "W13-GBLAR",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 35: GB by 15+ x19 at 9c, LAR by 1-6 x16 at 22c. Worst line -$185.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 35.0,
-        "fills": [
-          {
-            "side": "GB by 15+",
-            "price": 0.09,
-            "qty": 19.0
-          },
-          {
-            "side": "LAR by 1-6",
-            "price": 0.22,
-            "qty": 16.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795525526946-d33549",
       "ts": "2026-11-24T13:05:26Z",
@@ -3468,18 +3443,19 @@
       "text": "Bot note: endgame: active (favorite LAR 7-14 at 0.48); likely ['LAR 1-6', 'LAR 7-14']; floor mode: KXNFLWINMARGIN-26NOV2",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795665689487-6a7fa4",
+      "ts": "2026-11-26T04:01:19Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: endgame: active (favorite LAR 7-14 at 0.50); likely ['LAR 1-6', 'LAR 7-14']; floor mode: KXNFLWINMARGIN-26NOV2",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1795573585779-066f01",
-      "ts": "2026-11-25T02:26:25Z",
-      "book": "W13-GBLAR",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-GBLAR): loop_exceptions=1. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795574316017-da582c",
       "ts": "2026-11-25T02:38:36Z",
@@ -4369,6 +4345,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
+      "severity": "warn"
+    },
+    {
+      "id": "1795665699713-71d38b",
+      "ts": "2026-11-26T04:01:39Z",
+      "book": "W13-GBLAR",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: anchor stale > 30 min",
       "severity": "warn"
     }
   ]
