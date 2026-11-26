@@ -1,6 +1,6 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T15:55:28.967061Z",
+  "generated_at": "2026-11-26T15:56:53.178070Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -62,7 +62,9 @@
         "when": "starts 11:40am CT, up to $100 in all",
         "at": "2026-11-26T17:40:00Z",
         "stuck": false,
-        "last_fill": "2026-11-26T05:28:51Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-26T05:28:51Z",
+        "lag_note": "Price 16c matches the crowd."
       },
       {
         "side": "CHI by 15+",
@@ -88,8 +90,9 @@
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): CHI by 15+.",
+          "Lagging (150+ behind the leader): CHI by 7-14, CHI by 15+.",
           "CHI by 15+: 805 behind. Crowd is quiet here (20 traded).",
+          "CHI by 7-14: 473 behind. Price 16c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -148,7 +151,7 @@
         "held": 361.8,
         "resting": 334.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.16
       },
       {
@@ -185,28 +188,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T15:54:33Z"
+    "ts": "2026-11-26T15:56:34Z"
   },
   "posts": [
-    {
-      "id": "1795536123861-8a41be",
-      "ts": "2026-11-24T16:02:03Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,157 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795536298155-0a9e02",
-      "ts": "2026-11-24T16:04:58Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +138 (+1.3% of bankroll)\nDET 7-14: +88 (+0.8% of bankroll)\nDET 15+: +138 (+1.3% of bankroll)\nCHI 1-6: -399 (-3.7% of bankroll)\nCHI 7-14: +138 (+1.3% of bankroll)\nCHI 15+: +138 (+1.3% of bankroll)\nCollected $138 premium ($0 fees) | Paper margin over fair $12 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 578\nDET 7-14: 50 / 634\nDET 15+: 0 / 630\nCHI 1-6: 537 / 57\nCHI 7-14: 0 / 557\nCHI 15+: 0 / 701\nPosted book 1.09 | Sold avg 1.078 | Worst now -34 | Cash free $2500\nAnchor age 0s | Last fill 3217s ago",
-      "severity": "info"
-    },
     {
       "id": "1795537029065-6fb7ad",
       "ts": "2026-11-24T16:17:09Z",
@@ -3560,6 +3544,25 @@
       "text": "Quiet for 15 min. 1,661 resting. Next: Even-done check, 11:30am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795708583092-68bd64",
+      "ts": "2026-11-26T15:56:23Z",
+      "book": "W13-CHIDET",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W13-CHIDET: 0 orders posted in 10 min while the market traded 1086 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
+    },
+    {
+      "id": "1795708594539-3f088b",
+      "ts": "2026-11-26T15:56:34Z",
+      "book": "W13-CHIDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 12:00pm CT. Worst line -$270, goal -$150. Next: Even-done check, 11:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
