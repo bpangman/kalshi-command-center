@@ -1,6 +1,6 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T17:52:58.397295Z",
+  "generated_at": "2026-11-26T17:54:52.474148Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -26,7 +26,7 @@
         "exposure": -90.35,
         "exposure_text": "-$90",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$168); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$154); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T17:40:09Z"
@@ -37,7 +37,7 @@
         "exposure": -50.14,
         "exposure_text": "-$50",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$168); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$154); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T17:40:09Z"
@@ -74,12 +74,12 @@
         "exposure": 63.66,
         "exposure_text": "+$64",
         "move": "Step price down 1c (13c to 12c)",
-        "when": "if no fill by 11:54am CT (FILLFAIR: 10 min with no fill)",
+        "when": "next bot check (no fill for 10+ min)",
         "at": "2026-11-26T17:54:41Z",
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-26T17:44:41Z",
-        "lag_note": "Steps to 12c if no fill by 11:54am CT."
+        "lag_note": "Steps to 12c at the next check."
       }
     ],
     "sections": [
@@ -93,7 +93,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): CHI by 15+, DET by 1-6, DET by 15+.",
-          "CHI by 15+: 155 behind. Steps to 12c if no fill by 11:54am CT.",
+          "CHI by 15+: 155 behind. Steps to 12c at the next check.",
           "DET by 15+: 135 behind. Price 12c is at its floor.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
@@ -102,7 +102,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$91 is better than -$168.",
+          "Gate open: worst line -$91 is better than -$154.",
           "Batches used: 11 (max 3 per side)."
         ]
       },
@@ -110,7 +110,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$168, worst line -$91; spent $32 of $100.",
+          "Paid balancing is running: plan -$154, worst line -$91; spent $32 of $100.",
           "Kickoff 12:00pm CT: the in-game engine takes over."
         ]
       },
@@ -179,18 +179,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T17:52:19Z"
+    "ts": "2026-11-26T17:54:19Z"
   },
   "posts": [
-    {
-      "id": "1795561704640-4c2463",
-      "ts": "2026-11-24T23:08:24Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nDET 1-6: +174 (+1.6% of bankroll)\nDET 7-14: +66 (+0.6% of bankroll)\nDET 15+: +174 (+1.6% of bankroll)\nCHI 1-6: -401 (-3.7% of bankroll)\nCHI 7-14: +79 (+0.7% of bankroll)\nCHI 15+: +174 (+1.6% of bankroll)\nCollected $174 premium ($0 fees) | Paper margin over fair $14 (not realized until settlement)\nheld / resting\nDET 1-6: 0 / 578\nDET 7-14: 108 / 576\nDET 15+: 0 / 650\nCHI 1-6: 575 / 19\nCHI 7-14: 95 / 462\nCHI 15+: 0 / 723\nPosted book 1.09 | Sold avg 1.076 | Worst now -51 | Cash free $2500\nAnchor age 0s | Last fill 7634s ago",
-      "severity": "info"
-    },
     {
       "id": "1795562237937-2cb5b8",
       "ts": "2026-11-24T23:17:17Z",
@@ -3576,6 +3567,16 @@
       "kind": "update",
       "source": "narrator",
       "text": "Bot note: COVERAGE-CAP blocked DET1TO6 102@0.22 (REPLENISH batch #4): held 733 is at the cap 843 (premium 744) [tighten ",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795715599423-564b94",
+      "ts": "2026-11-26T17:53:15Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP blocked DET7TO14 38@0.17 (REPLENISH batch #4): held 835 is at the cap 836 (premium 744) [tighten ",
       "severity": "info",
       "title": "Bot note"
     }
