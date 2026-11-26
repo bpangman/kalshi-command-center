@@ -1,10 +1,10 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-26T05:03:06.981641Z",
+  "generated_at": "2026-11-26T05:04:31.259237Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
-    "headline": "In race (Ingame). Worst line -$4.",
+    "headline": "In race (Ingame). Worst line $0.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 90,336, 21,071 resting. Worst line -$4. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
+          "In race (Ingame). Sold 90,362, 21,071 resting. Worst line $0. Floor protocol off. Bot is slow (checks every 2m, set for 30s)."
         ]
       },
       {
@@ -44,18 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-26T05:02:26Z"
+    "ts": "2026-11-26T05:04:26Z"
   },
   "posts": [
-    {
-      "id": "1795610480276-6e9bd2",
-      "ts": "2026-11-25T12:41:20Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the race ends now, vs bankroll\nByeong Hun An: -151\nSam Bairstow: -151\nEliot Baker: -151\nJose Luis Ballester Barrio: -151\nRafa Cabrera Bello: -151\nJohn Catlin: -151\nCam Davis: -151\nWenyi Ding: -151\nall others (144) >= -151\nCollected $849 premium ($0 fees) | Paper margin over fair $77 (not realized until settlement)\nEvent: Adam Bland: running: T1 E; Adam Scott: running: T1 E\nCore posted book 0.27 | Worst now -151 | Cash free $10750\nAnchor age 0s (source: bovada_golf)",
-      "severity": "info"
-    },
     {
       "id": "1795610521497-205705",
       "ts": "2026-11-25T12:42:01Z",
@@ -3929,18 +3920,34 @@
         "contracts": 262.0,
         "rows": 10
       }
+    },
+    {
+      "id": "1795669446546-5a8a38",
+      "ts": "2026-11-26T05:03:58Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 78: driver RLAN x52 at 0.9c, driver MLEE x26 at 15c. Worst line $0.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 78.0,
+        "fills": [
+          {
+            "side": "driver RLAN",
+            "price": 0.009,
+            "qty": 52.0
+          },
+          {
+            "side": "driver MLEE",
+            "price": 0.15,
+            "qty": 26.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1795645692488-8b302e",
-      "ts": "2026-11-25T22:28:12Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 64 unexplained\n- DPWT-BMAPC26 - Austin Bautista has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Andre Lautee has had no resting orders for at least 10 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Alex Noren has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Adam Scott has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Austen Truslow has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Ashun Wu has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Byeong Hun An has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Brandon Robinson Thompson has had no resting orders for at least 71 min (reason unknown: no reason logged).\n- plus 56 more (fleet/state/empty_side_sentinel.json)\nBack: DPWT-BMAPC26 - Blake Proverbs is posting again.\nBack: DPWT-BMAPC26 - Haydn Barron is posting again.",
-      "severity": "warn"
-    },
     {
       "id": "1795645995978-e0e9fc",
       "ts": "2026-11-25T22:33:15Z",
@@ -4830,6 +4837,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: DPWT-BMAPC26 - MJ Maguire is posting again.\nBack: DPWT-BMAPC26 - Ugo Coussaud is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795669390063-1138a5",
+      "ts": "2026-11-26T05:03:10Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Tom McKibbin has had no resting orders for at least 10 min (reason unknown: no reason logged).\nBack: DPWT-BMAPC26 - David Puig is posting again.",
       "severity": "warn"
     }
   ]
