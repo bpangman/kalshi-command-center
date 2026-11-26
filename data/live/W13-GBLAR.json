@@ -1,43 +1,43 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-26T00:42:16.034486Z",
+  "generated_at": "2026-11-26T00:43:43.008959Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:00pm CT. Worst line -$27.",
+    "headline": "Final tightening before kickoff 7:00pm CT. Worst line -$38.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 20,
     "moves": [
       {
-        "side": "GB by 1-6",
-        "resting": "none",
-        "exposure": -27.31,
-        "exposure_text": "-$27",
+        "side": "LAR by 1-6",
+        "resting": "66 @ 25-26c",
+        "exposure": -38.09,
+        "exposure_text": "-$38",
         "move": "Holding",
         "when": "no move planned until kickoff at 7:00pm CT",
+        "at": null,
+        "stuck": false,
+        "last_fill": "2026-11-26T00:42:25Z"
+      },
+      {
+        "side": "GB by 1-6",
+        "resting": "14 @ 21c",
+        "exposure": -24.09,
+        "exposure_text": "-$24",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$169); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-24T20:48:52Z"
       },
       {
-        "side": "LAR by 1-6",
-        "resting": "80 @ 23-26c",
-        "exposure": -27.31,
-        "exposure_text": "-$27",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:00pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:40:20Z"
-      },
-      {
         "side": "LAR by 7-14",
         "resting": "75 @ 20-21c",
-        "exposure": -27.31,
-        "exposure_text": "-$27",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:00pm CT",
+        "exposure": -24.09,
+        "exposure_text": "-$24",
+        "move": "Paid balancing (trickle)",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$169); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T00:40:20Z"
@@ -45,10 +45,10 @@
       {
         "side": "GB by 7-14",
         "resting": "148 @ 16c",
-        "exposure": -26.92,
-        "exposure_text": "-$27",
+        "exposure": -23.7,
+        "exposure_text": "-$24",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$170); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$169); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T00:40:19Z"
@@ -56,10 +56,10 @@
       {
         "side": "LAR by 15+",
         "resting": "220 @ 16-22c",
-        "exposure": -26.67,
-        "exposure_text": "-$27",
+        "exposure": -23.45,
+        "exposure_text": "-$23",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$170); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$169); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T00:40:19Z"
@@ -67,41 +67,45 @@
       {
         "side": "GB by 15+",
         "resting": "274 @ 11c",
-        "exposure": 27.26,
-        "exposure_text": "+$27",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$170); up to $100 in all",
-        "at": null,
+        "exposure": 30.48,
+        "exposure_text": "+$30",
+        "move": "Step price down 1c (11c to 10c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-26T00:42:54Z",
         "stuck": false,
-        "last_fill": "2026-11-25T17:40:01Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-11-25T17:40:01Z",
+        "lag_note": "Steps to 10c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:00pm CT. Sold 3,424, 797 resting. Worst line -$27 (goal -$150). Bot logged 1 loop error."
+          "Final tightening, kickoff 7:00pm CT. Sold 3,438, 797 resting. Worst line -$38 (goal -$150). Bot logged 1 loop error."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): GB by 15+.",
+          "GB by 15+: 69 behind. Steps to 10c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$27 is better than -$170.",
-          "Batches used: 7 (max 3 per side)."
+          "Gate open: worst line -$38 is better than -$169.",
+          "Batches used: 8 (max 3 per side)."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$170, worst line -$27; spent $36 of $100.",
+          "Paid balancing is running: plan -$169, worst line -$38; spent $36 of $100.",
           "Kickoff 7:00pm CT: the in-game engine takes over."
         ]
       },
@@ -123,10 +127,10 @@
       {
         "label": "GB by 1-6",
         "held": 580.0,
-        "resting": 0.0,
+        "resting": 14.0,
         "target": null,
         "status": "even",
-        "price": null
+        "price": 0.21
       },
       {
         "label": "GB by 7-14",
@@ -141,16 +145,16 @@
         "held": 525.4,
         "resting": 274.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.11
       },
       {
         "label": "LAR by 1-6",
-        "held": 580.0,
-        "resting": 80.0,
+        "held": 594.0,
+        "resting": 66.0,
         "target": null,
         "status": "even",
-        "price": 0.23
+        "price": 0.25
       },
       {
         "label": "LAR by 7-14",
@@ -170,39 +174,9 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-26T00:41:54Z"
+    "ts": "2026-11-26T00:42:54Z"
   },
   "posts": [
-    {
-      "id": "1795487331040-7809f5",
-      "ts": "2026-11-24T02:28:51Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,254 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795488234466-9c5e4f",
-      "ts": "2026-11-24T02:43:54Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,254 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795489138022-839b26",
-      "ts": "2026-11-24T02:58:58Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,254 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795489622712-2b1ae0",
       "ts": "2026-11-24T03:07:02Z",
@@ -3480,6 +3454,76 @@
       "text": "Bot note: COVERAGE-CAP clipped LAR1TO6 220 -> 65@0.23 (REPLENISH batch #8): held 580, cap 725 [tighten 1.20x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795653754869-45b518",
+      "ts": "2026-11-26T00:42:28Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: LAR by 1-6 at 23c (14 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795653774935-5cbb6d",
+      "ts": "2026-11-26T00:42:28Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1,140: GB by 7-14 x508 at 12c, LAR by 15+ x464 at 14c, LAR by 1-6 x80 at 22c, +4 more. Worst line -$38.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1140.0,
+        "fills": [
+          {
+            "side": "GB by 7-14",
+            "price": 0.12,
+            "qty": 508.0
+          },
+          {
+            "side": "LAR by 15+",
+            "price": 0.14,
+            "qty": 464.0
+          },
+          {
+            "side": "LAR by 1-6",
+            "price": 0.22,
+            "qty": 80.0
+          },
+          {
+            "side": "LAR by 7-14",
+            "price": 0.17,
+            "qty": 47.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.14,
+            "qty": 20.0
+          },
+          {
+            "side": "LAR by 1-6",
+            "price": 0.23,
+            "qty": 14.0
+          },
+          {
+            "side": "GB by 7-14",
+            "price": 0.13,
+            "qty": 7.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795653774942-f49d3b",
+      "ts": "2026-11-26T00:42:54Z",
+      "book": "W13-GBLAR",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:00pm CT. Worst line -$38. Next: Kickoff, 7:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
