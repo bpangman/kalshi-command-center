@@ -1,12 +1,12 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T10:00:35.515444Z",
+  "generated_at": "2026-11-26T10:02:04.834379Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 12:00pm CT. Worst line -$258, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 60,
     "moves": [
       {
@@ -33,7 +33,7 @@
       },
       {
         "side": "DET by 1-6",
-        "resting": "156 @ 22-24c",
+        "resting": "181 @ 21-24c",
         "exposure": -101.73,
         "exposure_text": "-$102",
         "move": "Paid balancing (trickle)",
@@ -79,7 +79,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 12:00pm CT. Sold 2,281, 1,964 resting. Worst line -$258 (goal -$150). Kalshi trading is paused."
+          "Pregame build, kickoff 12:00pm CT. Sold 2,281, 1,964 resting. Worst line -$258 (goal -$150)."
         ]
       },
       {
@@ -180,29 +180,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T10:00:18Z"
+    "ts": "2026-11-26T10:01:19Z"
   },
   "posts": [
-    {
-      "id": "1795493934727-80d034",
-      "ts": "2026-11-24T04:18:54Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795494838482-84c460",
-      "ts": "2026-11-24T04:33:58Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,297 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795495742300-8006a5",
       "ts": "2026-11-24T04:49:02Z",
@@ -3438,6 +3418,26 @@
       "text": "Quiet for 15 min. 1,964 resting. Next: Even-done check, 11:30am CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795687259128-0317e6",
+      "ts": "2026-11-26T10:00:40Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1795687279222-5d1ac0",
+      "ts": "2026-11-26T10:01:19Z",
+      "book": "W13-CHIDET",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 12:00pm CT. Worst line -$258, goal -$150. Next: Even-done check, 11:30am CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
@@ -3835,6 +3835,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+4 on DET 1-6 @ 0.21 (maker)\n+156 on CHI 7-14 @ 0.17 (maker)\nworst outcome now -125\nheld 528/684/132/575/362/0\nIf the game ends... you make\nDET 1-6: -102 (-0.9% of bankroll)\nDET 7-14: -258 (-2.4% of bankroll)\nDET 15+: +294 (+2.7% of bankroll)\nCHI 1-6: -149 (-1.4% of bankroll)\nCHI 7-14: +64 (+0.6% of bankroll)\nCHI 15+: +426 (+4.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795687240340-3b70e8",
+      "ts": "2026-11-26T10:00:40Z",
+      "book": "W13-CHIDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
