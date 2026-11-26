@@ -1,13 +1,13 @@
 {
   "key": "W13-KCBUF",
-  "generated_at": "2026-11-26T22:21:03.069954Z",
+  "generated_at": "2026-11-26T22:22:22.234330Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 7:20pm CT. Worst line -$116, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 62,
     "moves": [
       {
         "side": "KC by 1-6",
@@ -58,35 +58,42 @@
         "resting": "659 @ 13-16c",
         "exposure": 293.51,
         "exposure_text": "+$294",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "move": "Step price down 1c (13c to 12c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-26T22:21:41Z",
         "stuck": false,
-        "last_fill": "2026-11-26T22:08:52Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-26T22:08:52Z",
+        "lag_note": "Steps to 12c at the next check."
       },
       {
         "side": "KC by 15+",
         "resting": "859 @ 10-12c",
         "exposure": 392.28,
         "exposure_text": "+$392",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "move": "Step price down 1c (10c to 9c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-26T22:21:41Z",
         "stuck": false,
-        "last_fill": "2026-11-26T05:01:07Z"
+        "also": "Also: paid balancing starts 7:00pm CT",
+        "last_fill": "2026-11-26T05:01:07Z",
+        "lag_note": "Steps to 9c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 2,808, 2,115 resting. Worst line -$116 (goal -$150)."
+          "Pregame build, kickoff 7:20pm CT. Sold 2,808, 2,115 resting. Worst line -$116 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): KC by 7-14, KC by 15+.",
+          "KC by 15+: 508 behind. Steps to 9c at the next check.",
+          "KC by 7-14: 409 behind. Steps to 12c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
@@ -168,7 +175,7 @@
         "held": 240.3,
         "resting": 658.9,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.13
       },
       {
@@ -176,24 +183,14 @@
         "held": 141.5,
         "resting": 858.5,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.1
       }
     ],
     "book": "W13-KCBUF",
-    "ts": "2026-11-26T22:20:41Z"
+    "ts": "2026-11-26T22:21:41Z"
   },
   "posts": [
-    {
-      "id": "1795553986163-a45f67",
-      "ts": "2026-11-24T20:59:46Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,232 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795554152572-c662d3",
       "ts": "2026-11-24T21:02:32Z",
@@ -3621,6 +3618,16 @@
       "text": "Checkpoint: worst line -$116. Lagging: KC by 7-14, KC by 15+.",
       "severity": "info",
       "title": "Checkpoint"
+    },
+    {
+      "id": "1795731701426-260ec5",
+      "ts": "2026-11-26T22:21:41Z",
+      "book": "W13-KCBUF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 7:20pm CT. Worst line -$116, goal -$150. Next: Even-done check, 6:50pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
