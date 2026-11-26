@@ -1,6 +1,6 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-26T00:56:04.173196Z",
+  "generated_at": "2026-11-26T00:57:31.400856Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -44,7 +44,7 @@
       },
       {
         "side": "GB by 7-14",
-        "resting": "96 @ 16c",
+        "resting": "43 @ 16c",
         "exposure": -25.51,
         "exposure_text": "-$26",
         "move": "Paid balancing (trickle)",
@@ -170,39 +170,9 @@
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-26T00:55:58Z"
+    "ts": "2026-11-26T00:56:59Z"
   },
   "posts": [
-    {
-      "id": "1795496927049-099a4e",
-      "ts": "2026-11-24T05:08:47Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,273 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795497830968-bd3e03",
-      "ts": "2026-11-24T05:23:50Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,273 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795498735642-694740",
-      "ts": "2026-11-24T05:38:55Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,273 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795499640937-73c0c0",
       "ts": "2026-11-24T05:54:00Z",
@@ -3544,18 +3514,38 @@
       "text": "Bot note: COVERAGE-CAP blocked LAR1TO6 97@0.23 (REPLENISH batch #8): held 594 is at the cap 663 (premium 568) [tighten 1",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795654619003-5d8a06",
+      "ts": "2026-11-26T00:56:41Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease GB7TO14: resting 96 -> 43 (held 594 + resting was over the cap 637 = 1.04x; tighten phas",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795654639061-cfaab1",
+      "ts": "2026-11-26T00:57:02Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -25.90, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795654644247-cfce0c",
+      "ts": "2026-11-26T00:57:24Z",
+      "book": "W13-GBLAR",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W13-GBLAR: 0 orders posted in 10 min while the market traded 7120 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1795551547811-0d5bed",
-      "ts": "2026-11-24T20:19:07Z",
-      "book": "W13-GBLAR",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-GBLAR): loop_exceptions=1. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795552185683-a42477",
       "ts": "2026-11-24T20:29:45Z",
@@ -4446,6 +4436,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-GBLAR): loop_exceptions=1. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795654622090-c9073d",
+      "ts": "2026-11-26T00:57:02Z",
+      "book": "W13-GBLAR",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nLAR 1-6: -26 (-0.2% of bankroll)\nLAR 7-14: -26 (-0.2% of bankroll)\nLAR 15+: -11 (-0.1% of bankroll)\nGB 1-6: -26 (-0.2% of bankroll)\nGB 7-14: -26 (-0.2% of bankroll)\nGB 15+: -25 (-0.2% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
