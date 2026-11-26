@@ -1,6 +1,6 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T16:45:36.225539Z",
+  "generated_at": "2026-11-26T16:47:09.203493Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -180,19 +180,9 @@
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T16:45:32Z"
+    "ts": "2026-11-26T16:46:33Z"
   },
   "posts": [
-    {
-      "id": "1795517644922-fdfdbf",
-      "ts": "2026-11-24T10:54:04Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,264 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795517937756-89af79",
       "ts": "2026-11-24T10:58:57Z",
@@ -3265,6 +3255,26 @@
       "text": "Kalshi refused a post on PHI by 7-14 (89 at 9c): Kalshi API error 403 on POST /portfolio/events/orders/batche.",
       "severity": "warn",
       "title": "Post refused"
+    },
+    {
+      "id": "1795711613468-f4eaf5",
+      "ts": "2026-11-26T16:44:42Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 12: DAL by 7-14 x12 at 26c. Worst line -$369.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 12.0,
+        "fills": [
+          {
+            "side": "DAL by 7-14",
+            "price": 0.26,
+            "qty": 12.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -3527,6 +3537,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-PHIDAL): held worst -371.97 (backstop -300) or lagging gap 570 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795711548080-a18194",
+      "ts": "2026-11-26T16:45:48Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+12 on DAL 7-14 @ 0.26 (maker)\nworst outcome now -201\nheld 9/312/227/16/570/0\nIf the game ends... you make\nDAL 1-6: +192 (+1.8% of bankroll)\nDAL 7-14: -111 (-1.0% of bankroll)\nDAL 15+: -26 (-0.2% of bankroll)\nPHI 1-6: +185 (+1.7% of bankroll)\nPHI 7-14: -369 (-3.5% of bankroll)\nPHI 15+: +201 (+1.9% of bankroll)",
       "severity": "warn"
     }
   ]
