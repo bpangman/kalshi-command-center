@@ -1,124 +1,47 @@
 {
   "key": "W13-PHIDAL",
-  "generated_at": "2026-11-26T21:27:07.433111Z",
+  "generated_at": "2026-11-26T21:28:31.065722Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 3:30pm CT. Worst line -$33.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$33.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "DAL by 1-6",
-        "resting": "50 @ 21-23c",
-        "exposure": -33.15,
-        "exposure_text": "-$33",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 3:30pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T21:14:20Z"
-      },
-      {
-        "side": "PHI by 1-6",
-        "resting": "54 @ 12-14c",
-        "exposure": -32.4,
-        "exposure_text": "-$32",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T21:21:15Z"
-      },
-      {
-        "side": "DAL by 15+",
-        "resting": "234 @ 34-38c",
-        "exposure": -6.4,
-        "exposure_text": "-$6",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T21:21:15Z"
-      },
-      {
-        "side": "PHI by 15+",
-        "resting": "75 @ 4-6c",
-        "exposure": -4.4,
-        "exposure_text": "-$4",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T20:47:58Z"
-      },
-      {
-        "side": "PHI by 7-14",
-        "resting": "113 @ 7-9c",
-        "exposure": 0.6,
-        "exposure_text": "+$1",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T14:30:57Z"
-      },
-      {
-        "side": "DAL by 7-14",
-        "resting": "86 @ 26-29c",
-        "exposure": 18.6,
-        "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T21:25:27Z"
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 3:30pm CT. Sold 3,481, 612 resting. Worst line -$33 (goal -$150)."
+          "In game (Ingame). Sold 3,481, 612 resting. Worst line -$33. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$33 is better than -$150.",
-          "Batches used: 10 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$33; spent $10 of $100.",
-          "Kickoff 3:30pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-26T21:30:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "DAL by 1-6",
@@ -126,7 +49,7 @@
         "resting": 50.0,
         "target": null,
         "status": "even",
-        "price": 0.21
+        "price": null
       },
       {
         "label": "DAL by 7-14",
@@ -134,7 +57,7 @@
         "resting": 86.0,
         "target": null,
         "status": "even",
-        "price": 0.26
+        "price": null
       },
       {
         "label": "DAL by 15+",
@@ -142,7 +65,7 @@
         "resting": 234.0,
         "target": null,
         "status": "even",
-        "price": 0.34
+        "price": null
       },
       {
         "label": "PHI by 1-6",
@@ -150,7 +73,7 @@
         "resting": 54.0,
         "target": null,
         "status": "even",
-        "price": 0.12
+        "price": null
       },
       {
         "label": "PHI by 7-14",
@@ -158,7 +81,7 @@
         "resting": 113.0,
         "target": null,
         "status": "even",
-        "price": 0.07
+        "price": null
       },
       {
         "label": "PHI by 15+",
@@ -166,53 +89,21 @@
         "resting": 75.0,
         "target": null,
         "status": "even",
-        "price": 0.04
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W13-PHIDAL",
-    "ts": "2026-11-26T21:27:03Z"
+    "ts": "2026-11-26T21:28:03Z"
   },
   "posts": [
-    {
-      "id": "1795594687794-e0937f",
-      "ts": "2026-11-25T08:18:07Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795595598193-aaef88",
-      "ts": "2026-11-25T08:33:18Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795596508281-debbba",
-      "ts": "2026-11-25T08:48:28Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795597415299-bf76cc",
-      "ts": "2026-11-25T09:03:35Z",
-      "book": "W13-PHIDAL",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,255 resting. Next: Even-done check, Thu 3:00pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795597798240-715c9b",
       "ts": "2026-11-25T09:09:58Z",
@@ -3582,6 +3473,46 @@
       "text": "Bot note: COVERAGE-CAP blocked DAL1TO6 98@0.21 (REPLENISH batch #2): held 604 is at the cap 659 (premium 571) [tighten 1",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795728463453-c4d462",
+      "ts": "2026-11-26T21:27:26Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -33.15, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795728483642-6144de",
+      "ts": "2026-11-26T21:27:48Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26NOV26PHIDAL-DAL15PLUS: held floor -83, resting 234 -> cap 116, trimmed 118 hi",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795728483647-db56aa",
+      "ts": "2026-11-26T21:28:03Z",
+      "book": "W13-PHIDAL",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795728483648-9b15c8",
+      "ts": "2026-11-26T21:28:03Z",
+      "book": "W13-PHIDAL",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$33.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
@@ -4159,6 +4090,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+66 on PHI 1-6 @ 0.11 (taker)\n+11 on DAL 15+ @ 0.33 (taker)\n+39 on DAL 7-14 @ 0.26 (maker)\nworst outcome now -109\nheld 604/351/577/603/570/575\nIf the game ends... you make\nDAL 1-6: -85 (-0.8% of bankroll)\nDAL 7-14: +168 (+1.6% of bankroll)\nDAL 15+: -59 (-0.6% of bankroll)\nPHI 1-6: -85 (-0.8% of bankroll)\nPHI 7-14: -52 (-0.5% of bankroll)\nPHI 15+: -57 (-0.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795728446988-23124a",
+      "ts": "2026-11-26T21:27:26Z",
+      "book": "W13-PHIDAL",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nDAL 1-6: -33 (-0.3% of bankroll)\nDAL 7-14: +19 (+0.2% of bankroll)\nDAL 15+: -6 (-0.1% of bankroll)\nPHI 1-6: -32 (-0.3% of bankroll)\nPHI 7-14: +1 (+0.0% of bankroll)\nPHI 15+: -4 (-0.0% of bankroll)",
       "severity": "warn"
     }
   ]
