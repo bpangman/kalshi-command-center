@@ -1,6 +1,6 @@
 {
   "key": "W13-CHIDET",
-  "generated_at": "2026-11-26T19:42:20.682254Z",
+  "generated_at": "2026-11-26T19:43:44.398490Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,097, 21 resting. Worst line -$38. Game 50% done."
+          "In game (Ingame). Sold 5,097, 112 resting. Worst line -$38. Game 50% done."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "label": "CHI by 15+",
         "held": 751.0,
-        "resting": 21.0,
+        "resting": 112.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-CHIDET",
-    "ts": "2026-11-26T19:41:52Z"
+    "ts": "2026-11-26T19:42:52Z"
   },
   "posts": [
-    {
-      "id": "1795589308664-3b988a",
-      "ts": "2026-11-25T06:48:28Z",
-      "book": "W13-CHIDET",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,339 resting. Next: Even-done check, Thu 11:30am CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795590218830-70fc68",
       "ts": "2026-11-25T07:03:38Z",
@@ -3680,6 +3670,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795722213139-a57b94",
+      "ts": "2026-11-26T19:41:31Z",
+      "book": "W13-CHIDET",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 5: DET by 1-6 x5 at 30c. Worst line -$38.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 5.0,
+        "fills": [
+          {
+            "side": "DET by 1-6",
+            "price": 0.3,
+            "qty": 5.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4428,6 +4438,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- W13-CHIDET - Detroit by 7 to 14 has had no resting orders for at least 71 min (reason unknown: no reason logged).\nBack: W13-CHIDET - Detroit by 1 to 6 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795722154482-5dd1ee",
+      "ts": "2026-11-26T19:42:34Z",
+      "book": "W13-CHIDET",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+15 on DET 7-14 @ 0.25 (maker)\n+5 on DET 1-6 @ 0.30 (maker)\nworst outcome now -36\nheld 878/878/843/878/870/751\nIf the game ends... you make\nDET 1-6: -38 (-0.4% of bankroll)\nDET 7-14: -37 (-0.3% of bankroll)\nDET 15+: -3 (-0.0% of bankroll)\nCHI 1-6: -38 (-0.4% of bankroll)\nCHI 7-14: -30 (-0.3% of bankroll)\nCHI 15+: +89 (+0.8% of bankroll)",
       "severity": "warn"
     }
   ]
