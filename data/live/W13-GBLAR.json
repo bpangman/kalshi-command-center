@@ -1,207 +1,109 @@
 {
   "key": "W13-GBLAR",
-  "generated_at": "2026-11-26T00:57:31.400856Z",
+  "generated_at": "2026-11-26T00:58:59.130926Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:00pm CT. Worst line -$26.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$26.",
     "confidence": "medium",
     "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "GB by 1-6",
-        "resting": "14 @ 21c",
-        "exposure": -25.9,
-        "exposure_text": "-$26",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:00pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:45:37Z"
-      },
-      {
-        "side": "LAR by 1-6",
-        "resting": "66 @ 25-26c",
-        "exposure": -25.9,
-        "exposure_text": "-$26",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:00pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:42:25Z"
-      },
-      {
-        "side": "LAR by 7-14",
-        "resting": "75 @ 20-21c",
-        "exposure": -25.9,
-        "exposure_text": "-$26",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:00pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:45:37Z"
-      },
-      {
-        "side": "GB by 7-14",
-        "resting": "43 @ 16c",
-        "exposure": -25.51,
-        "exposure_text": "-$26",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:45:37Z"
-      },
-      {
-        "side": "GB by 15+",
-        "resting": "206 @ 11c",
-        "exposure": -25.33,
-        "exposure_text": "-$25",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:45:37Z"
-      },
-      {
-        "side": "LAR by 15+",
-        "resting": "220 @ 16-22c",
-        "exposure": -11.26,
-        "exposure_text": "-$11",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-26T00:40:19Z"
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:00pm CT. Sold 3,548, 677 resting. Worst line -$26 (goal -$150). Bot logged 1 loop error."
+          "In game (Ingame). Sold 3,548, 17 resting. Worst line -$26. Game 0% done. Bot logged 1 loop error."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$26 is better than -$150.",
-          "Batches used: 8 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$26; spent $38 of $100.",
-          "Kickoff 7:00pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-26T01:00:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "GB by 1-6",
         "held": 594.0,
-        "resting": 14.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.21
+        "price": null
       },
       {
         "label": "GB by 7-14",
         "held": 593.6,
-        "resting": 96.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.16
+        "price": null
       },
       {
         "label": "GB by 15+",
         "held": 593.4,
-        "resting": 206.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.11
+        "price": null
       },
       {
         "label": "LAR by 1-6",
         "held": 594.0,
-        "resting": 66.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.25
+        "price": null
       },
       {
         "label": "LAR by 7-14",
         "held": 594.0,
-        "resting": 75.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": null
       },
       {
         "label": "LAR by 15+",
         "held": 579.4,
-        "resting": 220.0,
+        "resting": 17.0,
         "target": null,
         "status": "even",
-        "price": 0.16
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W13-GBLAR",
-    "ts": "2026-11-26T00:56:59Z"
+    "ts": "2026-11-26T00:57:59Z"
   },
   "posts": [
-    {
-      "id": "1795499640937-73c0c0",
-      "ts": "2026-11-24T05:54:00Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,273 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795500505122-3397e5",
-      "ts": "2026-11-24T06:08:25Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nLAR 1-6: +15 (+0.1% of bankroll)\nLAR 7-14: +15 (+0.1% of bankroll)\nLAR 15+: +15 (+0.1% of bankroll)\nGB 1-6: -1 (-0.0% of bankroll)\nGB 7-14: -30 (-0.3% of bankroll)\nGB 15+: -36 (-0.3% of bankroll)\nCollected $15 premium ($0 fees) | Paper margin over fair $0 (not realized until settlement)\nheld / resting\nLAR 1-6: 0 / 322\nLAR 7-14: 0 / 583\nLAR 15+: 0 / 1000\nGB 1-6: 16 / 564\nGB 7-14: 45 / 855\nGB 15+: 51 / 949\nPosted book 1.11 | Sold avg 1.079 | Worst now -246 | Cash free $2500\nAnchor age 0s | Last fill 26740s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795500546955-36073c",
-      "ts": "2026-11-24T06:09:06Z",
-      "book": "W13-GBLAR",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 4,273 resting. Next: Even-done check, Wed 6:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795501452562-564e0d",
       "ts": "2026-11-24T06:24:12Z",
@@ -3543,6 +3445,35 @@
       "source": "bot",
       "text": "Inactivity on W13-GBLAR: 0 orders posted in 10 min while the market traded 7120 contracts. Cause: our prices had no room to sell on most buckets. Remedy: raised the room slack on tied buckets for 15 min.",
       "severity": "info"
+    },
+    {
+      "id": "1795654666240-50599b",
+      "ts": "2026-11-26T00:57:46Z",
+      "book": "W13-GBLAR",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: GB now 45%",
+      "severity": "info"
+    },
+    {
+      "id": "1795654679285-b953fb",
+      "ts": "2026-11-26T00:57:59Z",
+      "book": "W13-GBLAR",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795654679285-64169b",
+      "ts": "2026-11-26T00:57:59Z",
+      "book": "W13-GBLAR",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$26.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
