@@ -1,10 +1,10 @@
 {
   "key": "W13-KCBUF",
-  "generated_at": "2026-11-27T03:09:57.293886Z",
+  "generated_at": "2026-11-27T03:12:03.280510Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$13.",
+    "headline": "In game (Ingame). Worst line +$18.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,597, 96 resting. Worst line +$13. Game 52% done."
+          "In game (Ingame). Sold 6,675, 19 resting. Worst line +$18. Game 56% done."
         ]
       },
       {
@@ -85,8 +85,8 @@
       },
       {
         "label": "KC by 15+",
-        "held": 1027.7,
-        "resting": 96.0,
+        "held": 1105.0,
+        "resting": 18.6,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-KCBUF",
-    "ts": "2026-11-27T03:09:01Z"
+    "ts": "2026-11-27T03:12:02Z"
   },
   "posts": [
-    {
-      "id": "1795649493220-720f9a",
-      "ts": "2026-11-25T23:31:33Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,584 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795650398877-1b133f",
       "ts": "2026-11-25T23:46:38Z",
@@ -4240,6 +4230,26 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795749082494-92ae7e",
+      "ts": "2026-11-27T03:09:16Z",
+      "book": "W13-KCBUF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 44: KC by 15+ x44 at 7c. Worst line +$18.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 44.0,
+        "fills": [
+          {
+            "side": "KC by 15+",
+            "price": 0.07,
+            "qty": 44.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4880,6 +4890,24 @@
       "kind": "audit",
       "source": "bot",
       "text": "+30 on KC 7-14 @ 0.11 (maker)\n+9 on KC 7-14 @ 0.13 (maker)\n+16 on BUF 7-14 @ 0.27 (maker)\n+14 on BUF 1-6 @ 0.27 (maker)\nworst outcome now +25\nheld 1133/1078/1119/1133/1040/968\nIf the game ends... you make\nBUF 1-6: -3 (-0.0% of bankroll)\nBUF 7-14: +52 (+0.5% of bankroll)\nBUF 15+: +11 (+0.1% of bankroll)\nKC 1-6: -4 (-0.0% of bankroll)\nKC 7-14: +90 (+0.8% of bankroll)\nKC 15+: +162 (+1.5% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795749118995-2b67a2",
+      "ts": "2026-11-27T03:11:58Z",
+      "book": "W13-KCBUF",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W13-KCBUF): inactive, cause=room_zero, remedy=raise_slack, posts_last_10m=0, market_volume_last_30m=14610. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795749123017-e6cc92",
+      "ts": "2026-11-27T03:12:03Z",
+      "book": "W13-KCBUF",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+31 on KC 7-14 @ 0.12 (maker)\n+77 on KC 15+ @ 0.07 (maker)\nworst outcome now +19\nheld 1133/1114/1119/1133/1071/1105\nIf the game ends... you make\nBUF 1-6: +19 (+0.2% of bankroll)\nBUF 7-14: +38 (+0.3% of bankroll)\nBUF 15+: +33 (+0.3% of bankroll)\nKC 1-6: +18 (+0.2% of bankroll)\nKC 7-14: +80 (+0.7% of bankroll)\nKC 15+: +46 (+0.4% of bankroll)",
       "severity": "warn"
     }
   ]
