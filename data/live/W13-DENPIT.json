@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T16:18:59.245885Z",
+  "generated_at": "2026-11-27T16:20:16.065337Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -180,29 +180,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T16:18:50Z"
+    "ts": "2026-11-27T16:19:50Z"
   },
   "posts": [
-    {
-      "id": "1795623251443-14230c",
-      "ts": "2026-11-25T16:14:11Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,307 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795624161594-f71f42",
-      "ts": "2026-11-25T16:29:21Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,307 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795625067529-f25ad3",
       "ts": "2026-11-25T16:44:27Z",
@@ -3558,18 +3538,28 @@
       "text": "Quiet for 15 min. 2,836 resting. Next: Even-done check, 1:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795796390603-87dd80",
+      "ts": "2026-11-27T16:19:39Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot restarted. It adopts the orders already resting.",
+      "severity": "warn",
+      "title": "Bot restarted"
+    },
+    {
+      "id": "1795796415758-cdf6c4",
+      "ts": "2026-11-27T16:20:15Z",
+      "book": "W13-DENPIT",
+      "kind": "text",
+      "source": "bot",
+      "text": "Inactivity on W13-DENPIT: 0 orders posted in 10 min while the market traded 1071 contracts. Cause: no specific cause could be identified.",
+      "severity": "info"
     }
   ],
   "audits": [
-    {
-      "id": "1795702370820-90c95b",
-      "ts": "2026-11-26T14:12:50Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -364.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795704196582-af0fb3",
       "ts": "2026-11-26T14:43:16Z",
@@ -4459,6 +4449,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-DENPIT): held worst -304.21 (backstop -300) or lagging gap 807 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795796379801-746347",
+      "ts": "2026-11-27T16:19:39Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: websocket feed recovered, back off REST",
       "severity": "warn"
     }
   ]
