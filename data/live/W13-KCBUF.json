@@ -1,10 +1,10 @@
 {
   "key": "W13-KCBUF",
-  "generated_at": "2026-11-27T02:24:28.173644Z",
+  "generated_at": "2026-11-27T02:26:08.683997Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$12.",
+    "headline": "In game (Ingame). Worst line -$14.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,360, 326 resting. Worst line -$12. Game 37% done."
+          "In game (Ingame). Sold 6,363, 328 resting. Worst line -$14. Game 37% done."
         ]
       },
       {
@@ -69,8 +69,8 @@
       },
       {
         "label": "KC by 1-6",
-        "held": 1123.4,
-        "resting": 5.0,
+        "held": 1126.4,
+        "resting": 7.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-KCBUF",
-    "ts": "2026-11-27T02:23:49Z"
+    "ts": "2026-11-27T02:25:50Z"
   },
   "posts": [
-    {
-      "id": "1795642924799-bf1a95",
-      "ts": "2026-11-25T21:42:04Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,627 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795643833985-f6088a",
       "ts": "2026-11-25T21:57:13Z",
@@ -4161,6 +4151,31 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795746309877-856453",
+      "ts": "2026-11-27T02:24:08Z",
+      "book": "W13-KCBUF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 4: KC by 1-6 x3 at 19c, BUF by 1-6 x1 at 22c. Worst line -$14.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 4.0,
+        "fills": [
+          {
+            "side": "KC by 1-6",
+            "price": 0.19,
+            "qty": 3.0
+          },
+          {
+            "side": "BUF by 1-6",
+            "price": 0.22,
+            "qty": 1.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
@@ -4765,6 +4780,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+28 on BUF 15+ @ 0.23 (maker)\n+35 on BUF 15+ @ 0.25 (maker)\n+2 on BUF 15+ @ 0.27 (maker)\n+16 on BUF 15+ @ 0.30 (maker)\n+11 on BUF 15+ @ 0.33 (maker)\n+34 on BUF 1-6 @ 0.24 (maker)\nworst outcome now -11\nheld 1118/1063/1106/1096/968/968\nIf the game ends... you make\nBUF 1-6: -15 (-0.1% of bankroll)\nBUF 7-14: +40 (+0.4% of bankroll)\nBUF 15+: -3 (-0.0% of bankroll)\nKC 1-6: +6 (+0.1% of bankroll)\nKC 7-14: +134 (+1.2% of bankroll)\nKC 15+: +135 (+1.2% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795746351989-231354",
+      "ts": "2026-11-27T02:25:51Z",
+      "book": "W13-KCBUF",
+      "kind": "audit",
+      "source": "sentinel",
+      "text": "Empty side watch: 1 unexplained\n- W13-KCBUF - Buffalo by 15 or more has had no resting orders for at least 10 min (reason unknown: no reason logged).",
       "severity": "warn"
     }
   ]
