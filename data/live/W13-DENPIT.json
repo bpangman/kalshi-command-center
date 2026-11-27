@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T19:09:13.828646Z",
+  "generated_at": "2026-11-27T19:10:29.836890Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -33,14 +33,16 @@
       },
       {
         "side": "DEN by 1-6",
-        "resting": "256 @ 25-27c",
+        "resting": "288 @ 24-27c",
         "exposure": -94.78,
         "exposure_text": "-$95",
         "move": "Paid balancing (trickle)",
         "when": "starts 1:40pm CT, up to $100 in all",
         "at": "2026-11-27T19:40:00Z",
         "stuck": false,
-        "last_fill": "2026-11-27T18:36:18Z"
+        "also": "Also: price step",
+        "last_fill": "2026-11-27T18:36:18Z",
+        "lag_note": "Price 24c matches the crowd."
       },
       {
         "side": "PIT by 15+",
@@ -75,7 +77,7 @@
         "exposure_text": "+$493",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T19:08:51Z",
+        "at": "2026-11-27T19:09:52Z",
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "last_fill": "2026-11-27T13:03:21Z",
@@ -86,13 +88,13 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 2:00pm CT. Sold 2,557, 2,753 resting. Worst line -$351 (goal -$150)."
+          "Pregame build, kickoff 2:00pm CT. Sold 2,557, 2,785 resting. Worst line -$351 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): PIT by 1-6, PIT by 7-14, PIT by 15+.",
+          "Lagging (150+ behind the leader): DEN by 1-6, PIT by 1-6, PIT by 7-14, PIT by 15+.",
           "PIT by 7-14: 844 behind. Steps to 11c at the next check.",
           "PIT by 1-6: 827 behind. Price 17c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
@@ -143,10 +145,10 @@
       {
         "label": "DEN by 1-6",
         "held": 644.0,
-        "resting": 256.0,
+        "resting": 288.0,
         "target": null,
-        "status": "even",
-        "price": 0.25
+        "status": "lagging",
+        "price": 0.24
       },
       {
         "label": "DEN by 7-14",
@@ -190,29 +192,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T19:08:51Z"
+    "ts": "2026-11-27T19:09:52Z"
   },
   "posts": [
-    {
-      "id": "1795643529321-56d8e7",
-      "ts": "2026-11-25T21:50:03Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 5: DEN by 7-14 x5 at 21c. Worst line -$445.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 5.0,
-        "fills": [
-          {
-            "side": "DEN by 7-14",
-            "price": 0.21,
-            "qty": 5.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795643591225-246d79",
       "ts": "2026-11-25T21:51:06Z",
@@ -3592,18 +3574,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nPIT 1-6: +476 (+4.7% of bankroll)\nPIT 7-14: +493 (+4.9% of bankroll)\nPIT 15+: +472 (+4.7% of bankroll)\nDEN 1-6: -95 (-0.9% of bankroll)\nDEN 7-14: -258 (-2.5% of bankroll)\nDEN 15+: -351 (-3.5% of bankroll)\nCollected $549 premium ($0 fees) | Paper margin over fair $5 (not realized until settlement)\nEvent: PIT 7-14: PIT 0-0, Q0 0:00; DEN 7-14: DEN 0-0, Q0 0:00\nheld / resting\nPIT 1-6: 73 / 814\nPIT 7-14: 56 / 844\nPIT 15+: 77 / 823\nDEN 1-6: 644 / 256\nDEN 7-14: 807 / 16\nDEN 15+: 900 / 0\nPosted book 1.16 | Sold avg 1.018 | Worst now +37 | Cash free $2500\nAnchor age 0s | Last fill 232s ago",
       "severity": "info"
+    },
+    {
+      "id": "1795806592015-7a6a7b",
+      "ts": "2026-11-27T19:09:52Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 2:00pm CT. Worst line -$351, goal -$150. Next: Even-done check, 1:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
-    {
-      "id": "1795731782875-ebd81d",
-      "ts": "2026-11-26T22:23:02Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -363.93 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795732881070-e5647d",
       "ts": "2026-11-26T22:41:21Z",
@@ -4494,6 +4477,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-DENPIT): worst -350.78 vs floor -325.00. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795806609156-09dcce",
+      "ts": "2026-11-27T19:10:09Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 4.45 over banked margin 3.53",
+      "severity": "warn"
     }
   ]
 }
