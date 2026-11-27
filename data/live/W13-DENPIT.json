@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T22:32:01.011328Z",
+  "generated_at": "2026-11-27T22:33:17.365241Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,368, 0 resting. Worst line +$2. Game 82% done. Floor mode ON: only raising the worst line."
+          "In game (Ingame). Sold 7,368, 0 resting. Worst line +$2. Game 83% done. Floor mode ON: only raising the worst line."
         ]
       },
       {
@@ -101,18 +101,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T22:31:48Z"
+    "ts": "2026-11-27T22:32:48Z"
   },
   "posts": [
-    {
-      "id": "1795702892482-f6b2c6",
-      "ts": "2026-11-26T14:21:32Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nPIT 1-6: +292 (+2.9% of bankroll)\nPIT 7-14: +302 (+3.0% of bankroll)\nPIT 15+: +308 (+3.0% of bankroll)\nDEN 1-6: -79 (-0.8% of bankroll)\nDEN 7-14: -52 (-0.5% of bankroll)\nDEN 15+: -364 (-3.6% of bankroll)\nCollected $308 premium ($0 fees) | Paper margin over fair $2 (not realized until settlement)\nheld / resting\nPIT 1-6: 16 / 924\nPIT 7-14: 6 / 875\nPIT 15+: 0 / 670\nDEN 1-6: 386 / 239\nDEN 7-14: 360 / 312\nDEN 15+: 672 / 112\nPosted book 1.14 | Sold avg 1.068 | Worst now -110 | Cash free $2500\nAnchor age 0s | Last fill 28884s ago",
-      "severity": "info"
-    },
     {
       "id": "1795703360806-74f316",
       "ts": "2026-11-26T14:29:20Z",
@@ -4161,18 +4152,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795818789063-5eaae9",
+      "ts": "2026-11-27T22:33:09Z",
+      "book": "W13-DENPIT",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 0 resting.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1795755756104-cd1d0d",
-      "ts": "2026-11-27T05:02:36Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -419.42 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795756380193-ffce6d",
       "ts": "2026-11-27T05:13:00Z",
@@ -5062,6 +5054,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1795818771669-3709c2",
+      "ts": "2026-11-27T22:32:51Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Late window: inside the final 10 min before settlement -- harvesting above-fair asks, no longer pulling them on TTL/drift",
       "severity": "warn"
     }
   ]
