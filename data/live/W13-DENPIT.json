@@ -1,12 +1,12 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T19:39:21.883089Z",
+  "generated_at": "2026-11-27T19:40:38.605973Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 2:00pm CT. Worst line -$322, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 2:00pm CT. Worst line -$322.",
+    "confidence": "medium",
+    "confidence_note": "Timers are set, but reaching -$150 depends on the crowd.",
     "checks_every_s": 20,
     "moves": [
       {
@@ -15,7 +15,7 @@
         "exposure": -321.6,
         "exposure_text": "-$322",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 1:40pm CT",
+        "when": "no move planned until kickoff at 2:00pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T18:57:51Z"
@@ -26,8 +26,8 @@
         "exposure": -228.6,
         "exposure_text": "-$229",
         "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T18:20:06Z"
       },
@@ -37,8 +37,8 @@
         "exposure": -183.6,
         "exposure_text": "-$184",
         "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (plan unknown); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T19:25:15Z"
       },
@@ -47,11 +47,11 @@
         "resting": "823 @ 5-10c",
         "exposure": 501.4,
         "exposure_text": "+$501",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "move": "Hold price at 5c",
+        "when": "next cent is under the crowd price (4.4c)",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-27T19:02:25Z",
         "lag_note": "Price 5c is at its floor."
       },
@@ -60,11 +60,11 @@
         "resting": "814 @ 17-21c",
         "exposure": 505.43,
         "exposure_text": "+$505",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "move": "Hold price at 17c",
+        "when": "crowd pays 17c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-27T04:39:50Z",
         "lag_note": "Price 17c matches the crowd."
       },
@@ -73,11 +73,11 @@
         "resting": "844 @ 11-15c",
         "exposure": 522.52,
         "exposure_text": "+$523",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "move": "Hold price at 11c",
+        "when": "crowd pays 11c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "also": "Also: price step",
+        "also": "Also: paid balancing",
         "last_fill": "2026-11-27T13:03:21Z",
         "lag_note": "Price 11c matches the crowd."
       }
@@ -86,7 +86,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 2:00pm CT. Sold 2,675, 2,712 resting. Worst line -$322 (goal -$150)."
+          "Final tightening, kickoff 2:00pm CT. Sold 2,675, 2,712 resting. Worst line -$322 (goal -$150)."
         ]
       },
       {
@@ -110,7 +110,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 1:40pm CT: worst line to -$150 by 1:55pm CT, up to $100.",
+          "Paid balancing is running: plan unknown, worst line -$322; spent $0 of $100.",
           "Kickoff 2:00pm CT: the in-game engine takes over."
         ]
       },
@@ -184,138 +184,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T19:39:01Z"
+    "ts": "2026-11-27T19:40:02Z"
   },
   "posts": [
-    {
-      "id": "1795649211223-97f17c",
-      "ts": "2026-11-25T23:26:51Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,703 resting. Next: Even-done check, Fri 1:31pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795650117183-6524c6",
-      "ts": "2026-11-25T23:41:57Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,703 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795650579826-d5bed9",
-      "ts": "2026-11-25T23:49:23Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: DEN by 15+ at 21c (18 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
-    {
-      "id": "1795650700501-758371",
-      "ts": "2026-11-25T23:49:23Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 18: DEN by 15+ x18 at 21c. Worst line -$432.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 18.0,
-        "fills": [
-          {
-            "side": "DEN by 15+",
-            "price": 0.21,
-            "qty": 18.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795650941843-c4582a",
-      "ts": "2026-11-25T23:53:35Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 21: DEN by 7-14 x21 at 21c. Worst line -$427.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 21.0,
-        "fills": [
-          {
-            "side": "DEN by 7-14",
-            "price": 0.21,
-            "qty": 21.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795651725907-8fb64f",
-      "ts": "2026-11-26T00:08:45Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,664 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795651960183-ed6777",
-      "ts": "2026-11-26T00:12:40Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nPIT 1-6: +206 (+2.0% of bankroll)\nPIT 7-14: +216 (+2.1% of bankroll)\nPIT 15+: +222 (+2.2% of bankroll)\nDEN 1-6: -40 (-0.4% of bankroll)\nDEN 7-14: +105 (+1.0% of bankroll)\nDEN 15+: -427 (-4.2% of bankroll)\nCollected $222 premium ($0 fees) | Paper margin over fair $6 (not realized until settlement)\nheld / resting\nPIT 1-6: 16 / 559\nPIT 7-14: 6 / 638\nPIT 15+: 0 / 650\nDEN 1-6: 262 / 332\nDEN 7-14: 117 / 461\nDEN 15+: 649 / 23\nPosted book 1.12 | Sold avg 1.068 | Worst now -0 | Cash free $2500\nAnchor age 0s | Last fill 1198s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795652629888-50929f",
-      "ts": "2026-11-26T00:23:49Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,664 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795653533675-d17882",
-      "ts": "2026-11-26T00:38:53Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,664 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795654438262-ebfb3e",
-      "ts": "2026-11-26T00:53:58Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,664 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795655342194-dd2e45",
-      "ts": "2026-11-26T01:09:02Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,664 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795655593783-bdb0c4",
       "ts": "2026-11-26T01:13:13Z",
@@ -3571,27 +3442,117 @@
         "contracts": 744.0,
         "rows": 1
       }
-    }
-  ],
-  "audits": [
+    },
     {
-      "id": "1795735463400-7b0c72",
-      "ts": "2026-11-26T23:24:23Z",
+      "id": "1795808402357-72a9fd",
+      "ts": "2026-11-27T19:40:02Z",
       "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -355.71 vs floor -325.00. Check the command center.",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795808402359-8f0880",
+      "ts": "2026-11-27T19:40:02Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 2:00pm CT. Worst line -$322. Next: Paid balancing starts, 1:40pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1795808402859-c3b197",
+      "ts": "2026-11-27T19:40:02Z",
+      "book": "W13-DENPIT",
+      "kind": "text",
+      "source": "bot",
+      "text": "Entering the game -322 on any DEN win; PIT buckets +501; no buyback by rule",
+      "severity": "info"
+    },
+    {
+      "id": "1795808403000-46052e",
+      "ts": "2026-11-27T19:40:03Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "trickle",
+      "text": "W13-DENPIT: selling 842 PIT 7-14 at 9c + 704 PIT 1-6 at 15c + 107 PIT 15+ at 3c + 138 DEN 1-6 at 23c + 93 DEN 7-14 at 22c into the crowd's bid (about $28) to cut the worst case from -$322 to -$99, a paid sale under fair value. Reply in Claude if you want it stopped.",
       "severity": "critical"
     },
     {
-      "id": "1795735761714-567d52",
-      "ts": "2026-11-26T23:29:21Z",
+      "id": "1795808422499-3b026c",
+      "ts": "2026-11-27T19:40:02Z",
       "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "bot",
-      "text": "+92 on DEN 15+ @ 0.24 (maker)\nworst outcome now -92\nheld 16/6/0/386/399/764\nIf the game ends... you make\nPIT 1-6: +323 (+3.2% of bankroll)\nPIT 7-14: +332 (+3.3% of bankroll)\nPIT 15+: +338 (+3.3% of bankroll)\nDEN 1-6: -48 (-0.5% of bankroll)\nDEN 7-14: -61 (-0.6% of bankroll)\nDEN 15+: -426 (-4.2% of bankroll)",
-      "severity": "warn"
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$322; goal -$150 by 1:55pm CT.",
+      "severity": "info",
+      "title": "Trickle"
     },
+    {
+      "id": "1795808422501-6c2289",
+      "ts": "2026-11-27T19:40:02Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: COVERAGE-CAP decrease PIT1TO6: resting 814 -> 762 (held 73 + resting was over the cap 836 = 1.22x; tighten pha",
+      "severity": "info",
+      "title": "Bot note"
+    },
+    {
+      "id": "1795808422502-8ec607",
+      "ts": "2026-11-27T19:40:03Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 842 PIT by 7-14 at the bid 9c. Worst line -$322. Cost $14.17.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795808422502-1a11a9",
+      "ts": "2026-11-27T19:40:03Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 704 PIT by 1-6 at the bid 15c. Worst line -$322. Cost $6.29.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795808422503-fcf7e4",
+      "ts": "2026-11-27T19:40:03Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 107 PIT by 15+ at the bid 3c. Worst line -$322. Cost $3.29.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795808422503-aebcb3",
+      "ts": "2026-11-27T19:40:03Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 138 DEN by 1-6 at the bid 23c. Worst line -$322. Cost $2.85.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795808422503-e96082",
+      "ts": "2026-11-27T19:40:03Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Balancing: sold 93 DEN by 7-14 at the bid 22c. Worst line -$322. Cost $1.54.",
+      "severity": "info",
+      "title": "Trickle"
+    }
+  ],
+  "audits": [
     {
       "id": "1795736584327-2148ac",
       "ts": "2026-11-26T23:43:04Z",
@@ -4472,6 +4433,24 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-DENPIT): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=7940. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795808424660-60c2ba",
+      "ts": "2026-11-27T19:40:24Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 17.68 over banked margin 4.68",
+      "severity": "warn"
+    },
+    {
+      "id": "1795808424661-956845",
+      "ts": "2026-11-27T19:40:24Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Lopsided: DEN 1-6 worst outcome -579\nIf the game ends... you make\nPIT 1-6: +25 (+0.2% of bankroll)\nPIT 7-14: -96 (-0.9% of bankroll)\nPIT 15+: +618 (+6.1% of bankroll)\nDEN 1-6: -98 (-1.0% of bankroll)\nDEN 7-14: -98 (-1.0% of bankroll)\nDEN 15+: -98 (-1.0% of bankroll)",
       "severity": "warn"
     }
   ]
