@@ -1,10 +1,10 @@
 {
   "key": "W13-KCBUF",
-  "generated_at": "2026-11-27T01:00:19.528937Z",
+  "generated_at": "2026-11-27T01:02:08.465319Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Pregame build",
-    "headline": "Building toward kickoff 7:20pm CT. Worst line -$47, goal -$150.",
+    "phase": "Final tightening",
+    "headline": "Final tightening before kickoff 7:20pm CT. Worst line -$47.",
     "confidence": "high",
     "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
     "checks_every_s": 20,
@@ -15,7 +15,7 @@
         "exposure": -47.17,
         "exposure_text": "-$47",
         "move": "Holding",
-        "when": "no move planned until paid balancing starts at 7:00pm CT",
+        "when": "no move planned until kickoff at 7:20pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-26T23:41:35Z"
@@ -26,8 +26,8 @@
         "exposure": -42.21,
         "exposure_text": "-$42",
         "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T00:52:40Z"
       },
@@ -37,8 +37,8 @@
         "exposure": -17.63,
         "exposure_text": "-$18",
         "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T00:37:34Z"
       },
@@ -48,8 +48,8 @@
         "exposure": 25.57,
         "exposure_text": "+$26",
         "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
+        "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T00:51:23Z"
       },
@@ -58,42 +58,49 @@
         "resting": "170 @ 22-24c",
         "exposure": 123.48,
         "exposure_text": "+$123",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "move": "Hold price at 22c",
+        "when": "next cent is under the crowd price (21.2c)",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-27T00:18:01Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-11-27T00:18:01Z",
+        "lag_note": "Price 22c is at its floor."
       },
       {
         "side": "KC by 7-14",
         "resting": "228 @ 15-16c",
         "exposure": 181.04,
         "exposure_text": "+$181",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 7:00pm CT, up to $100 in all",
-        "at": "2026-11-27T01:00:00Z",
+        "move": "Step price down 1c (15c to 14c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-27T01:01:24Z",
         "stuck": false,
-        "last_fill": "2026-11-26T23:48:45Z"
+        "also": "Also: paid balancing",
+        "last_fill": "2026-11-26T23:48:45Z",
+        "lag_note": "Steps to 14c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 7:20pm CT. Sold 5,292, 504 resting. Worst line -$47 (goal -$150)."
+          "Final tightening, kickoff 7:20pm CT. Sold 5,292, 504 resting. Worst line -$47 (goal -$150)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): BUF by 7-14, KC by 7-14.",
+          "KC by 7-14: 228 behind. Steps to 14c at the next check.",
+          "BUF by 7-14: 171 behind. Price 22c is at its floor.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$47 is better than -$200.",
+          "Gate open: worst line -$47 is better than -$150.",
           "Batches used: 10 (max 3 per side)."
         ]
       },
@@ -101,7 +108,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing starts 7:00pm CT: worst line to -$150 by 7:15pm CT, up to $100.",
+          "Paid balancing is running: plan -$150, worst line -$47; spent $0 of $100.",
           "Kickoff 7:20pm CT: the in-game engine takes over."
         ]
       },
@@ -113,11 +120,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-27T01:00:00Z",
-        "label": "Paid balancing starts",
-        "detail": "Worst line to -$150 by 7:15pm CT."
-      },
       {
         "at": "2026-11-27T01:20:00Z",
         "label": "Kickoff",
@@ -138,7 +140,7 @@
         "held": 795.8,
         "resting": 170.4,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.22
       },
       {
@@ -162,7 +164,7 @@
         "held": 738.2,
         "resting": 228.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.15
       },
       {
@@ -175,59 +177,9 @@
       }
     ],
     "book": "W13-KCBUF",
-    "ts": "2026-11-27T00:59:24Z"
+    "ts": "2026-11-27T01:01:24Z"
   },
   "posts": [
-    {
-      "id": "1795601571031-e19af5",
-      "ts": "2026-11-25T10:12:51Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,669 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795602476917-067350",
-      "ts": "2026-11-25T10:27:56Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,669 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795603385331-3de4e1",
-      "ts": "2026-11-25T10:43:05Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,669 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795603910196-5b219a",
-      "ts": "2026-11-25T10:49:42Z",
-      "book": "W13-KCBUF",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 41: BUF by 7-14 x41 at 20c. Worst line -$189.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 41.0,
-        "fills": [
-          {
-            "side": "BUF by 7-14",
-            "price": 0.2,
-            "qty": 41.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795604010571-edcb5a",
       "ts": "2026-11-25T10:51:18Z",
@@ -3839,6 +3791,46 @@
       "text": "Bot note: COVERAGE-CAP clipped BUF7TO14 213 -> 212@0.22 (REPLENISH batch #8): held 796, cap 1179 [tighten 1.25x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795741224653-6ff7ea",
+      "ts": "2026-11-27T01:00:20Z",
+      "book": "W13-KCBUF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Paid balancing started. Worst line -$47; goal -$150 by 7:15pm CT.",
+      "severity": "info",
+      "title": "Trickle"
+    },
+    {
+      "id": "1795741224664-589e08",
+      "ts": "2026-11-27T01:00:24Z",
+      "book": "W13-KCBUF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Pregame build to Final tightening.",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795741224664-852149",
+      "ts": "2026-11-27T01:00:24Z",
+      "book": "W13-KCBUF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:20pm CT. Worst line -$47. Next: Paid balancing starts, 7:00pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
+    },
+    {
+      "id": "1795741284929-fe96a1",
+      "ts": "2026-11-27T01:01:24Z",
+      "book": "W13-KCBUF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Final tightening before kickoff 7:20pm CT. Worst line -$47. Next: Kickoff, 7:20pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Final tightening"
     }
   ],
   "audits": [
