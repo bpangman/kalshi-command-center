@@ -1,124 +1,47 @@
 {
   "key": "W13-KCBUF",
-  "generated_at": "2026-11-27T01:17:05.247436Z",
+  "generated_at": "2026-11-27T01:18:25.786936Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 7:20pm CT. Worst line +$19.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line +$19.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "BUF by 1-6",
-        "resting": "1 @ 26c",
-        "exposure": 18.53,
-        "exposure_text": "+$19",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 7:20pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T01:06:42Z"
-      },
-      {
-        "side": "KC by 1-6",
-        "resting": "1 @ 22c",
-        "exposure": 18.57,
-        "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T01:10:48Z"
-      },
-      {
-        "side": "BUF by 15+",
-        "resting": "4 @ 17-19c",
-        "exposure": 19.11,
-        "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T01:10:48Z"
-      },
-      {
-        "side": "BUF by 7-14",
-        "resting": "4 @ 22-24c",
-        "exposure": 19.22,
-        "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T01:10:48Z"
-      },
-      {
-        "side": "KC by 15+",
-        "resting": "3 @ 9-12c",
-        "exposure": 19.31,
-        "exposure_text": "+$19",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T01:10:47Z"
-      },
-      {
-        "side": "KC by 7-14",
-        "resting": "2 @ 15-16c",
-        "exposure": 20.78,
-        "exposure_text": "+$21",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T01:05:31Z"
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 7:20pm CT. Sold 5,806, 15 resting. Worst line +$19 (goal -$150)."
+          "In game (Ingame). Sold 5,806, 15 resting. Worst line +$19. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line +$19 is better than -$150.",
-          "Batches used: 10 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line +$19; spent $10 of $100.",
-          "Kickoff 7:20pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-27T01:20:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "BUF by 1-6",
@@ -126,7 +49,7 @@
         "resting": 1.0,
         "target": null,
         "status": "even",
-        "price": 0.26
+        "price": null
       },
       {
         "label": "BUF by 7-14",
@@ -134,7 +57,7 @@
         "resting": 4.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       },
       {
         "label": "BUF by 15+",
@@ -142,7 +65,7 @@
         "resting": 4.0,
         "target": null,
         "status": "even",
-        "price": 0.17
+        "price": null
       },
       {
         "label": "KC by 1-6",
@@ -150,7 +73,7 @@
         "resting": 1.0,
         "target": null,
         "status": "even",
-        "price": 0.22
+        "price": null
       },
       {
         "label": "KC by 7-14",
@@ -158,7 +81,7 @@
         "resting": 2.0,
         "target": null,
         "status": "even",
-        "price": 0.15
+        "price": null
       },
       {
         "label": "KC by 15+",
@@ -166,52 +89,21 @@
         "resting": 3.0,
         "target": null,
         "status": "even",
-        "price": 0.09
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W13-KCBUF",
-    "ts": "2026-11-27T01:16:29Z"
+    "ts": "2026-11-27T01:17:29Z"
   },
   "posts": [
-    {
-      "id": "1795619535814-0d0365",
-      "ts": "2026-11-25T15:12:15Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "bot",
-      "text": "If the game ends... you make\nBUF 1-6: +129 (+1.2% of bankroll)\nBUF 7-14: -172 (-1.6% of bankroll)\nBUF 15+: +149 (+1.4% of bankroll)\nKC 1-6: -189 (-1.7% of bankroll)\nKC 7-14: +153 (+1.4% of bankroll)\nKC 15+: +97 (+0.9% of bankroll)\nCollected $211 premium ($0 fees) | Paper margin over fair $9 (not realized until settlement)\nheld / resting\nBUF 1-6: 83 / 610\nBUF 7-14: 383 / 180\nBUF 15+: 62 / 938\nKC 1-6: 400 / 171\nKC 7-14: 58 / 842\nKC 15+: 114 / 886\nPosted book 1.12 | Sold avg 1.070 | Worst now -170 | Cash free $2500\nAnchor age 0s | Last fill 15761s ago",
-      "severity": "info"
-    },
-    {
-      "id": "1795620223310-ba7d32",
-      "ts": "2026-11-25T15:23:43Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,627 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795621130382-ec2bc1",
-      "ts": "2026-11-25T15:38:50Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,627 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795622040177-518cf4",
-      "ts": "2026-11-25T15:54:00Z",
-      "book": "W13-KCBUF",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,627 resting. Next: Even-done check, Thu 6:50pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795622947516-908807",
       "ts": "2026-11-25T16:09:07Z",
@@ -3893,6 +3785,45 @@
       "text": "Bot note: COVERAGE-CAP clipped BUF1TO6 204 -> 59@0.24 (REPLENISH batch #4): held 968, cap 1029 [tighten 1.04x]",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795742229409-ed8200",
+      "ts": "2026-11-27T01:17:02Z",
+      "book": "W13-KCBUF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line +18.53, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795742249596-863fa9",
+      "ts": "2026-11-27T01:17:29Z",
+      "book": "W13-KCBUF",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795742249596-5d9832",
+      "ts": "2026-11-27T01:17:29Z",
+      "book": "W13-KCBUF",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line +$19.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
+    },
+    {
+      "id": "1795742265168-e48f9c",
+      "ts": "2026-11-27T01:17:45Z",
+      "book": "W13-KCBUF",
+      "kind": "text",
+      "source": "bot",
+      "text": "Comeback mode: KC now 43%",
+      "severity": "info"
     }
   ],
   "audits": [
