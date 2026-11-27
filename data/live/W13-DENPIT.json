@@ -1,13 +1,13 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T17:02:12.160510Z",
+  "generated_at": "2026-11-27T17:03:28.325445Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
     "headline": "Building toward kickoff 2:00pm CT. Worst line -$303, goal -$150.",
-    "confidence": "medium",
-    "confidence_note": "The bot is up, but something needs a look.",
-    "checks_every_s": 62,
+    "confidence": "high",
+    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "checks_every_s": 20,
     "moves": [
       {
         "side": "DEN by 15+",
@@ -62,7 +62,7 @@
         "exposure_text": "+$448",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T17:02:05Z",
+        "at": "2026-11-27T17:03:06Z",
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "last_fill": "2026-11-27T13:03:21Z",
@@ -75,7 +75,7 @@
         "exposure_text": "+$504",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T17:02:05Z",
+        "at": "2026-11-27T17:03:06Z",
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "lag_note": "Steps to 5c at the next check."
@@ -85,7 +85,7 @@
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 2:00pm CT. Sold 2,314, 2,899 resting. Worst line -$303 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
+          "Pregame build, kickoff 2:00pm CT. Sold 2,314, 2,899 resting. Worst line -$303 (goal -$150)."
         ]
       },
       {
@@ -189,18 +189,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T17:02:05Z"
+    "ts": "2026-11-27T17:03:06Z"
   },
   "posts": [
-    {
-      "id": "1795628343885-ada083",
-      "ts": "2026-11-25T17:39:03Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "resistance_monitor",
-      "text": "W13-DENPIT book loss is growing: worst case -417 dollars, past its limit and -407 in 30 min. Check the bot.",
-      "severity": "warn"
-    },
     {
       "id": "1795628397225-2bb053",
       "ts": "2026-11-25T17:38:48Z",
@@ -3566,18 +3557,19 @@
       "text": "Building toward kickoff 2:00pm CT. Worst line -$303, goal -$150. Next: Even-done check, 1:30pm CT.",
       "severity": "info",
       "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795798986093-be3b74",
+      "ts": "2026-11-27T17:03:06Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 2:00pm CT. Worst line -$303, goal -$150. Next: Even-done check, 1:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
-    {
-      "id": "1795711542144-229a46",
-      "ts": "2026-11-26T16:45:42Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -364.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795713389304-7e1a7f",
       "ts": "2026-11-26T17:16:29Z",
@@ -4468,6 +4460,15 @@
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-DENPIT): 1 order(s) with an unsafe price. Check the command center.",
       "severity": "critical"
+    },
+    {
+      "id": "1795798950264-88d66a",
+      "ts": "2026-11-27T17:02:30Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+5 on DEN 1-6 @ 0.25 (maker)\nworst outcome now -81\nheld 73/56/0/628/750/807\nIf the game ends... you make\nPIT 1-6: +431 (+4.3% of bankroll)\nPIT 7-14: +448 (+4.4% of bankroll)\nPIT 15+: +504 (+5.0% of bankroll)\nDEN 1-6: -124 (-1.2% of bankroll)\nDEN 7-14: -246 (-2.4% of bankroll)\nDEN 15+: -303 (-3.0% of bankroll)",
+      "severity": "warn"
     }
   ]
 }
