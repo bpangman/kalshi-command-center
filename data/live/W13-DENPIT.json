@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T19:53:20.141859Z",
+  "generated_at": "2026-11-27T19:54:39.329998Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -26,7 +26,7 @@
         "exposure": -92.83,
         "exposure_text": "-$93",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$172); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$160); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T18:57:51Z"
@@ -37,7 +37,7 @@
         "exposure": -92.83,
         "exposure_text": "-$93",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$172); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$160); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T19:40:03Z"
@@ -48,7 +48,7 @@
         "exposure": -90.71,
         "exposure_text": "-$91",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$172); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$160); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T19:40:03Z"
@@ -59,7 +59,7 @@
         "exposure": -3.8,
         "exposure_text": "-$4",
         "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$172); up to $100 in all",
+        "when": "every 5 min if worst loss is $25+ behind plan (-$160); up to $100 in all",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T19:52:48Z"
@@ -97,7 +97,7 @@
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$94 is better than -$172.",
+          "Gate open: worst line -$94 is better than -$160.",
           "Batches used: 24 (max 3 per side)."
         ]
       },
@@ -105,7 +105,7 @@
         "title": "Tightening",
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$172, worst line -$94; spent $28 of $100.",
+          "Paid balancing is running: plan -$160, worst line -$94; spent $28 of $100.",
           "Kickoff 2:00pm CT: the in-game engine takes over."
         ]
       },
@@ -174,7 +174,7 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T19:53:06Z"
+    "ts": "2026-11-27T19:54:07Z"
   },
   "posts": [
     {
@@ -3591,15 +3591,6 @@
   ],
   "audits": [
     {
-      "id": "1795738446754-1f2bb5",
-      "ts": "2026-11-27T00:14:06Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): held worst -425.63 (backstop -300) or lagging gap 764 (batch-ahead cap None) for 60+ min. Check the command center.",
-      "severity": "warn"
-    },
-    {
       "id": "1795739179933-bf0867",
       "ts": "2026-11-27T00:26:19Z",
       "book": "W13-DENPIT",
@@ -4488,6 +4479,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Lopsided: DEN 1-6 worst outcome -31\nIf the game ends... you make\nPIT 1-6: +25 (+0.2% of bankroll)\nPIT 7-14: -96 (-0.9% of bankroll)\nPIT 15+: +618 (+6.1% of bankroll)\nDEN 1-6: -99 (-1.0% of bankroll)\nDEN 7-14: -98 (-1.0% of bankroll)\nDEN 15+: -98 (-1.0% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795809232814-1ef1aa",
+      "ts": "2026-11-27T19:53:52Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+34 on PIT 1-6 @ 0.15 (maker)\nworst outcome now -31\nheld 811/898/184/901/900/900\nIf the game ends... you make\nPIT 1-6: -4 (-0.0% of bankroll)\nPIT 7-14: -91 (-0.9% of bankroll)\nPIT 15+: +623 (+6.2% of bankroll)\nDEN 1-6: -94 (-0.9% of bankroll)\nDEN 7-14: -93 (-0.9% of bankroll)\nDEN 15+: -93 (-0.9% of bankroll)",
       "severity": "warn"
     }
   ]
