@@ -1,10 +1,10 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T20:15:12.668602Z",
+  "generated_at": "2026-11-27T20:16:30.363753Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line -$115.",
+    "headline": "In game (Ingame). Worst line -$108.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 5,483, 530 resting. Worst line -$115. Game 10% done."
+          "In game (Ingame). Sold 5,517, 476 resting. Worst line -$108. Game 10% done."
         ]
       },
       {
@@ -45,8 +45,8 @@
     "sides": [
       {
         "label": "DEN by 1-6",
-        "held": 920.0,
-        "resting": 54.0,
+        "held": 935.0,
+        "resting": 27.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "DEN by 7-14",
         "held": 1020.0,
-        "resting": 9.0,
+        "resting": 0.0,
         "target": null,
         "status": "even",
         "price": null
@@ -69,8 +69,8 @@
       },
       {
         "label": "PIT by 1-6",
-        "held": 916.0,
-        "resting": 120.0,
+        "held": 935.0,
+        "resting": 102.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T20:14:13Z"
+    "ts": "2026-11-27T20:16:14Z"
   },
   "posts": [
-    {
-      "id": "1795668401170-e73eed",
-      "ts": "2026-11-26T04:46:41Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,575 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795668783048-88e438",
       "ts": "2026-11-26T04:50:57Z",
@@ -3610,18 +3600,39 @@
       "text": "Bot note: floor-only trim KXNFLWINMARGIN-26NOV27DENPIT-PIT1TO6: held floor -120, resting 142 -> cap 130, trimmed 12 high",
       "severity": "info",
       "title": "Bot note"
+    },
+    {
+      "id": "1795810534137-1059bf",
+      "ts": "2026-11-27T20:14:26Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 29: DEN by 7-14 x12 at 27c, DEN by 7-14 x11 at 29c, PIT by 1-6 x6 at 18c. Worst line -$114.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 29.0,
+        "fills": [
+          {
+            "side": "DEN by 7-14",
+            "price": 0.27,
+            "qty": 12.0
+          },
+          {
+            "side": "DEN by 7-14",
+            "price": 0.29,
+            "qty": 11.0
+          },
+          {
+            "side": "PIT by 1-6",
+            "price": 0.18,
+            "qty": 6.0
+          }
+        ]
+      }
     }
   ],
   "audits": [
-    {
-      "id": "1795742885598-74d176",
-      "ts": "2026-11-27T01:28:05Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -425.63 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795743872179-d9b4c5",
       "ts": "2026-11-27T01:44:32Z",
@@ -4511,6 +4522,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: RISK-BREACH (repairs blocked) - repair ledger spent 23.83 over banked margin 21.16",
+      "severity": "warn"
+    },
+    {
+      "id": "1795810571555-1bac8c",
+      "ts": "2026-11-27T20:16:11Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+2 on DEN 7-14 @ 0.26 (maker)\n+23 on PIT 1-6 @ 0.18 (maker)\n+12 on DEN 7-14 @ 0.27 (maker)\n+11 on DEN 7-14 @ 0.29 (maker)\n+15 on DEN 1-6 @ 0.26 (maker)\nworst outcome now -39\nheld 935/899/824/935/1020/904\nIf the game ends... you make\nPIT 1-6: -23 (-0.2% of bankroll)\nPIT 7-14: +13 (+0.1% of bankroll)\nPIT 15+: +88 (+0.9% of bankroll)\nDEN 1-6: -23 (-0.2% of bankroll)\nDEN 7-14: -108 (-1.1% of bankroll)\nDEN 15+: +8 (+0.1% of bankroll)",
       "severity": "warn"
     }
   ]
