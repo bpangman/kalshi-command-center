@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T17:17:36.335352Z",
+  "generated_at": "2026-11-27T17:18:53.592219Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -75,7 +75,7 @@
         "exposure_text": "+$504",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T17:17:11Z",
+        "at": "2026-11-27T17:18:12Z",
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "lag_note": "Steps to 5c at the next check."
@@ -189,23 +189,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T17:17:11Z"
+    "ts": "2026-11-27T17:18:12Z"
   },
   "posts": [
-    {
-      "id": "1795628840946-1a29f8",
-      "ts": "2026-11-25T17:45:06Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 74 (FIELD far-bucket row (all-fill): PIT by 15+ x74 at 8c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 74.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1795629611629-d46acd",
       "ts": "2026-11-25T18:00:11Z",
@@ -3562,18 +3548,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nPIT 1-6: +431 (+4.3% of bankroll)\nPIT 7-14: +448 (+4.4% of bankroll)\nPIT 15+: +504 (+5.0% of bankroll)\nDEN 1-6: -124 (-1.2% of bankroll)\nDEN 7-14: -246 (-2.4% of bankroll)\nDEN 15+: -303 (-3.0% of bankroll)\nCollected $504 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nEvent: PIT 7-14: PIT 0-0, Q0 0:00; DEN 7-14: DEN 0-0, Q0 0:00\nheld / resting\nPIT 1-6: 73 / 935\nPIT 7-14: 56 / 844\nPIT 15+: 0 / 807\nDEN 1-6: 628 / 163\nDEN 7-14: 750 / 57\nDEN 15+: 807 / 93\nPosted book 1.16 | Sold avg 1.039 | Worst now -81 | Cash free $2500\nAnchor age 43s | Last fill 268s ago",
       "severity": "info"
+    },
+    {
+      "id": "1795799892247-30978d",
+      "ts": "2026-11-27T17:18:12Z",
+      "book": "W13-DENPIT",
+      "kind": "status",
+      "source": "narrator",
+      "text": "Quiet for 15 min. 2,899 resting. Next: Even-done check, 1:30pm CT.",
+      "severity": "info",
+      "title": "Quiet"
     }
   ],
   "audits": [
-    {
-      "id": "1795715255220-9ad1cf",
-      "ts": "2026-11-26T17:47:35Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -364.37 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795717100443-bbb82c",
       "ts": "2026-11-26T18:18:20Z",
@@ -4463,6 +4450,15 @@
       "kind": "audit",
       "source": "auditor",
       "text": "Kalshi AUDITOR (W13-DENPIT): held worst -302.90 (backstop -300) or lagging gap 807 (batch-ahead cap None) for 60+ min. Check the command center.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795799909079-80d3c4",
+      "ts": "2026-11-27T17:18:29Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (W13-DENPIT): inactive, cause=unknown, remedy=none, posts_last_10m=0, market_volume_last_30m=4358. Check the command center.",
       "severity": "warn"
     }
   ]
