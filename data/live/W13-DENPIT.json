@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T19:29:52.498504Z",
+  "generated_at": "2026-11-27T19:31:08.779953Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -15,7 +15,7 @@
         "exposure": -321.6,
         "exposure_text": "-$322",
         "move": "Holding",
-        "when": "no move planned until the even-done check at 1:30pm CT",
+        "when": "no move planned until paid balancing starts at 1:40pm CT",
         "at": null,
         "stuck": false,
         "last_fill": "2026-11-27T18:57:51Z"
@@ -75,7 +75,7 @@
         "exposure_text": "+$523",
         "move": "Step price down 1c (12c to 11c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T19:28:58Z",
+        "at": "2026-11-27T19:30:59Z",
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "last_fill": "2026-11-27T13:03:21Z",
@@ -111,7 +111,6 @@
         "lines": [
           "Backstop off. It trips if the worst line falls under -$300.",
           "Paid balancing starts 1:40pm CT: worst line to -$150 by 1:55pm CT, up to $100.",
-          "At 1:30pm CT, if worst line is -$150 or better, paid balancing stops.",
           "Kickoff 2:00pm CT: the in-game engine takes over."
         ]
       },
@@ -123,11 +122,6 @@
       }
     ],
     "next_steps": [
-      {
-        "at": "2026-11-27T19:30:00Z",
-        "label": "Even-done check",
-        "detail": "Paid balancing stops if worst line is -$150 or better."
-      },
       {
         "at": "2026-11-27T19:40:00Z",
         "label": "Paid balancing starts",
@@ -190,34 +184,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T19:28:58Z"
+    "ts": "2026-11-27T19:30:59Z"
   },
   "posts": [
-    {
-      "id": "1795647741978-f62167",
-      "ts": "2026-11-25T23:01:13Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 51: DEN by 1-6 x40 at 24c, PIT by 1-6 x11 at 17c. Worst line -$434.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 51.0,
-        "fills": [
-          {
-            "side": "DEN by 1-6",
-            "price": 0.24,
-            "qty": 40.0
-          },
-          {
-            "side": "PIT by 1-6",
-            "price": 0.17,
-            "qty": 11.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795648298981-4f0269",
       "ts": "2026-11-25T23:11:38Z",
@@ -3598,6 +3567,16 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795807859406-71d83e",
+      "ts": "2026-11-27T19:30:59Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 2:00pm CT. Worst line -$322, goal -$150. Next: Paid balancing starts, 1:40pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
