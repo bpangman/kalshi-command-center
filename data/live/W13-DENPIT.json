@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T19:56:16.277347Z",
+  "generated_at": "2026-11-27T19:57:32.772500Z",
   "plan": {
     "engine": "nfl",
     "phase": "Final tightening",
@@ -70,12 +70,12 @@
         "exposure": 623.28,
         "exposure_text": "+$623",
         "move": "Hold price at 5c",
-        "when": "next cent is under the crowd price (4.4c)",
+        "when": "crowd pays 4.6c; steps down 1c only if it trades lower",
         "at": null,
         "stuck": false,
         "also": "Also: paid balancing",
         "last_fill": "2026-11-27T19:40:03Z",
-        "lag_note": "Price 5c is at its floor."
+        "lag_note": "Price 5c matches the crowd."
       }
     ],
     "sections": [
@@ -89,7 +89,7 @@
         "title": "Lagging sides",
         "lines": [
           "Lagging (150+ behind the leader): PIT by 15+.",
-          "PIT by 15+: 717 behind. Price 5c is at its floor.",
+          "PIT by 15+: 717 behind. Price 5c matches the crowd.",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -174,29 +174,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T19:56:07Z"
+    "ts": "2026-11-27T19:57:08Z"
   },
   "posts": [
-    {
-      "id": "1795660445612-9b61e5",
-      "ts": "2026-11-26T02:32:03Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 22: DEN by 15+ x22 at 22c. Worst line -$445.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 22.0,
-        "fills": [
-          {
-            "side": "DEN by 15+",
-            "price": 0.22,
-            "qty": 22.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795660606326-d0a3eb",
       "ts": "2026-11-26T02:36:27Z",
@@ -3597,18 +3577,19 @@
       "text": "Row sold out: PIT by 7-14 at 11c (1 contracts).",
       "severity": "info",
       "title": "Row sold out"
+    },
+    {
+      "id": "1795809448377-20a4f8",
+      "ts": "2026-11-27T19:57:17Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -93.72, L_max 300.00)",
+      "severity": "info",
+      "title": "Phase change"
     }
   ],
   "audits": [
-    {
-      "id": "1795739179933-bf0867",
-      "ts": "2026-11-27T00:26:19Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -425.63 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795740301696-2551a7",
       "ts": "2026-11-27T00:45:01Z",
@@ -4498,6 +4479,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "+34 on PIT 1-6 @ 0.15 (maker)\nworst outcome now -31\nheld 811/898/184/901/900/900\nIf the game ends... you make\nPIT 1-6: -4 (-0.0% of bankroll)\nPIT 7-14: -91 (-0.9% of bankroll)\nPIT 15+: +623 (+6.2% of bankroll)\nDEN 1-6: -94 (-0.9% of bankroll)\nDEN 7-14: -93 (-0.9% of bankroll)\nDEN 15+: -93 (-0.9% of bankroll)",
+      "severity": "warn"
+    },
+    {
+      "id": "1795809437771-ee0efc",
+      "ts": "2026-11-27T19:57:17Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "House v2 final table\nIf the game ends... you make\nPIT 1-6: -4 (-0.0% of bankroll)\nPIT 7-14: -92 (-0.9% of bankroll)\nPIT 15+: +623 (+6.2% of bankroll)\nDEN 1-6: -94 (-0.9% of bankroll)\nDEN 7-14: -93 (-0.9% of bankroll)\nDEN 15+: -93 (-0.9% of bankroll)",
       "severity": "warn"
     }
   ]
