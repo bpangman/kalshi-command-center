@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T22:10:04.124139Z",
+  "generated_at": "2026-11-27T22:11:20.010197Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 7,291, 702 resting. Worst line -$19. Game 69% done."
+          "In game (Ingame). Sold 7,291, 691 resting. Worst line -$19. Game 71% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DEN by 1-6",
         "held": 1225.2,
-        "resting": 159.0,
+        "resting": 144.0,
         "target": null,
         "status": "even",
         "price": null
@@ -70,7 +70,7 @@
       {
         "label": "PIT by 1-6",
         "held": 1347.0,
-        "resting": 0.0,
+        "resting": 4.0,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T22:09:43Z"
+    "ts": "2026-11-27T22:10:43Z"
   },
   "posts": [
-    {
-      "id": "1795700644539-2fc69f",
-      "ts": "2026-11-26T13:44:04Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,132 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795701549806-901076",
       "ts": "2026-11-26T13:59:09Z",
@@ -4142,18 +4132,19 @@
       "source": "bot",
       "text": "If the game ends... you make\nPIT 1-6: +7 (+0.1% of bankroll)\nPIT 7-14: +74 (+0.7% of bankroll)\nPIT 15+: -19 (-0.2% of bankroll)\nDEN 1-6: +128 (+1.3% of bankroll)\nDEN 7-14: +293 (+2.9% of bankroll)\nDEN 15+: +348 (+3.4% of bankroll)\nCollected $1368 premium ($14 fees) | Paper margin over fair $367 (not realized until settlement)\nEvent: PIT 15+: PIT 24-5, Q3 3:22; PIT 7-14: PIT 24-5, Q3 3:22\nheld / resting\nPIT 1-6: 1347 / 0\nPIT 7-14: 1280 / 18\nPIT 15+: 1373 / 0\nDEN 1-6: 1225 / 110\nDEN 7-14: 1061 / 300\nDEN 15+: 1006 / 219\nPosted book 1.46 | Sold avg 1.143 | Worst now +39 | Cash free $2500\nAnchor age 3171s | Last fill 120s ago",
       "severity": "info"
+    },
+    {
+      "id": "1795817423529-1a6e5b",
+      "ts": "2026-11-27T22:10:16Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26NOV27DENPIT-DEN1TO6: held floor -0, resting 159 -> cap 148, trimmed 11 highes",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1795752063958-7a791f",
-      "ts": "2026-11-27T04:01:03Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -433.74 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795752111516-cce1ba",
       "ts": "2026-11-27T04:01:51Z",
@@ -5043,6 +5034,15 @@
       "kind": "audit",
       "source": "bot",
       "text": "Anomaly: anchor stale > 30 min",
+      "severity": "warn"
+    },
+    {
+      "id": "1795817415686-52fa57",
+      "ts": "2026-11-27T22:10:15Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+12 on PIT 15+ @ 0.53 (maker)\n+9 on PIT 15+ @ 0.55 (maker)\n+4 on PIT 1-6 @ 0.12 (maker)\nworst outcome now +40\nheld 1347/1280/1373/1225/1061/1006\nIf the game ends... you make\nPIT 1-6: +7 (+0.1% of bankroll)\nPIT 7-14: +74 (+0.7% of bankroll)\nPIT 15+: -19 (-0.2% of bankroll)\nDEN 1-6: +128 (+1.3% of bankroll)\nDEN 7-14: +293 (+2.9% of bankroll)\nDEN 15+: +348 (+3.4% of bankroll)",
       "severity": "warn"
     }
   ]
