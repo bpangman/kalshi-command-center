@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-27T08:54:40.999296Z",
+  "generated_at": "2026-11-27T08:55:57.097448Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$47.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 100,023, ? resting. Worst line +$47. Floor protocol off."
+          "In race (Ingame). Sold 100,023, ? resting. Worst line +$47. Floor protocol off. Bot is slow (checks every 1m, set for 30s)."
         ]
       },
       {
@@ -44,19 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-27T08:54:29Z"
+    "ts": "2026-11-27T08:55:29Z"
   },
   "posts": [
-    {
-      "id": "1795694001466-c3630d",
-      "ts": "2026-11-26T11:53:21Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "In race (Ingame). Worst line +$25.",
-      "severity": "info",
-      "title": "Plan updated: In race (Ingame)"
-    },
     {
       "id": "1795694061824-96dc46",
       "ts": "2026-11-26T11:54:21Z",
@@ -3302,18 +3292,19 @@
       "text": "Quiet for 15 min.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795769729889-47d9a5",
+      "ts": "2026-11-27T08:55:29Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$47.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795741708864-642df6",
-      "ts": "2026-11-27T01:08:28Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "bot",
-      "text": "Qualifying moved 2 driver(s): Nicolai von Dellingshausen (+37%), Wenyi Ding (+23%)",
-      "severity": "warn"
-    },
     {
       "id": "1795741709961-be845f",
       "ts": "2026-11-27T01:08:29Z",
@@ -4203,6 +4194,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Tapio Pulkkanen has had no resting orders for at least 618 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795769704966-161427",
+      "ts": "2026-11-27T08:55:04Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "auditor",
+      "text": "Kalshi AUDITOR (DPWT-BMAPC26): 10 ladder(s) stale 10+ min: KXDPWORLDTOUR-BMAPC26-PBEA low 488c, KXDPWORLDTOUR-BMAPC26-ABLA low 176c, KXDPWORLDTOUR-BMAPC26-CCON high 25c, KXDPWORLDTOUR-BMAPC26-UCOU high 26c, KXDPWORLDTOUR-BMAPC26-LDOB high 66c, KXDPWORLDTOUR-BMAPC26-WORM low 968c, KXDPWORLDTOUR-BMAPC26-JSCR high 26c, KXDPWORLDTOUR-BMAPC26-JTHO low 101c, KXDPWORLDTOUR-BMAPC26-AWU high 25c, KXDPWORLDTOUR-BMAPC26-JYOU low 475c. Check the command center.",
       "severity": "warn"
     }
   ]
