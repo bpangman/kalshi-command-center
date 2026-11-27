@@ -1,149 +1,68 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T19:57:32.772500Z",
+  "generated_at": "2026-11-27T19:58:54.944801Z",
   "plan": {
     "engine": "nfl",
-    "phase": "Final tightening",
-    "headline": "Final tightening before kickoff 2:00pm CT. Worst line -$94.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
+    "phase": "In game (Ingame)",
+    "headline": "In game (Ingame). Worst line -$94.",
+    "confidence": "medium",
+    "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
-    "moves": [
-      {
-        "side": "DEN by 1-6",
-        "resting": "4 @ 26-27c",
-        "exposure": -93.72,
-        "exposure_text": "-$94",
-        "move": "Holding",
-        "when": "no move planned until kickoff at 2:00pm CT",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T19:46:26Z"
-      },
-      {
-        "side": "DEN by 15+",
-        "resting": "none",
-        "exposure": -92.72,
-        "exposure_text": "-$93",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T18:57:51Z"
-      },
-      {
-        "side": "DEN by 7-14",
-        "resting": "2 @ 27c",
-        "exposure": -92.72,
-        "exposure_text": "-$93",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T19:40:03Z"
-      },
-      {
-        "side": "PIT by 7-14",
-        "resting": "4 @ 12-15c",
-        "exposure": -91.6,
-        "exposure_text": "-$92",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T19:55:20Z"
-      },
-      {
-        "side": "PIT by 1-6",
-        "resting": "90 @ 20c",
-        "exposure": -3.69,
-        "exposure_text": "-$4",
-        "move": "Paid balancing (trickle)",
-        "when": "every 5 min if worst loss is $25+ behind plan (-$150); up to $100 in all",
-        "at": null,
-        "stuck": false,
-        "last_fill": "2026-11-27T19:52:48Z"
-      },
-      {
-        "side": "PIT by 15+",
-        "resting": "716 @ 5-10c",
-        "exposure": 623.28,
-        "exposure_text": "+$623",
-        "move": "Hold price at 5c",
-        "when": "crowd pays 4.6c; steps down 1c only if it trades lower",
-        "at": null,
-        "stuck": false,
-        "also": "Also: paid balancing",
-        "last_fill": "2026-11-27T19:40:03Z",
-        "lag_note": "Price 5c matches the crowd."
-      }
-    ],
+    "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Final tightening, kickoff 2:00pm CT. Sold 4,595, 816 resting. Worst line -$94 (goal -$150)."
+          "In game (Ingame). Sold 4,595, 1,117 resting. Worst line -$94. Game 0% done."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "Lagging (150+ behind the leader): PIT by 15+.",
-          "PIT by 15+: 717 behind. Price 5c matches the crowd.",
-          "A price step needs 10 min with no fill and the crowd paying less."
+          "No lag rule in game; prices follow the live score."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
-          "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate open: worst line -$94 is better than -$150.",
-          "Batches used: 24 (max 3 per side)."
+          "New contracts post only inside the loss cap."
         ]
       },
       {
         "title": "Tightening",
         "lines": [
-          "Backstop off. It trips if the worst line falls under -$300.",
-          "Paid balancing is running: plan -$150, worst line -$94; spent $28 of $100.",
-          "Kickoff 2:00pm CT: the in-game engine takes over."
+          "The taper and floor rules tighten the book as the game ends."
         ]
       },
       {
         "title": "Will it adapt on its own?",
         "lines": [
-          "Mostly yes: price steps, new batches and paid balancing run by rule. It will not reprice for line moves or news."
+          "Yes, it follows the score and clock on its own."
         ]
       }
     ],
-    "next_steps": [
-      {
-        "at": "2026-11-27T20:00:00Z",
-        "label": "Kickoff",
-        "detail": "In-game engine takes over."
-      }
-    ],
+    "next_steps": [],
     "sides": [
       {
         "label": "DEN by 1-6",
         "held": 901.0,
-        "resting": 4.0,
+        "resting": 26.0,
         "target": null,
         "status": "even",
-        "price": 0.26
+        "price": null
       },
       {
         "label": "DEN by 7-14",
         "held": 900.0,
-        "resting": 2.0,
+        "resting": 53.0,
         "target": null,
         "status": "even",
-        "price": 0.27
+        "price": null
       },
       {
         "label": "DEN by 15+",
         "held": 900.0,
-        "resting": 0.0,
+        "resting": 62.0,
         "target": null,
         "status": "even",
         "price": null
@@ -151,81 +70,40 @@
       {
         "label": "PIT by 1-6",
         "held": 811.0,
-        "resting": 90.0,
+        "resting": 150.0,
         "target": null,
         "status": "even",
-        "price": 0.2
+        "price": null
       },
       {
         "label": "PIT by 7-14",
         "held": 898.9,
-        "resting": 4.0,
+        "resting": 26.0,
         "target": null,
         "status": "even",
-        "price": 0.12
+        "price": null
       },
       {
         "label": "PIT by 15+",
         "held": 184.0,
-        "resting": 716.0,
+        "resting": 800.0,
         "target": null,
-        "status": "lagging",
-        "price": 0.05
+        "status": "even",
+        "price": null
+      },
+      {
+        "label": "Tie",
+        "held": 0.0,
+        "resting": 0.0,
+        "target": null,
+        "status": "even",
+        "price": null
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T19:57:08Z"
+    "ts": "2026-11-27T19:58:08Z"
   },
   "posts": [
-    {
-      "id": "1795660606326-d0a3eb",
-      "ts": "2026-11-26T02:36:27Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: DEN by 7-14 at 21c (340 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
-    {
-      "id": "1795660726890-ea174f",
-      "ts": "2026-11-26T02:37:31Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 253: DEN by 7-14 x243 at 21c, DEN by 1-6 x10 at 24c. Worst line -$392.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 253.0,
-        "fills": [
-          {
-            "side": "DEN by 7-14",
-            "price": 0.21,
-            "qty": 243.0
-          },
-          {
-            "side": "DEN by 1-6",
-            "price": 0.24,
-            "qty": 10.0
-          }
-        ]
-      }
-    },
-    {
-      "id": "1795661309417-1c385d",
-      "ts": "2026-11-26T02:46:12Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 20 (FIELD far-bucket row (all-fill): PIT by 15+ x20 at 7c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 20.0,
-        "rows": 1
-      }
-    },
     {
       "id": "1795662072837-86be0d",
       "ts": "2026-11-26T03:01:12Z",
@@ -3587,6 +3465,46 @@
       "text": "Handoff: keeping every resting order for the in-game elevator (worst held line -93.72, L_max 300.00)",
       "severity": "info",
       "title": "Phase change"
+    },
+    {
+      "id": "1795809468566-cc03a8",
+      "ts": "2026-11-27T19:55:40Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Sold 1: PIT by 7-14 x1 at 11c. Worst line -$94.",
+      "severity": "info",
+      "title": "Fills",
+      "data": {
+        "total": 1.0,
+        "fills": [
+          {
+            "side": "PIT by 7-14",
+            "price": 0.11,
+            "qty": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "1795809488752-dace5b",
+      "ts": "2026-11-27T19:58:08Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Phase change: Final tightening to In game (Ingame).",
+      "severity": "info",
+      "title": "Phase change"
+    },
+    {
+      "id": "1795809488753-0136db",
+      "ts": "2026-11-27T19:58:08Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In game (Ingame). Worst line -$94.",
+      "severity": "info",
+      "title": "Plan updated: In game (Ingame)"
     }
   ],
   "audits": [
