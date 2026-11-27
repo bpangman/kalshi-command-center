@@ -1,10 +1,10 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T21:20:43.930153Z",
+  "generated_at": "2026-11-27T21:22:00.258728Z",
   "plan": {
     "engine": "nfl",
     "phase": "In game (Ingame)",
-    "headline": "In game (Ingame). Worst line +$19.",
+    "headline": "In game (Ingame). Worst line +$15.",
     "confidence": "medium",
     "confidence_note": "In-game steps follow the live score.",
     "checks_every_s": 20,
@@ -13,7 +13,7 @@
       {
         "title": "Right now",
         "lines": [
-          "In game (Ingame). Sold 6,964, 695 resting. Worst line +$19. Game 49% done."
+          "In game (Ingame). Sold 6,971, 885 resting. Worst line +$15. Game 50% done."
         ]
       },
       {
@@ -46,7 +46,7 @@
       {
         "label": "DEN by 1-6",
         "held": 1225.2,
-        "resting": 41.0,
+        "resting": 85.0,
         "target": null,
         "status": "even",
         "price": null
@@ -54,7 +54,7 @@
       {
         "label": "DEN by 7-14",
         "held": 1061.0,
-        "resting": 232.0,
+        "resting": 261.0,
         "target": null,
         "status": "even",
         "price": null
@@ -62,7 +62,7 @@
       {
         "label": "DEN by 15+",
         "held": 1006.0,
-        "resting": 288.0,
+        "resting": 293.0,
         "target": null,
         "status": "even",
         "price": null
@@ -78,15 +78,15 @@
       {
         "label": "PIT by 7-14",
         "held": 1224.5,
-        "resting": 16.0,
+        "resting": 71.0,
         "target": null,
         "status": "even",
         "price": null
       },
       {
         "label": "PIT by 15+",
-        "held": 1225.8,
-        "resting": 61.0,
+        "held": 1232.4,
+        "resting": 118.4,
         "target": null,
         "status": "even",
         "price": null
@@ -101,19 +101,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T21:20:30Z"
+    "ts": "2026-11-27T21:21:30Z"
   },
   "posts": [
-    {
-      "id": "1795688445595-d7de24",
-      "ts": "2026-11-26T10:20:45Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 2,736 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
     {
       "id": "1795689351907-55ee26",
       "ts": "2026-11-26T10:35:51Z",
@@ -3980,18 +3970,19 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795814450710-0cff12",
+      "ts": "2026-11-27T21:20:46Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Bot note: floor-only trim KXNFLWINMARGIN-26NOV27DENPIT-PIT15PLUS: held floor -50, resting 119 -> cap 119, trimmed 0 high",
+      "severity": "info",
+      "title": "Bot note"
     }
   ],
   "audits": [
-    {
-      "id": "1795748390508-a643cf",
-      "ts": "2026-11-27T02:59:50Z",
-      "book": "W13-DENPIT",
-      "kind": "audit",
-      "source": "auditor",
-      "text": "Kalshi AUDITOR (W13-DENPIT): worst -440.83 vs floor -325.00. Check the command center.",
-      "severity": "critical"
-    },
     {
       "id": "1795749491215-21b389",
       "ts": "2026-11-27T03:18:11Z",
@@ -4881,6 +4872,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Back: W13-DENPIT - Denver by 1 to 6 is posting again.\nBack: W13-DENPIT - Pittsburgh by 1 to 6 is posting again.",
+      "severity": "warn"
+    },
+    {
+      "id": "1795814488581-fa98af",
+      "ts": "2026-11-27T21:21:28Z",
+      "book": "W13-DENPIT",
+      "kind": "audit",
+      "source": "bot",
+      "text": "+62 on PIT 15+ @ 0.39 (maker)\n+30 on PIT 15+ @ 0.42 (maker)\n+29 on PIT 1-6 @ 0.20 (maker)\n+66 on PIT 7-14 @ 0.30 (maker)\n+20 on PIT 15+ @ 0.43 (maker)\nworst outcome now +24\nheld 1221/1225/1232/1225/1061/1006\nIf the game ends... you make\nPIT 1-6: +26 (+0.3% of bankroll)\nPIT 7-14: +23 (+0.2% of bankroll)\nPIT 15+: +15 (+0.2% of bankroll)\nDEN 1-6: +23 (+0.2% of bankroll)\nDEN 7-14: +187 (+1.8% of bankroll)\nDEN 15+: +242 (+2.4% of bankroll)",
       "severity": "warn"
     }
   ]
