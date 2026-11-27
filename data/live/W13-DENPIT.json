@@ -1,6 +1,6 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T17:04:46.995988Z",
+  "generated_at": "2026-11-27T17:06:50.587666Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
@@ -60,13 +60,13 @@
         "resting": "844 @ 12-15c",
         "exposure": 448.22,
         "exposure_text": "+$448",
-        "move": "Step price down 1c (12c to 11c)",
-        "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T17:04:06Z",
+        "move": "Hold price at 12c",
+        "when": "needs 50+ crowd trades under 12c (now 8)",
+        "at": null,
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "last_fill": "2026-11-27T13:03:21Z",
-        "lag_note": "Steps to 11c at the next check."
+        "lag_note": "Crowd is quiet here (8 traded)."
       },
       {
         "side": "PIT by 15+",
@@ -75,7 +75,7 @@
         "exposure_text": "+$504",
         "move": "Step price down 1c (6c to 5c)",
         "when": "next bot check (no fill for 10+ min)",
-        "at": "2026-11-27T17:04:06Z",
+        "at": "2026-11-27T17:06:07Z",
         "stuck": false,
         "also": "Also: paid balancing starts 1:40pm CT",
         "lag_note": "Steps to 5c at the next check."
@@ -93,7 +93,7 @@
         "lines": [
           "Lagging (150+ behind the leader): PIT by 1-6, PIT by 7-14, PIT by 15+.",
           "PIT by 15+: 807 behind. Steps to 5c at the next check.",
-          "PIT by 7-14: 751 behind. Steps to 11c at the next check.",
+          "PIT by 7-14: 751 behind. Crowd is quiet here (8 traded).",
           "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
@@ -189,23 +189,9 @@
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T17:04:06Z"
+    "ts": "2026-11-27T17:06:07Z"
   },
   "posts": [
-    {
-      "id": "1795628397233-6c0a1e",
-      "ts": "2026-11-25T17:38:48Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Posted 299 (re-posted): DEN by 15+ x184 at 20c.",
-      "severity": "info",
-      "title": "Orders posted",
-      "data": {
-        "contracts": 299.0,
-        "rows": 2
-      }
-    },
     {
       "id": "1795628840946-1a29f8",
       "ts": "2026-11-25T17:45:06Z",
@@ -3567,6 +3553,15 @@
           }
         ]
       }
+    },
+    {
+      "id": "1795799139690-876910",
+      "ts": "2026-11-27T17:05:39Z",
+      "book": "W13-DENPIT",
+      "kind": "status",
+      "source": "bot",
+      "text": "If the game ends... you make\nPIT 1-6: +431 (+4.3% of bankroll)\nPIT 7-14: +448 (+4.4% of bankroll)\nPIT 15+: +504 (+5.0% of bankroll)\nDEN 1-6: -124 (-1.2% of bankroll)\nDEN 7-14: -246 (-2.4% of bankroll)\nDEN 15+: -303 (-3.0% of bankroll)\nCollected $504 premium ($0 fees) | Paper margin over fair $4 (not realized until settlement)\nEvent: PIT 7-14: PIT 0-0, Q0 0:00; DEN 7-14: DEN 0-0, Q0 0:00\nheld / resting\nPIT 1-6: 73 / 935\nPIT 7-14: 56 / 844\nPIT 15+: 0 / 807\nDEN 1-6: 628 / 163\nDEN 7-14: 750 / 57\nDEN 15+: 807 / 93\nPosted book 1.16 | Sold avg 1.039 | Worst now -81 | Cash free $2500\nAnchor age 43s | Last fill 268s ago",
+      "severity": "info"
     }
   ],
   "audits": [
