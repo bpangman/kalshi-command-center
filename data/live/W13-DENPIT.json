@@ -1,19 +1,19 @@
 {
   "key": "W13-DENPIT",
-  "generated_at": "2026-11-27T17:00:55.355471Z",
+  "generated_at": "2026-11-27T17:02:12.160510Z",
   "plan": {
     "engine": "nfl",
     "phase": "Pregame build",
-    "headline": "Building toward kickoff 2:00pm CT. Worst line -$304, goal -$150.",
-    "confidence": "high",
-    "confidence_note": "Every step is a timer or rule in the bot's settings. Nothing needs you.",
-    "checks_every_s": 60,
+    "headline": "Building toward kickoff 2:00pm CT. Worst line -$303, goal -$150.",
+    "confidence": "medium",
+    "confidence_note": "The bot is up, but something needs a look.",
+    "checks_every_s": 62,
     "moves": [
       {
         "side": "DEN by 15+",
         "resting": "93 @ 24-26c",
-        "exposure": -304.21,
-        "exposure_text": "-$304",
+        "exposure": -302.9,
+        "exposure_text": "-$303",
         "move": "Holding",
         "when": "no move planned until the even-done check at 1:30pm CT",
         "at": null,
@@ -23,8 +23,8 @@
       {
         "side": "DEN by 7-14",
         "resting": "57 @ 26-27c",
-        "exposure": -247.21,
-        "exposure_text": "-$247",
+        "exposure": -245.9,
+        "exposure_text": "-$246",
         "move": "Paid balancing (trickle)",
         "when": "starts 1:40pm CT, up to $100 in all",
         "at": "2026-11-27T19:40:00Z",
@@ -33,66 +33,75 @@
       },
       {
         "side": "DEN by 1-6",
-        "resting": "168 @ 25-27c",
-        "exposure": -119.96,
-        "exposure_text": "-$120",
+        "resting": "163 @ 25-27c",
+        "exposure": -123.9,
+        "exposure_text": "-$124",
         "move": "Paid balancing (trickle)",
         "when": "starts 1:40pm CT, up to $100 in all",
         "at": "2026-11-27T19:40:00Z",
         "stuck": false,
-        "last_fill": "2026-11-27T12:37:29Z"
+        "last_fill": "2026-11-27T17:01:12Z"
       },
       {
         "side": "PIT by 1-6",
-        "resting": "867 @ 19-21c",
-        "exposure": 429.82,
-        "exposure_text": "+$430",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "resting": "935 @ 17-21c",
+        "exposure": 431.13,
+        "exposure_text": "+$431",
+        "move": "Hold price at 17c",
+        "when": "crowd pays 17c; steps down 1c only if it trades lower",
+        "at": null,
         "stuck": false,
-        "last_fill": "2026-11-27T04:39:50Z"
+        "also": "Also: paid balancing starts 1:40pm CT",
+        "last_fill": "2026-11-27T04:39:50Z",
+        "lag_note": "Price 17c matches the crowd."
       },
       {
         "side": "PIT by 7-14",
         "resting": "844 @ 12-15c",
-        "exposure": 446.91,
-        "exposure_text": "+$447",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
+        "exposure": 448.22,
+        "exposure_text": "+$448",
+        "move": "Step price down 1c (12c to 11c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-27T17:02:05Z",
         "stuck": false,
-        "last_fill": "2026-11-27T13:03:21Z"
+        "also": "Also: paid balancing starts 1:40pm CT",
+        "last_fill": "2026-11-27T13:03:21Z",
+        "lag_note": "Steps to 11c at the next check."
       },
       {
         "side": "PIT by 15+",
         "resting": "807 @ 6-10c",
-        "exposure": 502.79,
-        "exposure_text": "+$503",
-        "move": "Paid balancing (trickle)",
-        "when": "starts 1:40pm CT, up to $100 in all",
-        "at": "2026-11-27T19:40:00Z",
-        "stuck": false
+        "exposure": 504.1,
+        "exposure_text": "+$504",
+        "move": "Step price down 1c (6c to 5c)",
+        "when": "next bot check (no fill for 10+ min)",
+        "at": "2026-11-27T17:02:05Z",
+        "stuck": false,
+        "also": "Also: paid balancing starts 1:40pm CT",
+        "lag_note": "Steps to 5c at the next check."
       }
     ],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "Pregame build, kickoff 2:00pm CT. Sold 2,309, 2,836 resting. Worst line -$304 (goal -$150)."
+          "Pregame build, kickoff 2:00pm CT. Sold 2,314, 2,899 resting. Worst line -$303 (goal -$150). Bot is slow (checks every 1m, set for 20s)."
         ]
       },
       {
         "title": "Lagging sides",
         "lines": [
-          "No side is lagging."
+          "Lagging (150+ behind the leader): PIT by 1-6, PIT by 7-14, PIT by 15+.",
+          "PIT by 15+: 807 behind. Steps to 5c at the next check.",
+          "PIT by 7-14: 751 behind. Steps to 11c at the next check.",
+          "A price step needs 10 min with no fill and the crowd paying less."
         ]
       },
       {
         "title": "Next wave of contracts",
         "lines": [
           "A side gets a new batch when its resting drops under 25% of launch.",
-          "Gate closed: batches wait for the worst line to reach -$200 (now -$304).",
+          "Gate closed: batches wait for the worst line to reach -$200 (now -$303).",
           "Batches used: 20 (max 3 per side)."
         ]
       },
@@ -132,8 +141,8 @@
     "sides": [
       {
         "label": "DEN by 1-6",
-        "held": 622.8,
-        "resting": 168.2,
+        "held": 628.0,
+        "resting": 163.0,
         "target": null,
         "status": "even",
         "price": 0.25
@@ -157,17 +166,17 @@
       {
         "label": "PIT by 1-6",
         "held": 73.0,
-        "resting": 867.0,
+        "resting": 935.0,
         "target": null,
-        "status": "even",
-        "price": 0.19
+        "status": "lagging",
+        "price": 0.17
       },
       {
         "label": "PIT by 7-14",
         "held": 55.9,
         "resting": 844.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.12
       },
       {
@@ -175,54 +184,14 @@
         "held": 0.0,
         "resting": 807.0,
         "target": null,
-        "status": "even",
+        "status": "lagging",
         "price": 0.06
       }
     ],
     "book": "W13-DENPIT",
-    "ts": "2026-11-27T17:00:04Z"
+    "ts": "2026-11-27T17:02:05Z"
   },
   "posts": [
-    {
-      "id": "1795626883764-e62e4e",
-      "ts": "2026-11-25T17:14:43Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,307 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795627793026-db2873",
-      "ts": "2026-11-25T17:29:53Z",
-      "book": "W13-DENPIT",
-      "kind": "status",
-      "source": "narrator",
-      "text": "Quiet for 15 min. 3,307 resting. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Quiet"
-    },
-    {
-      "id": "1795628296283-b515bf",
-      "ts": "2026-11-25T17:38:16Z",
-      "book": "W13-DENPIT",
-      "kind": "plan",
-      "source": "narrator",
-      "text": "Building toward kickoff Fri 2:00pm CT. Worst line -$357, goal -$150. Next: Even-done check, Fri 1:30pm CT.",
-      "severity": "info",
-      "title": "Plan updated: Pregame build"
-    },
-    {
-      "id": "1795628336514-e7064d",
-      "ts": "2026-11-25T17:38:48Z",
-      "book": "W13-DENPIT",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Row sold out: DEN by 15+ at 20c (176 contracts).",
-      "severity": "info",
-      "title": "Row sold out"
-    },
     {
       "id": "1795628343885-ada083",
       "ts": "2026-11-25T17:39:03Z",
@@ -3557,6 +3526,46 @@
       "text": "Quiet for 15 min. 2,836 resting. Next: Even-done check, 1:30pm CT.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795798865284-b78b6c",
+      "ts": "2026-11-27T17:00:46Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Checkpoint: worst line -$304. Lagging: PIT by 1-6, PIT by 7-14, PIT by 15+.",
+      "severity": "info",
+      "title": "Checkpoint"
+    },
+    {
+      "id": "1795798865295-c36eca",
+      "ts": "2026-11-27T17:01:05Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 2:00pm CT. Worst line -$304, goal -$150. Next: Even-done check, 1:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
+    },
+    {
+      "id": "1795798905638-e6d2ab",
+      "ts": "2026-11-27T17:01:27Z",
+      "book": "W13-DENPIT",
+      "kind": "update",
+      "source": "narrator",
+      "text": "Row sold out: DEN by 1-6 at 25c (25 contracts).",
+      "severity": "info",
+      "title": "Row sold out"
+    },
+    {
+      "id": "1795798925709-c9ccc2",
+      "ts": "2026-11-27T17:02:05Z",
+      "book": "W13-DENPIT",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "Building toward kickoff 2:00pm CT. Worst line -$303, goal -$150. Next: Even-done check, 1:30pm CT.",
+      "severity": "info",
+      "title": "Plan updated: Pregame build"
     }
   ],
   "audits": [
