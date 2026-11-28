@@ -1,19 +1,19 @@
 {
   "key": "DPWT-BMAPC26",
-  "generated_at": "2026-11-28T00:32:06.446372Z",
+  "generated_at": "2026-11-28T00:33:19.060256Z",
   "plan": {
     "engine": "race",
     "phase": "In race (Ingame)",
     "headline": "In race (Ingame). Worst line +$45.",
     "confidence": "medium",
-    "confidence_note": "In-race steps follow the live race.",
+    "confidence_note": "The bot is up, but something needs a look.",
     "checks_every_s": 30,
     "moves": [],
     "sections": [
       {
         "title": "Right now",
         "lines": [
-          "In race (Ingame). Sold 100,682, ? resting. Worst line +$45. Floor protocol off."
+          "In race (Ingame). Sold 100,682, ? resting. Worst line +$45. Floor protocol off. Bot is slow (checks every 52s, set for 30s)."
         ]
       },
       {
@@ -44,29 +44,9 @@
     "next_steps": [],
     "sides": [],
     "book": "DPWT-BMAPC26",
-    "ts": "2026-11-28T00:32:06Z"
+    "ts": "2026-11-28T00:33:07Z"
   },
   "posts": [
-    {
-      "id": "1795721348272-c33016",
-      "ts": "2026-11-26T19:26:59Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "update",
-      "source": "narrator",
-      "text": "Sold 0: driver ICAN x0 at 0.4c. Worst line +$31.",
-      "severity": "info",
-      "title": "Fills",
-      "data": {
-        "total": 0.0,
-        "fills": [
-          {
-            "side": "driver ICAN",
-            "price": 0.004,
-            "qty": 0.0
-          }
-        ]
-      }
-    },
     {
       "id": "1795721468934-ef0535",
       "ts": "2026-11-26T19:29:06Z",
@@ -3333,18 +3313,19 @@
       "text": "Quiet for 15 min.",
       "severity": "info",
       "title": "Quiet"
+    },
+    {
+      "id": "1795825987052-7a91ab",
+      "ts": "2026-11-28T00:33:07Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "plan",
+      "source": "narrator",
+      "text": "In race (Ingame). Worst line +$45.",
+      "severity": "info",
+      "title": "Plan updated: In race (Ingame)"
     }
   ],
   "audits": [
-    {
-      "id": "1795797141748-2f79bb",
-      "ts": "2026-11-27T16:32:21Z",
-      "book": "DPWT-BMAPC26",
-      "kind": "audit",
-      "source": "sentinel",
-      "text": "Empty side watch: 2 unexplained\n- DPWT-BMAPC26 - David Puig has had no resting orders for at least 922 min (reason unknown: no reason logged).\n- DPWT-BMAPC26 - Tom McKibbin has had no resting orders for at least 2139 min (reason unknown: no reason logged).",
-      "severity": "warn"
-    },
     {
       "id": "1795797748836-191388",
       "ts": "2026-11-27T16:42:28Z",
@@ -4234,6 +4215,15 @@
       "kind": "audit",
       "source": "sentinel",
       "text": "Empty side watch: 1 unexplained\n- DPWT-BMAPC26 - Haydn Barron has had no resting orders for at least 2626 min (reason unknown: no reason logged).",
+      "severity": "warn"
+    },
+    {
+      "id": "1795825963984-0ba321",
+      "ts": "2026-11-28T00:32:43Z",
+      "book": "DPWT-BMAPC26",
+      "kind": "audit",
+      "source": "bot",
+      "text": "Qualifying moved 1 driver(s): Cameron Smith (+21%)",
       "severity": "warn"
     }
   ]
